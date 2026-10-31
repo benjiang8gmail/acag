@@ -1,25 +1,53 @@
-# CODING AGENTS: READ THIS FIRST
+# Hansard Watch
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+What Australia's 9 parliaments are saying about their Auditors-General, their reports and their forward programs, in a brief a Senior Executive can read in 30 seconds. Built for the Australasian Council of Auditors-General (ACAG). The full brief is in [`project/uploads/SPEC (2).md`](project/uploads/SPEC%20(2).md).
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+> **Status: app shell with sample data.** The dashboard is built from the Claude Design prototype (`project/Hansard Watch Prototype.dc.html`) and runs against **invented sample data**. Nothing in the app is real Hansard yet. The Hansard connectors, office registers and AI pipeline come in later phases; see [PROGRESS.md](PROGRESS.md).
 
-## What you should do — IMPORTANT
+## Run it
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+You need Python 3.13 with [uv](https://docs.astral.sh/uv/), and Node 22.
 
-**Read `project/Hansard Watch Prototype.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+```sh
+make setup          # install dependencies; creates .env from .env.example
+make secret         # paste the output into .env as SESSION_SECRET
+make set-password   # paste the output into .env as APP_PASSWORD_HASH
+make dev            # API on :8000, web app on http://localhost:5173
+```
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+Or run a single process that serves the built web app and the API on http://localhost:8000:
 
-## About the design files
+```sh
+make serve
+```
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+Browsing is open to everyone. Signing in (username `acag`, plus the password you set) is only needed to **refresh**, because a refresh will run paid AI analysis once the pipeline exists.
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+## Test
 
-## Bundle contents
+```sh
+make test                          # backend pytest, web typecheck and unit tests
+make serve &                       # then, in another shell:
+E2E_PASSWORD=yourpassword make e2e  # Playwright journeys (desktop and 375 px) and axe accessibility checks
+```
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Wireframes for Brief app` project files (HTML prototypes, assets, components)
+## Layout
+
+| Path | What's there |
+|---|---|
+| `backend/app/` | FastAPI app, settings, sign-in, database, sample data, simulated scans |
+| `backend/api/` | HTTP routes (`/api/...`; interactive docs at `/api/docs`) |
+| `backend/migrations/` | Alembic migrations |
+| `backend/connectors/`, `registers/`, `parsers/`, `pipeline/`, `gaps/` | Placeholders for Phases 2–5 |
+| `web/` | React + Fluent UI 9 single-page app |
+| `web/e2e/` | Playwright journeys and accessibility checks |
+| `docs/screens/` | Desktop and 375 px screenshots |
+| `project/` | The Claude Design handoff: prototype, chat transcript and spec |
+
+## Shareable links
+
+Every view has its own URL, so a link opens exactly what the sender saw. For example:
+
+`/?view=mentions&jur=NSW&period=4w&tab=reports&office=NSW&unmentioned=1&sector=health`
+
+Opening someone else's link never overwrites your own saved jurisdiction. A bar at the top offers to switch back.

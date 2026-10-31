@@ -1,4 +1,4 @@
-.PHONY: setup dev api web build serve test test-backend test-web migrate secret set-password
+.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password
 
 UV := cd backend && UV_SYSTEM_CERTS=1 uv run
 
@@ -32,6 +32,9 @@ test-backend:
 
 test-web:
 	cd web && npm run typecheck && npm test
+
+e2e:              ## Playwright journeys + axe; needs `make serve` running and E2E_PASSWORD set
+	cd web && npx playwright test
 
 secret:           ## Print a new SESSION_SECRET for .env
 	@$(UV) python -m app.cli secret
