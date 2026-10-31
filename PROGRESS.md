@@ -1,5 +1,63 @@
 # Progress
 
+## 1 Nov 2026: ACT connector, enabled; shared PDF Hansard engine
+
+### Done
+
+- **`backend/parsers/hansard_pdf.py`:** the outline-guided PDF reader, moved out of the NSW connector so that NSW, ACT and later QLD share it.
+  - Each parliament supplies its page lines, its outline of headings and its `Rules` (regular expressions for speakers, presiding officers, interjections, procedural lines and divisions).
+  - A contents entry may carry a bracketed qualifier, e.g. "(Ministerial statement)", that the body prints on a separate line; the matcher accepts the title with or without it.
+  - The NSW tests pass unchanged on the shared engine.
+- **`backend/connectors/act.py`:**
+  - **Listing:** the year index, with proof shown by a green row and "P" pages.
+  - **Document:** the day PDF (1 request), keyed by date.
+  - **Outline:** the PDF's own contents pages, where indentation shows groups.
+  - **Speakers:**
+    - Speaker headers can wrap over up to 4 lines (ministers' titles).
+    - Question Time questions and answers follow speaking order.
+    - Written answers are attributed to the minister.
+    - Interjections and presiding officers (with who was in the chair) are separate turns.
+  - **Dropped:** divisions.
+  - **Citations:** each speech cites `PDF#page=N`, using printed page numbers.
+- **Sync: unpublished sitting days.** A day the calendar lists with no document yet is now `pending`, not done. The watermark holds before it, so it's picked up when it appears; it's counted as `days_pending`, not an error. This applies to every connector.
+- **ACT-LA enabled** in `config/sources.yaml`.
+- **Config corrections from primary sources:**
+  - `config/lexicon.yaml`: the ACT tabling wording is confirmed, "Auditor-General Act, pursuant to section 17—Auditor-General’s Report No {n}/{YYYY}—{title}" (ACT Hansard, 22 Oct 2026).
+  - `config/governments.yaml`: **the ACT Leader of the Opposition is Mark Parton**, as printed in ACT Hansard on 17 Sep 2026. This replaces the low-confidence desk-research guess (Leanne Castley).
+
+### Evidence
+
+- `make test`: 75 backend tests pass, including:
+  - 11 ACT connector tests on real fixtures:
+    - the index lists proofs and unpublished days;
+    - the stable document key;
+    - recess, and a missing year index;
+    - the proof flag, printed pages and citations;
+    - a ministerial statement header wrapped over lines;
+    - **Question Time: question, answer, supplementary, answer, a second questioner, answer**;
+    - the Leader of the Opposition role, interjections, and written answers attributed to ministers;
+    - no page furniture or division lists in the text;
+    - a second day lines up with its contents;
+    - the sync stores a day, a re-check costs 2 requests, and unpublished days hold the watermark.
+  - A sync test that an unpublished day holds the watermark until it appears.
+- **Live run, ACT 22–31 Oct 2026:**
+  - 3 requests, 2 days stored (213 and 249 speeches), 28 and 29 Oct pending, 0 errors, 28 s.
+  - It found Auditor-General's Report No 10/2026 (Management of community facilities) tabled on 22 Oct, and two Question Time answers citing the Auditor-General.
+
+### Known limits
+
+- When two contents titles share one statement, as on 17 Sep (NDIS, then Thriving Kids, then one "Ministerial statement"), the statement takes the second title.
+- ACT Hansard prints no party, so speaker side needs a 25-member party map. That will be built from a verified members list, not from memory.
+- The assembly segment in the URL (`11th-assembly`) is a constant until the Oct 2028 election.
+
+### Next
+
+- QLD connector: daily PDF from the documents host, found by date. It can reuse the engine; the outline comes from the PDF's own index.
+- Member-to-party maps for NSW and ACT.
+- Wire the web app's "Check for updates" and `/api/status` to the real scans now that two parliaments are live.
+
+---
+
 ## 1 Nov 2026: NSW switched to contents + day PDF (2 requests per chamber-day)
 
 The product owner approved the change from one request per topic to the day's PDF.

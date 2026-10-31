@@ -42,6 +42,7 @@ class ScanInProgress(Exception):
 class SourceCounts:
     days_checked: int = 0
     new_days: int = 0
+    days_pending: int = 0          # sat, but the transcript isn't published yet
     new_documents: int = 0
     changed_documents: int = 0
     unchanged_documents: int = 0
@@ -125,7 +126,11 @@ def sync_parliament(db, connector: HansardConnector, fetcher: Fetcher, today: da
                 break
             c.days_checked += 1
             try:
-                _sync_day(db, connector, fetcher, days[sid][day], c, data_dir)
+                if not _sync_day(db, connector, fetcher, days[sid][day], c, data_dir):
+                    # Listed as a sitting day but not published yet: hold the watermark before it
+                    # so it is picked up when it appears. Not an error.
+                    c.days_pending += 1
+                    first_failure = first_failure or day
             except Blocked as e:
                 db.rollback()  # drop the half-synced day; it is retried next run
                 blocked = str(e)
@@ -154,7 +159,8 @@ def sync_parliament(db, connector: HansardConnector, fetcher: Fetcher, today: da
     return counts
 
 
-def _sync_day(db, connector, fetcher: Fetcher, day: SittingDayRef, c: SourceCounts, data_dir: Path) -> None:
+def _sync_day(db, connector, fetcher: Fetcher, day: SittingDayRef, c: SourceCounts, data_dir: Path) -> bool:
+    """Returns False when the day has no published document yet."""
     sd = db.scalar(select(SittingDay).where(SittingDay.source_id == day.source_id,
                                             SittingDay.sitting_date == day.sitting_date))
     if sd is None:
@@ -162,11 +168,17 @@ def _sync_day(db, connector, fetcher: Fetcher, day: SittingDayRef, c: SourceCoun
         db.add(sd)
         db.flush()
         c.new_days += 1
+    refs = connector.list_documents(day)
+    if not refs:
+        sd.status = "pending"
+        db.commit()
+        return False
     versions = [day.version_hint]
-    for ref in connector.list_documents(day):
+    for ref in refs:
         versions.append(_sync_document(db, connector, fetcher, sd, ref, c, data_dir))
     sd.version, sd.status = _version(*versions), "done"
     db.commit()
+    return True
 
 
 def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: DocumentRef,

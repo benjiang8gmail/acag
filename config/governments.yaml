@@ -201,7 +201,7 @@ parliaments:
         government: [ALP]
         government_type: minority  # 10 of 25
         opposition: [LIB]   # Canberra Liberals
-        leader_of_opposition: {name: Leanne Castley, party: LIB, confidence: low, note: not re-verified in Phase 0}
+        leader_of_opposition: {name: Mark Parton, party: LIB, confidence: high, note: "ACT Hansard 17 Sep 2026: MR PARTON (Brindabella—Leader of the Opposition)"}
         notes: >
           There have been no Greens ministers this term. The Greens ended talks on a new
           confidence-and-supply agreement on 16 Sep 2026, so Labor governs without a formal

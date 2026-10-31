@@ -30,6 +30,25 @@ def _pdf_pages(raw: bytes) -> tuple[str, ...]:
     return tuple(re.sub(r"[ \t]+", " ", p) for p in pages)
 
 
+def pdf_layout_lines(raw: bytes, page_numbers: list[int]) -> list[tuple[int, float, str]]:
+    """(page index, left x, text) for each text line on the given pages, top to bottom.
+    Used where indentation carries meaning, e.g. the ACT contents pages."""
+    from pdfminer.high_level import extract_pages
+    from pdfminer.layout import LTTextContainer, LTTextLine
+
+    out = []
+    for index, page in zip(page_numbers, extract_pages(io.BytesIO(raw), page_numbers=page_numbers,
+                                                        laparams=LAParams(boxes_flow=None))):
+        rows = []
+        for el in page:
+            if isinstance(el, LTTextContainer):
+                for line in el:
+                    if isinstance(line, LTTextLine) and line.get_text().strip():
+                        rows.append((-line.y0, line.x0, re.sub(r"\s+", " ", line.get_text()).strip()))
+        out.extend((index, x, text) for _, x, text in sorted(rows))
+    return out
+
+
 def join_lines(lines: list[str], width: int) -> str:
     """Join wrapped lines into paragraphs. A line well short of the page width ends a paragraph;
     a line ending in a hyphen joins the next without a space (a compound split at its hyphen)."""

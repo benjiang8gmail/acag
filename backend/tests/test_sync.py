@@ -28,6 +28,7 @@ class FakeSite:
         self.robots = b"User-agent: *\nDisallow: /private/\n"
         self.honour_conditional = True
         self.refuse = False
+        self.broken: set[str] = set()
         self.hits: list[str] = []
 
     def etag(self, url):
@@ -40,6 +41,8 @@ class FakeSite:
             return httpx.Response(403, text="Access denied")
         if url.endswith("/robots.txt"):
             return httpx.Response(200, content=self.robots)
+        if url in self.broken:
+            return httpx.Response(500)
         if url not in self.docs:
             return httpx.Response(404)
         tag = self.etag(url)
@@ -70,7 +73,10 @@ class FakeConnector:
         return f"{HOST}/{sid}/{d.isoformat()}.txt"
 
     def list_documents(self, day):
-        return [DocumentRef(day.source_id, day.sitting_date, self.url(day.source_id, day.sitting_date), "txt")]
+        url = self.url(day.source_id, day.sitting_date)
+        if url not in self.site.docs and url not in self.site.broken:
+            return []   # sat, but not published yet
+        return [DocumentRef(day.source_id, day.sitting_date, url, "txt")]
 
     def parse(self, raw, ref, fetch_part):
         version, *lines = raw.decode().splitlines()
@@ -212,7 +218,7 @@ def test_failed_day_holds_the_watermark_before_it(env):
     site, conn, scan, _ = env
     conn.sit("FK-LA", date(2026, 10, 10), version="final")
     conn.sit("FK-LA", date(2026, 10, 20), version="final")
-    del site.docs[conn.url("FK-LA", date(2026, 10, 20))]   # 404: this day fails
+    site.broken.add(conn.url("FK-LA", date(2026, 10, 20)))   # 500: this day fails
     conn.sit("FK-LA", date(2026, 10, 27), version="final")
     run = scan()
     assert run.per_source_json["FK-LA"]["errors"] == 1
@@ -286,3 +292,17 @@ def test_robots_served_as_a_challenge_page_blocks_the_source(env):
     run = scan()
     assert run.per_source_json["FK-LA"]["status"] == "blocked"
     assert site.doc_hits() == []
+
+
+def test_unpublished_sitting_day_holds_the_watermark_until_it_appears(env):
+    site, conn, scan, _ = env
+    conn.sit("FK-LA", date(2026, 10, 20), version="final")
+    conn.calendar["FK-LA"].append(date(2026, 10, 27))          # sat, transcript not published yet
+    run = scan()
+    la = run.per_source_json["FK-LA"]
+    assert la["days_pending"] == 1 and la["errors"] == 0 and la["status"] == "ok"
+    assert source("FK-LA").watermark_date == date(2026, 10, 26)
+    site.docs[conn.url("FK-LA", date(2026, 10, 27))] = b"proof\nA|Now published"
+    run = scan()
+    assert run.per_source_json["FK-LA"]["new_documents"] == 1
+    assert source("FK-LA").watermark_date == TODAY

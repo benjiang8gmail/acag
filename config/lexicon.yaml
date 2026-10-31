@@ -162,10 +162,10 @@ tabling_phrases:
     patterns:
       - "Report of the Auditor-General No. {n} of {YYYY-YY}"
   ACT:
-    verified: false
+    verified: true   # seen in ACT Hansard, 22 Oct 2026 (proof), page 3542
     patterns:
-      - "Auditor-General's Report No. {n}/{YYYY}"
-      - "Auditor-General Act, pursuant to"
+      - "Auditor-General Act, pursuant to section 17—Auditor-General’s Report No {n}/{YYYY}—{title}, dated {date}"
+    section_headings: [Papers]
   NT:
     verified: false
     patterns:

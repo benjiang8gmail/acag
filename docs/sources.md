@@ -334,6 +334,24 @@ What the saved fixtures showed:
 - **Recommended connector:** date-based proof PDF, then the official PDF. Small volumes: the ACT sits far less often than the larger parliaments.
 - **Fixture:** none yet (environment). Batch: `tP260917.pdf`.
 
+- **Connector built (Phase 2):** `backend/connectors/act.py`.
+  - **Listing:** the year index. A green row with "P" pages is a proof. Days that sat but aren't published yet are listed with no document, so the sync holds its watermark before them (`days_pending`).
+  - **Document:** the day PDF (1 request), keyed `pdf:ACT-LA:{date}`.
+  - **Outline:** the PDF's own contents pages. Indentation shows group membership ("Questions without notice:", "Motion to take note of papers:").
+  - **Speakers:**
+    - Headers look like `MS CHEYNE (Ginninderra—Manager of Government Business, …) (10.03):`, and can wrap over up to 4 lines.
+    - The presiding officer appears as `MR SPEAKER` or `MADAM ASSISTANT SPEAKER (Ms Barry):`.
+    - Question Time turns are `MR PARTON:`. Question and answer follow speaking order: the first speaker asks, the minister answers, and later turns by others are supplementaries.
+    - Interjections are title case (`Ms Cheyne:`).
+    - Written answers (`Dr Paterson (in reply to …):`) become answers by that member.
+  - **Dropped:** divisions ("The Assembly voted—", "Ayes, 16" and the names).
+  - **Citations:** printed page numbers come from the footer ("P2751"), and speeches cite `PDF#page=N`. A footer reading "PROOF" marks a proof.
+  - **The HTML edition** exists only for finished years (2024, 2025), so it can't serve current proofs.
+  - **Checks:**
+    - Contents headings found in the text: 44 of 47 (17 Sep) and 57 of 58 (24 Feb).
+    - Live run, 22–31 Oct: index + 2 PDFs, 462 speeches, 0 errors. 28 and 29 Oct are pending, and the watermark holds at 27 Oct.
+  - **Real items found:** Auditor-General's Report No 10/2026 tabled on 22 Oct ("Auditor-General Act, pursuant to section 17—…"), and two Question Time answers citing the Auditor-General.
+
 ### NT: Legislative Assembly (`NT-LA`)
 
 - **List sitting days:**

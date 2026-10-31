@@ -5,7 +5,7 @@
 # Set from the live check of 31 Oct 2026 (docs/sources.md §0a), made from a US
 # cloud network: re-test the blocked ones from the pilot's Australian network.
 # `enabled` is true only once the connector passes its real-fixture tests (Phase 2).
-# Enabled: NSW (31 Oct 2026, plus a live check of NSW-LC on 22 Oct 2026).
+# Enabled: NSW (31 Oct 2026; live checks 21–22 Oct 2026), ACT (1 Nov 2026; live check 22–31 Oct 2026).
 
 as_of: 2026-10-31
 
@@ -139,7 +139,7 @@ sources:
     parliament: ACT
     chamber: Legislative Assembly
     connector: act
-    enabled: false
+    enabled: true
     status: ok
     live_check: "robots.txt allows all; year index and proofs saved"
     approach: daily_pdf             # hansard.act.gov.au/hansard/11th-assembly/{YYYY}/PDF/tP{YYMMDD}.pdf
