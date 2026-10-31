@@ -20,6 +20,11 @@ class Settings(BaseSettings):
     data_dir: Path = REPO_ROOT / "data"
     database_url: str = ""
     display_timezone: str = "Australia/Melbourne"
+    # Phase 2 scan settings (§8, §14)
+    backfill_months: int = 2
+    proof_recheck_days: int = 28
+    fetch_min_interval_seconds: float = 2.0
+    fetch_user_agent: str = "ACAG-HansardWatch/0.1 (+mailto:CONTACT_EMAIL)"
     # Seconds between simulated scan steps; the sample scan stands in for Phase 2 connectors.
     sample_scan_step_seconds: float = 0.42
 

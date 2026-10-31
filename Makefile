@@ -1,4 +1,4 @@
-.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password recon
+.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password recon scan backfill
 
 UV := cd backend && UV_SYSTEM_CERTS=1 uv run
 
@@ -35,6 +35,12 @@ test-web:
 
 e2e:              ## Playwright journeys + axe; needs `make serve` running and E2E_PASSWORD set
 	cd web && npx playwright test
+
+backfill:         ## First run: ingest the last BACKFILL_MONTHS of Hansard for every enabled source
+	$(UV) python -m app.cli backfill
+
+scan:             ## Update: only new sitting days, changed documents and proofs still being corrected
+	$(UV) python -m app.cli scan
 
 secret:           ## Print a new SESSION_SECRET for .env
 	@$(UV) python -m app.cli secret

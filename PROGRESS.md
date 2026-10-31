@@ -1,5 +1,62 @@
 # Progress
 
+## 31 Oct 2026: Phase 2, part 1 — Hansard store and no-rescan sync (source-independent)
+
+**Scope.** The product owner said "continue" after the Phase 0 review page. The parliament and office sites are still unreachable from the build environment, so this covers only the Phase 2 work that doesn't need real fixtures. Connectors for real chambers wait for real fixtures (decision D6).
+
+### Done
+
+- **Store (spec §7):** an Alembic migration adds `sources`, `sitting_days`, `documents` and `speeches`.
+  - `speeches` has an FTS5 index on text, debate title and speaker, kept in sync by triggers. SQLite only; on Postgres the step is skipped.
+  - Raw files are saved to `data/raw/{source}/{date}/{sha256}.{ext}` and never deleted.
+- **Connector interface (§6):** `backend/connectors/base.py`.
+  - `list_sitting_days` must raise `CouldNotCheck` rather than return "no sittings" when the calendar can't be read.
+  - Connectors never make HTTP requests themselves.
+  - The registry is empty until a real connector passes its real-fixture tests.
+- **Polite fetcher:** `backend/pipeline/fetch.py`, used by every connector.
+  - Obeys robots.txt and its crawl-delay; skips a host whose robots.txt can't be read.
+  - Waits at least `FETCH_MIN_INTERVAL_SECONDS` per host and makes conditional GETs.
+  - Hashes each body with SHA-256.
+  - Treats 401, 403, 429 and challenge pages as `blocked` for the rest of the run, with no retries and no workarounds.
+- **Sync (§8):** `backend/pipeline/sync.py`.
+  - Window: from the watermark, or a backfill of the same date `BACKFILL_MONTHS` ago, plus non-final days within `PROOF_RECHECK_DAYS`.
+  - "No sittings" and "could not check" are kept separate.
+  - A new document row is written only on a changed hash; the old version is marked `superseded_by`.
+  - Speeches are re-derived, and only new speech-text hashes count as `speeches_to_analyse`.
+  - The watermark stops at the day before the first failure.
+  - One scan at a time, using a lock row in `scan_runs` (stale after 6 h).
+  - Per-source counts go into `scan_runs`.
+- **Commands:** `make backfill` and `make scan` run the same sync, which backfills sources that have no watermark. With no enabled sources they log a run and say why nothing was scanned.
+- **Sources** are seeded from `config/sources.yaml` on every scan. This never overwrites a source's status or watermark.
+
+### Evidence
+
+- `make test`: 39 backend tests pass, 15 of them new in `tests/test_sync.py`. They run against a fake two-chamber parliament served over a mock HTTP transport. It is a test double, not a stand-in for any real source. The tests cover:
+  - the first run backfills from 31 Aug to 31 Oct and stores raw files;
+  - **an immediate re-run makes 0 downloads and finds 0 speeches to analyse**: the only request is one 304 for the day still in proof, and final days are not fetched again;
+  - a server that ignores conditional headers still creates no new rows;
+  - a new day processes only that day;
+  - **proof → final with one edited speech** creates a new document version, marks the old one superseded, finds exactly 1 speech to analyse, and then stops rechecking that day;
+  - recess gives `no_sittings`; an unreadable calendar gives `error` and keeps the watermark;
+  - a failed day holds the watermark at the day before it;
+  - a 403 marks the source `blocked` after a single request; robots.txt `Disallow` is obeyed;
+  - disabled sources are skipped; only one scan runs at a time;
+  - FTS5 search works; the 15 real sources are seeded and start disabled.
+- `make scan` against an empty database: migrations run, scan 1 is `done`, and it prints "No enabled sources".
+
+### Decisions
+
+- **D9. One fetcher for everyone.** Connectors only describe a site; all politeness rules live in `pipeline/fetch.py`, so a new connector can't skip them.
+- **D10. LLM calls are counted but zero.** `llm_calls` is in each scan's per-source counts so that SC1's "0 LLM calls" is visible in the scan log from Phase 4.
+- **D11. "Check for updates" in the web app still runs the simulated scan** while no real source is enabled. It switches to `run_scan` when the first connector is enabled, at which point `/api/status` also reads the `sources` table.
+
+### Next
+
+- Real connectors, in the order in `docs/sources.md` §5, each built on a real fixture from `make recon` or manual import. This still needs the network access in open question 4.
+- Wire `/api/status` and the scan button to the real store when the first source is enabled.
+
+---
+
 ## 31 Oct 2026: Phase 0 source recon (desk research done; fixtures blocked by the build environment)
 
 **Status: stopped for product-owner review (spec §12).** Phase 0 is **not complete**. The written recon and config are done, but no real fixtures were saved. The cloud container's network policy refused every parliament and audit office host, including the web fetch tool.
