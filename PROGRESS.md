@@ -1,5 +1,45 @@
 # Progress
 
+## 1 Nov 2026: Victoria, as far as it can go without a file; manual import for blocked sites
+
+### Done
+
+- **Victoria re-checked (31 Oct 2026, 22:15 UTC), politely, from the build network.** Log: `docs/recon/vic-recheck-2026-10-31.jsonl`.
+  - `www.parliament.vic.gov.au` (listing and PDFs): still HTTP 403 from Cloudflare, even for robots.txt.
+  - `hansard.parliament.vic.gov.au`: answers, but it is the Hansard search engine only; its robots.txt disallows the search and result paths. Its help page points readers to the PDFs on the main site.
+  - Web archives, for a development copy only: the National Library's web archive runs its own bot check; the Internet Archive and Common Crawl are unreachable from here. Nothing was retried or worked around.
+  - So there is no automated route from this network and no real Victorian PDF to build the reader on.
+- **Manual import (spec §9.11), the fallback for blocked sites:** `make import SRC=VIC-LA DATE=2026-09-24 FILE=/full/path.pdf [URL=…]` and `make import-folder DIR=…` (files as `VIC-LA/2026-09-24.pdf`).
+  - Imports run through the same pipeline as fetched documents (`_store_document`, shared with the scanner), are marked `origin=manual`, logged as a `manual` scan run, and de-duplicated by hash.
+  - They work for disabled (blocked) sources.
+  - **Hand-over:** when the scanner later reaches the site, the same file counts as unchanged and a corrected final supersedes the imported proof; nothing is duplicated.
+  - A manual import never touches the network.
+- **`backend/connectors/vic.py`:** sitting days from a staff-kept list, `config/vic_hansard.yaml` (one line per chamber and day with the PDF link copied from Browse Hansard; only `https` PDF links on the Parliament's own host are accepted), as for the NT. From a network the site accepts, `make scan` fetches those PDFs politely; from here the source stays blocked.
+  - The PDF reader is written against the first real daily PDF (D6). Until then the connector is not registered, and `make import` for `VIC-LA`/`VIC-LC` says so.
+- **`config/members/VIC.yaml`** (secondary, Wikipedia): Assembly 87 (one seat vacant), Council 40. `build_members.py` now rebuilds only the parliaments whose source files are present, strips "Hon" and birth years from names, and knows the Liberal Democrats → Libertarian rename and the DLP.
+- README and `docs/sources.md` §VIC updated; `config/sources.yaml` VIC rows carry the re-check.
+
+### Evidence
+
+- `make test`: 144 backend tests pass. New:
+  - **manual import:** new → unchanged (same bytes) → changed (corrected final, only the changed speech counted), raw copy kept under `DATA_DIR/raw`, no network calls;
+  - **hand-over** from a manual import to the scanner for a source that was disabled at import time: same file unchanged, corrected final supersedes;
+  - unknown source, no connector, wrong file type rejected before anything is recorded; folder layout parsed, undated files skipped;
+  - **Victoria:** listed days become sitting days and PDF documents with version hints; links off the Parliament's host, non-https links and non-PDFs are rejected; the committed list is valid; the reader says it needs a real PDF; the connector is not registered.
+
+### Decisions
+
+- **D16. Archive copies are not a feed.** A copy of a blocked parliament's Hansard from a web archive could at most serve as a one-off development fixture, and only with the source named; the scanner itself reads the Parliament's own site or files a person downloaded. (Moot for now: no archive was reachable.)
+- **D17. Staff lists for blocked parliaments.** Where a site blocks the scanner but a person on an accepted network can see the links, the days and links go in a config list (NT: `config/nt_hansard.yaml`; VIC: `config/vic_hansard.yaml`), and the fetch still goes through the polite fetcher.
+
+### Next
+
+- Victoria needs one real daily Hansard PDF (any 2026 sitting day, either house), downloaded in a browser, to write and test the reader. Then: import the September–October days, register the connector, enable the sources, refresh the dashboard.
+- Or: a polite test of `www.parliament.vic.gov.au` from the pilot's Australian network (Remote Control). If it serves a plain client there, list the days in `config/vic_hansard.yaml` and run `make scan` from that network.
+- Send access request B (permission and a lasting route) regardless.
+
+---
+
 ## 1 Nov 2026: first real backfill, a live-data dashboard, and two fixes it found
 
 ### Done

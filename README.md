@@ -23,7 +23,7 @@ make serve
 
 Browsing is open to everyone. Signing in (username `acag`, plus the password you set) is only needed to **refresh**, because a refresh will run paid AI analysis once the pipeline exists.
 
-**Check for updates** runs the real Hansard sync (`SCAN_MODE=real`, the default) for every parliament with a working connector: NSW, ACT and Queensland so far. The other six show why they weren't checked. Briefs and items are still sample data until AI analysis is built. `SCAN_MODE=sample` replays the prototype's sample scan instead.
+**Check for updates** runs the real Hansard sync (`SCAN_MODE=real`, the default) for every parliament with a working connector: the federal Parliament, NSW, Queensland, Tasmania, the ACT and the NT so far. Victoria, South Australia and Western Australia block the scanner from this network and show why they weren't checked; their Hansard can be imported by hand (`make import`), see `docs/sources.md`. Briefs and items are still sample data until AI analysis is built. `SCAN_MODE=sample` replays the prototype's sample scan instead.
 
 ## Test
 
@@ -41,7 +41,7 @@ SCAN_MODE=sample E2E_PASSWORD=yourpassword make e2e  # Playwright journeys (desk
 | `backend/api/` | HTTP routes (`/api/...`; interactive docs at `/api/docs`) |
 | `backend/migrations/` | Alembic migrations |
 | `backend/connectors/` | Hansard connectors: interface (`base.py`), NSW (`nsw.py`), ACT (`act.py`), QLD (`qld.py`) |
-| `backend/pipeline/` | Polite fetcher (`fetch.py`) and the no-rescan sync (`sync.py`); `make backfill`, `make scan` |
+| `backend/pipeline/` | Polite fetcher (`fetch.py`) and the no-rescan sync (`sync.py`); `make backfill`, `make scan`; manual import for blocked sites: `make import SRC=VIC-LA DATE=2026-09-24 FILE=/full/path.pdf` or `make import-folder DIR=…` |
 | `backend/parsers/` | PDF text (`pdf.py`) and the outline-guided Hansard PDF reader (`hansard_pdf.py`) |
 | `backend/registers/`, `gaps/` | Placeholders for Phases 3–5 |
 | `web/` | React + Fluent UI 9 single-page app |

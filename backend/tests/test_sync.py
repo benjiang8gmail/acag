@@ -14,7 +14,7 @@ from app import config, db
 from app.db import Document, ScanRun, SittingDay, Source, Speech
 from connectors.base import CouldNotCheck, DocumentRef, ParsedDocument, ParsedSpeech, SittingDayRef
 from pipeline.fetch import Fetcher
-from pipeline.sync import ScanInProgress, months_ago, run_scan
+from pipeline.sync import ScanInProgress, import_document, import_folder, months_ago, run_scan
 
 TODAY = date(2026, 10, 31)
 HOST = "https://hansard.example"
@@ -306,3 +306,92 @@ def test_unpublished_sitting_day_holds_the_watermark_until_it_appears(env):
     run = scan()
     assert run.per_source_json["FK-LA"]["new_documents"] == 1
     assert source("FK-LA").watermark_date == TODAY
+
+
+# ---- manual import (spec §9.11) ------------------------------------------------
+
+def test_manual_import_goes_through_the_pipeline_and_dedupes_by_hash(env):
+    site, conn, scan, tmp = env
+    f = tmp / "FK-LA 2026-10-20.txt"
+    f.write_text("proof\nA|Hello\nB|The Auditor-General's report")
+    r = import_document("FK-LA", date(2026, 10, 20), f, url=f"{HOST}/FK-LA/2026-10-20", connectors={"fake": conn})
+    assert (r["result"], r["version"], r["speeches"]) == ("new", "proof", 2)
+    with db.session() as s:
+        doc = s.scalar(select(Document))
+        assert (doc.origin, doc.doc_key, doc.version, doc.url) == ("manual", "txt:FK-LA:2026-10-20", "proof", f"{HOST}/FK-LA/2026-10-20")
+        assert (tmp / "raw" / "FK-LA" / "2026-10-20" / f"{doc.sha256}.txt").read_bytes() == f.read_bytes()
+        run = s.scalar(select(ScanRun))
+        assert (run.trigger, run.status) == ("manual", "done")
+        assert run.per_source_json["FK-LA"]["speeches_to_analyse"] == 2
+        assert run.per_source_json["FK-LA"]["note"] == "manual import of FK-LA 2026-10-20.txt: new"
+        assert s.scalar(select(SittingDay)).status == "done"
+    # the same file again: nothing new
+    assert import_document("FK-LA", date(2026, 10, 20), f, connectors={"fake": conn})["result"] == "unchanged"
+    assert count(Document) == 1 and count(Speech) == 2
+    # the corrected final: a new version, and only the changed speech needs analysis
+    f.write_text("final\nA|Hello\nB|The Auditor-General's report, corrected")
+    r = import_document("FK-LA", date(2026, 10, 20), f, connectors={"fake": conn})
+    assert (r["result"], r["version"], r["speeches"]) == ("changed", "final", 1)
+    assert count(Document) == 2 and count(Document, Document.superseded_by.is_(None)) == 1
+    with db.session() as s:
+        assert s.scalar(select(SittingDay)).version == "final"
+    assert site.hits == []   # a manual import never touches the network
+
+
+def test_manual_import_for_a_blocked_source_hands_over_to_the_scanner(env):
+    site, conn, scan, tmp = env
+    with db.session() as s:
+        s.get(Source, "FK-LC").enabled = False
+        s.commit()
+    f = tmp / "2026-10-20.txt"
+    f.write_text("proof\nA|Hello")
+    assert import_document("FK-LC", date(2026, 10, 20), f, connectors={"fake": conn})["result"] == "new"
+    assert count(Speech) == 1
+    # later the site is reachable and serves the identical file: nothing is duplicated
+    with db.session() as s:
+        s.get(Source, "FK-LC").enabled = True
+        s.commit()
+    conn.sit("FK-LC", date(2026, 10, 20), speeches=("A|Hello",))
+    r = scan().per_source_json["FK-LC"]
+    assert (r["unchanged_documents"], r["new_documents"], r["changed_documents"]) == (1, 0, 0)
+    assert count(Document) == 1 and count(Speech) == 1
+    # and the corrected final from the site supersedes the imported proof
+    site.docs[conn.url("FK-LC", date(2026, 10, 20))] = b"final\nA|Hello there"
+    r = scan().per_source_json["FK-LC"]
+    assert (r["changed_documents"], r["speeches_to_analyse"]) == (1, 1)
+    assert count(Document) == 2 and count(Document, Document.superseded_by.is_(None)) == 1
+    with db.session() as s:
+        current = s.scalar(select(Document).where(Document.superseded_by.is_(None)))
+        assert (current.origin, current.version) == ("auto", "final")
+
+
+def test_manual_import_rejects_what_it_cannot_place(env):
+    site, conn, scan, tmp = env
+    f = tmp / "x.txt"
+    f.write_text("proof\nA|Hello")
+    with pytest.raises(ValueError, match="unknown source"):
+        import_document("XX-LA", date(2026, 10, 20), f, connectors={"fake": conn})
+    with pytest.raises(ValueError, match="no connector yet"):
+        import_document("VIC-LA", date(2026, 10, 20), f, connectors={"fake": conn})   # seeded from config; no parser yet
+    with pytest.raises(ValueError, match="no connector yet"):
+        import_document("FK-LA", date(2026, 10, 20), f)                                # the registry has no "fake"
+    csv = tmp / "x.csv"
+    csv.write_text("a,b")
+    with pytest.raises(ValueError, match="expected a .pdf"):
+        import_document("FK-LA", date(2026, 10, 20), csv, connectors={"fake": conn})
+    assert count(ScanRun) == 0   # nothing was started
+
+
+def test_manual_import_folder_takes_the_source_and_date_from_the_layout(env):
+    site, conn, scan, tmp = env
+    (tmp / "drop" / "FK-LA").mkdir(parents=True)
+    (tmp / "drop" / "FK-LC").mkdir()
+    (tmp / "drop" / "FK-LA" / "2026-10-20.txt").write_text("proof\nA|Hello")
+    (tmp / "drop" / "FK-LA" / "2026-10-21 Legislative Assembly.txt").write_text("final\nB|Bye")
+    (tmp / "drop" / "FK-LC" / "hansard.txt").write_text("proof\nA|Hello")   # no date in the name
+    (tmp / "drop" / "FK-LC" / "notes.md").write_text("ignore me")
+    results = import_folder(tmp / "drop", connectors={"fake": conn})
+    assert [(r.get("source_id"), r.get("sitting_date"), r["result"]) for r in results] == [
+        ("FK-LA", "2026-10-20", "new"), ("FK-LA", "2026-10-21", "new"),
+        (None, None, "skipped: the name must start with the sitting date")]
+    assert count(SittingDay) == 2 and count(Speech) == 2

@@ -190,8 +190,7 @@ def _sync_day(db, connector, fetcher: Fetcher, day: SittingDayRef, c: SourceCoun
 def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: DocumentRef,
                    c: SourceCounts, data_dir: Path) -> str:
     key = ref.key or ref.url
-    prev = db.scalar(select(Document).where(Document.sitting_day_id == sd.id, Document.doc_key == key,
-                                            Document.superseded_by.is_(None)))
+    prev = _current_document(db, sd, key)
     res = fetcher.fetch(ref.url, etag=prev.etag if prev else None,
                         last_modified=prev.last_modified if prev else None,
                         previous_sha256=prev.sha256 if prev else None)
@@ -214,14 +213,36 @@ def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: Documen
         c.parts_fetched += 1
         return part.body
 
-    parsed = connector.parse(res.body, ref, fetch_part)
+    return _store_document(db, connector, sd, ref, res.body, key, raw, c, prev, fetch_part,
+                           sha256=res.sha256, etag=res.etag, last_modified=res.last_modified)
+
+
+def _current_document(db, sd: SittingDay, key: str, any_origin: bool = False) -> Document | None:
+    """The day's current document under `key`. Failing that, a manually imported one (§9.11):
+    a fetched copy of the same file then counts as unchanged, and a different file supersedes
+    it. With `any_origin`, any current document of the day (for a manual import over a fetched one)."""
+    current = Document.superseded_by.is_(None)
+    doc = db.scalar(select(Document).where(Document.sitting_day_id == sd.id, Document.doc_key == key, current))
+    if doc is None:
+        q = select(Document).where(Document.sitting_day_id == sd.id, current).order_by(Document.id.desc())
+        if not any_origin:
+            q = q.where(Document.origin == "manual")
+        doc = db.scalars(q).first()
+    return doc
+
+
+def _store_document(db, connector, sd: SittingDay, ref: DocumentRef, body: bytes, key: str, raw: Path,
+                    c: SourceCounts, prev: Document | None, fetch_part, *, sha256: str,
+                    etag: str | None = None, last_modified: str | None = None, origin: str = "auto") -> str:
+    """Parse a new or changed document and store it as the day's current version."""
+    parsed = connector.parse(body, ref, fetch_part)
     if parsed.method:
         c.methods[parsed.method] = c.methods.get(parsed.method, 0) + 1
     if parsed.note:
         c.note = f"{ref.sitting_date}: {parsed.note}"
     doc = Document(sitting_day_id=sd.id, url=ref.url, doc_key=key, format=ref.format,
-                   version=_version(parsed.version, ref.version_hint), etag=res.etag,
-                   last_modified=res.last_modified, sha256=res.sha256, raw_path=str(raw))
+                   version=_version(parsed.version, ref.version_hint), etag=etag,
+                   last_modified=last_modified, sha256=sha256, raw_path=str(raw), origin=origin)
     db.add(doc)
     db.flush()
     old_hashes: set[str] = set()
@@ -239,6 +260,97 @@ def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: Documen
         db.add(speech)
         c.speeches_to_analyse += h not in old_hashes
     return doc.version
+
+
+IMPORT_FORMATS = {".pdf": "pdf", ".xml": "xml", ".docx": "docx", ".html": "html", ".htm": "html", ".json": "json",
+                  ".txt": "txt"}
+
+
+def import_document(source_id: str, sitting_date: date, path: Path, url: str | None = None,
+                    connectors: dict[str, HansardConnector] | None = None) -> dict:
+    """Manual import (spec §9.11): a Hansard file a person downloaded goes through the same
+    pipeline as a fetched one, marked origin=manual and de-duplicated by hash. It works for a
+    disabled (blocked) source, and a later fetch of the same file changes nothing.
+
+    `url` is where the file was downloaded from, if known: speeches then cite it.
+    The document key follows the connectors' convention ("pdf:VIC-LA:2026-09-24").
+    `connectors` (name → instance) replaces the registry, for tests."""
+    settings = get_settings()
+    path = Path(path)
+    fmt = IMPORT_FORMATS.get(path.suffix.lower())
+    if not fmt:
+        raise ValueError(f"{path.name}: expected a .pdf, .xml, .docx, .html, .json or .txt file")
+    body = path.read_bytes()
+    sha = hashlib.sha256(body).hexdigest()
+    with session() as db:
+        seed_sources(db)
+        src = db.get(Source, source_id)
+        if src is None:
+            raise ValueError(f"unknown source {source_id!r}: see config/sources.yaml")
+        if connectors is not None and src.connector in connectors:
+            connector = connectors[src.connector]
+        elif src.connector in registry():
+            connector = registry()[src.connector](None)   # parse only: it must not fetch anything
+        else:
+            raise ValueError(f"{source_id}: no connector yet ({src.connector}); it needs a parser before files can be imported")
+        run = ScanRun(trigger="manual")
+        db.add(run)
+        db.commit()
+        c = SourceCounts(days_checked=1)
+        result, version = "unchanged", "unknown"
+        try:
+            sd = db.scalar(select(SittingDay).where(SittingDay.source_id == source_id,
+                                                    SittingDay.sitting_date == sitting_date))
+            if sd is None:
+                sd = SittingDay(source_id=source_id, sitting_date=sitting_date)
+                db.add(sd)
+                db.flush()
+                c.new_days += 1
+            key = f"{fmt}:{source_id}:{sitting_date.isoformat()}"
+            prev = _current_document(db, sd, key, any_origin=True)
+            if prev and prev.sha256 == sha:
+                c.unchanged_documents += 1
+                version = prev.version
+            else:
+                day_dir = settings.data_dir / "raw" / source_id / sitting_date.isoformat()
+                day_dir.mkdir(parents=True, exist_ok=True)
+                raw = day_dir / f"{sha}.{fmt}"
+                raw.write_bytes(body)
+                ref = DocumentRef(source_id, sitting_date, url=url or f"file:{path.name}", format=fmt,
+                                  key=key, citation_url=url)
+
+                def no_parts(part_url: str) -> bytes:
+                    raise CouldNotCheck(f"a manual import cannot fetch {part_url}; import the complete document")
+
+                version = _store_document(db, connector, sd, ref, body, key, raw, c, prev, no_parts,
+                                          sha256=sha, origin="manual")
+                sd.version, sd.status = _version(version), "done"
+                result = "changed" if prev else "new"
+            c.note = f"manual import of {path.name}: {result}"
+            run.status = "done"
+        except Exception as e:
+            run.status, run.error_summary = "failed", f"{e.__class__.__name__}: {e}"
+            c.status, c.errors = "error", 1
+            raise
+        finally:
+            run.finished_at, run.per_source_json = utcnow(), {source_id: asdict(c)}
+            db.commit()
+        return {"source_id": source_id, "sitting_date": sitting_date.isoformat(), "file": path.name, "sha256": sha,
+                "result": result, "version": version, "speeches": c.speeches_to_analyse, "run_id": run.id}
+
+
+def import_folder(folder: Path, connectors: dict[str, HansardConnector] | None = None) -> list[dict]:
+    """Import every `<folder>/<SOURCE_ID>/<YYYY-MM-DD>[ anything].<ext>` (e.g. VIC-LA/2026-09-24.pdf)."""
+    out = []
+    for f in sorted(Path(folder).glob("*/*")):
+        if f.suffix.lower() not in IMPORT_FORMATS or not f.is_file():
+            continue
+        m = re.match(r"(\d{4}-\d{2}-\d{2})", f.name)
+        if not m:
+            out.append({"file": f"{f.parent.name}/{f.name}", "result": "skipped: the name must start with the sitting date"})
+            continue
+        out.append(import_document(f.parent.name, date.fromisoformat(m.group(1)), f, connectors=connectors))
+    return out
 
 
 @lru_cache(maxsize=16)

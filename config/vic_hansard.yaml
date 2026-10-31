@@ -1,0 +1,20 @@
+# Victorian sitting days for the scanner (backend/connectors/vic.py).
+#
+# The Parliament of Victoria's website blocks the scanner from the build network, so its sitting
+# days are listed here by staff, one line per chamber and sitting day, with the daily Hansard PDF
+# link copied from Browse Hansard:
+#   https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate
+# Copy the link as shown (its first path segment changes from time to time; never build it).
+# `proof: true` for a PROOF Hansard, `proof: false` once the final is out, or leave it out.
+#
+# From a network the Parliament's site accepts, `make scan` fetches these PDFs politely. From a
+# network it blocks, the source is marked blocked and nothing is retried. A PDF downloaded by hand
+# needs no line here: `make import SRC=VIC-LA DATE=2026-09-24 FILE=/full/path.pdf URL=<the link>`.
+#
+# days:
+#   - date: 2026-09-24
+#     chamber: VIC-LA      # VIC-LA = Legislative Assembly, VIC-LC = Legislative Council
+#     pdf: https://www.parliament.vic.gov.au/4a7744/globalassets/hansard-daily-pdfs/hansard-2145855009-37599/hansard-2145855009-37599.pdf
+#     proof: true
+
+days: []

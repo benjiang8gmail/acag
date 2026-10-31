@@ -1,4 +1,4 @@
-.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password recon scan backfill members sides
+.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password recon scan backfill import import-folder members sides
 
 UV := cd backend && UV_SYSTEM_CERTS=1 uv run
 
@@ -41,6 +41,12 @@ backfill:         ## First run: ingest the last BACKFILL_MONTHS of Hansard for e
 
 scan:             ## Update: only new sitting days, changed documents and proofs still being corrected
 	$(UV) python -m app.cli scan
+
+import:           ## Manual import of one Hansard file (blocked sites): make import SRC=VIC-LA DATE=2026-09-24 FILE=/full/path.pdf [URL=https://...]
+	$(UV) python -m app.cli import $(SRC) $(DATE) $(FILE) $(URL)
+
+import-folder:    ## Manual import of a folder laid out as DIR/VIC-LA/2026-09-24.pdf: make import-folder DIR=/full/path
+	$(UV) python -m app.cli import-folder $(DIR)
 
 secret:           ## Print a new SESSION_SECRET for .env
 	@$(UV) python -m app.cli secret

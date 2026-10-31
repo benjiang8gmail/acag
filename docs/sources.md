@@ -230,6 +230,18 @@ What the saved fixtures showed:
 - **Recommended connector:** daily PDF found from the listing page. If blocked, use manual import and the access request.
 - **Fixture:** none yet (environment). Batch: the listing page, the LA PDF for 24 Sep 2026, and one LC PDF.
 
+- **Re-check, 31 Oct 2026 (about 22:15 UTC), after the other blocked parliaments found routes:**
+  - `www.parliament.vic.gov.au/robots.txt`: still HTTP 403 (`server: cloudflare`). The fetcher stops there.
+  - `hansard.parliament.vic.gov.au` answers (robots.txt read; home and help pages saved to the recon log). It is the Hansard **search engine only**: its form posts to `/search` and results come back under `/isysquery/`, both disallowed by its robots.txt. Its help page sends readers to the PDFs on the main site. Not usable.
+  - Web archives, for a development copy: the National Library's Australian Web Archive answers with its own bot check (Anubis); the Internet Archive (`web.archive.org`) and Common Crawl (`index.commoncrawl.org`) are unreachable from the build network. None was retried or worked around.
+  - **Conclusion:** no automated route from this network, and no real daily PDF obtainable here. Log: `docs/recon/vic-recheck-2026-10-31.jsonl`.
+- **What is built (`backend/connectors/vic.py`), pending the first real PDF:**
+  - **Sitting days from a staff-kept list**, `config/vic_hansard.yaml` (as for the NT): one line per chamber and day with the PDF link copied from Browse Hansard. Only `https` PDF links on `www.parliament.vic.gov.au` are accepted. From a network the site accepts (the pilot's Australian office), `make scan` fetches them through the polite fetcher; from a blocked network the source is marked blocked.
+  - **Manual import** (spec §9.11): `make import SRC=VIC-LA DATE=2026-09-24 FILE=/full/path.pdf URL=<link>` or `make import-folder DIR=…` (files as `VIC-LA/2026-09-24.pdf`). Imports go through the same pipeline, are marked `manual`, de-duplicate by hash, and hand over cleanly when the scanner later fetches the same day (same file: unchanged; a corrected final: a new version).
+  - **The PDF reader** is written and tested against the first real daily PDF (D6: no stand-in fixtures). Until then the connector is not registered and `make import` says so for `VIC-LA`/`VIC-LC`.
+  - **Member list:** `config/members/VIC.yaml` from Wikipedia (secondary): Assembly 87 (ALP 54, LIB 20, NAT 9, GRN 2, IND 2; one seat vacant), Council 40 (ALP 15, LIB 12, GRN 4, NAT 2, LCP 2, SFF 1, LBT 1, AJP 1, DLP 1, PHON 1). To be cross-checked against names printed in the first Hansard.
+- **Ways to get Victoria running, in order of speed:** (1) a person downloads the sitting days' PDFs in a browser and imports them; (2) run the scanner from the pilot's Australian network with the days listed in `config/vic_hansard.yaml`, after one polite test shows the site serves a plain client there; (3) the access request (draft B) for permission and a lasting route.
+
 ### QLD: Legislative Assembly (`QLD-LA`)
 
 - **List sitting days:**

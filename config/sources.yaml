@@ -57,8 +57,8 @@ sources:
     connector: vic
     enabled: false
     status: blocked
-    live_check: "Cloudflare challenge, even for robots.txt"
-    approach: daily_pdf
+    live_check: "www.parliament.vic.gov.au: HTTP 403 from Cloudflare, even for robots.txt (re-checked 31 Oct 2026 22:15 UTC); hansard.parliament.vic.gov.au is a search engine whose result paths are disallowed by robots.txt"
+    approach: daily_pdf             # links listed by staff in config/vic_hansard.yaml, or files imported by hand (make import)
     risk: "automated test fetch refused by bot detection during spec research (Oct 2026)"
     timezone: Australia/Melbourne
   - id: VIC-LC
@@ -67,8 +67,8 @@ sources:
     connector: vic
     enabled: false
     status: blocked
-    live_check: "Cloudflare challenge, even for robots.txt"
-    approach: daily_pdf
+    live_check: "same as VIC-LA"
+    approach: daily_pdf             # links listed by staff in config/vic_hansard.yaml, or files imported by hand (make import)
     risk: "same as VIC-LA"
     timezone: Australia/Melbourne
   - id: QLD-LA
