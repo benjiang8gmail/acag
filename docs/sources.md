@@ -348,6 +348,13 @@ What the saved fixtures showed:
   - **The full-day PDF endpoint is confirmed to exist and is completely date-predictable:** `https://www.parliament.wa.gov.au/hansard/daily/{lh|uh}/{YYYY-MM-DD}/pdf/download`, with no opaque id anywhere — public search returns these URLs with their sitting dates and content. `lh` is the Assembly, `uh` the Council.
   - **This makes WA the easiest of the three blocked states to automate once access exists:** no listing page, no staff-kept links, no search discovery. It is Queensland's pattern exactly — probe each weekday's dated URL, fetch the day's PDF — so only the PDF reader would remain, written against the first real file (D6).
   - Pages carry "uncorrected draft — not to be quoted or distributed" until corrected, so the proof/final signal is on the document itself.
+- **Connector built (Phase 2): `backend/connectors/wa.py`, listing only.**
+  - **Sitting days by HEAD-probing each weekday's dated PDF** for both houses (200 = sat, 404 = no sitting), as for Queensland. No listing page is involved, so the WAF-protected calendar is not needed.
+  - **Documents:** `/hansard/daily/{lh|uh}/{YYYY-MM-DD}/pdf/download`, keyed `pdf:{source}:{date}`.
+  - **Recent days stay open:** `settled_through` holds the watermark 3 days back, so a day whose PDF is not published yet cannot be mistaken for "no sitting".
+  - **A refusal is never an empty calendar:** the Azure WAF 403 reaches sync as `Blocked` and any other unexpected status as `CouldNotCheck`, so the watermark is held rather than advanced past real sitting days.
+  - **The PDF reader is still to be written**, against the first real WA daily PDF (D6). Until then `parse` says so and the connector is not in `registry()`, so `make import` for `WA-LA`/`WA-LC` reports that too.
+  - Estimates committees (`esta`, `estb`) and the pre-Nov-2024 Lotus Domino system are not covered.
 
 ### The three blocked states, side by side (31 Oct 2026)
 

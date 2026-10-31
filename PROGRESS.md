@@ -1,5 +1,33 @@
 # Progress
 
+## 1 Nov 2026: the WA connector (listing complete; only the PDF reader is left)
+
+### Done
+
+- **`backend/connectors/wa.py`** — Western Australia, both houses, built on the date-predictable scheme confirmed yesterday. It needs no listing page, no staff-kept links and no search discovery, so unlike Victoria nothing about it depends on a human copying URLs.
+  - **Sitting days** by HEAD-probing each weekday's dated PDF for each house (200 = sat, 404 = no sitting), exactly Queensland's pattern. Weekends are not probed.
+  - **Documents:** `/hansard/daily/{lh|uh}/{YYYY-MM-DD}/pdf/download`, keyed `pdf:{source}:{date}`; `lh` is the Assembly, `uh` the Council.
+  - **Recent days stay open** (`settled_through`, 3 days), so a day whose PDF is not out yet cannot be read as "no sitting" and cannot advance the watermark.
+  - **A refusal is never an empty calendar:** the Azure WAF 403 reaches sync as `Blocked`, any other unexpected status as `CouldNotCheck`.
+  - **The PDF reader is the only piece left.** It is written against the first real WA daily PDF (D6: no stand-in fixtures); until then `parse` says so, the connector stays out of `registry()`, and `make import` for WA reports the same.
+- Recorded in `docs/sources.md` §WA.
+
+### Evidence
+
+- `make test`: 151 backend tests pass, including 6 new for WA, with no fixture and no network:
+  - every URL derives from the date alone, for both houses;
+  - weekday probing finds the right days per house (10 HEAD probes over a Sat–Fri week, no weekend, nothing downloaded);
+  - a house that did not sit yields no document;
+  - recent days stay open;
+  - **a WAF 403 raises `Blocked` and a 500 raises `CouldNotCheck`** — neither is silently an empty calendar;
+  - the reader refuses clearly and the connector is not registered.
+
+### Next
+
+- One real WA daily Hansard PDF (any 2026 sitting day, either house) finishes Western Australia: download it in a browser and `make import`, or run `make scan` from a network the site serves, where it will then list and fetch every day by itself.
+
+---
+
 ## 1 Nov 2026: SA and WA checked the same way — both Azure WAF, but WA is the easiest to finish
 
 ### Done
