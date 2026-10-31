@@ -1,0 +1,138 @@
+# The 9 audit offices (spec §5.2, §14). Seeds the `offices` table. Names and
+# Auditors-General match config/lexicon.yaml. Evidence is in docs/sources.md §3.
+# Jurisdiction colours live in web/src (design tokens) and move here in Phase 3.
+#
+# URLs marked `# unconfirmed` came from search results but were not opened.
+# Phase 0's direct check was refused by the container's egress policy.
+
+as_of: 2026-10-31
+
+offices:
+  - code: ANAO
+    name: Australian National Audit Office
+    jurisdiction: CTH
+    sources: [CTH-SEN, CTH-HOR]
+    website: https://www.anao.gov.au
+    auditor_general: Dr Caralee McLiesh PSM
+    program:
+      name: Annual Audit Work Program 2026–27
+      published: true
+      url: https://www.anao.gov.au/work-program/overview
+      format: web pages (portfolio pages, plus a 2027–29 forward pool)
+    reports_url: https://www.anao.gov.au/pubs/performance-audit
+    audit_requests_url: https://www.anao.gov.au/work-program/requests
+
+  - code: AONSW
+    name: Audit Office of New South Wales
+    jurisdiction: NSW
+    sources: [NSW-LA, NSW-LC]
+    website: https://www.audit.nsw.gov.au
+    auditor_general: Bola Oyetunji
+    program:
+      name: Audit Work Plan 2026–2029
+      published: true
+      url: https://www.audit.nsw.gov.au/audit-work-plan-2026-2029
+      document: https://www.audit.nsw.gov.au/sites/default/files/documents/Audit%20Work%20Plan%202026%E2%80%932029.pdf
+      format: web page + PDF ("As at July 2026")
+    reports_url: https://www.audit.nsw.gov.au/our-work/reports   # unconfirmed
+    audit_requests_url: https://www.audit.nsw.gov.au/our-work/requests-for-audit
+
+  - code: VAGO
+    name: Victorian Auditor-General's Office
+    jurisdiction: VIC
+    sources: [VIC-LA, VIC-LC]
+    website: https://www.audit.vic.gov.au
+    auditor_general: Andrew Greaves
+    program:
+      name: Annual Plan 2026–27
+      published: true
+      url: https://www.audit.vic.gov.au/node/35573
+      document: https://www.audit.vic.gov.au/sites/default/files/2026-06/20260624_Annual-Plan-2026-27.pdf
+      format: PDF + HTML (tabled 24 Jun 2026)
+    reports_url: https://www.audit.vic.gov.au/reports   # unconfirmed
+    audit_requests_url: null   # "Suggest an audit" form only; no published list
+
+  - code: QAO
+    name: Queensland Audit Office
+    jurisdiction: QLD
+    sources: [QLD-LA]
+    website: https://www.qao.qld.gov.au
+    auditor_general: Rachel Vagg
+    program:
+      name: Forward work plan 2026–29
+      published: true
+      url: https://www.qao.qld.gov.au/audit-program
+      document: https://www.qao.qld.gov.au/sites/default/files/2026-06/Forward%20work%20plan%202026%E2%80%9329_0.pdf
+      status_document: https://www.qao.qld.gov.au/sites/default/files/2026-06/Acquittal%20of%20Queensland%20Audit%20Office%20prior%20published%20work%20plans%20%E2%80%93%20June%202026.pdf
+      format: PDF (Jun 2026)
+    reports_url: https://www.qao.qld.gov.au/reports-resources/reports-parliament   # path seen on a staging host
+    audit_requests_url: https://www.qao.qld.gov.au/audit-program/requests-audits
+
+  - code: SAAGD
+    name: Audit Office of South Australia
+    other_names: [Auditor-General's Department]   # renamed on 1 Jul 2024
+    jurisdiction: SA
+    sources: [SA-HA, SA-LC]
+    website: https://www.audit.sa.gov.au
+    auditor_general: Andrew Blaskett
+    program:
+      name: null
+      published: false   # none found; F4 falls back to recent reports and says so
+    reports_url: https://www.audit.sa.gov.au/reports
+    audit_requests_url: null
+
+  - code: OAGWA
+    name: Office of the Auditor General Western Australia
+    jurisdiction: WA
+    sources: [WA-LA, WA-LC]
+    website: https://audit.wa.gov.au
+    auditor_general: Caroline Spencer
+    program:
+      name: Audits in progress   # no dated forward program; topics are selected twice a year
+      published: partial
+      url: https://audit.wa.gov.au/audit-program/audits-in-progress/
+      format: web pages
+    reports_url: https://audit.wa.gov.au/reports-and-publications/reports/
+    audit_requests_url: null
+
+  - code: AUDTAS
+    name: Audit Tasmania
+    other_names: [Tasmanian Audit Office]
+    jurisdiction: TAS
+    sources: [TAS-HA, TAS-LC]
+    website: https://audit.tas.gov.au
+    auditor_general: Martin Thompson
+    program:
+      name: Auditor-General's Annual Plan 2026–27
+      published: true
+      url: https://audit.tas.gov.au/publication/auditor-generals-annual-plan-2026-27/
+      format: publication page + PDF (dated 22 Jun 2026)
+    reports_url: https://www.audit.tas.gov.au/publication-category/performance-audit/
+    audit_requests_url: null   # referral guidance only
+
+  - code: ACTAO
+    name: ACT Audit Office
+    jurisdiction: ACT
+    sources: [ACT-LA]
+    website: https://www.audit.act.gov.au
+    auditor_general: Ajay Sharma PSM
+    program:
+      name: Performance Audit Program 2026–27
+      published: true
+      document: https://www.audit.act.gov.au/__data/assets/pdf_file/0003/3080730/ACT-Audit-Office-Performance-Audit-Program-2026-27.pdf
+      format: PDF (released 9 Jun 2026; covers 2026–27 and 2027–28)
+    reports_url: https://www.audit.act.gov.au/reports-and-publications/audit-reports   # unconfirmed
+    audit_requests_url: null
+
+  - code: NTAGO
+    name: Northern Territory Auditor-General's Office
+    jurisdiction: NT
+    sources: [NT-LA]
+    website: https://ago.nt.gov.au
+    auditor_general: Jara K. Dean
+    program:
+      name: null
+      published: false   # the annual report has a "Plan of Work" section; there is no standalone forward program
+    reports_url: https://ago.nt.gov.au/publications/ag-reports-parliament
+    audit_requests_url: null
+    notes: Reports to the Legislative Assembly are bundles and must be split into individual audits.

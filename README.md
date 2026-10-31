@@ -41,6 +41,9 @@ E2E_PASSWORD=yourpassword make e2e  # Playwright journeys (desktop and 375 px) a
 | `backend/connectors/`, `registers/`, `parsers/`, `pipeline/`, `gaps/` | Placeholders for Phases 2–5 |
 | `web/` | React + Fluent UI 9 single-page app |
 | `web/e2e/` | Playwright journeys and accessibility checks |
+| `config/` | Sources (15 chambers), offices (9), lexicon, governments, themes |
+| `docs/sources.md` | Phase 0 source recon; `docs/access-requests.md` drafts |
+| `scripts/recon_fetch.py` | Polite fetcher for `make recon` (robots.txt, rate limits, stops at blocks) |
 | `docs/screens/` | Desktop and 375 px screenshots |
 | `project/` | The Claude Design handoff: prototype, chat transcript and spec |
 

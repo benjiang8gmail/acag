@@ -1,4 +1,4 @@
-.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password
+.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password recon
 
 UV := cd backend && UV_SYSTEM_CERTS=1 uv run
 
@@ -41,3 +41,6 @@ secret:           ## Print a new SESSION_SECRET for .env
 
 set-password:     ## Prompt for the password and print APP_PASSWORD_HASH for .env
 	@$(UV) python -m app.cli hash-password
+
+recon:            ## Phase 0: capture source fixtures politely (robots.txt, >=2 s per host); needs network access to the parliament and office hosts
+	python3 -I scripts/recon_fetch.py --batch scripts/recon_batch.tsv --log docs/recon/recon-$$(date +%Y-%m-%d).jsonl

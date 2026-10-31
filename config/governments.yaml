@@ -1,0 +1,227 @@
+# Governing parties per parliament (spec §9.4, §14). Code uses this to set
+# `speaker_side` (government / opposition / crossbench / unknown); the model never does.
+#
+# Rules applied in code:
+#   - A member of a party listed under `government` is government. So is any
+#     minister, parliamentary secretary or assistant minister, whatever their party.
+#   - A member of a party listed under `opposition` is opposition.
+#   - Any other party, or an independent, is crossbench. That includes presiding
+#     officers who are independents (e.g. NSW Speaker Greg Piper).
+#   - If the speaker's party is not known, the side is `unknown`. Never guess.
+#   - A speech's side is set by the `periods` entry in force on the sitting date.
+#
+# Parties are matched by `party_codes`, which hold the abbreviations each
+# parliament's Hansard uses. Codes differ between parliaments: in Victorian Hansard
+# "LP" is the Libertarian Party, but in older Commonwealth files it is the Liberal
+# Party. Codes are therefore scoped to each parliament. Codes marked `verified: false`
+# must be confirmed against the Phase 0 fixtures before Phase 2 relies on them.
+#
+# Verified 31 Oct 2026 by web search only. Direct fetches from the cloud container
+# were refused, so see docs/sources.md §0. Confidence: high = official or
+# dated-2026 reputable source; medium = consistent secondary sources.
+# Re-verify after any election, change of leader or new agreement.
+# Victoria goes to the polls on 28 Nov 2026, so update VIC straight after.
+
+as_of: 2026-10-31
+
+parliaments:
+  CTH:
+    name: Parliament of Australia
+    chambers: [CTH-SEN, CTH-HOR]
+    next_election: "due by 2028"
+    periods:
+      - from: 2025-05-03          # federal election; ALP re-elected with an enlarged majority
+        to: null
+        head_of_government: {name: Anthony Albanese, title: Prime Minister, party: ALP, since: 2022-05-23}
+        government: [ALP]
+        government_type: majority  # House 94 of 150
+        opposition: [LIB, NAT, LNP, CLP]   # LNP and CLP members sit in the Liberal or Nationals party rooms
+        leader_of_opposition: {name: Angus Taylor, party: LIB, since: 2026-02-13}
+        notes: >
+          The Nationals left the Coalition on 22 Jan 2026 and rejoined on 8 Feb 2026, so
+          they count as opposition throughout the backfill window. Matt Canavan has
+          led the Nationals since about Mar 2026. Crossbench: GRN, PHON (One Nation;
+          Barnaby Joyce from Dec 2025, David Farley from the 9 May 2026 Farrer by-election),
+          Community Strong Australia (Spender, Steggall; launched 25 Jun 2026), KAP, CA,
+          JLN, UAP, AV (Australia's Voice), independents.
+        confidence: high
+    party_codes:
+      ALP: {party: Australian Labor Party, verified: true}
+      LP: {party: Liberal Party of Australia, verified: true, note: older House files}
+      LIB: {party: Liberal Party of Australia, verified: false}
+      NATS: {party: The Nationals, verified: true}
+      NAT: {party: The Nationals, verified: false}
+      LNP: {party: Liberal National Party of Queensland, verified: true}
+      CLP: {party: Country Liberal Party, verified: true}
+      AG: {party: Australian Greens, verified: true, note: older House files}
+      GRN: {party: Australian Greens, verified: false}
+      IND: {party: Independent, verified: true}
+      PHON: {party: Pauline Hanson's One Nation, verified: false}
+      JLN: {party: Jacqui Lambie Network, verified: false}
+      UAP: {party: United Australia Party, verified: false}
+      CA: {party: Centre Alliance, verified: false}
+      KAP: {party: Katter's Australian Party, verified: false}
+      AV: {party: Australia's Voice, verified: false}
+
+  NSW:
+    name: Parliament of New South Wales
+    chambers: [NSW-LA, NSW-LC]
+    next_election: 2027-03-13
+    periods:
+      - from: 2023-03-25
+        to: null
+        head_of_government: {name: Chris Minns, title: Premier, party: ALP, since: 2023-03-28}
+        government: [ALP]
+        government_type: minority  # depends on confidence-and-supply deals with independents (current status not re-verified)
+        opposition: [LIB, NAT]
+        leader_of_opposition: {name: Kellie Sloane, party: LIB, since: 2025-11-21}
+        notes: >
+          Speaker Greg Piper is an independent, so he counts as crossbench. Council
+          crossbench: GRN, SFF, AJP, LCP (Legalise Cannabis), Libertarian, independents
+          (including former One Nation MLCs). One Nation has no NSW MPs.
+        confidence: high
+    party_codes: {}   # to verify from the NSW API fixture (expected: ALP, LIB, NAT, GRN, IND, SFF, AJP, LC)
+
+  VIC:
+    name: Parliament of Victoria
+    chambers: [VIC-LA, VIC-LC]
+    next_election: 2026-11-28     # caretaker period from 6 pm, 3 Nov 2026
+    periods:
+      - from: 2022-11-26
+        to: null
+        head_of_government: {name: Ben Carroll, title: Premier, party: ALP, since: 2026-07-28}
+        previous_heads: [{name: Jacinta Allan, party: ALP, from: 2023-09-27, to: 2026-07-28}]
+        government: [ALP]
+        government_type: majority
+        opposition: [LIB, NAT]
+        leader_of_opposition: {name: Jess Wilson, party: LIB, since: 2025-11-18}
+        notes: >
+          Council crossbench: GRN, LCV, AJP, Libertarian, PHON, SFFP, Family First, independent.
+          Add a new period after the 28 Nov 2026 election.
+        confidence: high
+    party_codes:
+      ALP: {party: Australian Labor Party, verified: true}
+      Lib: {party: Liberal Party, verified: true}
+      Nat: {party: The Nationals, verified: true}
+      LCV: {party: Legalise Cannabis Victoria, verified: true}
+      AJP: {party: Animal Justice Party, verified: true}
+      LP: {party: Libertarian Party, verified: true, note: "NOT the Liberal Party in Victorian Hansard"}
+      LDP: {party: Libertarian Party, verified: true, note: former name Liberal Democrats}
+      PHON: {party: Pauline Hanson's One Nation, verified: true}
+      SFFP: {party: Shooters, Fishers and Farmers Party, verified: true}
+      Greens: {party: Australian Greens, verified: false}
+      FF: {party: Family First, verified: false}
+      Ind: {party: Independent, verified: false}
+
+  QLD:
+    name: Queensland Parliament
+    chambers: [QLD-LA]
+    next_election: "Oct 2028 (fixed four-year term)"
+    periods:
+      - from: 2024-10-26
+        to: null
+        head_of_government: {name: David Crisafulli, title: Premier, party: LNP, since: 2024-10-28}
+        government: [LNP]
+        government_type: majority  # 53 of 93
+        opposition: [ALP]
+        leader_of_opposition: {name: Steven Miles, party: ALP, since: 2024-10-28, confidence: medium}
+        notes: Crossbench is KAP, GRN and IND.
+        confidence: high
+    party_codes:
+      LNP: {party: Liberal National Party, verified: true}
+      ALP: {party: Australian Labor Party, verified: true}
+      KAP: {party: Katter's Australian Party, verified: true}
+      GRN: {party: Queensland Greens, verified: true}
+      IND: {party: Independent, verified: true}
+
+  SA:
+    name: Parliament of South Australia
+    chambers: [SA-HA, SA-LC]
+    next_election: "Mar 2030"
+    periods:
+      - from: 2026-03-21          # state election; ALP 34, LIB 5, One Nation 4, IND 4 of 47
+        to: null
+        head_of_government: {name: Peter Malinauskas, title: Premier, party: ALP, since: 2022-03-21}
+        government: [ALP]
+        government_type: majority
+        opposition: [LIB]
+        leader_of_opposition: {name: Ashton Hurn, party: LIB, since: 2025-12-08}
+        notes: >
+          One Nation (4 seats in the Assembly) counts as crossbench, not opposition. Council
+          crossbench: PHON, GRN, Family First.
+        confidence: high
+    party_codes: {}   # to verify from the SA XML fixture (talker attributes)
+
+  WA:
+    name: Parliament of Western Australia
+    chambers: [WA-LA, WA-LC]
+    next_election: 2029-03-10
+    periods:
+      - from: 2025-03-08
+        to: null
+        head_of_government: {name: Roger Cook, title: Premier, party: ALP, since: 2023-06-08}
+        government: [ALP]
+        government_type: majority  # 45 of 59
+        opposition: [LIB, NAT]   # Liberal–Nationals alliance, tied 6–6 in the Assembly
+        leader_of_opposition: {name: Basil Zempilas, party: LIB, since: 2025-03-25}
+        notes: >
+          Crossbench: PHON (Luke Herdegen, who won the Secret Harbour by-election on
+          29 Aug 2026), IND (Jonathan Huston, ex-LIB, from 25 Jun 2026), and in the Council
+          GRN, PHON, Australian Christians, LCWA and AJP.
+        confidence: high
+    party_codes: {}   # to verify from the WA fixture
+
+  TAS:
+    name: Parliament of Tasmania
+    chambers: [TAS-HA, TAS-LC]
+    next_election: "due by 2029"
+    periods:
+      - from: 2025-07-19          # hung parliament
+        to: null
+        head_of_government: {name: Jeremy Rockliff, title: Premier, party: LIB, since: 2022-04-08}
+        government: [LIB]
+        government_type: minority  # 14 of 35; survived a no-confidence motion on 19 Aug 2025
+        opposition: [ALP]
+        leader_of_opposition: {name: Josh Willie, party: ALP, since: 2025-08-20}
+        notes: >
+          Crossbench: GRN, SFF, IND (including Helen Burnet, who left the Greens about Jan 2026).
+          Most Legislative Council members are independents, so they count as crossbench.
+          LIB-aligned independents in the Council also count as crossbench unless they are ministers.
+        confidence: high
+    party_codes: {}   # to verify from the Tasmanian fixture
+
+  ACT:
+    name: ACT Legislative Assembly
+    chambers: [ACT-LA]
+    next_election: "Oct 2028"
+    periods:
+      - from: 2024-10-19
+        to: null
+        head_of_government: {name: Andrew Barr, title: Chief Minister, party: ALP, since: 2014-12-11}
+        government: [ALP]
+        government_type: minority  # 10 of 25
+        opposition: [LIB]   # Canberra Liberals
+        leader_of_opposition: {name: Leanne Castley, party: LIB, confidence: low, note: not re-verified in Phase 0}
+        notes: >
+          There have been no Greens ministers this term. The Greens ended talks on a new
+          confidence-and-supply agreement on 16 Sep 2026, so Labor governs without a formal
+          agreement. The Greens (4) count as crossbench either way, as do independents
+          Fiona Carrick and Thomas Emerson.
+        confidence: high
+    party_codes: {}   # to verify from the ACT fixture
+
+  NT:
+    name: Legislative Assembly of the Northern Territory
+    chambers: [NT-LA]
+    next_election: "Aug 2028"
+    periods:
+      - from: 2024-08-24
+        to: null
+        head_of_government: {name: Lia Finocchiaro, title: Chief Minister, party: CLP, since: 2024-08-28}
+        government: [CLP]
+        government_type: majority  # 17 of 25
+        opposition: [ALP]
+        leader_of_opposition: {name: Selena Uibo, party: ALP, since: 2024-09-03}
+        notes: Crossbench is independents Justine Davis and Robyn Lambley. The Greens hold no seats since the 2026 Nightcliff by-election.
+        confidence: high
+    party_codes: {}   # to verify from the NT fixture (expected: CLP, ALP, IND)

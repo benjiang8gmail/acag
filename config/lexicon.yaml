@@ -1,0 +1,263 @@
+# Audit lexicon for the pre-filter (spec §9.2, stage B). Any hit on these lists
+# always sends a speech to LLM triage, and the reason is recorded.
+#
+# Matching is case-insensitive and whitespace-normalised, and it treats hyphen,
+# en dash and space as the same in "Auditor-General", "Auditor General" and
+# "Auditor–General". WA writes "Auditor General" with no hyphen.
+#
+# Verified 31 Oct 2026 by web search of official sources (appointment notices,
+# office "about" pages, signed 2026 reports). Direct page fetches from the cloud
+# container were refused, so see docs/sources.md §0. Re-check Auditor-General names
+# whenever a register refresh shows a new signatory.
+
+as_of: 2026-10-31
+version: 1
+
+# Attribution rule (§9.2): an unqualified "the Auditor-General" refers to the
+# Auditor-General of the speaking parliament's own jurisdiction.
+attribution:
+  CTH: ANAO
+  NSW: AONSW
+  VIC: VAGO
+  QLD: QAO
+  SA: SAAGD
+  WA: OAGWA
+  TAS: AUDTAS
+  ACT: ACTAO
+  NT: NTAGO
+
+offices:
+  ANAO:
+    names: [Australian National Audit Office, ANAO, National Audit Office]
+    office_holder_titles: [Auditor-General for Australia, Commonwealth Auditor-General, federal Auditor-General]
+  AONSW:
+    names: [Audit Office of New South Wales, Audit Office of NSW, NSW Audit Office, New South Wales Audit Office, AONSW]
+    office_holder_titles: [NSW Auditor-General, New South Wales Auditor-General, Auditor-General of New South Wales]
+  VAGO:
+    names: [Victorian Auditor-General's Office, VAGO, Auditor-General's Office]
+    office_holder_titles: [Victorian Auditor-General, Auditor-General of Victoria]
+  QAO:
+    names: [Queensland Audit Office, QAO]
+    office_holder_titles: [Queensland Auditor-General, Auditor-General of Queensland]
+  SAAGD:
+    # Renamed on 1 Jul 2024 by the Public Sector (Machinery of Government) Proclamation 2024.
+    names: [Audit Office of South Australia, Auditor-General's Department, Auditor-General's Department of South Australia, AGD]
+    office_holder_titles: [South Australian Auditor-General, Auditor-General of South Australia, SA Auditor-General]
+    ambiguous: [AGD]   # count only near audit context: "AGD" is also the Commonwealth Attorney-General's Department
+  OAGWA:
+    names: [Office of the Auditor General, Office of the Auditor General for Western Australia, Office of the Auditor General Western Australia, OAG, OAG WA]
+    office_holder_titles: [Western Australian Auditor General, WA Auditor General, Auditor General for Western Australia]
+    ambiguous: [OAG, Office of the Auditor General]   # attribute to WA only in WA Hansard, or when "Western Australia" is nearby
+  AUDTAS:
+    names: [Audit Tasmania, Tasmanian Audit Office, TAO]
+    office_holder_titles: [Tasmanian Auditor-General, Auditor-General of Tasmania]
+    ambiguous: [TAO]
+  ACTAO:
+    names: [ACT Audit Office, Audit Office of the ACT]
+    office_holder_titles: [ACT Auditor-General, Auditor-General of the ACT]
+  NTAGO:
+    names: [Northern Territory Auditor-General's Office, NT Auditor-General's Office, NTAGO, Auditor-General's Office]
+    office_holder_titles: [Northern Territory Auditor-General, NT Auditor-General, Auditor-General for the Northern Territory]
+    ambiguous: [Auditor-General's Office]   # VAGO uses the same phrase; apply the attribution rule
+
+# Current Auditors-General. Count a surname only near audit context, i.e. within
+# about 30 words of an audit term or office name. `refer_as` lists the forms
+# expected in Hansard. Former office-holders are kept because members still cite
+# their reports; a match on a former holder counts toward the office, not a person.
+# `former` entries are lower-stakes and partly from background knowledge: confirm
+# them against each office's history page when the registers are built (Phase 3).
+auditors_general:
+  ANAO:
+    current: {name: Caralee McLiesh, honorifics: [Dr], post_nominals: [PSM], since: 2024-11-04, term: "10 years", confidence: high}
+    refer_as: [Dr McLiesh, Caralee McLiesh, Ms McLiesh]
+    former: [{name: Rona Mellor, role: acting, from: 2024-02, to: 2024-11-03}, {name: Grant Hehir, to: 2024-02}]
+  AONSW:
+    current: {name: Bola Oyetunji, since: 2024-04-04, term: "8 years, non-renewable", confidence: high}
+    refer_as: [Ms Oyetunji, Bola Oyetunji]
+    former: [{name: Margaret Crawford, to: 2024-04-03}]
+  VAGO:
+    current: {name: Andrew Greaves, since: 2016, term: "second term 19 Sep 2023 – 18 Sep 2030", confidence: high}
+    refer_as: [Mr Greaves, Andrew Greaves]
+    former: []
+  QAO:
+    current: {name: Rachel Vagg, since: 2024-08-12, term: "to 11 Aug 2031", confidence: high}
+    refer_as: [Ms Vagg, Rachel Vagg]
+    former: [{name: Brendan Worrall, to: 2024}]
+  SAAGD:
+    current: {name: Andrew Blaskett, since: 2024-01-08, term: "7 years", confidence: high}
+    refer_as: [Mr Blaskett, Andrew Blaskett]
+    former: [{name: Andrew Richardson, to: 2024-01}]
+  OAGWA:
+    current: {name: Caroline Spencer, since: 2018-05, term: "10 years, non-renewable (to May 2028)", confidence: high}
+    refer_as: [Ms Spencer, Caroline Spencer]
+    former: []
+  AUDTAS:
+    current: {name: Martin Thompson, since: 2024-05-01, term: "10 years", confidence: high}
+    refer_as: [Mr Thompson, Martin Thompson]
+    former: [{name: Rod Whitehead, to: 2024}]
+  ACTAO:
+    current: {name: Ajay Sharma, post_nominals: [PSM], since: 2026-02-08, term: "to 7 Feb 2033 (DI2025-305)", confidence: high}
+    refer_as: [Mr Sharma, Ajay Sharma]
+    former: [{name: Michael Harris, from: 2019-02, to: 2026-02-07}]
+  NTAGO:
+    current: {name: Jara Dean, display: Jara K. Dean, since: 2024-09-13, confidence: high}
+    refer_as: [Ms Dean, Jara Dean]
+    former: [{name: Julie Crisp, from: 2014, to: 2024-09}]
+
+# Generic audit terms (§9.2)
+generic_terms:
+  - Auditor-General
+  - Auditor General
+  - Auditors-General
+  - Auditor-General's report
+  - audit report
+  - performance audit
+  - financial audit
+  - audit office
+  - Audit Act
+  - audit recommendations
+  - recommendations of the Auditor-General
+
+# How tabling is recorded in each parliament's Hansard. `verified: true` means the
+# wording was seen in a 2026 Hansard or Votes and Proceedings snippet. The rest
+# must be confirmed from the Phase 0 fixtures.
+tabling_phrases:
+  VIC:
+    verified: true
+    patterns:
+      - "Auditor-General – {title} – Ordered to be published"
+      - "Auditor-General — {title} — Ordered to be published"
+      - "Auditor-General – {title}, {Month YYYY} (Ordered to be published)"   # Legislative Council
+    section_headings: [Documents, Papers, Documents tabled under Acts of Parliament]
+  NSW:
+    verified: partly   # "Auditor-General" heading seen in the LA proof of 15 Sep 2026
+    patterns:
+      - "Financial Audit Report of the Auditor-General entitled {title}"
+      - "Performance Audit Report of the Auditor-General entitled {title}"
+      - "report of the Auditor-General entitled {title}"
+    section_headings: [Auditor-General]
+  CTH:
+    verified: false
+    patterns:
+      - "Auditor-General's reports"
+      - "Auditor-General Report No. {n} {YYYY–YY}"
+      - "Report No. {n} of {YYYY–YY}"
+  QLD:
+    verified: false
+    patterns:
+      - "Auditor-General Report {n}: {YYYY–YY} – {title}"
+      - "Report to Parliament {n}: {YYYY–YY}"
+  SA:
+    verified: false
+    patterns:
+      - "Auditor-General's Report {n} of {YYYY}"
+      - "Report of the Auditor-General"
+  WA:
+    verified: false
+    patterns:
+      - "Auditor General's report"
+      - "Report {n}: {YYYY-YY}"
+  TAS:
+    verified: false
+    patterns:
+      - "Report of the Auditor-General No. {n} of {YYYY-YY}"
+  ACT:
+    verified: false
+    patterns:
+      - "Auditor-General's Report No. {n}/{YYYY}"
+      - "Auditor-General Act, pursuant to"
+  NT:
+    verified: false
+    patterns:
+      - "Report to the Legislative Assembly {n}: {YYYY-YY}"
+      - "Auditor-General's report to the Legislative Assembly"
+
+request_phrases:
+  - call on the Auditor-General
+  - calls on the Auditor-General
+  - refer * to the Auditor-General
+  - referred to the Auditor-General
+  - ask the Auditor-General to
+  - asked the Auditor-General to
+  - request the Auditor-General
+  - requested the Auditor-General
+  - wrote to the Auditor-General
+  - Auditor-General should investigate
+  - Auditor-General to investigate
+  - Auditor-General to audit
+  - an audit of
+  - independent audit
+
+# Public accounts and audit oversight committees (verified Oct 2026)
+committees:
+  CTH: [Joint Committee of Public Accounts and Audit, JCPAA]
+  NSW: [Public Accounts Committee, Public Accountability and Works Committee]
+  VIC: [Public Accounts and Estimates Committee, PAEC]
+  QLD: [Governance, Energy and Finance Committee]   # oversees the Auditor-General since 28 Nov 2024; Queensland has had no PAC since 2011
+  SA: [Economic and Finance Committee, Budget and Finance Committee]   # SA has no Public Accounts Committee
+  WA: [Public Accounts Committee, Estimates and Financial Operations Committee]
+  TAS: [Parliamentary Standing Committee of Public Accounts, Public Accounts Committee]
+  ACT: [Standing Committee on Public Accounts and Administration, Standing Committee on Public Accounts]   # renamed 3 Dec 2024; the old name is kept as an alias
+  NT: [Public Accounts Committee]
+committee_generic: [Public Accounts Committee, PAC, Estimates, Senate Estimates, budget estimates]
+
+integrity_bodies:
+  CTH: [National Anti-Corruption Commission, NACC, Commonwealth Ombudsman]
+  NSW: [Independent Commission Against Corruption, ICAC, NSW Ombudsman]
+  VIC: [Independent Broad-based Anti-corruption Commission, IBAC, Victorian Ombudsman]
+  QLD: [Crime and Corruption Commission, CCC, Queensland Ombudsman]
+  SA: [Independent Commission Against Corruption, ICAC, Office for Public Integrity, OPI, Ombudsman SA]
+  WA: [Corruption and Crime Commission, CCC, Ombudsman Western Australia]
+  TAS: [Integrity Commission, Ombudsman Tasmania]
+  ACT: [ACT Integrity Commission, Integrity Commission, ACT Ombudsman]
+  NT:
+    # Since 1 Jun 2026 the Integrity and Ethics Commissioner Act 2025 merges the ICAC,
+    # Ombudsman NT, the Information Commissioner and the Health and Community Services
+    # Complaints Commissioner into one office.
+    - Integrity and Ethics Commissioner
+    - Office of the Integrity and Ethics Commissioner
+    - Independent Commissioner Against Corruption   # former name, still used in debate
+    - ICAC
+    - Ombudsman NT
+
+risk_terms:
+  - cost overrun
+  - cost blowout
+  - blowout
+  - blow-out
+  - delay
+  - delayed
+  - procurement
+  - tender
+  - grant
+  - grants program
+  - probity
+  - conflict of interest
+  - consultants
+  - consultancy
+  - contract variation
+  - value for money
+  - cyber
+  - cyberattack
+  - data breach
+  - fraud
+  - overspend
+  - waste
+  - service failure
+  - workforce shortage
+  - labour hire
+
+public_body_change_terms:
+  - establish
+  - establishment of
+  - abolish
+  - abolition of
+  - merge
+  - merger
+  - amalgamate
+  - dissolve
+  - wind up
+  - new authority
+  - new agency
+  - new statutory body
+  - machinery of government

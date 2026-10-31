@@ -1,0 +1,51 @@
+# Phase 0 fixture capture: URL<TAB>output path. Run with `make recon` from a
+# network that is allowed to reach these hosts. The fetcher checks robots.txt
+# first, waits FETCH_MIN_INTERVAL_SECONDS (>= 2 s) per host, and stops at the
+# first block or bot challenge. Dated URLs were seen in search results on
+# 31 Oct 2026. Where only a listing is given, choose a recent sitting day from
+# the saved listing and add its document URL here, then run again.
+#
+# --- Hansard: listings and API descriptions
+https://www.aph.gov.au/Parliamentary_Business/Hansard	backend/tests/fixtures/sources/CTH/listing.html
+https://api.parliament.nsw.gov.au/api/hansard/search/year/2026	backend/tests/fixtures/sources/NSW/year-2026.json
+https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate?page=1&pageSize=10	backend/tests/fixtures/sources/VIC/listing.html
+https://www.parliament.qld.gov.au/Work-of-the-Assembly/Sitting-Dates/Latest-Sitting-Week	backend/tests/fixtures/sources/QLD-LA/latest-sitting-week.html
+https://hansardsearch.parliament.sa.gov.au/docs/api/v1/swagger.json	backend/tests/fixtures/sources/SA/swagger.json
+https://hansardsearch.parliament.sa.gov.au/search/calendar	backend/tests/fixtures/sources/SA/calendar.html
+https://www.parliament.wa.gov.au/hansard/search	backend/tests/fixtures/sources/WA/search.html
+https://www.parliament.tas.gov.au/house-of-assembly/chamber-proceedings/proceedings/2026/june/house-of-assembly-16-june	backend/tests/fixtures/sources/TAS-HA/proceedings-2026-06-16.html
+https://hansard.act.gov.au/	backend/tests/fixtures/sources/ACT-LA/home.html
+https://parliament.nt.gov.au/business/parliamentary-record/draft	backend/tests/fixtures/sources/NT-LA/draft.html
+# --- Hansard: one real sitting day per chamber
+https://www.parliament.nsw.gov.au/__data/assets/pdf_file/0017/25253/hansard-la-15-september-2026.pdf	backend/tests/fixtures/sources/NSW-LA/2026-09-15.pdf
+https://www.parliament.nsw.gov.au/__data/assets/pdf_file/0016/25252/hansard-lc-15-september-2026.pdf	backend/tests/fixtures/sources/NSW-LC/2026-09-15.pdf
+https://www.parliament.vic.gov.au/4a7744/globalassets/hansard-daily-pdfs/hansard-2145855009-37599/hansard-2145855009-37599.pdf	backend/tests/fixtures/sources/VIC-LA/2026-09-24.pdf
+https://www.parliament.vic.gov.au/4a83d8/globalassets/hansard-daily-pdfs/hansard-974425065-37180/hansard-974425065-37180.pdf	backend/tests/fixtures/sources/VIC-LC/hansard-974425065-37180.pdf
+https://documents.parliament.qld.gov.au/events/han/2026/2026_10_13_DAILY.pdf	backend/tests/fixtures/sources/QLD-LA/2026-10-13.pdf
+https://hansardsearch.parliament.sa.gov.au/daily/lh/2026-05-06/download/toc	backend/tests/fixtures/sources/SA-HA/2026-05-06-toc.xml
+https://www.parliament.wa.gov.au/hansard/daily/uh/2026-06-18/pdf/download	backend/tests/fixtures/sources/WA-LC/2026-06-18.pdf
+https://www.parliament.tas.gov.au/__data/assets/pdf_file/0011/110081/HA-Tuesday-18-August-2026-Draft-Full-Text.pdf	backend/tests/fixtures/sources/TAS-HA/2026-08-18-draft.pdf
+https://www.parliament.tas.gov.au/__data/assets/pdf_file/0019/109720/LC-Tuesday-11-August-2026-Draft-Full-Text.pdf	backend/tests/fixtures/sources/TAS-LC/2026-08-11-draft.pdf
+https://www.hansard.act.gov.au/hansard/11th-assembly/2026/PDF/tP260917.pdf	backend/tests/fixtures/sources/ACT-LA/2026-09-17-proof.pdf
+https://territorystories.nt.gov.au/10070/1052298/0/39	backend/tests/fixtures/sources/NT-LA/territorystories-1052298.pdf
+# Still to add from the saved listings: CTH-SEN and CTH-HOR ParlInfo XML (ids are not predictable),
+# SA-LC (uh) TOC, WA-LA (lh) day, NSW API TOC and fragment for a document id from year-2026.json.
+#
+# --- Audit offices: forward program and report listing
+https://www.anao.gov.au/work-program/overview	backend/tests/fixtures/offices/ANAO/work-program.html
+https://www.anao.gov.au/pubs/performance-audit	backend/tests/fixtures/offices/ANAO/reports.html
+https://www.anao.gov.au/work-program/requests	backend/tests/fixtures/offices/ANAO/requests.html
+https://www.audit.nsw.gov.au/sites/default/files/documents/Audit%20Work%20Plan%202026%E2%80%932029.pdf	backend/tests/fixtures/offices/AONSW/audit-work-plan-2026-2029.pdf
+https://www.audit.nsw.gov.au/our-work/requests-for-audit	backend/tests/fixtures/offices/AONSW/requests.html
+https://www.audit.vic.gov.au/sites/default/files/2026-06/20260624_Annual-Plan-2026-27.pdf	backend/tests/fixtures/offices/VAGO/annual-plan-2026-27.pdf
+https://www.audit.vic.gov.au/reports	backend/tests/fixtures/offices/VAGO/reports.html
+https://www.qao.qld.gov.au/sites/default/files/2026-06/Forward%20work%20plan%202026%E2%80%9329_0.pdf	backend/tests/fixtures/offices/QAO/forward-work-plan-2026-29.pdf
+https://www.qao.qld.gov.au/audit-program/requests-audits	backend/tests/fixtures/offices/QAO/requests.html
+https://www.audit.sa.gov.au/reports	backend/tests/fixtures/offices/SAAGD/reports.html
+https://audit.wa.gov.au/reports-and-publications/reports/	backend/tests/fixtures/offices/OAGWA/reports.html
+https://audit.wa.gov.au/audit-program/audits-in-progress/	backend/tests/fixtures/offices/OAGWA/audits-in-progress.html
+https://audit.tas.gov.au/publication/auditor-generals-annual-plan-2026-27/	backend/tests/fixtures/offices/AUDTAS/annual-plan-2026-27.html
+https://www.audit.tas.gov.au/publication-category/performance-audit/	backend/tests/fixtures/offices/AUDTAS/reports.html
+https://www.audit.act.gov.au/__data/assets/pdf_file/0003/3080730/ACT-Audit-Office-Performance-Audit-Program-2026-27.pdf	backend/tests/fixtures/offices/ACTAO/performance-audit-program-2026-27.pdf
+https://www.audit.act.gov.au/	backend/tests/fixtures/offices/ACTAO/home.html
+https://ago.nt.gov.au/publications/ag-reports-parliament	backend/tests/fixtures/offices/NTAGO/reports.html
