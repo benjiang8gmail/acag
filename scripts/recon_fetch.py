@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import re
 import json
 import os
 import sys
@@ -33,12 +34,19 @@ USER_AGENT = os.environ.get(
 )
 UA_TOKEN = "ACAG-HansardWatch"
 MIN_INTERVAL = float(os.environ.get("FETCH_MIN_INTERVAL_SECONDS", "3"))
-CHALLENGE_MARKERS = (
-    "captcha", "cf-chl", "challenge-platform", "azwaf", "azure waf", "are you a robot",
-    "client challenge", "just a moment...", "page blocked by waf",
-    "access denied", "request unsuccessful. incapsula", "_incapsula_", "akamai",
-    "bot detection", "please enable javascript and cookies",
-)
+CHALLENGE_TITLES = ("just a moment", "attention required", "client challenge", "azure waf", "waf block page",
+                    "access denied", "are you a robot", "security check")
+# Strong markers for a short page with no title. A passive Cloudflare script on a normal page
+# ("/cdn-cgi/challenge-platform/…") is not a challenge, so that path is not a marker.
+CHALLENGE_MARKERS = ("captcha", "are you a robot", "please enable javascript and cookies", "cf-chl-", "_incapsula_")
+
+
+def is_challenge(text: str) -> bool:
+    low = text[:30_000].lower()
+    title = re.search(r"<title[^>]*>(.*?)</title>", low, re.S)
+    if title and any(t in title.group(1) for t in CHALLENGE_TITLES):
+        return True
+    return len(text) < 30_000 and any(m in low for m in CHALLENGE_MARKERS)
 
 _last: dict[str, float] = {}
 _robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
@@ -68,7 +76,7 @@ def robots_for(scheme: str, host: str, log) -> urllib.robotparser.RobotFileParse
         with _open(url, 30) as r:
             body = r.read().decode("utf-8", "replace")
             entry.update(status=r.status, bytes=len(body))
-            if any(m in body.lower() for m in CHALLENGE_MARKERS):
+            if is_challenge(body):
                 rp.disallow_all = True
                 _blocked_hosts[host] = "robots.txt answered with a bot challenge page"
                 entry["result"] = "challenge_page"
@@ -81,7 +89,7 @@ def robots_for(scheme: str, host: str, log) -> urllib.robotparser.RobotFileParse
             rp.disallow_all = True   # stdlib convention: robots refused -> treat as disallow
             snippet = e.read(4000).decode("utf-8", "replace").lower()
             _blocked_hosts[host] = f"robots.txt refused (HTTP {e.code})" + (
-                ", bot challenge page" if any(m in snippet for m in CHALLENGE_MARKERS) else "")
+                ", bot challenge page" if is_challenge(snippet) else "")
             entry["result"] = "blocked"
             entry["server"] = e.headers.get("Server")
             entry["body_excerpt"] = snippet[:300]
@@ -135,7 +143,7 @@ def fetch(url: str, out: Path, log, max_bytes: int = 60_000_000) -> dict:
         snippet = e.read(4000).decode("utf-8", "replace")
         entry.update(status=e.code, result="http_error", server=e.headers.get("Server"),
                      body_excerpt=snippet[:800])
-        if e.code in (401, 403, 429) or any(m in snippet.lower() for m in CHALLENGE_MARKERS):
+        if e.code in (401, 403, 429) or is_challenge(snippet):
             _blocked_hosts[host] = f"HTTP {e.code}"
             entry["result"] = "blocked"
         log(entry)
@@ -145,7 +153,7 @@ def fetch(url: str, out: Path, log, max_bytes: int = 60_000_000) -> dict:
         log(entry)
         return entry
     head = body[:20000].decode("utf-8", "replace").lower()
-    if "html" in (entry.get("content_type") or "") and any(m in head for m in CHALLENGE_MARKERS) and len(body) < 30000:
+    if "html" in (entry.get("content_type") or "") and is_challenge(body.decode("utf-8", "replace")):
         entry["result"] = "challenge_page"
         _blocked_hosts[host] = "bot challenge page"
         out = out.with_suffix(out.suffix + ".challenge.txt")

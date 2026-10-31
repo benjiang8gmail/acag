@@ -1,5 +1,52 @@
 # Progress
 
+## 1 Nov 2026: federal Hansard via the OpenAustralia mirror (4 parliaments live)
+
+### Done
+
+- **`backend/connectors/cth.py`:** Senate and House (including the Federation Chamber).
+  - It reads **APH's own Hansard XML as republished by OpenAustralia** (`data.openaustralia.org.au/origxml`), because aph.gov.au blocks scripts.
+  - **Listing:** the mirror's directory listings; 0-byte files mean no sitting.
+  - **Speaker turns:**
+    - questions, answers and speeches;
+    - interjections and the chair, split out of the speech text by their name spans and given their speakers' details;
+    - a speaker resuming after an interruption rejoins their own turn.
+  - **Recorded per speech:** party, electorate, ministerial role, time and page, all printed in the XML. `<proof>` gives the version.
+  - CTH-SEN and CTH-HOR are enabled, with the route recorded in `config/sources.yaml`.
+- **Speaker side:** presiding officers' turns are now `unknown` in every parliament (the federal XML prints the Speaker's party).
+  - APH party codes are mapped (LP→LIB, NATS→NAT, AG→GRN, ON→PHON).
+- **Fetchers:** challenge detection now looks at what a challenge page shows (its title, or a short page with strong markers). Before, a passive Cloudflare script on a normal page (OpenAustralia's directory listing) was flagged as a challenge.
+- **Other routes tested** (docs/sources.md):
+  - **NT:** Territory Stories' allowed `/api/content` endpoint returns page text. Connector next.
+  - **Tasmania:** `search.parliament.tas.gov.au` (no robots.txt rules) answers.
+  - **Victoria:** `hansard.parliament.vic.gov.au` disallows `/search/` and `/isysquery/` in robots.txt, so it isn't usable.
+  - **SA and WA:** the legacy and bare hosts didn't resolve.
+  - **ParlInfo:** blocked.
+
+### Evidence
+
+- `make test`: 117 backend tests pass, including 6 for CTH:
+  - the listing skips empty files;
+  - the proof flag, pages and Federation Chamber;
+  - House Question Time with interjections and the chair;
+  - Senate questions, supplementaries and ministers;
+  - no headers left in text;
+  - party codes give sides.
+- **Live run, CTH 12–31 Oct 2026:** 12 days, 3,311 speeches, 0 errors.
+
+### Decisions
+
+- **D16. Federal Hansard comes from OpenAustralia's public mirror of APH's XML**, until APH grants direct access. The product owner asked for "another way through".
+  - It's a public republication of the official record, not a workaround of APH's firewall.
+  - It's about a day behind APH, and speeches cite the mirrored file and printed page.
+
+### Next
+
+- NT connector (Territory Stories text pages), then Tasmania (search site).
+- VIC, SA and WA: no legitimate route found from this environment. Run the scanner from an Australian network (the product owner's computer via Remote Control), send the access requests, or use assisted manual import.
+
+---
+
 ## 1 Nov 2026: "Check for updates" runs the real scans
 
 ### Done

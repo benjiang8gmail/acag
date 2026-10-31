@@ -6,7 +6,7 @@
 # cloud network: re-test the blocked ones from the pilot's Australian network.
 # `enabled` is true only once the connector passes its real-fixture tests (Phase 2).
 # Enabled: NSW (31 Oct 2026; live checks 21–22 Oct 2026), ACT (1 Nov 2026; live check 22–31 Oct 2026),
-# QLD (1 Nov 2026; live check 14–31 Oct 2026).
+# QLD (1 Nov 2026; live check 14–31 Oct 2026), CTH via the OpenAustralia mirror (1 Nov 2026; live check 12–31 Oct 2026).
 
 as_of: 2026-10-31
 
@@ -15,20 +15,20 @@ sources:
     parliament: CTH
     chamber: Senate
     connector: cth
-    enabled: false
-    status: blocked
-    live_check: "aph.gov.au Azure WAF block page, even for robots.txt"
-    approach: parlinfo_xml          # fallback: OpenAustralia mirror of the same XML (needs product-owner approval)
+    enabled: true
+    status: ok
+    live_check: "aph.gov.au blocks scripts (Azure WAF); APH's own Hansard XML read from the OpenAustralia mirror instead (data.openaustralia.org.au/origxml)"
+    approach: openaustralia_mirror   # APH's official XML, republished by OpenAustralia; ~1 day behind APH
     risk: "third-party reports of an Azure WAF answering 403 to scripts on aph.gov.au and parlinfo.aph.gov.au"
     timezone: Australia/Sydney
   - id: CTH-HOR
     parliament: CTH
     chamber: House of Representatives   # includes the Federation Chamber (<fedchamb.xscript>)
     connector: cth
-    enabled: false
-    status: blocked
-    live_check: "aph.gov.au Azure WAF block page, even for robots.txt"
-    approach: parlinfo_xml
+    enabled: true
+    status: ok
+    live_check: "aph.gov.au blocks scripts (Azure WAF); APH's own Hansard XML read from the OpenAustralia mirror instead (data.openaustralia.org.au/origxml)"
+    approach: openaustralia_mirror   # APH's official XML, republished by OpenAustralia; ~1 day behind APH
     risk: "same as CTH-SEN"
     timezone: Australia/Sydney
   - id: NSW-LA

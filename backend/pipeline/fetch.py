@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 import time
 import urllib.robotparser
 from dataclasses import dataclass
@@ -19,9 +20,19 @@ from urllib.parse import urlsplit
 import httpx
 
 ROBOTS_TOKEN = "ACAG-HansardWatch"
-CHALLENGE_MARKERS = ("captcha", "cf-chl", "challenge-platform", "azwaf", "azure waf", "are you a robot",
-                     "client challenge", "just a moment...", "page blocked by waf",
-                     "_incapsula_", "please enable javascript and cookies")
+CHALLENGE_TITLES = ("just a moment", "attention required", "client challenge", "azure waf", "waf block page",
+                    "access denied", "are you a robot", "security check")
+# Strong markers for a short page with no title. A passive Cloudflare script on a normal page
+# ("/cdn-cgi/challenge-platform/…") is not a challenge, so that path is not a marker.
+CHALLENGE_MARKERS = ("captcha", "are you a robot", "please enable javascript and cookies", "cf-chl-", "_incapsula_")
+
+
+def is_challenge(text: str) -> bool:
+    low = text[:30_000].lower()
+    title = re.search(r"<title[^>]*>(.*?)</title>", low, re.S)
+    if title and any(t in title.group(1) for t in CHALLENGE_TITLES):
+        return True
+    return len(text) < 30_000 and any(m in low for m in CHALLENGE_MARKERS)
 
 
 class Blocked(Exception):
@@ -78,7 +89,7 @@ class Fetcher:
                 self._block(host, f"robots.txt could not be read ({e.__class__.__name__})")
             if r.status_code in (401, 403):
                 self._block(host, f"robots.txt refused (HTTP {r.status_code})")
-            if r.status_code == 200 and any(m in r.text.lower() for m in CHALLENGE_MARKERS):
+            if r.status_code == 200 and is_challenge(r.text):
                 self._block(host, "robots.txt answered with a bot challenge page")
             rp.parse(r.text.splitlines() if r.status_code == 200 else [])
             if delay := rp.crawl_delay(ROBOTS_TOKEN):
@@ -118,8 +129,7 @@ class Fetcher:
             self._block(host, f"HTTP {r.status_code}")
         r.raise_for_status()
         body = r.content
-        if "html" in r.headers.get("content-type", "") and len(body) < 30_000 \
-                and any(m in body[:20_000].decode("utf-8", "replace").lower() for m in CHALLENGE_MARKERS):
+        if "html" in r.headers.get("content-type", "") and is_challenge(body[:30_000].decode("utf-8", "replace")):
             self._block(host, "bot challenge page")
         sha = hashlib.sha256(body).hexdigest()
         meta = dict(etag=r.headers.get("etag"), last_modified=r.headers.get("last-modified"), downloaded=True)

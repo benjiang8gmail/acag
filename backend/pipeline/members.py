@@ -29,8 +29,8 @@ GOVERNMENT_ROLE = re.compile(
     r"|Special Minister of State|Vice-President of the Executive Council)\b", re.I)
 OPPOSITION_ROLE = re.compile(r"\b(?:Leader of the Opposition|Shadow|Manager of Opposition Business|Opposition Whip)\b", re.I)
 # Party spellings in Hansard or member lists → codes used in governments.yaml.
-CANONICAL = {"GRN": "GRN", "GREENS": "GRN", "IND": "IND", "LIB": "LIB", "LP": "LIB", "NAT": "NAT", "NATS": "NAT",
-             "ALP": "ALP", "LNP": "LNP", "CLP": "CLP", "KAP": "KAP"}
+CANONICAL = {"GRN": "GRN", "GREENS": "GRN", "AG": "GRN", "IND": "IND", "LIB": "LIB", "LP": "LIB", "NAT": "NAT",
+             "NATS": "NAT", "ALP": "ALP", "LNP": "LNP", "CLP": "CLP", "KAP": "KAP", "ON": "PHON", "PHON": "PHON"}
 
 
 def _key(name: str) -> str:
@@ -109,7 +109,9 @@ def government_on(parliament: str, when: date) -> dict | None:
 
 
 def speaker_side(parliament: str, when: date, party: str | None, role: str | None) -> str:
-    if role and not role.startswith("presiding officer"):
+    if role and role.startswith("presiding officer"):
+        return "unknown"   # the chair speaks in a procedural role, whatever their party
+    if role:
         if OPPOSITION_ROLE.search(role):
             return "opposition"
         if GOVERNMENT_ROLE.search(role):

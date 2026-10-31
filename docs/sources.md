@@ -151,6 +151,17 @@ What the saved fixtures showed:
   - OpenAustralia mirrors the same original XML at `https://data.openaustralia.org.au/origxml/representatives_debates/{YYYY-MM-DD}.xml` (a 2026-03-05 file was seen; `senate_debates` is presumed). It is a possible interim source, **but only with product-owner approval**: it's a third party, it lags, and its parser had Senate issues in Oct 2026.
 - **Fixture:** none yet (environment). Batch: listing page, then the XML link for one recent day per chamber.
 
+- **Connector built (Phase 2): `backend/connectors/cth.py`, reading the OpenAustralia mirror.**
+  - **Why the mirror:** aph.gov.au and parlinfo.aph.gov.au block scripts (Azure WAF), even for robots.txt. OpenAustralia republishes **APH's own Hansard XML** at `data.openaustralia.org.au/origxml/{senate_debates|representatives_debates}/{date}.xml`. That host has no robots.txt rules and updates each weekday morning; a file is re-dated when APH revises a day.
+  - **Listing:** the two directory listings (2 requests). A 0-byte file means no sitting, or that the mirror didn't get that day.
+  - **Text:** the original XML.
+    - `talker` gives member id, electorate, **party** and page, and `<proof>` gives the version.
+    - Interjections, the chair and a speaker resuming are paragraphs that open with their own name span, inside the speech's text. The empty `<interjection>`/`<continue>` markers carry those speakers' details.
+    - The Federation Chamber is included.
+  - **Citations:** the mirrored XML file, plus the printed page. www.openaustralia.org.au refuses robots.txt, so its pages couldn't be checked to use as links.
+  - **Caveat:** a third-party copy of the official record that lags APH by about a day. The access request to APH (draft A) still stands for direct, same-day access.
+  - **Live run, 12–31 Oct 2026:** 8 House and 4 Senate days, 3,311 speeches, 0 errors, 31 s. It found a committee recommending that the Auditor-General consider an audit of the ATO's property portfolio.
+
 ### NSW: Legislative Assembly (`NSW-LA`) and Legislative Council (`NSW-LC`)
 
 - **List sitting days:** the API base is `https://api.parliament.nsw.gov.au/api`. **M-H** (community docs at parliament-api-docs.readthedocs.io and the nsw-hansard-mcp client, changelog Jul 2026).

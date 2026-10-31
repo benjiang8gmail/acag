@@ -90,6 +90,7 @@ def registry() -> dict[str, type]:
     A connector is listed only once it passes tests on real fixtures (docs/sources.md).
     """
     from .act import ACTConnector
+    from .cth import CTHConnector
     from .nsw import NSWConnector
     from .qld import QLDConnector
-    return {"nsw": NSWConnector, "act": ACTConnector, "qld": QLDConnector}
+    return {"nsw": NSWConnector, "act": ACTConnector, "qld": QLDConnector, "cth": CTHConnector}

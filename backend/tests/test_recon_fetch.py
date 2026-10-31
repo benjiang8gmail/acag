@@ -113,3 +113,11 @@ def test_robots_served_as_challenge_blocks_the_host(rf, monkeypatch, tmp_path):
     assert e["result"] == "disallowed_by_robots"
     assert calls == ["https://h.example/robots.txt"]
     assert not (tmp_path / "a.pdf").exists()
+
+
+def test_passive_cloudflare_script_on_a_normal_page_is_not_a_challenge(rf, monkeypatch, tmp_path):
+    page = (b"<html><head><title>Index of /origxml</title></head><body><a href='senate_debates/'>senate_debates/</a>"
+            b"<script>var u='/cdn-cgi/challenge-platform/scripts/precursor/main.js'</script></body></html>")
+    opener, _ = _site({"https://h.example/robots.txt": b"", "https://h.example/origxml/": page})
+    monkeypatch.setattr(rf, "_open", opener)
+    assert rf.fetch("https://h.example/origxml/", tmp_path / "x.html", lambda _: None)["result"] == "ok"

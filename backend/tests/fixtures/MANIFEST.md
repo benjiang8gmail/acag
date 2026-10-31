@@ -15,6 +15,8 @@ Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host
 | `sources/ACT-LA/2026-09-17-proof.pdf` | https://www.hansard.act.gov.au/hansard/11th-assembly/2026/PDF/tP260917.pdf | 2026-10-31 | 796,745 | `92d6aba0cf80016f` |
 | `sources/ACT-LA/2026-debates-index.html` | https://www.hansard.act.gov.au/hansard/11th-assembly/2026/debates(PDF).htm | 2026-10-31 | 33,448 | `30f59f4cd7e03ccc` |
 | `sources/ACT-LA/home.html` | https://hansard.act.gov.au/ | 2026-10-31 | 19,774 | `58d4402d754c5d3c` |
+| `sources/CTH-HOR/2026-10-29.xml` | https://data.openaustralia.org.au/origxml/representatives_debates/2026-10-29.xml | 2026-10-31 | 1,047,120 | `1f92531ff24d10e8` |
+| `sources/CTH-SEN/2026-10-15.xml` | https://data.openaustralia.org.au/origxml/senate_debates/2026-10-15.xml | 2026-10-31 | 1,289,554 | `2510d84467df4878` |
 | `sources/NSW-LA/2026-10-22-fragment-170878.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170878 | 2026-10-31 | 17,172 | `9d549806e415c4f5` |
 | `sources/NSW-LA/2026-10-22-fragment-170887.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170887 | 2026-10-31 | 12,641 | `a56558dd74c90b3e` |
 | `sources/NSW-LA/2026-10-22-fragment-170902.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170902 | 2026-10-31 | 1,850 | `3ba848998a014ec6` |
