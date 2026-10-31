@@ -7,7 +7,8 @@
 # `enabled` is true only once the connector passes its real-fixture tests (Phase 2).
 # Enabled: NSW (31 Oct 2026; live checks 21–22 Oct 2026), ACT (1 Nov 2026; live check 22–31 Oct 2026),
 # QLD (1 Nov 2026; live check 14–31 Oct 2026), CTH via the OpenAustralia mirror (1 Nov 2026; live check 12–31 Oct 2026),
-# NT via Territory Stories text pages (1 Nov 2026; 22 Oct 2026 captured live).
+# NT via Territory Stories text pages (1 Nov 2026; 22 Oct 2026 captured live),
+# TAS via the Parliament's document search (1 Nov 2026; 10 Sep 2026 captured live).
 
 as_of: 2026-10-31
 
@@ -123,19 +124,19 @@ sources:
     parliament: TAS
     chamber: House of Assembly
     connector: tas
-    enabled: false
-    status: blocked
-    live_check: "Cloudflare challenge, even for robots.txt"
-    approach: proceedings_page_pdf
+    enabled: true
+    status: ok
+    live_check: "www.parliament.tas.gov.au blocks scripts (Cloudflare); the Parliament's own document search (search.parliament.tas.gov.au, no robots.txt rules) serves the sitting calendar and each day's Word transcript"
+    approach: tas_search_docx   # sitting calendar + date search + original .docx
     timezone: Australia/Hobart
   - id: TAS-LC
     parliament: TAS
     chamber: Legislative Council
     connector: tas
-    enabled: false
-    status: blocked
-    live_check: "Cloudflare challenge, even for robots.txt"
-    approach: proceedings_page_pdf
+    enabled: true
+    status: ok
+    live_check: "www.parliament.tas.gov.au blocks scripts (Cloudflare); the Parliament's own document search (search.parliament.tas.gov.au, no robots.txt rules) serves the sitting calendar and each day's Word transcript"
+    approach: tas_search_docx   # sitting calendar + date search + original .docx
     timezone: Australia/Hobart
   - id: ACT-LA
     parliament: ACT

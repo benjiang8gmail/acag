@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Document Search | Parliament of Tasmania</title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+     
+	
+	<link href="/search/css/default.css" rel="stylesheet" type="text/css" />
+	<script>
+		var siteRoot = '/search';
+		var siteAnywhere = 'http://search.parliament.tas.gov.au:8081';
+		var siteExperience = 'http://search.parliament.tas.gov.au:8082';
+		var menuMore = null;
+		var socialSizeCollapse = 1340;
+		function showMenuMore(ctrl)
+		{
+			var pos = isys.getPos(ctrl);
+			if (menuMore == null)
+			{
+				menuMore = new isys.controls.PopupMenu([
+					{caption: "Home", href: siteRoot + "/"},
+					{caption: "-"}
+										,{
+						caption: "Perceptive Enterprise Search Anywhere",
+						href: siteAnywhere,
+						image: siteRoot + '/images/Anywhere.png',
+						description: "Launch the Anywhere site, access local content from any mobile device."
+					}
+															,{
+						caption: "Perceptive Enterprise Search Experience&trade;",
+						href: siteExperience,
+						image: siteRoot + '/images/Experience.png',
+						description: "Launch the Experience&trade; site to perform advanced searching with collaborative features"
+					}
+									]);
+				menuMore.maxWidth = 220;
+				menuMore.m_gutterWidth = 45;
+			}
+			menuMore.popup(pos.left, pos.bottom);
+		}
+	</script>
+	<script src="/search/webshared/jquery/jquery-3.5.1.min.js"></script>
+	<link href="/search/webshared/semantic-ui/semantic.min.css" rel="stylesheet" type="text/css" />
+	<script src="/search/webshared/semantic-ui/semantic.min.js"></script>
+	<script>
+	$(function() {
+		if (document.documentMode && document.documentMode <= 9)
+			window.location = '/search/unsupported_browser?reason=compat&version=' + document.documentMode + '&redir=';
+		else
+		{
+			$('.dropdown').dropdown({transition: 'drop', fullTextSearch: true});
+			$('.dropdown-hover').dropdown({transition: 'drop', on: 'hover'});
+			$('.ui.checkbox').checkbox();
+			$('.hintable').popup( { inline: true, hoverable: true, position : 'bottom left', delay: { show: 300, hide: 800 } } );
+		}
+	});
+	</script>
+
+ <style>
+						div.filterItem { 
+							position: relative;
+							min-height: 18px;
+							float: left;
+							display: block;
+							padding-right: 10px;
+						}
+						div.filterItem .cap {
+							float: left;
+							color: #808080;
+							padding-left: 13px;
+							font-weight: bold;
+							font-size: 14px;
+							x-line-height: 18px;
+							text-transform: uppercase;
+						}
+						div.filterItem .text {
+							font-size: 15px;
+							x-line-height: 18px;
+							color: black;
+						}
+						div.filterItem div.icon {
+							position: absolute; left: 0px; top: 2px; background-image: url(/search/WebShared/images/remove_x.gif); width: 13px; height: 13px;
+						}
+				</style>
+<script src="/search/WebShared/js/isys.js"></script>
+<script src="/search/WebShared/js/isysConnect.js"></script>
+<script src="/search/WebShared/js/isysViewer.js"></script>
+
+<div id="viewer_toolbar">
+	<div id="" class="btn btn-close" onclick="isys.viewer.hide()"><span class="ticon">X</span> Close</div>
+	<div id="" class="btn btn-next" onclick="isys.viewer.next()"><span class="ticon">&gt;</span> Next Document</div>
+	<div id="" class="btn btn-prev" onclick="isys.viewer.prev()"> <span class="ticon">&lt;</span> Previous Document</div>
+	<div id="" class="btn btn-hit" onclick="isys.viewer.nexthit()"><span class="ticon">/</span> Next Hit</div>
+	<div id="" class="btn btn-download no-html" onclick="isys.viewer.downloadMenu(this)"><span class="ticon">D</span> Download</div>
+	<div id="" class="btn btn-original only-html" onclick="isys.viewer.original();"><span class="ticon">D</span> Original</div>
+
+	<div id="viewer_toolbar_summary">
+		<div id="viewer_toolbar_filename"></div>
+	</div>
+
+	<ol class="menu" id="viewer_toolbar_download">
+		<li onclick="isys.viewer.download();">Original</li>
+		<li onclick="isys.viewer.download('txt', 'txt');">As Text</li>
+		<li onclick="isys.viewer.download('html', 'html');">As HTML5</li>
+		<li onclick="isys.viewer.download('pdf', 'pdf');">As PDF</li>
+		<li onclick="isys.viewer.download('tif', 'tif');">As TIFF</li>
+	</ol>
+</div>
+			
+<script src="/search/WebShared/js/isysDateBar.js"></script>
+<script src="/search/WebShared/js/isysRefine.js"></script>
+<link rel="stylesheet" type="text/css" href="/search/WebShared/refine.css"/>
+<script src="/search/WebShared/js/isysMenu.js"></script>
+<link rel="stylesheet" type="text/css" href="/search/WebShared/js/isys.css"/>
+<link rel="stylesheet" type="text/css" href="/search/WebShared/js/isysMenu/Office2000.css"/>
+
+										<script>
+						function basic_logout() {
+							var http = window.XMLHttpRequest ? new XMLHttpRequest() : null;
+							if (document.execCommand && document.execCommand("ClearAuthenticationCache"))
+							{
+								window.location.href = '/?rnd=' + (new Date()).getTime();
+							}
+							else if (http) 
+							{
+								/*http.open("GET", '/WebShared/js/isys.js?rnd=' + new Date(), true, "logout", "logout");
+								http.send("");
+								http.onreadystatechange = function() { 
+									//if (http.readyState == 4) window.location.href='/'; 
+								} */
+								window.location.href = '//logout@' + window.location.host + '/';
+							}
+						}		
+					</script>
+									
+</head>
+
+<body>
+
+<!--[if lt IE 8]>
+	<style type="text/css">
+		.inputBoxContainer {
+			border:0;
+			height:27px;
+			border-style:none;
+			background-color:#FFFFFF;
+		}
+		.headerInputBoxContainer {
+			border:0;
+			height:24px;
+			border-style:none;
+			background-color:#FFFFFF;
+		}
+		.inputBox {
+			width:99%;
+			border:1px;
+			font-size:11pt;
+			border-style:solid;
+			border-color:#719EC7;
+		}
+		.decorator {
+			display:none;
+		}
+		#header {
+			overflow:hidden;
+		}
+		#sectionRefine {
+			width:35%;
+			float:right;
+		}
+	</style>
+
+<![endif]-->
+
+
+
+	
+		<div id="headerFill"></div>
+	<div id="container" >
+		<div id="header">
+			<a href="/search/"><div id="logo"></div></a>
+   
+						<br>
+			<div class="leftPanel headerFamily" style="position: relative">
+				<div id="quickQuery">
+					<form method="post" action="/search/search" id='isys_frm_search_hdr'>
+					
+					<div class="ui fluid right labeled input" style='width: 100%'>
+						<input type="text" placeholder="Enter Search..." name="IW_FIELD_WEB_STYLE" value="(Thursday 10 September 2026)" id='isys_edt_search' />
+
+						<div class="ui scrolling dropdown label" id='isys_sel_database'>
+							<input type="hidden" name="IW_DATABASE" value="Hansard" />
+							<div class="text">Hansard</div>
+							<i class="dropdown icon"></i>
+							<div class="menu">
+								<div class='item' data-value='Hansard'>Hansard</div><div class='item' data-value='HistoricalHansard'>HistoricalHansard</div><div class='item' data-value='Notice Papers'>Notice Papers</div><div class='item' data-value='ParliamentaryPapers'>ParliamentaryPapers</div><div class='item' data-value='Votes and Proceedings'>Votes and Proceedings</div>
+								<div class='item' data-value='*'>Entire Site</div>
+																<div class='item' data-value='816ecc31-3dfd-440b-8ff1-60218b0dd743'>Current Results</div>
+															</div>
+						</div>
+
+						<div class='ui icon button primary' style='margin-left: 3px' id='isys_btn_search_hdr' onclick='document.getElementById("isys_frm_search_hdr").submit()'><i class='icon search'></i></div>
+						<button type="submit" style='display:none'></button>
+
+					</div>
+					</form>
+				</div>
+			</div>
+   
+			<div class="userButton" ></div>
+				<div class="rightPanel headerFamily" style="overflow:hidden; position: relative">
+
+				<div id="menuMenuAssisted" class="mainMenuItem">
+					<a class="menuItemLink" href="https://search.parliament.tas.gov.au">Search Home</a>
+				</div>
+
+				<div id="menuAdvanced" class="mainMenuItem">
+					<a class="menuItemLink" href="https://www.parliament.tas.gov.au">Parliament Website</a>
+				</div>
+			</div>
+
+		</div>
+ <p>&nbsp;</p>
+		 
+			 
+	<script>
+			var results_datebar = new isys.controls.datebar();
+			isys.onload(function() {
+				var req = new isys.ajax.connect();
+ 				req.asyncRequest("GET", "/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/datebar", null, function(req) {
+			 		var datedata = eval('temp = ' + req.getText());
+			 		results_datebar.render(datedata, document.getElementById("dateBar"), "816ecc31-3dfd-440b-8ff1-60218b0dd743", "/search");
+			 	});
+			});
+		</script>
+		<div id="dateBar" style="overflow: hidden; position: relative; margin-left: 25px; cursor: pointer"></div>
+	
+
+		 
+
+		 
+		<div id="social_col" class="facebook_not_connected">
+			 
+<link rel="stylesheet" type="text/css" href="/search/WebShared/social.css" />
+				<script src="/search/WebShared/js/social.js"></script>
+				<div style="padding: 8px; color: white; background-color: grey;" id="SocialPanel">
+
+				<script>
+					window.socialQuery = "(Thursday 10 September 2026)";
+					window.facebook = false;
+				</script>
+
+				<input type="button" id="expandbutton" class="expbutton" onclick="expButtonClick()"/>
+
+																<!--FLICKR -->
+				<div class="SocialGroup Flickr">
+					Flickr
+				</div>
+				<div>
+					<div id="flickr_results"></div>
+				</div>
+								<script>
+
+								isys.events.attachEvent(window, "load", function() {
+									FlickrRefresh();
+												});
+
+				</script>
+				</div>
+
+		</div>
+		 
+		<div id="main" style="position: relative">
+			 
+			<div id="right_col">
+				 
+
+
+<!--Refinement Section -->
+	<div id="navigationPanel" style="top: 0px; right: 0px; ">
+		<div id="socialPanelSpacer" name="socialPanelSpacer"></div>
+
+		<div class="ui vertical menu" style='margin-top: 0px'>
+
+
+		
+
+<span id="ajaxSectionRefinement">
+
+<!--{SECTION name="Source"}
+			{Control:Source}
+		{SECTIONEND} -->
+</span>
+
+		<!--
+		
+			<div class="refine-container"><div class="item"><div class="header"><i class='icon puzzle'></i> Categories</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/LC/filter/categorylike/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>LC</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Uncategorized/filter/categorylike/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Uncategorized</div></a></div>
+		
+		
+		
+			<div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> application-name</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/application-name/Microsoft%20Office%20Word/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/application-name/Microsoft%20Office%20Word/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Microsoft Office Word</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> Template</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Template/Hansard%20debates%20September%202025/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Template/Hansard%20debates%20September%202025/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Hansard debates September 2025</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> modified</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/modified/2026%20Sep/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/modified/2026%20Sep/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>2026 Sep</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> Language</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Language/English/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Language/English/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>English</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> AppVersion</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/AppVersion/16.0000/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/AppVersion/16.0000/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>16.0000</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> Company</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Company/Parliament%20of%20Tasmania/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Company/Parliament%20of%20Tasmania/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Parliament of Tasmania</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> created</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/created/2026%20Sep/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/created/2026%20Sep/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>2026 Sep</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> subject</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/subject/Hansard/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/subject/Hansard/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Hansard</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> Content Size</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Content%20Size/1Mb%20-%205Mb/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Content%20Size/1Mb%20-%205Mb/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>1Mb - 5Mb</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> Content Type</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Content%20Type/Microsoft%20Word/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/Content%20Type/Microsoft%20Word/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Microsoft Word</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> lastPrinted</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/lastPrinted/2024%20Mar/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/lastPrinted/2024%20Mar/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>2024 Mar</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> lastModifiedBy</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/lastModifiedBy/Karen%20Cuzzucoli/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/lastModifiedBy/Karen%20Cuzzucoli/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Karen Cuzzucoli</div></a></div><div class="refine-container"><div class="item"><div class="header"><i class='icon setting'></i> author</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/author/Legislative%20Council/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/author/Legislative%20Council/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Legislative Council</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/author/House%20of%20Assembly/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1-10/metafilter/author/House%20of%20Assembly/Not'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>House of Assembly</div></a></div>
+		
+-->
+		
+			 
+				
+					<div class="refine-container"><div class="item"><div class="header"><i class='icon users'></i> People</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/ELLIS/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">56</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/ELLIS/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr ELLIS</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Butler/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">50</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Butler/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Butler</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/ABETZ/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">49</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/ABETZ/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr ABETZ</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/JOHNSTON/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">46</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/JOHNSTON/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms JOHNSTON</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Badger/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">38</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Badger/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Badger</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Willie/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">34</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Willie/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr Willie</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Rattray/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">28</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Rattray/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Rattray</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Burnet/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">25</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Burnet/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Burnet</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20VINCENT/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">24</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20VINCENT/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr VINCENT</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Vincent/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">22</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Vincent/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr Vincent</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/MR%20PRESIDENT/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">20</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/MR%20PRESIDENT/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>MR PRESIDENT</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20President/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">20</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20President/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr President</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mrs%20ARCHER/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">20</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mrs%20ARCHER/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mrs ARCHER</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Woodruff/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">20</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Woodruff/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Dr Woodruff</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mitchell/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">19</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mitchell/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr Mitchell</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Razay/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">19</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Razay/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Prof Razay</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Bayley/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">18</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Bayley/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr Bayley</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Finlay/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">17</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Finlay/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Finlay</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/FORREST/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">16</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/FORREST/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms FORREST</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20Ellis/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">15</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20Ellis/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr Ellis</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Winter/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">15</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Winter/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr Winter</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Armitage/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">14</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Armitage/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Armitage</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Ms%20Forrest/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">14</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Ms%20Forrest/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Forrest</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Ms%20Johnston/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">14</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Ms%20Johnston/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Ms Johnston</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20Pearce/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">13</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mr%20Pearce/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mr Pearce</div></a><a class="item refine-more" href="#" onclick="return refine_more(this);"><i class='icon angle down'></i>20 more...</a><a class="item refine-less" href="#" onclick="return refine_less(this);"><i class='icon angle up'></i> top 5</a></div>
+				
+				
+					<div class="refine-container"><div class="item"><div class="header"><i class='icon building'></i> Organizations</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Legislative%20Council/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">12</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Legislative%20Council/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Legislative Council</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Gap/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">10</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Gap/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Gap</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Microsoft/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Microsoft/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Microsoft</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Australian%20Institute/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Australian%20Institute/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Australian Institute</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/CurrentSession%20Council/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/CurrentSession%20Council/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>CurrentSession Council</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Natural%20Resources/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Natural%20Resources/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Department Of Natural Resources</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Police%20Association/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Police%20Association/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Police Association</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Whole%20Council/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Whole%20Council/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Whole Council</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/AON/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/AON/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>AON</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Aon/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Aon/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Aon</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/BT/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/BT/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>BT</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Heritage%20Council/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Heritage%20Council/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Heritage Council</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/HERITAGE%20COUNCIL/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/HERITAGE%20COUNCIL/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>HERITAGE COUNCIL</div></a><a class="item refine-more" href="#" onclick="return refine_more(this);"><i class='icon angle down'></i>8 more...</a><a class="item refine-less" href="#" onclick="return refine_less(this);"><i class='icon angle up'></i> top 5</a></div>
+				
+				<!--
+				
+					
+				
+				-->
+				
+					<div class="refine-container"><div class="item"><div class="header"><i class='icon map'></i> Locations</div></div><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Tasmania/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">286</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Tasmania/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Tasmania</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/TASMANIA/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">128</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/TASMANIA/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>TASMANIA</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Australia/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">114</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Australia/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Australia</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Hobart/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">46</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Hobart/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Hobart</div></a><a class="item " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Wales/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">32</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Wales/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Wales</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Queensland/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">18</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Queensland/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Queensland</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Victoria/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">15</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Victoria/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Victoria</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mersey/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">10</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Mersey/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Mersey</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Somerset/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">4</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Somerset/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Somerset</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Africa/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Africa/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Africa</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/America/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/America/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>America</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Canberra/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Canberra/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Canberra</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/London/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">3</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/London/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>London</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Austria/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Austria/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Austria</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Brisbane/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Brisbane/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Brisbane</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Claremont/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Claremont/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Claremont</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Exeter/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Exeter/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Exeter</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Manila/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Manila/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Manila</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Melbourne/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Melbourne/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Melbourne</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Montgomery/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Montgomery/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Montgomery</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Sydney/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">2</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Sydney/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Sydney</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Bangalore/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Bangalore/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Bangalore</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/England/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/England/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>England</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Johannesburg/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Johannesburg/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Johannesburg</div></a><a class="item  refine-overflow " href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Midlands/entity/' style='white-space:nowrap; text-overflow: ellipsis; overflow: hidden'><div class="ui label">1</div><i class='icon remove' style='float: left' onclick="window.location='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Midlands/notentity/'; return false;"></i><div class='nav-caption' style='width:auto;overflow:hidden;text-overflow:ellipsis'>Midlands</div></a><a class="item refine-more" href="#" onclick="return refine_more(this);"><i class='icon angle down'></i>20 more...</a><a class="item refine-less" href="#" onclick="return refine_less(this);"><i class='icon angle up'></i> top 5</a></div>
+				
+<!--{SECTION name="EntityWebSites"}
+					{Control:Entities Type="Web Site" Caption="WebSites" Visible="False" Icon="world"}
+				{SECTIONEND} -->
+			 
+		
+
+		
+			
+		
+		</div>
+	</div>
+
+
+			</div>
+			 
+
+			<div id="page_content">
+				<script>
+$(function() {
+	if (window.location.hash && window.location.hash.substr(0, 9) == '#viewdoc_')
+	{
+		var d = window.location.hash.substr(9);
+		isys.viewer.show('', '816ecc31-3dfd-440b-8ff1-60218b0dd743', parseInt(d), 0);
+	}
+});
+</script>
+
+<script src="/search/WebShared/js/isysCalendar.js"></script>
+
+<div style="width:100%; margin-top:25px; font-size:10pt; border-bottom: solid 1px #D5E3F0; height: 46px">
+	<div style='float:right'>
+		<div class="ui icon top left pointing dropdown button">
+			<i class="sort content ascending icon"></i>
+			<div class="menu">
+				<div class="header"><i class="sort icon"></i> Sort by </div>
+				<div class="item"><i class="star icon"></i> <a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/relevance/sort/'>Best Match</a></div>
+				<div class="item"><i class="calendar icon"></i> <a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/datetime/sort/'>Date</a></div>
+				<div class="item"><i class="circle icon"></i> <a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/bytes/sort/'>Size</a></div>
+			</div>
+		</div>
+
+		<div class="ui icon top left pointing dropdown button">
+			<i class="filter icon"></i>
+			<div class="menu">
+				<div class="ui left pointing dropdown item">
+					<i class="dropdown icon"></i>
+
+					Date
+					<div class="menu">
+						<div class="header"><i class="calendar icon"></i> Filter by date</div>
+						<div class="item"><a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2026,10,25-2026,11,01/filter/date'>Last 7 days</a></div>
+						<div class="item"><a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2026,10,01-2026,11,01/filter/date'>Last Month</a></div>
+						<div class="item"><a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2026,08,01-2026,11,01/filter/date'>Last 3 Months</a></div>
+						<div class="item"><a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2026,05,01-2026,11,01/filter/date'>Last 6 Months</a></div>
+						<div class="item"><a href='/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2025,11,01-2026,11,01/filter/date'>Last 12 Months</a></div>
+					</div>
+				</div>
+				<!--<div class="ui left pointing dropdown item">
+					<i class="dropdown icon"></i>
+
+					File type
+					<div class="menu">
+						<div class="header"><i class="file text outline icon"></i> Filter by format</div>
+
+						<div class="item"><a href='<%= MakeFileFilterURL("*.doc*") %>'>Microsoft Word</a></div>
+						<div class="item"><a href='<%= MakeFileFilterURL("*.xls*") %>'>Microsoft Excel</a></div>
+						<div class="item"><a href='<%= MakeFileFilterURL("*.ppt*") %>'>Microsoft PowerPoint</a></div>
+						<div class="item"><a href='<%= MakeFileFilterURL("*.pdf") %>'>Adobe Acrobat</a></div>
+						<div class="item"><a href='<%= MakeFileFilterURL("*.rtf") %>'>Rich Text Format</a></div>
+						<div class="item"><a href='<%= MakeFileFilterURL("*.txt") %>'>Text Files</a></div>
+						<div class="item"><a href='<%= MakeFileFilterURL("*.htm*") %>'>HTML Files</a></div>
+					</div>
+				</div>
+				<div class="ui left pointing dropdown item">
+					<i class="dropdown icon"></i>
+
+					Language &nbsp;
+					<div class="menu">
+						<div class="header"><i class="comment outline icon"></i> Filter by language</div>
+
+						<% Langs = Split(LanguagePacks("%ID%^%NAME%;"), ";") %>
+						<% For Each Lang in Langs %>
+							<% If Lang <> "" Then %>
+							<% Parts = Split(Lang, "^") %>
+							<div class="item"><a href='<%= MakeLanguageFilterURL(Parts(0)) %>'><%= Parts(1) %></a></div>
+							<% End If %>
+						<% Next %>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<!--<div class="ui icon top left pointing dropdown button">
+			<i class="ellipsis vertical icon"></i>
+			<div class="menu">
+				<% If ResultList.Entities.Count > 0 Then %>
+				<div class="item" onclick='window.location="{BASEURL}/isysquery/{RESULTID}/1-10/informationmap"'><i class="sitemap icon"></i> InformationMap</div>
+				<% End If %>
+				<a class="item" href="{SubscribeUrl}"><i class="mail outline icon"></i> Subscribe to Search</a>
+			</div>
+		</div> -->
+	</div>
+	<div style="margin-left: 10px; padding-bottom: 10px">
+		<div class='ui' style='padding-top: 8px'>
+	<span id="ajaxSectionStats">
+
+			<div id='ajaxSectionStats'>
+				Showing 1 to 3 of <span id='isys_stats_docs'>3</span> (<span id='isys_stats_hits'>734</span> hits) &nbsp;
+			</div>
+	</span>
+
+		</div>
+	</div>
+</div>
+		<div>
+			<div style="padding: 5px">
+						<div class="ui label">
+								(Thursday 10 September 2026)				<a href='/search/search?IW_DATABASE=Hansard&IW_FIELD_WEB_STYLE='>
+					<i class="delete icon"></i>
+				</a>
+			</div>	
+				</div>
+		</div>
+
+
+<div>
+	<FORM method="POST" action="/search/search/" name="SearchForm">
+	<script language="javascript" type="text/javascript" src="/search/common.js"></script>
+	<input type="hidden" name="IW_DATABASE" value="816ecc31-3dfd-440b-8ff1-60218b0dd743">
+	<table cellpadding="0" border="0" cellspacing="0" class="results-table">
+		
+		<tr>
+			<td class="resultColumnB" valign="top" >
+				<div style="min-width: 550px; overflow: hidden">
+				<div style="word-wrap: break-word;"><i class='icon file word outline'></i> <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1/doc/" onclick="isys.viewer.show('/search', '816ecc31-3dfd-440b-8ff1-60218b0dd743', 1, 3); return false;"">House of Assembly Thursday 10 September 2026</a>  </div>
+				<div style="clear: both">
+					<!--{SECTION name="docRelevance"}<div class="resultSummary resultStars">{RELEVANCEBAR style="stars"}</div>{SECTIONEND}-->					
+					<!--<div class="resultSummary resultDate"><a href="{DOCDETAILS}">{DATEINDOCUMENT DD-MMM-YYYY}</a></div>
+					<div class="resultSummary resultHits">{HITS} hit<%= IfThen(Document.HitCount > 1, "s", "") %></div>-->
+										<div style="clear: both"></div>
+				</div>
+
+				<div style="word-wrap: break-word; font-size:10pt;">
+										from <span class="ticon">f</span> <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/House%20of%20Assembly/query/">House of Assembly</a>
+										<!--
+										in <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Uncategorized/filter/categorylike/">Uncategorized</a>
+					 
+					-->
+					&bull; ...House of Assembly <b style="color: #000000">Thursday 10</b> September 2026 D:\Data\Document Publishing\Hansard\CurrentSession\House\2026\HA <b style="color: #000000">Thursday 10</b> September 2026.docx HA <b style="color: #000000">Thursday 10</b> September 2026.docx ...</div>
+				<span style="font-size: smaller;">
+					<a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1/doc/HA%20Thursday%2010%20September%202026.docx"  id="isys_var_url_1" style="color: green">Download Document</a>
+				</span>
+				</div>
+			</td>
+
+<!--<td class="resultColumnC" valign="top">
+	{Control:Thumbnail}
+	</td> -->
+		</tr>
+
+		<tr>
+			<td class="resultColumnB" valign="top" >
+				<div style="min-width: 550px; overflow: hidden">
+				<div style="word-wrap: break-word;"><i class='icon file word outline'></i> <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2/doc/" onclick="isys.viewer.show('/search', '816ecc31-3dfd-440b-8ff1-60218b0dd743', 2, 3); return false;"">Legislative Council Thursday 10 September 2026</a>  </div>
+				<div style="clear: both">
+					<!--{SECTION name="docRelevance"}<div class="resultSummary resultStars">{RELEVANCEBAR style="stars"}</div>{SECTIONEND}-->					
+					<!--<div class="resultSummary resultDate"><a href="{DOCDETAILS}">{DATEINDOCUMENT DD-MMM-YYYY}</a></div>
+					<div class="resultSummary resultHits">{HITS} hit<%= IfThen(Document.HitCount > 1, "s", "") %></div>-->
+										<div style="clear: both"></div>
+				</div>
+
+				<div style="word-wrap: break-word; font-size:10pt;">
+										from <span class="ticon">f</span> <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Legislative%20Council/query/">Legislative Council</a>
+										<!--
+										in <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/LC/filter/categorylike/">LC</a>
+					 
+					-->
+					&bull; ...Legislative Council <b style="color: #000000">Thursday 10</b> September 2026 D:\Data\Document Publishing\Hansard\CurrentSession\Council\2026\LC <b style="color: #000000">Thursday 10</b> September 2026.docx LC <b style="color: #000000">Thursday 10</b> September 2026.docx ...</div>
+				<span style="font-size: smaller;">
+					<a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2/doc/LC%20Thursday%2010%20September%202026.docx"  id="isys_var_url_2" style="color: green">Download Document</a>
+				</span>
+				</div>
+			</td>
+
+<!--<td class="resultColumnC" valign="top">
+	{Control:Thumbnail}
+	</td> -->
+		</tr>
+
+		<tr>
+			<td class="resultColumnB" valign="top" >
+				<div style="min-width: 550px; overflow: hidden">
+				<div style="word-wrap: break-word;"><i class='icon file word outline'></i> <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/3/doc/" onclick="isys.viewer.show('/search', '816ecc31-3dfd-440b-8ff1-60218b0dd743', 3, 3); return false;"">Legislative Council Thursday 10 September 2026</a>  </div>
+				<div style="clear: both">
+					<!--{SECTION name="docRelevance"}<div class="resultSummary resultStars">{RELEVANCEBAR style="stars"}</div>{SECTIONEND}-->					
+					<!--<div class="resultSummary resultDate"><a href="{DOCDETAILS}">{DATEINDOCUMENT DD-MMM-YYYY}</a></div>
+					<div class="resultSummary resultHits">{HITS} hit<%= IfThen(Document.HitCount > 1, "s", "") %></div>-->
+										<div style="clear: both"></div>
+				</div>
+
+				<div style="word-wrap: break-word; font-size:10pt;">
+										from <span class="ticon">f</span> <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/Legislative%20Council/query/">Legislative Council</a>
+										<!--
+										in <a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/LC/filter/categorylike/">LC</a>
+					 
+					-->
+					&bull; ...Legislative Council <b style="color: #000000">Thursday 10</b> September 2026 D:\Data\Document Publishing\Hansard\CurrentSession\Council\2026\LC <b style="color: #000000">Thursday 10</b> September 2026.docx LC <b style="color: #000000">Thursday 10</b> September 2026.docx ...</div>
+				<span style="font-size: smaller;">
+					<a href="/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/3/doc/LC%20Thursday%2010%20September%202026.docx"  id="isys_var_url_3" style="color: green">Download Document</a>
+				</span>
+				</div>
+			</td>
+
+<!--<td class="resultColumnC" valign="top">
+	{Control:Thumbnail}
+	</td> -->
+		</tr>
+
+	</table>
+</FORM>
+
+
+
+<div class="pageselect">
+	<a href="#" disabled="disabled" id="isys_var_prevbatch"></a>
+	<b>1</b>
+	<a href="#" disabled="disabled" id="isys_var_nextbatch"></a>
+</div>
+
+
+
+</div>
+
+ 
+
+
+ 
+
+
+ 
+
+</div>
+			</div>
+		</div>
+
+
+	</div>
+	<div id="footer" style="clear:both;  text-align: center">
+		&copy; <script>document.write( new Date().getFullYear() );</script> Parliament of Tasmania
+	</div>
+	<script type="text/javascript" src="/search/common.js"></script>
+	<script>
+		var socialCol = document.getElementById("social_col");
+		var whoAmI = document.getElementById("WhoAmI");
+		var footer = document.getElementById("footer");
+		var errorclass = document.getElementById("errorclass");
+		if(whoAmI != null)
+		{
+			socialCol.style.top = 85 + "px";
+		}
+		if(errorclass)
+		{
+			footer.style.position="absolute";
+			footer.style.bottom = "0px";
+		}
+	</script>
+</body>
+</html>

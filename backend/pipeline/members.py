@@ -25,7 +25,7 @@ GOVERNMENTS = REPO_ROOT / "config" / "governments.yaml"
 HONORIFIC = re.compile(r"^(?:(?:The\s+)?Hon\.?|Mr|Ms|Mrs|Miss|Dr|Madam)\s+", re.I)
 GOVERNMENT_ROLE = re.compile(
     r"\b(?:Minister|Premier|Treasurer|Attorney[- ]General|Parliamentary Secretary|Cabinet Secretary"
-    r"|Leader of the House|Leader of the Government|Manager of Government Business|Government Whip"
+    r"|Leader of the House|Leader (?:of|for) the Government|Manager of Government Business|Government Whip"
     r"|Special Minister of State|Vice-President of the Executive Council|Chief Minister)\b", re.I)
 OPPOSITION_ROLE = re.compile(r"\b(?:Leader of the Opposition|Opposition Leader|Shadow|Manager of Opposition Business|Opposition Whip)\b", re.I)
 # Party spellings in Hansard or member lists → codes used in governments.yaml.

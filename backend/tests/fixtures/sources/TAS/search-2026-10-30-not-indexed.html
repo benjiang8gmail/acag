@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Document Search | Parliament of Tasmania</title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+     
+	
+	<link href="/search/css/default.css" rel="stylesheet" type="text/css" />
+	<script>
+		var siteRoot = '/search';
+		var siteAnywhere = 'http://search.parliament.tas.gov.au:8081';
+		var siteExperience = 'http://search.parliament.tas.gov.au:8082';
+		var menuMore = null;
+		var socialSizeCollapse = 1340;
+		function showMenuMore(ctrl)
+		{
+			var pos = isys.getPos(ctrl);
+			if (menuMore == null)
+			{
+				menuMore = new isys.controls.PopupMenu([
+					{caption: "Home", href: siteRoot + "/"},
+					{caption: "-"}
+										,{
+						caption: "Perceptive Enterprise Search Anywhere",
+						href: siteAnywhere,
+						image: siteRoot + '/images/Anywhere.png',
+						description: "Launch the Anywhere site, access local content from any mobile device."
+					}
+															,{
+						caption: "Perceptive Enterprise Search Experience&trade;",
+						href: siteExperience,
+						image: siteRoot + '/images/Experience.png',
+						description: "Launch the Experience&trade; site to perform advanced searching with collaborative features"
+					}
+									]);
+				menuMore.maxWidth = 220;
+				menuMore.m_gutterWidth = 45;
+			}
+			menuMore.popup(pos.left, pos.bottom);
+		}
+	</script>
+	<script src="/search/webshared/jquery/jquery-3.5.1.min.js"></script>
+	<link href="/search/webshared/semantic-ui/semantic.min.css" rel="stylesheet" type="text/css" />
+	<script src="/search/webshared/semantic-ui/semantic.min.js"></script>
+	<script>
+	$(function() {
+		if (document.documentMode && document.documentMode <= 9)
+			window.location = '/search/unsupported_browser?reason=compat&version=' + document.documentMode + '&redir=';
+		else
+		{
+			$('.dropdown').dropdown({transition: 'drop', fullTextSearch: true});
+			$('.dropdown-hover').dropdown({transition: 'drop', on: 'hover'});
+			$('.ui.checkbox').checkbox();
+			$('.hintable').popup( { inline: true, hoverable: true, position : 'bottom left', delay: { show: 300, hide: 800 } } );
+		}
+	});
+	</script>
+
+ <script src="/search/WebShared/js/isys.js"></script>
+<script src="/search/WebShared/js/isysMenu.js"></script>
+<link rel="stylesheet" type="text/css" href="/search/WebShared/js/isys.css"/>
+<link rel="stylesheet" type="text/css" href="/search/WebShared/js/isysMenu/Office2000.css"/>
+
+										<script>
+						function basic_logout() {
+							var http = window.XMLHttpRequest ? new XMLHttpRequest() : null;
+							if (document.execCommand && document.execCommand("ClearAuthenticationCache"))
+							{
+								window.location.href = '/?rnd=' + (new Date()).getTime();
+							}
+							else if (http) 
+							{
+								/*http.open("GET", '/WebShared/js/isys.js?rnd=' + new Date(), true, "logout", "logout");
+								http.send("");
+								http.onreadystatechange = function() { 
+									//if (http.readyState == 4) window.location.href='/'; 
+								} */
+								window.location.href = '//logout@' + window.location.host + '/';
+							}
+						}		
+					</script>
+									
+</head>
+
+<body>
+
+<!--[if lt IE 8]>
+	<style type="text/css">
+		.inputBoxContainer {
+			border:0;
+			height:27px;
+			border-style:none;
+			background-color:#FFFFFF;
+		}
+		.headerInputBoxContainer {
+			border:0;
+			height:24px;
+			border-style:none;
+			background-color:#FFFFFF;
+		}
+		.inputBox {
+			width:99%;
+			border:1px;
+			font-size:11pt;
+			border-style:solid;
+			border-color:#719EC7;
+		}
+		.decorator {
+			display:none;
+		}
+		#header {
+			overflow:hidden;
+		}
+		#sectionRefine {
+			width:35%;
+			float:right;
+		}
+	</style>
+
+<![endif]-->
+
+
+
+	
+		<div id="headerFill"></div>
+	<div id="container" >
+		<div id="header">
+			<a href="/search/"><div id="logo"></div></a>
+   
+						<br>
+			<div class="leftPanel headerFamily" style="position: relative">
+				<div id="quickQuery">
+					<form method="post" action="/search/search" id='isys_frm_search_hdr'>
+					
+					<div class="ui fluid right labeled input" style='width: 100%'>
+						<input type="text" placeholder="Enter Search..." name="IW_FIELD_WEB_STYLE" value="(Friday 30 October 2026)" id='isys_edt_search' />
+
+						<div class="ui scrolling dropdown label" id='isys_sel_database'>
+							<input type="hidden" name="IW_DATABASE" value="Hansard" />
+							<div class="text">Hansard</div>
+							<i class="dropdown icon"></i>
+							<div class="menu">
+								<div class='item' data-value='Hansard'>Hansard</div><div class='item' data-value='HistoricalHansard'>HistoricalHansard</div><div class='item' data-value='Notice Papers'>Notice Papers</div><div class='item' data-value='ParliamentaryPapers'>ParliamentaryPapers</div><div class='item' data-value='Votes and Proceedings'>Votes and Proceedings</div>
+								<div class='item' data-value='*'>Entire Site</div>
+																<div class='item' data-value='41a8de40-9a87-4e92-8c70-3b62c16df709'>Current Results</div>
+															</div>
+						</div>
+
+						<div class='ui icon button primary' style='margin-left: 3px' id='isys_btn_search_hdr' onclick='document.getElementById("isys_frm_search_hdr").submit()'><i class='icon search'></i></div>
+						<button type="submit" style='display:none'></button>
+
+					</div>
+					</form>
+				</div>
+			</div>
+   
+			<div class="userButton" ></div>
+				<div class="rightPanel headerFamily" style="overflow:hidden; position: relative">
+
+				<div id="menuMenuAssisted" class="mainMenuItem">
+					<a class="menuItemLink" href="https://search.parliament.tas.gov.au">Search Home</a>
+				</div>
+
+				<div id="menuAdvanced" class="mainMenuItem">
+					<a class="menuItemLink" href="https://www.parliament.tas.gov.au">Parliament Website</a>
+				</div>
+			</div>
+
+		</div>
+ <p>&nbsp;</p>
+		 
+
+		 
+		<div id="social_col" class="facebook_not_connected">
+			 
+<link rel="stylesheet" type="text/css" href="/search/WebShared/social.css" />
+				<script src="/search/WebShared/js/social.js"></script>
+				<div style="padding: 8px; color: white; background-color: grey;" id="SocialPanel">
+
+				<script>
+					window.socialQuery = "(Friday 30 October 2026)";
+					window.facebook = false;
+				</script>
+
+				<input type="button" id="expandbutton" class="expbutton" onclick="expButtonClick()"/>
+
+																<!--FLICKR -->
+				<div class="SocialGroup Flickr">
+					Flickr
+				</div>
+				<div>
+					<div id="flickr_results"></div>
+				</div>
+								<script>
+
+								isys.events.attachEvent(window, "load", function() {
+									FlickrRefresh();
+												});
+
+				</script>
+				</div>
+
+		</div>
+		 
+		<div id="main" style="position: relative">
+			 
+
+			<div id="page_content">
+				
+<style>
+#page_content { margin-right: 0px }
+</style>
+
+<div class='ui orange segment' style='width: 550px; margin: auto; margin-top: 65px; margin-bottom: 150px'>
+	<h4 class="ui horizontal header divider"><i class="warning circle icon"></i> No Results</h4>
+
+		<p>
+		The search for <strong>"(Friday 30 October 2026)"</strong> found <span id='isys_stats_hits' style='font-weight: bold'>0</span> hits in <span id='isys_stats_docs' style='font-weight: bold'>0</span> documents.<br>
+	</p>
+
+		<p>Please try:</p>
+		<ul>
+		<li>
+			Check your spelling.
+		</li>
+		<li>
+			Try more general words.
+		</li>
+		<li>
+			Checking the predefined <a href="https://search.parliament.tas.gov.au/qsl/searchlinks">search links page</a> 
+		</li>
+	</ul>	
+</div>
+
+
+<div id="errorclass"></div> 
+ 
+
+ 
+			</div>
+		</div>
+
+
+	</div>
+	<div id="footer" style="clear:both;  text-align: center">
+		&copy; <script>document.write( new Date().getFullYear() );</script> Parliament of Tasmania
+	</div>
+	<script type="text/javascript" src="/search/common.js"></script>
+	<script>
+		var socialCol = document.getElementById("social_col");
+		var whoAmI = document.getElementById("WhoAmI");
+		var footer = document.getElementById("footer");
+		var errorclass = document.getElementById("errorclass");
+		if(whoAmI != null)
+		{
+			socialCol.style.top = 85 + "px";
+		}
+		if(errorclass)
+		{
+			footer.style.position="absolute";
+			footer.style.bottom = "0px";
+		}
+	</script>
+</body>
+</html>

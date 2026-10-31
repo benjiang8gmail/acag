@@ -94,4 +94,6 @@ def registry() -> dict[str, type]:
     from .nsw import NSWConnector
     from .nt import NTConnector
     from .qld import QLDConnector
-    return {"nsw": NSWConnector, "act": ACTConnector, "qld": QLDConnector, "cth": CTHConnector, "nt": NTConnector}
+    from .tas import TASConnector
+    return {"nsw": NSWConnector, "act": ACTConnector, "qld": QLDConnector, "cth": CTHConnector, "nt": NTConnector,
+            "tas": TASConnector}

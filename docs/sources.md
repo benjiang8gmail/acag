@@ -342,6 +342,20 @@ What the saved fixtures showed:
 - **Recommended connector:** calendar page → draft PDF; re-check for the final.
 - **Fixture:** none yet (environment). Batch: HA 18 Aug 2026 and LC 11 Aug 2026 drafts.
 
+- **Connector built (Phase 2): `backend/connectors/tas.py`, reading the Parliament's own document search.**
+  - **Why this route:** www.parliament.tas.gov.au blocks scripts (Cloudflare). `search.parliament.tas.gov.au` (no robots.txt rules) is the Parliament's own Hansard search.
+  - **Sitting days:** `/search/quicksearch/{yyyy}/sittingdays.html`, a calendar whose dates link to `/Search/search/search?IW_FIELD_ADVANCE_PHRASE={Weekday D Month YYYY}&IW_DATABASE=Hansard`. The search form on the advanced page returns nothing to a direct POST; these GET links work.
+  - **Documents:** each date's search lists `HA …docx` / `LC …docx` with download links under `/search/isysquery/{query id}/n/doc/…`. Recent days appear only once indexed (27–30 Oct weren't yet), so they're held as **pending**. A calendar date still unindexed after 30 days counts as no sitting.
+  - **Text:** the original Word file, read with the standard library (zip + XML).
+    - Heading1/Heading2 give sections and topics.
+    - A turn opens with a bold name and " - "; Council headers add "(Electorate - Role)" and sometimes "(by leave)".
+    - **Question Time:** "Mr WILLIE question to TREASURER, Mr ABETZ" … "ANSWER", with the answering minister named. Supplementaries and answers follow from the pair; points of order are statements.
+    - Title-case names are interjections, and "[10.01 a.m.]" gives the time.
+    - "Preliminary Transcript" marks a draft.
+  - **Citations:** the stable date-search URL (the document links inside it are per query). There are no page numbers.
+  - **Party:** `config/members/TAS.yaml` (Wikipedia, secondary): House of Assembly 35 (LIB 14, ALP 10, IND 6, GRN 4, SFF 1), Council 15 (IND 8, LIB 3, ALP 3, GRN 1). The official Council list PDF is behind Cloudflare.
+  - **Captured live:** 10 Sep 2026 (House of Assembly and Council). Sides known for 99.7% and 100% of members' turns.
+
 ### ACT: Legislative Assembly (`ACT-LA`)
 
 - **List sitting days:** the predictable proof URL per calendar date. The `hansard.act.gov.au` index also lists them.

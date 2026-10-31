@@ -1,5 +1,40 @@
 # Progress
 
+## 1 Nov 2026: Tasmania via the Parliament's own document search (6 parliaments live)
+
+### Done
+
+- **`backend/connectors/tas.py`:** House of Assembly and Legislative Council, from `search.parliament.tas.gov.au` (no robots.txt rules), because the main site blocks scripts.
+  - **Listing:** the year's sitting calendar, then one search per sitting date, which gives that day's Word transcript for each chamber.
+  - **Indexing lag:** dates not yet indexed are held as pending; after 30 days they count as no sitting.
+  - **Text:** read straight from the .docx: Word heading styles; bold-name turns; Council headers with electorate, role and "(by leave)".
+  - **Question Time:** questions to named ministers, answers and supplementaries; points of order kept separate.
+  - **Other turns:** interjections, the presiding officer, procedural lines and times.
+  - TAS-HA and TAS-LC are enabled.
+- **`config/members/TAS.yaml`** (House of Assembly 35, Council 15; secondary) added to `make members`.
+- **Side rules:** "Leader for the Government" (Tasmanian Council) counts as government.
+
+### Evidence
+
+- `make test`: 130 backend tests pass, including 7 for Tasmania:
+  - the calendar, the date search, and pending (not-yet-indexed) days;
+  - old unindexed days given up;
+  - draft flag, sections, topics and times;
+  - **Question Time: question, answer, point of order, answer, interjection, supplementary, answer**;
+  - Council headers with electorate, role and "(by leave)";
+  - no turn headers left in text;
+  - sides for 99%+ of turns, with Treasurer government, Leader of the Opposition opposition, and Council government leader government.
+
+### Where the six previously blocked parliaments stand
+
+- **Live:** CTH (OpenAustralia mirror), NT (Territory Stories text; days listed by staff), TAS (the Parliament's search).
+- **No legitimate route from this environment:** VIC, SA, WA. The options are:
+  - run the scanner from an Australian network (Remote Control from the product owner's computer);
+  - the access requests;
+  - assisted manual import.
+
+---
+
 ## 1 Nov 2026: NT Hansard via Territory Stories text pages (5 parliaments live)
 
 ### Done

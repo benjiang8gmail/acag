@@ -34,3 +34,8 @@ Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host
 | `sources/NT-LA/territorystories-1052298.html` | https://territorystories.nt.gov.au/10070/1052298/0/39 | 2026-10-31 | 43,313 | `bbcb500f8183c8bb` |
 | `sources/QLD-LA/2026-10-13.pdf` | https://documents.parliament.qld.gov.au/events/han/2026/2026_10_13_DAILY.pdf | 2026-10-31 | 1,394,203 | `d343ac450bd7f1d6` |
 | `sources/QLD-LA/2026-10-14.pdf` | https://documents.parliament.qld.gov.au/events/han/2026/2026_10_14_DAILY.pdf | 2026-10-31 | 912,138 | `23d0ebeeb52984b0` |
+| `sources/TAS-HA/2026-09-10.docx` | https://search.parliament.tas.gov.au/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/1/doc/HA%20Thursday%2010%20September%202026.docx | 2026-10-31 | 3,191,818 | `d2dd06ad8146a411` |
+| `sources/TAS-LC/2026-09-10.docx` | https://search.parliament.tas.gov.au/search/isysquery/816ecc31-3dfd-440b-8ff1-60218b0dd743/2/doc/LC%20Thursday%2010%20September%202026.docx | 2026-10-31 | 1,204,340 | `577e13a1283ac7d4` |
+| `sources/TAS/search-2026-09-10.html` | https://search.parliament.tas.gov.au/Search/search/search?IW_FIELD_ADVANCE_PHRASE=Thursday+10+September+2026&IW_DATABASE=Hansard&IW_SORT=-9 | 2026-10-31 | 63,088 | `12850e9822874708` |
+| `sources/TAS/search-2026-10-30-not-indexed.html` | https://search.parliament.tas.gov.au/Search/search/search?IW_FIELD_ADVANCE_PHRASE=Friday+30+October+2026&IW_DATABASE=Hansard&IW_SORT=-9 | 2026-10-31 | 8,502 | `70630b16de89c39d` |
+| `sources/TAS/sittingdays-2026.html` | https://search.parliament.tas.gov.au/search/quicksearch/2026/sittingdays.html | 2026-10-31 | 27,314 | `5bd4967f70e34ab0` |
