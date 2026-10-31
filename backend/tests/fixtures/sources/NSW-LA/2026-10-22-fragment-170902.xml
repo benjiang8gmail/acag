@@ -1,0 +1,44 @@
+<hansard>
+  <hansard.header>
+    <date>2026-10-22T00:00:00+11:00</date>
+    <parliament.number>58</parliament.number>
+    <session.number>1</session.number>
+    <parliament.session.name>Fifty-Eighth Parliament, First Session (58-1)</parliament.session.name>
+    <chamber>Legislative Assembly</chamber>
+    <draft>true</draft>
+  </hansard.header>
+  <chamber.xscript>
+    <fragment.data>
+      <proceeding>
+        <proceedinginfo>
+          <text>Documents</text>
+        </proceedinginfo>
+        <topic>
+          <topicinfo>
+            <text>Transport for NSW</text>
+          </topicinfo>
+          <subproceeding>
+            <subproceedinginfo>
+              <text>Reports</text>
+            </subproceedinginfo>
+          </subproceeding>
+        </topic>
+      </proceeding>
+    </fragment.data>
+    <fragment.text>
+      <body>
+        <p class="SubDebate-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Transport for NSW</span>
+        </p>
+        <p class="SubSubDebate-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Reports</span>
+        </p>
+        <a name="member" data-mode="member" data-value="120" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms JENNY AITCHISON:</span>  In accordance with section 133A of the Road Transport Act 2013, I announce the electronic tabling of the report of Transport for NSW entitled <span class="-H" style="font-style:italic;">Review of the Average Speed Camera Light Vehicle Trial: Outcomes report</span>.</span>
+        </p>
+      </body>
+    </fragment.text>
+  </chamber.xscript>
+</hansard>

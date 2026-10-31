@@ -72,7 +72,7 @@ class FakeConnector:
     def list_documents(self, day):
         return [DocumentRef(day.source_id, day.sitting_date, self.url(day.source_id, day.sitting_date), "txt")]
 
-    def parse(self, raw, ref):
+    def parse(self, raw, ref, fetch_part):
         version, *lines = raw.decode().splitlines()
         speeches = [ParsedSpeech(seq=i, speaker_name=ln.split("|")[0], text=ln.split("|")[1]) for i, ln in enumerate(lines)]
         return ParsedDocument(speeches=speeches, version=version)

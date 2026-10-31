@@ -1,0 +1,3269 @@
+<hansard>
+  <hansard.header>
+    <date>2026-10-22T00:00:00+11:00</date>
+    <parliament.number>58</parliament.number>
+    <session.number>1</session.number>
+    <parliament.session.name>Fifty-Eighth Parliament, First Session (58-1)</parliament.session.name>
+    <chamber>Legislative Assembly</chamber>
+    <draft>true</draft>
+  </hansard.header>
+  <chamber.xscript>
+    <fragment.data>
+      <proceeding>
+        <proceedinginfo>
+          <text>Motions</text>
+        </proceedinginfo>
+        <topic>
+          <topicinfo>
+            <text>Manufacturing Industry</text>
+          </topicinfo>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>103</id>
+                <name>Mr TIM CRAKANTHORP</name>
+                <electorate>Newcastle</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>2261</id>
+                <name>Mr DAVID LAYZELL</name>
+                <electorate>Upper Hunter</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>60</id>
+                <name>Mr CLAYTON BARR</name>
+                <electorate>Cessnock</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>2275</id>
+                <name>Mr MATT CROSS</name>
+                <electorate>Davidson</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>113</id>
+                <name>Mr DAVID MEHAN</name>
+                <electorate>The Entrance</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>2308</id>
+                <name>Mr JAMES WALLACE</name>
+                <electorate>Hornsby</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>103</id>
+                <name>Mr TIM CRAKANTHORP</name>
+                <electorate>Newcastle</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+          <division>
+            <ayes>
+              <text></text>
+              <count>47</count>
+              <aye>
+                <id>120</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>98</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>108</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>104</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2278</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2246</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2233</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>31</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>58</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>60</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>102</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2284</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2274</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>111</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2287</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2239</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>97</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2225</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>105</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2264</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2270</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>128</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2281</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2289</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>117</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>124</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2228</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>53</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2293</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2271</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>103</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>107</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>42</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>27</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2263</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>127</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2276</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>129</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>106</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>110</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2311</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2176</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>123</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2285</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2291</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>126</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>113</id>
+                <name></name>
+              </aye>
+            </ayes>
+            <noes>
+              <text></text>
+              <count>35</count>
+              <noe>
+                <id>2273</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>118</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2244</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2238</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2265</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>63</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2235</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2282</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>116</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>83</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2283</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2290</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2275</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2261</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>62</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>112</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2237</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2240</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2245</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>109</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2307</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>57</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2249</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2308</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2277</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>36</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>39</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2226</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>20</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2292</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2310</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2242</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2230</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2229</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2309</id>
+                <name></name>
+              </noe>
+            </noes>
+            <pairs>
+              <group>
+                <pair>
+                  <id>81</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>2085</id>
+                  <name></name>
+                </pair>
+              </group>
+              <group>
+                <pair>
+                  <id>2306</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>72</id>
+                  <name></name>
+                </pair>
+              </group>
+              <group>
+                <pair>
+                  <id>2288</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>33</id>
+                  <name></name>
+                </pair>
+              </group>
+            </pairs>
+            <questionresolved />
+          </division>
+          <division>
+            <ayes>
+              <text></text>
+              <count>47</count>
+              <aye>
+                <id>120</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>98</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>108</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>104</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2278</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2246</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2233</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>31</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>58</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>60</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>102</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2284</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2274</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>111</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2287</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2239</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>97</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2225</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>105</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2264</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2270</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>128</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2281</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2289</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>117</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>124</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2228</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>53</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2293</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2271</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>103</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>107</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>42</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>27</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2263</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>127</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2276</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>129</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>106</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>110</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2311</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2176</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>123</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2285</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2291</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>126</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>113</id>
+                <name></name>
+              </aye>
+            </ayes>
+            <noes>
+              <text></text>
+              <count>35</count>
+              <noe>
+                <id>2273</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>118</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2244</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2238</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2265</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>63</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2235</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2282</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>116</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>83</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2283</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2290</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2275</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2261</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>62</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>112</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2237</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2240</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2245</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>109</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2307</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>57</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2249</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2308</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2277</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>36</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>39</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2226</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>20</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2292</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2310</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2242</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2230</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2229</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2309</id>
+                <name></name>
+              </noe>
+            </noes>
+            <pairs>
+              <group>
+                <pair>
+                  <id>33</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>81</id>
+                  <name></name>
+                </pair>
+              </group>
+              <group>
+                <pair>
+                  <id>2085</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>2306</id>
+                  <name></name>
+                </pair>
+              </group>
+              <group>
+                <pair>
+                  <id>72</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>2288</id>
+                  <name></name>
+                </pair>
+              </group>
+            </pairs>
+            <questionresolved />
+          </division>
+          <division>
+            <ayes>
+              <text></text>
+              <count>48</count>
+              <aye>
+                <id>120</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>98</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>108</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>104</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2278</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2246</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2233</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>31</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>58</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>60</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>102</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>41</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2274</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>111</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2284</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2239</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>97</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2287</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>105</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2264</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2225</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>128</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2281</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2270</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>117</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>124</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2289</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>53</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2293</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2228</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>103</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>107</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2271</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>27</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2263</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>42</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2276</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>129</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>127</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>110</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2311</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>106</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>123</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2285</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2176</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>126</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>113</id>
+                <name></name>
+              </aye>
+              <aye>
+                <id>2291</id>
+                <name></name>
+              </aye>
+            </ayes>
+            <noes>
+              <text></text>
+              <count>35</count>
+              <noe>
+                <id>2273</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>118</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2244</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2238</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2265</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>63</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2235</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2282</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>116</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>83</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2283</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2290</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2275</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2261</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>62</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>112</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2237</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2240</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2245</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>109</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2307</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>57</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2249</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2308</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2277</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>36</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>39</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2226</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>20</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2292</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2310</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2242</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2230</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2229</id>
+                <name></name>
+              </noe>
+              <noe>
+                <id>2309</id>
+                <name></name>
+              </noe>
+            </noes>
+            <pairs>
+              <group>
+                <pair>
+                  <id>33</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>2306</id>
+                  <name></name>
+                </pair>
+              </group>
+              <group>
+                <pair>
+                  <id>2085</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>2288</id>
+                  <name></name>
+                </pair>
+              </group>
+              <group>
+                <pair>
+                  <id>72</id>
+                  <name></name>
+                </pair>
+                <pair>
+                  <id>81</id>
+                  <name></name>
+                </pair>
+              </group>
+            </pairs>
+            <questionresolved />
+          </division>
+        </topic>
+      </proceeding>
+    </fragment.data>
+    <fragment.text>
+      <body>
+        <p class="SubDebate-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Manufacturing Industry</span>
+        </p>
+        <p class="NormalBold-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="NormalBold-H">Debate resumed from 15 October 2026.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="103" data-article="speech">Mr TIM CRAKANTHORP</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Newcastle</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">14:30</span>
+            <span class="HiddenTime-H">:43</span>
+            <span class="GeneralBold-H">):</span>  I continue my contribution to debate on the motion. Billions of dollars were spent abroad, to the detriment of thousands of local jobs. Major contracts were chronically late and over budget, and they delivered poor products to the people of New South Wales. Former Premier Gladys Berejiklian said, "Australia and New South Wales are not good at building trains. That's why we have to purchase them overseas." Dominic Perrottet said, "It is hard. Trains crack. Sometimes there are challenges with ferries. There are always going to be problems." Chris Rath, who is still a member of Parliament, said:</span>
+        </p>
+        <p class="SmallAt1-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallAt1-H">It is not easy for us to manufacture mass transportation options, such as ferries, at a reasonable cost. For manufacturing mass transportation, we do not hold the comparative advantage.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        " xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">From an alleged spend of $2.4 billion to a $4 billion blowout, there is no comparative advantage. I say that Labor is obsessed with the idea of local production, with giving much-needed certainty to workers, and with building a skilled and self-sufficient workforce. </span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">We know the Coalition's record on manufacturing trains in New South Wales. I have just gone through it. What does One Nation think? Mike Newman has attacked the Government's $12 billion investment and proposed an alternative model involving overseas technology partners and foreign state financing. That is just another excuse not to do something we know we have the capability to do in New South Wales and that would support local jobs. It is also just another example of the Liberals, The Nationals and One Nation wanting to make life harder for working families in the Hunter and across the State. The Minns Labor Government's plan is clear: build trains here, rebuild the local workforce and supply chain, and create the certainty the industry needs to invest in New South Wales for decades to come. I commend the motion to the House.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="2261" data-article="speech">Mr DAVID LAYZELL</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Upper Hunter</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">14:32</span>
+            <span class="HiddenTime-H">:57</span>
+            <span class="GeneralBold-H">):</span>  I make a contribution to debate on the motion regarding local jobs and manufacturing, moved by the member for Newcastle. I start by saying that the Opposition will seek to amend the motion. I move:</span>
+        </p>
+        <p class="SmallAt1-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallAt1-H">That the motion be amended by deleting all words after "House" and inserting instead:</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(1)<span style="&#xA;          margin-left:26pt&#xA;        " />Notes Labor's Tangara refurbishment plan is up to three years behind schedule and that by March 2027 the Government is expected to only have four out of the 55 trains refurbished.</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(2)<span style="&#xA;          margin-left:26pt&#xA;        " />Notes that the first refurbished Tangara train was announced to be serving commuters on 4 September 2026; however, it has only worked for five days and is now mothballed.</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(3)<span style="&#xA;          margin-left:26pt&#xA;        " />Notes that the former Iemma Government ordered the Waratah fleet from China.</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(4)<span style="&#xA;          margin-left:26pt&#xA;        " />Notes that Labor's record on delivering transport projects is one of being late and over budget.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        " xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">When it comes to train manufacturing, particularly train kits, Labor loves making big announcements heading into an election. Twelve billion is a big number, so everyone wants to know exactly how the money will be spent. Labor should be required to be transparent about how it proposes to spend that $12 billion. It came as a surprise to me that no significant business case was tested by a third party and that there is no financial support for this idea. There is no real surety, guarantee or commitment that $12 billion will be enough. This could cost significantly more than $12 billion. </span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">Big projects, like Snowy Hydro, can run over badly if the planning is not done right. The Coalition is very concerned about the Labor Government's planning. We have not been able to see exactly where the numbers fall and what the expectations are. When a government throws $12 billion around, people have a right to be nervous. Its recent track record—</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2275" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Mr Matt Cross:</span>  Track, train.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2261" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Mr DAVID LAYZELL:</span>  Good link there. I thank the member for Davidson. There have been some concerns about the Government's recent announcements, like the huge $1 billion announcement by Albo and Minns about solar panel manufacturing at the AGL site in the Hunter Valley. In the end, nothing came of it. Maybe more is yet to come. We are not sure. But, to date, after nearly three years, nothing has been seen. What has been seen is $180 million for the Black Hill facility, which is an extraordinary amount of money for a foreign manufacturer to build solar panels in a large shed. The Opposition has no issue with that. However, we do not know the numbers behind it. We are right to question whether that project has a strong business case, because the world of manufacturing solar panels is very competitive. China dominates the market, so we must ensure that the Government's $180 million investment makes New South Wales competitive and that money does not just go into the gutter to be washed into the sewer. Opposition members want to make sure that taxpayers' money is spent wisely, which is why we have asked the Government to be more transparent.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">The Government announced another renewable manufacturing project in the Hunter: the Energy Renaissance renewable battery. The Government's media releases from then talked of a new age of renewable energy manufacturing. Everyone was there at the announcement, from Federal politicians to local State members. It was a great announcement, but where is the project now? It went belly up, with the equipment sold for about $10,000 and the shed completely emptied out. That is another example of a failed project. There have been many big announcements in the Hunter about the new age of hydrogen that, to date, have also come to nothing. When the Government starts throwing around figures like $12 billion, the Opposition is absolutely within its rights to ask about the Government's capability and its plan. That is because, again, when it can go wrong, it will go wrong.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">The Victoria's Big Build project is an example of how badly this Labor big train project can go wrong. That Victorian project was within the scope of a royal commission that looked at whether CFMEU corruption and organised crime was involved. It was a massive financial waste with huge cost blowouts. It is pretty serious when taxpayers' money is spent and the only business plan is on the back of a fag packet. We want to see a bit more than that and more robust planning. We want to be sure there will be trains at the end of the tunnel when this project is finished. Though we would all love to see train development and manufacturing in the Hunter, the right people need to be managing it. With Labor, there are questions to be asked.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="60" data-article="speech">Mr CLAYTON BARR</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Cessnock</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">14:40</span>
+            <span class="HiddenTime-H">:17</span>
+            <span class="GeneralBold-H">):</span>  It gives me great pleasure to speak to the motion brought by the member for Newcastle about jobs and manufacturing across the Hunter. I would have thought that members representing electorates across the Hunter would be on a unity ticket to support the investment and the jobs that it would bring. Big‑ticket projects have massive flow‑on effects for direct and indirect employment. They also lead to wages in people's pockets, meaning the support they can offer to their local business community is limitless. I would have thought the members would be on a unity ticket, even if just on an economic basis, to welcome the investment of $12 billion to bring back train manufacturing to the Hunter.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">Unfortunately, the member for Upper Hunter just fundamentally said that the position of the Liberals and The Nationals is to reject this investment. He repeatedly said that he wanted to look at some of the details. I wonder what his position was in the Liberal-Nationals party room when all the metro projects under them blew out dramatically. He was not too concerned about the money. When the wages cap was put on public sector workers, he was not too worried about the cost and impact on the community. When projects were sent offshore and came back not being fit for purpose, with billions spent to fix the mistakes in them, the member for Upper Hunter was not too concerned. The only time he has stood in the Chamber and shown any concern about billions of dollars being spent is when they are being spent in the Hunter. That is his record: the member for Upper Hunter is arguing against billions of dollars being spent in the Hunter.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">As someone who grew up in Cessnock and is a Cessnock local, I support the idea of good manufacturing jobs in my area that would secure a future for workers and their family, put a roof over their heads and food on the table. Those were the aspirations of many people that I grew up with. They have gone into careers, forged their future and built a foundation for their family on the back of incredible manufacturing jobs. The only impediment to 100 years of train building in the Hunter was the former Liberal‑Nationals Government. It decided over 10 to12 years that all of that work was to be done overseas. It invested billions of dollars to create thousands of jobs overseas.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">On this side of the House, the Labor Party says it is time to bring the jobs and the prosperity back to the Hunter and New South Wales. When families have security and certainty, the benefits flow through to the entire community. Whether it is the local skateboard shop, bicycle shop, cafe, hairdresser or bowling club, or even just enrolments at the local soccer or footy clubs, security brings certainty and confidence. This is a plan for 30-plus years. The member for Upper Hunter should get on board and back it in.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="2275" data-article="speech">Mr MATT CROSS</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Davidson</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">14:44</span>
+            <span class="HiddenTime-H">:28</span>
+            <span class="GeneralBold-H">):</span>  It is great to get on board the debate on this motion. New South Wales has a proud history of trains. The trains in our transport system are very much a product of New South Wales, extending way back through the terms of government of both parties. We should be proud of that. Recently on 2 October I was proud to take my little boy—an 18‑month‑old tornado—to the K Set final suburban run. He enjoyed it very much. He just wanted to walk up and down the stairs the whole time, so we had to cut the journey short. We have a really proud history of trains. The K Set is clearly well overdue to be retired, but it was great to be a part of some history.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">I support the amendment moved by the member for Upper Hunter. Before I get to his amendment, I will talk about the original motion of the member for Newcastle. The first item needs clarification. It says, "That the House commends the Government's commitment to building the next generation of trains." I think he means refurbishing the existing trains. The second point was quite accurate. It asks that the House "notes that the former Government's obsession with outsourcing saw our trains … budget blowouts, delivery delays, and structural and mechanical failures."</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">That is an accurate statement because where it says "former Government", I think the member means the former Labor Government because train outsourcing started under the Iemma Government, which signed a contract with a Chinese constructing firm in 2006. We can look at where that contract led. In March 2011—during the time of the Keneally Government—journalist Jacob Saulwick said in an article:</span>
+        </p>
+        <p class="SmallAt1-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallAt1-H">The absent Waratah trains are an embarrassment for the Labor government, though Downer has taken on much of the blame. Yesterday it conceded it did not have enough qualified staff to deliver on its $1.9 billion contract.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        " xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">The member for Maroubra, who was part of that Government, would remember Mr Saulwick. Not only did the Labor Party outsource its trains; it could not even deliver them properly. I now go to the amendment moved by the member for Upper Hunter. He raises a good point about the Tangara trains. I love a good Tangara and love getting on them, but they really do need a refurbishment. There are 55 sets and the Government said in 2023 that they will be renovated. How many of the 55 have been done since then? Would we say, like, 20?</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2290" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Mrs Tanya Thompson:</span>  At least 10.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2275" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Mr MATT CROSS:</span>  No, it is lower.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2290" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Mrs Tanya Thompson:</span>  Maybe five?</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2275" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Mr MATT CROSS:</span>  No. Four out of 55 has been done. In an article, Max Maddison said:</span>
+        </p>
+        <p class="SmallAt1-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallAt1-H">The $450 million refurbishment of Sydney's nearly 40-year-old Tangara train series is running years behind schedule, amplifying pressure on Labor's signature $12 billion election commitment to replace the fleet.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        " xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">Members would think that the first set refurbished would be up and running, and taking passengers. However, the article goes on and says:</span>
+        </p>
+        <p class="SmallAt1-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallAt1-H">Three weeks later, Graham—</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        " xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">that is, of course, the Minister for Transport—</span>
+        </p>
+        <p class="SmallAt1-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallAt1-H">informed parliament that the train had operated only five times in the 27 days since coming online.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        " xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">That is another botched Labor project. It cannot get trains to run on time. It talks big on manufacturing, but perhaps it should manufacture something that actually works.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="113" data-article="speech">Mr DAVID MEHAN</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">The Entrance</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">14:48</span>
+            <span class="HiddenTime-H">:40</span>
+            <span class="GeneralBold-H">):</span>  I am pleased to support my colleagues the member for Newcastle and the member for Cessnock. As somebody who grew up in the Hunter, I support this motion on local jobs and manufacturing. Firstly, I will amend the amendment. I move:</span>
+        </p>
+        <p class="SmallAt1-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallAt1-H">That the amendment be amended by omitting all words after "House" and inserting instead:</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(1)<span style="&#xA;          margin-left:26pt&#xA;        " />Commends the Government's commitment to building the next generation of New South Wales trains in the State's manufacturing heartland.</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(2)<span style="&#xA;          margin-left:26pt&#xA;        " />Notes that the former Government's obsession with outsourcing saw our trains, ferries, light rail and buses being built overseas, leading to budget blowouts, delivery delays and structural and mechanical failures.</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(3)<span style="&#xA;          margin-left:26pt&#xA;        " />Notes that the former Liberal Government barred agencies from prioritising local New South Wales and Australian businesses over international suppliers.</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(4)<span style="&#xA;          margin-left:26pt&#xA;        " />Commends the Labor Government for removing these restrictions in September 2024 as part of our "if not, why not" policy.</span>
+        </p>
+        <p class="SmallNumber-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="SmallNumber-H">(5)<span style="&#xA;          margin-left:26pt&#xA;        " />Recognises that only a Labor government will deliver local jobs and local manufacturing.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        " xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">The Hunter has a long and proud history as an industrial powerhouse. Generations of workers helped build the rail infrastructure and rolling stock that connected communities and drove economic growth. When manufacturing work was sent overseas, the impacts were felt in the Hunter. Local jobs were lost, skilled workers left industries and capability we had relied on declined. As someone who grew up in the Hunter and saw how it hit our community, I make this point: In my backyard was the Goninan factory, where trains were manufactured and upgraded under former Labor governments, before it was closed down by those opposite.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">Goninan did not just appear in the Hunter Valley or in the City of Newcastle. It developed in that place because there was steel manufacturing in the city. BHP did not establish steel manufacturing in the City of Newcastle just because those operators decided that Newcastle was the best place to do it. Other States and other cities were clamouring for steel manufacturing to be developed—the first large-scale steel manufacturing developed in this country. They wanted it ahead of Newcastle, but the decided policy of the early Labor Government led to the support being provided to BHP to encourage it to establish its steelworks within Newcastle, which made Newcastle a steel city.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">Members criticised the parliamentary Labor Party at the time, as party policy and members' views required the establishment of a government-owned steelworks in Newcastle. The determination of the parliamentary Labor Party to, at the very least, establish a steelworks in Newcastle saw the city become the industrial and steel manufacturing powerhouse that we all know and love. The Minns Labor Government is returning to that sort of traditional Labor commitment to Newcastle through its commitment of $12 billion to the Hunter, to manufacturing in the Hunter and to my home town. That $12 billion, which the member for Upper Hunter said was "throwing around money"—</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2261" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Mr David Layzell:</span>  Like confetti. That is a direct quote.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="113" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Mr DAVID MEHAN:</span>  I am happy for you to keep that quote. The House should support the amendment to the amendment. We should support manufacturing in the Hunter and support the Minns Labor Government's commitment to the Hunter Valley.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="2308" data-article="speech">Mr JAMES WALLACE</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Hornsby</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">14:52</span>
+            <span class="HiddenTime-H">:49</span>
+            <span class="GeneralBold-H">):</span>  Is my understanding correct that there is actually an amendment by the Labor Government to the Labor Government's own motion, to correct its misinterpretation of the original motion that we are debating today? It is quite unbelievable if there is, because what we are actually debating today— </span>
+        </p>
+        <a name="member" data-mode="member" data-value="103" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Mr Tim Crakanthorp:</span>  No, you have got it wrong.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2308" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Mr JAMES WALLACE:</span>  You are not amending your own motion?</span>
+        </p>
+        <a name="member" data-mode="member" data-value="27" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Mr Michael Daley:</span>  It is an amendment to your amendment.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2308" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Mr JAMES WALLACE:</span>  Oh, you are amending our amendment, rather than just voting down the amendment. It is a very interesting style of debate. It is interesting that we are effectively having a debate about a motion for a $12 billion press release. That is all we have: one piece of paper and a press release, with a $12 billion figure put against it. It is very difficult to understand what component pieces of spending may add up to a $12 billion figure, but the Labor Party will be able to run around the Hunter spruiking the $12 billion line with its gold-plated or platinum-plated press release. The motion asks the House to commend the Government's commitment, so let us be clear what that commitment actually is: It is a press release. There is no plan, no substance and no detail behind it. There is no manufacturer, no contract and no business case. The actual budget does not allocate $12 billion; it is $150 million over four years. What is that $150 million meant to do? The $150 million is to write a business case, which has not actually been written.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">Every other State that has done its own big rail project announcement, which the Minns Government is seeking to copy through its process and its media tactics, actually had a contract signed, a manufacturer in place, a delivery plan devised and a business case for what they were trying to achieve. But that is not the way things work in Government members' world. They play politics by putting out a press release with as big a figure as their minds can imagine in the circumstances, and then they go through a journey of spruiking the press release without ever delivering any detail behind it. We have seen that political strategy time and again. It is taking the culture of announceables to the absolute nth degree. If Government members have a series of amendments to amendments, I ask them to put forward the detail. Tell us where we can actually find a business case for the proposal. Tell us where we can come up with some costings. The heckle we generally get from the Government is that it is in Newcastle.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2281" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Ms Charishma Kaliyanda:</span>  Would you like the GPS coordinates?</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2308" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Mr JAMES WALLACE:</span>  We want the business case, the costings and the details of what will be delivered. We want a timetable and a purpose. We want to know the extent of the workforce impacts. We do not need a motion. The Government is not at the stage of commending itself. It has not reached that level given the work that has been done. A government should not commend itself over a press release; it should do the work and then look for the accolades once someone has had an impact from government decisions in their own life. We have to be careful, because we have seen this play out with the Government before. We saw the announcements that we would build buses in Nowra. The Government did not build buses in Nowra but bought them from China and re-stickered them in Nowra. Opposition members are very sceptical. We were told that trains would be bought in New South Wales, but where are the trains for Sydney Metro West being bought? It is from CRRC. They will not be made in Australia. We are very sceptical.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="103" data-article="speech">Mr TIM CRAKANTHORP</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Newcastle</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">14:56</span>
+            <span class="HiddenTime-H">:54</span>
+            <span class="GeneralBold-H">):</span>  In reply: I thank the member for Upper Hunter, who is still here in the Chamber. I thank the members representing the electorates of Cessnock, Davidson, The Entrance, Hornsby—oh, the member for Hornsby is already going. He came in right at the end and now he is leaving right at the end. He comes in for five seconds and then he is gone. He has never been to Newcastle; he stays in Hornsby. That is all he does. The member for Upper Hunter might want to tell the people he represents that he does not want jobs, does not want local people learning skills and does not want young ones looking for a future. As the Hunter transitions out of coal, where will the jobs be? Here are many hundreds of jobs. The member for Upper Hunter is not looking out for the next generation. He might not even be here next time around, because he is not looking out for his people. One Nation might just take his seat. I thank the member for Cessnock for his contribution, highlighting that the member for Upper Hunter actually opposes $12 million for local manufacturing, which might just bring a few jobs to his electorate.</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">The member for Davidson has left the Chamber too. Members opposite are not real interested. He was not aware that the Mariyung trains were not even built in New South Wales. He seemed to think all the trains were built here, but they were built in South Korea. They were many years late and went from $2.4 billion to over $5 billion. I do not know where the member for Davidson has been for the past five years. He has apparently been checking out all the trains built in New South Wales—in your dreams, mate. The member for Hornsby was not even sure what we were debating. I do not think he has been out of Hornsby. He came into the Chamber late and left early. He has come and gone. I do not think he was listening to the beginning of the debate. I do not think he even brought his notes or knew what he was debating. </span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">The reality is that only a Labor government will back the workers in the Hunter and New South Wales. The re-elected Minns Labor Government will revive the manufacturing industry and invest $12 billion into a state‑of-the-art, State owned train manufacturing facility in the Hunter to deliver the next generation of passenger trains at Teralba. No other party has demonstrated a commitment as strong as that. The Opposition was committed to employing people in South Korea. They used to call Minister Constance the Minister for Employment over there. He was a great local member for South Korea! One Nation has come out and said that they do not support our investment at all. They do not support the workers in the Hunter. The member for Upper Hunter and One Nation are on a unity ticket. The member wants to be careful as he goes along with One Nation, because they might just slip in. They will support the workers in South Korea. </span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">The former Liberal-Nationals Government's track record speaks for itself—12 years of offshoring, and don't we know about it? The Government's commitment to reviving the manufacturing industry is just one of many ways it is backing workers in the Hunter. It secured thousands of jobs at Tomago. It passed the Local Jobs First Bill 2026 to prioritise local jobs, no matter the government of the day. This week it finally passed the Future Jobs and Investment Bill 2025, after it was held hostage by the Coalition and the crossbench in the upper House. The bill will provide much-needed protections and support coal producing regions such as the Hunter as we transition to clean and renewable industries. We reject the amendments moved by the Coalition. We support our own amendments. </span>
+        </p>
+        <a name="member" data-mode="member" data-value="2280" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">TEMPORARY SPEAKER</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="OfficeUpper-H">Mr Mark Hodges</span>
+            <span class="GeneralBold-H">):</span>  The member for Newcastle has moved a motion, to which the member for Upper Hunter has moved an amendment, to which the member for The Entrance has moved a further amendment. The question is that the amendment of the member for The Entrance to the amendment of the member for Upper Hunter be agreed to. </span>
+        </p>
+        <p class="NormalBold-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="NormalBold-H">The House divided.</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Ayes<span style="&#xA;          margin-left:26pt&#xA;        " />47</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Noes<span style="&#xA;          margin-left:26pt&#xA;        " />35</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Majority<span style="&#xA;          margin-left:26pt&#xA;        " />12</span>
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="3" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">AYES</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Aitchison, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Greenwich, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Minns, C</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Atalla, E</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Hagarty, N (teller)</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>O'Neill, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Bali, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Harris, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Park, R</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Barr, C</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Harrison, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Quinnell, S</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Butler, L</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Haylen, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Saliba, D</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Butler, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Hoenig, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Scully, P</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Car, P</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Holland, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Shetty, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Catley, Y</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kaliyanda, C</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Stuart, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Chanthivong, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kamper, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tesch, L (teller)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cotsis, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kirby, W</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Vo, T</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Crakanthorp, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Leong, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Voltz, L</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Daley, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Li, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Warren, G</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Davis, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McDermott, H</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Washington, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dib, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McInerney, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Whan, S</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Doyle, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McKeown, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wilkinson, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Finn, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Mehan, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        ">
+                  <span class="Normal-H"> </span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.3pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="3" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">NOES</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Ayyad, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Henskens, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Singh, G</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Clancy, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>James, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Speakman, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cooke, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kemp, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Taylor, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Coure, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Lane, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Thompson, T</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cross, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Layzell, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Toole, P</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Crouch, A (teller)</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McGirr, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tuckerman, W</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dalton, H</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Petinos, E</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tudehope, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Davies, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Preston, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wallace, J</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Di Pasqua, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Provest, G</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Williams, R</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Donato, P</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Roberts, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Williamson, R (teller)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dwyer, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Saunders, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wilson, F</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Griffin, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Scruby, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionSpace-P" style="direction:ltr;unicode-bidi:normal;&#xA;        margin-left:&#xA;      0pt;&#xA;            ">
+                  <span class="DivisionSpace-H"> </span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.3pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="2" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">PAIRS</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Anderson, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Saffin, J</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Moylan, B</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Watson, A</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Sloane, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Hornery, S</span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:225.4pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:225.4pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <p class="NormalBold-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="NormalBold-H">Amendment of the member for The Entrance to the amendment of the member for Upper Hunter agreed to.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2280" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">TEMPORARY SPEAKER</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="OfficeUpper-H">Mr Mark Hodges</span>
+            <span class="GeneralBold-H">):</span>  The question now is that the amendment of the member for Upper Hunter as amended by the member for The Entrance be agreed to.</span>
+        </p>
+        <p class="NormalBold-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="NormalBold-H">The House divided.</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Ayes<span style="&#xA;          margin-left:26pt&#xA;        " />47</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Noes<span style="&#xA;          margin-left:26pt&#xA;        " />35</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Majority<span style="&#xA;          margin-left:26pt&#xA;        " />12</span>
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="3" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">AYES</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Aitchison, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Greenwich, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Minns, C</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Atalla, E</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Hagarty, N (teller)</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>O'Neill, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Bali, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Harris, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Park, R</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Barr, C</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Harrison, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Quinnell, S</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Butler, L</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Haylen, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Saliba, D</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Butler, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Hoenig, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Scully, P</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Car, P</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Holland, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Shetty, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Catley, Y</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kaliyanda, C</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Stuart, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Chanthivong, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kamper, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tesch, L (teller)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cotsis, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kirby, W</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Vo, T</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Crakanthorp, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Leong, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Voltz, L</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Daley, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Li, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Warren, G</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Davis, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McDermott, H</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Washington, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dib, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McInerney, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Whan, S</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Doyle, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McKeown, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wilkinson, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Finn, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Mehan, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;&#xA;          text-indent:0pt;&#xA;        ">
+                  <span class="Normal-H"> </span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.3pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="3" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">NOES</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Ayyad, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Henskens, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Singh, G</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Clancy, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>James, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Speakman, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cooke, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kemp, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Taylor, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Coure, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Lane, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Thompson, T</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cross, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Layzell, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Toole, P</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Crouch, A (teller)</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McGirr, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tuckerman, W</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dalton, H</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Petinos, E</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tudehope, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Davies, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Preston, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wallace, J</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Di Pasqua, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Provest, G</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Williams, R</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Donato, P</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Roberts, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Williamson, R (teller)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dwyer, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Saunders, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wilson, F</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Griffin, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Scruby, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionSpace-P" style="direction:ltr;unicode-bidi:normal;&#xA;        margin-left:&#xA;      0pt;&#xA;            ">
+                  <span class="DivisionSpace-H"> </span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.3pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="2" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">PAIRS</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Hornery, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Anderson, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Saffin, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Moylan, B</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Watson, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Sloane, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:225.4pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:225.4pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <p class="NormalBold-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="NormalBold-H">Amendment as amended agreed to.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2280" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">TEMPORARY SPEAKER</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="OfficeUpper-H">Mr Mark Hodges</span>
+            <span class="GeneralBold-H">):</span>  The question now is that the motion as amended be agreed to.</span>
+        </p>
+        <p class="NormalBold-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="NormalBold-H">The House divided.</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Ayes<span style="&#xA;          margin-left:26pt&#xA;        " />48</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Noes<span style="&#xA;          margin-left:26pt&#xA;        " />35</span>
+        </p>
+        <p class="DivisionSummary-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Majority<span style="&#xA;          margin-left:26pt&#xA;        " />13</span>
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="3" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">AYES</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Aitchison, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Greenwich, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Minns, C</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Atalla, E</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Hagarty, N (teller)</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>O'Neill, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Bali, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Harris, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Park, R</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Barr, C</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Harrison, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Piper, G</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Butler, L</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Haylen, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Quinnell, S</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Butler, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Hoenig, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Saliba, D</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Car, P</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Holland, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Scully, P</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Catley, Y</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kaliyanda, C</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Shetty, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Chanthivong, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kamper, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Stuart, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cotsis, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kirby, W</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tesch, L (teller)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Crakanthorp, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Leong, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Vo, T</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Daley, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Li, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Voltz, L</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Davis, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McDermott, H</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Warren, G</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dib, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McInerney, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Washington, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Doyle, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McKeown, K</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Whan, S</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Finn, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Mehan, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wilkinson, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.3pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="3" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">NOES</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Ayyad, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Henskens, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Singh, G</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Clancy, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>James, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Speakman, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cooke, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Kemp, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Taylor, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Coure, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Lane, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Thompson, T</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Cross, M</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Layzell, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Toole, P</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Crouch, A (teller)</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>McGirr, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tuckerman, W</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dalton, H</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Petinos, E</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Tudehope, M</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Davies, T</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Preston, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wallace, J</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Di Pasqua, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Provest, G</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Williams, R</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Donato, P</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Roberts, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Williamson, R (teller)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Dwyer, R</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Saunders, D</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Wilson, F</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Griffin, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.25pt&#xA;      ;&#xA;  ">
+                <p class="DivisionThreeColumn-H" style="&#xA;        text-align:">
+                  <span>Scruby, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:150.3pt&#xA;      ;&#xA;  border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionSpace-P" style="direction:ltr;unicode-bidi:normal;&#xA;        margin-left:&#xA;      0pt;&#xA;            ">
+                  <span class="DivisionSpace-H"> </span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.25pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:150.3pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <div align="center" xmlns="http://www.w3.org/1999/xhtml">
+          <table class="TableGrid-T" cellspacing="0" style="border-collapse:collapse;margin-left:;">
+            <tr class="-R" style="height:0;page-break-inside:avoid;">
+              <td class="-C" colspan="2" style="&#xA;    width:450.8pt&#xA;      ;&#xA;  vertical-align:middle;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;border-top:none windowtext 0pt;border-right:none windowtext 0pt;border-bottom:none windowtext 0pt;border-left:none windowtext 0pt;">
+                <p class="DivisionHeading-P" style="direction:ltr;unicode-bidi:normal;">
+                  <span class="DivisionHeading-H">PAIRS</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Hornery, S</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Moylan, B</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Saffin, J</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Sloane, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="-R" style="height:0;">
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Watson, A</span>
+                </p>
+              </td>
+              <td class="-C" style="&#xA;    width:225.4pt&#xA;      ;&#xA;  ">
+                <p class="DivisionTwoColumn-H" style="&#xA;        text-align:">
+                  <span>Anderson, K</span>
+                </p>
+              </td>
+            </tr>
+            <tr height="0">
+              <td style="&#xA;              margin:0;padding:0;border:none;width:225.4pt&#xA;      ;&#xA;            " />
+              <td style="&#xA;              margin:0;padding:0;border:none;width:225.4pt&#xA;      ;&#xA;            " />
+            </tr>
+          </table>
+        </div>
+        <p class="DivisionSpace-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span />
+        </p>
+        <p class="NormalBold-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="NormalBold-H">Motion as amended agreed to.</span>
+        </p>
+      </body>
+    </fragment.text>
+  </chamber.xscript>
+</hansard>

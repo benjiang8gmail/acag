@@ -70,6 +70,7 @@ class Document(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     sitting_day_id: Mapped[int] = mapped_column(ForeignKey("sitting_days.id"))
     url: Mapped[str] = mapped_column(Text)
+    doc_key: Mapped[str | None] = mapped_column(String(128), nullable=True, index=True)  # stable identity; NSW TOC ids change
     format: Mapped[str] = mapped_column(String(8))  # xml / html / pdf / docx / json
     version: Mapped[str] = mapped_column(String(8), default="unknown")
     etag: Mapped[str | None] = mapped_column(String(256), nullable=True)
@@ -91,6 +92,7 @@ class Speech(Base):
     debate_title: Mapped[str | None] = mapped_column(Text, nullable=True)
     proceeding_type: Mapped[str | None] = mapped_column(String(64), nullable=True)
     speaker_name: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    speaker_id: Mapped[str | None] = mapped_column(String(32), nullable=True)  # parliament's member id
     speaker_role: Mapped[str | None] = mapped_column(String(128), nullable=True)
     party: Mapped[str | None] = mapped_column(String(32), nullable=True)
     speaker_side: Mapped[str | None] = mapped_column(String(16), nullable=True)  # set in code from config/governments.yaml

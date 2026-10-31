@@ -1,6 +1,6 @@
 # Fixtures
 
-Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host) during Phase 0, 31 Oct 2026. Never edit them: parser golden files are derived from them. Sources and licences are in `docs/sources.md`; the request log is `docs/recon/recon-2026-10-31.jsonl`.
+Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host) during Phase 0, 31 Oct 2026. Never edit them: parser golden files are derived from them. Sources and licences are in `docs/sources.md`; the request log is in `docs/recon/`.
 
 | File | Fetched from | Date | Bytes | SHA-256 (first 16) |
 |---|---|---|---|---|
@@ -16,6 +16,11 @@ Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host
 | `sources/ACT-LA/2026-debates-index.html` | https://www.hansard.act.gov.au/hansard/11th-assembly/2026/debates(PDF).htm | 2026-10-31 | 33,448 | `30f59f4cd7e03ccc` |
 | `sources/ACT-LA/home.html` | https://hansard.act.gov.au/ | 2026-10-31 | 19,774 | `58d4402d754c5d3c` |
 | `sources/NSW-LA/2026-10-22-fragment-170878.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170878 | 2026-10-31 | 17,172 | `9d549806e415c4f5` |
+| `sources/NSW-LA/2026-10-22-fragment-170887.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170887 | 2026-10-31 | 12,641 | `a56558dd74c90b3e` |
+| `sources/NSW-LA/2026-10-22-fragment-170902.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170902 | 2026-10-31 | 1,850 | `3ba848998a014ec6` |
+| `sources/NSW-LA/2026-10-22-fragment-170915.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170915 | 2026-10-31 | 165,755 | `d8411e83d92131af` |
+| `sources/NSW-LA/2026-10-22-fragment-170952.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170952 | 2026-10-31 | 9,143 | `b2d2deb0ab79e7cf` |
+| `sources/NSW-LA/2026-10-22-fragment-170973.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170973 | 2026-10-31 | 3,087 | `916a2245f48c09d7` |
 | `sources/NSW-LA/2026-10-22-toc.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/tableofcontents/HANSARD-1323879322-170879 | 2026-10-31 | 206,525 | `e6f65ab6ff3a0bbe` |
 | `sources/NSW-LA/2026-10-22.pdf` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/pdf/HANSARD-1323879322-171125 | 2026-10-31 | 1,499,187 | `e91da316011b6f62` |
 | `sources/NSW-LC/2026-10-22-toc.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/tableofcontents/HANSARD-1820781676-106154 | 2026-10-31 | 213,174 | `f0c80b9dba73ac44` |

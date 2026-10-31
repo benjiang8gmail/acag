@@ -1,0 +1,178 @@
+<hansard>
+  <hansard.header>
+    <date>2026-10-22T00:00:00+11:00</date>
+    <parliament.number>58</parliament.number>
+    <session.number>1</session.number>
+    <parliament.session.name>Fifty-Eighth Parliament, First Session (58-1)</parliament.session.name>
+    <chamber>Legislative Assembly</chamber>
+    <draft>true</draft>
+  </hansard.header>
+  <chamber.xscript>
+    <fragment.data>
+      <proceeding>
+        <proceedinginfo>
+          <text>Question Time</text>
+        </proceedinginfo>
+        <topic>
+          <topicinfo>
+            <text>Knife Crime</text>
+          </topicinfo>
+          <question>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>2288</id>
+                <name>Ms KELLIE SLOANE</name>
+                <electorate>Vaucluse</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </question>
+          <answer>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>128</id>
+                <name>Ms YASMIN CATLEY</name>
+                <electorate>Swansea</electorate>
+                <portfolios>
+                  <portfolio>Minister for Police and Counter-terrorism</portfolio>
+                  <portfolio>Minister for the Hunter</portfolio>
+                </portfolios>
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </answer>
+        </topic>
+      </proceeding>
+    </fragment.data>
+    <fragment.text>
+      <body>
+        <p class="SubDebate-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Knife Crime</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberQuestion-H" data-mode="member" data-type="article" data-value="2288" data-article="question">Ms KELLIE SLOANE</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Vaucluse</span>
+            <span class="GeneralBold-H">) (</span>
+            <span class="Time-H">11:09</span>
+            <span class="HiddenTime-H">:01</span>
+            <span class="GeneralBold-H">):</span>  My question is directed to the Minister for Police and Counter-terrorism. Since 2023, police have seized more than 17,000 knives in public spaces. In the past week a father of three was stabbed to death in Mount Druitt, a 93-year-old man stabbed his wife at a Blacktown shopping centre and a 26-year-old was stabbed in a home invasion in Baulkham Hills. With Western Sydney facing constant knife crime, why will the Minister not support giving police "anytime, anywhere" knife wanding powers?</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberAnswer-H" data-mode="member" data-type="article" data-value="128" data-article="answer">Ms YASMIN CATLEY</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Swansea</span>—<span class="MinisterialTitles-H">Minister for Police and Counter-terrorism, and Minister for the Hunter</span><span class="GeneralBold-H">) (</span><span class="Time-H">11:09</span><span class="HiddenTime-H">:35</span><span class="GeneralBold-H">):</span>  I will answer the question straight up so there are no interruptions from those opposite. Police asked us for the knife reforms that we put in place. The legislation reflected what was asked for by New South Wales police.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="41" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">The SPEAKER:</span>  Members will come to order.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="27" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Mr Michael Daley:</span>  Stop being so relevant!</span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms YASMIN CATLEY:</span>  I apologise, Attorney.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="41" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">The SPEAKER:</span>  The Attorney General will come to order. Members will come to order.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms YASMIN CATLEY:</span>  For the benefit of the House, I say that any knife crime is a serious crime. People who leave home with a knife in their back pocket do not understand that it does not make them safer; it makes them dangerous. All too often we see knife crime occurring throughout our community. However, if the Opposition wants to attack the police over this, quite frankly I find that abhorrent.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="41" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">The SPEAKER:</span>  Members will come to order.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms YASMIN CATLEY:</span>  New South Wales police officers are doing everything they can. They have confiscated more knives across our community than ever before. Their wanding operations are part of that, plus their other operations on transport and in our regional communities. You name it, New South Wales police are out there doing it.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2288" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Ms Kellie Sloane:</span>  Point of order—</span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms </span>
+            <span class="MemberUpper-H">YASMIN CATLEY:</span>  I answered up-front.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2288" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Ms Kellie Sloane:</span>  It was not up-front.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms YASMIN CATLEY:</span>  It was very up-front, actually.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="41" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">The SPEAKER:</span>  Members will not argue across the table. I will hear the point of order from the Leader of the Opposition.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2288" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Ms Kellie Sloane:</span>  My point of order relates to Standing Order 129. </span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms YASMIN CATLEY:</span>  It's the only one you know!</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2288" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Ms Kellie Sloane:</span>  Let me finish.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="41" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">The SPEAKER:</span>  Members will come to order.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms YASMIN CATLEY:</span>  You need to read the rule book!</span>
+        </p>
+        <a name="member" data-mode="member" data-value="2288" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberLower-H">Ms</span>
+            <span class="MemberLower-H"> Kellie Sloane:</span>  The question was "anytime, anywhere", not "sometimes, some places".</span>
+        </p>
+        <a name="member" data-mode="member" data-value="41" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="OfficeUpper-H">The SPEAKER:</span>  The Minister will come to order. I will preside and determine whether to uphold the point of order. I have the heard the point of order. The Minister has been directly relevant.</span>
+        </p>
+        <a name="member" data-mode="member" data-value="128" xmlns="http://www.w3.org/1999/xhtml" />
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberUpper-H">Ms YASMIN CATLEY:</span>  Mr Speaker, I have to say that was an excellent decision on your behalf. There is no doubt that too many lives are lost. But police are doing not only their policing operations but also their work in schools, with the Beasley family, through the youth command and with the PCYC. Heavens above! I cannot believe the Opposition constantly criticises the police in this Chamber and blames them for crime when all the police are doing is an excellent job.</span>
+        </p>
+      </body>
+    </fragment.text>
+  </chamber.xscript>
+</hansard>

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import date
+from collections.abc import Callable
 from typing import Protocol
 
 
@@ -31,6 +32,8 @@ class DocumentRef:
     url: str
     format: str             # xml / html / pdf / docx / json
     version_hint: str = "unknown"
+    key: str | None = None           # stable identity across URL changes (defaults to url)
+    citation_url: str | None = None  # human-readable page or PDF that speeches link to
 
 
 @dataclass
@@ -40,6 +43,7 @@ class ParsedSpeech:
     debate_title: str | None = None
     proceeding_type: str | None = None
     speaker_name: str | None = None
+    speaker_id: str | None = None    # the parliament's own member id, where Hansard gives one
     speaker_role: str | None = None
     party: str | None = None
     electorate: str | None = None
@@ -68,12 +72,20 @@ class HansardConnector(Protocol):
 
     def list_documents(self, day: SittingDayRef) -> list[DocumentRef]: ...
 
-    def parse(self, raw: bytes, ref: DocumentRef) -> ParsedDocument:
-        """Normalise a document into speeches, keeping page numbers or anchors for citations."""
+    def parse(self, raw: bytes, ref: DocumentRef, fetch_part: Callable[[str], bytes]) -> ParsedDocument:
+        """Normalise a document into speeches, keeping page numbers or anchors for citations.
+
+        `fetch_part(url)` fetches a sub-resource (e.g. NSW topic fragments) through
+        the polite fetcher and keeps the raw file. It is only called when the
+        document itself changed.
+        """
         ...
 
 
-# Registered connectors by name (`connector` column in config/sources.yaml).
-# Real connectors are added in Phase 2 once each source has a real fixture
-# (docs/sources.md); until then the registry is empty and every source is disabled.
-REGISTRY: dict[str, type] = {}
+def registry() -> dict[str, type]:
+    """Connectors by name (`connector` in config/sources.yaml). Each takes the Fetcher.
+
+    A connector is listed only once it passes tests on real fixtures (docs/sources.md).
+    """
+    from .nsw import NSWConnector
+    return {"nsw": NSWConnector}

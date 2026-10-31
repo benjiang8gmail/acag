@@ -177,6 +177,14 @@ What the saved fixtures showed:
 - **Recommended connector:** NSW Hansard API: `bydate` → TOC → fragments, plus the PDF for page citations.
 - **Fixture:** none yet (environment). Batch: `year/2026` JSON plus the 15 Sep 2026 LA and LC proof PDFs; then the TOC and a fragment for one document id.
 
+- **Connector built (Phase 2):** `backend/connectors/nsw.py`.
+  - **Listing:** the year list. `Uncorrected` gives the proof/final hint for each chamber.
+  - **Stored document:** the day's table of contents, keyed `toc:{source}:{date}` because its id can change.
+  - **Fragments:** fetched only when the table of contents changes. Re-checking a proof day costs 1 request, and nothing more is downloaded if it's unchanged.
+  - **Speeches:** one per speech, question or answer. Interjections and presiding-officer remarks are separate turns, and a speaker resuming after an interruption rejoins their own turn.
+  - **Citations** link to the day's PDF.
+  - **Volume:** a day has about 245 topics (Assembly, 22 Oct 2026: 244, of which 152 are written community recognition statements). One chamber-day is about 245 requests, or about 8 minutes at 2 s per request.
+
 ### VIC: Legislative Assembly (`VIC-LA`) and Legislative Council (`VIC-LC`)
 
 - **List sitting days:**

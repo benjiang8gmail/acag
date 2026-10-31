@@ -26,7 +26,7 @@ from sqlalchemy import select
 
 from app.config import REPO_ROOT, get_settings
 from app.db import Document, ScanRun, SittingDay, Source, Speech, session, utcnow
-from connectors.base import REGISTRY, CouldNotCheck, DocumentRef, HansardConnector, SittingDayRef
+from connectors.base import CouldNotCheck, registry, DocumentRef, HansardConnector, SittingDayRef
 
 from .fetch import Blocked, Fetcher
 
@@ -47,6 +47,7 @@ class SourceCounts:
     unchanged_documents: int = 0
     not_modified: int = 0          # 304 answers: nothing downloaded
     unchanged_downloads: int = 0   # server ignored conditional headers; body hashed and discarded
+    parts_fetched: int = 0         # sub-resources fetched for changed documents (e.g. NSW fragments)
     speeches_to_analyse: int = 0   # new or changed text; Phase 4 analyses only these
     llm_calls: int = 0             # no LLM stage yet (Phase 4)
     errors: int = 0
@@ -169,7 +170,8 @@ def _sync_day(db, connector, fetcher: Fetcher, day: SittingDayRef, c: SourceCoun
 
 def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: DocumentRef,
                    c: SourceCounts, data_dir: Path) -> str:
-    prev = db.scalar(select(Document).where(Document.sitting_day_id == sd.id, Document.url == ref.url,
+    key = ref.key or ref.url
+    prev = db.scalar(select(Document).where(Document.sitting_day_id == sd.id, Document.doc_key == key,
                                             Document.superseded_by.is_(None)))
     res = fetcher.fetch(ref.url, etag=prev.etag if prev else None,
                         last_modified=prev.last_modified if prev else None,
@@ -182,11 +184,19 @@ def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: Documen
             prev.etag, prev.last_modified = res.etag or prev.etag, res.last_modified or prev.last_modified
         return prev.version if prev else "unknown"
 
-    raw = data_dir / "raw" / ref.source_id / ref.sitting_date.isoformat() / f"{res.sha256}.{ref.format}"
-    raw.parent.mkdir(parents=True, exist_ok=True)
+    day_dir = data_dir / "raw" / ref.source_id / ref.sitting_date.isoformat()
+    day_dir.mkdir(parents=True, exist_ok=True)
+    raw = day_dir / f"{res.sha256}.{ref.format}"
     raw.write_bytes(res.body)
-    parsed = connector.parse(res.body, ref)
-    doc = Document(sitting_day_id=sd.id, url=ref.url, format=ref.format,
+
+    def fetch_part(url: str) -> bytes:
+        part = fetcher.fetch(url)
+        (day_dir / f"{part.sha256}.part").write_bytes(part.body)
+        c.parts_fetched += 1
+        return part.body
+
+    parsed = connector.parse(res.body, ref, fetch_part)
+    doc = Document(sitting_day_id=sd.id, url=ref.url, doc_key=key, format=ref.format,
                    version=_version(parsed.version, ref.version_hint), etag=res.etag,
                    last_modified=res.last_modified, sha256=res.sha256, raw_path=str(raw))
     db.add(doc)
@@ -223,7 +233,8 @@ def run_scan(trigger: str = "cli", today: date | None = None,
         db.commit()
         if connectors is None:
             wanted = {s.connector for s in db.scalars(select(Source).where(Source.enabled.is_(True)))}
-            connectors = [REGISTRY[name]() for name in sorted(wanted) if name in REGISTRY]
+            known = registry()
+            connectors = [known[name](fetcher) for name in sorted(wanted) if name in known]
         per_source: dict[str, dict] = {}
         try:
             for conn in connectors:

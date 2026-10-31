@@ -1,0 +1,51 @@
+<hansard>
+  <hansard.header>
+    <date>2026-10-22T00:00:00+11:00</date>
+    <parliament.number>58</parliament.number>
+    <session.number>1</session.number>
+    <parliament.session.name>Fifty-Eighth Parliament, First Session (58-1)</parliament.session.name>
+    <chamber>Legislative Assembly</chamber>
+    <draft>true</draft>
+  </hansard.header>
+  <chamber.xscript>
+    <fragment.data>
+      <proceeding>
+        <proceedinginfo>
+          <text>Written Community Recognition Statements</text>
+        </proceedinginfo>
+        <topic>
+          <topicinfo>
+            <text>Marg Symes</text>
+          </topicinfo>
+          <speech>
+            <talk.start>
+              <talker>
+                <talk.time></talk.time>
+                <id>2239</id>
+                <name>Mr ROY BUTLER</name>
+                <electorate>Barwon</electorate>
+                <portfolios />
+                <question.number />
+                <question.date />
+              </talker>
+            </talk.start>
+          </speech>
+        </topic>
+      </proceeding>
+    </fragment.data>
+    <fragment.text>
+      <body>
+        <p class="SubDebate-H" style="&#xA;        text-align:" xmlns="http://www.w3.org/1999/xhtml">
+          <span>Marg Symes</span>
+        </p>
+        <p class="Normal-P" style="direction:ltr;unicode-bidi:normal;" xmlns="http://www.w3.org/1999/xhtml">
+          <span class="Normal-H">
+            <span class="MemberSpeech-H" data-mode="member" data-type="article" data-value="2239" data-article="speech">Mr ROY BUTLER</span>
+            <span class="GeneralBold-H"> (</span>
+            <span class="Electorate-H">Barwon</span>
+            <span class="GeneralBold-H">)</span>—Congratulations to Marg Symes on the completion of her fourth fundraising walk in support of the Broken Hill Wellbeing Place. In August, Marg undertook an incredible 330‑kilometre journey from Tibooburra to Broken Hill. This latest effort has pushed her fundraising total beyond $100,000, adding to the more than 900 kilometres walked and over $85,000 raised through her previous fundraising treks. Marg's walks have taken her across some of the toughest and most remote country in NSW. She has endured extreme weather conditions, shared the roads with road trains, and even faced a wedge-tailed eagle attack along the way. A lifelong Broken Hill local, Marg has spent decades giving back through countless volunteer and community organisations. As President of the Broken Hill Women's Auxiliary, a key supporter of the annual Flying Doctor Ball, and through her involvement in local sporting and school organisations, she has demonstrated an unwavering commitment to the wellbeing of others. Through her fundraising efforts, Marg is helping ensure vital mental health, wellbeing, alcohol and other drug services remain accessible across Broken Hill and 18 remote Far West outreach communities. Marg's generosity and community spirit are truly inspiring.</span>
+        </p>
+      </body>
+    </fragment.text>
+  </chamber.xscript>
+</hansard>
