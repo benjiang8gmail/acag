@@ -5,7 +5,8 @@
 # Set from the live check of 31 Oct 2026 (docs/sources.md §0a), made from a US
 # cloud network: re-test the blocked ones from the pilot's Australian network.
 # `enabled` is true only once the connector passes its real-fixture tests (Phase 2).
-# Enabled: NSW (31 Oct 2026; live checks 21–22 Oct 2026), ACT (1 Nov 2026; live check 22–31 Oct 2026).
+# Enabled: NSW (31 Oct 2026; live checks 21–22 Oct 2026), ACT (1 Nov 2026; live check 22–31 Oct 2026),
+# QLD (1 Nov 2026; live check 14–31 Oct 2026).
 
 as_of: 2026-10-31
 
@@ -72,7 +73,7 @@ sources:
     parliament: QLD
     chamber: Legislative Assembly
     connector: qld
-    enabled: false
+    enabled: true
     status: ok
     live_check: "documents host reachable; daily PDF fixture saved (www site is behind Azure WAF)"
     approach: daily_pdf             # documents.parliament.qld.gov.au/events/han/{YYYY}/{YYYY_MM_DD}_DAILY.pdf

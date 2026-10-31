@@ -153,6 +153,10 @@ def sync_parliament(db, connector: HansardConnector, fetcher: Fetcher, today: da
             src.status = c.status = "ok" if days[sid] else "no_sittings"
             src.notes, src.last_success_at = None, now
         new_mark = (first_failure - timedelta(days=1)) if first_failure else today
+        if settled := getattr(connector, "settled_through", None):
+            # Sources found by probing dated URLs can't tell "not sitting" from "not published
+            # yet" for recent days, so they keep re-checking the last few days.
+            new_mark = min(new_mark, settled(today))
         if new_mark >= starts[sid] - timedelta(days=1):
             src.watermark_date = max(src.watermark_date or new_mark, new_mark)
         db.commit()

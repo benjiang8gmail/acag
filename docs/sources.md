@@ -241,6 +241,26 @@ What the saved fixtures showed:
 - **Recommended connector:** daily PDF by date; re-check weekly for the final.
 - **Fixture:** none yet (environment). Batch: `2026_10_13_DAILY.pdf`.
 
+- **Connector built (Phase 2):** `backend/connectors/qld.py`.
+  - **Sitting days:** a **HEAD request for each weekday's** `{YYYY_MM_DD}_DAILY.pdf` on the documents host (200 = sat, 404 = no Record of Proceedings), so nothing is downloaded to find them. The calendar on the main site is behind an Azure WAF.
+    - A recent 404 may only mean "not published yet", so the watermark never passes today − 3 days (`settled_through`). The last 3 days are probed again each scan.
+    - Weekends are not probed.
+  - **Document:** the day PDF (1 request), keyed `pdf:QLD-LA:{date}`. The cover's "(PROOF)" marks a proof.
+  - **Outline:** the contents, which **start on the cover below "Subject / Page"** and continue on "Table of Contents" pages.
+    - Capitalised entries are sections; mixed-case entries are topics.
+    - "Tabled paper:", "Division:", "Resolved in the …" and ATTENDANCE are listed in the contents but are not headings.
+  - **Speakers:** `Hon. FS SIMPSON (Maroochydore—LNP) (Minister for …) (9.38 pm):` gives **electorate, party, role and a 24-hour time**.
+    - Names can include initials and particles ("Hon. MC de BRENNI", "Mr J KELLY", "Ms McMILLAN"), and headers can wrap over up to 5 lines.
+    - A tail such as ", by leave, without notice" is allowed before the colon.
+    - Party is remembered for later turns by the same member that day.
+    - Party codes as printed: LNP, ALP, Grn, Ind.
+  - **Question Time:** question and answer follow speaking order, and points of order ("Mr Speaker, I rise to a point of order") are statements.
+  - **Interjections:** title case (`Mr Mander:`). Stage directions ("Mr Bleijie interjected.") stay in the record.
+  - **Dropped:** divisions ("Division: …", "AYES, 52:", party-grouped surname lists) and the closing attendance roll.
+  - **Citations:** each speech cites `PDF#page=N` from the running header.
+  - **Live run, 14–31 Oct 2026:** 14 HEAD probes and 5 PDFs, 1,750 speeches, 0 errors, headings matched 98–100% each day.
+    - It found 34 speeches mentioning the Auditor-General. One example is a committee debate (15 Oct) on its consideration of Auditor-General Report 12: 2022–23, Growing ecotourism in Queensland.
+
 ### SA: House of Assembly (`SA-HA`, `lh`) and Legislative Council (`SA-LC`, `uh`)
 
 - **List sitting days:**

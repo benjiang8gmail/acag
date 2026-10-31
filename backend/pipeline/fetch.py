@@ -91,6 +91,17 @@ class Fetcher:
         self._blocked[host] = reason
         raise Blocked(reason)
 
+    def head(self, url: str) -> int:
+        """Status code of a HEAD request, with the same robots.txt, spacing and blocking rules.
+        Used to find which dated documents exist without downloading them (QLD)."""
+        self._allowed(url)
+        self._wait(urlsplit(url).netloc)
+        self.requests += 1
+        r = self._client.head(url)
+        if r.status_code in (401, 403, 429):
+            self._block(urlsplit(url).netloc, f"HTTP {r.status_code}")
+        return r.status_code
+
     def fetch(self, url: str, *, etag: str | None = None, last_modified: str | None = None,
               previous_sha256: str | None = None) -> FetchResult:
         self._allowed(url)

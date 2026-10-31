@@ -133,6 +133,8 @@ parliaments:
       KAP: {party: Katter's Australian Party, verified: true}
       GRN: {party: Queensland Greens, verified: true}
       IND: {party: Independent, verified: true}
+      Grn: {party: Queensland Greens, verified: true, note: "spelling in Hansard speaker headers (13 Oct 2026)"}
+      Ind: {party: Independent, verified: true, note: "spelling in Hansard speaker headers (13 Oct 2026)"}
 
   SA:
     name: Parliament of South Australia

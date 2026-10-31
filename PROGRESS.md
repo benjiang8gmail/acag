@@ -1,5 +1,60 @@
 # Progress
 
+## 1 Nov 2026: QLD connector, enabled (3 parliaments live: NSW, ACT, QLD)
+
+### Done
+
+- **`backend/connectors/qld.py`:**
+  - **Sitting days:** found on the documents host with **HEAD requests** for each weekday's daily PDF (200 = sat, 404 = none), because the calendar on the main site is behind an Azure WAF.
+  - **Document:** the day PDF (1 request).
+  - **Outline:** the contents, which begin on the cover.
+  - **Speaker headers** give electorate, **party**, role and time. Queensland is the first parliament whose Hansard prints party.
+  - **Question Time:** by speaking order, with points of order kept separate.
+  - **Dropped:** divisions and the attendance roll.
+  - **Citations:** printed page numbers.
+- **Sync: `settled_through`.** A connector that finds days by probing dated URLs can't tell "not sitting" from "not published yet" for recent days. Its watermark now stays at today − 3, so the last few days are probed again on each scan.
+- **Fetcher: `head()`**, with the same robots.txt, spacing and blocking rules as `fetch()`.
+- **Shared engine extensions** (`parsers/hansard_pdf.py`):
+  - division starts are a pattern;
+  - per-parliament header parsing (`header_fields`), so Queensland can return party, role and a 24-hour time;
+  - party is remembered per member for the day;
+  - in Question Time, points of order are statements, not questions.
+- **QLD-LA enabled.**
+- `config/governments.yaml`: the QLD Hansard spellings "Grn" and "Ind" are added.
+- New fixture: the Record of Proceedings for 14 Oct 2026 (27 fixtures in total).
+
+### Evidence
+
+- `make test`: 85 backend tests pass, including 10 for QLD:
+  - weekday probing makes no downloads;
+  - recent days stay open;
+  - the proof flag, contents and pages;
+  - party, electorate, role and time from headers (including a ", by leave, without notice" tail);
+  - **Question Time with points of order and interjections**;
+  - no division lists, attendance roll or page furniture in the text;
+  - the cover sign-off doesn't join the contents (14 Oct regression);
+  - no speaker header left inside speech text on either day;
+  - the sync keeps the last 3 days open, and a re-check costs 4 HEAD requests and one 304.
+- **Live run, QLD 14–31 Oct 2026:** 5 sitting days, 1,750 speeches, 0 errors, 98–100% of contents headings matched each day, in 1 min 44 s.
+  - The run found three bugs, all fixed with tests (a fourth, pdfminer printing a header's time before the name, turned up in the 13 Oct fixture and is fixed too):
+    - the cover's sign-off joined the contents (one day matched only 27 of 55 headings);
+    - names with bare initials ("Hon. G GRACE") were missed;
+    - ministers' titles wrap over more than 3 lines.
+  - 34 speeches mention the Auditor-General, including a committee debate on Auditor-General Report 12: 2022–23 (Growing ecotourism in Queensland).
+
+### Known limits
+
+- Party is printed only on full headers, so a member's turns earlier in the day than their first full header have no party. A member map will fill the gaps.
+- Weekend sittings would be missed; the Assembly doesn't sit at weekends.
+
+### Next
+
+- Member-to-party maps for NSW and ACT, plus gap-filling for QLD, so every speech gets a speaker side.
+- Wire the web app's "Check for updates" and `/api/status` to the real scans (NSW, ACT, QLD).
+- Remaining parliaments (CTH, VIC, SA, WA, TAS, NT) wait on access: a re-test from an Australian network, or the access requests.
+
+---
+
 ## 1 Nov 2026: ACT connector, enabled; shared PDF Hansard engine
 
 ### Done

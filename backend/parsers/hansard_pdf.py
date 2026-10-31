@@ -19,6 +19,7 @@ Turn rules (the same as the NSW XML parser):
 from __future__ import annotations
 
 import re
+from collections.abc import Callable
 from dataclasses import dataclass, field
 
 from connectors.base import ParsedSpeech
@@ -46,7 +47,7 @@ class Rules:
     office: re.Pattern          # groups: office, who (optional), time (optional), rest
     interjection: re.Pattern    # groups: name, rest
     procedural: re.Pattern
-    division_starts: tuple[str, ...]
+    division_start: re.Pattern  # the line that opens a division list
     division_line: re.Pattern
     time: str = r"\d{1,2}[:.]\d{2}"
     stage_direction: re.Pattern | None = None   # kept in the last turn's text, e.g. "Mr Cain interjecting—"
@@ -54,6 +55,24 @@ class Rules:
     max_header_lines: int = 3                   # long ministerial titles can wrap a header over several lines
     ignore_line: re.Pattern | None = None       # labels with no content, e.g. ACT "Ministerial statement"
     reply_header: re.Pattern | None = None      # written answers, e.g. ACT "Dr Paterson (in reply to …):"; groups name, rest
+    # Parses a `main` match into {electorate, role, party, time}, or None when it is not a main header.
+    # Without it, the default reads one "(electorate—role)" bracket and one "(time)" bracket.
+    header_fields: Callable[[re.Match], dict | None] | None = None
+
+
+RE_POINT_OF_ORDER = re.compile(r"^(?:(?:Mr|Madam) (?:Deputy |Assistant )?Speaker|(?:On a |I rise to a )?point of order)\b", re.I)
+
+
+def _default_fields(m: re.Match, rules: "Rules") -> dict | None:
+    """One "(electorate—role)" bracket and one "(time)" bracket (NSW, ACT)."""
+    inner, when = m.group("inner"), m.group("time")
+    if not (inner or when or m.group("sep") == "—"):
+        return None
+    if inner and re.fullmatch(rules.time, inner.strip()) and not when:
+        inner, when = None, inner.strip()
+    electorate, role = (inner.split("—", 1) + [None])[:2] if inner else (None, None)
+    return {"electorate": _clean(electorate) if electorate else None, "role": _clean(role) if role else None,
+            "time": when.replace(".", ":") if when else None}
 
 
 def norm(s: str) -> str:
@@ -87,6 +106,7 @@ def walk(lines: list[tuple[int, str]], outline: list[Heading], rules: Rules,
     qa: dict[str, str] = {}
     order_qa: dict[str, str] = {}   # questioner / answerer by speaking order, for qa_by_order proceedings
     in_division = False
+    parties: dict[str, str] = {}    # learned from headers that print party (QLD)
 
     def debate_title():
         return f"{title} — {sub}" if title and sub else title or None
@@ -96,10 +116,12 @@ def walk(lines: list[tuple[int, str]], outline: list[Heading], rules: Rules,
             return f"{proceeding} ({suffix})" if proceeding else suffix
         return proceeding or None
 
-    def qa_kind(name: str, mid: str | None) -> str | None:
+    def qa_kind(name: str, mid: str | None, first: str = "") -> str | None:
         if mid and mid in qa:
             return qa[mid]
         if rules.qa_by_order and proceeding and rules.qa_by_order.match(proceeding):
+            if RE_POINT_OF_ORDER.match(first):
+                return None   # a point of order, not part of the question and answer
             if "q" not in order_qa:
                 order_qa["q"] = name
             elif "a" not in order_qa and name != order_qa["q"]:
@@ -188,18 +210,19 @@ def walk(lines: list[tuple[int, str]], outline: list[Heading], rules: Rules,
             continue
 
         m = rules.main.match(header)
-        if m and (m.group("inner") or m.group("time") or m.group("sep") == "—"):
-            inner, when = m.group("inner"), m.group("time")
-            if inner and re.fullmatch(rules.time, inner.strip()) and not when:
-                inner, when = None, inner.strip()
-            electorate, role = (inner.split("—", 1) + [None])[:2] if inner else (None, None)
+        fields = (rules.header_fields or _default_fields)(m, rules) if m else None
+        if fields is not None:
             name = _clean(m.group("name"))
             mid, known_electorate = members.get(name.upper(), (None, None))
-            electorate = _clean(electorate) if electorate else known_electorate
+            electorate = fields.get("electorate") or known_electorate
             members.setdefault(name.upper(), (mid, electorate))
-            sp = ParsedSpeech(seq=0, text="", debate_title=debate_title(), proceeding_type=ptype(qa_kind(name.upper(), mid)),
-                              speaker_name=name, speaker_id=mid, speaker_role=_clean(role) if role else None,
-                              electorate=electorate, start_time=when.replace(".", ":") if when else None, page=str(page))
+            if fields.get("party"):
+                parties[name.upper()] = fields["party"]
+            sp = ParsedSpeech(seq=0, text="", debate_title=debate_title(),
+                              proceeding_type=ptype(qa_kind(name.upper(), mid, m.group("rest"))),
+                              speaker_name=name, speaker_id=mid, speaker_role=fields.get("role"),
+                              party=parties.get(name.upper()), electorate=electorate,
+                              start_time=fields.get("time"), page=str(page))
             main = last = start(sp, m.group("rest"))
             main_name = name.upper()
             in_division = False
@@ -215,8 +238,9 @@ def walk(lines: list[tuple[int, str]], outline: list[Heading], rules: Rules,
             else:
                 mid, electorate = members.get(name.upper(), (None, None))
                 sp = ParsedSpeech(seq=0, text="", debate_title=debate_title(),
-                                  proceeding_type=ptype(qa_kind(name.upper(), mid) or "statement"),
-                                  speaker_name=name, speaker_id=mid, electorate=electorate, page=str(page))
+                                  proceeding_type=ptype(qa_kind(name.upper(), mid, m.group("rest")) or "statement"),
+                                  speaker_name=name, speaker_id=mid, electorate=electorate,
+                                  party=parties.get(name.upper()), page=str(page))
                 main = last = start(sp, m.group("rest"))
                 main_name = name.upper()
             in_division = False
@@ -226,13 +250,13 @@ def walk(lines: list[tuple[int, str]], outline: list[Heading], rules: Rules,
             name = _clean(m.group("name"))
             mid, _ = members.get(name.upper(), (None, None))
             sp = ParsedSpeech(seq=0, text="", debate_title=debate_title(), proceeding_type=ptype("interjection"),
-                              speaker_name=name, speaker_id=mid, page=str(page))
+                              speaker_name=name, speaker_id=mid, party=parties.get(name.upper()), page=str(page))
             last = start(sp, m.group("rest"))
             i += 1
             continue
 
         # 3. Divisions, procedural lines, and everything else.
-        if line in rules.division_starts:
+        if rules.division_start.match(line):
             in_division = True
             last = start(ParsedSpeech(seq=0, text="", debate_title=debate_title(),
                                       proceeding_type=ptype("procedural"), page=str(page)), line)

@@ -54,7 +54,7 @@ RULES = Rules(
         r"|Debate(?: \(.{0,80}\))? (?:adjourned|resumed|interrupted)|Bill(?:,.{0,40})? agreed to"
         r"|Clauses? .{0,80}agreed to|Leave granted|Ordered that|Sitting suspended|The Assembly adjourned"
         r"|Proposed new clauses?|Amendments? (?:agreed to|negatived)|Detail stage)\b.{0,200}$"),
-    division_starts=("The Assembly voted—",),
+    division_start=re.compile(r"^The Assembly voted—$"),
     # "Ayes, 16" then full names, sometimes two to a line ("Andrew Braddock Michael Pettersson").
     division_line=re.compile(rf"^(?:(?:Ayes|Noes),?\s*\d+|{_NAME_TOK}(?: {_NAME_TOK}){{1,3}}(?: {_NAME_TOK}(?: {_NAME_TOK}){{1,3}})?)$"),
     time=_TIME,

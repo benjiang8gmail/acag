@@ -38,7 +38,7 @@ E2E_PASSWORD=yourpassword make e2e  # Playwright journeys (desktop and 375 px) a
 | `backend/app/` | FastAPI app, settings, sign-in, database, sample data, simulated scans |
 | `backend/api/` | HTTP routes (`/api/...`; interactive docs at `/api/docs`) |
 | `backend/migrations/` | Alembic migrations |
-| `backend/connectors/` | Hansard connectors: interface (`base.py`), NSW (`nsw.py`), ACT (`act.py`) |
+| `backend/connectors/` | Hansard connectors: interface (`base.py`), NSW (`nsw.py`), ACT (`act.py`), QLD (`qld.py`) |
 | `backend/pipeline/` | Polite fetcher (`fetch.py`) and the no-rescan sync (`sync.py`); `make backfill`, `make scan` |
 | `backend/parsers/` | PDF text (`pdf.py`) and the outline-guided Hansard PDF reader (`hansard_pdf.py`) |
 | `backend/registers/`, `gaps/` | Placeholders for Phases 3–5 |

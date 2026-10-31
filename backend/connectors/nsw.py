@@ -282,7 +282,7 @@ RULES = Rules(
                       r"\s*(?:\((?P<who>[^)]*)\))?\s*:\s*(?P<rest>.*)$"),
     interjection=re.compile(rf"^(?P<name>{_HON}\s+[A-Z][a-z][\w'’\-]*(?:\s+(?:[A-Z][\w'’\-]+|de|van|von))*)\s*:\s*(?P<rest>.*)$"),
     procedural=PROCEDURAL,
-    division_starts=("The House divided.", "The Committee divided.", "The Council divided."),
+    division_start=re.compile(r"^The (?:House|Committee|Council) divided\.$"),
     # Assembly lists "Tesch, L"; Council lists bare surnames ("Ruddick").
     division_line=re.compile(r"^(?:(?:Ayes|Noes|Pairs|Majority|AYES|NOES|PAIRS|Contents|Not contents)\b.*"
                              r"|[A-Z][A-Za-z'’\-]+(?: [A-Z][A-Za-z'’\-]+)*(?:, [A-Z][A-Za-z]*)?(?: \(teller\))?)$"),

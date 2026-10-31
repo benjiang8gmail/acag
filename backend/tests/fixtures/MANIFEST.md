@@ -30,3 +30,4 @@ Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host
 | `sources/NT-LA/full_record-10070-1052298.json` | https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298 | 2026-10-31 | 55,937 | `5793c1373cf2ef98` |
 | `sources/NT-LA/territorystories-1052298.html` | https://territorystories.nt.gov.au/10070/1052298/0/39 | 2026-10-31 | 43,313 | `bbcb500f8183c8bb` |
 | `sources/QLD-LA/2026-10-13.pdf` | https://documents.parliament.qld.gov.au/events/han/2026/2026_10_13_DAILY.pdf | 2026-10-31 | 1,394,203 | `d343ac450bd7f1d6` |
+| `sources/QLD-LA/2026-10-14.pdf` | https://documents.parliament.qld.gov.au/events/han/2026/2026_10_14_DAILY.pdf | 2026-10-31 | 912,138 | `23d0ebeeb52984b0` |
