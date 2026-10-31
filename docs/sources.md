@@ -312,6 +312,12 @@ What the saved fixtures showed:
 - **Recommended connector:** the official API for the sitting list, then TOC and extract XML per day.
 - **Fixture:** none yet (environment). Batch: swagger.json, the calendar, and the `lh` TOC for 6 May 2026.
 
+- **Live re-check, 31 Oct 2026 (23:20 UTC), with the response bodies read:**
+  - **`www.parliament.sa.gov.au` is fully reachable from here** — HTTP 200, 51,250 bytes for `/About-Parliament/Hansard`, served by Microsoft-IIS/10.0, with `robots.txt` a 404 (so no rules). The bare `parliament.sa.gov.au` 301s to it through an Azure Application Gateway.
+  - **But it holds no Hansard.** Of its 111 links, every Hansard one points at `hansardsearch.parliament.sa.gov.au` (`/search`, `/search/calendar`, `/search/secondreadings`, `/search/indicies`). The page carries only the description, the publishing time ("after 4pm on the day following the sitting") and the terms.
+  - **`hansardsearch.parliament.sa.gov.au` answers 403 with a page whose title is literally `Azure WAF`** — `robots.txt`, `/docs/api` and a real daily URL (`/daily/lh/2025-09-16/296`) alike. The challenge carries no script, so there is nothing a polite client can satisfy.
+  - **The daily URL scheme is confirmed in the wild** by public search: `/daily/{lh|uh}/{YYYY-MM-DD}/{n}`, date-predictable apart from the trailing item id.
+
 ### WA: Legislative Assembly (`WA-LA`, `lh`) and Legislative Council (`WA-LC`, `uh`)
 
 - **The system has changed since the spec's lead.** Hansard from late 2024 is no longer in the Lotus Domino `hansard.nsf`. It uses the same `/daily/...` scheme as SA. **H**
@@ -336,6 +342,22 @@ What the saved fixtures showed:
 - **Blockers:** the sponsor's link carried `afd_azwaf_tok`, an Azure Front Door WAF token, so the site may challenge scripts. Search found no other evidence **(L)**. Never reuse the token.
 - **Recommended connector:** calendar → day TOC or extracts (SA-style if available), else the full-day PDF.
 - **Fixture:** none yet (environment). Batch: `uh` 18 Jun 2026 full-day PDF; an `lh` day to pick from the calendar.
+
+- **Live re-check, 31 Oct 2026 (23:20 UTC):**
+  - **`www.parliament.wa.gov.au` answers 403 with a page titled `Azure WAF`** on every path tried: `robots.txt`, the old `hansard.nsf/NewAdvancedSearch`, and the full-day PDF endpoint for both houses. The `afd_azwaf_tok` hint in the spec is now **confirmed**: it is an Azure WAF, not a guess. The bare `parliament.wa.gov.au` does not resolve.
+  - **The full-day PDF endpoint is confirmed to exist and is completely date-predictable:** `https://www.parliament.wa.gov.au/hansard/daily/{lh|uh}/{YYYY-MM-DD}/pdf/download`, with no opaque id anywhere — public search returns these URLs with their sitting dates and content. `lh` is the Assembly, `uh` the Council.
+  - **This makes WA the easiest of the three blocked states to automate once access exists:** no listing page, no staff-kept links, no search discovery. It is Queensland's pattern exactly — probe each weekday's dated URL, fetch the day's PDF — so only the PDF reader would remain, written against the first real file (D6).
+  - Pages carry "uncorrected draft — not to be quoted or distributed" until corrected, so the proof/final signal is on the document itself.
+
+### The three blocked states, side by side (31 Oct 2026)
+
+| | What blocks it | Where documents live | Scheme once access exists |
+|---|---|---|---|
+| **VIC** | Cloudflare "Just a moment…" on both hosts, static PDFs included | `www.parliament.vic.gov.au`, `/globalassets/hansard-daily-pdfs/…` | Cache-buster segment rotates: links must be listed, not built |
+| **SA** | Azure WAF on `hansardsearch` only; the main site is reachable but carries no Hansard | `hansardsearch.parliament.sa.gov.au/daily/{lh\|uh}/{date}/…` | Date-predictable but for a trailing item id; an official OpenAPI exists |
+| **WA** | Azure WAF on `www`, every path | `www.parliament.wa.gov.au/hansard/daily/{lh\|uh}/{date}/pdf/download` | **Fully date-predictable** — no discovery needed at all |
+
+None of the three can be reached from this network, and a WAF or challenge page is a closed door whatever the path (D18). All three are reachable by a person in a browser, so `make import` works today; a scan from a network the sites serve would work for all three, and for WA with no listing step at all.
 
 ### TAS: House of Assembly (`TAS-HA`) and Legislative Council (`TAS-LC`)
 

@@ -1,5 +1,38 @@
 # Progress
 
+## 1 Nov 2026: SA and WA checked the same way — both Azure WAF, but WA is the easiest to finish
+
+### Done
+
+- **Applied the same method (read the body, try every hostname, then search for other routes) to South Australia and Western Australia.** Both are genuinely gated, and the evidence is now exact rather than inferred.
+- **South Australia — only the document subdomain is walled.**
+  - `www.parliament.sa.gov.au` **is fully reachable from here**: HTTP 200, 51,250 bytes, Microsoft-IIS/10.0, `robots.txt` a 404 (so no rules). The bare host 301s to it via an Azure Application Gateway.
+  - It holds no Hansard, though: of its 111 links, every Hansard one points at `hansardsearch.parliament.sa.gov.au`. The page carries only the description, the publishing time and the terms.
+  - `hansardsearch.parliament.sa.gov.au` answers **403 with a page titled literally `Azure WAF`** — `robots.txt`, `/docs/api` and a real daily URL alike. The challenge carries no script, so there is nothing a polite client can satisfy.
+  - Daily scheme confirmed in the wild: `/daily/{lh|uh}/{YYYY-MM-DD}/{n}`.
+- **Western Australia — the whole site is walled, but its scheme is the cleanest of the three.**
+  - `www.parliament.wa.gov.au` answers **403 titled `Azure WAF`** on every path: `robots.txt`, the old `hansard.nsf` search, and the full-day PDF endpoint for both houses. The bare host does not resolve.
+  - The spec's `afd_azwaf_tok` hint is now **confirmed, not a guess**.
+  - **The full-day PDF endpoint exists and is completely date-predictable:** `/hansard/daily/{lh|uh}/{YYYY-MM-DD}/pdf/download`, no opaque id anywhere, with public search returning those URLs and their sitting dates.
+  - So WA needs **no listing page, no staff-kept links and no search discovery** — it is Queensland's pattern exactly. Once access exists, only the PDF reader remains.
+- **Added a side-by-side table of the three blocked states** to `docs/sources.md`, and replaced the guessed `live_check` and `risk` lines in `config/sources.yaml` for all four SA/WA rows with the confirmed evidence.
+
+### Evidence
+
+- Probe set, response sizes and the two challenge-page titles in `docs/sources.md` §SA and §WA.
+- `make test`: 145 backend tests pass (unchanged; this entry is findings and documentation, no code).
+
+### Where the nine stand
+
+- **Live (6):** CTH, NSW, QLD, ACT, NT, and TAS once its own search application is back.
+- **Blocked (3):** VIC (Cloudflare), SA and WA (Azure WAF). All three are reachable by a person in a browser, so `make import` works today, and a scan from a network the sites serve would work for all three — for WA with no listing step at all.
+
+### Next
+
+- If one of the three is to be finished first, make it **WA**: its URL scheme needs no discovery, so the only work is the PDF reader, against the first real file (D6).
+
+---
+
 ## 1 Nov 2026: Tasmania diagnosed — an outage, not a block — and a second document route found
 
 ### Done

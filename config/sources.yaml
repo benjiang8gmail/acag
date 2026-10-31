@@ -86,8 +86,8 @@ sources:
     connector: sa
     enabled: false
     status: blocked
-    live_check: "Azure WAF JS challenge, even for robots.txt"
-    approach: sa_hansard_api_xml    # OpenAPI at hansardsearch.parliament.sa.gov.au/docs/api
+    live_check: "hansardsearch.parliament.sa.gov.au answers 403 with an Azure WAF page (robots.txt, /docs/api and a real daily URL alike; re-checked 31 Oct 2026 23:20 UTC). www.parliament.sa.gov.au is reachable (IIS, 200) but links every Hansard to that subdomain"
+    approach: sa_hansard_api_xml    # OpenAPI at hansardsearch.parliament.sa.gov.au/docs/api; daily /daily/{lh|uh}/{date}/{n}
     risk: "calendar page refused an automated test fetch during spec research (Oct 2026)"
     timezone: Australia/Adelaide
   - id: SA-LC
@@ -96,7 +96,7 @@ sources:
     connector: sa
     enabled: false
     status: blocked
-    live_check: "Azure WAF JS challenge, even for robots.txt"
+    live_check: "same as SA-HA"
     approach: sa_hansard_api_xml
     risk: "same as SA-HA"
     timezone: Australia/Adelaide
@@ -106,9 +106,9 @@ sources:
     connector: wa
     enabled: false
     status: blocked
-    live_check: "Azure WAF challenge, even for robots.txt"
-    approach: daily_extracts        # same /daily/{house}/{date}/... scheme as SA, since late 2024
-    risk: "afd_azwaf_tok parameter in the sponsor's link suggests Azure Front Door; not confirmed"
+    live_check: "www.parliament.wa.gov.au answers 403 with an Azure WAF page on every path, the full-day PDF endpoint included (re-checked 31 Oct 2026 23:20 UTC); the bare host does not resolve"
+    approach: daily_extracts        # /hansard/daily/{lh|uh}/{YYYY-MM-DD}/pdf/download: fully date-predictable, no discovery needed
+    risk: "Azure WAF confirmed (the page titles itself so), not merely suspected from the afd_azwaf_tok hint"
     timezone: Australia/Perth
   - id: WA-LC
     parliament: WA
@@ -116,7 +116,7 @@ sources:
     connector: wa
     enabled: false
     status: blocked
-    live_check: "Azure WAF challenge, even for robots.txt"
+    live_check: "same as WA-LA"
     approach: daily_extracts
     risk: "same as WA-LA"
     timezone: Australia/Perth
