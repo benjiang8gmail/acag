@@ -1,0 +1,5196 @@
+{
+ "asOf": "2026-10-31",
+ "previousCheck": "2026-10-26",
+ "jurisdictions": [
+  {
+   "code": "CTH",
+   "short": "Cth",
+   "name": "Commonwealth",
+   "parl": "Parliament of Australia",
+   "office": "ANAO",
+   "officeName": "Australian National Audit Office",
+   "color": "#4f52b2",
+   "minT": "Minister for Finance",
+   "chambers": [
+    "Senate",
+    "House of Representatives"
+   ],
+   "report": "Administration of the Community Grants Hub",
+   "report2": "Defence major projects report",
+   "issue": "NDIS provider fraud controls",
+   "issue3": "aged care workforce visas",
+   "request": "Defence consultant spend",
+   "topicA": "Fraud control in the NDIS",
+   "topicB": "Defence contractor management",
+   "program": "Annual Audit Work Program 2026–27",
+   "confirmed": true,
+   "counts": [
+    38,
+    21,
+    12
+   ],
+   "dev3": "resourcing",
+   "theme": "Disability and NDIS",
+   "status": "ok",
+   "statusText": "Sat Wed 28 – Thu 29 Oct",
+   "elsewhere": 3,
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "site": "https://www.anao.gov.au",
+   "sittingDays": [
+    "2026-10-28",
+    "2026-10-29"
+   ],
+   "issueIds": [
+    "x2",
+    "x6",
+    "x8"
+   ],
+   "tilePos": [
+    1,
+    1
+   ]
+  },
+  {
+   "code": "NSW",
+   "short": "NSW",
+   "name": "New South Wales",
+   "parl": "Parliament of NSW",
+   "office": "Audit Office NSW",
+   "officeName": "Audit Office of New South Wales",
+   "color": "#0f6cbd",
+   "minT": "Minister for Transport",
+   "chambers": [
+    "Legislative Assembly",
+    "Legislative Council"
+   ],
+   "report": "Rail fleet maintenance",
+   "report2": "School infrastructure delivery",
+   "issue": "regional grants probity",
+   "issue3": "hospital car park fees",
+   "request": "Sydney Metro contract variations",
+   "topicA": "Grants administration",
+   "topicB": "Major transport contracts",
+   "program": "Audit Work Plan 2026–2029",
+   "confirmed": true,
+   "counts": [
+    24,
+    10,
+    9
+   ],
+   "dev3": "mandate",
+   "theme": "Transport and infrastructure",
+   "status": "ok",
+   "statusText": "Sat Wed 28 – Thu 29 Oct",
+   "elsewhere": 2,
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "site": "https://www.audit.nsw.gov.au",
+   "sittingDays": [
+    "2026-10-28",
+    "2026-10-29"
+   ],
+   "issueIds": [
+    "x4",
+    "x4",
+    "x2"
+   ],
+   "tilePos": [
+    2,
+    3
+   ]
+  },
+  {
+   "code": "VIC",
+   "short": "Vic",
+   "name": "Victoria",
+   "parl": "Parliament of Victoria",
+   "office": "VAGO",
+   "officeName": "Victorian Auditor-General’s Office",
+   "color": "#5c2e91",
+   "minT": "Minister for Health",
+   "chambers": [
+    "Legislative Assembly",
+    "Legislative Council"
+   ],
+   "report": "Emergency department wait times",
+   "report2": "Social housing maintenance",
+   "issue": "level crossing removal cost overruns",
+   "issue3": "ambulance ramping data quality",
+   "request": "major events funding",
+   "topicA": "Transport infrastructure delivery",
+   "topicB": "Hospital capacity planning",
+   "program": "Annual Plan 2026–27",
+   "confirmed": true,
+   "counts": [
+    18,
+    11,
+    8
+   ],
+   "dev3": "mandate",
+   "theme": "Health",
+   "status": "ok",
+   "statusText": "Sat Tue 27 – Thu 29 Oct",
+   "elsewhere": 4,
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "site": "https://www.audit.vic.gov.au",
+   "sittingDays": [
+    "2026-10-27",
+    "2026-10-29"
+   ],
+   "issueIds": [
+    "x1",
+    "x2",
+    "x4"
+   ],
+   "tilePos": [
+    3,
+    3
+   ]
+  },
+  {
+   "code": "QLD",
+   "short": "Qld",
+   "name": "Queensland",
+   "parl": "Queensland Parliament",
+   "office": "QAO",
+   "officeName": "Queensland Audit Office",
+   "color": "#a4262c",
+   "minT": "Minister for Health",
+   "chambers": [
+    "Legislative Assembly"
+   ],
+   "report": "Managing hospital ramping",
+   "report2": "Youth justice reforms",
+   "issue": "Olympic venue cost estimates",
+   "issue3": "floodplain buyback program",
+   "request": "youth justice program outcomes",
+   "topicA": "Major infrastructure planning",
+   "topicB": "Youth justice services",
+   "program": "Forward work plan 2026–29",
+   "confirmed": false,
+   "counts": [
+    15,
+    7,
+    6
+   ],
+   "dev3": "governance",
+   "theme": "Health",
+   "status": "ok",
+   "statusText": "Sat Tue 27 – Wed 28 Oct",
+   "elsewhere": 2,
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "site": "https://www.qao.qld.gov.au",
+   "sittingDays": [
+    "2026-10-27",
+    "2026-10-28"
+   ],
+   "issueIds": [
+    "x1",
+    "x7",
+    "x4"
+   ],
+   "tilePos": [
+    1,
+    3
+   ]
+  },
+  {
+   "code": "SA",
+   "short": "SA",
+   "name": "South Australia",
+   "parl": "Parliament of South Australia",
+   "office": "SA Auditor-General",
+   "officeName": "Auditor-General’s Department (SA)",
+   "color": "#c239b3",
+   "minT": "Minister for Health",
+   "chambers": [
+    "House of Assembly",
+    "Legislative Council"
+   ],
+   "report": "Ambulance response times",
+   "report2": "Desalination plant contract",
+   "issue": "housing grant probity",
+   "issue3": "Port Adelaide redevelopment costs",
+   "request": "public school maintenance backlog",
+   "program": null,
+   "dev3": "resourcing",
+   "theme": "Housing and homelessness",
+   "status": "ok",
+   "statusText": "Sat Thu 22 and Tue 27 Oct",
+   "elsewhere": 1,
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "site": "https://www.audit.sa.gov.au",
+   "sittingDays": [
+    "2026-10-22",
+    "2026-10-27"
+   ],
+   "issueIds": [
+    "x1",
+    "x10",
+    "x5"
+   ],
+   "tilePos": [
+    2,
+    2
+   ]
+  },
+  {
+   "code": "WA",
+   "short": "WA",
+   "name": "Western Australia",
+   "parl": "Parliament of Western Australia",
+   "office": "OAG WA",
+   "officeName": "Office of the Auditor General WA",
+   "color": "#ca5010",
+   "minT": "Minister for Health",
+   "chambers": [
+    "Legislative Assembly",
+    "Legislative Council"
+   ],
+   "report": "Cyber security in local government",
+   "report2": "Rail car manufacturing program",
+   "issue": "hospital records data breach",
+   "issue3": "regional water infrastructure",
+   "request": "METRONET project costs",
+   "program": null,
+   "dev3": "governance",
+   "theme": "Digital, data and cyber",
+   "status": "blocked",
+   "statusText": "Not checked — access blocked (manual import Fri 23 Oct)",
+   "elsewhere": 1,
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "site": "https://audit.wa.gov.au",
+   "sittingDays": [
+    "2026-10-22",
+    "2026-10-23"
+   ],
+   "issueIds": [
+    "x3",
+    "x4",
+    "x3"
+   ],
+   "tilePos": [
+    2,
+    1
+   ]
+  },
+  {
+   "code": "TAS",
+   "short": "Tas",
+   "name": "Tasmania",
+   "parl": "Parliament of Tasmania",
+   "office": "Audit Tasmania",
+   "officeName": "Audit Tasmania",
+   "color": "#107c10",
+   "minT": "Minister for Infrastructure",
+   "chambers": [
+    "House of Assembly",
+    "Legislative Council"
+   ],
+   "report": "Spirit of Tasmania vessel replacement",
+   "report2": "Child safety service capacity",
+   "issue": "Macquarie Point stadium costs",
+   "issue3": "Hydro Tasmania asset maintenance",
+   "request": "TasPorts berth upgrade",
+   "topicA": "Major projects governance",
+   "topicB": "Child safety services",
+   "program": "Auditor-General’s Annual Plan 2026–27",
+   "confirmed": true,
+   "counts": [
+    9,
+    4,
+    3
+   ],
+   "dev3": "mandate",
+   "theme": "Transport and infrastructure",
+   "status": "nosit",
+   "statusText": "Not sitting since Wed 21 Oct",
+   "elsewhere": 1,
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "site": "https://audit.tas.gov.au",
+   "sittingDays": [
+    "2026-10-20",
+    "2026-10-21"
+   ],
+   "issueIds": [
+    "x4",
+    "x4",
+    "x4"
+   ],
+   "tilePos": [
+    4,
+    3
+   ]
+  },
+  {
+   "code": "ACT",
+   "short": "ACT",
+   "name": "Australian Capital Territory",
+   "parl": "ACT Legislative Assembly",
+   "office": "ACT Audit Office",
+   "officeName": "ACT Audit Office",
+   "color": "#0099bc",
+   "minT": "Minister for Health",
+   "chambers": [
+    "Legislative Assembly"
+   ],
+   "report": "Canberra Health Services procurement",
+   "report2": "ICT project governance",
+   "issue": "light rail stage 2B costs",
+   "issue3": "public housing renewal",
+   "request": "Canberra Hospital expansion",
+   "topicA": "Transport project delivery",
+   "topicB": "Health procurement",
+   "program": "Performance Audit Program 2026–27",
+   "confirmed": true,
+   "counts": [
+    8,
+    3,
+    4
+   ],
+   "dev3": "resourcing",
+   "theme": "Health",
+   "status": "ok",
+   "statusText": "Sat Tue 27 – Wed 28 Oct",
+   "elsewhere": 1,
+   "url": "https://hansard.act.gov.au/",
+   "site": "https://www.audit.act.gov.au",
+   "sittingDays": [
+    "2026-10-27",
+    "2026-10-28"
+   ],
+   "issueIds": [
+    "x6",
+    "x1",
+    "x4"
+   ],
+   "tilePos": [
+    2,
+    4
+   ]
+  },
+  {
+   "code": "NT",
+   "short": "NT",
+   "name": "Northern Territory",
+   "parl": "Legislative Assembly of the NT",
+   "office": "NT Auditor-General",
+   "officeName": "NT Auditor-General’s Office",
+   "color": "#8e562e",
+   "minT": "Minister for Housing",
+   "chambers": [
+    "Legislative Assembly"
+   ],
+   "report": "Remote housing program",
+   "report2": "Darwin ship lift contract",
+   "issue": "youth detention facility costs",
+   "issue3": "remote clinic staffing",
+   "request": "remote roads maintenance",
+   "program": null,
+   "dev3": "governance",
+   "theme": "Housing and homelessness",
+   "status": "nosit",
+   "statusText": "Not sitting since Thu 15 Oct",
+   "elsewhere": 1,
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "site": "https://ago.nt.gov.au",
+   "sittingDays": [
+    "2026-10-14",
+    "2026-10-15"
+   ],
+   "issueIds": [
+    "x5",
+    "x4",
+    "x7"
+   ],
+   "tilePos": [
+    1,
+    2
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "x1",
+   "label": "Hospital emergency wait times",
+   "theme": "Health",
+   "kw": "emergency",
+   "raised": {
+    "VIC": 5,
+    "QLD": 4,
+    "NSW": 3,
+    "SA": 2,
+    "ACT": 2
+   },
+   "cov": {
+    "VIC": "recent_report",
+    "QLD": "recent_report",
+    "NSW": "planned",
+    "SA": "recent_report"
+   },
+   "quote": "Patients are waiting longer in our emergency departments than at any time in the past decade.",
+   "from": "QLD",
+   "by": "Dr K. Moore MP"
+  },
+  {
+   "id": "x2",
+   "label": "Grant program probity",
+   "theme": "Procurement, grants and contracts",
+   "kw": "grant",
+   "raised": {
+    "CTH": 4,
+    "NSW": 3,
+    "VIC": 2,
+    "SA": 1
+   },
+   "cov": {
+    "CTH": "in_progress",
+    "NSW": "planned"
+   },
+   "quote": "Grants were awarded to projects the department’s own assessors ranked lowest.",
+   "from": "CTH",
+   "by": "Senator T. Brennan"
+  },
+  {
+   "id": "x3",
+   "label": "Health records cyber incidents",
+   "theme": "Digital, data and cyber",
+   "kw": "records",
+   "raised": {
+    "WA": 3,
+    "TAS": 2,
+    "CTH": 2
+   },
+   "cov": {
+    "WA": "recent_report",
+    "TAS": "planned",
+    "CTH": "planned",
+    "NSW": "in_progress"
+   },
+   "quote": "Thousands of patient records were exposed, and the agency still cannot say how.",
+   "from": "WA",
+   "by": "Ms L. Nguyen MLC"
+  },
+  {
+   "id": "x4",
+   "label": "Major project cost overruns",
+   "theme": "Transport and infrastructure",
+   "kw": "cost",
+   "raised": {
+    "VIC": 4,
+    "QLD": 3,
+    "TAS": 3,
+    "NSW": 3,
+    "ACT": 2,
+    "WA": 2,
+    "NT": 1
+   },
+   "cov": {
+    "VIC": "planned",
+    "QLD": "planned",
+    "NSW": "in_progress"
+   },
+   "quote": "The project is now two years late and hundreds of millions over its original budget.",
+   "from": "TAS",
+   "by": "Mr S. Okafor MP"
+  },
+  {
+   "id": "x5",
+   "label": "Social housing maintenance backlogs",
+   "theme": "Housing and homelessness",
+   "kw": "housing",
+   "raised": {
+    "SA": 3,
+    "VIC": 2,
+    "NT": 2,
+    "NSW": 1
+   },
+   "cov": {
+    "VIC": "recent_report",
+    "NT": "recent_report"
+   },
+   "quote": "Tenants have waited more than a year for basic repairs to be done.",
+   "from": "SA",
+   "by": "Ms H. Reid MP"
+  },
+  {
+   "id": "x6",
+   "label": "Use of consultants and contractors",
+   "theme": "Procurement, grants and contracts",
+   "kw": "consultant",
+   "raised": {
+    "CTH": 5,
+    "ACT": 2,
+    "QLD": 2
+   },
+   "cov": {
+    "CTH": "in_progress",
+    "QLD": "planned",
+    "VIC": "planned"
+   },
+   "quote": "The department spent more on consultants last year than on its own frontline staff.",
+   "from": "CTH",
+   "by": "Senator R. Carter"
+  },
+  {
+   "id": "x7",
+   "label": "Youth justice program outcomes",
+   "theme": "Justice, police and corrections",
+   "kw": "youth",
+   "raised": {
+    "QLD": 4,
+    "NT": 3,
+    "VIC": 1
+   },
+   "cov": {
+    "QLD": "planned"
+   },
+   "quote": "The government cannot tell this House whether the program has reduced reoffending.",
+   "from": "QLD",
+   "by": "Mr D. Walsh MP"
+  },
+  {
+   "id": "x8",
+   "label": "NDIS provider fraud controls",
+   "theme": "Disability and NDIS",
+   "kw": "NDIS",
+   "raised": {
+    "CTH": 4,
+    "NSW": 1,
+    "VIC": 1
+   },
+   "cov": {
+    "CTH": "planned"
+   },
+   "quote": "Fraudulent providers are draining money meant for participants.",
+   "from": "CTH",
+   "by": "Hon. P. Singh MP"
+  },
+  {
+   "id": "x9",
+   "label": "Audit office independence and funding",
+   "theme": "Integrity and governance",
+   "kw": "independen",
+   "raised": {
+    "NSW": 2,
+    "SA": 2,
+    "CTH": 1,
+    "ACT": 1
+   },
+   "cov": {
+    "_": "na"
+   },
+   "quote": "An Auditor-General who depends on the government for funding is not truly independent.",
+   "from": "NSW",
+   "by": "Ms A. Lee MLC"
+  },
+  {
+   "id": "x10",
+   "label": "School building program delays",
+   "theme": "Education and training",
+   "kw": "school",
+   "raised": {
+    "NSW": 3,
+    "QLD": 2,
+    "WA": 2,
+    "SA": 1
+   },
+   "cov": {
+    "NSW": "recent_report"
+   },
+   "quote": "Schools promised for this year still don’t have a builder.",
+   "from": "NSW",
+   "by": "Mr J. Patel MP"
+  },
+  {
+   "id": "x11",
+   "label": "Council financial sustainability",
+   "theme": "Local government",
+   "kw": "council",
+   "raised": {
+    "NSW": 2,
+    "VIC": 2,
+    "TAS": 1,
+    "WA": 1
+   },
+   "cov": {
+    "NSW": "recent_report",
+    "VIC": "planned"
+   },
+   "quote": "Councils are running down their reserves just to keep basic services going.",
+   "from": "NSW",
+   "by": "Mr J. Patel MP"
+  },
+  {
+   "id": "x12",
+   "label": "Disaster recovery funding",
+   "theme": "Emergency management",
+   "kw": "disaster",
+   "raised": {
+    "QLD": 3,
+    "NSW": 2,
+    "CTH": 1
+   },
+   "cov": {
+    "CTH": "recent_report"
+   },
+   "quote": "Communities hit by the floods are still waiting for recovery money promised a year ago.",
+   "from": "QLD",
+   "by": "Ms H. Reid MP"
+  },
+  {
+   "id": "x13",
+   "label": "Closing the Gap reporting",
+   "theme": "First Nations outcomes",
+   "kw": "gap",
+   "raised": {
+    "NT": 2,
+    "CTH": 2,
+    "WA": 1,
+    "SA": 1
+   },
+   "cov": {
+    "CTH": "in_progress",
+    "NT": "recent_report"
+   },
+   "quote": "We are told targets are on track, but the data to prove it has not been published.",
+   "from": "CTH",
+   "by": "Senator R. Carter"
+  },
+  {
+   "id": "x14",
+   "label": "Water and energy project costs",
+   "theme": "Environment, water and energy",
+   "kw": "water",
+   "raised": {
+    "SA": 2,
+    "TAS": 2,
+    "VIC": 1,
+    "WA": 1
+   },
+   "cov": {
+    "TAS": "planned",
+    "SA": "recent_report"
+   },
+   "quote": "The cost of this water project has doubled and no one in government will explain why.",
+   "from": "SA",
+   "by": "Mr D. Walsh MP"
+  },
+  {
+   "id": "x15",
+   "label": "Public sector labour hire",
+   "theme": "Public sector workforce",
+   "kw": "labour",
+   "raised": {
+    "VIC": 2,
+    "QLD": 2,
+    "ACT": 1
+   },
+   "cov": {
+    "QLD": "planned"
+   },
+   "quote": "Agencies are paying labour-hire rates for roles that have sat vacant for years.",
+   "from": "VIC",
+   "by": "Ms T. Brennan MLC"
+  },
+  {
+   "id": "x16",
+   "label": "Out-of-home care placements",
+   "theme": "Child protection and family services",
+   "kw": "care",
+   "raised": {
+    "TAS": 2,
+    "QLD": 1,
+    "NT": 1
+   },
+   "cov": {
+    "TAS": "planned"
+   },
+   "quote": "Children are being placed in motels because there is nowhere else for them to go.",
+   "from": "TAS",
+   "by": "Ms L. Nguyen MP"
+  }
+ ],
+ "items": [
+  {
+   "id": "CTH-1",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3406,
+   "rep": "Administration of the Community Grants Hub",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x2",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-29",
+   "side": "Government",
+   "speaker": "Hon. R. Carter",
+   "role": "Minister for Finance",
+   "debate": "Questions without notice",
+   "headline": "Minister for Finance disputes ANAO report on Administration of the Community Grants Hub",
+   "summary": "The Minister for Finance rejected key findings of the ANAO report on Administration of the Community Grants Hub, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "CTH-2",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "House of Representatives",
+   "source": "Hansard",
+   "page": 3412,
+   "rep": "Administration of the Community Grants Hub",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x2",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Ms L. Nguyen",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites ANAO report on Administration of the Community Grants Hub",
+   "summary": "The opposition used the ANAO report on Administration of the Community Grants Hub to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "CTH-3",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Integrity and governance",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3418,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Resourcing",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Mr D. Walsh",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Estimates: ANAO budget flat in real terms",
+   "why": "A flat budget may reduce the number of performance audits next year.",
+   "quote": "The audit office’s appropriation is unchanged from last year, which is a cut in real terms.",
+   "summary": "Budget estimates debate noted the ANAO appropriation is unchanged — a real-terms cut after inflation.",
+   "pending": false
+  },
+  {
+   "id": "CTH-4",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "House of Representatives",
+   "source": "Hansard",
+   "page": 3424,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x6",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-28",
+   "side": "Crossbench",
+   "speaker": "Hon. P. Singh",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of Defence consultant spend",
+   "summary": "A crossbench member asked the Auditor-General to examine Defence consultant spend, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine Defence consultant spend as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "CTH-5",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Disability and NDIS",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3430,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x8",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Dr K. Moore",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over NDIS provider fraud controls",
+   "summary": "Members pressed the government on NDIS provider fraud controls, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "CTH-6",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3436,
+   "rep": "Defence major projects report",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Ms T. Brennan",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on Defence major projects report",
+   "summary": "The government accepted 6 of 8 recommendations from the ANAO report on Defence major projects report and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "CTH-7",
+   "jur": "CTH",
+   "url": "https://www.anao.gov.au",
+   "theme": "Integrity and governance",
+   "chamber": "Senate",
+   "source": "Office website",
+   "page": 3442,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "Program",
+   "x": null,
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-28",
+   "headline": "Annual Audit Work Program 2026–27: 2 topics added, 1 deferred",
+   "summary": "The ANAO published an updated program. Added: Fraud control in the NDIS; Defence contractor management. One topic moved to next year.",
+   "why": "Changes what the office will report on in the next 12 months.",
+   "pending": false
+  },
+  {
+   "id": "CTH-10",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Public finance and budget",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3460,
+   "rep": "Administration of the Community Grants Hub",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Mr S. Okafor",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "ANAO cited in Appropriation Bill debate",
+   "summary": "A passing reference to the ANAO during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "CTH-11",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Health",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3466,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Ms H. Reid",
+   "role": "Member",
+   "debate": "Matters of public importance",
+   "headline": "ANAO cited in matters of public importance",
+   "summary": "A passing reference to the ANAO during matters of public importance.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "CTH-12",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Education and training",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3472,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-21",
+   "side": "Crossbench",
+   "speaker": "Mr J. Patel",
+   "role": "Member",
+   "debate": "Members’ statements",
+   "headline": "ANAO cited in members’ statements",
+   "summary": "A passing reference to the ANAO during members’ statements.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "CTH-13",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Local government",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3478,
+   "rep": "Administration of the Community Grants Hub",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-15",
+   "side": "Opposition",
+   "speaker": "Hon. R. Carter",
+   "role": "Member",
+   "debate": "Adjournment debate",
+   "headline": "ANAO cited in adjournment debate",
+   "summary": "A passing reference to the ANAO during adjournment debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Questions the office’s priorities",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "CTH-14",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Environment, water and energy",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3484,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-07",
+   "side": "Government",
+   "speaker": "Ms L. Nguyen",
+   "role": "Member",
+   "debate": "Budget estimates debate",
+   "headline": "ANAO cited in budget estimates debate",
+   "summary": "A passing reference to the ANAO during budget estimates debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "CTH-15",
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Public sector workforce",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3490,
+   "rep": null,
+   "ofc": true,
+   "sent": "mixed",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-01",
+   "side": "Crossbench",
+   "speaker": "Mr D. Walsh",
+   "role": "Member",
+   "debate": "Grievance debate",
+   "headline": "ANAO cited in grievance debate",
+   "summary": "A passing reference to the ANAO during grievance debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Praises the office but disputes one finding",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "NSW-1",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3443,
+   "rep": "Rail fleet maintenance",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x4",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-29",
+   "side": "Government",
+   "speaker": "Ms L. Nguyen",
+   "role": "Minister for Transport",
+   "debate": "Questions without notice",
+   "headline": "Minister for Transport disputes Audit Office NSW report on Rail fleet maintenance",
+   "summary": "The Minister for Transport rejected key findings of the Audit Office NSW report on Rail fleet maintenance, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "NSW-2",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3449,
+   "rep": "Rail fleet maintenance",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x4",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Mr D. Walsh",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites Audit Office NSW report on Rail fleet maintenance",
+   "summary": "The opposition used the Audit Office NSW report on Rail fleet maintenance to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "NSW-3",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3455,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Mandate",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Hon. P. Singh",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Bill to extend Audit Office NSW follow-the-dollar powers",
+   "why": "Would let the office follow public money into contractors and grant recipients.",
+   "quote": "This bill gives the Auditor-General the power to follow the public dollar wherever it goes.",
+   "summary": "A government bill would let the Audit Office NSW audit contractors and grant recipients that deliver public services.",
+   "pending": false
+  },
+  {
+   "id": "NSW-4",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3461,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x4",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-28",
+   "side": "Crossbench",
+   "speaker": "Dr K. Moore",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of Sydney Metro contract variations",
+   "summary": "A crossbench member asked the Auditor-General to examine Sydney Metro contract variations, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine Sydney Metro contract variations as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "NSW-5",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3467,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x2",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Ms T. Brennan",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over regional grants probity",
+   "summary": "Members pressed the government on regional grants probity, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "NSW-6",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Education and training",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3473,
+   "rep": "School infrastructure delivery",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Mr S. Okafor",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on School infrastructure delivery",
+   "summary": "The government accepted 6 of 8 recommendations from the Audit Office NSW report on School infrastructure delivery and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "NSW-7",
+   "jur": "NSW",
+   "url": "https://www.audit.nsw.gov.au",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Office website",
+   "page": 3479,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "Program",
+   "x": null,
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-28",
+   "headline": "Audit Work Plan 2026–2029: 2 topics added, 1 deferred",
+   "summary": "The Audit Office NSW published an updated program. Added: Grants administration; Major transport contracts. One topic moved to next year.",
+   "why": "Changes what the office will report on in the next 12 months.",
+   "pending": false
+  },
+  {
+   "id": "NSW-10",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3497,
+   "rep": "Rail fleet maintenance",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Ms H. Reid",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "Audit Office NSW cited in Appropriation Bill debate",
+   "summary": "A passing reference to the Audit Office NSW during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "NSW-11",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3503,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Mr J. Patel",
+   "role": "Member",
+   "debate": "Matters of public importance",
+   "headline": "Audit Office NSW cited in matters of public importance",
+   "summary": "A passing reference to the Audit Office NSW during matters of public importance.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "NSW-12",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Education and training",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3509,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-21",
+   "side": "Crossbench",
+   "speaker": "Hon. R. Carter",
+   "role": "Member",
+   "debate": "Members’ statements",
+   "headline": "Audit Office NSW cited in members’ statements",
+   "summary": "A passing reference to the Audit Office NSW during members’ statements.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "NSW-13",
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Local government",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3515,
+   "rep": "Rail fleet maintenance",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-15",
+   "side": "Opposition",
+   "speaker": "Ms L. Nguyen",
+   "role": "Member",
+   "debate": "Adjournment debate",
+   "headline": "Audit Office NSW cited in adjournment debate",
+   "summary": "A passing reference to the Audit Office NSW during adjournment debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Questions the office’s priorities",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "VIC-1",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3480,
+   "rep": "Emergency department wait times",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x1",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-29",
+   "side": "Government",
+   "speaker": "Mr D. Walsh",
+   "role": "Minister for Health",
+   "debate": "Questions without notice",
+   "headline": "Minister for Health disputes VAGO report on Emergency department wait times",
+   "summary": "The Minister for Health rejected key findings of the VAGO report on Emergency department wait times, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "VIC-2",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Health",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3486,
+   "rep": "Emergency department wait times",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x1",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Hon. P. Singh",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites VAGO report on Emergency department wait times",
+   "summary": "The opposition used the VAGO report on Emergency department wait times to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "VIC-3",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3492,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Mandate",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Dr K. Moore",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Bill to extend VAGO follow-the-dollar powers",
+   "why": "Would let the office follow public money into contractors and grant recipients.",
+   "quote": "This bill gives the Auditor-General the power to follow the public dollar wherever it goes.",
+   "summary": "A government bill would let the VAGO audit contractors and grant recipients that deliver public services.",
+   "pending": false
+  },
+  {
+   "id": "VIC-4",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3498,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x2",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-27",
+   "side": "Crossbench",
+   "speaker": "Ms T. Brennan",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of major events funding",
+   "summary": "A crossbench member asked the Auditor-General to examine major events funding, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine major events funding as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "VIC-5",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3504,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x4",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Mr S. Okafor",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over level crossing removal cost overruns",
+   "summary": "Members pressed the government on level crossing removal cost overruns, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "VIC-6",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Housing and homelessness",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3510,
+   "rep": "Social housing maintenance",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Ms H. Reid",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on Social housing maintenance",
+   "summary": "The government accepted 6 of 8 recommendations from the VAGO report on Social housing maintenance and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "VIC-7",
+   "jur": "VIC",
+   "url": "https://www.audit.vic.gov.au",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Office website",
+   "page": 3516,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "Program",
+   "x": null,
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-27",
+   "headline": "Annual Plan 2026–27: 2 topics added, 1 deferred",
+   "summary": "The VAGO published an updated program. Added: Transport infrastructure delivery; Hospital capacity planning. One topic moved to next year.",
+   "why": "Changes what the office will report on in the next 12 months.",
+   "pending": false
+  },
+  {
+   "id": "VIC-10",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3534,
+   "rep": "Emergency department wait times",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-29",
+   "side": "Opposition",
+   "speaker": "Mr J. Patel",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "VAGO cited in Appropriation Bill debate",
+   "summary": "A passing reference to the VAGO during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "VIC-11",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3540,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Hon. R. Carter",
+   "role": "Member",
+   "debate": "Matters of public importance",
+   "headline": "VAGO cited in matters of public importance",
+   "summary": "A passing reference to the VAGO during matters of public importance.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "VIC-12",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Education and training",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3546,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-20",
+   "side": "Crossbench",
+   "speaker": "Ms L. Nguyen",
+   "role": "Member",
+   "debate": "Members’ statements",
+   "headline": "VAGO cited in members’ statements",
+   "summary": "A passing reference to the VAGO during members’ statements.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "VIC-13",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Local government",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3552,
+   "rep": "Emergency department wait times",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-15",
+   "side": "Opposition",
+   "speaker": "Mr D. Walsh",
+   "role": "Member",
+   "debate": "Adjournment debate",
+   "headline": "VAGO cited in adjournment debate",
+   "summary": "A passing reference to the VAGO during adjournment debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Questions the office’s priorities",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "VIC-14",
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Environment, water and energy",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3558,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-06",
+   "side": "Government",
+   "speaker": "Hon. P. Singh",
+   "role": "Member",
+   "debate": "Budget estimates debate",
+   "headline": "VAGO cited in budget estimates debate",
+   "summary": "A passing reference to the VAGO during budget estimates debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "QLD-1",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3517,
+   "rep": "Managing hospital ramping",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x1",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Hon. P. Singh",
+   "role": "Minister for Health",
+   "debate": "Questions without notice",
+   "headline": "Minister for Health disputes QAO report on Managing hospital ramping",
+   "summary": "The Minister for Health rejected key findings of the QAO report on Managing hospital ramping, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "QLD-2",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3523,
+   "rep": "Managing hospital ramping",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x1",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-28",
+   "side": "Opposition",
+   "speaker": "Dr K. Moore",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites QAO report on Managing hospital ramping",
+   "summary": "The opposition used the QAO report on Managing hospital ramping to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "QLD-3",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3529,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Governance",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Ms T. Brennan",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Process begins to appoint the next Auditor-General",
+   "why": "The appointment sets the office’s leadership for the next term.",
+   "quote": "The committee will now begin the process of recommending the next Auditor-General.",
+   "summary": "The accountability committee announced the process and timeline for recommending the next Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "QLD-4",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Justice, police and corrections",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3535,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x7",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-27",
+   "side": "Crossbench",
+   "speaker": "Mr S. Okafor",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of youth justice program outcomes",
+   "summary": "A crossbench member asked the Auditor-General to examine youth justice program outcomes, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine youth justice program outcomes as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "QLD-5",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3541,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x4",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-28",
+   "side": "Opposition",
+   "speaker": "Ms H. Reid",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over Olympic venue cost estimates",
+   "summary": "Members pressed the government on Olympic venue cost estimates, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "QLD-6",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Justice, police and corrections",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3547,
+   "rep": "Youth justice reforms",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Mr J. Patel",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on Youth justice reforms",
+   "summary": "The government accepted 6 of 8 recommendations from the QAO report on Youth justice reforms and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "QLD-7",
+   "jur": "QLD",
+   "url": "https://www.qao.qld.gov.au",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Office website",
+   "page": 3553,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "Program",
+   "x": null,
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-27",
+   "headline": "Forward work plan 2026–29: 2 topics added, 1 deferred",
+   "summary": "The QAO published an updated program. Added: Major infrastructure planning; Youth justice services. One topic moved to next year.",
+   "why": "Changes what the office will report on in the next 12 months.",
+   "pending": false
+  },
+  {
+   "id": "QLD-10",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3571,
+   "rep": "Managing hospital ramping",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-28",
+   "side": "Opposition",
+   "speaker": "Hon. R. Carter",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "QAO cited in Appropriation Bill debate",
+   "summary": "A passing reference to the QAO during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "QLD-11",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3577,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Ms L. Nguyen",
+   "role": "Member",
+   "debate": "Matters of public importance",
+   "headline": "QAO cited in matters of public importance",
+   "summary": "A passing reference to the QAO during matters of public importance.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "QLD-12",
+   "jur": "QLD",
+   "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings",
+   "theme": "Education and training",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3583,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-20",
+   "side": "Crossbench",
+   "speaker": "Mr D. Walsh",
+   "role": "Member",
+   "debate": "Members’ statements",
+   "headline": "QAO cited in members’ statements",
+   "summary": "A passing reference to the QAO during members’ statements.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "SA-1",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Health",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3554,
+   "rep": "Ambulance response times",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x1",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Dr K. Moore",
+   "role": "Minister for Health",
+   "debate": "Questions without notice",
+   "headline": "Minister for Health disputes SA Auditor-General report on Ambulance response times",
+   "summary": "The Minister for Health rejected key findings of the SA Auditor-General report on Ambulance response times, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "SA-2",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Health",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3560,
+   "rep": "Ambulance response times",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x1",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-27",
+   "side": "Opposition",
+   "speaker": "Ms T. Brennan",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites SA Auditor-General report on Ambulance response times",
+   "summary": "The opposition used the SA Auditor-General report on Ambulance response times to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "SA-3",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Integrity and governance",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3566,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Resourcing",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-22",
+   "side": "Government",
+   "speaker": "Mr S. Okafor",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Estimates: SA Auditor-General budget flat in real terms",
+   "why": "A flat budget may reduce the number of performance audits next year.",
+   "quote": "The audit office’s appropriation is unchanged from last year, which is a cut in real terms.",
+   "summary": "Budget estimates debate noted the SA Auditor-General appropriation is unchanged — a real-terms cut after inflation.",
+   "pending": false
+  },
+  {
+   "id": "SA-4",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Education and training",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3572,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x10",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-22",
+   "side": "Crossbench",
+   "speaker": "Ms H. Reid",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of public school maintenance backlog",
+   "summary": "A crossbench member asked the Auditor-General to examine public school maintenance backlog, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine public school maintenance backlog as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "SA-5",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Housing and homelessness",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3578,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x5",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-27",
+   "side": "Opposition",
+   "speaker": "Mr J. Patel",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over housing grant probity",
+   "summary": "Members pressed the government on housing grant probity, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "SA-6",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Environment, water and energy",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3584,
+   "rep": "Desalination plant contract",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-22",
+   "side": "Government",
+   "speaker": "Hon. R. Carter",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on Desalination plant contract",
+   "summary": "The government accepted 6 of 8 recommendations from the SA Auditor-General report on Desalination plant contract and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "SA-7",
+   "jur": "SA",
+   "url": "https://www.audit.sa.gov.au",
+   "theme": "Environment, water and energy",
+   "chamber": "House of Assembly",
+   "source": "Office website",
+   "page": 3590,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "New reports",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-22",
+   "headline": "New report listed: Desalination plant contract",
+   "summary": "The SA Auditor-General website lists a new report, Desalination plant contract. It has been added to the report register.",
+   "why": "Parliament may debate it at the next sitting.",
+   "pending": false
+  },
+  {
+   "id": "SA-10",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Public finance and budget",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3608,
+   "rep": "Ambulance response times",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-27",
+   "side": "Opposition",
+   "speaker": "Ms L. Nguyen",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "SA Auditor-General cited in Appropriation Bill debate",
+   "summary": "A passing reference to the SA Auditor-General during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "SA-11",
+   "jur": "SA",
+   "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar",
+   "theme": "Health",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3614,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-22",
+   "side": "Government",
+   "speaker": "Mr D. Walsh",
+   "role": "Member",
+   "debate": "Matters of public importance",
+   "headline": "SA Auditor-General cited in matters of public importance",
+   "summary": "A passing reference to the SA Auditor-General during matters of public importance.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "WA-1",
+   "jur": "WA",
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "theme": "Digital, data and cyber",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3591,
+   "rep": "Cyber security in local government",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x3",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-23",
+   "side": "Government",
+   "speaker": "Ms T. Brennan",
+   "role": "Minister for Health",
+   "debate": "Questions without notice",
+   "headline": "Minister for Health disputes OAG WA report on Cyber security in local government",
+   "summary": "The Minister for Health rejected key findings of the OAG WA report on Cyber security in local government, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "WA-2",
+   "jur": "WA",
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "theme": "Digital, data and cyber",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3597,
+   "rep": "Cyber security in local government",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x3",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-23",
+   "side": "Opposition",
+   "speaker": "Mr S. Okafor",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites OAG WA report on Cyber security in local government",
+   "summary": "The opposition used the OAG WA report on Cyber security in local government to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "WA-3",
+   "jur": "WA",
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3603,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Governance",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-22",
+   "side": "Government",
+   "speaker": "Ms H. Reid",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Process begins to appoint the next Auditor-General",
+   "why": "The appointment sets the office’s leadership for the next term.",
+   "quote": "The committee will now begin the process of recommending the next Auditor-General.",
+   "summary": "The accountability committee announced the process and timeline for recommending the next Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "WA-4",
+   "jur": "WA",
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3609,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x4",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-22",
+   "side": "Crossbench",
+   "speaker": "Mr J. Patel",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of METRONET project costs",
+   "summary": "A crossbench member asked the Auditor-General to examine METRONET project costs, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine METRONET project costs as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "WA-5",
+   "jur": "WA",
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "theme": "Digital, data and cyber",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3615,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x3",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-23",
+   "side": "Opposition",
+   "speaker": "Hon. R. Carter",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over hospital records data breach",
+   "summary": "Members pressed the government on hospital records data breach, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "WA-6",
+   "jur": "WA",
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3621,
+   "rep": "Rail car manufacturing program",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-22",
+   "side": "Government",
+   "speaker": "Ms L. Nguyen",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on Rail car manufacturing program",
+   "summary": "The government accepted 6 of 8 recommendations from the OAG WA report on Rail car manufacturing program and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "WA-7",
+   "jur": "WA",
+   "url": "https://audit.wa.gov.au",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Assembly",
+   "source": "Office website",
+   "page": 3627,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "New reports",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-22",
+   "headline": "New report listed: Rail car manufacturing program",
+   "summary": "The OAG WA website lists a new report, Rail car manufacturing program. It has been added to the report register.",
+   "why": "Parliament may debate it at the next sitting.",
+   "pending": false
+  },
+  {
+   "id": "WA-10",
+   "jur": "WA",
+   "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3645,
+   "rep": "Cyber security in local government",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-23",
+   "side": "Opposition",
+   "speaker": "Mr D. Walsh",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "OAG WA cited in Appropriation Bill debate",
+   "summary": "A passing reference to the OAG WA during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "TAS-1",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Transport and infrastructure",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3628,
+   "rep": "Spirit of Tasmania vessel replacement",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x4",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-21",
+   "side": "Government",
+   "speaker": "Mr S. Okafor",
+   "role": "Minister for Infrastructure",
+   "debate": "Questions without notice",
+   "headline": "Minister for Infrastructure disputes Audit Tasmania report on Spirit of Tasmania vessel replacement",
+   "summary": "The Minister for Infrastructure rejected key findings of the Audit Tasmania report on Spirit of Tasmania vessel replacement, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "TAS-2",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3634,
+   "rep": "Spirit of Tasmania vessel replacement",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x4",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-21",
+   "side": "Opposition",
+   "speaker": "Ms H. Reid",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites Audit Tasmania report on Spirit of Tasmania vessel replacement",
+   "summary": "The opposition used the Audit Tasmania report on Spirit of Tasmania vessel replacement to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "TAS-3",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Integrity and governance",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3640,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Mandate",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-20",
+   "side": "Government",
+   "speaker": "Mr J. Patel",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Bill to extend Audit Tasmania follow-the-dollar powers",
+   "why": "Would let the office follow public money into contractors and grant recipients.",
+   "quote": "This bill gives the Auditor-General the power to follow the public dollar wherever it goes.",
+   "summary": "A government bill would let the Audit Tasmania audit contractors and grant recipients that deliver public services.",
+   "pending": false
+  },
+  {
+   "id": "TAS-4",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3646,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x4",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-20",
+   "side": "Crossbench",
+   "speaker": "Hon. R. Carter",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of TasPorts berth upgrade",
+   "summary": "A crossbench member asked the Auditor-General to examine TasPorts berth upgrade, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine TasPorts berth upgrade as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "TAS-5",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Transport and infrastructure",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3652,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x4",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-21",
+   "side": "Opposition",
+   "speaker": "Ms L. Nguyen",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over Macquarie Point stadium costs",
+   "summary": "Members pressed the government on Macquarie Point stadium costs, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "TAS-6",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Child protection and family services",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3658,
+   "rep": "Child safety service capacity",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-20",
+   "side": "Government",
+   "speaker": "Mr D. Walsh",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on Child safety service capacity",
+   "summary": "The government accepted 6 of 8 recommendations from the Audit Tasmania report on Child safety service capacity and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "TAS-7",
+   "jur": "TAS",
+   "url": "https://audit.tas.gov.au",
+   "theme": "Integrity and governance",
+   "chamber": "House of Assembly",
+   "source": "Office website",
+   "page": 3664,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "Program",
+   "x": null,
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-20",
+   "headline": "Auditor-General’s Annual Plan 2026–27: 2 topics added, 1 deferred",
+   "summary": "The Audit Tasmania published an updated program. Added: Major projects governance; Child safety services. One topic moved to next year.",
+   "why": "Changes what the office will report on in the next 12 months.",
+   "pending": false
+  },
+  {
+   "id": "TAS-10",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Public finance and budget",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3682,
+   "rep": "Spirit of Tasmania vessel replacement",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-21",
+   "side": "Opposition",
+   "speaker": "Hon. P. Singh",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "Audit Tasmania cited in Appropriation Bill debate",
+   "summary": "A passing reference to the Audit Tasmania during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "TAS-11",
+   "jur": "TAS",
+   "url": "https://search.parliament.tas.gov.au/adv/hahansard",
+   "theme": "Health",
+   "chamber": "House of Assembly",
+   "source": "Hansard",
+   "page": 3688,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-20",
+   "side": "Government",
+   "speaker": "Dr K. Moore",
+   "role": "Member",
+   "debate": "Matters of public importance",
+   "headline": "Audit Tasmania cited in matters of public importance",
+   "summary": "A passing reference to the Audit Tasmania during matters of public importance.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "ACT-1",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3665,
+   "rep": "Canberra Health Services procurement",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x6",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-28",
+   "side": "Government",
+   "speaker": "Ms H. Reid",
+   "role": "Minister for Health",
+   "debate": "Questions without notice",
+   "headline": "Minister for Health disputes ACT Audit Office report on Canberra Health Services procurement",
+   "summary": "The Minister for Health rejected key findings of the ACT Audit Office report on Canberra Health Services procurement, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "ACT-2",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3671,
+   "rep": "Canberra Health Services procurement",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x6",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-28",
+   "side": "Opposition",
+   "speaker": "Mr J. Patel",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites ACT Audit Office report on Canberra Health Services procurement",
+   "summary": "The opposition used the ACT Audit Office report on Canberra Health Services procurement to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "ACT-3",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3677,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Resourcing",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Hon. R. Carter",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Estimates: ACT Audit Office budget flat in real terms",
+   "why": "A flat budget may reduce the number of performance audits next year.",
+   "quote": "The audit office’s appropriation is unchanged from last year, which is a cut in real terms.",
+   "summary": "Budget estimates debate noted the ACT Audit Office appropriation is unchanged — a real-terms cut after inflation.",
+   "pending": false
+  },
+  {
+   "id": "ACT-4",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3683,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x1",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-27",
+   "side": "Crossbench",
+   "speaker": "Ms L. Nguyen",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of Canberra Hospital expansion",
+   "summary": "A crossbench member asked the Auditor-General to examine Canberra Hospital expansion, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine Canberra Hospital expansion as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "ACT-5",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3689,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x4",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-28",
+   "side": "Opposition",
+   "speaker": "Mr D. Walsh",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over light rail stage 2B costs",
+   "summary": "Members pressed the government on light rail stage 2B costs, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "ACT-6",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Digital, data and cyber",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3695,
+   "rep": "ICT project governance",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Hon. P. Singh",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on ICT project governance",
+   "summary": "The government accepted 6 of 8 recommendations from the ACT Audit Office report on ICT project governance and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "ACT-7",
+   "jur": "ACT",
+   "url": "https://www.audit.act.gov.au",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Office website",
+   "page": 3701,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "Program",
+   "x": null,
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-27",
+   "headline": "Performance Audit Program 2026–27: 2 topics added, 1 deferred",
+   "summary": "The ACT Audit Office published an updated program. Added: Transport project delivery; Health procurement. One topic moved to next year.",
+   "why": "Changes what the office will report on in the next 12 months.",
+   "pending": false
+  },
+  {
+   "id": "ACT-10",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3719,
+   "rep": "Canberra Health Services procurement",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-28",
+   "side": "Opposition",
+   "speaker": "Dr K. Moore",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "ACT Audit Office cited in Appropriation Bill debate",
+   "summary": "A passing reference to the ACT Audit Office during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "ACT-11",
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Health",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3725,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-27",
+   "side": "Government",
+   "speaker": "Ms T. Brennan",
+   "role": "Member",
+   "debate": "Matters of public importance",
+   "headline": "ACT Audit Office cited in matters of public importance",
+   "summary": "A passing reference to the ACT Audit Office during matters of public importance.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Relies on the office’s work as evidence",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "NT-1",
+   "jur": "NT",
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "theme": "Housing and homelessness",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3702,
+   "rep": "Remote housing program",
+   "ofc": true,
+   "sent": "negative",
+   "devType": null,
+   "x": "x5",
+   "feat": "F1",
+   "sig": 5,
+   "date": "2026-10-15",
+   "side": "Government",
+   "speaker": "Mr J. Patel",
+   "role": "Minister for Housing",
+   "debate": "Questions without notice",
+   "headline": "Minister for Housing disputes NT Auditor-General report on Remote housing program",
+   "summary": "The Minister for Housing rejected key findings of the NT Auditor-General report on Remote housing program, saying it relied on outdated data and overlooked recent changes.",
+   "why": "A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.",
+   "reason": "Disputes the accuracy of the report’s data",
+   "quote": "With respect, the Auditor-General has relied on figures that are simply out of date.",
+   "pending": false
+  },
+  {
+   "id": "NT-2",
+   "jur": "NT",
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "theme": "Housing and homelessness",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3708,
+   "rep": "Remote housing program",
+   "ofc": true,
+   "sent": "positive",
+   "devType": null,
+   "x": "x5",
+   "feat": "F2",
+   "sig": 4,
+   "date": "2026-10-15",
+   "side": "Opposition",
+   "speaker": "Hon. R. Carter",
+   "role": "Shadow minister",
+   "debate": "Matters of public importance",
+   "headline": "Opposition cites NT Auditor-General report on Remote housing program",
+   "summary": "The opposition used the NT Auditor-General report on Remote housing program to argue the program is failing, and called for its recommendations to be adopted in full.",
+   "why": "The report is now part of the political debate. Expect more questions while Parliament sits.",
+   "reason": "Relies on the report’s findings as evidence",
+   "quote": "The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.",
+   "pending": false
+  },
+  {
+   "id": "NT-3",
+   "jur": "NT",
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "theme": "Integrity and governance",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3714,
+   "rep": null,
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Governance",
+   "x": null,
+   "feat": "F3",
+   "sig": 5,
+   "date": "2026-10-14",
+   "side": "Government",
+   "speaker": "Ms L. Nguyen",
+   "role": "Member",
+   "debate": "Second reading",
+   "reason": "Factual description, no view on the office",
+   "headline": "Process begins to appoint the next Auditor-General",
+   "why": "The appointment sets the office’s leadership for the next term.",
+   "quote": "The committee will now begin the process of recommending the next Auditor-General.",
+   "summary": "The accountability committee announced the process and timeline for recommending the next Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "NT-4",
+   "jur": "NT",
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "theme": "Transport and infrastructure",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3720,
+   "rep": null,
+   "ofc": true,
+   "sent": "positive",
+   "devType": "Audit requests",
+   "x": "x4",
+   "feat": "F3",
+   "sig": 4,
+   "date": "2026-10-14",
+   "side": "Crossbench",
+   "speaker": "Mr D. Walsh",
+   "role": "Independent member",
+   "debate": "Members’ statements",
+   "headline": "Call for an audit of remote roads maintenance",
+   "summary": "A crossbench member asked the Auditor-General to examine remote roads maintenance, citing rising costs and poor public reporting.",
+   "why": "A public call for an audit. Check whether it fits the forward program.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "I call on the Auditor-General to examine remote roads maintenance as a matter of urgency.",
+   "pending": false
+  },
+  {
+   "id": "NT-5",
+   "jur": "NT",
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "theme": "Justice, police and corrections",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3726,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": null,
+   "x": "x7",
+   "feat": "F4",
+   "sig": 3,
+   "date": "2026-10-15",
+   "side": "Opposition",
+   "speaker": "Hon. P. Singh",
+   "role": "Member",
+   "debate": "Questions without notice",
+   "headline": "Questions raised over youth detention facility costs",
+   "summary": "Members pressed the government on youth detention facility costs, citing cost and timing figures not yet publicly reported.",
+   "why": "Not covered by the current audit program, and raised more than once this period.",
+   "quote": "Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.",
+   "pending": false
+  },
+  {
+   "id": "NT-6",
+   "jur": "NT",
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3732,
+   "rep": "Darwin ship lift contract",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": "Responses",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-14",
+   "side": "Government",
+   "speaker": "Dr K. Moore",
+   "role": "Minister",
+   "debate": "Ministerial statement",
+   "headline": "Government responds to recommendations on Darwin ship lift contract",
+   "summary": "The government accepted 6 of 8 recommendations from the NT Auditor-General report on Darwin ship lift contract and gave timelines for the rest.",
+   "why": "Sets the baseline for any follow-up audit of this report.",
+   "reason": "Reports progress on recommendations",
+   "quote": "The government has accepted six of the eight recommendations made by the Auditor-General.",
+   "pending": false
+  },
+  {
+   "id": "NT-7",
+   "jur": "NT",
+   "url": "https://ago.nt.gov.au",
+   "theme": "Procurement, grants and contracts",
+   "chamber": "Legislative Assembly",
+   "source": "Office website",
+   "page": 3738,
+   "rep": null,
+   "ofc": false,
+   "sent": null,
+   "devType": "New reports",
+   "x": null,
+   "feat": "F3",
+   "sig": 3,
+   "date": "2026-10-14",
+   "headline": "New report listed: Darwin ship lift contract",
+   "summary": "The NT Auditor-General website lists a new report, Darwin ship lift contract. It has been added to the report register.",
+   "why": "Parliament may debate it at the next sitting.",
+   "pending": false
+  },
+  {
+   "id": "NT-10",
+   "jur": "NT",
+   "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3756,
+   "rep": "Remote housing program",
+   "ofc": true,
+   "sent": "neutral",
+   "devType": null,
+   "x": null,
+   "feat": "F1",
+   "sig": 2,
+   "date": "2026-10-15",
+   "side": "Opposition",
+   "speaker": "Ms T. Brennan",
+   "role": "Member",
+   "debate": "Appropriation Bill debate",
+   "headline": "NT Auditor-General cited in Appropriation Bill debate",
+   "summary": "A passing reference to the NT Auditor-General during Appropriation Bill debate.",
+   "why": "Background mention, included in counts and sentiment.",
+   "reason": "Factual reference only",
+   "quote": "As the Auditor-General has noted, the reporting on this program has been inconsistent.",
+   "pending": false
+  },
+  {
+   "id": "CTH-p1",
+   "pending": true,
+   "jur": "CTH",
+   "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard",
+   "theme": "Public finance and budget",
+   "chamber": "Senate",
+   "source": "Hansard",
+   "page": 3600,
+   "feat": "F1",
+   "sig": 4,
+   "date": "2026-10-30",
+   "sent": "positive",
+   "ofc": true,
+   "rep": null,
+   "x": null,
+   "side": "Government",
+   "speaker": "Mr D. Walsh",
+   "role": "Treasurer",
+   "debate": "Budget update debate",
+   "headline": "Treasurer relies on ANAO findings in budget update",
+   "summary": "The Treasurer cited the ANAO to justify new reporting requirements for major projects.",
+   "why": "A government relying on audit findings strengthens the office’s standing in debate.",
+   "reason": "Endorses the office’s findings",
+   "quote": "The Auditor-General has shown us where the reporting falls short, and we are acting on it."
+  },
+  {
+   "id": "NSW-p1",
+   "pending": true,
+   "jur": "NSW",
+   "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3611,
+   "feat": "F1",
+   "sig": 4,
+   "date": "2026-10-30",
+   "sent": "positive",
+   "ofc": true,
+   "rep": null,
+   "x": null,
+   "side": "Government",
+   "speaker": "Hon. P. Singh",
+   "role": "Treasurer",
+   "debate": "Budget update debate",
+   "headline": "Treasurer relies on Audit Office NSW findings in budget update",
+   "summary": "The Treasurer cited the Audit Office NSW to justify new reporting requirements for major projects.",
+   "why": "A government relying on audit findings strengthens the office’s standing in debate.",
+   "reason": "Endorses the office’s findings",
+   "quote": "The Auditor-General has shown us where the reporting falls short, and we are acting on it."
+  },
+  {
+   "id": "VIC-p1",
+   "pending": true,
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3622,
+   "feat": "F1",
+   "sig": 4,
+   "date": "2026-10-30",
+   "sent": "positive",
+   "ofc": true,
+   "rep": null,
+   "x": null,
+   "side": "Government",
+   "speaker": "Dr K. Moore",
+   "role": "Treasurer",
+   "debate": "Budget update debate",
+   "headline": "Treasurer relies on VAGO findings in budget update",
+   "summary": "The Treasurer cited the VAGO to justify new reporting requirements for major projects.",
+   "why": "A government relying on audit findings strengthens the office’s standing in debate.",
+   "reason": "Endorses the office’s findings",
+   "quote": "The Auditor-General has shown us where the reporting falls short, and we are acting on it."
+  },
+  {
+   "id": "ACT-p1",
+   "pending": true,
+   "jur": "ACT",
+   "url": "https://hansard.act.gov.au/",
+   "theme": "Public finance and budget",
+   "chamber": "Legislative Assembly",
+   "source": "Hansard",
+   "page": 3633,
+   "feat": "F1",
+   "sig": 4,
+   "date": "2026-10-30",
+   "sent": "positive",
+   "ofc": true,
+   "rep": null,
+   "x": null,
+   "side": "Government",
+   "speaker": "Ms T. Brennan",
+   "role": "Treasurer",
+   "debate": "Budget update debate",
+   "headline": "Treasurer relies on ACT Audit Office findings in budget update",
+   "summary": "The Treasurer cited the ACT Audit Office to justify new reporting requirements for major projects.",
+   "why": "A government relying on audit findings strengthens the office’s standing in debate.",
+   "reason": "Endorses the office’s findings",
+   "quote": "The Auditor-General has shown us where the reporting falls short, and we are acting on it."
+  },
+  {
+   "id": "VIC-p2",
+   "pending": true,
+   "jur": "VIC",
+   "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate",
+   "theme": "Health",
+   "chamber": "Legislative Council",
+   "source": "Hansard",
+   "page": 3655,
+   "feat": "F3",
+   "devType": "Audit requests",
+   "sig": 4,
+   "date": "2026-10-30",
+   "sent": "positive",
+   "ofc": true,
+   "rep": null,
+   "x": "x1",
+   "side": "Opposition",
+   "speaker": "Ms T. Brennan",
+   "role": "Member",
+   "debate": "Motions",
+   "headline": "Motion asks VAGO to examine hospital capacity data",
+   "summary": "An opposition motion asks the Auditor-General to examine how hospital capacity data is collected and reported.",
+   "why": "A formal request in your topic area. Check against your Hospital capacity planning topic.",
+   "reason": "Asks the Auditor-General to investigate",
+   "quote": "This House calls on the Auditor-General to examine the hospital capacity data the government relies on."
+  }
+ ],
+ "gaps": [
+  {
+   "id": "CTH-g1",
+   "jur": "CTH",
+   "issue": "NDIS provider fraud controls",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 20
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 14
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 10
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 9
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 87,
+   "coverage": "not_covered",
+   "ev": [
+    "CTH-5",
+    "CTH-11",
+    "CTH-13",
+    "CTH-15"
+   ],
+   "closest": "Closest topic: Fraud control in the NDIS",
+   "why": "It covers fraud control in the NDIS broadly, but not NDIS provider fraud controls.",
+   "x": "x8",
+   "lastAudited": "",
+   "theme": "Disability and NDIS"
+  },
+  {
+   "id": "CTH-g2",
+   "jur": "CTH",
+   "issue": "Defence consultant spend",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 14
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 10
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 62,
+   "coverage": "partly",
+   "ev": [
+    "CTH-4"
+   ],
+   "closest": "Closest topic: Defence contractor management (in progress)",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x6",
+   "lastAudited": "",
+   "theme": "Procurement, grants and contracts"
+  },
+  {
+   "id": "CTH-g3",
+   "jur": "CTH",
+   "issue": "aged care workforce visas",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 11
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 49,
+   "coverage": "not_covered",
+   "ev": [
+    "CTH-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Health"
+  },
+  {
+   "id": "NSW-g1",
+   "jur": "NSW",
+   "issue": "regional grants probity",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 19
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 9
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 80,
+   "coverage": "not_covered",
+   "ev": [
+    "NSW-5",
+    "NSW-11",
+    "NSW-13"
+   ],
+   "closest": "Closest topic: Grants administration",
+   "why": "It covers grants administration broadly, but not regional grants probity.",
+   "x": "x2",
+   "lastAudited": "",
+   "theme": "Procurement, grants and contracts"
+  },
+  {
+   "id": "NSW-g2",
+   "jur": "NSW",
+   "issue": "Sydney Metro contract variations",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 15
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 10
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 67,
+   "coverage": "partly",
+   "ev": [
+    "NSW-4"
+   ],
+   "closest": "Closest topic: Major transport contracts (in progress)",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "NSW-g3",
+   "jur": "NSW",
+   "issue": "hospital car park fees",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 10
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 3
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 43,
+   "coverage": "not_covered",
+   "ev": [
+    "NSW-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Health"
+  },
+  {
+   "id": "VIC-g1",
+   "jur": "VIC",
+   "issue": "level crossing removal cost overruns",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 20
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 14
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 10
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 9
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 88,
+   "coverage": "not_covered",
+   "ev": [
+    "VIC-5",
+    "VIC-11",
+    "VIC-13"
+   ],
+   "closest": "Closest topic: Transport infrastructure delivery",
+   "why": "It covers transport infrastructure delivery broadly, but not level crossing removal cost overruns.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "VIC-g2",
+   "jur": "VIC",
+   "issue": "major events funding",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 15
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 10
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 66,
+   "coverage": "partly",
+   "ev": [
+    "VIC-4"
+   ],
+   "closest": "Closest topic: Hospital capacity planning (in progress)",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x2",
+   "lastAudited": "",
+   "theme": "Procurement, grants and contracts"
+  },
+  {
+   "id": "VIC-g3",
+   "jur": "VIC",
+   "issue": "ambulance ramping data quality",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 11
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 48,
+   "coverage": "not_covered",
+   "ev": [
+    "VIC-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Health"
+  },
+  {
+   "id": "QLD-g1",
+   "jur": "QLD",
+   "issue": "Olympic venue cost estimates",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 19
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 9
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 82,
+   "coverage": "not_covered",
+   "ev": [
+    "QLD-5",
+    "QLD-11"
+   ],
+   "closest": "Closest topic: Major infrastructure planning",
+   "why": "It covers major infrastructure planning broadly, but not Olympic venue cost estimates.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "QLD-g2",
+   "jur": "QLD",
+   "issue": "youth justice program outcomes",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 13
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 57,
+   "coverage": "partly",
+   "ev": [
+    "QLD-4"
+   ],
+   "closest": "Closest topic: Youth justice services (in progress)",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x7",
+   "lastAudited": "",
+   "theme": "Justice, police and corrections"
+  },
+  {
+   "id": "QLD-g3",
+   "jur": "QLD",
+   "issue": "floodplain buyback program",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 10
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 3
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 43,
+   "coverage": "not_covered",
+   "ev": [
+    "QLD-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Emergency management"
+  },
+  {
+   "id": "SA-g1",
+   "jur": "SA",
+   "issue": "housing grant probity",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 17
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 9
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 76,
+   "coverage": "not_covered",
+   "ev": [
+    "SA-5",
+    "SA-11"
+   ],
+   "closest": "Closest recent report: Ambulance response times",
+   "why": "No published program. The closest recent report doesn’t examine this issue.",
+   "x": "x5",
+   "lastAudited": "",
+   "theme": "Housing and homelessness"
+  },
+  {
+   "id": "SA-g2",
+   "jur": "SA",
+   "issue": "public school maintenance backlog",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 13
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 55,
+   "coverage": "partly",
+   "ev": [
+    "SA-4"
+   ],
+   "closest": "Closest recent report: Desalination plant contract",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x10",
+   "lastAudited": "",
+   "theme": "Education and training"
+  },
+  {
+   "id": "SA-g3",
+   "jur": "SA",
+   "issue": "Port Adelaide redevelopment costs",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 10
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 3
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 42,
+   "coverage": "not_covered",
+   "ev": [
+    "SA-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "WA-g1",
+   "jur": "WA",
+   "issue": "hospital records data breach",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 18
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 9
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 79,
+   "coverage": "not_covered",
+   "ev": [
+    "WA-5"
+   ],
+   "closest": "Closest recent report: Cyber security in local government",
+   "why": "No published program. The closest recent report doesn’t examine this issue.",
+   "x": "x3",
+   "lastAudited": "",
+   "theme": "Digital, data and cyber"
+  },
+  {
+   "id": "WA-g2",
+   "jur": "WA",
+   "issue": "METRONET project costs",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 13
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 54,
+   "coverage": "partly",
+   "ev": [
+    "WA-4"
+   ],
+   "closest": "Closest recent report: Rail car manufacturing program",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "WA-g3",
+   "jur": "WA",
+   "issue": "regional water infrastructure",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 11
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 3
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 45,
+   "coverage": "not_covered",
+   "ev": [
+    "WA-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Environment, water and energy"
+  },
+  {
+   "id": "TAS-g1",
+   "jur": "TAS",
+   "issue": "Macquarie Point stadium costs",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 19
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 13
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 9
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 81,
+   "coverage": "not_covered",
+   "ev": [
+    "TAS-5",
+    "TAS-11"
+   ],
+   "closest": "Closest topic: Major projects governance",
+   "why": "It covers major projects governance broadly, but not Macquarie Point stadium costs.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "TAS-g2",
+   "jur": "TAS",
+   "issue": "TasPorts berth upgrade",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 13
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 55,
+   "coverage": "partly",
+   "ev": [
+    "TAS-4"
+   ],
+   "closest": "Closest topic: Child safety services (in progress)",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "TAS-g3",
+   "jur": "TAS",
+   "issue": "Hydro Tasmania asset maintenance",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 10
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 3
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 43,
+   "coverage": "not_covered",
+   "ev": [
+    "TAS-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Environment, water and energy"
+  },
+  {
+   "id": "ACT-g1",
+   "jur": "ACT",
+   "issue": "light rail stage 2B costs",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 17
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 12
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 10
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 73,
+   "coverage": "not_covered",
+   "ev": [
+    "ACT-5",
+    "ACT-11"
+   ],
+   "closest": "Closest topic: Transport project delivery",
+   "why": "It covers transport project delivery broadly, but not light rail stage 2B costs.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "ACT-g2",
+   "jur": "ACT",
+   "issue": "Canberra Hospital expansion",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 12
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 9
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 53,
+   "coverage": "partly",
+   "ev": [
+    "ACT-4"
+   ],
+   "closest": "Closest topic: Health procurement (in progress)",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x1",
+   "lastAudited": "",
+   "theme": "Health"
+  },
+  {
+   "id": "ACT-g3",
+   "jur": "ACT",
+   "issue": "public housing renewal",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 9
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 5
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 3
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 38,
+   "coverage": "not_covered",
+   "ev": [
+    "ACT-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "Housing and homelessness"
+  },
+  {
+   "id": "NT-g1",
+   "jur": "NT",
+   "issue": "youth detention facility costs",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 16
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 11
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 10
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 8
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 7
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 2
+    }
+   ],
+   "score": 70,
+   "coverage": "not_covered",
+   "ev": [
+    "NT-5"
+   ],
+   "closest": "Closest recent report: Remote housing program",
+   "why": "No published program. The closest recent report doesn’t examine this issue.",
+   "x": "x7",
+   "lastAudited": "",
+   "theme": "Justice, police and corrections"
+  },
+  {
+   "id": "NT-g2",
+   "jur": "NT",
+   "issue": "remote roads maintenance",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 12
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 8
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 7
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 6
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 5
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 51,
+   "coverage": "partly",
+   "ev": [
+    "NT-4"
+   ],
+   "closest": "Closest recent report: Darwin ship lift contract",
+   "why": "Covers part of the issue, but not the contract and cost concerns raised in debate.",
+   "x": "x4",
+   "lastAudited": "",
+   "theme": "Transport and infrastructure"
+  },
+  {
+   "id": "NT-g3",
+   "jur": "NT",
+   "issue": "remote clinic staffing",
+   "parts": [
+    {
+     "n": "Volume",
+     "w": 20,
+     "v": 9
+    },
+    {
+     "n": "Breadth",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Intensity",
+     "w": 15,
+     "v": 6
+    },
+    {
+     "n": "Forum",
+     "w": 15,
+     "v": 5
+    },
+    {
+     "n": "Recency",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Materiality",
+     "w": 10,
+     "v": 4
+    },
+    {
+     "n": "Audit requests",
+     "w": 10,
+     "v": 3
+    },
+    {
+     "n": "Echo in other parliaments",
+     "w": 5,
+     "v": 1
+    }
+   ],
+   "score": 38,
+   "coverage": "not_covered",
+   "ev": [
+    "NT-10"
+   ],
+   "closest": "No close match",
+   "why": "No planned topic or recent report covers this area.",
+   "x": null,
+   "lastAudited": "Last audited: 2021",
+   "theme": "First Nations outcomes"
+  }
+ ],
+ "reports": [
+  {
+   "id": "CTH-r0",
+   "jur": "CTH",
+   "no": "No. 14",
+   "title": "Administration of the Community Grants Hub",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "CTH-r1",
+   "jur": "CTH",
+   "no": "No. 13",
+   "title": "Defence major projects report",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "CTH-r2",
+   "jur": "CTH",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "CTH-r3",
+   "jur": "CTH",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "CTH-r4",
+   "jur": "CTH",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "NSW-r0",
+   "jur": "NSW",
+   "no": "No. 14",
+   "title": "Rail fleet maintenance",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Transport and infrastructure"
+  },
+  {
+   "id": "NSW-r1",
+   "jur": "NSW",
+   "no": "No. 13",
+   "title": "School infrastructure delivery",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Education and training"
+  },
+  {
+   "id": "NSW-r2",
+   "jur": "NSW",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "NSW-r3",
+   "jur": "NSW",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "NSW-r4",
+   "jur": "NSW",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "VIC-r0",
+   "jur": "VIC",
+   "no": "No. 14",
+   "title": "Emergency department wait times",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Health"
+  },
+  {
+   "id": "VIC-r1",
+   "jur": "VIC",
+   "no": "No. 13",
+   "title": "Social housing maintenance",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Housing and homelessness"
+  },
+  {
+   "id": "VIC-r2",
+   "jur": "VIC",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "VIC-r3",
+   "jur": "VIC",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "VIC-r4",
+   "jur": "VIC",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "QLD-r0",
+   "jur": "QLD",
+   "no": "No. 14",
+   "title": "Managing hospital ramping",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Health"
+  },
+  {
+   "id": "QLD-r1",
+   "jur": "QLD",
+   "no": "No. 13",
+   "title": "Youth justice reforms",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Justice, police and corrections"
+  },
+  {
+   "id": "QLD-r2",
+   "jur": "QLD",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "QLD-r3",
+   "jur": "QLD",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "QLD-r4",
+   "jur": "QLD",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "SA-r0",
+   "jur": "SA",
+   "no": "No. 14",
+   "title": "Ambulance response times",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Health"
+  },
+  {
+   "id": "SA-r1",
+   "jur": "SA",
+   "no": "No. 13",
+   "title": "Desalination plant contract",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Environment, water and energy"
+  },
+  {
+   "id": "SA-r2",
+   "jur": "SA",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "SA-r3",
+   "jur": "SA",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "SA-r4",
+   "jur": "SA",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "WA-r0",
+   "jur": "WA",
+   "no": "No. 14",
+   "title": "Cyber security in local government",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Digital, data and cyber"
+  },
+  {
+   "id": "WA-r1",
+   "jur": "WA",
+   "no": "No. 13",
+   "title": "Rail car manufacturing program",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Transport and infrastructure"
+  },
+  {
+   "id": "WA-r2",
+   "jur": "WA",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "WA-r3",
+   "jur": "WA",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "WA-r4",
+   "jur": "WA",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "TAS-r0",
+   "jur": "TAS",
+   "no": "No. 14",
+   "title": "Spirit of Tasmania vessel replacement",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Transport and infrastructure"
+  },
+  {
+   "id": "TAS-r1",
+   "jur": "TAS",
+   "no": "No. 13",
+   "title": "Child safety service capacity",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Child protection and family services"
+  },
+  {
+   "id": "TAS-r2",
+   "jur": "TAS",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "TAS-r3",
+   "jur": "TAS",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "TAS-r4",
+   "jur": "TAS",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "ACT-r0",
+   "jur": "ACT",
+   "no": "No. 14",
+   "title": "Canberra Health Services procurement",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "ACT-r1",
+   "jur": "ACT",
+   "no": "No. 13",
+   "title": "ICT project governance",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Digital, data and cyber"
+  },
+  {
+   "id": "ACT-r2",
+   "jur": "ACT",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "ACT-r3",
+   "jur": "ACT",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "ACT-r4",
+   "jur": "ACT",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "NT-r0",
+   "jur": "NT",
+   "no": "No. 14",
+   "title": "Remote housing program",
+   "tabled": "Thu 17 Sep 2026",
+   "sector": "Housing and homelessness"
+  },
+  {
+   "id": "NT-r1",
+   "jur": "NT",
+   "no": "No. 13",
+   "title": "Darwin ship lift contract",
+   "tabled": "Wed 2 Sep 2026",
+   "sector": "Procurement, grants and contracts"
+  },
+  {
+   "id": "NT-r2",
+   "jur": "NT",
+   "no": "No. 12",
+   "title": "Results of 2025–26 financial audits",
+   "tabled": "Thu 20 Aug 2026",
+   "sector": "Public finance and budget"
+  },
+  {
+   "id": "NT-r3",
+   "jur": "NT",
+   "no": "No. 11",
+   "title": "Fraud and corruption controls",
+   "tabled": "Wed 5 Aug 2026",
+   "sector": "Integrity and governance"
+  },
+  {
+   "id": "NT-r4",
+   "jur": "NT",
+   "no": "No. 10",
+   "title": "Managing contractors and consultants",
+   "tabled": "Thu 18 Jun 2026",
+   "sector": "Procurement, grants and contracts"
+  }
+ ],
+ "sectors": [
+  {
+   "name": "Health",
+   "short": "Health"
+  },
+  {
+   "name": "Education and training",
+   "short": "Education"
+  },
+  {
+   "name": "Transport and infrastructure",
+   "short": "Transport & infrastructure"
+  },
+  {
+   "name": "Housing and homelessness",
+   "short": "Housing"
+  },
+  {
+   "name": "Justice, police and corrections",
+   "short": "Justice & corrections"
+  },
+  {
+   "name": "Child protection and family services",
+   "short": "Child protection"
+  },
+  {
+   "name": "Disability and NDIS",
+   "short": "Disability & NDIS"
+  },
+  {
+   "name": "Local government",
+   "short": "Local government"
+  },
+  {
+   "name": "Environment, water and energy",
+   "short": "Environment, water & energy"
+  },
+  {
+   "name": "Digital, data and cyber",
+   "short": "Digital & cyber"
+  },
+  {
+   "name": "Public finance and budget",
+   "short": "Public finance"
+  },
+  {
+   "name": "Procurement, grants and contracts",
+   "short": "Procurement & grants"
+  },
+  {
+   "name": "Integrity and governance",
+   "short": "Integrity & governance"
+  },
+  {
+   "name": "Public sector workforce",
+   "short": "Public sector workforce"
+  },
+  {
+   "name": "Emergency management",
+   "short": "Emergency management"
+  },
+  {
+   "name": "First Nations outcomes",
+   "short": "First Nations outcomes"
+  }
+ ],
+ "upcomingSittings": [
+  {
+   "d": "Tue 3 Nov",
+   "p": "NSW · Vic · Cth Senate"
+  },
+  {
+   "d": "Wed 4 Nov",
+   "p": "Qld · SA"
+  },
+  {
+   "d": "Tue 10 Nov",
+   "p": "ACT · Tas"
+  },
+  {
+   "d": "Tue 17 Nov",
+   "p": "NT"
+  }
+ ],
+ "scanResults": {
+  "CTH": "1 new sitting day · 1 new item",
+  "NSW": "1 new sitting day · 1 new item",
+  "VIC": "1 new sitting day · 2 new items",
+  "QLD": "1 proof replaced by final · no changes",
+  "SA": "No new sitting days",
+  "WA": "Not checked — access blocked",
+  "TAS": "Not sitting",
+  "ACT": "1 new sitting day · 1 new item",
+  "NT": "Not sitting",
+  "REG": "1 new ACT Audit Office report · QAO program unchanged"
+ }
+}
