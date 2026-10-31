@@ -1,5 +1,39 @@
 # Progress
 
+## 1 Nov 2026: the SA connector (listing complete) — and Tasmania was already built
+
+### Done
+
+- **`backend/connectors/sa.py`** — South Australia, both houses, on URL shapes **confirmed in the wild** by public search rather than inferred: the day table of contents `/daily/{lh|uh}/{YYYY-MM-DD}/download/toc` and each subject extract `/daily/{lh|uh}/{YYYY-MM-DD}/extract/{n}/download`. Confirming those first is what made SA buildable; yesterday only the per-subject URL (which carries an item id) was known.
+  - **Sitting days** by HEAD-probing each weekday's day TOC per house, so neither the WAF-protected calendar nor the OpenAPI spec is needed to find days.
+  - **Documents:** the day TOC as XML, keyed `toc:{source}:{date}`; its subjects are fetched as parts, as the NSW topic fragments are.
+  - **Recent days stay open** (`settled_through`, 3 days): SA publishes "after 4pm on the day following the sitting", so a fresh 404 is not "no sitting".
+  - **A refusal is never an empty calendar:** Azure WAF 403 → `Blocked`, anything else unexpected → `CouldNotCheck`.
+  - **The reader is not written, and `citation_url` is deliberately left unset** rather than guessed: the TOC's element names and the reader-facing day URL are both still unknown (D6).
+- **Tasmania was not rebuilt, because it already exists** and is the most complete of the nine in some ways: `backend/connectors/tas.py` (261 lines) is registered, both chambers are enabled, and 12 tests pass against **real .docx fixtures** — sections, topics, Question Time with supplementaries, Council headers, times, draft flag and speaker sides.
+  - Tasmania's gap is not a missing connector but its site: the ISYS search application has been returning empty pages since 31 Oct. Nothing in the code would change that, and the empty-page fix already holds the watermark and retries.
+  - The one new thing that *could* be built for Tasmania — a fallback to the Parliament's static daily PDFs — is blocked on exactly what Victoria and WA are blocked on: Cloudflare refuses the host here, and no real PDF exists to write the reader against. Building it on a guess would be the same mistake as writing a parser blind.
+
+### Evidence
+
+- `make test`: 157 backend tests pass, including 6 new for SA with no fixture and no network: URL derivation for both houses (asserted against the two search-confirmed examples), per-house weekday probing (10 HEAD probes over a Sat–Fri week, nothing downloaded), a house that did not sit, the settle window, WAF 403 → `Blocked` and 500 → `CouldNotCheck`, and the reader's refusal with `citation_url` unset.
+
+### Where the nine stand
+
+| | Connector | What it needs |
+|---|---|---|
+| CTH, NSW, QLD, ACT, NT | complete | nothing — scanning now |
+| TAS | **complete, with real fixtures** | its own site to come back |
+| WA | listing complete | one real daily PDF |
+| SA | listing complete | one real day TOC |
+| VIC | listing complete (staff-copied links) | one real daily PDF |
+
+### Next
+
+- Three parliaments now wait on exactly one real file each. Any of them can be finished in an afternoon once that file exists, by `make import` or by a scan from a network the site serves.
+
+---
+
 ## 1 Nov 2026: the WA connector (listing complete; only the PDF reader is left)
 
 ### Done

@@ -316,7 +316,13 @@ What the saved fixtures showed:
   - **`www.parliament.sa.gov.au` is fully reachable from here** — HTTP 200, 51,250 bytes for `/About-Parliament/Hansard`, served by Microsoft-IIS/10.0, with `robots.txt` a 404 (so no rules). The bare `parliament.sa.gov.au` 301s to it through an Azure Application Gateway.
   - **But it holds no Hansard.** Of its 111 links, every Hansard one points at `hansardsearch.parliament.sa.gov.au` (`/search`, `/search/calendar`, `/search/secondreadings`, `/search/indicies`). The page carries only the description, the publishing time ("after 4pm on the day following the sitting") and the terms.
   - **`hansardsearch.parliament.sa.gov.au` answers 403 with a page whose title is literally `Azure WAF`** — `robots.txt`, `/docs/api` and a real daily URL (`/daily/lh/2025-09-16/296`) alike. The challenge carries no script, so there is nothing a polite client can satisfy.
-  - **The daily URL scheme is confirmed in the wild** by public search: `/daily/{lh|uh}/{YYYY-MM-DD}/{n}`, date-predictable apart from the trailing item id.
+  - **The daily URL scheme is confirmed in the wild** by public search: `/daily/{lh|uh}/{YYYY-MM-DD}/{n}`, date-predictable apart from the trailing item id. Two more shapes are confirmed the same way, and these need no item id: the **day table of contents** `/daily/{lh|uh}/{YYYY-MM-DD}/download/toc` (e.g. `uh` 19 Nov 2015) and each **subject extract** `/daily/{lh|uh}/{YYYY-MM-DD}/extract/{n}/download` (many, 2008–2025).
+- **Connector built (Phase 2): `backend/connectors/sa.py`, listing only.**
+  - **Sitting days by HEAD-probing each weekday's day TOC** for both houses (200 = sat, 404 = no sitting). No listing page and no API key are involved, so neither the WAF-protected calendar nor the OpenAPI spec is needed to find days.
+  - **Documents:** the day TOC as XML, keyed `toc:{source}:{date}`; its subjects are then fetched as parts from `/extract/{n}/download`, as the NSW topic fragments are.
+  - **Recent days stay open:** Hansard appears "after 4pm on the day following the sitting", so `settled_through` holds the watermark 3 days back and a day not yet published cannot be read as "no sitting".
+  - **A refusal is never an empty calendar:** the Azure WAF 403 reaches sync as `Blocked`, any other unexpected status as `CouldNotCheck`.
+  - **Still unknown, so the reader is not written (D6):** the TOC's own element names, and the reader-facing day URL that speeches should cite — `citation_url` is deliberately left unset rather than guessed. `parse` says so and the connector is not in `registry()`.
 
 ### WA: Legislative Assembly (`WA-LA`, `lh`) and Legislative Council (`WA-LC`, `uh`)
 
