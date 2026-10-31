@@ -208,7 +208,9 @@ parliaments:
           There have been no Greens ministers this term. The Greens ended talks on a new
           confidence-and-supply agreement on 16 Sep 2026, so Labor governs without a formal
           agreement. The Greens (4) count as crossbench either way, as do independents
-          Fiona Carrick and Thomas Emerson.
+          Fiona Carrick and Thomas Emerson. The member list (config/members/ACT.yaml, a
+          secondary source) records Leanne Castley as having left the Liberals in 2026:
+          confirm from a primary source.
         confidence: high
     party_codes: {}   # ACT Hansard names speaker, electorate and role but no party (live check 31 Oct 2026): use a 25-member map
 

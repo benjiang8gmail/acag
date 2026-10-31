@@ -1,4 +1,4 @@
-.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password recon scan backfill
+.PHONY: setup dev api web build serve test test-backend test-web e2e migrate secret set-password recon scan backfill members sides
 
 UV := cd backend && UV_SYSTEM_CERTS=1 uv run
 
@@ -50,3 +50,11 @@ set-password:     ## Prompt for the password and print APP_PASSWORD_HASH for .en
 
 recon:            ## Phase 0: capture source fixtures politely (robots.txt, >=2 s per host); needs network access to the parliament and office hosts
 	python3 -I scripts/recon_fetch.py --batch scripts/recon_batch.tsv --log docs/recon/recon-$$(date +%Y-%m-%d).jsonl
+
+members:          ## Rebuild config/members/*.yaml from the parliaments' member lists (fetched politely)
+	mkdir -p data/members-src
+	python3 -I scripts/recon_fetch.py --batch scripts/members_batch.tsv --log docs/recon/members-$$(date +%Y-%m-%d).jsonl
+	$(UV) python -I ../scripts/build_members.py ../data/members-src
+
+sides:            ## Recompute party and speaker side for stored speeches after a members or governments change
+	$(UV) python -m app.cli sides

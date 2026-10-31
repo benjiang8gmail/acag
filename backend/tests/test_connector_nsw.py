@@ -266,6 +266,14 @@ def test_sync_stores_the_day_then_a_recheck_costs_one_request(tmp_path, monkeypa
             assert doc.doc_key == "toc:NSW-LA:2026-10-22"
             sloane = s.scalar(select(Speech).where(Speech.speaker_id == "2288"))
             assert sloane.speaker_name == "Ms KELLIE SLOANE"
+            # Party comes from the member list (NSW Hansard doesn't print it); side is computed at ingest.
+            assert (sloane.party, sloane.speaker_side) == ("LIB", "opposition")
+            sloane.speaker_side = "government"   # simulate a stale value…
+            s.commit()
+        from pipeline.sync import recompute_sides
+        assert recompute_sides() >= 1           # …which a recompute puts right
+        with db.session() as s:
+            assert s.scalar(select(Speech.speaker_side).where(Speech.speaker_id == "2288")) == "opposition"
 
         site.hits.clear()
         run = run_scan(today=D, connectors=[NSWConnector(fetcher)], fetcher=fetcher)

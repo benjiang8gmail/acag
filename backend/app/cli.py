@@ -32,8 +32,14 @@ def main() -> None:
                   "connector passes its real-fixture tests (docs/sources.md).")
         for sid, c in run.per_source_json.items():
             print(f"  {sid}: {json.dumps(c)}")
+    elif cmd == "sides":
+        from .main import migrate
+        from pipeline.sync import recompute_sides
+
+        migrate()
+        print(f"Updated party or speaker side on {recompute_sides()} speeches.")
     else:
-        sys.exit("usage: python -m app.cli secret|hash-password|scan|backfill")
+        sys.exit("usage: python -m app.cli secret|hash-password|scan|backfill|sides")
 
 
 if __name__ == "__main__":

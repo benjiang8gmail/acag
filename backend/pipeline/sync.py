@@ -15,6 +15,7 @@ For each enabled source:
 from __future__ import annotations
 
 import calendar
+from functools import lru_cache
 import hashlib
 import re
 from dataclasses import asdict, dataclass, field
@@ -29,6 +30,7 @@ from app.db import Document, ScanRun, SittingDay, Source, Speech, session, utcno
 from connectors.base import CouldNotCheck, registry, DocumentRef, HansardConnector, SittingDayRef
 
 from .fetch import Blocked, Fetcher
+from .members import Enricher
 
 SOURCES_YAML = REPO_ROOT / "config" / "sources.yaml"
 STALE_LOCK = timedelta(hours=6)
@@ -229,11 +231,43 @@ def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: Documen
         c.changed_documents += 1
     else:
         c.new_documents += 1
+    enricher = _enricher(getattr(connector, "code", ""))
     for s in parsed.speeches:
         h = text_hash(s.text)
-        db.add(Speech(document_id=doc.id, text_sha256=h, **asdict(s)))
+        speech = Speech(document_id=doc.id, text_sha256=h, **asdict(s))
+        enricher.apply(ref.source_id, ref.sitting_date, speech)   # party from the member list; speaker side
+        db.add(speech)
         c.speeches_to_analyse += h not in old_hashes
     return doc.version
+
+
+@lru_cache(maxsize=16)
+def _enricher(parliament: str) -> Enricher:
+    return Enricher(parliament)
+
+
+def recompute_sides() -> int:
+    """Re-derive party (where Hansard didn't print it) and speaker side for every stored speech.
+    Run after config/members or config/governments.yaml change. Returns speeches updated."""
+    _enricher.cache_clear()
+    changed = 0
+    with session() as db:
+        rows = db.execute(select(Speech, SittingDay.source_id, SittingDay.sitting_date, Source.parliament)
+                          .join(Document, Document.id == Speech.document_id)
+                          .join(SittingDay, SittingDay.id == Document.sitting_day_id)
+                          .join(Source, Source.id == SittingDay.source_id)).all()
+        for speech, source_id, when, parliament in rows:
+            before = (speech.party, speech.speaker_side)
+            if not _printed_party(parliament):
+                speech.party = None   # it came from the member list: look it up again
+            _enricher(parliament).apply(source_id, when, speech)
+            changed += (speech.party, speech.speaker_side) != before
+        db.commit()
+    return changed
+
+
+def _printed_party(parliament: str) -> bool:
+    return parliament == "QLD"   # the only live parliament whose Hansard prints party
 
 
 def run_scan(trigger: str = "cli", today: date | None = None,

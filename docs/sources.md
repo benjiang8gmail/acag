@@ -534,3 +534,28 @@ The rest need a decision first:
 
 - **NT:** the listing works through Territory Stories, but its robots.txt disallows the PDFs. Ask Library & Archives NT, or the Legislative Assembly, for permission or a feed, and use manual import in the meantime.
 - **CTH, VIC, SA, WA, TAS:** blocked by bot protection from this network. Re-test from the pilot network. If they're still blocked, send `docs/access-requests.md`, and use manual import in the meantime.
+
+## 6. Member lists (speaker side)
+
+Spec §9.4: speaker side (government, opposition, crossbench, unknown) is computed in code, from party and ministerial role, using `config/governments.yaml`. `make members` rebuilds the lists and `make sides` recomputes stored speeches.
+
+| Parliament | Source | Kind | Members | Cross-check against Hansard |
+|---|---|---|---|---|
+| QLD | Members Photo Sheet PDF on documents.parliament.qld.gov.au ("updated 2 June 2026") | **official** | 93 (LNP 53, ALP 36, KAP 2, GRN 1, IND 1) | Party and electorate agree with every full speaker header on 13 and 14 Oct 2026 |
+| NSW | Wikipedia, "Members of the NSW Legislative Assembly/Council, 2023–2027" | secondary (CC BY-SA) | 93 + 42 | All 77 Assembly speakers in the 22 Oct 2026 contents match; Council 36 of 37 (see below) |
+| ACT | Wikipedia, "Members of the ACT Legislative Assembly, 2024–2028" | secondary (CC BY-SA) | 25 | All 21 names in the 17 Sep 2026 division list, and every speaker that day, match |
+
+**Why secondary sources for NSW and ACT.** The official lists are behind bot protection that blocks this environment:
+- parliament.nsw.gov.au (Cloudflare). Data.NSW's member list points there.
+- elections.act.gov.au (its robots.txt is refused).
+
+The NSW Hansard API has no members endpoint. Wikidata's query service disallows `/sparql` in robots.txt. Replace these lists with the official ones once access is arranged.
+
+**Coverage on real days**, counting members' turns and excluding presiding officers:
+- NSW Assembly (22 Oct) and ACT (17 Sep): 100% get a side.
+- QLD (13 Oct): 99.6%. The one gap is an ambiguous "Mr JAMES" (two members named James, no initial printed).
+
+**Open items:**
+- **NSW Council:** "The Hon. Bernard Govind" speaks on 22 Oct 2026 but isn't on the secondary list, so his party is unknown. Add him to `config/members/overrides.yaml` with a primary source.
+- **ACT:** the secondary list records Leanne Castley as independent from 2026. Confirm.
+- **Presiding officers' turns** stay `unknown`: they speak in a procedural role.

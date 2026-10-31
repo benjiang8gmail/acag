@@ -1,0 +1,10 @@
+# Corrections to the generated member lists (config/members/{NSW,ACT,QLD}.yaml).
+# An entry here replaces the generated entry with the same name. Give a primary
+# source for every change, e.g. a Hansard page or a parliament's own notice.
+#
+# Example:
+# ACT:
+#   ACT-LA:
+#     - {name: Jane Citizen, party: IND, electorate: Yerrabi,
+#        note: "left the Liberal party room", source: "ACT Hansard, 1 Dec 2026, p. 4001"}
+{}
