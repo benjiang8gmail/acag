@@ -60,7 +60,7 @@ class Rules:
     header_fields: Callable[[re.Match], dict | None] | None = None
 
 
-RE_POINT_OF_ORDER = re.compile(r"^(?:(?:Mr|Madam) (?:Deputy |Assistant )?Speaker|(?:On a |I rise to a )?point of order)\b", re.I)
+RE_POINT_OF_ORDER = re.compile(r"^(?:(?:Mr|Madam) (?:Deputy |Assistant )?Speaker|(?:On a |I rise to a |A )?point of order)\b", re.I)
 
 
 def _default_fields(m: re.Match, rules: "Rules") -> dict | None:

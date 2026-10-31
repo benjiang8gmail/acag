@@ -14,7 +14,10 @@ HEADER = ("# Fixtures\n\nReal files saved by `scripts/recon_fetch.py` (robots.tx
           "| File | Fetched from | Date | Bytes | SHA-256 (first 16) |\n|---|---|---|---|---|\n")
 RENAMED = {"2026-02-24-official.pdf": "2026-02-24-proof-P.pdf", "territorystories-1052298.pdf": "territorystories-1052298.html"}
 EXTRA = {"sources/NT-LA/full_record-10070-1052298.json":
-         ("https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298", "2026-10-31")}
+         ("https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298", "2026-10-31"),
+         # 83 page texts from /api/content (page=0..82), combined into one file; each request is in the recon log.
+         "sources/NT-LA/2026-10-22-pages.json":
+         ("https://territorystories.nt.gov.au/api/content?handle=https%3A%2F%2Fhdl.handle.net%2F10070%2F1052298&group=0&page=0..82", "2026-10-31")}
 
 origin = {}
 for log in sorted(glob.glob("docs/recon/*.jsonl")):

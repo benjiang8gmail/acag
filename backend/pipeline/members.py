@@ -26,8 +26,8 @@ HONORIFIC = re.compile(r"^(?:(?:The\s+)?Hon\.?|Mr|Ms|Mrs|Miss|Dr|Madam)\s+", re.
 GOVERNMENT_ROLE = re.compile(
     r"\b(?:Minister|Premier|Treasurer|Attorney[- ]General|Parliamentary Secretary|Cabinet Secretary"
     r"|Leader of the House|Leader of the Government|Manager of Government Business|Government Whip"
-    r"|Special Minister of State|Vice-President of the Executive Council)\b", re.I)
-OPPOSITION_ROLE = re.compile(r"\b(?:Leader of the Opposition|Shadow|Manager of Opposition Business|Opposition Whip)\b", re.I)
+    r"|Special Minister of State|Vice-President of the Executive Council|Chief Minister)\b", re.I)
+OPPOSITION_ROLE = re.compile(r"\b(?:Leader of the Opposition|Opposition Leader|Shadow|Manager of Opposition Business|Opposition Whip)\b", re.I)
 # Party spellings in Hansard or member lists → codes used in governments.yaml.
 CANONICAL = {"GRN": "GRN", "GREENS": "GRN", "AG": "GRN", "IND": "IND", "LIB": "LIB", "LP": "LIB", "NAT": "NAT",
              "NATS": "NAT", "ALP": "ALP", "LNP": "LNP", "CLP": "CLP", "KAP": "KAP", "ON": "PHON", "PHON": "PHON"}

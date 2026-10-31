@@ -403,6 +403,21 @@ What the saved fixtures showed:
 - **Recommended connector:** parliament draft page → Territory Stories PDF; match the final by day number and date.
 - **Fixture:** none yet (environment). Batch: the draft page and one Territory Stories item.
 
+### NT: connector built (Phase 2): `backend/connectors/nt.py`, reading Territory Stories text pages
+
+- **Why this route:** parliament.nt.gov.au blocks scripts (Cloudflare). Territory Stories' robots.txt disallows `*.pdf`, `/search/` and `/api/`, **except `/api/content` and `/api/full_record`**. The connector uses only those two.
+  - `/api/content?handle=https://hdl.handle.net/10070/…&group=0&page=N` returns a page's text (about 80 pages a day).
+- **Sitting days:** `config/nt_hansard.yaml`, one line per day with its handle. There's no allowed way to list the collection: search is disallowed, and the sitemaps (`sitemap_0…99.txt.gz`) are unordered and carry no titles. So staff add each new day's handle until the Parliament's own listing is reachable from the pilot network.
+- **Version:** "Draft Daily Hansard" is a proof; "Debates and Questions" is final.
+- **Text:**
+  - Headings are capitalised lines.
+  - **Question Time:** "Ms UIBO to CHIEF MINISTER", then the question, then "ANSWER" and the answer by the office asked. Each question topic is a heading.
+  - Ministers are styled by portfolio ("Mr EDGINGTON (Health)"), members by electorate.
+  - The text layer **drops apostrophes and dashes** ("governments commitment"), so quotes match this text rather than the PDF to the letter.
+- **Party:** from `config/members/NT.yaml` (Wikipedia, secondary: 25 members, CLP 17 / ALP 6 / IND 2).
+- **Known limit:** when the Chief Minister later speaks under her own name, the reader doesn't link that to the "CHIEF MINISTER" office label.
+- **Captured live:** 22 Oct 2026, 83 pages (fixture). 268 turns; 95%+ of members' turns get a side.
+
 ## 3. Audit offices
 
 ### Summary

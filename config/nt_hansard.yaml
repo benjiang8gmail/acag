@@ -1,0 +1,9 @@
+# NT Hansard sitting days and their Territory Stories handles (connectors/nt.py).
+#
+# Territory Stories offers no allowed way to list a collection, so add one line per new
+# sitting day, copied from the "Draft Daily Hansard" record's link
+# (https://hdl.handle.net/10070/NNNNNNN → handle 10070/NNNNNNN). When the final
+# "Debates and Questions" record appears, replace the handle: the connector stores it
+# as a new version of the same day.
+days:
+  - {date: 2026-10-22, handle: 10070/1052298, title: "Draft Daily Hansard - Day 6 - 22 October 2026"}

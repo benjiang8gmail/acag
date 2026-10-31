@@ -6,7 +6,8 @@
 # cloud network: re-test the blocked ones from the pilot's Australian network.
 # `enabled` is true only once the connector passes its real-fixture tests (Phase 2).
 # Enabled: NSW (31 Oct 2026; live checks 21–22 Oct 2026), ACT (1 Nov 2026; live check 22–31 Oct 2026),
-# QLD (1 Nov 2026; live check 14–31 Oct 2026), CTH via the OpenAustralia mirror (1 Nov 2026; live check 12–31 Oct 2026).
+# QLD (1 Nov 2026; live check 14–31 Oct 2026), CTH via the OpenAustralia mirror (1 Nov 2026; live check 12–31 Oct 2026),
+# NT via Territory Stories text pages (1 Nov 2026; 22 Oct 2026 captured live).
 
 as_of: 2026-10-31
 
@@ -149,8 +150,8 @@ sources:
     parliament: NT
     chamber: Legislative Assembly
     connector: nt
-    enabled: false
-    status: blocked
-    live_check: "listing via Territory Stories API works; PDFs disallowed by its robots.txt; parliament site behind Cloudflare"
-    approach: territory_stories_pdf
+    enabled: true
+    status: ok
+    live_check: "parliament.nt.gov.au blocks scripts (Cloudflare); text read page by page from Territory Stories' allowed /api/content endpoint; days listed in config/nt_hansard.yaml"
+    approach: territory_stories_api   # /api/full_record + /api/content (allowed by robots.txt); never the PDFs
     timezone: Australia/Darwin

@@ -1,5 +1,50 @@
 # Progress
 
+## 1 Nov 2026: NT Hansard via Territory Stories text pages (5 parliaments live)
+
+### Done
+
+- **`backend/connectors/nt.py`:** reads only the Territory Stories endpoints that its robots.txt allows (`/api/full_record`, `/api/content`), never the PDFs.
+  - **Sitting days:** listed in `config/nt_hansard.yaml`; staff add each new day's handle.
+  - **Pages:** text is read page by page, and the running header is stripped wherever it falls.
+  - **Question Time:** question, then an answer by the office asked, with each topic as a heading.
+  - **Speakers:** ministers by portfolio, members by electorate, "(Opposition Leader)" as a role; presiding officer and interjections as their own turns.
+  - NT-LA is enabled.
+- **`config/members/NT.yaml`** (25 members, secondary source) added to `make members`.
+- **Side rules:** "Opposition Leader" means opposition and "Chief Minister" means government. "A point of order, …" in Question Time is a statement, not a question.
+
+### Evidence
+
+- `make test`: 123 backend tests pass, including 6 for NT:
+  - the config list;
+  - **the connector reads the record and all 83 pages through allowed endpoints and never requests a PDF**;
+  - Question Time, with answers by office;
+  - portfolios, the chair and interjections;
+  - no page headers in the text;
+  - sides: Chief Minister government, Leader of the Opposition opposition, 95%+ of turns known.
+
+### Where the six previously blocked parliaments stand
+
+| Parliament | Route | Status |
+|---|---|---|
+| CTH | OpenAustralia's public mirror of APH's XML | **live** |
+| NT | Territory Stories' allowed text endpoint; days listed by staff | **live** (one line per sitting day) |
+| TAS | `search.parliament.tas.gov.au` answers (no robots.txt rules); search form only | to explore |
+| VIC | `hansard.parliament.vic.gov.au` disallows `/search/` and `/isysquery/` | no route from here |
+| SA | hansardsearch is behind an Azure WAF; the legacy host doesn't resolve | no route from here |
+| WA | Azure WAF; the bare domain doesn't resolve | no route from here |
+
+For VIC, SA and WA the legitimate options are:
+- run the scanner from an Australian network (the product owner's computer via Remote Control, or an ACAG or VAGO network);
+- the access requests;
+- assisted manual import.
+
+### Next
+
+- Tasmania via the search site, if its results can be listed by date politely.
+
+---
+
 ## 1 Nov 2026: federal Hansard via the OpenAustralia mirror (4 parliaments live)
 
 ### Done
