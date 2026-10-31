@@ -25,6 +25,7 @@ Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host
 | `sources/NSW-LA/2026-10-22.pdf` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/pdf/HANSARD-1323879322-171125 | 2026-10-31 | 1,499,187 | `e91da316011b6f62` |
 | `sources/NSW-LC/2026-10-22-fragment-106209.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1820781676-106209 | 2026-10-31 | 1,330,294 | `cbfc3313f80e7139` |
 | `sources/NSW-LC/2026-10-22-toc.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/tableofcontents/HANSARD-1820781676-106154 | 2026-10-31 | 213,174 | `f0c80b9dba73ac44` |
+| `sources/NSW-LC/2026-10-22.pdf` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/pdf/HANSARD-1820781676-106216 | 2026-10-31 | 2,634,708 | `d5ad6a03f655d1b8` |
 | `sources/NSW/year-2026.json` | https://api.parliament.nsw.gov.au/api/hansard/search/year/2026 | 2026-10-31 | 13,092 | `0d87a07ecc4a3f38` |
 | `sources/NT-LA/full_record-10070-1052298.json` | https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298 | 2026-10-31 | 55,937 | `5793c1373cf2ef98` |
 | `sources/NT-LA/territorystories-1052298.html` | https://territorystories.nt.gov.au/10070/1052298/0/39 | 2026-10-31 | 43,313 | `bbcb500f8183c8bb` |

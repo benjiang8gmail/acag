@@ -56,6 +56,8 @@ class ParsedSpeech:
 class ParsedDocument:
     speeches: list[ParsedSpeech] = field(default_factory=list)
     version: str = "unknown"  # what the document itself says: proof / final / unknown
+    method: str | None = None  # how the text was read, e.g. "pdf" or "fragments" (logged per scan)
+    note: str | None = None    # anything the scan log should show, e.g. why a fallback was used
 
 
 class HansardConnector(Protocol):

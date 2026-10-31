@@ -10,7 +10,9 @@ from sqlalchemy import select
 from app import config, db
 from app.db import Document, SittingDay, Source, Speech
 from connectors.base import SittingDayRef
-from connectors.nsw import API, NSWConnector, parse_fragment
+import xml.etree.ElementTree as ET
+
+from connectors.nsw import API, NSWConnector, _norm, parse_day_pdf, parse_fragment
 from pipeline.fetch import Fetcher
 from pipeline.sync import run_scan
 
@@ -32,6 +34,7 @@ class FixtureSite:
         self.routes = {
             f"{API}/year/2026": (FX / "NSW" / "year-2026.json").read_bytes(),
             f"{API}/daily/tableofcontents/HANSARD-1323879322-170879": (LA / "2026-10-22-toc.xml").read_bytes(),
+            f"{API}/daily/pdf/HANSARD-1323879322-171125": (LA / "2026-10-22.pdf").read_bytes(),
         }
         for f in LA.glob("2026-10-22-fragment-*.xml"):
             uid = "HANSARD-1323879322-" + f.stem.rsplit("-", 1)[1]
@@ -154,7 +157,13 @@ def test_council_committee_names_split_across_spans_are_joined():
     assert turns[1].speaker_name == "The Hon. JEREMY BUCKINGHAM" and turns[1].proceeding_type == "Bills"
 
 
-def test_whole_day_walks_every_topic_in_order(connector, site):
+@pytest.fixture(scope="module")
+def la_pdf_speeches():
+    toc = ET.parse(LA / "2026-10-22-toc.xml").getroot()
+    return parse_day_pdf((LA / "2026-10-22.pdf").read_bytes(), toc, "PDF")
+
+
+def test_day_pdf_costs_one_request_and_cites_pages(connector):
     [ref] = connector.list_documents(SittingDayRef("NSW-LA", D, "proof"))
     parts = []
 
@@ -163,10 +172,68 @@ def test_whole_day_walks_every_topic_in_order(connector, site):
         return connector.fetcher.fetch(url).body
 
     doc = connector.parse((LA / "2026-10-22-toc.xml").read_bytes(), ref, fetch_part)
-    assert doc.version == "proof"
-    assert len(parts) == 244 and parts[0].endswith("HANSARD-1323879322-170878")
+    assert doc.method == "pdf" and doc.version == "proof"
+    assert parts == [ref.citation_url]
     assert [s.seq for s in doc.speeches] == list(range(len(doc.speeches)))
-    assert all(s.anchor_url == ref.citation_url for s in doc.speeches)
+    assert all(s.anchor_url == f"{ref.citation_url}#page={s.page}" for s in doc.speeches)
+
+
+def test_day_pdf_question_time(la_pdf_speeches):
+    qt = [s for s in la_pdf_speeches if s.debate_title == "Knife Crime"]
+    q, a = qt[0], qt[1]
+    assert (q.speaker_name, q.speaker_id, q.proceeding_type, q.start_time) == \
+        ("Ms KELLIE SLOANE", "2288", "Question Time (question)", "11:09")
+    assert a.speaker_role == "Minister for Police and Counter-terrorism, and Minister for the Hunter"
+    assert a.proceeding_type == "Question Time (answer)" and a.page == "7"
+    assert "I apologise, Attorney." in a.text   # resumes after interruptions, rejoins her answer
+    assert not any(s.speaker_id == "128" for s in qt[2:])
+
+
+def test_day_pdf_skips_division_lists_and_page_furniture(la_pdf_speeches):
+    text = "\n".join(s.text for s in la_pdf_speeches)
+    assert "Tesch, L (teller)" not in text and "Legislative Assembly- PROOF" not in text
+    assert "deliver transport infrastructure" in text   # no split words (pdfminer, not pypdf)
+
+
+@pytest.mark.parametrize("uid,ptype", [("170887", "Question Time"), ("170902", "Documents"),
+                                        ("170952", "Private Members' Statements"),
+                                        ("170973", "Written Community Recognition Statements"),
+                                        ("170878", "Bills")])
+def test_day_pdf_matches_the_xml_fragment_for_the_same_topic(la_pdf_speeches, uid, ptype):
+    """The PDF is the default; the XML is the reference. Same turns, same speakers, same words."""
+    xml = fragment(uid, ptype)
+    pdf = [s for s in la_pdf_speeches if s.debate_title in {x.debate_title for x in xml}][:len(xml)]
+    # The PDF doesn't carry the presiding officer's member id; everyone else's comes from the contents.
+    ids = lambda s: None if "(presiding)" in (s.proceeding_type or "") else s.speaker_id
+    assert [(s.proceeding_type, s.speaker_name, ids(s)) for s in pdf] == \
+        [(s.proceeding_type, s.speaker_name, ids(s)) for s in xml]
+    assert [_norm(s.text) for s in pdf] == [_norm(s.text) for s in xml]
+
+
+def test_council_pdf_lines_up_with_the_committee_fragment():
+    toc = ET.parse(FX / "NSW-LC" / "2026-10-22-toc.xml").getroot()
+    pdf = parse_day_pdf((FX / "NSW-LC" / "2026-10-22.pdf").read_bytes(), toc, "PDF")
+    xml = parse_fragment((FX / "NSW-LC" / "2026-10-22-fragment-106209.xml").read_bytes(), "Bills")[1:]
+    start = next(i for i, s in enumerate(pdf) if s.speaker_name == xml[0].speaker_name and s.debate_title == xml[0].debate_title)
+    # Walk both in order: every XML turn appears in the PDF, in the same order.
+    it = iter(pdf[start:])
+    found = sum(1 for x in xml if any((p.speaker_name, p.proceeding_type) == (x.speaker_name, x.proceeding_type) for p in it))
+    assert found == len(xml)
+
+
+def test_falls_back_to_fragments_when_the_pdf_does_not_line_up(connector, site):
+    # Serve the Council's PDF for the Assembly's contents: headings won't line up.
+    site.routes[f"{API}/daily/pdf/HANSARD-1323879322-171125"] = (FX / "NSW-LC" / "2026-10-22.pdf").read_bytes()
+    [ref] = connector.list_documents(SittingDayRef("NSW-LA", D, "proof"))
+    parts = []
+
+    def fetch_part(url):
+        parts.append(url)
+        return connector.fetcher.fetch(url).body
+
+    doc = connector.parse((LA / "2026-10-22-toc.xml").read_bytes(), ref, fetch_part)
+    assert doc.method == "fragments" and "day PDF not used" in doc.note
+    assert len(parts) == 1 + 244 and parts[1].endswith("HANSARD-1323879322-170878")
     assert any(s.speaker_name == "Ms KELLIE SLOANE" for s in doc.speeches)
 
 
@@ -191,7 +258,8 @@ def test_sync_stores_the_day_then_a_recheck_costs_one_request(tmp_path, monkeypa
     try:
         run = run_scan(today=D, connectors=[NSWConnector(fetcher)], fetcher=fetcher)
         la = run.per_source_json["NSW-LA"]
-        assert la["status"] == "ok" and la["new_documents"] == 1 and la["parts_fetched"] == 244
+        assert la["status"] == "ok" and la["new_documents"] == 1
+        assert la["parts_fetched"] == 1 and la["methods"] == {"pdf": 1}
         with db.session() as s:
             assert s.scalar(select(SittingDay.version)) == "proof"
             doc = s.scalar(select(Document))

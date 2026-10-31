@@ -179,11 +179,20 @@ What the saved fixtures showed:
 
 - **Connector built (Phase 2):** `backend/connectors/nsw.py`.
   - **Listing:** the year list. `Uncorrected` gives the proof/final hint for each chamber.
-  - **Stored document:** the day's table of contents, keyed `toc:{source}:{date}` because its id can change.
-  - **Fragments:** fetched only when the table of contents changes. Re-checking a proof day costs 1 request, and nothing more is downloaded if it's unchanged.
-  - **Speeches:** one per speech, question or answer. Interjections and presiding-officer remarks are separate turns, and a speaker resuming after an interruption rejoins their own turn.
-  - **Citations** link to the day's PDF.
-  - **Volume:** a day has about 245 topics (Assembly, 22 Oct 2026: 244, of which 152 are written community recognition statements). One chamber-day is about 245 requests, or about 8 minutes at 2 s per request.
+  - **Stored document:** the day's table of contents, keyed `toc:{source}:{date}`.
+  - **Text: the day PDF**, read in step with the table of contents. That's **2 requests per chamber-day**: the contents, then the PDF.
+    - Headings are matched to the contents in order, which gives each turn its proceeding and topic.
+    - Speaker lines give the name, electorate, role and time. Member ids come from the contents.
+    - Question and answer come from the contents.
+    - Page furniture and division lists are dropped.
+    - Each speech cites `PDF#page=N`.
+  - **Fallback:** if fewer than 90% of topic headings line up, the connector fetches each topic's XML fragment instead (about 245 requests). The scan log records `methods` and a note.
+  - **Re-check:** an unchanged proof day costs 1 request.
+  - **PDF text:** `parsers/pdf.py` uses pdfminer.six with `boxes_flow=None`. pypdf split words, and pdfminer's default layout moved headings below the paragraph after them.
+  - **Checks:**
+    - For the Assembly topics with saved XML (22 Oct), the PDF gives the same turns, speakers and words.
+    - In a Council committee stage, all 312 XML turns appear in the PDF in the same order.
+    - Live run, 21 Oct, both chambers: 4 requests, both read from the PDF, 799 speeches, every turn with a page, 46 s including parsing.
 
 ### VIC: Legislative Assembly (`VIC-LA`) and Legislative Council (`VIC-LC`)
 

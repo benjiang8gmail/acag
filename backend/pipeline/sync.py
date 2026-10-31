@@ -17,7 +17,7 @@ from __future__ import annotations
 import calendar
 import hashlib
 import re
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -47,7 +47,8 @@ class SourceCounts:
     unchanged_documents: int = 0
     not_modified: int = 0          # 304 answers: nothing downloaded
     unchanged_downloads: int = 0   # server ignored conditional headers; body hashed and discarded
-    parts_fetched: int = 0         # sub-resources fetched for changed documents (e.g. NSW fragments)
+    parts_fetched: int = 0         # sub-resources fetched for changed documents (e.g. NSW day PDF)
+    methods: dict = field(default_factory=dict)  # how documents were read, e.g. {"pdf": 3}
     speeches_to_analyse: int = 0   # new or changed text; Phase 4 analyses only these
     llm_calls: int = 0             # no LLM stage yet (Phase 4)
     errors: int = 0
@@ -196,6 +197,10 @@ def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: Documen
         return part.body
 
     parsed = connector.parse(res.body, ref, fetch_part)
+    if parsed.method:
+        c.methods[parsed.method] = c.methods.get(parsed.method, 0) + 1
+    if parsed.note:
+        c.note = f"{ref.sitting_date}: {parsed.note}"
     doc = Document(sitting_day_id=sd.id, url=ref.url, doc_key=key, format=ref.format,
                    version=_version(parsed.version, ref.version_hint), etag=res.etag,
                    last_modified=res.last_modified, sha256=res.sha256, raw_path=str(raw))

@@ -1,5 +1,53 @@
 # Progress
 
+## 1 Nov 2026: NSW switched to contents + day PDF (2 requests per chamber-day)
+
+The product owner approved the change from one request per topic to the day's PDF.
+
+### Done
+
+- **`connectors/nsw.py`:**
+  - When a day's table of contents is new or changed, the connector fetches **the day PDF (1 request)** and reads it in step with the contents.
+  - **Headings:** contents headings are matched in order. Topic titles may be found further ahead, while generic labels only match close by.
+  - **Speakers:**
+    - The speaker line gives name, electorate, ministerial title and time; member ids come from the contents.
+    - Question and answer labels come from the contents.
+    - Interjections, presiding officers (with who was in the chair) and statements by members with the call follow the same rules as the XML parser.
+  - **Dropped:** page furniture and division lists ("Tesch, L", "Ruddick").
+  - **Citations:** each speech links to `PDF#page=N`.
+  - **Fallback:** if fewer than 90% of topic headings line up, the connector fetches each topic's fragment, as before. The scan log shows `methods` (`pdf` or `fragments`) and a note.
+- **`parsers/pdf.py`:** shared PDF text extraction for NSW, and later QLD and ACT.
+  - It uses pdfminer.six (MIT) with `boxes_flow=None`. pypdf split words ("t ransport"), which would break the exact-quote check, and pdfminer's default layout reordered headings.
+  - The last 4 PDFs read are cached in-process.
+- New fixture: the Council day PDF for 22 Oct 2026 (26 fixtures in total).
+
+### Evidence
+
+- `make test`: 63 backend tests pass. The NSW connector tests now include:
+  - the PDF path costs 1 request and every speech cites its page;
+  - Question Time from the PDF, with question and answer labels, the minister's resumption rejoining her answer, and page 7;
+  - no division names or page headers in the text, and no split words;
+  - **the PDF and the XML agree on turns, speakers and words for 5 Assembly topics** (Question Time, a tabled document, a private member's statement, a written statement, a bill);
+  - **all 312 turns of a Council committee stage appear in the PDF in the same order**;
+  - the fallback: a PDF that doesn't line up is read topic by topic (1 + 244 requests);
+  - the sync stores the day with `parts_fetched: 1` and `methods: {"pdf": 1}`, and a re-check is 1 request.
+- **Live run, 21 Oct 2026, both chambers:** 4 requests, both read from the PDF, 506 + 293 speeches, 0 errors, every turn with a page. It took **46 s including parsing**; the old route would have taken about 16 minutes.
+  - It surfaced a real F3 item: the Public Accounts Committee chair took note of a report on appropriation for the services of the Auditor-General (Assembly, page 30).
+- **New volume estimate:** the two-month NSW backfill is about 48 requests plus about 10 minutes of PDF parsing, down from about 3.3 hours. This settles **D14**.
+
+### Known limits
+
+- The PDF doesn't carry the presiding officer's member id; the role records who was in the chair.
+- When pdfminer meets a numbered list, it can print the "(1) (2) (3)" markers as one block ahead of the items. No words are lost.
+- A procedural line printed just before its stage heading keeps the topic title without the stage name.
+
+### Next
+
+- ACT connector (year index → proof PDF, reusing `parsers/pdf.py`), then QLD.
+- NSW member-to-party map, for speaker side.
+
+---
+
 ## 31 Oct 2026 (night): Phase 2, NSW connector, enabled
 
 ### Done
