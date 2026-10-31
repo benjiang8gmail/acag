@@ -1,11 +1,10 @@
 # The 15 Hansard chambers (spec §5.1, §14). One row per chamber; seeds the
 # `sources` table. Details and evidence are in docs/sources.md.
 #
-# status values (spec §7): ok | no_sittings | blocked | error, plus `unverified`
-# for Phase 0. `unverified` means robots.txt, terms and a fixture have not yet been
-# checked directly, because the build container's egress policy refused every
-# parliament host on 31 Oct 2026. `enabled` stays false until a real fixture is
-# saved and the connector passes its fixture tests (Phase 2).
+# status values (spec §7): ok | no_sittings | blocked | error, plus `unverified`.
+# Set from the live check of 31 Oct 2026 (docs/sources.md §0a), made from a US
+# cloud network: re-test the blocked ones from the pilot's Australian network.
+# `enabled` stays false until the connector passes its real-fixture tests (Phase 2).
 
 as_of: 2026-10-31
 
@@ -15,7 +14,8 @@ sources:
     chamber: Senate
     connector: cth
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "aph.gov.au Azure WAF block page, even for robots.txt"
     approach: parlinfo_xml          # fallback: OpenAustralia mirror of the same XML (needs product-owner approval)
     risk: "third-party reports of an Azure WAF answering 403 to scripts on aph.gov.au and parlinfo.aph.gov.au"
     timezone: Australia/Sydney
@@ -24,7 +24,8 @@ sources:
     chamber: House of Representatives   # includes the Federation Chamber (<fedchamb.xscript>)
     connector: cth
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "aph.gov.au Azure WAF block page, even for robots.txt"
     approach: parlinfo_xml
     risk: "same as CTH-SEN"
     timezone: Australia/Sydney
@@ -33,7 +34,8 @@ sources:
     chamber: Legislative Assembly
     connector: nsw
     enabled: false
-    status: unverified
+    status: ok
+    live_check: "API reachable; fixtures saved for 22 Oct 2026 (website itself is behind Cloudflare)"
     approach: nsw_hansard_api       # https://api.parliament.nsw.gov.au/api
     timezone: Australia/Sydney
   - id: NSW-LC
@@ -41,7 +43,8 @@ sources:
     chamber: Legislative Council
     connector: nsw
     enabled: false
-    status: unverified
+    status: ok
+    live_check: "API reachable; fixtures saved for 22 Oct 2026 (website itself is behind Cloudflare)"
     approach: nsw_hansard_api
     timezone: Australia/Sydney
   - id: VIC-LA
@@ -49,7 +52,8 @@ sources:
     chamber: Legislative Assembly    # house code 2145855009
     connector: vic
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Cloudflare challenge, even for robots.txt"
     approach: daily_pdf
     risk: "automated test fetch refused by bot detection during spec research (Oct 2026)"
     timezone: Australia/Melbourne
@@ -58,7 +62,8 @@ sources:
     chamber: Legislative Council     # house code 974425065
     connector: vic
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Cloudflare challenge, even for robots.txt"
     approach: daily_pdf
     risk: "same as VIC-LA"
     timezone: Australia/Melbourne
@@ -67,7 +72,8 @@ sources:
     chamber: Legislative Assembly
     connector: qld
     enabled: false
-    status: unverified
+    status: ok
+    live_check: "documents host reachable; daily PDF fixture saved (www site is behind Azure WAF)"
     approach: daily_pdf             # documents.parliament.qld.gov.au/events/han/{YYYY}/{YYYY_MM_DD}_DAILY.pdf
     timezone: Australia/Brisbane
   - id: SA-HA
@@ -75,7 +81,8 @@ sources:
     chamber: House of Assembly       # site code lh
     connector: sa
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Azure WAF JS challenge, even for robots.txt"
     approach: sa_hansard_api_xml    # OpenAPI at hansardsearch.parliament.sa.gov.au/docs/api
     risk: "calendar page refused an automated test fetch during spec research (Oct 2026)"
     timezone: Australia/Adelaide
@@ -84,7 +91,8 @@ sources:
     chamber: Legislative Council     # site code uh
     connector: sa
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Azure WAF JS challenge, even for robots.txt"
     approach: sa_hansard_api_xml
     risk: "same as SA-HA"
     timezone: Australia/Adelaide
@@ -93,7 +101,8 @@ sources:
     chamber: Legislative Assembly    # site code lh
     connector: wa
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Azure WAF challenge, even for robots.txt"
     approach: daily_extracts        # same /daily/{house}/{date}/... scheme as SA, since late 2024
     risk: "afd_azwaf_tok parameter in the sponsor's link suggests Azure Front Door; not confirmed"
     timezone: Australia/Perth
@@ -102,7 +111,8 @@ sources:
     chamber: Legislative Council     # site code uh
     connector: wa
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Azure WAF challenge, even for robots.txt"
     approach: daily_extracts
     risk: "same as WA-LA"
     timezone: Australia/Perth
@@ -111,7 +121,8 @@ sources:
     chamber: House of Assembly
     connector: tas
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Cloudflare challenge, even for robots.txt"
     approach: proceedings_page_pdf
     timezone: Australia/Hobart
   - id: TAS-LC
@@ -119,7 +130,8 @@ sources:
     chamber: Legislative Council
     connector: tas
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "Cloudflare challenge, even for robots.txt"
     approach: proceedings_page_pdf
     timezone: Australia/Hobart
   - id: ACT-LA
@@ -127,7 +139,8 @@ sources:
     chamber: Legislative Assembly
     connector: act
     enabled: false
-    status: unverified
+    status: ok
+    live_check: "robots.txt allows all; year index and proofs saved"
     approach: daily_pdf             # hansard.act.gov.au/hansard/11th-assembly/{YYYY}/PDF/tP{YYMMDD}.pdf
     timezone: Australia/Sydney
   - id: NT-LA
@@ -135,6 +148,7 @@ sources:
     chamber: Legislative Assembly
     connector: nt
     enabled: false
-    status: unverified
+    status: blocked
+    live_check: "listing via Territory Stories API works; PDFs disallowed by its robots.txt; parliament site behind Cloudflare"
     approach: territory_stories_pdf
     timezone: Australia/Darwin

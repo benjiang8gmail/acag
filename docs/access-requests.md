@@ -2,7 +2,9 @@
 
 Spec §5.1: when a source blocks automated access, ACAG asks that Parliament's Hansard team for an allowlist or a data feed. Meanwhile, the source is covered by manual import (§9.11).
 
-**Status, 31 Oct 2026: drafts only. Nothing has been sent.** No parliament has yet been shown to block Hansard Watch itself; the Phase 0 attempt was stopped by the build environment's own network policy (see `docs/sources.md` §0). The four drafts below are for the sources with evidence of bot protection. Send each one only after `make recon` from the pilot's network confirms the block.
+**Status, 31 Oct 2026: drafts only. Nothing has been sent.**
+
+The live check (`docs/sources.md` §0a) confirmed bot protection on the sites below. It ran from a US cloud network, so first **re-run `make recon` from the pilot's Australian network**, and send only the requests that are still needed.
 
 Before sending, fill in these placeholders:
 
@@ -11,12 +13,37 @@ Before sending, fill in these placeholders:
 | `{CONTACT_NAME}`, `{CONTACT_EMAIL}` | The crawler contact (spec §15 Q3; also goes in `FETCH_USER_AGENT`) |
 | `{EGRESS_IPS}` | The pilot host's outbound IP addresses, once hosting is decided (§15 Q5) |
 
-| Source | Evidence of a block | Send to | Draft |
+### Hansard
+
+| Source | What answered on 31 Oct | Send to | Draft |
 |---|---|---|---|
-| CTH-SEN, CTH-HOR | A third-party project reports an Azure WAF answering 403 on aph.gov.au and parlinfo.aph.gov.au, even for robots.txt (Oct 2026) | Parliamentary Library / Hansard, Department of Parliamentary Services (contact via aph.gov.au "Contact us") | A |
-| VIC-LA, VIC-LC | The spec's test fetch was refused by bot detection. Reuse beyond the listed purposes also needs the Presiding Officers' permission | info@parliament.vic.gov.au (Hansard / Presiding Officers) | B |
-| SA-HA, SA-LC | The spec's test fetch of the calendar page was refused | Hansard, Parliament of South Australia (contact via hansardsearch.parliament.sa.gov.au) | C |
-| WA-LA, WA-LC | Azure Front Door WAF token in the original link | Hansard, Parliament of Western Australia (contact via parliament.wa.gov.au) | C (adapted) |
+| CTH-SEN, CTH-HOR | Azure WAF "Page Blocked by WAF", even for robots.txt | Parliamentary Library / Hansard, Department of Parliamentary Services (via aph.gov.au "Contact us"; quote the block reference shown on the page) | A |
+| VIC-LA, VIC-LC | Cloudflare challenge, even for robots.txt. Reuse beyond the listed purposes also needs the Presiding Officers' permission. | info@parliament.vic.gov.au | B |
+| SA-HA, SA-LC | Azure WAF JavaScript challenge, even for robots.txt and the published API | Hansard, Parliament of South Australia | C |
+| WA-LA, WA-LC | Azure WAF challenge, even for robots.txt | Hansard, Parliament of Western Australia | C (adapted) |
+| TAS-HA, TAS-LC | Cloudflare challenge, even for robots.txt | Hansard, Parliament of Tasmania | C (adapted) |
+| NT-LA | The parliament site shows a Cloudflare challenge. Territory Stories works, but its robots.txt disallows the PDF files. | Library & Archives NT (Territory Stories), copying Hansard, Legislative Assembly of the NT | D |
+
+**Not needed:**
+
+| Source | Why |
+|---|---|
+| NSW | Use the public Hansard API, which answered normally. Only the website is behind Cloudflare. |
+| QLD | Use `documents.parliament.qld.gov.au`, which answered normally. Only the main site is behind Azure WAF. |
+| ACT | Answered normally. |
+
+### Audit offices
+
+| Office | What answered on 31 Oct | Draft |
+|---|---|---|
+| ANAO | No response (timeouts) | E |
+| QAO | "Client Challenge" page, even for robots.txt | E |
+| Audit Office of SA | "Client Challenge" page, even for robots.txt | E |
+| OAG WA | nginx 403 | E |
+| ACT Audit Office | Cloudflare challenge | E |
+| NT Auditor-General's Office | Cloudflare challenge | E |
+
+AONSW, VAGO and Audit Tasmania answered normally. VAGO's robots.txt disallows `/search/`, so its register will be read from its sitemap.
 
 ---
 
@@ -95,9 +122,47 @@ Before sending, fill in these placeholders:
 
 ---
 
+## D. Territory Stories (Library & Archives NT)
+
+> **Subject:** Automated access to Draft Daily Hansard PDFs in Territory Stories for the Australasian Council of Auditors-General
+>
+> Dear Territory Stories team,
+>
+> The Australasian Council of Auditors-General (ACAG) is piloting **Hansard Watch**. It is an internal tool that helps audit offices, including the NT Auditor-General's Office, follow what Parliament says about their work.
+>
+> The Legislative Assembly's Draft Daily Hansard and Debates and Questions are published in Territory Stories under CC BY 4.0. We read their metadata through `/api/full_record`, as your robots.txt allows. The robots.txt also disallows `*.pdf`, so we have not downloaded the documents themselves.
+>
+> Could you confirm whether we may download one Hansard PDF per sitting day (about 2–4 per sitting week)? Or tell us the preferred way to receive the text: the PDF link in `full_record`, an OAI-PMH feed, or a text endpoint.
+>
+> What our client does:
+> - It uses User-Agent `ACAG-HansardWatch/0.1 (+mailto:{CONTACT_EMAIL})`.
+> - It waits at least 2 seconds between requests and uses conditional requests.
+> - It attributes every quote to the Legislative Assembly of the Northern Territory and links to the Territory Stories record.
+>
+> Contact: {CONTACT_NAME}, {CONTACT_EMAIL}.
+>
+> Kind regards,
+
+## E. Audit offices (adapt per office)
+
+> **Subject:** Automated access to your published reports and audit program for the Australasian Council of Auditors-General
+>
+> Dear {office} web team,
+>
+> As part of ACAG's **Hansard Watch** pilot, an internal tool for Australia's nine audit offices, we read each office's published list of tabled reports and its forward audit program about once a week. We use them to link parliamentary debate to the right report.
+>
+> Our client is refused by your website's bot protection, even for robots.txt. Could you allowlist User-Agent `ACAG-HansardWatch/0.1 (+mailto:{CONTACT_EMAIL})` and source IPs `{EGRESS_IPS}`, or point us to a feed (RSS, sitemap or API) for new reports and program updates?
+>
+> We obey robots.txt, wait at least 2 seconds between requests, and use conditional requests, so an unchanged page costs almost nothing.
+>
+> Contact: {CONTACT_NAME}, {CONTACT_EMAIL}.
+>
+> Kind regards,
+
 ## Other sources: terms to confirm
 
 These sources are not blocked, but their reuse terms could not be confirmed. Raise them only if the terms pages, checked with `make recon`, are unclear:
 
 - **QLD:** the Clerk has previously declined "authorised publisher" status to third parties (Parliament of Queensland Act 2001 s51(4)(g)). Our use is internal monitoring with short quotes and links. Check the copyright page; if unclear, write to the Clerk.
-- **TAS and ACT:** no terms page found yet.
+- **ACT:** the reuse policy is at `parliament.act.gov.au/function/footer/reuse-policy`. It was unreachable on 31 Oct (connection reset); read it before the ACT connector goes live.
+- **TAS:** no terms page found yet.

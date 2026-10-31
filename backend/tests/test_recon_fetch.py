@@ -103,3 +103,13 @@ def test_challenge_page_is_not_saved_as_fixture(rf, monkeypatch, tmp_path):
     e = rf.fetch("https://h.example/a", tmp_path / "a.html", lambda _: None)
     assert e["result"] == "challenge_page"
     assert not (tmp_path / "a.html").exists()
+
+
+def test_robots_served_as_challenge_blocks_the_host(rf, monkeypatch, tmp_path):
+    challenge = b"<!DOCTYPE html><html><head><title>Client Challenge</title></head></html>"
+    opener, calls = _site({"https://h.example/robots.txt": challenge, "https://h.example/a.pdf": challenge})
+    monkeypatch.setattr(rf, "_open", opener)
+    e = rf.fetch("https://h.example/a.pdf", tmp_path / "a.pdf", lambda _: None)
+    assert e["result"] == "disallowed_by_robots"
+    assert calls == ["https://h.example/robots.txt"]
+    assert not (tmp_path / "a.pdf").exists()

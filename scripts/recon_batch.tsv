@@ -1,4 +1,5 @@
-# Phase 0 fixture capture: URL<TAB>output path. Run with `make recon` from a
+# Phase 0 fixture capture: URL<TAB>output path. Re-runnable: unchanged files
+# rewrite identically; check `backend/tests/fixtures/MANIFEST.md` hashes after. Run with `make recon` from a
 # network that is allowed to reach these hosts. The fetcher checks robots.txt
 # first, waits FETCH_MIN_INTERVAL_SECONDS (>= 2 s) per host, and stops at the
 # first block or bot challenge. Dated URLs were seen in search results on
@@ -27,7 +28,15 @@ https://www.parliament.wa.gov.au/hansard/daily/uh/2026-06-18/pdf/download	backen
 https://www.parliament.tas.gov.au/__data/assets/pdf_file/0011/110081/HA-Tuesday-18-August-2026-Draft-Full-Text.pdf	backend/tests/fixtures/sources/TAS-HA/2026-08-18-draft.pdf
 https://www.parliament.tas.gov.au/__data/assets/pdf_file/0019/109720/LC-Tuesday-11-August-2026-Draft-Full-Text.pdf	backend/tests/fixtures/sources/TAS-LC/2026-08-11-draft.pdf
 https://www.hansard.act.gov.au/hansard/11th-assembly/2026/PDF/tP260917.pdf	backend/tests/fixtures/sources/ACT-LA/2026-09-17-proof.pdf
-https://territorystories.nt.gov.au/10070/1052298/0/39	backend/tests/fixtures/sources/NT-LA/territorystories-1052298.pdf
+https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298	backend/tests/fixtures/sources/NT-LA/full_record-10070-1052298.json
+# NT PDFs: Territory Stories robots.txt disallows *.pdf — needs permission (docs/access-requests.md D)
+https://api.parliament.nsw.gov.au/api/hansard/search/daily/tableofcontents/HANSARD-1323879322-170879	backend/tests/fixtures/sources/NSW-LA/2026-10-22-toc.xml
+https://api.parliament.nsw.gov.au/api/hansard/search/daily/tableofcontents/HANSARD-1820781676-106154	backend/tests/fixtures/sources/NSW-LC/2026-10-22-toc.xml
+https://api.parliament.nsw.gov.au/api/hansard/search/daily/pdf/HANSARD-1323879322-171125	backend/tests/fixtures/sources/NSW-LA/2026-10-22.pdf
+https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170878	backend/tests/fixtures/sources/NSW-LA/2026-10-22-fragment-170878.xml
+https://www.hansard.act.gov.au/hansard/11th-assembly/2026/debates(PDF).htm	backend/tests/fixtures/sources/ACT-LA/2026-debates-index.html
+https://www.hansard.act.gov.au/hansard/11th-assembly/2026/PDF/P260224.pdf	backend/tests/fixtures/sources/ACT-LA/2026-02-24-proof-P.pdf
+https://www.audit.nsw.gov.au/our-work/reports	backend/tests/fixtures/offices/AONSW/reports.html
 # Still to add from the saved listings: CTH-SEN and CTH-HOR ParlInfo XML (ids are not predictable),
 # SA-LC (uh) TOC, WA-LA (lh) day, NSW API TOC and fragment for a document id from year-2026.json.
 #
@@ -38,14 +47,15 @@ https://www.anao.gov.au/work-program/requests	backend/tests/fixtures/offices/ANA
 https://www.audit.nsw.gov.au/sites/default/files/documents/Audit%20Work%20Plan%202026%E2%80%932029.pdf	backend/tests/fixtures/offices/AONSW/audit-work-plan-2026-2029.pdf
 https://www.audit.nsw.gov.au/our-work/requests-for-audit	backend/tests/fixtures/offices/AONSW/requests.html
 https://www.audit.vic.gov.au/sites/default/files/2026-06/20260624_Annual-Plan-2026-27.pdf	backend/tests/fixtures/offices/VAGO/annual-plan-2026-27.pdf
-https://www.audit.vic.gov.au/reports	backend/tests/fixtures/offices/VAGO/reports.html
+https://www.audit.vic.gov.au/sitemap.xml	backend/tests/fixtures/offices/VAGO/sitemap.xml
+# VAGO listings are under /search/, which robots.txt disallows
 https://www.qao.qld.gov.au/sites/default/files/2026-06/Forward%20work%20plan%202026%E2%80%9329_0.pdf	backend/tests/fixtures/offices/QAO/forward-work-plan-2026-29.pdf
 https://www.qao.qld.gov.au/audit-program/requests-audits	backend/tests/fixtures/offices/QAO/requests.html
 https://www.audit.sa.gov.au/reports	backend/tests/fixtures/offices/SAAGD/reports.html
 https://audit.wa.gov.au/reports-and-publications/reports/	backend/tests/fixtures/offices/OAGWA/reports.html
 https://audit.wa.gov.au/audit-program/audits-in-progress/	backend/tests/fixtures/offices/OAGWA/audits-in-progress.html
 https://audit.tas.gov.au/publication/auditor-generals-annual-plan-2026-27/	backend/tests/fixtures/offices/AUDTAS/annual-plan-2026-27.html
-https://www.audit.tas.gov.au/publication-category/performance-audit/	backend/tests/fixtures/offices/AUDTAS/reports.html
+https://audit.tas.gov.au/publication-category/performance-audit/	backend/tests/fixtures/offices/AUDTAS/reports.html
 https://www.audit.act.gov.au/__data/assets/pdf_file/0003/3080730/ACT-Audit-Office-Performance-Audit-Program-2026-27.pdf	backend/tests/fixtures/offices/ACTAO/performance-audit-program-2026-27.pdf
 https://www.audit.act.gov.au/	backend/tests/fixtures/offices/ACTAO/home.html
 https://ago.nt.gov.au/publications/ag-reports-parliament	backend/tests/fixtures/offices/NTAGO/reports.html

@@ -275,3 +275,12 @@ def test_seeded_sources_match_config_and_start_disabled(env):
         seed_sources(s)
         real = s.scalars(select(Source).where(Source.parliament != "FK")).all()
     assert len(real) == 15 and not any(r.enabled for r in real)
+
+
+def test_robots_served_as_a_challenge_page_blocks_the_source(env):
+    site, conn, scan, _ = env
+    site.robots = b"<!DOCTYPE html><html><head><title>Just a moment...</title></head></html>"
+    conn.sit("FK-LA", date(2026, 10, 27))
+    run = scan()
+    assert run.per_source_json["FK-LA"]["status"] == "blocked"
+    assert site.doc_hits() == []

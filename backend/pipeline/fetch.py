@@ -19,7 +19,8 @@ from urllib.parse import urlsplit
 import httpx
 
 ROBOTS_TOKEN = "ACAG-HansardWatch"
-CHALLENGE_MARKERS = ("captcha", "cf-chl", "challenge-platform", "azwaf", "are you a robot",
+CHALLENGE_MARKERS = ("captcha", "cf-chl", "challenge-platform", "azwaf", "azure waf", "are you a robot",
+                     "client challenge", "just a moment...", "page blocked by waf",
                      "_incapsula_", "please enable javascript and cookies")
 
 
@@ -77,6 +78,8 @@ class Fetcher:
                 self._block(host, f"robots.txt could not be read ({e.__class__.__name__})")
             if r.status_code in (401, 403):
                 self._block(host, f"robots.txt refused (HTTP {r.status_code})")
+            if r.status_code == 200 and any(m in r.text.lower() for m in CHALLENGE_MARKERS):
+                self._block(host, "robots.txt answered with a bot challenge page")
             rp.parse(r.text.splitlines() if r.status_code == 200 else [])
             if delay := rp.crawl_delay(ROBOTS_TOKEN):
                 self._min_interval = max(self._min_interval, float(delay))

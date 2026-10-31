@@ -34,7 +34,8 @@ USER_AGENT = os.environ.get(
 UA_TOKEN = "ACAG-HansardWatch"
 MIN_INTERVAL = float(os.environ.get("FETCH_MIN_INTERVAL_SECONDS", "3"))
 CHALLENGE_MARKERS = (
-    "captcha", "cf-chl", "challenge-platform", "azwaf", "are you a robot",
+    "captcha", "cf-chl", "challenge-platform", "azwaf", "azure waf", "are you a robot",
+    "client challenge", "just a moment...", "page blocked by waf",
     "access denied", "request unsuccessful. incapsula", "_incapsula_", "akamai",
     "bot detection", "please enable javascript and cookies",
 )
@@ -67,12 +68,23 @@ def robots_for(scheme: str, host: str, log) -> urllib.robotparser.RobotFileParse
         with _open(url, 30) as r:
             body = r.read().decode("utf-8", "replace")
             entry.update(status=r.status, bytes=len(body))
-            rp.parse(body.splitlines())
+            if any(m in body.lower() for m in CHALLENGE_MARKERS):
+                rp.disallow_all = True
+                _blocked_hosts[host] = "robots.txt answered with a bot challenge page"
+                entry["result"] = "challenge_page"
+            else:
+                rp.parse(body.splitlines())
             entry["robots_excerpt"] = body[:4000]
     except urllib.error.HTTPError as e:
         entry["status"] = e.code
         if e.code in (401, 403):
             rp.disallow_all = True   # stdlib convention: robots refused -> treat as disallow
+            snippet = e.read(4000).decode("utf-8", "replace").lower()
+            _blocked_hosts[host] = f"robots.txt refused (HTTP {e.code})" + (
+                ", bot challenge page" if any(m in snippet for m in CHALLENGE_MARKERS) else "")
+            entry["result"] = "blocked"
+            entry["server"] = e.headers.get("Server")
+            entry["body_excerpt"] = snippet[:300]
         else:
             rp.allow_all = True      # 404 etc -> no robots rules
     except Exception as e:  # network/proxy failure: we could not check, so do not fetch

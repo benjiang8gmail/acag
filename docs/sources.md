@@ -36,9 +36,76 @@ What was done instead: web searches of official pages, published sample files, a
 2. Confirm the terms-of-use pages that are marked *unverified* below.
 3. Confirm the speaker markup and proof/final flags against those fixtures.
 
-Until this is done, every source has status `unverified` in `config/sources.yaml`. **No fixture is in the repo yet, so for every source the blocker is the build environment's network policy.**
+*Update, later on 31 Oct:* network access was opened, and the live results are in §0a. They supersede the desk research below wherever the two differ.
 
-## 1. Hansard: summary
+## 0a. Live check, 31 Oct 2026 (about 11:30 UTC): results
+
+Network access was opened for the session, and `make recon` plus some follow-up requests ran against every host. The full log is `docs/recon/recon-2026-10-31.jsonl`, and every saved file is listed in `backend/tests/fixtures/MANIFEST.md`.
+
+- **Where the requests came from:** a cloud network in the USA. Cloudflare's `cf-ray` header shows the IAD data centre.
+- **What was refused:** almost every refusal is a bot-protection page in front of the whole site, robots.txt included.
+- **What that means:** these blocks may be aimed at cloud or overseas addresses. Re-run `make recon` from the pilot's Australian network before sending any access request.
+
+### Hansard
+
+| Source | Result | What answered | Fixture saved |
+|---|---|---|---|
+| CTH-SEN, CTH-HOR | **blocked** | aph.gov.au: Azure WAF "Page Blocked by WAF", even for robots.txt | none |
+| NSW-LA, NSW-LC | **ok via the API** | `api.parliament.nsw.gov.au`: robots.txt 404 (no rules), API 200. The website itself (`www.parliament.nsw.gov.au`) shows a Cloudflare challenge. | year list (JSON); LA and LC tables of contents (XML); LA PDF; one LA fragment (XML), all for 22 Oct 2026 |
+| VIC-LA, VIC-LC | **blocked** | Cloudflare "Just a moment..." challenge, even for robots.txt | none |
+| QLD-LA | **ok via the documents host** | `documents.parliament.qld.gov.au`: robots.txt 404, PDF 200. `www.parliament.qld.gov.au` shows an Azure WAF challenge. | daily proof PDF, 13 Oct 2026 |
+| SA-HA, SA-LC | **blocked** | Azure WAF JavaScript challenge, even for robots.txt | none |
+| WA-LA, WA-LC | **blocked** | Azure WAF challenge, even for robots.txt | none |
+| TAS-HA, TAS-LC | **blocked** | Cloudflare challenge, even for robots.txt | none |
+| ACT-LA | **ok** | robots.txt: `Allow: /`, `Crawl-delay: 0` | 2026 index; proofs for 17 Sep and 24 Feb 2026 |
+| NT-LA | **listing ok; text needs permission** | `parliament.nt.gov.au` shows a Cloudflare challenge. Territory Stories answers, but its robots.txt disallows `/*.pdf$`, `/search/` and `/api/` except `/api/content` and `/api/full_record`. The Hansard PDFs are on an S3 bucket the site's viewer links to; **we did not download them.** | item page and `full_record` JSON for Draft Daily Hansard Day 6, 22 Oct 2026 |
+
+What the saved fixtures showed:
+
+- **NSW:**
+  - `/api/hansard/search/year/{yyyy}` lists each sitting date. Each date has one event per chamber with `PdfDocId`, `TocDocId` and **`Uncorrected: true|false`, which is the proof/final flag.**
+  - The table of contents (`/daily/tableofcontents/{TocDocId}`) is XML:
+    - `hansard.header/draft` is `true` for a proof;
+    - `proceeding/topic[@uid]/subproceeding/speech/talk.start/talker` holds `id`, `name`, `electorate` and `portfolios`;
+    - there are division lists by member id.
+  - A fragment (`/daily/fragment/{topic uid}`) has the same structure, plus XHTML text in `fragment.text`. Speakers are marked `<span class="MemberSpeech-H" data-value="{member id}">`, then `Electorate-H` and `Time-H`.
+  - **There is no party in Hansard.** Map member id to party from the Parliament's members data; this is not yet captured.
+- **QLD:**
+  - The PDF header is "RECORD OF PROCEEDINGS (PROOF)".
+  - Speakers appear as `Mr CRANDON (Coomera—LNP) (12.28 pm):`, or with a role: `Dr ROWAN (Moggill—LNP) (Leader of the House) (11.16 am)`.
+  - The party codes LNP and ALP are confirmed.
+  - The calendar page is blocked, so sitting days must be found by trying the date URL for each likely sitting day. A 404 means no document. That is weaker than reading a calendar; record it as "checked by date".
+- **ACT:**
+  - The year index `/hansard/11th-assembly/{yyyy}/debates(PDF).htm` lists every sitting day by week, with page ranges.
+  - "Green background denotes a proof … 'P' before a page number denotes Proof".
+  - Files are named `tP{YYMMDD}.pdf` or `P{YYMMDD}.pdf`. Both files checked say "Edited proof transcript", so **the file-name prefix is not the proof/final signal**; the "P" page prefix and the PDF heading are.
+  - As of 31 Oct 2026, every 2026 day is still a proof.
+  - Speakers appear as `MS CHEYNE (Ginninderra—Manager of Government Business, …)` and `MR SPEAKER (Mr Hanson) (10.00):`. **There is no party**, so the 25 members need a member-to-party map.
+  - An HTML edition ("Debates (HTML)") also exists and may parse better. To evaluate in Phase 2.
+- **NT:**
+  - The `full_record` JSON gives the title ("Draft Daily Hansard - Day 6 - 22 October 2026"), date, parent handle, licence (CC BY 4.0), modified time, page count and file links.
+  - The `related` list can serve as the list of sitting days.
+  - The draft/final signal is the title prefix, as expected.
+
+### Audit offices
+
+| Office | Result | What answered | Fixture saved |
+|---|---|---|---|
+| ANAO | **no response** | anao.gov.au timed out on robots.txt, twice | none |
+| AONSW | **ok** | robots.txt allows; `Crawl-delay: 1`; query strings disallowed (`*?*=*`) | Audit Work Plan 2026–2029 PDF; reports listing; requests for audit |
+| VAGO | **ok, with limits** | robots.txt disallows `/search/`, which is **where the report listings live** (`/search/reports…`). `/reports` is a 404. | Annual Plan 2026–27 PDF; sitemap index (use the sitemap for the register) |
+| QAO | **blocked** | "Client Challenge" page, served even as robots.txt and in place of PDFs | none |
+| SAAGD | **blocked** | the same "Client Challenge" page | none |
+| OAGWA | **blocked** | nginx 403 | none |
+| AUDTAS | **ok on the bare domain** | `audit.tas.gov.au`: robots.txt allows all. `www.audit.tas.gov.au` resets the connection. | annual plan page; performance audit listing |
+| ACTAO | **blocked** | Cloudflare challenge | none |
+| NTAGO | **blocked** | Cloudflare challenge | none |
+
+**Terms checked:**
+- NT: CC BY 4.0, from the item metadata. **H**
+- ACT: the reuse policy is at `parliament.act.gov.au/function/footer/reuse-policy`. The connection was reset, so it is still to read.
+
+## 1. Hansard: summary (desk research, before the live check)
 
 | Source | Format and recommended approach | Listing sitting days | Proof → final signal | Risk of automated-access block | Conf. |
 |---|---|---|---|---|---|
@@ -232,7 +299,7 @@ Until this is done, every source has status `unverified` in `config/sources.yaml
 - **List sitting days:** the predictable proof URL per calendar date. The `hansard.act.gov.au` index also lists them.
 - **Document URL:**
   - Proof daily: `https://www.hansard.act.gov.au/hansard/11th-assembly/{YYYY}/PDF/tP{YYMMDD}.pdf`
-  - Official weekly, per day: `…/PDF/{YYYYMMDD}.pdf`
+  - Official weekly, per day: `…/PDF/{YYYYMMDD}.pdf` — **wrong for 2026; see §0a.** Files are `tP`/`P{YYMMDD}.pdf`, and both are proofs.
   - Question Time proof: `/hansard/question-time/Q{MMDD}{Ddd}.pdf`
   - **H**
   - The `11th-assembly` segment changes after the Oct 2028 election.
@@ -400,18 +467,15 @@ For all 9 offices, **`robots.txt` and the terms pages are not checked** (environ
   - **Vic:** Premier Ben Carroll took office on 28 Jul 2026, and the state election is on 28 Nov 2026 (caretaker from 3 Nov). Update after the election.
   - **SA:** the 21 Mar 2026 election returned Labor; One Nation (4) is crossbench, not opposition.
 
-## 5. Recommended Phase 2 connector order
+## 5. Recommended Phase 2 connector order (after the live check)
 
-From easiest and most structured first:
+These three can be built now, because each has real fixtures and a reachable host:
 
-1. **SA:** official API and XML.
-2. **NSW:** API.
-3. **QLD:** date-based PDF.
-4. **ACT:** date-based PDF.
-5. **WA:** SA-style platform.
-6. **TAS:** calendar page → PDF.
-7. **NT:** draft page → Territory Stories.
-8. **VIC:** PDF; likely bot protection.
-9. **CTH:** XML, but WAF risk.
+1. **NSW:** the API (year list → table of contents → fragments), with a proof flag in both the list and the XML. Party comes from members data.
+2. **ACT:** the year index → daily PDF (or the HTML edition), with the "P" page prefix as the proof signal. Party comes from a 25-member map.
+3. **QLD:** the daily PDF from the documents host, found by trying the date URL. Party is in the speaker line.
 
-CTH and VIC are the most likely to need the access requests in `docs/access-requests.md` and manual import in the meantime.
+The rest need a decision first:
+
+- **NT:** the listing works through Territory Stories, but its robots.txt disallows the PDFs. Ask Library & Archives NT, or the Legislative Assembly, for permission or a feed, and use manual import in the meantime.
+- **CTH, VIC, SA, WA, TAS:** blocked by bot protection from this network. Re-test from the pilot network. If they're still blocked, send `docs/access-requests.md`, and use manual import in the meantime.

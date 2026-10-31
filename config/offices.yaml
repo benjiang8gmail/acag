@@ -2,13 +2,14 @@
 # Auditors-General match config/lexicon.yaml. Evidence is in docs/sources.md §3.
 # Jurisdiction colours live in web/src (design tokens) and move here in Phase 3.
 #
-# URLs marked `# unconfirmed` came from search results but were not opened.
-# Phase 0's direct check was refused by the container's egress policy.
+# `live_check` records the 31 Oct 2026 check from a US cloud network
+# (docs/sources.md §0a). Re-test blocked offices from the pilot network.
 
 as_of: 2026-10-31
 
 offices:
   - code: ANAO
+    live_check: "no response (timeouts on robots.txt)"
     name: Australian National Audit Office
     jurisdiction: CTH
     sources: [CTH-SEN, CTH-HOR]
@@ -23,6 +24,7 @@ offices:
     audit_requests_url: https://www.anao.gov.au/work-program/requests
 
   - code: AONSW
+    live_check: "ok; fixtures saved"
     name: Audit Office of New South Wales
     jurisdiction: NSW
     sources: [NSW-LA, NSW-LC]
@@ -34,10 +36,11 @@ offices:
       url: https://www.audit.nsw.gov.au/audit-work-plan-2026-2029
       document: https://www.audit.nsw.gov.au/sites/default/files/documents/Audit%20Work%20Plan%202026%E2%80%932029.pdf
       format: web page + PDF ("As at July 2026")
-    reports_url: https://www.audit.nsw.gov.au/our-work/reports   # unconfirmed
+    reports_url: https://www.audit.nsw.gov.au/our-work/reports   # robots.txt disallows query strings: page without ?=
     audit_requests_url: https://www.audit.nsw.gov.au/our-work/requests-for-audit
 
   - code: VAGO
+    live_check: "ok; /search/ disallowed by robots.txt"
     name: Victorian Auditor-General's Office
     jurisdiction: VIC
     sources: [VIC-LA, VIC-LC]
@@ -49,10 +52,11 @@ offices:
       url: https://www.audit.vic.gov.au/node/35573
       document: https://www.audit.vic.gov.au/sites/default/files/2026-06/20260624_Annual-Plan-2026-27.pdf
       format: PDF + HTML (tabled 24 Jun 2026)
-    reports_url: https://www.audit.vic.gov.au/reports   # unconfirmed
+    reports_url: https://www.audit.vic.gov.au/sitemap.xml   # listings live under /search/, which robots.txt disallows
     audit_requests_url: null   # "Suggest an audit" form only; no published list
 
   - code: QAO
+    live_check: "blocked: Client Challenge page, even for robots.txt"
     name: Queensland Audit Office
     jurisdiction: QLD
     sources: [QLD-LA]
@@ -69,6 +73,7 @@ offices:
     audit_requests_url: https://www.qao.qld.gov.au/audit-program/requests-audits
 
   - code: SAAGD
+    live_check: "blocked: Client Challenge page, even for robots.txt"
     name: Audit Office of South Australia
     other_names: [Auditor-General's Department]   # renamed on 1 Jul 2024
     jurisdiction: SA
@@ -82,6 +87,7 @@ offices:
     audit_requests_url: null
 
   - code: OAGWA
+    live_check: "blocked: nginx 403"
     name: Office of the Auditor General Western Australia
     jurisdiction: WA
     sources: [WA-LA, WA-LC]
@@ -96,21 +102,23 @@ offices:
     audit_requests_url: null
 
   - code: AUDTAS
+    live_check: "ok on audit.tas.gov.au; fixtures saved"
     name: Audit Tasmania
     other_names: [Tasmanian Audit Office]
     jurisdiction: TAS
     sources: [TAS-HA, TAS-LC]
-    website: https://audit.tas.gov.au
+    website: https://audit.tas.gov.au   # bare domain; www resets connections
     auditor_general: Martin Thompson
     program:
       name: Auditor-General's Annual Plan 2026–27
       published: true
       url: https://audit.tas.gov.au/publication/auditor-generals-annual-plan-2026-27/
       format: publication page + PDF (dated 22 Jun 2026)
-    reports_url: https://www.audit.tas.gov.au/publication-category/performance-audit/
+    reports_url: https://audit.tas.gov.au/publication-category/performance-audit/
     audit_requests_url: null   # referral guidance only
 
   - code: ACTAO
+    live_check: "blocked: Cloudflare challenge"
     name: ACT Audit Office
     jurisdiction: ACT
     sources: [ACT-LA]
@@ -125,6 +133,7 @@ offices:
     audit_requests_url: null
 
   - code: NTAGO
+    live_check: "blocked: Cloudflare challenge"
     name: Northern Territory Auditor-General's Office
     jurisdiction: NT
     sources: [NT-LA]

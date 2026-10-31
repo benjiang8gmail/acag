@@ -80,7 +80,7 @@ parliaments:
           crossbench: GRN, SFF, AJP, LCP (Legalise Cannabis), Libertarian, independents
           (including former One Nation MLCs). One Nation has no NSW MPs.
         confidence: high
-    party_codes: {}   # to verify from the NSW API fixture (expected: ALP, LIB, NAT, GRN, IND, SFF, AJP, LC)
+    party_codes: {}   # NSW Hansard XML carries member id, name and electorate but no party (live check 31 Oct 2026): map member id -> party from members data
 
   VIC:
     name: Parliament of Victoria
@@ -208,7 +208,7 @@ parliaments:
           agreement. The Greens (4) count as crossbench either way, as do independents
           Fiona Carrick and Thomas Emerson.
         confidence: high
-    party_codes: {}   # to verify from the ACT fixture
+    party_codes: {}   # ACT Hansard names speaker, electorate and role but no party (live check 31 Oct 2026): use a 25-member map
 
   NT:
     name: Legislative Assembly of the Northern Territory

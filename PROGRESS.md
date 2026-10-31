@@ -1,5 +1,71 @@
 # Progress
 
+## 31 Oct 2026 (evening): Phase 0 live check, with real fixtures for the reachable sources
+
+Network access was opened for this session, so `make recon` and some follow-up requests ran against every host. All requests were polite and obeyed robots.txt. Results are in `docs/sources.md` §0a, and the log is `docs/recon/recon-2026-10-31.jsonl`.
+
+### What happened
+
+- **The requests came from a US cloud network** (Cloudflare's IAD data centre). Most refusals were **bot-protection pages in front of the whole site, robots.txt included**. Those may be aimed at cloud or overseas addresses, so re-test from the pilot's Australian network.
+- **Hansard reachable:**
+  - **NSW**, through its API. The year list has an `Uncorrected` proof flag, and the XML marks `<draft>`.
+  - **QLD**, through the documents host: the daily proof PDF, with `Name (Electorate—PARTY)` speaker lines.
+  - **ACT**: a year index and proof PDFs. The "P" page prefix marks a proof; every 2026 day is still a proof.
+- **Hansard blocked:**
+  - CTH (Azure WAF block page)
+  - VIC (Cloudflare)
+  - SA (Azure WAF JavaScript challenge, including the published API)
+  - WA (Azure WAF)
+  - TAS (Cloudflare)
+- **NT:** the listing works through the Territory Stories API. Its robots.txt disallows the PDFs, so **we didn't download them**; that needs permission.
+- **Offices reachable:** AONSW, VAGO and Audit Tasmania (bare domain).
+  - VAGO's robots.txt disallows `/search/`, where its report listings live, so its register will come from the sitemap.
+- **Offices blocked:**
+  - QAO and the Audit Office of SA ("Client Challenge")
+  - OAG WA (nginx 403)
+  - ACT Audit Office and NT Auditor-General's Office (Cloudflare)
+  - ANAO did not respond.
+- **19 real fixtures** are saved in `backend/tests/fixtures/`, each recorded in `MANIFEST.md` with its URL and SHA-256.
+  - Three QAO and SA files turned out to be challenge pages that a 200 response had disguised. They were deleted. Both fetchers now recognise those pages, including when one is served in place of robots.txt.
+- **Corrections to the desk research:**
+  - ACT file names: `tP` and `P` are both proofs; the file-name prefix doesn't mark the final version.
+  - NSW and ACT Hansard carry no party, so speaker side needs member-to-party maps.
+  - QLD party codes LNP and ALP are confirmed.
+
+### Updated
+
+- `config/sources.yaml`: statuses set from the live check. NSW, QLD and ACT are `ok`; CTH, VIC, SA, WA, TAS and NT are `blocked`. Each source has a `live_check` note. All stay disabled until their connectors pass.
+- `config/offices.yaml`: a `live_check` note per office, plus corrected listing URLs for VAGO, Audit Tasmania and AONSW.
+- `config/governments.yaml`: notes on NSW and ACT party mapping.
+- `docs/access-requests.md`: rebuilt around the confirmed blocks. It adds draft D (Territory Stories PDFs) and draft E (audit offices). Still unsent.
+- `scripts/recon_batch.tsv`: corrected URLs, so the run can be repeated from the pilot network.
+
+### Evidence
+
+- `make test`: 43 backend tests pass. New ones:
+  - every fixture is in the manifest with a matching hash, no fixture is a challenge page, and every PDF starts with `%PDF-`;
+  - robots.txt served as a challenge page blocks the host, tested in both fetchers.
+
+### Decisions
+
+- **D12. A robots.txt that is refused (403) or is itself a challenge page means "do not fetch".** Python's own robots parser treats a 403 the same way. We never fall back to fetching the page anyway.
+- **D13. No PDFs from Territory Stories without permission.** The files sit on a separate S3 host, but Territory Stories' robots.txt clearly disallows `*.pdf`. Draft D asks for permission.
+
+### Open questions (update)
+
+- **4 (network):** answered for this session. Re-test the blocked sites from the pilot network before sending any access request.
+- **8 (new):** NT Hansard text: ask Library & Archives NT for permission (draft D), or rely on manual import for the NT?
+
+### Next
+
+- Phase 2 connectors on real fixtures, in this order:
+  1. NSW (API)
+  2. ACT (index → PDF, or the HTML edition)
+  3. QLD (date URL → PDF)
+- Member-to-party maps for NSW and ACT.
+
+---
+
 ## 31 Oct 2026: Phase 2, part 1 — Hansard store and no-rescan sync (source-independent)
 
 **Scope.** The product owner said "continue" after the Phase 0 review page. The parliament and office sites are still unreachable from the build environment, so this covers only the Phase 2 work that doesn't need real fixtures. Connectors for real chambers wait for real fixtures (decision D6).

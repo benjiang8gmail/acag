@@ -1,0 +1,25 @@
+# Fixtures
+
+Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host) during Phase 0, 31 Oct 2026. Never edit them: parser golden files are derived from them. Sources and licences are in `docs/sources.md`; the request log is `docs/recon/recon-2026-10-31.jsonl`.
+
+| File | Fetched from | Date | Bytes | SHA-256 (first 16) |
+|---|---|---|---|---|
+| `offices/AONSW/audit-work-plan-2026-2029.pdf` | https://www.audit.nsw.gov.au/sites/default/files/documents/Audit%20Work%20Plan%202026%E2%80%932029.pdf | 2026-10-31 | 4,924,043 | `25f81d1ea1eb3105` |
+| `offices/AONSW/reports.html` | https://www.audit.nsw.gov.au/our-work/reports | 2026-10-31 | 233,250 | `d49916743c196ae7` |
+| `offices/AONSW/requests.html` | https://www.audit.nsw.gov.au/our-work/requests-for-audit | 2026-10-31 | 123,006 | `23bd4a008ca100fd` |
+| `offices/AUDTAS/annual-plan-2026-27.html` | https://audit.tas.gov.au/publication/auditor-generals-annual-plan-2026-27/ | 2026-10-31 | 86,693 | `dcb23f3c91b98661` |
+| `offices/AUDTAS/reports.html` | https://audit.tas.gov.au/publication-category/performance-audit/ | 2026-10-31 | 111,408 | `18d244e5f5fd87e7` |
+| `offices/VAGO/annual-plan-2026-27.pdf` | https://www.audit.vic.gov.au/sites/default/files/2026-06/20260624_Annual-Plan-2026-27.pdf | 2026-10-31 | 7,734,379 | `7dc4c9499b46b0ce` |
+| `offices/VAGO/sitemap.xml` | https://www.audit.vic.gov.au/sitemap.xml | 2026-10-31 | 450 | `a0cc475b2fdcb966` |
+| `sources/ACT-LA/2026-02-24-proof-P.pdf` | https://www.hansard.act.gov.au/hansard/11th-assembly/2026/PDF/P260224.pdf | 2026-10-31 | 802,503 | `b5680060a1acae8a` |
+| `sources/ACT-LA/2026-09-17-proof.pdf` | https://www.hansard.act.gov.au/hansard/11th-assembly/2026/PDF/tP260917.pdf | 2026-10-31 | 796,745 | `92d6aba0cf80016f` |
+| `sources/ACT-LA/2026-debates-index.html` | https://www.hansard.act.gov.au/hansard/11th-assembly/2026/debates(PDF).htm | 2026-10-31 | 33,448 | `30f59f4cd7e03ccc` |
+| `sources/ACT-LA/home.html` | https://hansard.act.gov.au/ | 2026-10-31 | 19,774 | `58d4402d754c5d3c` |
+| `sources/NSW-LA/2026-10-22-fragment-170878.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/fragment/HANSARD-1323879322-170878 | 2026-10-31 | 17,172 | `9d549806e415c4f5` |
+| `sources/NSW-LA/2026-10-22-toc.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/tableofcontents/HANSARD-1323879322-170879 | 2026-10-31 | 206,525 | `e6f65ab6ff3a0bbe` |
+| `sources/NSW-LA/2026-10-22.pdf` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/pdf/HANSARD-1323879322-171125 | 2026-10-31 | 1,499,187 | `e91da316011b6f62` |
+| `sources/NSW-LC/2026-10-22-toc.xml` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/tableofcontents/HANSARD-1820781676-106154 | 2026-10-31 | 213,174 | `f0c80b9dba73ac44` |
+| `sources/NSW/year-2026.json` | https://api.parliament.nsw.gov.au/api/hansard/search/year/2026 | 2026-10-31 | 13,092 | `0d87a07ecc4a3f38` |
+| `sources/NT-LA/full_record-10070-1052298.json` | https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298 | 2026-10-31 | 55,937 | `5793c1373cf2ef98` |
+| `sources/NT-LA/territorystories-1052298.html` | https://territorystories.nt.gov.au/10070/1052298/0/39 | 2026-10-31 | 43,313 | `bbcb500f8183c8bb` |
+| `sources/QLD-LA/2026-10-13.pdf` | https://documents.parliament.qld.gov.au/events/han/2026/2026_10_13_DAILY.pdf | 2026-10-31 | 1,394,203 | `d343ac450bd7f1d6` |
