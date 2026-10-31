@@ -14,7 +14,8 @@ so sitting days are found from the documents host itself:
 - Text: the PDF's own "Table of Contents" pages give the outline: capitalised entries
   are sections (QUESTIONS WITHOUT NOTICE), mixed-case entries are topics.
   Speaker headers print party: "Mr CRANDON (Coomera—LNP) (12.28 pm):".
-- Speeches cite `PDF#page=N` with the printed page number from the running header.
+- Speeches carry the printed page number from the running header and cite `PDF#page=N` at
+  that page's place in the file (printed pages run on through the year).
 """
 
 from __future__ import annotations
@@ -150,6 +151,7 @@ class QLDConnector:
 
         lines: list[tuple[int, str]] = []
         printed: list[int] = []
+        pdf_page: dict[int, int] = {}   # printed page → page in the PDF file
         for i in range(first_body, len(pages)):
             body = [l.strip() for l in pages[i].splitlines() if l.strip()]
             head, page = body[:3], None
@@ -158,6 +160,7 @@ class QLDConnector:
                 body = body[3:]   # date, page number and the running title (section or "Legislative Assembly")
             page = page or (printed[-1] + 1 if printed else i + 1)
             printed.append(page)
+            pdf_page.setdefault(page, i + 1)
             if "ATTENDANCE" in body:   # the closing roll of members present: not speech
                 lines.extend((page, l) for l in body[:body.index("ATTENDANCE")])
                 break
@@ -174,7 +177,7 @@ class QLDConnector:
         cover_contents = re.split(r"\nSubject\s*\n\s*Page\s*\n", pages[0], maxsplit=1)[1:] if pages else []
         outline = contents_outline(cover_contents + [pages[i] for i in contents],
                                    (min(printed, default=0), max(printed, default=0)))
-        speeches, matched, total = walk(lines, outline, RULES, {}, ref.citation_url, min_matched=None)
+        speeches, matched, total = walk(lines, outline, RULES, {}, ref.citation_url, min_matched=None, pdf_page=pdf_page)
         doc = ParsedDocument(speeches=speeches, version="proof" if proof else "final", method="pdf")
         if total and matched / total < LOW_MATCH_NOTE:
             doc.note = f"only {matched} of {total} contents headings found in the text; debate titles may be incomplete"

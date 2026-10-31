@@ -80,7 +80,8 @@ def test_proof_flag_contents_and_pages(oct13):
     assert oct13.version == "proof" and oct13.method == "pdf" and oct13.note is None
     first_named = next(s for s in oct13.speeches if s.speaker_name)
     assert (first_named.speaker_name, first_named.page) == ("Mr SPEAKER", "3041")
-    assert all(s.anchor_url == f"{URL}#page={s.page}" for s in oct13.speeches)
+    # Printed pages run on through the year: printed page 3041 is page 4 of this 128-page file.
+    assert all(s.anchor_url == f"{URL}#page={int(s.page) - 3037}" for s in oct13.speeches)
 
 
 def test_headers_carry_party_electorate_role_and_time(oct13):

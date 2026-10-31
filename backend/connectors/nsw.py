@@ -319,11 +319,13 @@ def _toc_outline(toc: ET.Element) -> tuple[list[Heading], dict[str, tuple[str | 
 def parse_day_pdf(pdf: bytes, toc: ET.Element, citation_url: str | None) -> list[ParsedSpeech]:
     outline, members = _toc_outline(toc)
     lines: list[tuple[int, str]] = []
+    pdf_page: dict[int, int] = {}
     for i, text in enumerate(pdf_pages(pdf)):
         page, body = None, [l.strip() for l in text.splitlines() if l.strip()]
         while body and (m := RE_FURNITURE.match(body[0])):
             page = int(m.group("page")) if m.group("page") else page
             body.pop(0)
+        pdf_page.setdefault(page or i + 1, i + 1)
         lines.extend((page or i + 1, line) for line in body)
-    speeches, _, _ = walk(lines, outline, RULES, members, citation_url, MIN_HEADINGS_MATCHED)
+    speeches, _, _ = walk(lines, outline, RULES, members, citation_url, MIN_HEADINGS_MATCHED, pdf_page=pdf_page)
     return speeches

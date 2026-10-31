@@ -89,10 +89,13 @@ def _tidy_brackets(s: str) -> str:
 
 def walk(lines: list[tuple[int, str]], outline: list[Heading], rules: Rules,
          members: dict[str, tuple[str | None, str | None]], citation_url: str | None,
-         min_matched: float | None = 0.9) -> tuple[list[ParsedSpeech], int, int]:
+         min_matched: float | None = 0.9, pdf_page: dict[int, int] | None = None) -> tuple[list[ParsedSpeech], int, int]:
     """Returns (speeches, topic headings matched, topic headings in the outline).
 
-    With `min_matched` set, raises PdfParseUnreliable when too few topic headings line up."""
+    With `min_matched` set, raises PdfParseUnreliable when too few topic headings line up.
+    `pdf_page` maps a printed page number to its 1-based page in the PDF file, for the
+    `#page=` anchor: ACT and Queensland number pages through the year, so printed page
+    3587 can be page 3 of the day's PDF."""
     long_lines = sorted(len(l) for _, l in lines if len(l) > 40)
     width = long_lines[len(long_lines) // 2] if long_lines else 100
     members = dict(members)
@@ -285,6 +288,7 @@ def walk(lines: list[tuple[int, str]], outline: list[Heading], rules: Rules,
         sp.text = join_lines(body, width)
         if sp.text:
             sp.seq = len(out)
-            sp.anchor_url = f"{citation_url}#page={sp.page}" if citation_url and sp.page else citation_url
+            target = (pdf_page or {}).get(int(sp.page), sp.page) if sp.page and sp.page.isdigit() else sp.page
+            sp.anchor_url = f"{citation_url}#page={target}" if citation_url and target else citation_url
             out.append(sp)
     return out, matched, topics_total

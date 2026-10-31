@@ -89,8 +89,9 @@ def test_proof_version_pages_and_no_low_match_note(sep17):
     first = sep17.speeches[0]
     assert (first.speaker_name, first.speaker_role, first.start_time, first.page) == \
         ("MR SPEAKER", "presiding officer (Mr Hanson)", "10:00", "2751")
-    assert first.anchor_url == f"{PROOF_URL}#page=2751"
-    assert all(s.page and s.anchor_url.endswith(f"#page={s.page}") for s in sep17.speeches)
+    # Printed pages run on through the year: printed page 2751 is page 4 of this 112-page file.
+    assert first.anchor_url == f"{PROOF_URL}#page=4"
+    assert all(s.page and s.anchor_url.endswith(f"#page={int(s.page) - 2747}") for s in sep17.speeches)
 
 
 def test_ministerial_statement_header_wrapped_over_lines(sep17):

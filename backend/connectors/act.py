@@ -10,7 +10,8 @@ Source: hansard.act.gov.au (robots.txt allows everything; docs/sources.md §0a).
   name changes between proof and official versions.
 - Text: the PDF's own contents pages give the outline of headings (indentation
   shows which entries sit under "Questions without notice:" and similar groups).
-  Speeches cite `PDF#page=N`, using the printed page number from each page footer.
+  Speeches carry the printed page number from each page footer and cite `PDF#page=N` at
+  that page's place in the file (printed pages run on through the year).
 - Party is not printed in ACT Hansard; speaker side comes from a member map later.
 """
 
@@ -133,6 +134,7 @@ class ACTConnector:
 
         lines: list[tuple[int, str]] = []
         printed: list[int] = []
+        pdf_page: dict[int, int] = {}   # printed page → page in the PDF file
         proof = "EDITED PROOF TRANSCRIPT" in cover
         for i in range(first, len(pages)):
             body = [l.strip() for l in pages[i].splitlines() if l.strip()]
@@ -147,10 +149,11 @@ class ACTConnector:
                 body.pop()
             page = page or (printed[-1] + 1 if printed else i + 1)
             printed.append(page)
+            pdf_page.setdefault(page, i + 1)
             lines.extend((page, l) for l in body)
 
         outline = contents_outline(raw, list(range(1, first)), (min(printed, default=0), max(printed, default=0)))
-        speeches, matched, total = walk(lines, outline, RULES, {}, ref.citation_url, min_matched=None)
+        speeches, matched, total = walk(lines, outline, RULES, {}, ref.citation_url, min_matched=None, pdf_page=pdf_page)
         doc = ParsedDocument(speeches=speeches, version="proof" if proof else "final", method="pdf")
         if total and matched / total < LOW_MATCH_NOTE:
             doc.note = f"only {matched} of {total} contents headings found in the text; debate titles may be incomplete"
