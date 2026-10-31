@@ -1,0 +1,36 @@
+{"ts": "2026-10-31T02:42:15+00:00", "url": "https://www.aph.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:15+00:00", "url": "https://www.aph.gov.au/Parliamentary_Business/Hansard", "out": "dl/cth/hansard.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:15+00:00", "url": "https://www.parliament.nsw.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:15+00:00", "url": "https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-api", "out": "dl/nsw/hansard-api.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://www.parliament.vic.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate?page=1&pageSize=10", "out": "dl/vic/hansard-debate.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://www.parliament.qld.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings", "out": "dl/qld/rop.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://hansardsearch.parliament.sa.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://hansardsearch.parliament.sa.gov.au/search/calendar", "out": "dl/sa/calendar.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://www.parliament.wa.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:16+00:00", "url": "https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch", "out": "dl/wa/search.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://search.parliament.tas.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://search.parliament.tas.gov.au/adv/hahansard", "out": "dl/tas/hahansard.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://hansard.act.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://hansard.act.gov.au/", "out": "dl/act/home.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://parliament.nt.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://parliament.nt.gov.au/business/parliamentary-records/draft", "out": "dl/nt/draft.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://www.anao.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:17+00:00", "url": "https://www.anao.gov.au/work-program", "out": "dl/anao/work-program.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.audit.nsw.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.audit.nsw.gov.au/audit-work-plan-2026-2029", "out": "dl/aonsw/work-plan.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.audit.vic.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.audit.vic.gov.au/", "out": "dl/vago/home.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.qao.qld.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.qao.qld.gov.au/", "out": "dl/qao/home.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.audit.sa.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://www.audit.sa.gov.au/reports", "out": "dl/sa-ag/reports.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://audit.wa.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:18+00:00", "url": "https://audit.wa.gov.au/reports-and-publications/reports/", "out": "dl/oagwa/reports.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:19+00:00", "url": "https://audit.tas.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:19+00:00", "url": "https://audit.tas.gov.au/publication/auditor-generals-annual-plan-2026-27/", "out": "dl/audtas/plan.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:19+00:00", "url": "https://www.audit.act.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:19+00:00", "url": "https://www.audit.act.gov.au/", "out": "dl/actao/home.html", "result": "skipped", "reason": "robots.txt could not be checked"}
+{"ts": "2026-10-31T02:42:19+00:00", "url": "https://ago.nt.gov.au/robots.txt", "kind": "robots", "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"}
+{"ts": "2026-10-31T02:42:19+00:00", "url": "https://ago.nt.gov.au/", "out": "dl/ntago/home.html", "result": "skipped", "reason": "robots.txt could not be checked"}

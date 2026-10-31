@@ -1,0 +1,54 @@
+# Sector themes (spec §9.2). Used by the pre-filter (stage B), triage, the
+# sector picker and the gaps heatmap. `terms` are lower-case pre-filter hints,
+# not an exhaustive taxonomy; the model assigns the final theme.
+# Seeded from the spec in Phase 0; tune against the gold sets in Phase 4.
+version: 1
+themes:
+  - id: health
+    label: Health
+    terms: [hospital, emergency department, ambulance, elective surgery, mental health, health service, primary care, ramping, waiting list]
+  - id: education
+    label: Education and training
+    terms: [school, teacher, tafe, vocational, university, early childhood, kindergarten, skills, apprenticeship]
+  - id: transport
+    label: Transport and infrastructure
+    terms: [road, rail, metro, tunnel, bus, freight, major project, infrastructure, level crossing, light rail]
+  - id: housing
+    label: Housing and homelessness
+    terms: [social housing, public housing, homelessness, rental, affordable housing, housing supply]
+  - id: justice
+    label: Justice, police and corrections
+    terms: [police, prison, corrections, youth justice, court, bail, parole, detention]
+  - id: child-protection
+    label: Child protection and social services
+    terms: [child protection, out-of-home care, foster care, family violence, welfare, social services]
+  - id: disability
+    label: Disability and NDIS
+    terms: [ndis, disability, national disability insurance scheme, carer]
+  - id: local-government
+    label: Local government
+    terms: [council, local government, shire, municipal, rates]
+  - id: environment
+    label: Environment, water and energy
+    terms: [water, drought, energy, electricity, renewable, emissions, climate, environment protection, biodiversity, waste]
+  - id: digital
+    label: Digital, data and cyber
+    terms: [cyber, data breach, ict, it system, digital, information security, privacy]
+  - id: finance
+    label: Public finance and budget
+    terms: [budget, appropriation, debt, deficit, surplus, financial statements, treasury, revenue]
+  - id: procurement
+    label: Procurement and grants
+    terms: [procurement, tender, contract, grant, grants program, consultant, probity, value for money]
+  - id: integrity
+    label: Integrity and governance
+    terms: [integrity, corruption, conflict of interest, governance, misconduct, lobbying, accountability]
+  - id: workforce
+    label: Public sector workforce
+    terms: [public service, workforce, staffing, vacancies, labour hire, recruitment, wages]
+  - id: emergency
+    label: Emergency management
+    terms: [bushfire, flood, emergency management, disaster, recovery, cyclone, emergency services]
+  - id: first-nations
+    label: First Nations outcomes
+    terms: [aboriginal, torres strait islander, first nations, closing the gap, indigenous, treaty]
