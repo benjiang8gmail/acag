@@ -8,7 +8,7 @@ from urllib.parse import unquote_plus
 import httpx
 import pytest
 
-from connectors.base import SittingDayRef
+from connectors.base import CouldNotCheck, SittingDayRef
 from connectors.tas import HOST, TASConnector, parse_docx, search_url
 from pipeline.fetch import Fetcher
 
@@ -69,6 +69,47 @@ def test_old_unindexed_calendar_days_are_given_up():
     c = TASConnector(Fetcher("test", min_interval=0, transport=httpx.MockTransport(Site().handler)), today=date(2026, 12, 31))
     days = c.list_sitting_days(date(2026, 9, 8), date(2026, 9, 9))   # unindexed and > 30 days old
     assert days == []
+
+
+class EmptySite(Site):
+    """What the site answered on 31 Oct 2026, hours after serving the fixtures: HTTP 200, no body."""
+
+    def __init__(self, empty):
+        super().__init__()
+        self.empty = empty
+
+    def handler(self, request):
+        r = super().handler(request)
+        if r.status_code == 200 and self.empty in unquote_plus(str(request.url)):
+            return httpx.Response(200, content=b"")
+        return r
+
+
+@pytest.mark.parametrize("empty", ["/sittingdays.html", "IW_FIELD_ADVANCE_PHRASE="])
+def test_an_empty_page_is_could_not_check_not_no_sittings(empty):
+    c = TASConnector(Fetcher("test", min_interval=0, transport=httpx.MockTransport(EmptySite(empty).handler)),
+                     today=date(2026, 10, 31))
+    with pytest.raises(CouldNotCheck, match="empty page"):
+        c.list_sitting_days(date(2026, 9, 1), date(2026, 10, 31))
+
+
+def test_a_calendar_with_no_dates_is_could_not_check():
+    def handler(request):
+        if str(request.url).endswith("/robots.txt"):
+            return httpx.Response(404)
+        return httpx.Response(200, content=b"<html><body>Sitting days</body></html>")
+    c = TASConnector(Fetcher("test", min_interval=0, transport=httpx.MockTransport(handler)), today=date(2026, 10, 31))
+    with pytest.raises(CouldNotCheck, match="no sitting dates"):
+        c.list_sitting_days(date(2026, 9, 1), date(2026, 10, 31))
+
+
+def test_next_years_calendar_not_up_yet_is_no_sittings_that_year():
+    c = TASConnector(Fetcher("test", min_interval=0, transport=httpx.MockTransport(Site().handler)), today=date(2026, 12, 20))
+    days = c.list_sitting_days(date(2026, 12, 1), date(2027, 1, 31))   # 2027 calendar 404s
+    assert {d.sitting_date for d in days} <= {date(2026, 12, d) for d in (1, 2, 3, 7, 8, 9, 10)}
+    with pytest.raises(CouldNotCheck, match="HTTP 404"):               # but this year's must exist
+        TASConnector(Fetcher("test", min_interval=0, transport=httpx.MockTransport(Site().handler)),
+                     today=date(2025, 6, 1))._year(2025)
 
 
 def test_draft_flag_sections_topics_and_times(ha):

@@ -10,6 +10,9 @@ document search, search.parliament.tas.gov.au (no robots.txt rules), serves the 
   original Word file ("HA Thursday 10 September 2026.docx"). Recent days appear only once
   indexed (a few days): until then a calendar date has no hits and is held as pending; a date
   still unindexed after GIVE_UP_DAYS is treated as no sitting.
+- An empty answer (HTTP 200 with no body, as the site gave on 31 Oct 2026 after serving the same
+  pages earlier that day) or a calendar with no sitting dates is "could not check", never "no
+  sittings", so the watermark stays put until the site answers again.
 - Text: the .docx itself. Word heading styles give sections and topics; speaker turns open with
   a bold name and " - "; Question Time is "Mr WILLIE question to TREASURER, Mr ABETZ" … "ANSWER".
   "Preliminary Transcript" marks a draft.
@@ -26,6 +29,8 @@ import xml.etree.ElementTree as ET
 from collections.abc import Callable
 from datetime import date, datetime, timedelta
 from urllib.parse import quote_plus
+
+import httpx
 
 from pipeline.fetch import Blocked, Fetcher
 
@@ -70,23 +75,33 @@ class TASConnector:
         self._calendar: dict[int, list[date]] = {}
         self._docs: dict[date, dict[str, str]] = {}
 
-    def _get(self, url: str, what: str) -> str:
+    def _get(self, url: str, what: str, missing_ok: bool = False) -> str | None:
         try:
-            return self.fetcher.fetch(url).body.decode("utf-8", "replace")
+            body = self.fetcher.fetch(url).body
         except Blocked:
             raise
+        except httpx.HTTPStatusError as e:
+            if missing_ok and e.response.status_code == 404:
+                return None
+            raise CouldNotCheck(f"Tasmania {what}: HTTP {e.response.status_code}") from e
         except Exception as e:
             raise CouldNotCheck(f"Tasmania {what}: {e.__class__.__name__}: {e}") from e
+        if not body or not body.strip():
+            raise CouldNotCheck(f"Tasmania {what}: the site returned an empty page")
+        return body.decode("utf-8", "replace")
 
     def _year(self, year: int) -> list[date]:
         if year not in self._calendar:
-            html = self._get(f"{HOST}/search/quicksearch/{year}/sittingdays.html", f"sitting calendar {year}")
+            html = self._get(f"{HOST}/search/quicksearch/{year}/sittingdays.html", f"sitting calendar {year}",
+                             missing_ok=year > self.today.year)   # next year's calendar may not be up yet
             days = set()
-            for p in re.findall(r"IW_FIELD_ADVANCE_PHRASE=([^&\"]+)", html):
+            for p in re.findall(r"IW_FIELD_ADVANCE_PHRASE=([^&\"]+)", html or ""):
                 try:
                     days.add(datetime.strptime(re.sub(r"\s+", " ", p.replace("+", " ").replace("%20", " ")).strip(), "%A %d %B %Y").date())
                 except ValueError:
                     continue
+            if html is not None and not days:
+                raise CouldNotCheck(f"Tasmania sitting calendar {year}: no sitting dates found (page layout changed?)")
             self._calendar[year] = sorted(days)
         return self._calendar[year]
 

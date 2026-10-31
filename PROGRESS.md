@@ -1,5 +1,43 @@
 # Progress
 
+## 1 Nov 2026: first real backfill, a live-data dashboard, and two fixes it found
+
+### Done
+
+- **First real two-month backfill** (`make backfill`, run from the cloud container into a scratch data folder, not committed):
+  - 7 chambers in 5 parliaments, with no errors;
+  - 72 sitting-day documents and 23,603 speeches;
+  - by parliament: CTH 28 days / 7,762 speeches, NSW 24 / 9,789, QLD 9 / 3,234, ACT 10 / 2,550, NT 1 / 268;
+  - ACT 28–29 Oct are pending (not yet published).
+  - NSW fell back to topic-by-topic fragments on 3 days, where the day PDF matched fewer than 90% of headings: LA 20 Oct, LC 13 Oct and one more LC day.
+  - QLD 17 Sep notes that 85 of 108 contents headings matched.
+- **Fix: `#page=` links for ACT and Queensland** (71ad4a1). Both number Hansard pages through the year, so the links sent readers to page 3587 of a 107-page PDF.
+  - The shared reader now takes a printed-to-file page map. Speeches keep the printed page for display.
+  - The stored ACT and QLD speeches were re-anchored from their saved PDFs.
+- **Fix: an empty answer from Tasmania is "could not check", not "no sittings".** At 15:45 UTC on 31 Oct, search.parliament.tas.gov.au answered the sitting calendar and the date search with HTTP 200 and no body, hours after serving the same pages.
+  - The connector read that as a recess and moved the watermark to today, past real sitting days.
+  - Now an empty page, or a calendar with no dates, raises `CouldNotCheck`; sync keeps the watermark and marks the source `error`.
+  - Next year's calendar not being up yet (404) still counts as no sittings for that year.
+  - The site was not retried or worked around. TAS is retried on the next scan.
+- **Live-data dashboard** (private claude.ai page: https://claude.ai/artifact/P9EoKqpTwpDHxewhGHdccv), built from a snapshot of that store:
+  - per-parliament status and route;
+  - speeches per sitting day;
+  - speaking turns by side;
+  - 128 speeches mentioning an Auditor-General or audit office (a plain text match), each with excerpt and source link.
+
+### Evidence
+
+- `make test`: 134 backend tests pass. New tests:
+  - ACT and QLD anchors point at the file page (printed 2751 is page 4);
+  - Tasmania: an empty calendar or empty search raises `CouldNotCheck`, a calendar with no dates raises `CouldNotCheck`, and a 404 for next year's calendar is not an error.
+- `scan_runs` row 1: status done, per-source counts as above, `llm_calls` 0.
+
+### Open questions
+
+- Tasmania: is the empty answer an outage or a block on this network? Check again from the pilot's Australian network before treating it as a blocker.
+
+---
+
 ## 1 Nov 2026: Tasmania via the Parliament's own document search (6 parliaments live)
 
 ### Done

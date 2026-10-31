@@ -355,6 +355,9 @@ What the saved fixtures showed:
   - **Citations:** the stable date-search URL (the document links inside it are per query). There are no page numbers.
   - **Party:** `config/members/TAS.yaml` (Wikipedia, secondary): House of Assembly 35 (LIB 14, ALP 10, IND 6, GRN 4, SFF 1), Council 15 (IND 8, LIB 3, ALP 3, GRN 1). The official Council list PDF is behind Cloudflare.
   - **Captured live:** 10 Sep 2026 (House of Assembly and Council). Sides known for 99.7% and 100% of members' turns.
+  - **31 Oct 2026, 15:45 UTC:** the calendar (now a 301 from `sittingdays.html` to `sittingdays`) and the date search both answered HTTP 200 with an empty body, hours after serving the same pages.
+    - The connector now treats an empty page, or a calendar with no dates, as "could not check": status `error`, watermark kept.
+    - It was not retried or worked around. Re-check from the pilot's Australian network before calling it a blocker.
 
 ### ACT: Legislative Assembly (`ACT-LA`)
 
