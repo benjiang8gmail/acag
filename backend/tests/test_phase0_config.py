@@ -19,8 +19,9 @@ def test_fifteen_chambers_across_nine_parliaments():
     assert len(ids) == 15 == len(set(ids))
     assert {s["parliament"] for s in sources} == PARLIAMENTS
     assert {"ACT-LA", "NT-LA", "VIC-LA"} <= set(ids)
-    # Nothing is enabled until a real fixture exists and the connector passes (Phase 2).
-    assert not any(s["enabled"] for s in sources)
+    # A source is enabled only when its connector exists and passes on real fixtures (Phase 2).
+    from connectors.base import registry
+    assert {s["connector"] for s in sources if s["enabled"]} <= set(registry())
 
 
 def test_nine_offices_link_to_real_chambers():

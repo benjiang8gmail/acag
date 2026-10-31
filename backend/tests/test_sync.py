@@ -269,12 +269,14 @@ def test_speeches_are_full_text_searchable(env):
     assert rows == [("A",)]
 
 
-def test_seeded_sources_match_config_and_start_disabled(env):
+def test_seeded_sources_match_config(env):
+    from connectors.base import registry
     from pipeline.sync import seed_sources
     with db.session() as s:
         seed_sources(s)
         real = s.scalars(select(Source).where(Source.parliament != "FK")).all()
-    assert len(real) == 15 and not any(r.enabled for r in real)
+    assert len(real) == 15
+    assert {r.connector for r in real if r.enabled} <= set(registry())
 
 
 def test_robots_served_as_a_challenge_page_blocks_the_source(env):

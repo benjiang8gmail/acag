@@ -4,7 +4,8 @@
 # status values (spec §7): ok | no_sittings | blocked | error, plus `unverified`.
 # Set from the live check of 31 Oct 2026 (docs/sources.md §0a), made from a US
 # cloud network: re-test the blocked ones from the pilot's Australian network.
-# `enabled` stays false until the connector passes its real-fixture tests (Phase 2).
+# `enabled` is true only once the connector passes its real-fixture tests (Phase 2).
+# Enabled: NSW (31 Oct 2026, plus a live check of NSW-LC on 22 Oct 2026).
 
 as_of: 2026-10-31
 
@@ -33,7 +34,7 @@ sources:
     parliament: NSW
     chamber: Legislative Assembly
     connector: nsw
-    enabled: false
+    enabled: true
     status: ok
     live_check: "API reachable; fixtures saved for 22 Oct 2026 (website itself is behind Cloudflare)"
     approach: nsw_hansard_api       # https://api.parliament.nsw.gov.au/api
@@ -42,7 +43,7 @@ sources:
     parliament: NSW
     chamber: Legislative Council
     connector: nsw
-    enabled: false
+    enabled: true
     status: ok
     live_check: "API reachable; fixtures saved for 22 Oct 2026 (website itself is behind Cloudflare)"
     approach: nsw_hansard_api

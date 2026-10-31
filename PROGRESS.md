@@ -1,5 +1,64 @@
 # Progress
 
+## 31 Oct 2026 (night): Phase 2, NSW connector, enabled
+
+### Done
+
+- **`backend/connectors/nsw.py`**, built on the public NSW Hansard API and its real fixtures:
+  - **Listing:** the year list. Its `Uncorrected` flag gives proof or final per chamber.
+  - **Stored document:** the day's table of contents, keyed `toc:{source}:{date}` because its id can change.
+  - **Topic fragments** are fetched only when the table of contents has changed. Re-checking a proof day costs **one request**.
+  - **Speaker turns:**
+    - Each speech, question or answer is one turn.
+    - A member with the call is a contribution (`MemberUpper-H`), not an interjection.
+    - Title-case names are interjections (`MemberLower-H`).
+    - Presiding officers are their own turns, with the member in the chair, e.g. "presiding officer (The Hon. Rod Roberts)".
+    - A speaker resuming after an interruption rejoins their own turn.
+    - A mover's "In reply" is a separate speech.
+    - Division lists are skipped.
+  - **Recorded per speech:** member id, electorate, ministerial title and time.
+  - **Citations** go to the day's PDF.
+  - Party is not in NSW Hansard; speaker side comes from members data later.
+- **Sync changes:**
+  - Connectors now receive the polite fetcher.
+  - `fetch_part` fetches sub-resources and keeps their raw files.
+  - Documents are matched on `doc_key`.
+  - Scans count `parts_fetched`.
+  - A migration adds `documents.doc_key` and `speeches.speaker_id`.
+- **NSW-LA and NSW-LC are enabled** in `config/sources.yaml`.
+
+### Evidence
+
+- `make test`: 54 backend tests pass, 11 of them for the NSW connector, all against real saved files:
+  - the listing, with proof and final days and recess;
+  - a second-reading speech, Question Time (question, answer, Speaker, interjection, the minister resuming), a tabled document, a written statement, and a motion debate with an "in reply";
+  - a Council committee stage whose names are split across spans;
+  - a whole day walking all 244 topics in order;
+  - **a sync of 22 Oct, then a re-check that makes 2 requests (year list, then a 304 on the table of contents), fetches 0 fragments and finds 0 speeches to analyse.**
+- **Live check, NSW-LC 22 Oct 2026**, through the real polite fetcher into a throwaway database: 72 topics, 581 speeches, 0 errors, status `ok`.
+  - It found two Council markup issues: names split across spans, and members with the call being labelled interjections. Both are fixed, and the fragment that showed them is now a fixture.
+- Fixtures: 25, with the manifest rebuilt by `scripts/fixture_manifest.py`.
+
+### Decision needed
+
+- **D14. Request volume.** NSW serves text one topic at a time: about 245 requests for each chamber-day.
+  - At `FETCH_MIN_INTERVAL_SECONDS=2`, the two-month backfill (24 chamber-days) is about **3.3 hours**, and a typical sitting week about **50 minutes**.
+  - About 60% of Assembly topics are **written** community recognition statements, which are very unlikely to mention an audit office.
+  - Options:
+    - (a) accept the time;
+    - (b) skip written community recognition statements;
+    - (c) a shorter interval for this API, which is built for programmatic use and publishes no limit;
+    - (d) a combination.
+  - I've kept everything, at 2 s, until you decide.
+
+### Next
+
+- ACT connector (year index → proof PDF, or the HTML edition; party from a 25-member map), then QLD.
+- NSW member-to-party map, used for speaker side (Phase 4 needs it).
+- Wire the web app's "Check for updates" and `/api/status` to the real scan.
+
+---
+
 ## 31 Oct 2026 (evening): Phase 0 live check, with real fixtures for the reachable sources
 
 Network access was opened for this session, so `make recon` and some follow-up requests ran against every host. All requests were polite and obeyed robots.txt. Results are in `docs/sources.md` §0a, and the log is `docs/recon/recon-2026-10-31.jsonl`.

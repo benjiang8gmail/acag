@@ -165,7 +165,7 @@ def parse_fragment(raw: bytes, proceeding_type: str) -> list[ParsedSpeech]:
             continue
 
         kind = _cls(head)
-        name = _clean("".join(head.itertext())).rstrip(":")
+        name, extra = _header_names(holder, head)
         text = _text_after_header(holder)
         pid = head.get("data-value") or member_id
         if kind in MAIN_TURN:
@@ -183,18 +183,46 @@ def parse_fragment(raw: bytes, proceeding_type: str) -> list[ParsedSpeech]:
         elif kind == "MemberUpper-H" and main is not None and pid and pid == main_id:
             main.text += "\n" + text
             last = main
+        elif kind == "MemberUpper-H":
+            # A member with the call who is not resuming a speech: e.g. in committee,
+            # or tabling a document. Their contribution becomes the current turn.
+            main = ParsedSpeech(seq=0, text=text, debate_title=debate_title,
+                                proceeding_type=f"{proceeding_type} (statement)",
+                                speaker_name=name, speaker_id=pid)
+            main_id, last = pid, main
+            turns.append(main)
         else:
-            role = "presiding officer" if kind == "OfficeUpper-H" else None
-            suffix = "presiding" if kind == "OfficeUpper-H" else "interjection" if main is not None else "statement"
-            turn = ParsedSpeech(seq=0, text=text, debate_title=debate_title,
-                                proceeding_type=f"{proceeding_type} ({suffix})",
+            presiding = kind == "OfficeUpper-H"
+            role = ("presiding officer" + (f" ({extra})" if extra else "")) if presiding else None
+            last = ParsedSpeech(seq=0, text=text, debate_title=debate_title,
+                                proceeding_type=f"{proceeding_type} ({'presiding' if presiding else 'interjection'})",
                                 speaker_name=name, speaker_role=role, speaker_id=pid)
-            turns.append(turn)
-            last = turn
-            if main is None and suffix == "statement":
-                main, main_id = turn, pid
+            turns.append(last)
         member_id = None
     return [t for t in turns if t.text]
+
+
+def _header_names(holder: ET.Element, head: ET.Element) -> tuple[str, str | None]:
+    """The speaker's name, which NSW sometimes splits over adjacent spans ("T" + "he CHAIR"),
+    and any further name of the same class in brackets ("(The Hon. Rod Roberts)")."""
+    kids = [c for c in holder if _local(c.tag) == "span"]
+    i = kids.index(head)
+    name = ""
+    while i < len(kids) and _cls(kids[i]) == _cls(head):
+        name += "".join(kids[i].itertext())
+        if (kids[i].tail or "").strip():
+            break
+        i += 1
+    extra, prev_joined = "", False
+    for k in kids[i:]:
+        if _cls(k) == _cls(head):
+            extra += "".join(k.itertext())   # adjacent spans are one name split in pieces
+            prev_joined = not (k.tail or "").strip()
+        elif extra and prev_joined:
+            break
+    name = _clean(name).rstrip(":").strip()
+    extra = _clean(extra).strip(":() ")
+    return name, (extra if extra and extra != name else None)
 
 
 def _span_text(holder: ET.Element, cls: str) -> str | None:

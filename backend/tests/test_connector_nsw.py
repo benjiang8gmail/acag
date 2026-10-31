@@ -96,7 +96,8 @@ def test_bill_second_reading_speech():
     assert speech.proceeding_type == "Bills"
     assert speech.debate_title == "Residential Tenancies Amendment (Rent Control) Bill 2026 — Second Reading Speech"
     assert speech.text.startswith("I move:\nThat this bill be now read a second time.")
-    assert presiding.speaker_role == "presiding officer"
+    assert presiding.speaker_name == "TEMPORARY SPEAKER"
+    assert presiding.speaker_role == "presiding officer (Mr Alex Greenwich)"
 
 
 def test_question_time_question_answer_and_interjections():
@@ -137,6 +138,20 @@ def test_motion_debate_keeps_each_speaker_whole():
     assert speeches[-1].text.startswith("In reply:")
     assert all(len(t.text) > 500 for t in speeches)
     assert not any("DivisionThreeColumn" in t.text for t in turns)
+
+
+def test_council_committee_names_split_across_spans_are_joined():
+    turns = parse_fragment((FX / "NSW-LC" / "2026-10-22-fragment-106209.xml").read_bytes(), "Bills")
+    chairs = {(t.speaker_name, t.speaker_role) for t in turns if t.proceeding_type == "Bills (presiding)"}
+    assert ("The CHAIR", "presiding officer (The Hon. Rod Roberts)") in chairs
+    assert ("The TEMPORARY CHAIR", "presiding officer (The Hon. Taylor Martin)") in chairs
+    assert ("The PRESIDENT", "presiding officer") in chairs
+    assert not any(n in {"T", "The C", "The TEM"} for n, _ in chairs)
+    assert not any(t.text.startswith(("he ", "PORARY")) for t in turns)
+    # Title-case names are interjections; members with the call speak in full.
+    fang = [t for t in turns if t.speaker_name == "The Hon. Wes Fang"]
+    assert fang and all(t.proceeding_type == "Bills (interjection)" for t in fang)
+    assert turns[1].speaker_name == "The Hon. JEREMY BUCKINGHAM" and turns[1].proceeding_type == "Bills"
 
 
 def test_whole_day_walks_every_topic_in_order(connector, site):
