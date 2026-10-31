@@ -1,5 +1,31 @@
 # Progress
 
+## 1 Nov 2026: Victoria, every route tested to the point of evidence
+
+### Done
+
+- **Re-tested the suggestion that `www.parliament.vic.gov.au` is crawlable while only the search host is blocked.** It is not, from here. Inspecting the response rather than the status code settles it: every path answers HTTP 403 with `cf-mitigated: challenge`, `server: cloudflare` and the "Just a moment…" interstitial — `robots.txt`, the Browse Hansard listing, a per-speech `hansard-details` page, **and the static `globalassets` daily PDF**. `cf-ray` ends `-IAD`: this container egresses from a US datacentre.
+- **`WebFetch` cannot resolve the host:** `parliament.vic.gov.au` is outside this session's allowed network domains. Adding it under the environment's Network access would let that route be tested.
+- **Public web search is the one route that returned real Victorian data,** and it needs no request to the site. `site:parliament.vic.gov.au` queries give the daily PDF URLs with house, date and proof/final status.
+  - `config/vic_hansard.yaml` now lists three verified sitting days: Council 23 Sep 2026 (`974425065-37180`), Assembly and Council 24 Sep 2026 (`2145855009-37599`, `974425065-37279`), all final.
+  - The links are unverified (not fetched) and the first path segment is a rotating cache-buster that differs between proof and final, so one may 404 and need re-copying.
+- **Recorded that search is for discovery only, never ingestion.** It returns snippets, and fetch-and-summarise tools restate figures (a report of "$138 billion" for a $136.8m item) and truncate long sittings. Verbatim quotes with page numbers must come from the PDF bytes.
+
+### Evidence
+
+- `make test`: 144 backend tests pass (Victoria's 6 unchanged; the committed day list is validated by one of them).
+- Response headers and challenge body in `docs/sources.md` §VIC and `docs/recon/vic-recheck-2026-10-31.jsonl`.
+
+### Decisions
+
+- **D18. A challenge page is a closed door, whatever the path.** Static assets on a challenged host are not a side entrance; the PDF is served the same interstitial as the HTML, and solving it is the thing we do not do. Search indexes and official mirrors stay allowed because they serve us their own copy.
+
+### Next
+
+- Unchanged and unblocked by all of the above: one real daily PDF, by `make import` or a scan from a network the site serves. The reader is the only missing piece.
+
+---
+
 ## 1 Nov 2026: Victoria, as far as it can go without a file; manual import for blocked sites
 
 ### Done
