@@ -372,6 +372,16 @@ What the saved fixtures showed:
   - **Citations:** the stable date-search URL (the document links inside it are per query). There are no page numbers.
   - **Party:** `config/members/TAS.yaml` (Wikipedia, secondary): House of Assembly 35 (LIB 14, ALP 10, IND 6, GRN 4, SFF 1), Council 15 (IND 8, LIB 3, ALP 3, GRN 1). The official Council list PDF is behind Cloudflare.
   - **Captured live:** 10 Sep 2026 (House of Assembly and Council). Sides known for 99.7% and 100% of members' turns.
+  - **31 Oct 2026, 23:10 UTC — the empty pages are an outage of the search application, not a block.** Evidence, all with our own user-agent:
+    - `/qsl/searchlinks` (24,849 bytes) and the host root (4,429) serve real HTML, and `robots.txt` returns a 404 **page**, so the web server is up and serving bytes.
+    - Every `/search/quicksearch/{year}/…` path returns **HTTP 200 with 0 bytes** — `sittingdays` for 2024, 2025 and 2026 alike, and the sibling collections (`HAMembers`, `Bills`, …). So it is the whole ISYS application, not one year or one page.
+    - This morning's `/search/isysquery/{id}/…docx` link now returns 0 bytes too: the document store is served *by* the query engine, so no Tasmanian document is reachable while it is down.
+    - Visiting the root first sets no cookie and changes nothing; a browser-style `Accept` header changes nothing. No public maintenance notice was found.
+    - Nothing to fix our side: the connector already treats an empty page as "could not check", holds the watermark and retries on the next scan.
+  - **A second, independent route exists for when the search host is down — the Parliament's own static daily PDFs.** Found by public web search, needing no request to the site: `https://www.parliament.tas.gov.au/__data/assets/pdf_file/{nnnn}/{nnnnnn}/{HA|LC}-{Weekday}-{D}-{Month}-{YYYY}[-Draft].pdf` (e.g. `LC-Thursday-21-May-2026.pdf`; `-Draft` marks a preliminary transcript). The filename matches the .docx naming exactly.
+    - **Not fetchable from here:** both `www.parliament.tas.gov.au` and the bare `parliament.tas.gov.au` answer every path, that static PDF included, with HTTP 403 `cf-mitigated: challenge`.
+    - The two numeric path segments are Squiz asset ids and cannot be derived from the date, so the links have to come from the Hansard index page or from search.
+    - It is the form a person downloading by hand gets, so `make import` must accept it. Until a real Tasmanian PDF exists to write the reader against (D6), the connector refuses a non-Word file with a message saying so rather than failing inside the unzipper.
   - **31 Oct 2026, 15:45 UTC:** the calendar (now a 301 from `sittingdays.html` to `sittingdays`) and the date search both answered HTTP 200 with an empty body, hours after serving the same pages.
     - The connector now treats an empty page, or a calendar with no dates, as "could not check": status `error`, watermark kept.
     - It was not retried or worked around. Re-check from the pilot's Australian network before calling it a blocker.

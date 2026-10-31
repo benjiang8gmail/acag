@@ -1,5 +1,32 @@
 # Progress
 
+## 1 Nov 2026: Tasmania diagnosed — an outage, not a block — and a second document route found
+
+### Done
+
+- **Applied the Victoria method to Tasmania: inspect the response, then search for other routes.** The two states fail for opposite reasons.
+- **`search.parliament.tas.gov.au` is suffering an outage of its search application.** With our own user-agent: `/qsl/searchlinks` (24,849 bytes) and the host root serve real HTML and `robots.txt` returns a 404 page, so the web server is up; but every `/search/quicksearch/{year}/…` path returns **HTTP 200 with 0 bytes**, for 2024, 2025 and 2026 and for every sibling collection. This morning's `isysquery` .docx link is empty too, so the document store is served by the query engine. A session cookie and a browser-style `Accept` header change nothing, and there is no public maintenance notice.
+  - **No code change needed:** this morning's fix already treats an empty page as "could not check", holds the watermark and retries next scan. Tasmania resumes by itself when the site does.
+- **Found a second, independent route to Tasmanian daily Hansard, by search alone:** the Parliament publishes each sitting day as a static PDF at `parliament.tas.gov.au/__data/assets/pdf_file/{nnnn}/{nnnnnn}/{HA|LC}-{Weekday}-{D}-{Month}-{YYYY}[-Draft].pdf`, the same naming as the .docx, with `-Draft` for a proof.
+  - **Blocked here:** both `www.` and the bare host answer every path, that static PDF included, with 403 `cf-mitigated: challenge` — exactly like Victoria.
+  - The two numeric segments are Squiz asset ids, not derivable from the date, so links must come from the index page or search.
+- **Closed the gap that discovery exposed:** a hand-downloaded Tasmanian *PDF* would have crashed inside the .docx unzipper. `TASConnector.parse` now refuses any non-Word file with a message naming the PDF route and why its reader is still to be written.
+
+### Evidence
+
+- `make test`: 145 backend tests pass; Tasmania 12, including the new refusal test (a PDF, and a file named .docx that is not one, while the real .docx fixture still parses).
+- Response sizes, headers and the probe set in `docs/sources.md` §TAS.
+
+### Decisions
+
+- **D19. Distinguish "blocked" from "broken" in the record.** Both leave a source empty, but only one is a policy question: a block is reported with its evidence and left alone, while an outage is retried on its own. Victoria is blocked; Tasmania is broken.
+
+### Next
+
+- Tasmania: re-run `make scan` when the search host serves again — nothing else is needed. If the outage lasts, its daily PDFs can be imported by hand like Victoria's, once a real one exists to write the reader against.
+
+---
+
 ## 1 Nov 2026: Victoria, every route tested to the point of evidence
 
 ### Done

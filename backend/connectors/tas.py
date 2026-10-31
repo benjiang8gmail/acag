@@ -141,6 +141,15 @@ class TASConnector:
                             citation_url=search_url(day.sitting_date))]
 
     def parse(self, raw: bytes, ref: DocumentRef, fetch_part: Callable[[str], bytes]) -> ParsedDocument:
+        # The search host serves the original Word file. The Parliament also publishes each day as a
+        # static PDF ("LC-Thursday-21-May-2026.pdf", "-Draft" for a proof) under
+        # parliament.tas.gov.au/__data/assets/pdf_file/, which is what a person downloading by hand
+        # gets; that host is behind a Cloudflare challenge here, so no real Tasmanian PDF has been
+        # obtainable to write a reader against (spec D6: no stand-in fixtures).
+        if ref.format != "docx" or not raw.startswith(b"PK"):
+            raise NotImplementedError(
+                f"Tasmania reads the Word transcript, not {ref.format}; the reader for the Parliament's "
+                "daily Hansard PDF is written against the first real one (docs/sources.md §TAS)")
         return parse_docx(raw, ref.citation_url)
 
 

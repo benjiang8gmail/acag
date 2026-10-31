@@ -9,6 +9,7 @@ import httpx
 import pytest
 
 from connectors.base import CouldNotCheck, SittingDayRef
+from connectors.base import DocumentRef
 from connectors.tas import HOST, TASConnector, parse_docx, search_url
 from pipeline.fetch import Fetcher
 
@@ -154,3 +155,16 @@ def test_member_lists_give_sides_for_nearly_every_turn(ha, lc):
     assert (abetz.speaker_side, willie.speaker_side) == ("government", "opposition")
     rattray = next(s for s in lc.speeches if s.speaker_name == "Ms RATTRAY" and s.speaker_role)
     assert rattray.speaker_side == "government"   # "Leader for the Government in the Legislative Council"
+
+
+def test_a_tasmanian_pdf_is_refused_clearly_rather_than_read_as_a_word_file():
+    """The Parliament also publishes each day as a static PDF; importing one by hand must say
+    plainly that its reader is still to be written, not fail inside the .docx unzipper."""
+    c = TASConnector(None)
+    ref = DocumentRef("TAS-LC", date(2026, 5, 21), "https://www.parliament.tas.gov.au/x.pdf", "pdf")
+    with pytest.raises(NotImplementedError, match="daily Hansard PDF"):
+        c.parse(b"%PDF-1.7 not a word file", ref, lambda u: b"")
+    docx_ref = DocumentRef("TAS-HA", SEP10, "u", "docx")
+    with pytest.raises(NotImplementedError):   # named .docx but not a Word file (e.g. a saved error page)
+        c.parse(b"<html>challenge</html>", docx_ref, lambda u: b"")
+    assert c.parse((FX / "TAS-HA" / "2026-09-10.docx").read_bytes(), docx_ref, lambda u: b"").method == "docx"
