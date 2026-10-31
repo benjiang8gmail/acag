@@ -25,9 +25,11 @@ def dataset() -> dict:
 
 
 def refreshed() -> bool:
-    """True once a scan has finished; items it 'found' then become visible."""
+    """True once a sample scan has finished; the sample items it 'found' then become visible.
+    Real scans don't reveal sample items."""
     with session() as db:
-        return db.scalar(select(ScanRun.id).where(ScanRun.status == "done").limit(1)) is not None
+        runs = db.scalars(select(ScanRun.per_source_json).where(ScanRun.status == "done")).all()
+        return any(isinstance(r, dict) and r.get("sample") for r in runs)
 
 
 def items(include_pending: bool | None = None) -> list[dict]:

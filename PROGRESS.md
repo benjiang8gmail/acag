@@ -1,5 +1,54 @@
 # Progress
 
+## 1 Nov 2026: "Check for updates" runs the real scans
+
+### Done
+
+- **`backend/app/scans.py`** now has two modes, set by `SCAN_MODE`:
+  - **`real`** (the default) runs the real sync for each parliament with an enabled connector (NSW, ACT, QLD).
+    - Parliaments run one at a time, each in a worker thread, through the polite fetcher.
+    - Each progress row updates live over the existing SSE stream, e.g. "1 new sitting day · 485 speeches stored", "2 awaiting publication" or "No new sitting days".
+    - The six parliaments without a connector say why: "Not checked — the site blocks automated access; access requested".
+    - The summary reports parliaments that sat, new sitting days and speeches stored, and notes that AI analysis comes next.
+    - Each run is logged in `scan_runs` with per-chamber counts. One scan at a time.
+  - **`sample`** replays the prototype's scan as before. The end-to-end journey that expects the sample "New" items runs with `SCAN_MODE=sample`.
+- **`/api/status`** in real mode (`backend/app/live_status.py`) reads the real `sources`, `sitting_days` and `scan_runs` tables:
+  - one row per parliament (9): "Last sat Thu 22 Oct", "Not sitting", or blocked with the reason;
+  - `liveHansard`, `neverChecked`, `hansardTo` and `storedFrom` come from stored sitting days;
+  - `lastScan` carries the last run's per-chamber counts.
+- **Real scans no longer reveal the sample "new" items.** Only sample runs do.
+- **Web app:**
+  - the status panel says which parliaments have real Hansard ("Hansard is stored for real for NSW, ACT, Qld …");
+  - it shows "Not checked yet" before the first scan;
+  - the scan summary reads "1 parliament sat · 1 new sitting day · 485 speeches stored · …";
+  - "Show me" appears only when there are new items.
+- `.env.example` gains `SCAN_MODE`. The README documents both modes.
+
+### Evidence
+
+- `make test`: 110 backend tests pass. 3 new tests (`tests/test_real_scan.py`) drive the real mode through the API against the real NSW fixtures:
+  - status before any scan names the blocked parliaments;
+  - **POST /api/scans runs the real sync**: only one at a time; NSW reports "1 new sitting day · … speeches stored"; CTH says why it wasn't checked;
+  - the summary counts are right, and status then shows "Last sat Thu 22 Oct";
+  - the run is logged with `methods: {"pdf": 1}`;
+  - **a second check straight away reports "No new sitting days" and stores 0 speeches**;
+  - real scans don't reveal sample items.
+- `make test-web`: typecheck and 6 unit tests pass. `npm run build` succeeds.
+
+### Decisions
+
+- **D15. No CORS proxies, relays, or automated browsers to get past bot checks.** The six blocked parliaments chose those checks. The legitimate routes are:
+  - running the scanner from an Australian network the sites accept, such as the product owner's computer or an ACAG or VAGO network;
+  - official alternative hosts or data;
+  - access requests;
+  - assisted manual import (a person downloads, the pipeline processes).
+
+### Next
+
+- The six parliaments: test legitimate routes, including running from the product owner's computer.
+
+---
+
 ## 1 Nov 2026: member lists and speaker side
 
 ### Done

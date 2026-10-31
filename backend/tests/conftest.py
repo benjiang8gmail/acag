@@ -14,6 +14,7 @@ def client(tmp_path, monkeypatch):
     monkeypatch.setenv("SESSION_SECRET", "test-secret")
     monkeypatch.setenv("APP_PASSWORD_HASH", hash_password(TEST_PASSWORD))
     monkeypatch.setenv("SAMPLE_SCAN_STEP_SECONDS", "0.01")
+    monkeypatch.setenv("SCAN_MODE", "sample")   # the sample flow; test_real_scan.py covers real scans
     config.get_settings.cache_clear()
     db.reset_engine()
     auth.reset_throttle()

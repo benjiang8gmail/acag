@@ -34,12 +34,16 @@ export interface Sector { name: string; short: string }
 export interface ScanSnapshot {
   id: number; step: number; total: number; done: boolean;
   sources: { code: Code | 'REG'; state: 'done' | 'checking' | 'waiting'; text: string | null }[];
-  summary: null | { parliamentsSat: number; newSittingDays: number; newItems: number; newItemsMentioningOffice: Partial<Record<Code, number>>; registers: string };
+  summary: null | {
+    parliamentsSat: number; newSittingDays: number; newItems: number; newItemsMentioningOffice: Partial<Record<Code, number>>; registers: string;
+    speechesStored?: number; note?: string;   // real scans (SCAN_MODE=real), before AI analysis exists
+  };
 }
 
 export interface Status {
   sampleData: boolean; asOf: string; lastChecked: string; previousCheck: string; hansardTo: string; storedFrom: string;
   refreshed: boolean; registers: string; scanRunning: ScanSnapshot | null;
+  liveHansard?: Code[]; neverChecked?: boolean;   // real mode: parliaments whose Hansard is stored for real
   sources: { code: Code; parliament: string; status: Jurisdiction['status']; text: string }[];
   upcomingSittings: { d: string; p: string }[];
 }

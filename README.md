@@ -23,12 +23,14 @@ make serve
 
 Browsing is open to everyone. Signing in (username `acag`, plus the password you set) is only needed to **refresh**, because a refresh will run paid AI analysis once the pipeline exists.
 
+**Check for updates** runs the real Hansard sync (`SCAN_MODE=real`, the default) for every parliament with a working connector: NSW, ACT and Queensland so far. The other six show why they weren't checked. Briefs and items are still sample data until AI analysis is built. `SCAN_MODE=sample` replays the prototype's sample scan instead.
+
 ## Test
 
 ```sh
 make test                          # backend pytest, web typecheck and unit tests
 make serve &                       # then, in another shell:
-E2E_PASSWORD=yourpassword make e2e  # Playwright journeys (desktop and 375 px) and axe accessibility checks
+SCAN_MODE=sample E2E_PASSWORD=yourpassword make e2e  # Playwright journeys (desktop and 375 px) and axe checks; journey (b) expects the sample scan
 ```
 
 ## Layout

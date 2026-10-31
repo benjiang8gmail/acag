@@ -53,6 +53,9 @@ def health():
 
 @router.get("/status")
 def status():
+    if auth.get_settings().scan_mode == "real":
+        from app import live_status
+        return live_status.status()
     ds, refreshed = sample_data.dataset(), sample_data.refreshed()
     sources = []
     for j in ds["jurisdictions"]:

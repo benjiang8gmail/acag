@@ -51,6 +51,9 @@ export function PeriodMenu({ m, onPick }: { m: Model; onPick: (p: Period) => voi
 export function doneText(m: Model, scan: ScanSnapshot | null) {
   const s = scan?.summary;
   if (!s) return '';
+  if (s.speechesStored !== undefined) {   // real scan: Hansard stored, AI analysis not built yet
+    return `${s.parliamentsSat} ${s.parliamentsSat === 1 ? 'parliament' : 'parliaments'} sat · ${s.newSittingDays} new sitting ${s.newSittingDays === 1 ? 'day' : 'days'} · ${s.speechesStored} speeches stored · ${s.note ?? ''}`;
+  }
   const mine = m.isAll ? '' : ` · ${s.newItemsMentioningOffice[m.s.jur as Code] ?? 0} mention your office`;
   return `${s.parliamentsSat} parliaments sat · ${s.newSittingDays} new sitting days · ${s.newItems} new items${mine} · ${s.registers}`;
 }
@@ -65,9 +68,11 @@ export function StatusPanel({ m, scan, scanDone, signedIn, onRefresh, onShowNew,
   return (
     <div aria-live="polite">
       <div style={{ padding: '12px 12px 8px', display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <div style={{ fontSize: 15, fontWeight: 600 }}>{running ? 'Refreshing…' : `Updated ${fmtDay(st.lastChecked)}`}</div>
+        <div style={{ fontSize: 15, fontWeight: 600 }}>{running ? 'Refreshing…' : st.neverChecked ? 'Not checked yet' : `Updated ${fmtDay(st.lastChecked)}`}</div>
         <div className="note">Hansard is checked automatically every morning. Stored window: {m.storedRange}.</div>
-        {st.sampleData && <div className="note" style={{ color: 'var(--warn)' }}>Showing sample data until the Hansard connectors are built.</div>}
+        {st.sampleData && (st.liveHansard?.length
+          ? <div className="note" style={{ color: 'var(--warn)' }}>Hansard is stored for real for {st.liveHansard.map(c => m.by[c].short).join(', ')}. Briefs and items still show sample data until AI analysis is built.</div>
+          : <div className="note" style={{ color: 'var(--warn)' }}>Showing sample data until the Hansard connectors are built.</div>)}
       </div>
       {st.sources.map(src => {
         const live = running ? rowFor(src.code) : null;
@@ -83,7 +88,7 @@ export function StatusPanel({ m, scan, scanDone, signedIn, onRefresh, onShowNew,
       {scanDone && !running && doneMsg && (
         <div style={{ margin: '8px 12px 0', padding: '10px 12px', borderRadius: 4, background: '#f1faf1', display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-start' }}>
           <span style={{ color: 'var(--ok)', fontSize: 13, fontWeight: 600 }}>✓ {doneMsg}</span>
-          <Button appearance="primary" className="btn-m" onClick={onShowNew}>Show me</Button>
+          {(scan?.summary?.newItems ?? 0) > 0 && <Button appearance="primary" className="btn-m" onClick={onShowNew}>Show me</Button>}
         </div>
       )}
       <div style={{ padding: 12, borderTop: '1px solid var(--line)', marginTop: 8, display: 'flex', flexDirection: 'column', gap: 8 }}>
