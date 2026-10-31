@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/classical-ef9c6a8d-a89f-43fd-abb2-5b3fa93d3b90/styles.css">
+<script src="_ds/classical-ef9c6a8d-a89f-43fd-abb2-5b3fa93d3b90/_ds_bundle.js"></script>
+<style>body{margin:0;background:var(--color-neutral-200);font-family:var(--font-body);color:var(--color-text)}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-900)}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}.dv-card{max-width:100%;background:var(--color-bg);border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}#t1 .dv-card span:not([style*="flex:1"]):not(.sc-interp){white-space:nowrap}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}</style>
+</helmet>
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Fluent 2–style, simpler — jurisdiction-first, switchable anytime</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>First run · “Which jurisdiction are you from?”</div>
+<div class="dv-card" style="width:620px;background:#f5f5f5;font-family:'Segoe UI Variable','Segoe UI',system-ui,sans-serif;color:#242424;padding:40px 50px">
+<div style="background:#fff;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:24px;display:flex;flex-direction:column;gap:16px">
+<div style="font-size:20px;font-weight:600">Which jurisdiction are you from?</div>
+<div style="font-size:14px;color:#616161;line-height:1.4">We’ll put your Parliament and your audit office first. You can switch at any time from the top bar.</div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+<sc-for list="{{ juris }}" as="j" hint-placeholder-count="8">
+<div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:4px;border:{{ j.border }};background:{{ j.bg }}">
+<div style="width:32px;height:32px;border-radius:4px;background:#ebebeb;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">{{ j.code }}</div>
+<div style="flex:1;display:flex;flex-direction:column"><div style="font-size:14px;font-weight:600">{{ j.name }}</div><div style="font-size:12px;color:#616161">{{ j.office }}</div></div>
+<div style="color:#0f6cbd;font-weight:700">{{ j.check }}</div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font-size:14px;font-weight:600">Start me on</div>
+<div style="display:flex;gap:4px;font-size:14px">
+<div style="padding:5px 12px;border-radius:4px;border:1px solid #0f6cbd;background:#ebf3fc;color:#0f6cbd;font-weight:600">The brief</div>
+<div style="padding:5px 12px;border-radius:4px;border:1px solid #d1d1d1">Themes</div>
+<div style="padding:5px 12px;border-radius:4px;border:1px solid #d1d1d1">Search</div>
+</div>
+</div>
+<div style="display:flex;justify-content:flex-end;gap:8px"><div style="padding:6px 16px;border-radius:4px;background:#0f6cbd;color:#fff;font-size:14px;font-weight:600">Continue</div></div>
+</div>
+</div>
+<div style="font:12px/1.4 system-ui;color:#555;max-width:620px">One screen, not two. Each option names the office too, so nobody has to know the acronym.</div>
+</div>
+
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Switching jurisdiction · top-bar menu</div>
+<div class="dv-card" style="width:420px;background:#f5f5f5;font-family:'Segoe UI Variable','Segoe UI',system-ui,sans-serif;color:#242424">
+<div style="height:48px;background:#fff;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:12px;padding:0 16px">
+<div style="font-size:14px;font-weight:600">Hansard Watch</div>
+<div style="display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:4px;border:1px solid #0f6cbd;background:#ebf3fc;font-size:14px"><b style="font-weight:600">Victoria</b> ▾</div>
+</div>
+<div style="margin:4px 0 24px 112px;width:260px;background:#fff;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:4px;font-size:14px">
+<div style="padding:8px 10px;font-size:12px;color:#616161">Viewing as</div>
+<sc-for list="{{ juris }}" as="j" hint-placeholder-count="8">
+<div style="display:flex;gap:8px;padding:7px 10px;border-radius:4px;background:{{ j.menuBg }}"><div style="width:16px;color:#0f6cbd">{{ j.check }}</div><div style="flex:1">{{ j.name }}</div><div style="font-size:12px;color:#616161">{{ j.count }}</div></div>
+</sc-for>
+<div style="border-top:1px solid #e0e0e0;margin-top:4px;padding:8px 10px;font-size:12px;color:#616161">Saved on this device</div>
+</div>
+</div>
+<div style="font:12px/1.4 system-ui;color:#555;max-width:420px">The jurisdiction is always visible as a pill. Each row shows how many new items it has, which gives people a reason to look at their neighbours too.</div>
+</div>
+
+<div class="dv-opt" id="2c">
+<div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Home · “For you” cards with a nav rail</div>
+<div class="dv-card" style="width:1040px;background:#f5f5f5;font-family:'Segoe UI Variable','Segoe UI',system-ui,sans-serif;color:#242424">
+<div style="height:48px;background:#fff;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:14px;padding:0 16px">
+<div style="font-size:14px;font-weight:600">Hansard Watch</div>
+<div style="display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:4px;border:1px solid #d1d1d1;font-size:14px"><b style="font-weight:600">Victoria</b> ▾</div>
+<div style="flex:1;display:flex;justify-content:center"><div style="width:340px;height:32px;border-radius:4px;background:#f5f5f5;border-bottom:1px solid #616161;display:flex;align-items:center;padding:0 10px;font-size:14px;color:#707070">⌕  Search everything said in Parliament</div></div>
+<div style="width:28px;height:28px;border-radius:50%;background:#ebebeb"></div>
+</div>
+<div style="display:flex">
+<div style="width:68px;background:#fff;border-right:1px solid #e0e0e0;padding:8px 0;display:flex;flex-direction:column;gap:4px;align-items:center;font-size:10px">
+<div style="width:56px;padding:8px 0;border-radius:4px;background:#ebf3fc;color:#0f6cbd;display:flex;flex-direction:column;align-items:center;gap:2px;font-weight:600"><div style="font-size:18px">⌂</div>Brief</div>
+<div style="width:56px;padding:8px 0;display:flex;flex-direction:column;align-items:center;gap:2px"><div style="font-size:18px">▦</div>Themes</div>
+<div style="width:56px;padding:8px 0;display:flex;flex-direction:column;align-items:center;gap:2px"><div style="font-size:18px">⌕</div>Search</div>
+<div style="width:56px;padding:8px 0;display:flex;flex-direction:column;align-items:center;gap:2px"><div style="font-size:18px">◔</div>Coverage</div>
+</div>
+<div style="flex:1;padding:16px 24px 24px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:#ebf3fc;border:1px solid #b4d6fa;border-radius:4px;font-size:14px">
+<div style="color:#0f6cbd">ⓘ</div><div style="flex:1"><b style="font-weight:600">Last checked 5 days ago</b> (Mon 26 Oct). Parliaments have sat since then.</div>
+<div style="padding:4px 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-weight:600">Check for updates</div><div style="color:#616161">✕</div>
+</div>
+<div style="display:flex;align-items:flex-end;gap:12px">
+<div style="flex:1;display:flex;flex-direction:column;gap:2px"><div style="font-size:28px;font-weight:600">Good morning — 2 things need you</div><div style="font-size:14px;color:#616161">Victoria · VAGO · last 2 weeks ▾ · <b style="color:#0f6cbd;font-weight:600">11 new since your last visit</b></div></div>
+<div style="padding:5px 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font-size:14px">Copy for email</div>
+<div style="padding:5px 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font-size:14px">Download ▾</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+<sc-for list="{{ stories }}" as="s" hint-placeholder-count="3">
+<div style="background:#fff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:10px;border-top:3px solid {{ s.accent }}">
+<div style="display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:12px;color:#616161"><div style="flex:none;white-space:nowrap;padding:1px 6px;border-radius:999px;background:{{ s.badgeBg }};color:{{ s.badgeFg }};font-weight:600">{{ s.badge }}</div><div style="white-space:nowrap">{{ s.where }}</div></div>
+<div style="font-size:16px;font-weight:600;line-height:1.3">{{ s.title }}</div>
+<div style="font-size:13px;color:#424242;line-height:1.4">{{ s.why }}</div>
+<div style="font-size:12px;color:#616161">{{ s.tone }}</div>
+<div style="display:flex;gap:8px;margin-top:auto"><div style="padding:4px 10px;border-radius:4px;background:#0f6cbd;color:#fff;font-size:13px;font-weight:600">Open in Hansard ↗</div><div style="padding:4px 10px;border-radius:4px;border:1px solid #d1d1d1;font-size:13px">Details</div></div>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px">
+<sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:12px 16px;display:flex;flex-direction:column;gap:2px">
+<div style="font-size:13px;color:#616161">{{ k.label }}</div>
+<div style="display:flex;align-items:baseline;gap:8px"><div style="font-size:28px;font-weight:600">{{ k.n }}</div><div style="font-size:12px;white-space:nowrap;color:{{ k.dc }}">{{ k.delta }}</div></div>
+<div style="font-size:12px;color:#0f6cbd">See items ›</div>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:8px">
+<div style="font-size:16px;font-weight:600">Same issue, several parliaments</div>
+<div style="display:flex;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><div style="flex:1">Hospital wait times</div><div style="color:#616161">VIC · NSW · QLD</div></div>
+<div style="display:flex;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><div style="flex:1">Grant program probity</div><div style="color:#616161">CTH · SA</div></div>
+<div style="display:flex;padding:8px 0;font-size:14px"><div style="flex:1">Health records cyber incident</div><div style="color:#616161">WA · TAS</div></div>
+</div>
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:8px">
+<div style="font-size:16px;font-weight:600">Who sat, and what we checked</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:13px">
+<sc-for list="{{ sat }}" as="p" hint-placeholder-count="7">
+<div style="padding:4px 10px;border-radius:999px;background:{{ p.bg }};color:{{ p.fg }}">{{ p.label }}</div>
+</sc-for>
+</div>
+<div style="font-size:12px;color:#616161">Next sittings: Tue 3 Nov — NSW, VIC</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="font:12px/1.4 system-ui;color:#555;max-width:1040px">The headline is a count of things to act on. The top 3 cards each carry one primary action, and the numbers below are secondary. “Next sittings” tells people when to come back. The map from <a class="dv-oid" href="#1a">1a</a> becomes a plain status row instead.</div>
+</div>
+
+<div class="dv-opt" id="2d">
+<div class="dv-olabel"><a class="dv-oid" href="#2d">2d</a>Home · single list “to do” layout with top tabs</div>
+<div class="dv-card" style="width:820px;background:#fff;font-family:'Segoe UI Variable','Segoe UI',system-ui,sans-serif;color:#242424">
+<div style="height:48px;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:20px;padding:0 20px">
+<div style="font-size:14px;font-weight:600">Hansard Watch</div>
+<div style="display:flex;gap:18px;font-size:14px;height:100%">
+<div style="display:flex;align-items:center;border-bottom:3px solid #0f6cbd;font-weight:600">Brief</div><div style="display:flex;align-items:center">Themes</div><div style="display:flex;align-items:center">Search</div><div style="display:flex;align-items:center">Coverage</div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:4px;border:1px solid #d1d1d1;font-size:14px">Victoria ▾</div>
+<div style="display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:4px;border:1px solid #d1d1d1;font-size:14px">2 weeks ▾</div>
+</div>
+<div style="padding:20px 24px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="flex:1;font-size:24px;font-weight:600">11 new since Mon 26 Oct</div>
+<div style="font-size:13px;color:#616161">Checked 5 days ago</div>
+<div style="padding:5px 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-size:14px;font-weight:600">↻ Check for updates</div>
+</div>
+<div style="display:flex;gap:6px;font-size:13px">
+<div style="padding:4px 12px;border-radius:999px;background:#242424;color:#fff">All 11</div>
+<div style="padding:4px 12px;border-radius:999px;border:1px solid #d1d1d1">Mentions VAGO 2</div>
+<div style="padding:4px 12px;border-radius:999px;border:1px solid #d1d1d1">Risk signals 5</div>
+<div style="padding:4px 12px;border-radius:999px;border:1px solid #d1d1d1">Mandate 1</div>
+<div style="padding:4px 12px;border-radius:999px;border:1px solid #d1d1d1">Other parliaments 3</div>
+</div>
+<div style="font-size:13px;font-weight:600;color:#616161;padding-top:6px">Act on this</div>
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
+<div style="display:flex;align-items:center;gap:14px;padding:12px;border-radius:4px;border:1px solid #e0e0e0;background:{{ r.bg }}">
+<div style="width:8px;height:8px;border-radius:50%;background:{{ r.dot }}"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><div style="font-size:15px;font-weight:600">{{ r.title }}</div><div style="font-size:12px;color:#616161">{{ r.meta }}</div></div>
+<div style="font-size:12px;color:#616161;width:90px">{{ r.tone }}</div>
+<div style="padding:4px 10px;border-radius:4px;border:1px solid #d1d1d1;font-size:13px">{{ r.action }}</div>
+<div style="color:#616161">⋯</div>
+</div>
+</sc-for>
+<div style="font-size:13px;color:#0f6cbd">Show 6 more · background items hidden</div>
+</div>
+</div>
+<div style="font:12px/1.4 system-ui;color:#555;max-width:820px">An inbox with filter pills, each showing its count. Unread rows are tinted. The ⋯ menu holds “Mark as seen”, “Copy citation” and “Add to brief”. Clearing the list gives people a clear sense of being done.</div>
+</div>
+
+<div class="dv-opt" id="2e">
+<div class="dv-olabel"><a class="dv-oid" href="#2e">2e</a>Item details · side panel</div>
+<div class="dv-card" style="width:440px;background:#fff;font-family:'Segoe UI Variable','Segoe UI',system-ui,sans-serif;color:#242424">
+<div style="display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid #e0e0e0"><div style="flex:1;font-size:16px;font-weight:600">Details</div><div style="color:#616161">✕</div></div>
+<div style="padding:16px 20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:6px;flex-wrap:wrap;font-size:12px"><div style="white-space:nowrap;padding:1px 8px;border-radius:999px;background:#fdf3f4;color:#b10e1c">▼ Critical of VAGO</div><div style="white-space:nowrap;padding:1px 8px;border-radius:999px;background:#f0f0f0">Audit debate</div><div style="white-space:nowrap;padding:1px 8px;border-radius:999px;background:#f0f0f0">Health</div></div>
+<div style="font-size:20px;font-weight:600;line-height:1.25">Minister rejects audit finding on hospital wait times</div>
+<div style="font-size:13px;color:#616161">VIC Legislative Assembly · Tue 27 Oct · Question Time</div>
+<div style="background:#fafafa;border-radius:4px;padding:12px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:11px;color:#616161">✦ AI summary — check the source</div>
+<div style="font-size:14px;line-height:1.45">The Health Minister disputed VAGO’s emergency department findings, saying the data excluded recent upgrades.</div>
+<div style="font-size:14px;line-height:1.45"><b style="font-weight:600">Why it matters:</b> expect follow-up questions at PAEC.</div>
+</div>
+<div style="border-left:3px solid #0f6cbd;padding:2px 0 2px 12px;font-size:14px;font-style:italic;line-height:1.45">“The Auditor-General’s numbers simply don’t reflect what’s happening in our emergency departments.”</div>
+<div style="font-size:12px;color:#107c10">✓ Quote matches Hansard word for word</div>
+<div style="display:flex;gap:8px"><div style="padding:6px 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-size:14px;font-weight:600">Open in Hansard ↗</div><div style="padding:6px 12px;border-radius:4px;border:1px solid #d1d1d1;font-size:14px">Copy citation</div><div style="padding:6px 12px;border-radius:4px;border:1px solid #d1d1d1;font-size:14px">Add to brief</div></div>
+<div style="border-top:1px solid #e0e0e0;padding-top:12px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:14px;font-weight:600">Also raised in</div>
+<div style="font-size:13px;color:#0f6cbd">NSW · ED wait-time targets questioned · 29 Oct ›</div>
+<div style="font-size:13px;color:#0f6cbd">QLD · Ramping figures tabled · 27 Oct ›</div>
+</div>
+</div>
+</div>
+<div style="font:12px/1.4 system-ui;color:#555;max-width:440px">The same panel opens from Brief, Themes and Search, and the source is always one click away.</div>
+</div>
+
+<div class="dv-opt" id="2f">
+<div class="dv-olabel"><a class="dv-oid" href="#2f">2f</a>Mobile 375 · home</div>
+<div class="dv-card" style="width:375px;background:#f5f5f5;font-family:'Segoe UI Variable','Segoe UI',system-ui,sans-serif;color:#242424">
+<div style="height:52px;background:#fff;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:10px;padding:0 16px">
+<div style="flex:1;font-size:16px;font-weight:600">Hansard Watch</div>
+<div style="padding:6px 12px;border-radius:999px;border:1px solid #d1d1d1;font-size:14px">VIC ▾</div>
+</div>
+<div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:8px;padding:10px 12px;background:#ebf3fc;border:1px solid #b4d6fa;border-radius:4px;font-size:13px"><div style="flex:1">Checked 5 days ago</div><div style="padding:8px 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-weight:600">Check now</div></div>
+<div style="font-size:22px;font-weight:600">2 things need you</div>
+<sc-for list="{{ storiesM }}" as="s" hint-placeholder-count="2">
+<div style="background:#fff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:14px;display:flex;flex-direction:column;gap:8px;border-top:3px solid {{ s.accent }}">
+<div style="font-size:12px;color:#616161">{{ s.where }}</div>
+<div style="font-size:16px;font-weight:600;line-height:1.3">{{ s.title }}</div>
+<div style="font-size:12px;color:#616161">{{ s.tone }}</div>
+<div style="padding:11px;border-radius:4px;background:#0f6cbd;color:#fff;font-size:14px;font-weight:600;text-align:center">Open in Hansard ↗</div>
+</div>
+</sc-for>
+<div style="background:#fff;border-radius:8px;padding:4px 14px;display:flex;flex-direction:column;font-size:14px">
+<div style="display:flex;padding:12px 0;border-bottom:1px solid #f0f0f0"><div style="flex:1">Risk signals</div><b style="font-weight:600">5 ›</b></div>
+<div style="display:flex;padding:12px 0;border-bottom:1px solid #f0f0f0"><div style="flex:1">Other parliaments</div><b style="font-weight:600">3 ›</b></div>
+<div style="display:flex;padding:12px 0"><div style="flex:1">Mandate</div><b style="font-weight:600">1 ›</b></div>
+</div>
+</div>
+<div style="height:56px;background:#fff;border-top:1px solid #e0e0e0;display:grid;grid-template-columns:repeat(4,1fr);font-size:11px;text-align:center;align-items:center">
+<div style="color:#0f6cbd;font-weight:600">⌂<br>Brief</div><div>▦<br>Themes</div><div>⌕<br>Search</div><div>◔<br>Coverage</div>
+</div>
+</div>
+<div style="font:12px/1.4 system-ui;color:#555;max-width:375px">The numbers turn into tappable rows with targets of 44 px or more, and the jurisdiction pill stays in the header.</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: “combine <a class="dv-oid" href="#2c">2c</a>’s cards with <a class="dv-oid" href="#2d">2d</a>’s list below them” · “do Themes and Search in this style” · “take <a class="dv-oid" href="#2c">2c</a> to hi-fi”</p>
+</section>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Hansard Watch — three takes on the Brief home, plus the core flows</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Brief · “Front page” — one lead story, KPIs underneath</div>
+<div class="dv-card" style="width:780px">
+<div style="display:flex;align-items:center;gap:18px;padding:12px 20px;border-bottom:1px solid var(--color-divider)">
+<div style="font:600 20px var(--font-heading)">Hansard Watch</div>
+<div style="display:flex;gap:16px;font-size:13px"><span style="border-bottom:2px solid var(--color-accent);padding-bottom:3px">Brief</span><span>Themes</span><span>Explore</span></div>
+<div style="flex:1"></div>
+<span style="font-size:12px;border:1px solid var(--color-divider);padding:4px 8px;border-radius:4px">VAGO ▾</span>
+<span style="font-size:12px;border:1px solid var(--color-divider);padding:4px 8px;border-radius:4px">Last 2 weeks ▾</span>
+<span style="font-size:12px;color:var(--color-accent-700)">● 11 new since Mon</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid var(--color-accent-300);font-size:13px">
+<span style="flex:1">Hansard last checked <b>Mon 26 Oct</b> (5 days ago). Check for anything new since then?</span>
+<span class="btn btn-primary" style="font-size:12px;padding:4px 12px">Check now</span><span class="btn btn-ghost" style="font-size:12px;padding:4px 10px">Not now</span>
+</div>
+<div style="padding:22px 20px 8px;display:flex;align-items:baseline;gap:12px">
+<div style="font:400 30px var(--font-heading);flex:1">This fortnight in 30 seconds</div>
+<span style="font-size:12px;text-decoration:underline">Download Word / PDF</span><span style="font-size:12px;text-decoration:underline">Copy for email</span>
+</div>
+<div style="padding:8px 20px 18px;display:grid;grid-template-columns:1.4fr 1fr;gap:20px">
+<div style="border:1px solid var(--color-accent);border-radius:4px;padding:16px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;gap:8px;font-size:11px;align-items:center"><span class="tag tag-accent">New</span><span class="tag tag-outline">VIC · Assembly</span><span>Tue 27 Oct</span><span style="margin-left:auto">▼ Critical</span></div>
+<div style="font:600 22px/1.15 var(--font-heading)">Minister rejects audit finding on hospital wait times</div>
+<div style="font-size:12px;color:var(--color-neutral-700)"><i>Why it matters:</i> Directly disputes a VAGO report in Question Time; likely to be raised again at PAEC.</div>
+<div style="display:flex;gap:12px;font-size:12px;align-items:center;margin-top:4px"><span class="btn btn-primary" style="font-size:12px;padding:4px 10px">Read in Hansard ↗</span><span>Add to brief</span><span style="margin-left:auto;font-size:10px;color:var(--color-neutral-600)">AI summary — check the source</span></div>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="padding:8px 0;border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:4px"><div style="font-size:10px">NSW · Council · Thu 29 Oct · ● Neutral</div><div style="font:600 15px/1.2 var(--font-heading)">Audit Act amendment introduced to widen follow-the-dollar powers</div></div>
+<div style="padding:8px 0;border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:4px"><div style="font-size:10px">CTH · Senate · Wed 28 Oct · ▲ Supportive</div><div style="font:600 15px/1.2 var(--font-heading)">Senator cites ANAO grants report in urgency motion</div></div>
+<div style="padding:8px 0;display:flex;flex-direction:column;gap:4px"><div style="font-size:10px">QLD · Assembly · Tue 27 Oct · n/a</div><div style="font:600 15px/1.2 var(--font-heading)">$480m rail project delay raised — risk signal</div></div>
+</div>
+</div>
+<div style="margin:0 20px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+<div style="padding:12px;border-right:1px solid var(--color-divider)"><div style="font:400 30px var(--font-heading)">6</div><div style="font-size:11px">Mentions of VAGO</div><div style="font-size:10px;color:var(--color-accent-700)">▲ 4 vs prev.</div></div>
+<div style="padding:12px;border-right:1px solid var(--color-divider)"><div style="font:400 30px var(--font-heading)">23</div><div style="font-size:11px">Any Auditor-General</div><div style="font-size:10px;color:var(--color-accent-700)">▲ 7</div></div>
+<div style="padding:12px;border-right:1px solid var(--color-divider)"><div style="font:400 30px var(--font-heading)">9</div><div style="font-size:11px">New risk signals</div><div style="font-size:10px;color:var(--color-neutral-600)">▼ 2</div></div>
+<div style="padding:12px"><div style="font:400 30px var(--font-heading)">1</div><div style="font-size:11px">Mandate items</div><div style="font-size:10px;color:var(--color-accent-700)">new</div></div>
+</div>
+<div style="padding:18px 20px 22px;display:grid;grid-template-columns:240px 1fr;gap:24px">
+<div>
+<div style="font:600 14px var(--font-heading);margin-bottom:8px">Where Parliament talked</div>
+<div style="display:grid;grid-template-columns:repeat(4,48px);gap:6px">
+<sc-for list="{{ tiles }}" as="t" hint-placeholder-count="7">
+<div style="height:48px;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;background:{{ t.bg }};outline:{{ t.ring }};outline-offset:2px;grid-column:{{ t.col }}"><b>{{ t.code }}</b><span style="font-size:10px">{{ t.n }}</span></div>
+</sc-for>
+</div>
+<div style="font-size:10px;margin-top:8px;color:var(--color-neutral-600)">Shade = items · ring = your office mentioned</div>
+</div>
+<div>
+<div style="font:600 14px var(--font-heading);margin-bottom:8px">Same issue, several parliaments</div>
+<div style="display:flex;flex-direction:column;font-size:12px">
+<div style="display:flex;padding:7px 0;border-bottom:1px solid var(--color-divider)"><span style="flex:1">Hospital wait times</span><span>VIC · NSW · QLD</span></div>
+<div style="display:flex;padding:7px 0;border-bottom:1px solid var(--color-divider)"><span style="flex:1">Grant program probity</span><span>CTH · SA</span></div>
+<div style="display:flex;padding:7px 0"><span style="flex:1">Cyber incident in health records</span><span>WA · TAS</span></div>
+</div>
+</div>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:780px">Top story above the fold = 30-second rule. One click to Hansard. KPIs and map sit below as “context”, every number clickable.</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Brief · “Since you were last here” — an action inbox</div>
+<div class="dv-card" style="width:780px">
+<div style="display:flex;align-items:center;gap:18px;padding:12px 20px;border-bottom:1px solid var(--color-divider)">
+<div style="font:600 20px var(--font-heading)">Hansard Watch</div>
+<div style="display:flex;gap:16px;font-size:13px"><span style="border-bottom:2px solid var(--color-accent);padding-bottom:3px">Brief</span><span>Themes</span><span>Explore</span></div>
+<div style="flex:1"></div>
+<span style="font-size:12px;border:1px solid var(--color-divider);padding:4px 8px;border-radius:4px">VAGO ▾</span>
+<span style="font-size:12px;border:1px solid var(--color-divider);padding:4px 8px;border-radius:4px">Last 2 weeks ▾</span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 220px">
+<div style="padding:20px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;gap:14px">
+<div>
+<div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-700)">Since Mon 26 Oct</div>
+<div style="font:400 30px/1.1 var(--font-heading)">11 new items · 2 mention VAGO</div>
+</div>
+<div style="font:600 14px var(--font-heading);border-bottom:1px solid var(--color-accent);padding-bottom:4px">Needs your attention · 2</div>
+<div style="display:flex;gap:12px;align-items:flex-start;padding-bottom:10px;border-bottom:1px solid var(--color-divider)">
+<span style="font:400 22px var(--font-heading);color:var(--color-accent-700);width:22px">5</span>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<div style="font:600 16px/1.2 var(--font-heading)">Minister rejects audit finding on hospital wait times</div>
+<div style="font-size:11px">VIC · Assembly · Tue 27 Oct · ▼ Critical · <i>mentions VAGO</i></div>
+<div style="display:flex;gap:12px;font-size:11px;margin-top:2px"><span class="btn btn-primary" style="font-size:11px;padding:3px 8px">Read in Hansard ↗</span><span style="text-decoration:underline">Add to brief</span><span style="text-decoration:underline">Copy citation</span><span style="margin-left:auto">✓ Seen</span></div>
+</div>
+</div>
+<div style="display:flex;gap:12px;align-items:flex-start;padding-bottom:10px">
+<span style="font:400 22px var(--font-heading);color:var(--color-accent-700);width:22px">4</span>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<div style="font:600 16px/1.2 var(--font-heading)">PAEC chair flags follow-up on VAGO IT procurement report</div>
+<div style="font-size:11px">VIC · Council · Thu 29 Oct · ● Neutral</div>
+</div>
+</div>
+<div style="font:600 14px var(--font-heading);border-bottom:1px solid var(--color-divider);padding-bottom:4px">Worth watching · 5</div>
+<div style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+<div style="display:flex;gap:10px"><span style="width:22px">3</span><span style="flex:1">$480m rail project delay — QLD</span><span>Risk</span></div>
+<div style="display:flex;gap:10px"><span style="width:22px">3</span><span style="flex:1">Audit Act amendment introduced — NSW</span><span>Mandate</span></div>
+<div style="display:flex;gap:10px;color:var(--color-neutral-600)"><span style="width:22px"></span><span>+ 3 more</span></div>
+</div>
+<div style="font-size:12px;color:var(--color-neutral-600);border-top:1px solid var(--color-divider);padding-top:8px">Also noted · 4 (collapsed)</div>
+</div>
+<div style="padding:20px 16px;display:flex;flex-direction:column;gap:16px;font-size:12px">
+<div style="border:1px solid var(--color-divider);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:6px">
+<div>Last checked <b>5 days ago</b></div>
+<span class="btn btn-primary" style="font-size:12px;padding:4px 10px">Check for updates</span>
+</div>
+<div>
+<div style="font:600 14px var(--font-heading);margin-bottom:6px">Coming up</div>
+<div style="display:flex;flex-direction:column;gap:5px"><div>Tue 3 Nov — NSW, VIC sit</div><div>Wed 4 Nov — CTH Senate</div><div style="color:var(--color-neutral-600)">QLD not sitting since Thu 1 Oct</div></div>
+</div>
+<div>
+<div style="font:600 14px var(--font-heading);margin-bottom:6px">Following</div>
+<div style="display:flex;flex-direction:column;gap:5px"><div>Hospital wait times <b style="color:var(--color-accent-700)">3 new</b></div><div>Grant probity <span style="color:var(--color-neutral-600)">no change</span></div><div style="text-decoration:underline">+ Follow a topic</div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid var(--color-divider);padding-top:10px"><span style="text-decoration:underline">Download brief</span><span style="text-decoration:underline">Copy for email / Teams</span></div>
+</div>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:780px">Triage-by-significance with “Seen” ticks gives a clear finish line. “Coming up” and “Following” are the come-back hooks — Following is beyond the v1 spec (stored in browser).</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Brief · mobile 375 — card stack</div>
+<div class="dv-card" style="width:375px">
+<div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid var(--color-divider)"><div style="font:600 18px var(--font-heading);flex:1">Hansard Watch</div><span style="font-size:12px">VAGO ▾</span></div>
+<div style="padding:10px 16px;border-bottom:1px solid var(--color-accent-300);font-size:12px;display:flex;gap:8px;align-items:center"><span style="flex:1">Checked 5 days ago</span><span class="btn btn-primary" style="font-size:11px;padding:3px 8px">Check now</span></div>
+<div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="font:400 24px/1.1 var(--font-heading)">This fortnight</div>
+<div style="display:flex;gap:6px;overflow:hidden">
+<span style="flex:none;border:1px solid var(--color-divider);border-radius:4px;padding:6px 10px;font-size:11px"><b style="font:400 18px var(--font-heading)">6</b> VAGO</span>
+<span style="flex:none;border:1px solid var(--color-divider);border-radius:4px;padding:6px 10px;font-size:11px"><b style="font:400 18px var(--font-heading)">23</b> Any A-G</span>
+<span style="flex:none;border:1px solid var(--color-divider);border-radius:4px;padding:6px 10px;font-size:11px"><b style="font:400 18px var(--font-heading)">9</b> Risks</span>
+<span style="flex:none;border:1px solid var(--color-divider);border-radius:4px;padding:6px 10px;font-size:11px"><b style="font:400 18px var(--font-heading)">1</b> Mandate</span>
+</div>
+<div style="border:1px solid var(--color-accent);border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:10px;display:flex;gap:6px"><span class="tag tag-accent">New</span><span>VIC · Tue 27 Oct</span><span style="margin-left:auto">▼ Critical</span></div>
+<div style="font:600 19px/1.15 var(--font-heading)">Minister rejects audit finding on hospital wait times</div>
+<div style="font-size:12px;color:var(--color-neutral-700)">Disputes a VAGO report in Question Time.</div>
+<span class="btn btn-primary btn-block" style="font-size:13px;padding:10px">Read in Hansard ↗</span>
+</div>
+<div style="border:1px solid var(--color-divider);border-radius:4px;padding:12px;display:flex;flex-direction:column;gap:4px"><div style="font-size:10px">NSW · Thu 29 Oct · ● Neutral</div><div style="font:600 16px/1.2 var(--font-heading)">Audit Act amendment introduced</div></div>
+<div style="border:1px solid var(--color-divider);border-radius:4px;padding:12px;display:flex;flex-direction:column;gap:4px"><div style="font-size:10px">CTH · Wed 28 Oct · ▲ Supportive</div><div style="font:600 16px/1.2 var(--font-heading)">Senator cites ANAO grants report</div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--color-divider);font-size:11px;text-align:center">
+<div style="padding:12px 0;border-top:2px solid var(--color-accent)">Brief</div><div style="padding:12px 0">Themes</div><div style="padding:12px 0">Explore</div><div style="padding:12px 0">Coverage</div>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:375px">KPIs collapse to a scrolling chip row; full-width 44px+ primary button.</div>
+</div>
+
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Update flow · banner → live progress → summary</div>
+<div class="dv-card" style="width:420px">
+<div style="padding:12px 16px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-600)">State 2 · Progress</div>
+<div style="padding:0 16px 14px;display:flex;flex-direction:column">
+<div style="font:600 18px var(--font-heading);margin-bottom:6px">Checking 7 parliaments…</div>
+<sc-for list="{{ progress }}" as="p" hint-placeholder-count="7">
+<div style="display:flex;gap:10px;font-size:12px;padding:6px 0;border-bottom:1px solid var(--color-divider);align-items:center"><b style="width:36px">{{ p.code }}</b><span style="width:16px">{{ p.icon }}</span><span style="flex:1;color:{{ p.color }}">{{ p.state }}</span></div>
+</sc-for>
+</div>
+<div style="padding:12px 16px 4px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-600);border-top:1px solid var(--color-divider)">State 3 · Done</div>
+<div style="margin:6px 16px 16px;border:1px solid var(--color-accent);border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px">
+<div style="font:400 20px/1.2 var(--font-heading)">3 parliaments sat · 6 new sitting days · <b style="font-weight:600">11 new items</b> · 2 mention your office</div>
+<div style="font-size:11px;color:var(--color-neutral-600)">WA not checked — access blocked. <span style="text-decoration:underline">Import manually</span></div>
+<span class="btn btn-primary" style="font-size:12px;padding:6px 12px;align-self:flex-start">Show me →</span>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:420px">Panel replaces the banner in place — the page stays usable. Recess is grey, not red.</div>
+</div>
+
+<div class="dv-opt" id="1e">
+<div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Item drawer · brief → item → source</div>
+<div class="dv-card" style="width:420px">
+<div style="padding:12px 18px;border-bottom:1px solid var(--color-divider);display:flex;font-size:11px"><span style="flex:1">Brief › Item</span><span>✕</span></div>
+<div style="padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;gap:6px;font-size:10px;flex-wrap:wrap"><span class="tag tag-outline">VIC · Assembly</span><span class="tag tag-neutral">Audit debate</span><span class="tag tag-neutral">Health</span><span style="margin-left:auto">▼ Critical · Sig. 5</span></div>
+<div style="font:600 22px/1.15 var(--font-heading)">Minister rejects audit finding on hospital wait times</div>
+<div style="font-size:10px;color:var(--color-neutral-600)">AI summary — check the source</div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="height:7px;background:var(--color-neutral-200);border-radius:2px"></div><div style="height:7px;background:var(--color-neutral-200);border-radius:2px"></div><div style="height:7px;background:var(--color-neutral-200);border-radius:2px;width:70%"></div></div>
+<div style="font-size:12px"><i>Why it matters:</i> Disputes VAGO’s findings on the floor; expect PAEC follow-up.</div>
+<div style="border-left:1px solid var(--color-accent);padding:4px 0 4px 12px;font:italic 15px/1.35 var(--font-heading)">“The Auditor-General’s numbers simply don’t reflect what’s happening in our emergency departments.”</div>
+<div style="font-size:10px;color:var(--color-accent-700)">✓ Quote checked against Hansard</div>
+<div style="font-size:11px;border-top:1px solid var(--color-divider);padding-top:8px">Hon. J. Smith MP, Minister for Health · Questions without notice · p. 3412</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="btn btn-primary" style="font-size:12px;padding:5px 10px">Read in Hansard ↗</span><span class="btn btn-secondary" style="font-size:12px;padding:5px 10px">Copy citation</span><span class="btn btn-ghost" style="font-size:12px;padding:5px 10px">Add to brief</span></div>
+<div style="font:600 13px var(--font-heading);margin-top:6px">Related in other parliaments</div>
+<div style="font-size:11px;display:flex;flex-direction:column;gap:4px"><span>NSW · ED wait-time targets questioned · 29 Oct</span><span>QLD · Ramping figures tabled · 27 Oct</span></div>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:420px">Same drawer from Brief, Themes and Explore. Related items pull the user sideways, not deeper.</div>
+</div>
+
+<div class="dv-opt" id="1f">
+<div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>Themes · heatmap + ranked risk signals</div>
+<div class="dv-card" style="width:780px">
+<div style="display:flex;align-items:center;gap:18px;padding:12px 20px;border-bottom:1px solid var(--color-divider)">
+<div style="font:600 20px var(--font-heading)">Hansard Watch</div>
+<div style="display:flex;gap:16px;font-size:13px"><span>Brief</span><span style="border-bottom:2px solid var(--color-accent);padding-bottom:3px">Themes</span><span>Explore</span></div>
+<div style="flex:1"></div><span style="font-size:12px;border:1px solid var(--color-divider);padding:4px 8px;border-radius:4px">Last 2 weeks ▾</span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 250px;gap:22px;padding:20px">
+<div>
+<div style="font:400 24px var(--font-heading);margin-bottom:10px">Themes × parliaments</div>
+<div style="display:grid;grid-template-columns:150px repeat(7,1fr);gap:3px;font-size:11px">
+<span></span><b style="text-align:center">CTH</b><b style="text-align:center">NSW</b><b style="text-align:center">VIC</b><b style="text-align:center">QLD</b><b style="text-align:center">SA</b><b style="text-align:center">WA</b><b style="text-align:center">TAS</b>
+<sc-for list="{{ heat }}" as="c" hint-placeholder-count="56">
+<div style="height:28px;display:flex;align-items:center;justify-content:{{ c.align }};padding:0 4px;border-radius:2px;background:{{ c.bg }};color:{{ c.fg }};font-size:{{ c.fs }}">{{ c.label }}</div>
+</sc-for>
+</div>
+<div style="font-size:10px;color:var(--color-neutral-600);margin-top:8px">Click a cell for the filtered list · ⨯ = not checked (blocked)</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:600 15px var(--font-heading);border-bottom:1px solid var(--color-accent);padding-bottom:4px">Risk signals, ranked</div>
+<div style="font-size:12px;display:flex;flex-direction:column;gap:8px">
+<div><b>4</b> · $480m rail delay — QLD<br><span style="font-size:10px;color:var(--color-neutral-600)">Transport · ▁▂▅▇ rising</span></div>
+<div><b>3</b> · Consultant spend in DHHS — VIC<br><span style="font-size:10px;color:var(--color-neutral-600)">Procurement · ▂▂▃▅</span></div>
+<div><b>3</b> · Hospital records breach — WA<br><span style="font-size:10px;color:var(--color-neutral-600)">Cyber · ▁▁▁▆ new</span></div>
+<div><b>3</b> · Housing grant probity — SA<br><span style="font-size:10px;color:var(--color-neutral-600)">Housing · ▃▃▃▃</span></div>
+</div>
+</div>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:780px">Directors scan for dark cells in their sector; trend glyphs signal “come back, this is building”.</div>
+</div>
+
+<div class="dv-opt" id="1g">
+<div class="dv-olabel"><a class="dv-oid" href="#1g">1g</a>Explore · search all stored Hansard</div>
+<div class="dv-card" style="width:600px">
+<div style="padding:16px 20px;border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;gap:8px"><div class="input" style="flex:1;font-size:13px;padding:8px 10px">“value for money” hospital</div><span class="btn btn-primary" style="font-size:12px;padding:6px 12px">Search</span></div>
+<div style="display:flex;gap:6px;flex-wrap:wrap;font-size:11px">
+<span class="tag tag-accent">Parliament: VIC, NSW ✕</span><span class="tag tag-accent">Sig ≥ 3 ✕</span><span class="tag tag-outline">+ Chamber</span><span class="tag tag-outline">+ Category</span><span class="tag tag-outline">+ Theme</span><span class="tag tag-outline">+ Tone</span><span class="tag tag-outline">+ Speaker</span>
+</div>
+</div>
+<div style="padding:10px 20px;display:flex;font-size:12px;border-bottom:1px solid var(--color-divider)"><span style="flex:1"><b>42 results</b> · 8 AI items · 34 speeches</span><span style="text-decoration:underline">Export CSV</span></div>
+<div style="padding:0 20px 14px;display:flex;flex-direction:column">
+<div style="padding:10px 0;border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:4px"><div style="font-size:10px">VIC · Assembly · 27 Oct · Hon. J. Smith · <span class="tag tag-accent">AI item</span></div><div style="font:600 15px var(--font-heading)">Questions without notice — Hospital performance</div><div style="font-size:12px">…the report found no <mark style="background:var(--color-accent-200)">value for money</mark> in the <mark style="background:var(--color-accent-200)">hospital</mark> expansion…</div></div>
+<div style="padding:10px 0;border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:4px"><div style="font-size:10px">NSW · Council · 22 Oct · Ms A. Lee</div><div style="font:600 15px var(--font-heading)">Appropriation Bill — second reading</div><div style="font-size:12px">…regional <mark style="background:var(--color-accent-200)">hospital</mark> upgrades must show <mark style="background:var(--color-accent-200)">value for money</mark>…</div></div>
+<div style="padding:10px 0;font-size:12px;color:var(--color-neutral-600)">+ 40 more</div>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:600px">Filters as removable chips; results open the same drawer as <a class="dv-oid" href="#1e">1e</a>.</div>
+</div>
+
+<div class="dv-opt" id="1h">
+<div class="dv-olabel"><a class="dv-oid" href="#1h">1h</a>Login + first run (two questions)</div>
+<div style="display:flex;gap:20px">
+<div class="dv-card" style="width:300px;padding:36px 28px;display:flex;flex-direction:column;gap:14px">
+<div style="font:400 28px var(--font-heading)">Hansard Watch</div>
+<div class="field" style="display:flex;flex-direction:column;gap:4px;font-size:12px"><label>Username</label><div class="input" style="padding:8px">acag</div></div>
+<div class="field" style="display:flex;flex-direction:column;gap:4px;font-size:12px"><label>Password</label><div class="input" style="padding:8px">••••••••</div></div>
+<span class="btn btn-primary btn-block" style="font-size:13px;padding:10px">Sign in</span>
+</div>
+<div class="dv-card" style="width:340px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-600)">1 of 2</div>
+<div style="font:400 24px/1.15 var(--font-heading)">Which office are you from?</div>
+<div style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+<span style="border:1px solid var(--color-divider);border-radius:4px;padding:8px 10px">ANAO</span>
+<span style="border:1px solid var(--color-divider);border-radius:4px;padding:8px 10px">Audit Office of NSW</span>
+<span style="border:1px solid var(--color-accent);border-radius:4px;padding:8px 10px">◉ VAGO — Victoria</span>
+<span style="border:1px solid var(--color-divider);border-radius:4px;padding:8px 10px;color:var(--color-neutral-600)">QAO · SA · OAG WA · TAO · ACAG — all</span>
+</div>
+<div style="font:400 18px var(--font-heading);border-top:1px solid var(--color-divider);padding-top:10px;color:var(--color-neutral-600)">2 · What do you want to see first?</div>
+<div style="display:flex;gap:6px;font-size:12px"><span class="tag tag-accent">Brief</span><span class="tag tag-outline">Themes</span><span class="tag tag-outline">Explore</span></div>
+<span class="btn btn-primary" style="font-size:12px;padding:6px 12px;align-self:flex-end">Continue</span>
+</div>
+</div>
+<div style="font:italic 12px/1.4 var(--font-body);color:var(--color-accent-700);max-width:660px">Nothing on the login but what’s needed. First run skips straight to the chosen view; both answers editable from the header.</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: “take <a class="dv-oid" href="#1b">1b</a> to hi-fi” · “merge <a class="dv-oid" href="#1a">1a</a>’s lead story into <a class="dv-oid" href="#1b">1b</a>” · “wireframe the Coverage page”</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const shade = n => n === null ? 'transparent' : ['var(--color-neutral-100)','var(--color-accent-100)','var(--color-accent-200)','var(--color-accent-300)','var(--color-accent-500)'][Math.min(4, Math.ceil(n / 2))];
+    const tileData = [['CTH',8,false,2],['NSW',5,false,4],['QLD',4,false,3],['WA',2,false,1],['SA',3,false,2],['VIC',9,true,3],['TAS',1,false,3]];
+    const tiles = tileData.map(([code,n,me,col]) => ({ code, n, col: String(col), bg: shade(n), ring: me ? '2px solid var(--color-accent)' : 'none' }));
+    const themes = {
+      'Health':[2,4,6,3,1,null,1], 'Transport':[1,2,1,5,0,null,0], 'Housing':[1,1,2,1,3,null,0], 'Procurement & grants':[4,1,3,0,2,null,1],
+      'Digital & cyber':[1,0,1,0,0,null,2], 'Integrity':[3,2,1,1,1,null,0], 'Public finance':[2,3,2,1,1,null,1], 'Education':[0,1,1,1,0,null,0]
+    };
+    const heat = [];
+    Object.entries(themes).forEach(([name, vals]) => {
+      heat.push({ label: name, bg: 'transparent', fg: 'var(--color-text)', align: 'flex-start', fs: '11px' });
+      vals.forEach(v => heat.push({ label: v === null ? '⨯' : (v || ''), bg: v === null ? 'var(--color-neutral-100)' : shade(v), fg: v >= 5 ? 'var(--color-neutral-100)' : 'var(--color-text)', align: 'center', fs: '11px' }));
+    });
+    const progress = [
+      { code:'CTH', icon:'✓', state:'Done — 2 new days, 4 items', color:'var(--color-text)' },
+      { code:'NSW', icon:'◐', state:'Analysing 38 speeches…', color:'var(--color-accent-700)' },
+      { code:'VIC', icon:'◐', state:'Checking — 2 new days', color:'var(--color-accent-700)' },
+      { code:'QLD', icon:'–', state:'Not sitting since Thu 1 Oct', color:'var(--color-neutral-600)' },
+      { code:'SA', icon:'✓', state:'Done — 1 proof → final', color:'var(--color-text)' },
+      { code:'WA', icon:'⨯', state:'Blocked — import manually', color:'var(--color-neutral-600)' },
+      { code:'TAS', icon:'○', state:'Waiting', color:'var(--color-neutral-600)' }
+    ];
+    const J = [['CTH','Commonwealth','ANAO',4],['NSW','New South Wales','Audit Office of NSW',3],['VIC','Victoria','VAGO',11],['QLD','Queensland','QAO',0],['SA','South Australia','Auditor-General’s Dept',2],['WA','Western Australia','OAG WA',0],['TAS','Tasmania','Tasmanian Audit Office',1],['ALL','All jurisdictions','ACAG — all offices',21]];
+    const juris = J.map(([code,name,office,n]) => { const on = code === 'VIC'; return { code, name, office, count: n ? n + ' new' : '—', check: on ? '✓' : '', border: on ? '2px solid #0f6cbd' : '1px solid #e0e0e0', bg: on ? '#ebf3fc' : '#fff', menuBg: on ? '#f0f0f0' : 'transparent' }; });
+    const red = { accent:'#c50f1f', badgeBg:'#fdf3f4', badgeFg:'#b10e1c' }, blue = { accent:'#0f6cbd', badgeBg:'#ebf3fc', badgeFg:'#0f6cbd' }, grey = { accent:'#d1d1d1', badgeBg:'#f0f0f0', badgeFg:'#424242' };
+    const stories = [
+      { ...red, badge:'Mentions VAGO', where:'VIC Assembly · Tue 27 Oct', title:'Minister rejects audit finding on hospital wait times', why:'Disputes a VAGO report in Question Time. Likely PAEC follow-up.', tone:'▼ Critical' },
+      { ...blue, badge:'Mentions VAGO', where:'VIC Council · Thu 29 Oct', title:'PAEC chair flags follow-up on IT procurement report', why:'Committee may call the agency back. Worth preparing a status note.', tone:'● Neutral' },
+      { ...grey, badge:'Mandate', where:'NSW Council · Thu 29 Oct', title:'Audit Act amendment to widen follow-the-dollar powers', why:'Sets a precedent other jurisdictions may cite.', tone:'▲ Supportive' }
+    ];
+    const kpis = [
+      { label:'Mentions of VAGO', n:6, delta:'▲ 4', dc:'#107c10' },
+      { label:'Any Auditor-General', n:23, delta:'▲ 7', dc:'#107c10' },
+      { label:'New risk signals', n:9, delta:'▼ 2', dc:'#616161' },
+      { label:'Mandate items', n:1, delta:'New', dc:'#0f6cbd' }
+    ];
+    const sat = [
+      { label:'✓ CTH · 2 days', bg:'#f1faf1', fg:'#0e700e' }, { label:'✓ NSW · 2 days', bg:'#f1faf1', fg:'#0e700e' }, { label:'✓ VIC · 2 days', bg:'#f1faf1', fg:'#0e700e' },
+      { label:'– QLD · not sitting', bg:'#f0f0f0', fg:'#616161' }, { label:'✓ SA · 1 day', bg:'#f1faf1', fg:'#0e700e' },
+      { label:'⚠ WA · not checked', bg:'#fff9f5', fg:'#bc4b09' }, { label:'– TAS · not sitting', bg:'#f0f0f0', fg:'#616161' }
+    ];
+    const rows = [
+      { title:'Minister rejects audit finding on hospital wait times', meta:'VIC Assembly · Tue 27 Oct · Mentions VAGO', tone:'▼ Critical', action:'Open in Hansard ↗', dot:'#c50f1f', bg:'#f5f9fe' },
+      { title:'PAEC chair flags follow-up on IT procurement report', meta:'VIC Council · Thu 29 Oct · Mentions VAGO', tone:'● Neutral', action:'Open in Hansard ↗', dot:'#0f6cbd', bg:'#f5f9fe' },
+      { title:'Audit Act amendment to widen follow-the-dollar powers', meta:'NSW Council · Thu 29 Oct · Mandate', tone:'▲ Supportive', action:'Open in Hansard ↗', dot:'#0f6cbd', bg:'#f5f9fe' },
+      { title:'$480m rail project delay raised', meta:'QLD Assembly · Tue 27 Oct · Risk signal · Transport', tone:'n/a', action:'Details', dot:'transparent', bg:'#fff' },
+      { title:'Consultant spend in Department of Health questioned', meta:'VIC Assembly · Wed 28 Oct · Risk signal · Procurement', tone:'n/a', action:'Details', dot:'transparent', bg:'#fff' }
+    ];
+    const storiesM = stories.slice(0, 2);
+    return { tiles, heat, progress, juris, stories, kpis, sat, rows, storiesM };
+  }
+}
+</script>
+</body>
+</html>

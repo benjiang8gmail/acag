@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>body{margin:0;background:#f5f5f5}a{color:#0f6cbd}a:hover{color:#115ea3}:focus-visible{outline:2px solid #0f6cbd;outline-offset:2px}input::placeholder{color:#707070}</style></helmet>
+<div style="position:relative;height:100%;display:flex;flex-direction:column;background:#f5f5f5;color:#242424;font-family:'Segoe UI Variable','Segoe UI',system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.45;overflow:hidden">
+
+<sc-if value="{{ isOnboard }}">
+<div style="flex:1;min-height:0;display:flex;flex-direction:column">
+<div style="flex:1;min-height:0;overflow:auto;padding:24px 16px">
+<div style="max-width:760px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:24px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:13px;font-weight:600;color:#0f6cbd">Hansard Watch</div><div style="font-size:22px;font-weight:600;line-height:1.25">Which jurisdiction are you from?</div><div style="color:#616161">We’ll start with your Parliament and audit office, then show how the other 8 compare. You can switch at any time from the top bar.</div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px">
+<sc-for list="{{ obJurs }}" as="o" hint-placeholder-count="10">
+<button onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:10px;padding:10px 12px;min-height:56px;border-radius:4px;border:{{ o.border }};background:{{ o.bg }};text-align:left;cursor:pointer;font:inherit;color:inherit" style-hover="background:#f5f9fe">
+<div style="flex:none;width:36px;height:36px;border-radius:4px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">{{ o.short }}</div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column"><div style="font-weight:600">{{ o.name }}</div><div style="font-size:12px;color:#616161">{{ o.officeName }}</div></div>
+<div style="color:#0f6cbd;font-weight:700">{{ o.check }}</div>
+</button>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-weight:600">What do you want to see first?</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ obStarts }}" as="o" hint-placeholder-count="6">
+<button onClick="{{ o.pick }}" style="min-height:36px;padding:0 14px;border-radius:4px;border:1px solid {{ o.bd }};background:{{ o.bg }};color:{{ o.fg }};font:inherit;font-weight:{{ o.fw }};cursor:pointer">{{ o.label }}</button>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+<div style="flex:none;background:#fff;border-top:1px solid #e0e0e0;box-shadow:0 -2px 8px rgba(0,0,0,.06);padding:12px 16px">
+<div style="max-width:760px;margin:0 auto;display:flex;align-items:center;gap:12px"><div style="flex:1;font-size:12px;color:#616161">{{ obHint }}</div><button onClick="{{ finish }}" disabled="{{ obDisabled }}" style="min-height:44px;padding:0 24px;border:none;border-radius:4px;background:#0f6cbd;color:#fff;font:inherit;font-weight:600;cursor:pointer;opacity:{{ obOpacity }}">Continue</button></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isApp }}" hint-placeholder-val="{{ true }}">
+<header style="position:relative;z-index:30;flex:none;background:#fff;border-bottom:1px solid #e0e0e0">
+<sc-if value="{{ isDesk }}">
+<div style="height:48px;display:flex;align-items:center;gap:12px;padding:0 20px">
+<div style="width:140px;flex:none;font-size:16px;font-weight:600">Hansard Watch</div>
+<button onClick="{{ openJur }}" aria-haspopup="menu" style="width:200px;flex:none;height:32px;display:flex;align-items:center;gap:8px;padding:0 10px;border:1px solid #d1d1d1;border-radius:4px;background:#fff;font:inherit;color:inherit;cursor:pointer" style-hover="background:#f5f5f5"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:{{ jurColor }}"></span><span style="flex:1;text-align:left;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ jurLabel }}</span><span>▾</span></button>
+<button onClick="{{ openPeriod }}" aria-haspopup="menu" style="width:150px;flex:none;height:32px;display:flex;align-items:center;gap:8px;padding:0 10px;border:1px solid #d1d1d1;border-radius:4px;background:#fff;font:inherit;color:inherit;cursor:pointer" style-hover="background:#f5f5f5"><span style="flex:1;text-align:left;white-space:nowrap">{{ periodLabel }}</span><span>▾</span></button>
+<button onClick="{{ openSector }}" aria-haspopup="menu" style="width:170px;flex:none;height:32px;display:flex;align-items:center;gap:8px;padding:0 10px;border:1px solid {{ secBd }};border-radius:4px;background:{{ secBg }};font:inherit;color:{{ secFg }};cursor:pointer" style-hover="background:#f5f5f5"><span style="flex:1;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:{{ secFw }}">{{ sectorLabel }}</span><span>▾</span></button>
+<div style="flex:1"></div>
+<button onClick="{{ openStatus }}" style="height:32px;display:flex;align-items:center;gap:8px;padding:0 10px;border:none;border-radius:4px;background:transparent;font:inherit;font-size:13px;color:#424242;cursor:pointer" style-hover="background:#f5f5f5"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#107c10"></span><span style="white-space:nowrap">{{ statusLabel }}</span><span style="white-space:nowrap;color:#bc4b09">{{ statusWarn }}</span></button>
+<sc-if value="{{ hasNew }}"><button onClick="{{ showNew }}" style="height:28px;padding:0 12px;border:none;border-radius:999px;background:#ebf3fc;color:#0f6cbd;font:inherit;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap" style-hover="background:#cfe4fa">{{ newLabel }}</button></sc-if>
+<button onClick="{{ openMore }}" aria-label="More options" style="width:32px;height:32px;border:none;border-radius:4px;background:transparent;font:inherit;font-size:18px;cursor:pointer" style-hover="background:#f5f5f5">⋯</button>
+</div>
+<nav style="display:flex;gap:4px;padding:0 12px;height:44px">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="6">
+<button onClick="{{ t.go }}" style="background:none;border:none;border-bottom:2px solid {{ t.line }};color:{{ t.color }};font:inherit;font-weight:{{ t.fw }};padding:0 12px;cursor:pointer" style-hover="color:#0f6cbd">{{ t.label }}</button>
+</sc-for>
+</nav>
+</sc-if>
+<sc-if value="{{ isMob }}">
+<div style="display:flex;align-items:center;gap:4px;padding:6px 4px 6px 16px">
+<div style="flex:1;font-size:17px;font-weight:600">Hansard Watch</div>
+<button onClick="{{ goSearch }}" aria-label="Search Hansard" style="width:44px;height:44px;border:none;border-radius:4px;background:{{ searchBg }};color:{{ searchFg }};font:inherit;font-size:20px;cursor:pointer">⌕</button>
+<button onClick="{{ openJur }}" aria-haspopup="menu" style="min-height:40px;display:flex;align-items:center;gap:6px;padding:0 12px;border:1px solid #d1d1d1;border-radius:999px;background:#fff;font:inherit;font-weight:600;color:inherit;cursor:pointer"><span style="width:8px;height:8px;border-radius:50%;background:{{ jurColor }}"></span>{{ jurShort }} ▾</button>
+<button onClick="{{ openMore }}" aria-label="More options" style="width:44px;height:44px;border:none;background:transparent;font:inherit;font-size:20px;cursor:pointer">⋯</button>
+</div>
+</sc-if>
+<sc-if value="{{ scanning }}">
+<button onClick="{{ openStatus }}" style="display:flex;width:100%;align-items:center;gap:10px;padding:6px 16px;border:none;border-top:1px solid #e0e0e0;background:#ebf3fc;font:inherit;font-size:13px;color:#0f6cbd;cursor:pointer;text-align:left"><span style="flex:1">{{ scanText }}</span><span style="width:120px;height:4px;border-radius:2px;background:#cfe4fa;overflow:hidden;display:block"><span style="display:block;height:100%;width:{{ scanW }};background:#0f6cbd"></span></span></button>
+</sc-if>
+<sc-if value="{{ showDone }}">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:8px 16px;border-top:1px solid #e0e0e0;background:#f1faf1;font-size:13px"><span style="flex:1 1 220px;color:#0e700e;font-weight:600">✓ {{ doneText }}</span><button onClick="{{ showNew }}" style="min-height:{{ btnH }};padding:0 12px;border:none;border-radius:4px;background:#0f6cbd;color:#fff;font:inherit;font-weight:600;cursor:pointer">Show me</button><button onClick="{{ dismissDone }}" aria-label="Dismiss" style="min-height:{{ btnH }};width:36px;border:none;background:transparent;font:inherit;cursor:pointer">✕</button></div>
+</sc-if>
+<sc-if value="{{ showShared }}">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:8px 16px;border-top:1px solid #e0e0e0;background:#f5f5f5;font-size:13px"><span style="flex:1 1 240px">↪ {{ sharedText }}</span><sc-if value="{{ hasSharedAction }}"><button onClick="{{ sharedDo }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap">{{ sharedAction }}</button></sc-if><button onClick="{{ dismissShared }}" aria-label="Dismiss" style="min-height:{{ btnH }};width:36px;border:none;background:transparent;font:inherit;cursor:pointer">✕</button></div>
+</sc-if>
+</header>
+
+<main ref="{{ mainRef }}" style="flex:1;overflow:auto;position:relative">
+<div style="max-width:1200px;margin:0 auto;padding:{{ pad }};display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px">
+<div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:13px;font-weight:600;color:#616161">{{ pgKicker }}</div>
+<h1 style="margin:0;font-size:{{ h1Size }};font-weight:600;line-height:1.2">{{ pgTitle }}</h1>
+<div style="font-size:13px;color:#616161;max-width:720px">{{ pgSub }}</div>
+</div>
+<div style="position:relative;display:flex;gap:8px">
+<button onClick="{{ openShare }}" style="min-height:{{ btnH }};display:inline-flex;align-items:center;gap:6px;padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;color:#242424;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap" style-hover="background:#f5f5f5">↗ Share</button>
+<sc-if value="{{ hasExport }}"><button onClick="{{ openExport }}" aria-haspopup="menu" style="min-height:{{ btnH }};display:inline-flex;align-items:center;gap:6px;padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;color:#242424;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap" style-hover="background:#f5f5f5">↓ Export ▾</button></sc-if>
+<sc-if value="{{ exportInline }}"><div role="menu" style="position:absolute;top:calc(100% + 4px);right:0;z-index:50;width:260px;background:#fff;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:4px"><sc-for list="{{ exportOpts }}" as="o" hint-placeholder-count="2"><button onClick="{{ o.pick }}" role="menuitem" style="display:flex;width:100%;align-items:center;min-height:40px;padding:4px 12px;border:none;border-radius:4px;background:transparent;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="background:#f5f5f5">{{ o.label }}</button></sc-for></div></sc-if>
+</div>
+</div>
+<sc-if value="{{ isMob }}">
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:-12px">
+<button onClick="{{ openPeriod }}" style="min-height:36px;padding:0 10px;border:1px solid #e0e0e0;border-radius:999px;background:#fff;font:inherit;font-size:13px;color:#242424;cursor:pointer">{{ periodLabel }} ▾</button>
+<button onClick="{{ openSector }}" style="min-height:36px;padding:0 10px;border:1px solid {{ secBd }};border-radius:999px;background:{{ secBg }};font:inherit;font-size:13px;color:{{ secFg }};font-weight:{{ secFw }};cursor:pointer">{{ sectorLabel }} ▾</button>
+<button onClick="{{ openStatus }}" style="min-height:36px;display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #e0e0e0;border-radius:999px;background:#fff;font:inherit;font-size:13px;color:#424242;cursor:pointer"><span style="width:7px;height:7px;border-radius:50%;background:#107c10"></span>{{ statusLabelM }}<span style="color:#bc4b09">{{ statusWarnM }}</span></button>
+<sc-if value="{{ hasNew }}"><button onClick="{{ showNew }}" style="min-height:36px;padding:0 12px;border:none;border-radius:999px;background:#ebf3fc;color:#0f6cbd;font:inherit;font-size:13px;font-weight:600;cursor:pointer">{{ newLabelM }}</button></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ isBrief }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px">
+<sc-for list="{{ hero }}" as="h" hint-placeholder-count="3">
+<div style="background:#fff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px"><span style="padding:2px 8px;border-radius:999px;background:#ebf3fc;color:#0f6cbd;font-weight:600;white-space:nowrap">{{ h.featLabel }}</span><sc-if value="{{ h.isNew }}"><span style="padding:2px 8px;border-radius:999px;background:#0f6cbd;color:#fff;font-weight:600">New</span></sc-if><span style="color:#616161;white-space:nowrap">{{ h.where }}</span></div>
+<button onClick="{{ h.open }}" style="all:unset;cursor:pointer;font-size:16px;font-weight:600;line-height:1.3" style-hover="text-decoration:underline">{{ h.headline }}</button>
+<div style="font-size:13px;color:#424242">{{ h.why }}</div>
+<sc-if value="{{ h.hasSent }}"><div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px"><span style="padding:2px 8px;border-radius:999px;background:{{ h.sentBg }};color:{{ h.sentColor }};font-weight:600;white-space:nowrap">{{ h.sentText }}</span></div></sc-if>
+<sc-if value="{{ h.hasEcho }}"><button onClick="{{ h.openEcho }}" style="all:unset;cursor:pointer;font-size:12px;color:#0f6cbd" style-hover="text-decoration:underline">↔ {{ h.echo }}</button></sc-if>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:4px">
+<a href="{{ h.url }}" target="_blank" rel="noopener" onClick="{{ h.markSeen }}" style="display:inline-flex;align-items:center;min-height:{{ btnH }};padding:0 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#115ea3">{{ h.srcLabel }}</a>
+<button onClick="{{ h.open }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;color:#242424;font:inherit;font-weight:600;cursor:pointer" style-hover="background:#f5f5f5">Details</button>
+</div>
+</div>
+</sc-for>
+<sc-if value="{{ hasGapHero }}">
+<div style="background:#fff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px"><span style="padding:2px 8px;border-radius:999px;background:#fff4ec;color:#bc4b09;font-weight:600;white-space:nowrap">Potential program gap</span><span style="color:#616161;white-space:nowrap">{{ gh.office }}{{ gh.theme }}</span></div>
+<button onClick="{{ gh.open }}" style="all:unset;cursor:pointer;font-size:16px;font-weight:600;line-height:1.3" style-hover="text-decoration:underline">{{ gh.issue }}</button>
+<div style="font-size:13px;color:#424242">{{ gh.closest }}</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#616161"><div style="flex:1;height:6px;border-radius:3px;background:#f0f0f0;overflow:hidden"><div style="height:100%;width:{{ gh.scoreW }};background:#ca5010"></div></div><span style="white-space:nowrap">Attention {{ gh.score }}/100</span></div>
+<sc-if value="{{ gh.hasPeers }}"><div style="font-size:12px;color:#424242">↔ {{ gh.peers }}</div></sc-if>
+<div style="display:flex;gap:8px;margin-top:auto;padding-top:4px"><button onClick="{{ gh.open }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:none;background:#0f6cbd;color:#fff;font:inherit;font-weight:600;cursor:pointer" style-hover="background:#115ea3">See the evidence</button></div>
+</div>
+</sc-if>
+<sc-if value="{{ briefQuiet }}">
+<div style="border:1px dashed #bdbdbd;border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px;justify-content:center">
+<div style="font-size:15px;font-weight:600">{{ quietTitle }}</div>
+<div style="font-size:13px;color:#616161">{{ quietNote }}</div>
+<div><button onClick="{{ widen }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">{{ widenLabel }}</button></div>
+</div>
+</sc-if>
+</div>
+<div style="font-size:12px;color:#616161;margin-top:-8px">✦ Summaries are AI-generated — check the source before relying on them.</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px">
+<sc-for list="{{ tiles }}" as="t" hint-placeholder-count="4">
+<button onClick="{{ t.go }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;background:#fff;border:none;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:12px 16px;display:flex;flex-direction:column;gap:6px" style-hover="box-shadow:0 4px 8px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12)">
+<div style="font-size:13px;color:#616161">{{ t.label }}</div>
+<div style="display:flex;align-items:baseline;gap:8px"><div style="font-size:28px;font-weight:600;line-height:1">{{ t.n }}</div><div style="font-size:12px;color:#424242;white-space:nowrap">{{ t.delta }}</div></div>
+<sc-if value="{{ t.hasBar }}"><div style="display:flex;height:6px;border-radius:3px;overflow:hidden;background:#f0f0f0"><div style="width:{{ t.pos }};background:#107c10"></div><div style="width:{{ t.neu }};background:#bdbdbd"></div><div style="width:{{ t.mix }};background:#f7630c"></div><div style="width:{{ t.neg }};background:#c50f1f"></div></div></sc-if>
+<div style="font-size:12px;color:#616161">{{ t.sub }}</div>
+<sc-if value="{{ t.hasCmp }}"><div style="font-size:12px;color:#0f6cbd;font-weight:600">{{ t.cmp }}</div></sc-if>
+</button>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:12px">
+<sc-if value="{{ showMap }}">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px"><div style="flex:1;font-size:16px;font-weight:600;white-space:nowrap">Across Australia</div>
+<div role="tablist" style="display:flex;border:1px solid #d1d1d1;border-radius:4px;overflow:hidden">
+<sc-for list="{{ mapModes }}" as="m" hint-placeholder-count="3"><button onClick="{{ m.pick }}" role="tab" style="min-height:{{ segH }};padding:0 10px;border:none;background:{{ m.bg }};color:{{ m.fg }};font:inherit;font-size:13px;font-weight:{{ m.fw }};cursor:pointer;white-space:nowrap">{{ m.label }}</button></sc-for>
+</div></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,58px);gap:6px;max-width:380px">
+<sc-for list="{{ mapTiles }}" as="m" hint-placeholder-count="9">
+<button onClick="{{ m.pick }}" aria-label="{{ m.aria }}" style="grid-row:{{ m.row }};grid-column:{{ m.col }};background:{{ m.bg }};outline:{{ m.ring }};outline-offset:{{ m.off }};border:none;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;font:inherit;color:#242424;padding:0"><span style="font-size:13px;font-weight:600">{{ m.short }}</span><span style="font-size:13px">{{ m.val }}</span><span style="font-size:10px;color:#616161">{{ m.note }}</span></button>
+</sc-for>
+</div>
+<div style="font-size:12px;color:#616161">{{ mapLegend }} Your jurisdiction is outlined — tap another to see it.</div>
+</sc-if>
+<sc-if value="{{ isAll }}">
+<div style="font-size:16px;font-weight:600">All 9 offices</div>
+<div style="display:grid;grid-template-columns:minmax(0,1.6fr) repeat(4,minmax(0,1fr));gap:4px;font-size:12px;color:#616161;padding:0 8px"><span>Office</span><span title="Auditor-General mentions">Mentions</span><span title="Report mentions">Reports</span><span>Developments</span><span title="Potential program gaps">Gaps</span></div>
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ allRows }}" as="r" hint-placeholder-count="9">
+<button onClick="{{ r.pick }}" style="display:grid;grid-template-columns:minmax(0,1.6fr) repeat(4,minmax(0,1fr));gap:4px;align-items:center;padding:8px;border:none;border-top:1px solid #f0f0f0;background:#fff;font:inherit;color:inherit;text-align:left;cursor:pointer;min-height:40px" style-hover="background:#f5f5f5"><span style="font-weight:600">{{ r.name }}</span><span>{{ r.ag }} <span style="font-size:11px;color:#616161">{{ r.net }}</span></span><span>{{ r.rep }}</span><span>{{ r.dev }}</span><span>{{ r.gaps }}</span></button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:center;gap:8px"><div style="flex:1;font-size:16px;font-weight:600">{{ elseTitle }}</div><button onClick="{{ goCompare }}" style="min-height:{{ btnH }};padding:0 8px;border:none;background:transparent;color:#0f6cbd;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap">Compare ›</button></div>
+<div style="font-size:12px;color:#616161;margin-bottom:4px">{{ elseSub }}</div>
+<sc-for list="{{ elseTop }}" as="e" hint-placeholder-count="3">
+<button onClick="{{ e.open }}" style="display:flex;flex-direction:column;gap:4px;padding:10px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer" style-hover="background:#fafafa">
+<div style="display:flex;gap:8px;align-items:baseline;width:100%"><span style="flex:1;font-weight:600">{{ e.label }}</span><span style="font-size:12px;color:#616161;white-space:nowrap">{{ e.where }}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px;align-items:center"><span style="padding:1px 8px;border-radius:999px;background:{{ e.covBg }};color:{{ e.covFg }};font-weight:600;white-space:nowrap">{{ e.cov }}</span><span style="color:#616161">{{ e.peers }}</span></div>
+</button>
+</sc-for>
+<sc-if value="{{ elseEmpty }}"><div style="font-size:13px;color:#616161">Nothing raised elsewhere that isn’t also being discussed here.</div></sc-if>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:2px">
+<div style="display:flex;align-items:center;gap:8px"><div style="flex:1;font-size:16px;font-weight:600">By sector</div><button onClick="{{ goCompare }}" style="min-height:{{ btnH }};padding:0 8px;border:none;background:transparent;color:#0f6cbd;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap">All sectors ›</button></div>
+<div style="font-size:12px;color:#616161;margin-bottom:6px">{{ secSub }}</div>
+<sc-for list="{{ secRows }}" as="o" hint-placeholder-count="6">
+<button onClick="{{ o.pick }}" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 96px;gap:8px;align-items:center;min-height:40px;padding:4px 6px;border:none;border-top:1px solid #f0f0f0;background:{{ o.bg }};font:inherit;color:inherit;text-align:left;cursor:pointer;font-size:13px" style-hover="background:#fafafa"><span style="font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ o.label }}</span><span style="display:flex;align-items:center;gap:6px"><span style="flex:1;height:6px;border-radius:3px;background:#f0f0f0;overflow:hidden;display:block"><span style="display:block;height:100%;width:{{ o.w }};background:#0f6cbd"></span></span><span style="font-weight:600;min-width:18px;text-align:right">{{ o.n }}</span></span><span style="font-size:12px;color:#616161;white-space:nowrap">{{ o.oth }}</span></button>
+</sc-for>
+<div style="font-size:12px;color:#616161;margin-top:6px">Select a sector to filter every page. Select it again to clear.</div>
+</div>
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:16px;font-weight:600">Coming up</div>
+<sc-for list="{{ nextSit }}" as="n" hint-placeholder-count="4">
+<div style="display:flex;gap:12px;padding:6px 0;border-bottom:1px solid #f0f0f0;font-size:13px"><div style="width:96px;flex:none;font-weight:600">{{ n.d }}</div><div style="flex:1;color:#424242">{{ n.p }}</div></div>
+</sc-for>
+<div style="font-size:12px;color:#616161">Hansard is checked automatically every morning.</div>
+</div>
+<sc-if value="{{ hasAdds }}">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:16px;font-weight:600">Added to your brief</div>
+<sc-for list="{{ adds }}" as="a" hint-placeholder-count="1">
+<button onClick="{{ a.open }}" style="display:flex;gap:8px;padding:8px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer"><span style="flex:1;font-weight:600">{{ a.headline }}</span><span style="font-size:12px;color:#616161;white-space:nowrap">{{ a.where }}</span></button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</sc-if>
+
+
+<sc-if value="{{ isCompare }}">
+<sc-if value="{{ cmpYou }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+<sc-for list="{{ cmpMetrics }}" as="m" hint-placeholder-count="4">
+<button onClick="{{ m.go }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;background:#fff;border:none;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:12px 16px;display:flex;flex-direction:column;gap:8px" style-hover="box-shadow:0 4px 8px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12)">
+<div style="display:flex;gap:8px;align-items:baseline"><div style="flex:1;font-size:13px;color:#616161">{{ m.label }}</div><div style="font-size:12px;font-weight:600;color:#0f6cbd;white-space:nowrap">{{ m.rank }}</div></div>
+<div style="display:grid;grid-template-columns:64px 1fr 28px;gap:6px 8px;align-items:center;font-size:12px">
+<span style="font-weight:600">You</span><div style="height:8px;border-radius:4px;background:#f0f0f0;overflow:hidden"><div style="height:100%;width:{{ m.youW }};background:#0f6cbd"></div></div><span style="font-weight:600;text-align:right">{{ m.you }}</span>
+<span style="color:#616161">Others’ median</span><div style="height:8px;border-radius:4px;background:#f0f0f0;overflow:hidden"><div style="height:100%;width:{{ m.medW }};background:#9e9e9e"></div></div><span style="text-align:right;color:#616161">{{ m.med }}</span>
+</div>
+</button>
+</sc-for>
+</div>
+<div style="font-size:13px;color:#424242;margin-top:-8px">{{ netLine }}</div>
+</sc-if>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px">
+<sc-if value="{{ cmpYou }}">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:16px;font-weight:600">Raised elsewhere, not yet here</div>
+<div style="font-size:12px;color:#616161;margin-bottom:6px">Early signals: topics that may reach your Parliament next</div>
+<sc-for list="{{ quietAll }}" as="e" hint-placeholder-count="3">
+<button onClick="{{ e.open }}" style="display:flex;flex-direction:column;gap:5px;padding:10px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer" style-hover="background:#fafafa">
+<div style="display:flex;gap:8px;align-items:baseline;width:100%"><span style="flex:1;font-weight:600">{{ e.label }}</span><span style="font-size:12px;color:#616161;white-space:nowrap">{{ e.where }}</span></div>
+<div style="font-size:12px;color:#424242">{{ e.count }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px;align-items:center"><span style="padding:1px 8px;border-radius:999px;background:{{ e.covBg }};color:{{ e.covFg }};font-weight:600;white-space:nowrap">{{ e.cov }}</span><span style="color:#616161">{{ e.peers }}</span></div>
+</button>
+</sc-for>
+<sc-if value="{{ quietEmpty }}"><div style="font-size:13px;color:#616161;padding:8px 0">Nothing is being raised in two or more other parliaments that isn’t also raised here.</div></sc-if>
+</div>
+</sc-if>
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:16px;font-weight:600">{{ sharedTitle }}</div>
+<div style="font-size:12px;color:#616161;margin-bottom:6px">{{ sharedSub }}</div>
+<sc-for list="{{ sharedAll }}" as="e" hint-placeholder-count="4">
+<button onClick="{{ e.open }}" style="display:flex;flex-direction:column;gap:6px;padding:10px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer" style-hover="background:#fafafa">
+<div style="display:flex;gap:8px;align-items:baseline;width:100%"><span style="flex:1;font-weight:600">{{ e.label }}</span><span style="font-size:12px;color:#616161;white-space:nowrap">{{ e.where }}</span></div>
+<sc-if value="{{ cmpYou }}">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:4px 8px;align-items:center;font-size:12px;width:100%">
+<div style="height:8px;border-radius:4px;background:#f0f0f0;overflow:hidden"><div style="height:100%;width:{{ e.youW }};background:#0f6cbd"></div></div><span style="font-weight:600">{{ e.youTxt }}</span>
+<div style="height:8px;border-radius:4px;background:#f0f0f0;overflow:hidden"><div style="height:100%;width:{{ e.othW }};background:#9e9e9e"></div></div><span style="color:#616161">{{ e.othTxt }}</span>
+</div>
+</sc-if>
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px;align-items:center"><span style="padding:1px 8px;border-radius:999px;background:{{ e.covBg }};color:{{ e.covFg }};font-weight:600;white-space:nowrap">{{ e.cov }}</span><span style="color:#616161">{{ e.peers }}</span></div>
+</button>
+</sc-for>
+<sc-if value="{{ sharedEmpty }}"><div style="font-size:13px;color:#616161;padding:8px 0">No shared issues this period.</div></sc-if>
+</div>
+</div>
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:8px">
+<div style="font-size:16px;font-weight:600">Sectors across parliaments</div>
+<div style="font-size:12px;color:#616161">Your column is outlined. Select a sector name to filter every page, or a cell to see the issue behind it.</div>
+<div style="display:flex;flex-direction:column;gap:3px;margin-top:4px">
+<div style="display:grid;grid-template-columns:{{ heatCols }};gap:3px;font-size:11px">
+<span></span>
+<sc-for list="{{ heatHead }}" as="h" hint-placeholder-count="9"><span style="text-align:center;font-weight:{{ h.fw }};color:{{ h.color }}">{{ h.short }}</span></sc-for>
+</div>
+<sc-for list="{{ heat }}" as="row" hint-placeholder-count="9">
+<div style="display:grid;grid-template-columns:{{ heatCols }};gap:3px;font-size:12px">
+<button onClick="{{ row.pick }}" title="{{ row.full }}" style="display:flex;align-items:center;border:none;background:{{ row.bg }};padding:0 4px;border-radius:3px;font:inherit;font-size:12px;font-weight:{{ row.fw }};color:#242424;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;text-align:left" style-hover="background:#f0f0f0">{{ row.label }}</button>
+<sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="9"><button onClick="{{ c.open }}" aria-label="{{ c.aria }}" style="height:30px;border:none;border-radius:3px;background:{{ c.bg }};box-shadow:inset 0 0 0 2px {{ c.bd }};font:inherit;font-size:12px;cursor:pointer;color:#242424;padding:0">{{ c.n }}</button></sc-for>
+</div>
+</sc-for>
+</div>
+<div style="font-size:12px;color:#616161">Blank = not raised. Not-sitting parliaments show blank for the period. WA figures come from manual import only. {{ heatHiddenTxt }}</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMentions }}">
+<div role="tablist" style="display:flex;gap:4px;border-bottom:1px solid #e0e0e0">
+<sc-for list="{{ mTabs }}" as="t" hint-placeholder-count="2"><button onClick="{{ t.pick }}" role="tab" style="min-height:{{ btnH }};padding:0 12px;border:none;border-bottom:2px solid {{ t.line }};background:none;color:{{ t.color }};font:inherit;font-weight:{{ t.fw }};cursor:pointer">{{ t.label }}</button></sc-for>
+</div>
+<sc-if value="{{ isAgTab }}">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:8px;display:flex;flex-direction:column">
+<sc-if value="{{ isDesk }}"><div style="display:flex;gap:12px;padding:6px 10px;font-size:12px;color:#616161"><span style="flex:1 1 220px">Office</span><span style="flex:0 0 70px">Own parl.</span><span style="flex:0 0 70px">Elsewhere</span><span style="flex:1 1 160px">Sentiment</span><span style="flex:0 0 50px">Net</span><span style="flex:0 0 270px">By side</span></div></sc-if>
+<sc-for list="{{ agRows }}" as="a" hint-placeholder-count="9">
+<button onClick="{{ a.pick }}" style="display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:10px;border:none;border-radius:4px;box-shadow:inset 0 0 0 1px {{ a.bd }};background:{{ a.bg }};font:inherit;color:inherit;text-align:left;cursor:pointer;font-size:13px" style-hover="background:#f5f5f5">
+<span style="flex:1 1 220px;display:flex;gap:6px;align-items:baseline;min-width:0"><b style="font-weight:600">{{ a.name }}</b><span style="font-size:11px;font-weight:600;color:#0f6cbd">{{ a.you }}</span><span style="font-size:11px;color:#616161">{{ a.note }}</span></span>
+<span style="flex:0 0 70px">{{ a.own }}</span>
+<span style="flex:0 0 70px;color:#616161">{{ a.elsewhere }}</span>
+<span style="flex:1 1 160px;display:flex;height:8px;border-radius:4px;overflow:hidden;background:#f0f0f0"><span style="width:{{ a.pos }};background:#107c10"></span><span style="width:{{ a.neu }};background:#bdbdbd"></span><span style="width:{{ a.mix }};background:#f7630c"></span><span style="width:{{ a.neg }};background:#c50f1f"></span></span>
+<span style="flex:0 0 50px;font-weight:600">{{ a.net }}</span>
+<span style="flex:0 0 270px;font-size:12px;color:#616161">{{ a.sides }}</span>
+</button>
+</sc-for>
+</div>
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><div style="flex:1 1 220px;font-size:16px;font-weight:600">Mentions of {{ agSelName }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ sideChips }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.pick }}" style="min-height:{{ segH }};padding:0 10px;border-radius:999px;border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:13px;font-weight:{{ c.fw }};cursor:pointer">{{ c.label }}</button></sc-for></div></div>
+<sc-for list="{{ agM }}" as="m" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:6px;padding:12px 0;border-top:1px solid #f0f0f0">
+<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px"><span style="padding:2px 8px;border-radius:999px;background:{{ m.sentBg }};color:{{ m.sentColor }};font-weight:600;white-space:nowrap">{{ m.sentText }}</span><span style="color:#424242">{{ m.reason }}</span><sc-if value="{{ m.isNew }}"><span style="padding:2px 8px;border-radius:999px;background:#0f6cbd;color:#fff;font-weight:600">New</span></sc-if></div>
+<div style="font-size:14px;font-style:italic;color:#242424">{{ m.quote }}</div>
+<div style="font-size:12px;color:#616161">{{ m.speaker }} · {{ m.where }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><a href="{{ m.url }}" target="_blank" rel="noopener" onClick="{{ m.markSeen }}" style="display:inline-flex;align-items:center;min-height:{{ btnH }};padding:0 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-weight:600;text-decoration:none" style-hover="background:#115ea3">{{ m.srcLabel }}</a><button onClick="{{ m.open }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Details</button></div>
+</div>
+</sc-for>
+<sc-if value="{{ agEmpty }}"><div style="font-size:13px;color:#616161">No mentions in this period.</div></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ isRepTab }}">
+<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+<sc-for list="{{ repOffices }}" as="c" hint-placeholder-count="9"><button onClick="{{ c.pick }}" style="min-height:{{ segH }};padding:0 10px;border-radius:999px;border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:13px;font-weight:{{ c.fw }};cursor:pointer">{{ c.label }}</button></sc-for>
+<span style="flex:1"></span>
+<button onClick="{{ toggleNotYet }}" style="min-height:{{ segH }};padding:0 10px;border-radius:4px;border:1px solid #d1d1d1;background:{{ notYetBg }};color:{{ notYetFg }};font:inherit;font-size:13px;cursor:pointer">{{ notYetLabel }}</button>
+</div>
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:8px 16px;display:flex;flex-direction:column">
+<div style="font-size:13px;color:#616161;padding:8px 0">{{ repOfficeName }} · report register · mentions across the stored window</div>
+<sc-for list="{{ repRows }}" as="r" hint-placeholder-count="5">
+<button onClick="{{ r.open }}" style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;padding:12px 0;border:none;border-top:1px solid #f0f0f0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="background:#fafafa">
+<span style="flex:1 1 260px;display:flex;flex-direction:column;gap:2px"><b style="font-weight:600">{{ r.title }}</b><span style="font-size:12px;color:#616161">{{ r.meta }}</span></span>
+<span style="flex:0 0 90px;font-size:13px">{{ r.n }} mentions</span>
+<sc-if value="{{ r.hasM }}"><span style="flex:1 1 160px;display:flex;flex-direction:column;gap:3px"><span style="display:flex;height:8px;border-radius:4px;overflow:hidden;background:#f0f0f0"><span style="width:{{ r.pos }};background:#107c10"></span><span style="width:{{ r.neu }};background:#bdbdbd"></span><span style="width:{{ r.mix }};background:#f7630c"></span><span style="width:{{ r.neg }};background:#c50f1f"></span></span><span style="font-size:11px;color:#616161">{{ r.last }}</span></span></sc-if>
+<sc-if value="{{ r.notYet }}"><span style="flex:1 1 160px"><span style="padding:2px 8px;border-radius:999px;background:#f0f0f0;color:#424242;font-size:12px;font-weight:600">Not yet mentioned in Parliament</span></span></sc-if>
+</button>
+</sc-for>
+<sc-if value="{{ repEmpty }}"><div style="font-size:13px;color:#616161;padding:12px 0">Every report has been mentioned.</div></sc-if>
+</div>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{ isDev }}">
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ devChips }}" as="c" hint-placeholder-count="6"><button onClick="{{ c.pick }}" style="min-height:{{ segH }};padding:0 10px;border-radius:999px;border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:13px;font-weight:{{ c.fw }};cursor:pointer;white-space:nowrap">{{ c.label }}</button></sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ devList }}" as="v" hint-placeholder-count="4">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:14px 16px;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px"><span style="padding:2px 8px;border-radius:999px;background:#ebf3fc;color:#0f6cbd;font-weight:600;white-space:nowrap">{{ v.featLabel }}</span><span style="padding:2px 8px;border-radius:999px;background:{{ v.srcBg }};color:{{ v.srcFg }};font-weight:600;white-space:nowrap">{{ v.source }}</span><sc-if value="{{ v.isNew }}"><span style="padding:2px 8px;border-radius:999px;background:#0f6cbd;color:#fff;font-weight:600">New</span></sc-if><span style="color:#616161;white-space:nowrap">{{ v.where }}</span></div>
+<button onClick="{{ v.open }}" style="all:unset;cursor:pointer;font-size:16px;font-weight:600;line-height:1.3" style-hover="text-decoration:underline">{{ v.headline }}</button>
+<div style="font-size:13px;color:#424242"><b style="font-weight:600">Why it matters:</b> {{ v.why }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding-top:2px"><a href="{{ v.url }}" target="_blank" rel="noopener" onClick="{{ v.markSeen }}" style="display:inline-flex;align-items:center;min-height:{{ btnH }};padding:0 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-weight:600;text-decoration:none" style-hover="background:#115ea3">{{ v.srcLabel }}</a><button onClick="{{ v.open }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Details</button></div>
+</div>
+</sc-for>
+<sc-if value="{{ devEmpty }}"><div style="border:1px dashed #bdbdbd;border-radius:8px;padding:16px;font-size:13px;color:#616161">No developments in this period.</div></sc-if>
+</div>
+<sc-if value="{{ hasDevElse }}">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:16px;font-weight:600">Meanwhile, at other audit offices</div>
+<div style="font-size:12px;color:#616161;margin-bottom:6px">Major changes elsewhere that could set a precedent for you</div>
+<sc-for list="{{ devElse }}" as="v" hint-placeholder-count="3">
+<button onClick="{{ v.open }}" style="display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;padding:10px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer" style-hover="background:#fafafa"><span style="padding:1px 8px;border-radius:999px;background:#ebf3fc;color:#0f6cbd;font-size:12px;font-weight:600;white-space:nowrap">{{ v.featLabel }}</span><span style="flex:1 1 240px;font-weight:600">{{ v.headline }}</span><span style="font-size:12px;color:#616161;white-space:nowrap">{{ v.where }}</span></button>
+</sc-for>
+</div>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{ isGaps }}">
+<div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:#ebf3fc;border:1px solid #b4d6fa;border-radius:4px;font-size:13px"><span style="color:#0f6cbd">ⓘ</span><span>Prepared from public sources. Each Auditor-General sets their own program; parliamentary attention is one input among many. Based on Hansard from 31 Aug – 31 Oct 2026.</span></div>
+<sc-if value="{{ hasProgram }}">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center">
+<div style="flex:1 1 240px;display:flex;flex-direction:column;gap:2px"><div style="font-weight:600">{{ progName }}</div><div style="font-size:12px;color:#616161">{{ progCounts }}</div></div>
+<span style="padding:2px 10px;border-radius:999px;background:{{ progBadgeBg }};color:{{ progBadgeFg }};font-size:12px;font-weight:600;white-space:nowrap">{{ progBadge }}</span>
+</div>
+</sc-if>
+<sc-if value="{{ noProgram }}"><div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:#fff4ec;border:1px solid #fdcfb4;border-radius:4px;font-size:13px"><span style="color:#bc4b09">⚠</span><span>{{ noProgMsg }}</span></div></sc-if>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ gapList }}" as="g" hint-placeholder-count="3">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;gap:12px;align-items:flex-start">
+<div style="flex:none;width:28px;height:28px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px">{{ g.rank }}</div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+<button onClick="{{ g.open }}" style="all:unset;cursor:pointer;font-size:16px;font-weight:600;line-height:1.3" style-hover="text-decoration:underline">{{ g.issue }}</button>
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px;align-items:center"><span style="padding:2px 8px;border-radius:999px;background:{{ g.covBg }};color:{{ g.covFg }};font-weight:600;white-space:nowrap">{{ g.cov }}</span><span style="color:#616161">{{ g.office }}{{ g.theme }} · {{ g.evidence }} · {{ g.raised }}</span></div>
+<div style="display:flex;align-items:center;gap:8px;font-size:12px;max-width:360px"><div style="flex:1;height:6px;border-radius:3px;background:#f0f0f0;overflow:hidden"><div style="height:100%;width:{{ g.scoreW }};background:#ca5010"></div></div><span style="white-space:nowrap;font-weight:600">Attention {{ g.score }}/100</span></div>
+<div style="font-size:13px;color:#242424"><b style="font-weight:600">{{ g.closest }}.</b> {{ g.why }}</div>
+<sc-if value="{{ g.hasLast }}"><div style="font-size:12px;color:#616161">{{ g.last }}</div></sc-if>
+<sc-if value="{{ g.hasPeers }}"><div style="font-size:12px;color:#424242">↔ {{ g.peers }}</div></sc-if>
+<div><button onClick="{{ g.open }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Evidence and score</button></div>
+</div>
+</div>
+</sc-for>
+<div style="font-size:12px;color:#616161">{{ gapHidden }}</div>
+</div>
+<sc-if value="{{ hasSpot }}">
+<div style="background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:16px;font-weight:600">Program topics in the spotlight</div>
+<div style="font-size:12px;color:#616161;margin-bottom:6px">Planned topics Parliament is discussing now — useful for scoping and timing</div>
+<sc-for list="{{ spot }}" as="p" hint-placeholder-count="2"><div style="display:flex;gap:8px;padding:8px 0;border-top:1px solid #f0f0f0;font-size:13px"><span style="flex:1;font-weight:600">{{ p.t }}</span><span style="color:#616161">{{ p.n }}</span></div></sc-for>
+</div>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{ isExplore }}">
+<div style="display:flex;gap:8px">
+<div style="flex:1;position:relative"><input value="{{ q }}" onChange="{{ onQ }}" placeholder="Search Hansard — try “consultants” or “wait times”" aria-label="Search Hansard" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px 0 34px;border:1px solid #d1d1d1;border-bottom-color:#616161;border-radius:4px;font:inherit;background:#fff"><span style="position:absolute;left:12px;top:9px;color:#616161">⌕</span></div>
+<sc-if value="{{ hasQ }}"><button onClick="{{ clearQ }}" style="min-height:40px;padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Clear</button></sc-if>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ expChips }}" as="c" hint-placeholder-count="2"><button onClick="{{ c.pick }}" style="min-height:{{ segH }};padding:0 10px;border-radius:999px;border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:13px;font-weight:{{ c.fw }};cursor:pointer;white-space:nowrap">{{ c.label }}</button></sc-for>
+<sc-for list="{{ sentChips }}" as="c" hint-placeholder-count="5"><button onClick="{{ c.pick }}" style="min-height:{{ segH }};padding:0 10px;border-radius:999px;border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }};font:inherit;font-size:13px;font-weight:{{ c.fw }};cursor:pointer;white-space:nowrap">{{ c.label }}</button></sc-for>
+</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:13px"><span style="flex:1;font-weight:600">{{ expCount }}</span></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ expResults }}" as="x" hint-placeholder-count="4">
+<button onClick="{{ x.open }}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;background:#fff;border:none;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:12px 16px;display:flex;flex-direction:column;gap:5px" style-hover="box-shadow:0 4px 8px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12)">
+<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px"><span style="width:8px;height:8px;border-radius:50%;background:{{ x.jurColor }}"></span><span style="color:#616161;white-space:nowrap">{{ x.where }}</span><span style="color:#616161">· {{ x.debate }}</span><sc-if value="{{ x.hasSent }}"><span style="padding:1px 8px;border-radius:999px;background:{{ x.sentBg }};color:{{ x.sentColor }};font-weight:600;white-space:nowrap">{{ x.sentText }}</span></sc-if><sc-if value="{{ x.isNew }}"><span style="padding:1px 8px;border-radius:999px;background:#0f6cbd;color:#fff;font-weight:600">New</span></sc-if></div>
+<div style="font-size:15px;font-weight:600">{{ x.headline }}</div>
+<div style="font-size:13px;color:#424242"><sc-for list="{{ x.snip }}" as="p"><span style="background:{{ p.bg }}">{{ p.t }}</span></sc-for></div>
+<div style="font-size:12px;color:#616161">{{ x.speaker }}</div>
+</button>
+</sc-for>
+<sc-if value="{{ expEmpty }}"><div style="border:1px dashed #bdbdbd;border-radius:8px;padding:16px;font-size:13px;color:#616161">No matches. Try fewer words, or include all 9 jurisdictions.</div></sc-if>
+</div>
+</sc-if>
+
+</div>
+</main>
+<sc-if value="{{ isMob }}">
+<nav style="flex:none;height:62px;background:#fff;border-top:1px solid #e0e0e0;display:grid;grid-template-columns:repeat(5,1fr)">
+<sc-for list="{{ mobTabs }}" as="t" hint-placeholder-count="5"><button onClick="{{ t.go }}" style="border:none;border-top:2px solid {{ t.line }};background:none;font:inherit;font-size:11px;color:{{ t.color }};font-weight:{{ t.fw }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;padding:0"><span style="font-size:17px;line-height:1">{{ t.icon }}</span>{{ t.label }}</button></sc-for>
+</nav>
+</sc-if>
+
+<sc-if value="{{ drawerOpen }}">
+<div onClick="{{ closeDrawer }}" style="position:absolute;inset:0;background:rgba(0,0,0,.3);z-index:39"></div>
+<aside role="dialog" aria-label="{{ dTitle }}" style="position:absolute;top:0;right:0;bottom:0;width:{{ drawerW }};background:#fff;z-index:40;box-shadow:-8px 0 16px rgba(0,0,0,.14);display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;padding:12px 12px 12px 20px;border-bottom:1px solid #e0e0e0;flex:none"><div style="flex:1;font-size:16px;font-weight:600">{{ dTitle }}</div><button onClick="{{ closeDrawer }}" aria-label="Close" style="width:40px;height:40px;border:none;background:transparent;font:inherit;font-size:18px;cursor:pointer;border-radius:4px" style-hover="background:#f5f5f5">✕</button></div>
+<div style="flex:1;overflow:auto;padding:20px;display:flex;flex-direction:column;gap:14px">
+
+<sc-if value="{{ isItemD }}">
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px"><sc-for list="{{ d.tags }}" as="t"><span style="padding:2px 8px;border-radius:999px;background:#f0f0f0;color:#424242;white-space:nowrap">{{ t }}</span></sc-for></div>
+<div style="font-size:20px;font-weight:600;line-height:1.25">{{ d.headline }}</div>
+<div style="font-size:13px;color:#616161">{{ d.parl }} · {{ d.date }}</div>
+<div style="background:#fafafa;border-radius:4px;padding:12px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:11px;color:#616161">✦ AI summary — check the source</div>
+<div style="font-size:14px">{{ d.summary }}</div>
+<div style="font-size:14px"><b style="font-weight:600">Why it matters:</b> {{ d.why }}</div>
+</div>
+<sc-if value="{{ d.hasSent }}"><div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px"><span style="padding:2px 8px;border-radius:999px;background:{{ d.sentBg }};color:{{ d.sentColor }};font-weight:600;white-space:nowrap">{{ d.sentText }}</span><span style="color:#424242">{{ d.reason }}</span></div></sc-if>
+<sc-if value="{{ d.hasQuote }}"><div style="border-left:3px solid #0f6cbd;padding:2px 0 2px 12px;font-size:15px;font-style:italic">{{ d.quote }}</div><div style="font-size:12px;color:#0e700e">{{ d.verified }}</div></sc-if>
+<div style="font-size:13px;color:#424242;border-top:1px solid #e0e0e0;padding-top:10px">{{ d.speaker }}<br>{{ d.debate }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<a href="{{ d.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:{{ btnH }};padding:0 12px;border-radius:4px;background:#0f6cbd;color:#fff;font-weight:600;text-decoration:none" style-hover="background:#115ea3">{{ d.srcLabel }}</a>
+<button onClick="{{ d.copyCite }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Copy citation</button>
+<button onClick="{{ d.addBrief }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">{{ d.addLabel }}</button>
+<button onClick="{{ shareDrawer }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">↗ Share</button>
+</div>
+<sc-if value="{{ d.hasIssue }}">
+<button onClick="{{ d.openIss }}" style="display:flex;flex-direction:column;gap:4px;padding:12px;border:1px solid #b4d6fa;border-radius:4px;background:#f5f9fe;text-align:left;font:inherit;color:inherit;cursor:pointer"><span style="font-size:12px;font-weight:600;color:#0f6cbd">↔ Compare across parliaments</span><span style="font-size:13px">{{ d.issueLine }}</span></button>
+</sc-if>
+<sc-if value="{{ d.hasRelated }}">
+<div style="font-size:14px;font-weight:600;margin-top:4px">Related in other parliaments</div>
+<sc-for list="{{ d.related }}" as="o"><button onClick="{{ o.open }}" style="display:flex;flex-direction:column;gap:2px;padding:8px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer"><span style="font-size:12px;color:#616161">{{ o.where }}</span><span style="font-size:13px;font-weight:600;color:#0f6cbd">{{ o.headline }}</span></button></sc-for>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{ isGapD }}">
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px"><span style="padding:2px 8px;border-radius:999px;background:{{ g.covBg }};color:{{ g.covFg }};font-weight:600">{{ g.cov }}</span><span style="padding:2px 8px;border-radius:999px;background:#f0f0f0">{{ g.theme }}</span></div>
+<div style="font-size:20px;font-weight:600;line-height:1.25">{{ g.issue }}</div>
+<div style="font-size:13px"><b style="font-weight:600">{{ g.closest }}.</b> {{ g.why }}</div>
+<sc-if value="{{ g.hasPeers }}"><div style="font-size:13px;color:#424242;padding:10px 12px;background:#f5f9fe;border-radius:4px">↔ {{ g.peers }}</div></sc-if>
+<div style="font-size:14px;font-weight:600;margin-top:4px">Why this score · {{ g.score }}/100</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ g.parts }}" as="p"><div style="display:grid;grid-template-columns:150px 1fr 50px;gap:8px;align-items:center;font-size:12px"><span>{{ p.n }}</span><div style="height:6px;border-radius:3px;background:#f0f0f0;overflow:hidden"><div style="height:100%;width:{{ p.w }};background:#ca5010"></div></div><span style="text-align:right;color:#616161">{{ p.lbl }}</span></div></sc-for>
+</div>
+<div style="font-size:14px;font-weight:600;margin-top:4px">Evidence · {{ g.evidence }}</div>
+<sc-for list="{{ g.ev }}" as="o"><button onClick="{{ o.open }}" style="display:flex;flex-direction:column;gap:2px;padding:8px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer"><span style="font-size:12px;color:#616161">{{ o.where }}</span><span style="font-size:13px;font-weight:600;color:#0f6cbd">{{ o.headline }}</span></button></sc-for>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><button onClick="{{ g.exportOne }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Add to longlist export</button><button onClick="{{ shareDrawer }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">↗ Share</button></div>
+<div style="font-size:12px;color:#616161">Prepared from public sources. Each Auditor-General sets their own program; parliamentary attention is one input among many.</div>
+</sc-if>
+
+<sc-if value="{{ isRepD }}">
+<div style="font-size:20px;font-weight:600;line-height:1.25">{{ r.title }}</div>
+<div style="font-size:13px;color:#616161">{{ r.meta }}</div>
+<sc-if value="{{ r.has }}">
+<div style="display:flex;height:8px;border-radius:4px;overflow:hidden;background:#f0f0f0"><span style="width:{{ r.pos }};background:#107c10"></span><span style="width:{{ r.neu }};background:#bdbdbd"></span><span style="width:{{ r.mix }};background:#f7630c"></span><span style="width:{{ r.neg }};background:#c50f1f"></span></div>
+<div style="font-size:12px;color:#616161">{{ r.sub }}</div>
+<sc-for list="{{ r.mentions }}" as="m"><div style="display:flex;flex-direction:column;gap:5px;padding:10px 0;border-top:1px solid #f0f0f0"><div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px;align-items:center"><span style="padding:2px 8px;border-radius:999px;background:{{ m.sentBg }};color:{{ m.sentColor }};font-weight:600">{{ m.sentText }}</span><span style="color:#424242">{{ m.reason }}</span></div><div style="font-size:14px;font-style:italic">{{ m.quote }}</div><div style="font-size:12px;color:#616161">{{ m.speaker }} · {{ m.where }}</div><div><a href="{{ m.url }}" target="_blank" rel="noopener" style="font-size:13px;font-weight:600">{{ m.srcLabel }}</a></div></div></sc-for>
+</sc-if>
+<sc-if value="{{ r.notYet }}"><div style="padding:12px;border:1px dashed #bdbdbd;border-radius:4px;font-size:13px;color:#424242">Not yet mentioned in Parliament since it was tabled.</div></sc-if>
+<div><a href="{{ r.url }}" target="_blank" rel="noopener" style="font-size:13px;font-weight:600">Open on the office website ↗</a></div>
+</sc-if>
+
+<sc-if value="{{ isIssueD }}">
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:12px"><span style="padding:2px 8px;border-radius:999px;background:#f0f0f0">{{ iss.theme }}</span></div>
+<div style="font-size:20px;font-weight:600;line-height:1.25">{{ iss.label }}</div>
+<div style="font-size:13px;color:#616161">{{ iss.summary }}</div>
+<sc-if value="{{ iss.hasYourCov }}"><div style="font-size:13px;padding:10px 12px;background:#f5f9fe;border-radius:4px"><b style="font-weight:600">{{ iss.yourCov }}.</b> {{ iss.peers }}</div></sc-if>
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 28px minmax(0,1fr);gap:8px;font-size:11px;color:#616161;padding:0 6px 4px"><span>Parliament</span><span>Mentions</span><span></span><span>Office program</span></div>
+<sc-for list="{{ iss.rows }}" as="w"><div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 28px minmax(0,1fr);gap:8px;align-items:center;padding:6px;border-radius:4px;background:{{ w.bg }};font-size:12px"><span style="font-weight:{{ w.fw }}">{{ w.name }}{{ w.you }}</span><span style="display:flex;align-items:center;gap:6px;min-width:0"><sc-if value="{{ w.hasN }}"><span style="flex:1;height:6px;border-radius:3px;background:#f0f0f0;overflow:hidden;display:block"><span style="display:block;height:100%;width:{{ w.w }};background:#0f6cbd"></span></span></sc-if><span style="font-size:11px;color:#616161;white-space:nowrap">{{ w.note }}</span></span><span style="text-align:right">{{ w.n }}</span><span style="color:{{ w.covFg }}">{{ w.cov }}</span></div></sc-for>
+</div>
+<div style="border-left:3px solid #9e9e9e;padding:2px 0 2px 12px;font-size:14px;font-style:italic">{{ iss.quote }}</div>
+<div style="font-size:12px;color:#616161">{{ iss.quoteBy }} · <a href="{{ iss.quoteUrl }}" target="_blank" rel="noopener">Open in Hansard ↗</a></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><button onClick="{{ iss.search }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:none;background:#0f6cbd;color:#fff;font:inherit;font-weight:600;cursor:pointer">Search all Hansard for this</button><button onClick="{{ iss.add }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Add to brief</button><button onClick="{{ shareDrawer }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">↗ Share</button></div>
+<sc-if value="{{ iss.hasLinked }}">
+<div style="font-size:14px;font-weight:600;margin-top:4px">Summarised items</div>
+<sc-for list="{{ iss.linked }}" as="o"><button onClick="{{ o.open }}" style="display:flex;flex-direction:column;gap:2px;padding:8px 0;border:none;border-top:1px solid #f0f0f0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer"><span style="font-size:12px;color:#616161">{{ o.where }}</span><span style="font-size:13px;font-weight:600;color:#0f6cbd">{{ o.headline }}</span></button></sc-for>
+</sc-if>
+</sc-if>
+
+</div>
+</aside>
+</sc-if>
+
+<sc-if value="{{ menuOpen }}">
+<div onClick="{{ closeMenu }}" style="position:absolute;inset:0;z-index:45;background:{{ scrim }}"></div>
+<sc-if value="{{ panelOpen }}">
+<div role="menu" style="position:absolute;z-index:46;top:{{ mTop }};left:{{ mLeft }};right:{{ mRight }};bottom:{{ mBottom }};width:{{ mWidth }};max-height:{{ mMaxH }};overflow:auto;background:#fff;border-radius:{{ mRadius }};box-shadow:0 8px 16px rgba(0,0,0,.14),0 0 2px rgba(0,0,0,.12);padding:4px;box-sizing:border-box">
+<sc-if value="{{ isJurMenu }}">
+<div style="padding:10px 12px 6px;font-size:12px;color:#616161">Viewing as</div>
+<sc-for list="{{ jurMenu }}" as="j" hint-placeholder-count="10"><button onClick="{{ j.pick }}" role="menuitem" style="display:flex;width:100%;align-items:center;gap:10px;min-height:44px;padding:4px 12px;border:none;border-radius:4px;background:{{ j.bg }};font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="background:#f5f5f5"><span style="width:16px;color:#0f6cbd;font-weight:700">{{ j.check }}</span><span style="flex:1;display:flex;flex-direction:column"><span>{{ j.name }}</span><span style="font-size:12px;color:#616161">{{ j.sub }}</span></span><span style="font-size:12px;color:#0f6cbd;font-weight:600">{{ j.count }}</span></button></sc-for>
+<div style="border-top:1px solid #e0e0e0;margin-top:4px;padding:8px 12px;font-size:12px;color:#616161">Saved on this device</div>
+</sc-if>
+<sc-if value="{{ isSectorMenu }}">
+<div style="padding:10px 12px 6px;font-size:12px;color:#616161">Filter every page by sector</div>
+<sc-for list="{{ sectorMenu }}" as="o" hint-placeholder-count="17"><button onClick="{{ o.pick }}" role="menuitem" style="display:flex;width:100%;align-items:center;gap:10px;min-height:40px;padding:4px 12px;border:none;border-radius:4px;background:{{ o.bg }};font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="background:#f5f5f5"><span style="width:16px;color:#0f6cbd;font-weight:700">{{ o.check }}</span><span style="flex:1">{{ o.label }}</span><span style="font-size:12px;color:#616161;white-space:nowrap">{{ o.sub }}</span></button></sc-for>
+</sc-if>
+<sc-if value="{{ isPeriodMenu }}">
+<sc-for list="{{ periodOpts }}" as="p" hint-placeholder-count="3"><button onClick="{{ p.pick }}" role="menuitem" style="display:flex;width:100%;align-items:center;gap:10px;min-height:44px;padding:4px 12px;border:none;border-radius:4px;background:{{ p.bg }};font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="background:#f5f5f5"><span style="width:16px;color:#0f6cbd;font-weight:700">{{ p.check }}</span><span style="flex:1">{{ p.label }}</span><span style="font-size:12px;color:#616161">{{ p.sub }}</span></button></sc-for>
+</sc-if>
+<sc-if value="{{ isStatusMenu }}">
+<div style="padding:12px 12px 8px;display:flex;flex-direction:column;gap:2px"><div style="font-size:15px;font-weight:600">{{ statusTitle }}</div><div style="font-size:12px;color:#616161">{{ statusSub }}</div></div>
+<sc-for list="{{ status }}" as="r" hint-placeholder-count="9"><div style="display:flex;gap:10px;padding:7px 12px;border-top:1px solid #f0f0f0;font-size:13px;align-items:baseline"><span style="width:14px;color:{{ r.color }};font-weight:700">{{ r.icon }}</span><span style="flex:0 0 46%;font-weight:600">{{ r.name }}</span><span style="flex:1;color:#424242;font-size:12px">{{ r.text }}</span></div></sc-for>
+<div style="display:flex;gap:10px;padding:7px 12px;border-top:1px solid #f0f0f0;font-size:13px;align-items:baseline"><span style="width:14px;color:{{ regRow.color }};font-weight:700">{{ regRow.icon }}</span><span style="flex:0 0 46%;font-weight:600">Office registers (9)</span><span style="flex:1;color:#424242;font-size:12px">{{ regRow.text }}</span></div>
+<sc-if value="{{ showDoneInMenu }}"><div style="margin:8px 12px 0;padding:10px 12px;border-radius:4px;background:#f1faf1;color:#0e700e;font-size:13px;font-weight:600">✓ {{ doneTextM }}</div></sc-if>
+<div style="padding:12px;border-top:1px solid #e0e0e0;margin-top:8px;display:flex;flex-direction:column;gap:8px">
+<button onClick="{{ refresh }}" disabled="{{ refreshDisabled }}" style="min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer;opacity:{{ refreshOpacity }}" style-hover="background:#f5f5f5">↻ {{ refreshLabel }}</button>
+<div style="font-size:12px;color:#616161">{{ refreshNote }}</div>
+</div>
+</sc-if>
+<sc-if value="{{ isExportMenu }}">
+<div style="padding:12px 12px 6px;font-size:15px;font-weight:600">Export</div>
+<sc-for list="{{ exportOpts }}" as="o" hint-placeholder-count="2"><button onClick="{{ o.pick }}" role="menuitem" style="display:flex;width:100%;align-items:center;min-height:48px;padding:4px 12px;border:none;border-radius:4px;background:transparent;font:inherit;color:inherit;text-align:left;cursor:pointer">{{ o.label }}</button></sc-for>
+</sc-if>
+<sc-if value="{{ isMoreMenu }}">
+<sc-for list="{{ moreItems }}" as="m" hint-placeholder-count="3"><button onClick="{{ m.pick }}" role="menuitem" style="display:flex;width:100%;align-items:center;min-height:44px;padding:4px 12px;border:none;border-radius:4px;background:transparent;font:inherit;color:inherit;text-align:left;cursor:pointer" style-hover="background:#f5f5f5">{{ m.label }}</button></sc-for>
+</sc-if>
+</div>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{ authOpen }}">
+<div style="position:absolute;inset:0;z-index:70;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;padding:16px">
+<form onSubmit="{{ signIn }}" role="dialog" aria-label="Sign in" style="width:100%;max-width:360px;box-sizing:border-box;background:#fff;border-radius:8px;box-shadow:0 16px 32px rgba(0,0,0,.2);padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="font-size:20px;font-weight:600">Sign in to refresh</div>
+<div style="font-size:13px;color:#616161">Refreshing checks every parliament for new sitting days and runs AI analysis, which has a cost. Everything else stays open without signing in.</div>
+<label style="display:flex;flex-direction:column;gap:4px;font-weight:600">Username<input value="{{ user }}" onChange="{{ onUser }}" autocomplete="username" style="height:36px;border:1px solid #d1d1d1;border-bottom-color:#616161;border-radius:4px;padding:0 10px;font:inherit;font-weight:400"></label>
+<label style="display:flex;flex-direction:column;gap:4px;font-weight:600">Password<input type="password" value="{{ pass }}" onChange="{{ onPass }}" autocomplete="current-password" style="height:36px;border:1px solid #d1d1d1;border-bottom-color:#616161;border-radius:4px;padding:0 10px;font:inherit;font-weight:400"></label>
+<sc-if value="{{ hasLoginErr }}"><div role="alert" style="font-size:13px;color:#b10e1c">{{ loginErr }}</div></sc-if>
+<div style="font-size:12px;color:#616161">Prototype: username acag, any password</div>
+<div style="display:flex;justify-content:flex-end;gap:8px"><button type="button" onClick="{{ cancelAuth }}" style="min-height:40px;padding:0 16px;border-radius:4px;border:1px solid #d1d1d1;background:#fff;font:inherit;font-weight:600;cursor:pointer">Cancel</button><button type="submit" style="min-height:40px;padding:0 16px;border:none;border-radius:4px;background:#0f6cbd;color:#fff;font:inherit;font-weight:600;cursor:pointer" style-hover="background:#115ea3">Sign in and refresh</button></div>
+</form>
+</div>
+</sc-if>
+
+<sc-if value="{{ shareOpen }}">
+<div onClick="{{ closeShare }}" style="position:absolute;inset:0;z-index:69;background:rgba(0,0,0,.4)"></div>
+<div role="dialog" aria-label="Share this view" style="position:absolute;z-index:70;left:50%;top:50%;transform:translate(-50%,-50%);width:calc(100% - 32px);max-width:460px;box-sizing:border-box;background:#fff;border-radius:8px;box-shadow:0 16px 32px rgba(0,0,0,.2);padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:8px"><div style="flex:1;font-size:20px;font-weight:600">Share this view</div><button onClick="{{ closeShare }}" aria-label="Close" style="width:36px;height:36px;border:none;background:transparent;font:inherit;font-size:16px;cursor:pointer;border-radius:4px">✕</button></div>
+<div style="font-size:13px;color:#616161">The link opens this exact page — same jurisdiction, period and filters. No sign-in needed.</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ shareBits }}" as="b" hint-placeholder-count="3"><span style="padding:2px 10px;border-radius:999px;background:#f0f0f0;font-size:12px;color:#242424">{{ b }}</span></sc-for></div>
+<div style="display:flex;gap:8px"><input value="{{ shareUrl }}" onChange="{{ noop }}" onFocus="{{ selectAll }}" aria-label="Link to this view" style="flex:1;min-width:0;height:40px;border:1px solid #d1d1d1;border-radius:4px;padding:0 10px;font:inherit;font-size:13px;color:#424242;background:#fafafa"><button onClick="{{ copyLink }}" style="min-height:40px;padding:0 14px;border:none;border-radius:4px;background:#0f6cbd;color:#fff;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap" style-hover="background:#115ea3">Copy link</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><a href="{{ mailHref }}" style="display:inline-flex;align-items:center;min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;color:#242424;font-weight:600;text-decoration:none">✉ Email</a><a href="{{ teamsHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:{{ btnH }};padding:0 12px;border-radius:4px;border:1px solid #d1d1d1;color:#242424;font-weight:600;text-decoration:none">Teams ↗</a></div>
+<button onClick="{{ openOther }}" style="min-height:{{ btnH }};padding:8px 12px;border:1px dashed #96c6fa;border-radius:4px;background:#f5f9fe;color:#0f6cbd;font:inherit;font-weight:600;cursor:pointer;text-align:left">↪ {{ openOtherLabel }} <span style="font-weight:400;color:#616161">(prototype only)</span></button>
+</div>
+</sc-if>
+<sc-if value="{{ hasToast }}"><div role="status" style="position:absolute;left:50%;transform:translateX(-50%);bottom:{{ toastB }};z-index:80;background:#242424;color:#fff;padding:10px 16px;border-radius:4px;font-size:13px;box-shadow:0 8px 16px rgba(0,0,0,.2);white-space:nowrap">{{ toast }}</div></sc-if>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:800},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = this.init();
+  mainRef = React.createRef();
+
+  init() {
+    let s = {};
+    try { s = JSON.parse(localStorage.getItem('hw-proto-v2') || '{}'); } catch (e) {}
+    const start = s.start || 'brief';
+    const base = Object.assign({ stage: s.jur ? 'app' : 'onboard', jur: s.jur || 'VIC', start, seen: s.seen || [], obJur: null, obStart: 'brief', adds: [], toast: '', share: false, sharedView: false, sharedHidden: false, savedJur: s.jur || null,
+      signedIn: false, auth: false, user: 'acag', pass: '', loginErr: '', scan: null, refreshed: false, scanDone: false, menu: null }, this.viewDefaults(), { tab: start });
+    let q = {}; try { if (location.search) q = this.fromQuery(location.search); } catch (e) {}
+    if (q.jur) Object.assign(base, q, { stage: 'app', sharedView: true });
+    return base;
+  }
+  viewDefaults() { return { tab: 'brief', period: '2w', drawer: null, mTab: 'ag', agSel: null, side: 'All', repOff: null, notYet: false, devType: 'All', mapMode: 'mentions', q: '', expJur: true, expSent: 'Any', newOnly: false, sector: null }; }
+  fromQuery(str) {
+    const p = new URLSearchParams(str), o = {}, valid = ['CTH', 'NSW', 'VIC', 'QLD', 'SA', 'WA', 'TAS', 'ACT', 'NT', 'ALL'];
+    const jur = (p.get('jur') || '').toUpperCase(); if (valid.includes(jur)) o.jur = jur;
+    const V = { brief: 'brief', compare: 'compare', mentions: 'mentions', developments: 'dev', gaps: 'gaps', explore: 'explore' }; if (V[p.get('view')]) o.tab = V[p.get('view')];
+    if (['2w', '4w', '2m'].includes(p.get('period'))) o.period = p.get('period');
+    if (['mentions', 'net', 'gaps'].includes(p.get('map'))) o.mapMode = p.get('map');
+    if (p.get('tab')) o.mTab = p.get('tab') === 'reports' ? 'reports' : 'ag';
+    const off = (p.get('office') || '').toUpperCase(); if (valid.includes(off) && off !== 'ALL') { if (o.mTab === 'reports') o.repOff = off; else o.agSel = off; }
+    const S = { government: 'Government', opposition: 'Opposition', crossbench: 'Crossbench' }; if (S[p.get('side')]) o.side = S[p.get('side')];
+    if (p.get('unmentioned') === '1') o.notYet = true;
+    const T = ['Mandate', 'Resourcing', 'Governance', 'Audit requests', 'Program', 'Responses', 'New reports'].find(t => t.toLowerCase() === (p.get('type') || '').toLowerCase()); if (T) o.devType = T;
+    if (p.get('q')) o.q = p.get('q');
+    if (p.get('scope') === 'all') o.expJur = false;
+    const se = p.get('sentiment') || ''; const SE = se.charAt(0).toUpperCase() + se.slice(1); if (['Positive', 'Neutral', 'Negative', 'Mixed'].includes(SE)) o.expSent = SE;
+    if (p.get('new') === '1') o.newOnly = true;
+    [['item', 'item'], ['issue', 'issue'], ['gap', 'gap'], ['report', 'rep']].forEach(([k, dk]) => { if (p.get(k)) o.drawer = { k: dk, id: p.get(k) }; });
+    const sec = p.get('sector'); if (sec) { const m = this.D().TH.find(([t]) => this.slug(t) === sec); if (m) o.sector = m[0]; }
+    return o;
+  }
+  toQuery(s, withDrawer) {
+    const p = new URLSearchParams();
+    p.set('view', s.tab === 'dev' ? 'developments' : s.tab); p.set('jur', s.jur);
+    if (s.period !== '2w') p.set('period', s.period);
+    if (s.sector) p.set('sector', this.slug(s.sector));
+    if (s.tab === 'brief' && s.mapMode !== 'mentions') p.set('map', s.mapMode);
+    if (s.tab === 'mentions') { p.set('tab', s.mTab === 'reports' ? 'reports' : 'auditors-general'); if (s.mTab === 'ag') { if (s.agSel) p.set('office', s.agSel); if (s.side !== 'All') p.set('side', s.side.toLowerCase()); } else { if (s.repOff) p.set('office', s.repOff); if (s.notYet) p.set('unmentioned', '1'); } }
+    if (s.tab === 'dev' && s.devType !== 'All') p.set('type', s.devType.toLowerCase());
+    if (s.tab === 'explore') { if (s.q) p.set('q', s.q); if (!s.expJur) p.set('scope', 'all'); if (s.expSent !== 'Any') p.set('sentiment', s.expSent.toLowerCase()); if (s.newOnly) p.set('new', '1'); }
+    if (withDrawer && s.drawer) p.set({ item: 'item', issue: 'issue', gap: 'gap', rep: 'report' }[s.drawer.k], s.drawer.id);
+    return p.toString();
+  }
+  url(withDrawer) { return 'https://hansardwatch.acag.org.au/?' + this.toQuery(this.state, withDrawer); }
+  componentDidMount() {
+    this.onLink = e => { if (!e.detail || e.detail.src === this) return; const st = this.state; this.setState(Object.assign(this.viewDefaults(), this.fromQuery(e.detail.qs), { stage: 'app', sharedView: true, sharedHidden: false, savedJur: st.stage === 'app' ? (st.sharedView ? st.savedJur : st.jur) : null, menu: null, share: false, auth: false })); this.toastMsg('Opened a shared link'); };
+    window.addEventListener('hw-open-link', this.onLink); this.emitUrl();
+  }
+  componentDidUpdate() { this.emitUrl(); }
+  emitUrl() { if (this.props.mobile) return; const u = this.state.stage === 'app' ? this.url(!!this.state.drawer) : 'https://hansardwatch.acag.org.au/welcome'; if (u === this.lastUrl) return; this.lastUrl = u; window.__hwUrl = u; window.dispatchEvent(new CustomEvent('hw-url', { detail: u })); }
+  componentWillUnmount() { clearTimeout(this.tt); clearInterval(this.si); window.removeEventListener('hw-open-link', this.onLink); }
+  save(p) { const s = Object.assign({}, this.state, p || {}); const jur = s.sharedView ? s.savedJur : (s.stage === 'app' ? s.jur : null); try { localStorage.setItem('hw-proto-v2', JSON.stringify({ jur, start: s.start, seen: s.seen })); } catch (e) {} }
+  slug(t) { return t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  pickSector(t) { this.setState({ sector: t, menu: null, devType: 'All' }); this.toastMsg(t ? 'Showing ' + t : 'Showing all sectors'); }
+  setJur(c) { const j = this.D().by[c]; this.go({ jur: c, agSel: null, repOff: null, menu: null, sharedView: false, savedJur: c }); this.toastMsg('Now viewing ' + j.name); }
+  go(p) { this.setState(p); this.save(p); }
+  toastMsg(m) { this.setState({ toast: m }); clearTimeout(this.tt); this.tt = setTimeout(() => this.setState({ toast: '' }), 2600); }
+  copy(text, m) { try { navigator.clipboard.writeText(text).catch(() => {}); } catch (e) {} this.toastMsg(m); }
+  lc(s) { return s.charAt(0).toLowerCase() + s.slice(1); }
+  cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  fmt(d) { const W = ['Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed']; const w = W[((d - 1) % 7 + 7) % 7]; return d > 0 ? w + ' ' + d + ' Oct' : w + ' ' + (30 + d) + ' Sep'; }
+  tabTo(tab, extra) { this.setState(Object.assign({ tab, drawer: null, menu: null }, extra || {})); if (this.mainRef.current) this.mainRef.current.scrollTop = 0; }
+  needAuth(action) { if (this.state.signedIn) { action(); return; } this.pending = action; this.setState({ auth: true, menu: null, loginErr: '', pass: '' }); }
+  doSignIn(e) { if (e && e.preventDefault) e.preventDefault(); const s = this.state; if (s.user.trim().toLowerCase() !== 'acag' || !s.pass) { this.setState({ loginErr: 'Username or password is incorrect.' }); return; } this.setState({ signedIn: true, auth: false, pass: '' }); this.toastMsg('Signed in for this session'); const a = this.pending; this.pending = null; if (a) setTimeout(a, 60); }
+  startScan() { if (this.state.scan) return; this.setState({ scan: { step: 0 }, scanDone: false, menu: 'status' }); clearInterval(this.si); this.si = setInterval(() => { const st = this.state.scan; if (!st) { clearInterval(this.si); return; } if (st.step >= 10) { clearInterval(this.si); this.setState({ scan: null, refreshed: true, scanDone: true }); return; } this.setState({ scan: { step: st.step + 1 } }); }, 420); }
+
+  D() {
+    if (this._d) return this._d;
+    const J = [
+      { code: 'CTH', short: 'Cth', name: 'Commonwealth', parl: 'Parliament of Australia', office: 'ANAO', officeName: 'Australian National Audit Office', color: '#4f52b2', minT: 'Minister for Finance', chambers: ['Senate', 'House of Representatives'], report: 'Administration of the Community Grants Hub', report2: 'Defence major projects report', issue: 'NDIS provider fraud controls', issue3: 'aged care workforce visas', request: 'Defence consultant spend', topicA: 'Fraud control in the NDIS', topicB: 'Defence contractor management', program: 'Annual Audit Work Program 2026–27', confirmed: true, counts: [38, 21, 12], dev3: 'resourcing', theme: 'Disability and NDIS', days: [28, 29], status: 'ok', statusText: 'Sat Wed 28 – Thu 29 Oct', s: [82, 58, 46], extra: 6, elsewhere: 3, x: ['x2', 'x6', 'x8'], url: 'https://www.aph.gov.au/Parliamentary_Business/Hansard', site: 'https://www.anao.gov.au', pos: [1, 1] },
+      { code: 'NSW', short: 'NSW', name: 'New South Wales', parl: 'Parliament of NSW', office: 'Audit Office NSW', officeName: 'Audit Office of New South Wales', color: '#0f6cbd', minT: 'Minister for Transport', chambers: ['Legislative Assembly', 'Legislative Council'], report: 'Rail fleet maintenance', report2: 'School infrastructure delivery', issue: 'regional grants probity', issue3: 'hospital car park fees', request: 'Sydney Metro contract variations', topicA: 'Grants administration', topicB: 'Major transport contracts', program: 'Audit Work Plan 2026–2029', confirmed: true, counts: [24, 10, 9], dev3: 'mandate', theme: 'Transport and infrastructure', days: [28, 29], status: 'ok', statusText: 'Sat Wed 28 – Thu 29 Oct', s: [76, 63, 41], extra: 4, elsewhere: 2, x: ['x4', 'x4', 'x2'], url: 'https://www.parliament.nsw.gov.au/parliamentary-business/hansard/hansard-and-house-papers', site: 'https://www.audit.nsw.gov.au', pos: [2, 3] },
+      { code: 'VIC', short: 'Vic', name: 'Victoria', parl: 'Parliament of Victoria', office: 'VAGO', officeName: 'Victorian Auditor-General’s Office', color: '#5c2e91', minT: 'Minister for Health', chambers: ['Legislative Assembly', 'Legislative Council'], report: 'Emergency department wait times', report2: 'Social housing maintenance', issue: 'level crossing removal cost overruns', issue3: 'ambulance ramping data quality', request: 'major events funding', topicA: 'Transport infrastructure delivery', topicB: 'Hospital capacity planning', program: 'Annual Plan 2026–27', confirmed: true, counts: [18, 11, 8], dev3: 'mandate', theme: 'Health', days: [27, 29], status: 'ok', statusText: 'Sat Tue 27 – Thu 29 Oct', s: [84, 62, 45], extra: 5, elsewhere: 4, x: ['x1', 'x2', 'x4'], url: 'https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-debate', site: 'https://www.audit.vic.gov.au', pos: [3, 3] },
+      { code: 'QLD', short: 'Qld', name: 'Queensland', parl: 'Queensland Parliament', office: 'QAO', officeName: 'Queensland Audit Office', color: '#a4262c', minT: 'Minister for Health', chambers: ['Legislative Assembly'], report: 'Managing hospital ramping', report2: 'Youth justice reforms', issue: 'Olympic venue cost estimates', issue3: 'floodplain buyback program', request: 'youth justice program outcomes', topicA: 'Major infrastructure planning', topicB: 'Youth justice services', program: 'Forward work plan 2026–29', confirmed: false, counts: [15, 7, 6], dev3: 'governance', theme: 'Health', days: [27, 28], status: 'ok', statusText: 'Sat Tue 27 – Wed 28 Oct', s: [79, 55, 42], extra: 3, elsewhere: 2, x: ['x1', 'x7', 'x4'], url: 'https://www.parliament.qld.gov.au/Work-of-the-Assembly/Record-of-Proceedings', site: 'https://www.qao.qld.gov.au', pos: [1, 3] },
+      { code: 'SA', short: 'SA', name: 'South Australia', parl: 'Parliament of South Australia', office: 'SA Auditor-General', officeName: 'Auditor-General’s Department (SA)', color: '#c239b3', minT: 'Minister for Health', chambers: ['House of Assembly', 'Legislative Council'], report: 'Ambulance response times', report2: 'Desalination plant contract', issue: 'housing grant probity', issue3: 'Port Adelaide redevelopment costs', request: 'public school maintenance backlog', program: null, dev3: 'resourcing', theme: 'Housing and homelessness', days: [22, 27], status: 'ok', statusText: 'Sat Thu 22 and Tue 27 Oct', s: [71, 52, 40], extra: 2, elsewhere: 1, x: ['x1', 'x10', 'x5'], url: 'https://hansardsearch.parliament.sa.gov.au/search/calendar', site: 'https://www.audit.sa.gov.au', pos: [2, 2] },
+      { code: 'WA', short: 'WA', name: 'Western Australia', parl: 'Parliament of Western Australia', office: 'OAG WA', officeName: 'Office of the Auditor General WA', color: '#ca5010', minT: 'Minister for Health', chambers: ['Legislative Assembly', 'Legislative Council'], report: 'Cyber security in local government', report2: 'Rail car manufacturing program', issue: 'hospital records data breach', issue3: 'regional water infrastructure', request: 'METRONET project costs', program: null, dev3: 'governance', theme: 'Digital, data and cyber', days: [22, 23], status: 'blocked', statusText: 'Not checked — access blocked (manual import Fri 23 Oct)', s: [74, 51, 43], extra: 1, elsewhere: 1, x: ['x3', 'x4', 'x3'], url: 'https://www.parliament.wa.gov.au/hansard/hansard.nsf/NewAdvancedSearch', site: 'https://audit.wa.gov.au', pos: [2, 1] },
+      { code: 'TAS', short: 'Tas', name: 'Tasmania', parl: 'Parliament of Tasmania', office: 'Audit Tasmania', officeName: 'Audit Tasmania', color: '#107c10', minT: 'Minister for Infrastructure', chambers: ['House of Assembly', 'Legislative Council'], report: 'Spirit of Tasmania vessel replacement', report2: 'Child safety service capacity', issue: 'Macquarie Point stadium costs', issue3: 'Hydro Tasmania asset maintenance', request: 'TasPorts berth upgrade', topicA: 'Major projects governance', topicB: 'Child safety services', program: 'Auditor-General’s Annual Plan 2026–27', confirmed: true, counts: [9, 4, 3], dev3: 'mandate', theme: 'Transport and infrastructure', days: [20, 21], status: 'nosit', statusText: 'Not sitting since Wed 21 Oct', s: [77, 53, 41], extra: 2, elsewhere: 1, x: ['x4', 'x4', 'x4'], url: 'https://search.parliament.tas.gov.au/adv/hahansard', site: 'https://audit.tas.gov.au', pos: [4, 3] },
+      { code: 'ACT', short: 'ACT', name: 'Australian Capital Territory', parl: 'ACT Legislative Assembly', office: 'ACT Audit Office', officeName: 'ACT Audit Office', color: '#0099bc', minT: 'Minister for Health', chambers: ['Legislative Assembly'], report: 'Canberra Health Services procurement', report2: 'ICT project governance', issue: 'light rail stage 2B costs', issue3: 'public housing renewal', request: 'Canberra Hospital expansion', topicA: 'Transport project delivery', topicB: 'Health procurement', program: 'Performance Audit Program 2026–27', confirmed: true, counts: [8, 3, 4], dev3: 'resourcing', theme: 'Health', days: [27, 28], status: 'ok', statusText: 'Sat Tue 27 – Wed 28 Oct', s: [69, 50, 36], extra: 2, elsewhere: 1, x: ['x6', 'x1', 'x4'], url: 'https://hansard.act.gov.au/', site: 'https://www.audit.act.gov.au', pos: [2, 4] },
+      { code: 'NT', short: 'NT', name: 'Northern Territory', parl: 'Legislative Assembly of the NT', office: 'NT Auditor-General', officeName: 'NT Auditor-General’s Office', color: '#8e562e', minT: 'Minister for Housing', chambers: ['Legislative Assembly'], report: 'Remote housing program', report2: 'Darwin ship lift contract', issue: 'youth detention facility costs', issue3: 'remote clinic staffing', request: 'remote roads maintenance', program: null, dev3: 'governance', theme: 'Housing and homelessness', days: [14, 15], status: 'nosit', statusText: 'Not sitting since Thu 15 Oct', s: [66, 48, 36], extra: 1, elsewhere: 1, x: ['x5', 'x4', 'x7'], url: 'https://parliament.nt.gov.au/business/parliamentary-records/draft', site: 'https://ago.nt.gov.au', pos: [1, 2] }
+    ];
+    const by = {}; J.forEach(j => { by[j.code] = j; });
+    const S2 = { CTH: 'Procurement, grants and contracts', NSW: 'Education and training', VIC: 'Housing and homelessness', QLD: 'Justice, police and corrections', SA: 'Environment, water and energy', WA: 'Transport and infrastructure', TAS: 'Child protection and family services', ACT: 'Digital, data and cyber', NT: 'Procurement, grants and contracts' };
+    const S3 = { CTH: 'Health', NSW: 'Health', VIC: 'Health', QLD: 'Emergency management', SA: 'Transport and infrastructure', WA: 'Environment, water and energy', TAS: 'Environment, water and energy', ACT: 'Housing and homelessness', NT: 'First Nations outcomes' };
+    J.forEach(j => { j.s2 = S2[j.code]; j.s3 = S3[j.code]; });
+    by.ALL = { code: 'ALL', short: 'All', name: 'All jurisdictions', office: 'ACAG', officeName: 'ACAG — all offices', color: '#616161', parl: 'All 9 parliaments' };
+    const X = [
+      { id: 'x1', label: 'Hospital emergency wait times', theme: 'Health', kw: 'emergency', raised: { VIC: 5, QLD: 4, NSW: 3, SA: 2, ACT: 2 }, cov: { VIC: 'recent_report', QLD: 'recent_report', NSW: 'planned', SA: 'recent_report' }, quote: 'Patients are waiting longer in our emergency departments than at any time in the past decade.', from: 'QLD', by: 'Dr K. Moore MP' },
+      { id: 'x2', label: 'Grant program probity', theme: 'Procurement, grants and contracts', kw: 'grant', raised: { CTH: 4, NSW: 3, VIC: 2, SA: 1 }, cov: { CTH: 'in_progress', NSW: 'planned' }, quote: 'Grants were awarded to projects the department’s own assessors ranked lowest.', from: 'CTH', by: 'Senator T. Brennan' },
+      { id: 'x3', label: 'Health records cyber incidents', theme: 'Digital, data and cyber', kw: 'records', raised: { WA: 3, TAS: 2, CTH: 2 }, cov: { WA: 'recent_report', TAS: 'planned', CTH: 'planned', NSW: 'in_progress' }, quote: 'Thousands of patient records were exposed, and the agency still cannot say how.', from: 'WA', by: 'Ms L. Nguyen MLC' },
+      { id: 'x4', label: 'Major project cost overruns', theme: 'Transport and infrastructure', kw: 'cost', raised: { VIC: 4, QLD: 3, TAS: 3, NSW: 3, ACT: 2, WA: 2, NT: 1 }, cov: { VIC: 'planned', QLD: 'planned', NSW: 'in_progress' }, quote: 'The project is now two years late and hundreds of millions over its original budget.', from: 'TAS', by: 'Mr S. Okafor MP' },
+      { id: 'x5', label: 'Social housing maintenance backlogs', theme: 'Housing and homelessness', kw: 'housing', raised: { SA: 3, VIC: 2, NT: 2, NSW: 1 }, cov: { VIC: 'recent_report', NT: 'recent_report' }, quote: 'Tenants have waited more than a year for basic repairs to be done.', from: 'SA', by: 'Ms H. Reid MP' },
+      { id: 'x6', label: 'Use of consultants and contractors', theme: 'Procurement, grants and contracts', kw: 'consultant', raised: { CTH: 5, ACT: 2, QLD: 2 }, cov: { CTH: 'in_progress', QLD: 'planned', VIC: 'planned' }, quote: 'The department spent more on consultants last year than on its own frontline staff.', from: 'CTH', by: 'Senator R. Carter' },
+      { id: 'x7', label: 'Youth justice program outcomes', theme: 'Justice, police and corrections', kw: 'youth', raised: { QLD: 4, NT: 3, VIC: 1 }, cov: { QLD: 'planned' }, quote: 'The government cannot tell this House whether the program has reduced reoffending.', from: 'QLD', by: 'Mr D. Walsh MP' },
+      { id: 'x8', label: 'NDIS provider fraud controls', theme: 'Disability and NDIS', kw: 'NDIS', raised: { CTH: 4, NSW: 1, VIC: 1 }, cov: { CTH: 'planned' }, quote: 'Fraudulent providers are draining money meant for participants.', from: 'CTH', by: 'Hon. P. Singh MP' },
+      { id: 'x9', label: 'Audit office independence and funding', theme: 'Integrity and governance', kw: 'independen', raised: { NSW: 2, SA: 2, CTH: 1, ACT: 1 }, cov: { _: 'na' }, quote: 'An Auditor-General who depends on the government for funding is not truly independent.', from: 'NSW', by: 'Ms A. Lee MLC' },
+      { id: 'x10', label: 'School building program delays', theme: 'Education and training', kw: 'school', raised: { NSW: 3, QLD: 2, WA: 2, SA: 1 }, cov: { NSW: 'recent_report' }, quote: 'Schools promised for this year still don’t have a builder.', from: 'NSW', by: 'Mr J. Patel MP' },
+      { id: 'x11', label: 'Council financial sustainability', theme: 'Local government', kw: 'council', raised: { NSW: 2, VIC: 2, TAS: 1, WA: 1 }, cov: { NSW: 'recent_report', VIC: 'planned' }, quote: 'Councils are running down their reserves just to keep basic services going.', from: 'NSW', by: 'Mr J. Patel MP' },
+      { id: 'x12', label: 'Disaster recovery funding', theme: 'Emergency management', kw: 'disaster', raised: { QLD: 3, NSW: 2, CTH: 1 }, cov: { CTH: 'recent_report' }, quote: 'Communities hit by the floods are still waiting for recovery money promised a year ago.', from: 'QLD', by: 'Ms H. Reid MP' },
+      { id: 'x13', label: 'Closing the Gap reporting', theme: 'First Nations outcomes', kw: 'gap', raised: { NT: 2, CTH: 2, WA: 1, SA: 1 }, cov: { CTH: 'in_progress', NT: 'recent_report' }, quote: 'We are told targets are on track, but the data to prove it has not been published.', from: 'CTH', by: 'Senator R. Carter' },
+      { id: 'x14', label: 'Water and energy project costs', theme: 'Environment, water and energy', kw: 'water', raised: { SA: 2, TAS: 2, VIC: 1, WA: 1 }, cov: { TAS: 'planned', SA: 'recent_report' }, quote: 'The cost of this water project has doubled and no one in government will explain why.', from: 'SA', by: 'Mr D. Walsh MP' },
+      { id: 'x15', label: 'Public sector labour hire', theme: 'Public sector workforce', kw: 'labour', raised: { VIC: 2, QLD: 2, ACT: 1 }, cov: { QLD: 'planned' }, quote: 'Agencies are paying labour-hire rates for roles that have sat vacant for years.', from: 'VIC', by: 'Ms T. Brennan MLC' },
+      { id: 'x16', label: 'Out-of-home care placements', theme: 'Child protection and family services', kw: 'care', raised: { TAS: 2, QLD: 1, NT: 1 }, cov: { TAS: 'planned' }, quote: 'Children are being placed in motels because there is nowhere else for them to go.', from: 'TAS', by: 'Ms L. Nguyen MP' }
+    ];
+    const XT = id => (X.filter(x => x.id === id)[0] || {}).theme || 'Public finance and budget';
+    const NAMES = ['Hon. R. Carter', 'Ms L. Nguyen', 'Mr D. Walsh', 'Hon. P. Singh', 'Dr K. Moore', 'Ms T. Brennan', 'Mr S. Okafor', 'Ms H. Reid', 'Mr J. Patel'];
+    const DEB = ['Appropriation Bill debate', 'matters of public importance', 'members’ statements', 'adjournment debate', 'budget estimates debate', 'grievance debate'];
+    const SC = ['neutral', 'positive', 'neutral', 'negative', 'positive', 'mixed'];
+    const REASON = { neutral: 'Factual reference only', positive: 'Relies on the office’s work as evidence', negative: 'Questions the office’s priorities', mixed: 'Praises the office but disputes one finding' };
+    const items = [];
+    J.forEach((j, ji) => {
+      const [d1, d2] = j.days, ch = j.chambers, nm = k => NAMES[(ji + k) % NAMES.length];
+      const add = (k, o) => items.push(Object.assign({ id: j.code + '-' + k, jur: j.code, url: j.url, theme: j.theme, chamber: ch[0], source: 'Hansard', page: 3400 + ji * 37 + k * 6, rep: null, ofc: false, sent: null, devType: null, x: null }, o));
+      add(1, { theme: XT(j.x[0]), feat: 'F1', sig: 5, date: d2, sent: 'negative', ofc: true, rep: j.report, x: j.x[0], side: 'Government', speaker: nm(0), role: j.minT, debate: 'Questions without notice', headline: j.minT + ' disputes ' + j.office + ' report on ' + j.report, summary: 'The ' + j.minT + ' rejected key findings of the ' + j.office + ' report on ' + j.report + ', saying it relied on outdated data and overlooked recent changes.', why: 'A minister disputing findings on the floor usually leads to committee follow-up. Worth preparing a response line.', reason: 'Disputes the accuracy of the report’s data', quote: 'With respect, the Auditor-General has relied on figures that are simply out of date.' });
+      add(2, { theme: XT(j.x[0]), feat: 'F2', sig: 4, date: d2, sent: 'positive', ofc: true, rep: j.report, x: j.x[0], side: 'Opposition', speaker: nm(1), role: 'Shadow minister', chamber: ch[ch.length - 1], debate: 'Matters of public importance', headline: 'Opposition cites ' + j.office + ' report on ' + j.report, summary: 'The opposition used the ' + j.office + ' report on ' + j.report + ' to argue the program is failing, and called for its recommendations to be adopted in full.', why: 'The report is now part of the political debate. Expect more questions while Parliament sits.', reason: 'Relies on the report’s findings as evidence', quote: 'The Auditor-General’s report makes it plain: this program is not delivering for the people who need it.' });
+      const d3 = {
+        mandate: { devType: 'Mandate', headline: 'Bill to extend ' + j.office + ' follow-the-dollar powers', why: 'Would let the office follow public money into contractors and grant recipients.', quote: 'This bill gives the Auditor-General the power to follow the public dollar wherever it goes.', summary: 'A government bill would let the ' + j.office + ' audit contractors and grant recipients that deliver public services.' },
+        resourcing: { devType: 'Resourcing', headline: 'Estimates: ' + j.office + ' budget flat in real terms', why: 'A flat budget may reduce the number of performance audits next year.', quote: 'The audit office’s appropriation is unchanged from last year, which is a cut in real terms.', summary: 'Budget estimates debate noted the ' + j.office + ' appropriation is unchanged — a real-terms cut after inflation.' },
+        governance: { devType: 'Governance', headline: 'Process begins to appoint the next Auditor-General', why: 'The appointment sets the office’s leadership for the next term.', quote: 'The committee will now begin the process of recommending the next Auditor-General.', summary: 'The accountability committee announced the process and timeline for recommending the next Auditor-General.' }
+      }[j.dev3];
+      add(3, Object.assign({ theme: 'Integrity and governance', feat: 'F3', sig: 5, date: d1, sent: 'neutral', ofc: true, side: 'Government', speaker: nm(2), role: 'Member', debate: 'Second reading', reason: 'Factual description, no view on the office' }, d3));
+      add(4, { theme: XT(j.x[1]), feat: 'F3', devType: 'Audit requests', sig: 4, date: d1, sent: 'positive', ofc: true, x: j.x[1], side: 'Crossbench', speaker: nm(3), role: 'Independent member', chamber: ch[ch.length - 1], debate: 'Members’ statements', headline: 'Call for an audit of ' + j.request, summary: 'A crossbench member asked the Auditor-General to examine ' + j.request + ', citing rising costs and poor public reporting.', why: 'A public call for an audit. Check whether it fits the forward program.', reason: 'Asks the Auditor-General to investigate', quote: 'I call on the Auditor-General to examine ' + j.request + ' as a matter of urgency.' });
+      add(5, { theme: XT(j.x[2]), feat: 'F4', sig: 3, date: d2, x: j.x[2], side: 'Opposition', speaker: nm(4), role: 'Member', debate: 'Questions without notice', headline: 'Questions raised over ' + j.issue, summary: 'Members pressed the government on ' + j.issue + ', citing cost and timing figures not yet publicly reported.', why: 'Not covered by the current audit program, and raised more than once this period.', quote: 'Every month we wait, the bill to taxpayers gets bigger, and the minister still won’t give us the numbers.' });
+      add(6, { theme: j.s2, feat: 'F3', devType: 'Responses', sig: 3, date: d1, sent: 'neutral', ofc: true, rep: j.report2, side: 'Government', speaker: nm(5), role: 'Minister', debate: 'Ministerial statement', headline: 'Government responds to recommendations on ' + j.report2, summary: 'The government accepted 6 of 8 recommendations from the ' + j.office + ' report on ' + j.report2 + ' and gave timelines for the rest.', why: 'Sets the baseline for any follow-up audit of this report.', reason: 'Reports progress on recommendations', quote: 'The government has accepted six of the eight recommendations made by the Auditor-General.' });
+      add(7, j.program
+        ? { theme: 'Integrity and governance', feat: 'F3', devType: 'Program', source: 'Office website', sig: 4, date: d1, url: j.site, headline: j.program + ': 2 topics added, 1 deferred', summary: 'The ' + j.office + ' published an updated program. Added: ' + j.topicA + '; ' + j.topicB + '. One topic moved to next year.', why: 'Changes what the office will report on in the next 12 months.' }
+        : { theme: j.s2, feat: 'F3', devType: 'New reports', source: 'Office website', sig: 3, date: d1, url: j.site, headline: 'New report listed: ' + j.report2, summary: 'The ' + j.office + ' website lists a new report, ' + j.report2 + '. It has been added to the report register.', why: 'Parliament may debate it at the next sitting.' });
+      for (let n = 0; n < j.extra; n++) {
+        const sent = SC[n % 6], deb = DEB[n % 6];
+        add(10 + n, { theme: ['Public finance and budget', 'Health', 'Education and training', 'Local government', 'Environment, water and energy', 'Public sector workforce'][n % 6], feat: 'F1', sig: 2, date: [d2, d1, d1 - 7, d2 - 14, d1 - 21, d2 - 28][n % 6], sent, ofc: true, rep: n % 3 === 0 ? j.report : null, side: ['Opposition', 'Government', 'Crossbench'][n % 3], speaker: nm(6 + n), role: 'Member', debate: this.cap(deb), headline: j.office + ' cited in ' + deb, summary: 'A passing reference to the ' + j.office + ' during ' + deb + '.', why: 'Background mention, included in counts and sentiment.', reason: REASON[sent], quote: 'As the Auditor-General has noted, the reporting on this program has been inconsistent.' });
+      }
+    });
+    ['CTH', 'NSW', 'VIC', 'ACT'].forEach((c, k) => {
+      const j = by[c];
+      items.push({ id: c + '-p1', pending: true, jur: c, url: j.url, theme: 'Public finance and budget', chamber: j.chambers[0], source: 'Hansard', page: 3600 + k * 11, feat: 'F1', sig: 4, date: 30, sent: 'positive', ofc: true, rep: null, x: null, side: 'Government', speaker: NAMES[k + 2], role: 'Treasurer', debate: 'Budget update debate', headline: 'Treasurer relies on ' + j.office + ' findings in budget update', summary: 'The Treasurer cited the ' + j.office + ' to justify new reporting requirements for major projects.', why: 'A government relying on audit findings strengthens the office’s standing in debate.', reason: 'Endorses the office’s findings', quote: 'The Auditor-General has shown us where the reporting falls short, and we are acting on it.' });
+    });
+    items.push({ id: 'VIC-p2', pending: true, jur: 'VIC', url: by.VIC.url, theme: 'Health', chamber: 'Legislative Council', source: 'Hansard', page: 3655, feat: 'F3', devType: 'Audit requests', sig: 4, date: 30, sent: 'positive', ofc: true, rep: null, x: 'x1', side: 'Opposition', speaker: 'Ms T. Brennan', role: 'Member', debate: 'Motions', headline: 'Motion asks VAGO to examine hospital capacity data', summary: 'An opposition motion asks the Auditor-General to examine how hospital capacity data is collected and reported.', why: 'A formal request in your topic area. Check against your Hospital capacity planning topic.', reason: 'Asks the Auditor-General to investigate', quote: 'This House calls on the Auditor-General to examine the hospital capacity data the government relies on.' });
+    const W = [['Volume', 20], ['Breadth', 15], ['Intensity', 15], ['Forum', 15], ['Recency', 10], ['Materiality', 10], ['Audit requests', 10], ['Echo in other parliaments', 5]];
+    const M = [0.92, 0.85, 0.8, 0.75, 0.9, 0.8, 0.6, 0.4];
+    const gaps = [];
+    J.forEach(j => {
+      const ex = items.filter(i => i.jur === j.code && i.id.indexOf('-1') > 0 && i.id.length > j.code.length + 2).map(i => i.id);
+      const mk = (k, issue, t, coverage, ev, closest, why, x, lastAudited, theme) => { const parts = W.map(([n, w], i) => ({ n, w, v: Math.round(w * Math.min(1, M[i] * t / 75)) })); gaps.push({ id: j.code + '-g' + k, jur: j.code, issue, parts, score: parts.reduce((a, p) => a + p.v, 0), coverage, ev, closest, why, x, lastAudited, theme }); };
+      mk(1, j.issue, j.s[0], 'not_covered', [j.code + '-5'].concat(ex.filter((_, n) => n % 2 === 1)), j.program ? 'Closest topic: ' + j.topicA : 'Closest recent report: ' + j.report, j.program ? 'It covers ' + this.lc(j.topicA) + ' broadly, but not ' + j.issue + '.' : 'No published program. The closest recent report doesn’t examine this issue.', j.x[2], '', XT(j.x[2]));
+      mk(2, j.request, j.s[1], 'partly', [j.code + '-4'], j.program ? 'Closest topic: ' + j.topicB + ' (in progress)' : 'Closest recent report: ' + j.report2, 'Covers part of the issue, but not the contract and cost concerns raised in debate.', j.x[1], '', XT(j.x[1]));
+      mk(3, j.issue3, j.s[2], 'not_covered', ex.slice(0, 1), 'No close match', 'No planned topic or recent report covers this area.', null, 'Last audited: 2021', j.s3);
+    });
+    const TT = ['Results of 2025–26 financial audits', 'Fraud and corruption controls', 'Managing contractors and consultants'];
+    const TD = ['Thu 17 Sep 2026', 'Wed 2 Sep 2026', 'Thu 20 Aug 2026', 'Wed 5 Aug 2026', 'Thu 18 Jun 2026'];
+    const regs = {};
+    J.forEach(j => { regs[j.code] = [j.report, j.report2].concat(TT).map((t, k) => ({ id: j.code + '-r' + k, jur: j.code, no: 'No. ' + (14 - k), title: t, tabled: TD[k], sector: [XT(j.x[0]), j.s2, 'Public finance and budget', 'Integrity and governance', 'Procurement, grants and contracts'][k] })); });
+    const TH = [['Health', 'Health'], ['Education and training', 'Education'], ['Transport and infrastructure', 'Transport & infrastructure'], ['Housing and homelessness', 'Housing'], ['Justice, police and corrections', 'Justice & corrections'], ['Child protection and family services', 'Child protection'], ['Disability and NDIS', 'Disability & NDIS'], ['Local government', 'Local government'], ['Environment, water and energy', 'Environment, water & energy'], ['Digital, data and cyber', 'Digital & cyber'], ['Public finance and budget', 'Public finance'], ['Procurement, grants and contracts', 'Procurement & grants'], ['Integrity and governance', 'Integrity & governance'], ['Public sector workforce', 'Public sector workforce'], ['Emergency management', 'Emergency management'], ['First Nations outcomes', 'First Nations outcomes']];
+    const NEXT = [{ d: 'Tue 3 Nov', p: 'NSW · Vic · Cth Senate' }, { d: 'Wed 4 Nov', p: 'Qld · SA' }, { d: 'Tue 10 Nov', p: 'ACT · Tas' }, { d: 'Tue 17 Nov', p: 'NT' }];
+    const SCAN = { CTH: '1 new sitting day · 1 new item', NSW: '1 new sitting day · 1 new item', VIC: '1 new sitting day · 2 new items', QLD: '1 proof replaced by final · no changes', SA: 'No new sitting days', WA: 'Not checked — access blocked', TAS: 'Not sitting', ACT: '1 new sitting day · 1 new item', NT: 'Not sitting', REG: '1 new ACT Audit Office report · QAO program unchanged' };
+    this._d = { J, by, X, items, gaps, regs, TH, NEXT, SCAN };
+    return this._d;
+  }
+
+  renderVals() {
+    const { J, by, X: XALL, items: ALLI, gaps: GAPS, regs, TH, NEXT, SCAN } = this.D();
+    const s = this.state, mob = !!this.props.mobile, set = o => this.setState(o);
+    const itemsAll = ALLI.filter(i => !i.pending || s.refreshed);
+    const secOk = t => !s.sector || t === s.sector;
+    const items = itemsAll.filter(i => secOk(i.theme)), gaps = GAPS.filter(g => secOk(g.theme)), X = XALL.filter(x => secOk(x.theme));
+    const secShort = s.sector ? (TH.find(t => t[0] === s.sector) || [0, s.sector])[1] : '';
+    const codes = J.map(j => j.code);
+    const isAll = s.jur === 'ALL', cur = by[s.jur];
+    const P = { '2w': { st: 17, len: 14, label: 'Last 2 weeks', range: '17–31 Oct', title: 'This fortnight in 30 seconds', f: 1 }, '4w': { st: 3, len: 28, label: 'Last 4 weeks', range: '3–31 Oct', title: 'The last 4 weeks in 30 seconds', f: 1.7 }, '2m': { st: -30, len: 61, label: 'Last 2 months', range: '31 Aug – 31 Oct', title: 'The last 2 months in 30 seconds', f: 3.2 } }[s.period];
+    const inP = i => i.date >= P.st, inPrev = i => i.date < P.st && i.date >= P.st - P.len;
+    const mine = i => isAll || i.jur === s.jur;
+    const seen = new Set(s.seen), isNew = i => i.date >= 27 && !seen.has(i.id);
+    const fmt = d => this.fmt(d), lc = t => this.lc(t);
+    const FEAT = { F1: 'Auditor-General mention', F2: 'Report mention', F4: 'Risk signal' };
+    const SENT = { positive: ['▲', 'Positive', '#0e700e', '#f1faf1'], neutral: ['●', 'Neutral', '#424242', '#f0f0f0'], negative: ['▼', 'Negative', '#b10e1c', '#fdf3f4'], mixed: ['◆', 'Mixed', '#bc4b09', '#fff4ec'] };
+    const pct = (a, t) => (t ? Math.round(a / t * 100) : 0) + '%';
+    const bar = l => { const c = { positive: 0, neutral: 0, negative: 0, mixed: 0 }; l.forEach(i => { if (i.sent) c[i.sent]++; }); const t = l.length; return { pos: pct(c.positive, t), neu: pct(c.neutral, t), neg: pct(c.negative, t), mix: pct(c.mixed, t), c, t, net: t ? Math.round((c.positive - c.negative) / t * 100) : 0, short: t ? c.positive + ' positive · ' + c.negative + ' negative' + (c.mixed ? ' · ' + c.mixed + ' mixed' : '') : 'No mentions this period', text: t ? [c.positive && c.positive + ' positive', c.neutral && c.neutral + ' neutral', c.mixed && c.mixed + ' mixed', c.negative && c.negative + ' negative'].filter(Boolean).join(' · ') : 'No mentions this period' }; };
+    const signed = n => (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n);
+    const netTxt = b => b.t >= 5 ? 'net ' + signed(b.net) : b.t + (b.t === 1 ? ' mention' : ' mentions');
+    const delta = (a, b) => a === b ? 'No change' : (a > b ? '▲ ' + (a - b) : '▼ ' + (b - a)) + ' vs previous';
+    const ord = n => n + (n === 1 ? 'st' : n === 2 ? 'nd' : n === 3 ? 'rd' : 'th');
+    const med = arr => { const a = arr.slice().sort((x, y) => x - y); return a.length ? a[Math.floor((a.length - 1) / 2)] : 0; };
+    const chip = on => ({ bg: on ? '#ebf3fc' : '#fff', fg: on ? '#0f6cbd' : '#424242', bd: on ? '#0f6cbd' : '#d1d1d1', fw: on ? '600' : '400' });
+    const markSeen = id => { if (!this.state.seen.includes(id)) this.go({ seen: this.state.seen.concat([id]) }); };
+    const openD = d => set({ drawer: d, menu: null });
+    const openItem = it => () => { markSeen(it.id); openD({ k: 'item', id: it.id }); };
+    const openIssue = id => () => openD({ k: 'issue', id });
+    const rN = (x, c) => { const n = x.raised[c] || 0; if (!n || by[c].days[1] < P.st) return 0; return Math.max(1, Math.round(n * P.f)); };
+    const parlsFor = x => codes.filter(c => rN(x, c) > 0);
+    const vm = it => { const j = by[it.jur], sv = SENT[it.sent] || ['', '', '#616161', '#f0f0f0'], web = it.source !== 'Hansard'; const x = it.x ? XALL.find(q => q.id === it.x) : null; const ps = x ? parlsFor(x).filter(c => c !== it.jur) : []; return {
+      id: it.id, headline: it.headline, why: it.why, summary: it.summary, quote: it.quote ? '“' + it.quote + '”' : '', hasQuote: !!it.quote,
+      where: (isAll || it.jur !== s.jur ? j.short + ' · ' : '') + (web ? 'Office website' : it.chamber) + ' · ' + fmt(it.date),
+      featLabel: it.feat === 'F3' ? it.devType : FEAT[it.feat], hasSent: !!it.sent, sentText: sv[0] + ' ' + sv[1], sentColor: sv[2], sentBg: sv[3], reason: it.reason || '',
+      isNew: isNew(it), open: openItem(it), url: it.url, srcLabel: web ? 'Open website ↗' : 'Open in Hansard ↗', markSeen: () => markSeen(it.id),
+      speaker: it.speaker ? it.speaker + ', ' + it.role + (it.side ? ' · ' + it.side : '') : 'Published on the ' + j.office + ' website',
+      source: web ? 'Office website' : 'Hansard', srcBg: web ? '#fff4ec' : '#f0f0f0', srcFg: web ? '#bc4b09' : '#424242', date: fmt(it.date),
+      hasEcho: ps.length > 0, echo: x ? 'Also raised in ' + ps.map(c => by[c].short).join(', ') : '', openEcho: x ? openIssue(x.id) : null
+    }; };
+    const COV = { planned: ['Planned in your program', '#0f6cbd', '#ebf3fc'], in_progress: ['In progress in your program', '#0f6cbd', '#ebf3fc'], recent_report: ['You audited this recently', '#0e700e', '#f1faf1'], not_covered: ['Not in your program', '#b10e1c', '#fdf3f4'], na: ['About audit offices', '#424242', '#f0f0f0'] };
+    const COVS = { planned: 'Planned', in_progress: 'In progress', recent_report: 'Audited recently', not_covered: 'Not in program', na: '—' };
+    const COVP = { planned: 'planned', in_progress: 'in progress', recent_report: 'audited recently' };
+    const covOf = (x, c) => x.cov[c] || x.cov._ || 'not_covered';
+    const peerLine = (x, excl) => { if (!x) return ''; if (x.cov._ === 'na') return 'Affects every audit office'; const p = codes.filter(c => c !== excl && COVP[covOf(x, c)]).map(c => by[c].office + ' ' + COVP[covOf(x, c)]); return p.length ? 'Peers: ' + p.slice(0, 3).join(' · ') : 'No other office has this in its program'; };
+    const xs = X.map(x => { const per = codes.map(c => ({ c, n: rN(x, c) })); const here = isAll ? 0 : rN(x, s.jur); const others = per.filter(p => p.c !== s.jur && p.n > 0); return { x, per, here, others, total: per.reduce((a, p) => a + p.n, 0) }; });
+    const quiet = isAll ? [] : xs.filter(e => e.here === 0 && e.others.length >= 2).sort((a, b) => b.total - a.total);
+    const shared = (isAll ? xs.filter(e => e.others.length >= 2) : xs.filter(e => e.here > 0 && e.others.length >= 1)).sort((a, b) => b.total - a.total);
+    const evm = e => { const cv = COV[isAll ? 'na' : covOf(e.x, s.jur)]; const oth = e.total - e.here; const mx = Math.max(1, e.here, oth); return {
+      label: e.x.label, theme: e.x.theme, where: e.others.map(p => by[p.c].short).join(' · '), count: oth + ' mentions in ' + e.others.length + (e.others.length === 1 ? ' other parliament' : ' other parliaments'),
+      cov: isAll ? e.x.theme : cv[0], covFg: cv[1], covBg: cv[2], peers: peerLine(e.x, isAll ? null : s.jur), open: openIssue(e.x.id),
+      youN: e.here, othN: oth, youW: pct(e.here, mx), othW: pct(oth, mx), youTxt: e.here + ' here', othTxt: oth + ' in ' + e.others.length + ' other' + (e.others.length === 1 ? '' : 's')
+    }; };
+    const agOf = c => items.filter(i => i.jur === c && inP(i) && i.ofc && i.sent);
+    const repOf = c => items.filter(i => i.jur === c && inP(i) && i.rep && i.sent);
+    const devOf = c => items.filter(i => i.jur === c && inP(i) && i.feat === 'F3');
+    const gapsOf = c => gaps.filter(g => g.jur === c && g.score >= 40);
+    const gvm = (g, k) => { const ev = g.ev.map(id => itemsAll.find(i => i.id === id)).filter(Boolean); const ds = ev.map(i => i.date); const x = g.x ? XALL.find(q => q.id === g.x) : null; const pl = peerLine(x, g.jur); return {
+      id: g.id, rank: k + 1, issue: this.cap(g.issue), office: isAll ? by[g.jur].office + ' · ' : '', theme: g.theme, score: g.score, scoreW: g.score + '%',
+      cov: g.coverage === 'partly' ? 'Partly covered' : 'Not covered', covBg: g.coverage === 'partly' ? '#fff4ec' : '#fdf3f4', covFg: g.coverage === 'partly' ? '#bc4b09' : '#b10e1c',
+      evidence: ev.length + (ev.length === 1 ? ' Hansard item' : ' Hansard items'), raised: ds.length ? 'first raised ' + fmt(Math.min.apply(null, ds)) + ', last ' + fmt(Math.max.apply(null, ds)) : '',
+      closest: g.closest, why: g.why, last: g.lastAudited || '', hasLast: !!g.lastAudited, peers: pl, hasPeers: !!x, open: () => openD({ k: 'gap', id: g.id })
+    }; };
+    const gapsMine = gaps.filter(g => (isAll || g.jur === s.jur)).sort((a, b) => b.score - a.score);
+    const gapsShown = gapsMine.filter(g => g.score >= 40).slice(0, isAll ? 10 : 6);
+
+    const pool = items.filter(i => mine(i) && inP(i));
+    const top = f => pool.filter(i => i.feat === f && i.sig >= 3).sort((a, b) => b.sig - a.sig || b.date - a.date)[0];
+    const heroI = ['F1', 'F2', 'F3'].map(top).filter(Boolean);
+    const hero = heroI.map(vm);
+    const ghRaw = gapsShown[0];
+    const prevPool = items.filter(i => mine(i) && inPrev(i));
+    const agL = pool.filter(i => i.ofc && i.sent), repL = pool.filter(i => i.rep && i.sent), devL = pool.filter(i => i.feat === 'F3');
+    const bA = bar(agL), bR = bar(repL);
+    const othersC = codes.filter(c => c !== s.jur);
+    const rankTxt = (fn) => { if (isAll) return ''; const mineV = fn(s.jur), all = codes.map(fn); return ord(1 + all.filter(v => v > mineV).length) + ' of 9 · others’ median ' + med(othersC.map(fn)); };
+    const tiles = [
+      { label: 'Auditor-General mentions', n: agL.length, delta: delta(agL.length, prevPool.filter(i => i.ofc && i.sent).length), hasBar: true, pos: bA.pos, neu: bA.neu, neg: bA.neg, mix: bA.mix, sub: bA.short, hasCmp: !isAll, cmp: rankTxt(c => agOf(c).length), go: () => this.tabTo('mentions', { mTab: 'ag' }) },
+      { label: 'Report mentions', n: repL.length, delta: delta(repL.length, prevPool.filter(i => i.rep && i.sent).length), hasBar: true, pos: bR.pos, neu: bR.neu, neg: bR.neg, mix: bR.mix, sub: bR.short, hasCmp: !isAll, cmp: rankTxt(c => repOf(c).length), go: () => this.tabTo('mentions', { mTab: 'reports' }) },
+      { label: 'New developments', n: devL.length, delta: delta(devL.length, prevPool.filter(i => i.feat === 'F3').length), hasBar: false, sub: devL.filter(i => i.source !== 'Hansard').length + ' from office websites', hasCmp: !isAll, cmp: rankTxt(c => devOf(c).length), go: () => this.tabTo('dev') },
+      { label: 'Potential program gaps', n: gapsMine.filter(g => g.score >= 40).length, delta: 'Score 40 or more', hasBar: false, sub: isAll ? 'Across all 9 offices' : cur.program ? (cur.confirmed ? 'Program confirmed' : 'Draft — program not yet confirmed') : 'Compared with recent reports only', hasCmp: !isAll, cmp: rankTxt(c => gapsOf(c).length), go: () => this.tabTo('gaps') }
+    ];
+    const BLUE = ['#fafafa', '#ebf3fc', '#cfe4fa', '#96c6fa', '#62abf5'], ORNG = ['#fafafa', '#fff4ec', '#fdcfb4', '#f9a77a'];
+    const maxM = Math.max(1, ...codes.map(c => agOf(c).length));
+    const mapTiles = codes.map(c => { const j = by[c], l = agOf(c), b = bar(l); let val, bg;
+      if (s.mapMode === 'mentions') { val = String(l.length); bg = BLUE[Math.ceil(l.length / maxM * 4)]; }
+      else if (s.mapMode === 'net') { val = l.length >= 5 ? signed(b.net) : 'n = ' + l.length; bg = !l.length ? '#fafafa' : b.net > 15 ? '#c9eac9' : b.net < -15 ? '#f6c9cd' : '#f0f0f0'; }
+      else { const n = gapsOf(c).length; val = String(n); bg = ORNG[Math.min(3, n)]; }
+      const note = j.status === 'blocked' ? 'Blocked' : j.days[1] < P.st ? 'Not sitting' : '';
+      return { short: j.short, val, bg, note, row: String(j.pos[0]), col: String(j.pos[1]), ring: c === s.jur ? '2px solid #0f6cbd' : '1px solid #e0e0e0', off: c === s.jur ? '2px' : '-1px', aria: j.name + ': ' + val, pick: () => this.setJur(c) }; });
+    const mapModes = [['mentions', 'Mentions'], ['net', 'Net sentiment'], ['gaps', 'Gaps']].map(([k, l]) => { const on = s.mapMode === k; return { label: l, bg: on ? '#0f6cbd' : '#fff', fg: on ? '#fff' : '#424242', fw: on ? '600' : '400', pick: () => set({ mapMode: k }) }; });
+    const mapLegend = { mentions: 'Darker = more mentions of that Auditor-General.', net: 'Green = more positive, red = more negative. Counts shown under 5 mentions.', gaps: 'Potential program gaps per office.' }[s.mapMode];
+    const allRows = codes.map(c => { const b = bar(agOf(c)); return { name: by[c].office, ag: agOf(c).length, net: b.t >= 5 ? signed(b.net) : '', rep: repOf(c).length, dev: devOf(c).length, gaps: gapsOf(c).length, pick: () => this.setJur(c) }; });
+    const newN = itemsAll.filter(i => mine(i) && isNew(i) && i.sig >= 2).length;
+    const briefLines = heroI.map(i => '• ' + i.headline + ' (' + by[i.jur].short + ', ' + fmt(i.date) + ') ' + i.url);
+
+    const cmpMetrics = isAll ? [] : [
+      { label: 'Auditor-General mentions', fn: c => agOf(c).length, go: () => this.tabTo('mentions', { mTab: 'ag' }) },
+      { label: 'Report mentions', fn: c => repOf(c).length, go: () => this.tabTo('mentions', { mTab: 'reports' }) },
+      { label: 'Developments', fn: c => devOf(c).length, go: () => this.tabTo('dev') },
+      { label: 'Potential program gaps', fn: c => gapsOf(c).length, go: () => this.tabTo('gaps') }
+    ].map(m => { const you = m.fn(s.jur), all = codes.map(m.fn), md = med(othersC.map(m.fn)), mx = Math.max(1, ...all); return { label: m.label, you, med: md, youW: pct(you, mx), medW: pct(md, mx), rank: ord(1 + all.filter(v => v > you).length) + ' of 9', go: m.go }; });
+    const netYou = isAll ? null : bar(agOf(s.jur));
+    const HB = ['#fafafa', '#ebf3fc', '#cfe4fa', '#96c6fa', '#62abf5'];
+    const heatHead = codes.map(c => ({ short: by[c].short, color: c === s.jur ? '#0f6cbd' : '#424242', fw: c === s.jur ? '700' : '600' }));
+    const heatAll = TH.map(([t, short]) => { const xsT = XALL.filter(x => x.theme === t); return { label: short, full: t, bg: s.sector === t ? '#ebf3fc' : 'transparent', fw: s.sector === t ? '700' : '400', pick: () => this.pickSector(s.sector === t ? null : t), cells: codes.map(c => { const n = xsT.reduce((a, x) => a + rN(x, c), 0); const topX = xsT.slice().sort((a, b) => rN(b, c) - rN(a, c))[0]; const blocked = by[c].status === 'blocked'; return { n: n ? String(n) : '', bg: HB[Math.min(4, Math.ceil(n / 2))], bd: c === s.jur ? '#0f6cbd' : 'transparent', open: topX ? openIssue(topX.id) : null, aria: short + ' in ' + by[c].name + ': ' + n + (blocked ? ' (partial — access blocked)' : '') }; }) }; });
+    const heat = heatAll.filter(h => h.cells.some(c => c.n)), heatHidden = TH.length - heat.length;
+    const bySec = TH.map(([t, short]) => { const xsT = XALL.filter(x => x.theme === t); const here = isAll ? 0 : xsT.reduce((a, x) => a + rN(x, s.jur), 0); const all = xsT.reduce((a, x) => a + codes.reduce((b, c) => b + rN(x, c), 0), 0); return { t, short, here, oth: all - here, all }; }).filter(o => o.all > 0).sort((a, b) => isAll ? b.all - a.all : (b.here - a.here) || (b.oth - a.oth)).slice(0, 6);
+    const secMax = Math.max(1, ...bySec.map(o => isAll ? o.all : o.here));
+    const secRows = bySec.map(o => ({ label: o.short, w: pct(isAll ? o.all : o.here, secMax), n: String(isAll ? o.all : o.here), oth: isAll ? '' : '+' + o.oth + ' elsewhere', bg: s.sector === o.t ? '#f5f9fe' : 'transparent', pick: () => this.pickSector(s.sector === o.t ? null : o.t) }));
+
+    const agSel = s.agSel || (isAll ? 'VIC' : s.jur);
+    const agRows = codes.map(c => { const l = agOf(c), b = bar(l), j = by[c], sel = c === agSel, sd = ['Government', 'Opposition', 'Crossbench'].map(x => l.filter(i => i.side === x).length); return { name: j.officeName, short: j.short, own: l.length, elsewhere: l.length ? Math.round(j.elsewhere * P.len / 14) : 0, pos: b.pos, neu: b.neu, neg: b.neg, mix: b.mix, net: b.t >= 5 ? signed(b.net) : b.t ? 'Few' : '—', sides: 'Government ' + sd[0] + ' · Opposition ' + sd[1] + ' · Crossbench ' + sd[2], bg: sel ? '#f5f9fe' : '#fff', bd: sel ? '#0f6cbd' : 'transparent', you: c === s.jur ? 'You' : '', note: j.days[1] < P.st ? 'Not sitting' : j.status === 'blocked' ? 'Partial' : '', pick: () => set({ agSel: c }) }; });
+    const agM = items.filter(i => i.jur === agSel && inP(i) && i.ofc && i.sent && (s.side === 'All' || i.side === s.side)).sort((a, b) => b.date - a.date || b.sig - a.sig).map(vm);
+    const sideChips = ['All', 'Government', 'Opposition', 'Crossbench'].map(x => Object.assign(chip(s.side === x), { label: x, pick: () => set({ side: x }) }));
+    const mTabs = [['ag', 'Auditors-General'], ['reports', 'Reports']].map(([k, l]) => { const on = s.mTab === k; return { label: l, line: on ? '#0f6cbd' : 'transparent', color: on ? '#0f6cbd' : '#424242', fw: on ? '600' : '400', pick: () => set({ mTab: k }) }; });
+    const repOff = s.repOff || (isAll ? 'VIC' : s.jur);
+    const repOffices = codes.map(c => Object.assign(chip(c === repOff), { label: by[c].short, pick: () => set({ repOff: c }) }));
+    const repRows = regs[repOff].filter(r => secOk(r.sector)).map(r => { const m = items.filter(i => i.jur === repOff && i.rep === r.title && i.sent); const b = bar(m); return { title: r.title, meta: r.no + ' · Tabled ' + r.tabled, n: m.length, pos: b.pos, neu: b.neu, neg: b.neg, mix: b.mix, sub: b.text, last: m.length ? 'Last mentioned ' + fmt(Math.max.apply(null, m.map(i => i.date))) : '', notYet: !m.length, hasM: m.length > 0, open: () => openD({ k: 'rep', id: r.id }) }; }).filter(r => !s.notYet || r.notYet);
+
+    const devAll = pool.filter(i => i.feat === 'F3').sort((a, b) => b.date - a.date || b.sig - a.sig);
+    const TYPES = ['All', 'Mandate', 'Resourcing', 'Governance', 'Audit requests', 'Program', 'Responses', 'New reports'];
+    const devChips = TYPES.map(t => ({ t, n: t === 'All' ? devAll.length : devAll.filter(i => i.devType === t).length })).filter(o => o.t === 'All' || o.n > 0).map(o => Object.assign(chip(s.devType === o.t), { label: o.t + ' ' + o.n, pick: () => set({ devType: o.t }) }));
+    const devList = devAll.filter(i => s.devType === 'All' || i.devType === s.devType).map(vm);
+    const devElse = isAll ? [] : items.filter(i => i.jur !== s.jur && inP(i) && i.feat === 'F3' && i.sig >= 5).sort((a, b) => b.date - a.date).slice(0, 4).map(vm);
+
+    const q = s.q.trim().toLowerCase();
+    let ex = items.filter(i => inP(i) && i.sig >= 2);
+    if (s.expJur && !isAll) ex = ex.filter(i => i.jur === s.jur);
+    if (s.expSent !== 'Any') ex = ex.filter(i => i.sent === s.expSent.toLowerCase());
+    if (s.newOnly) ex = ex.filter(isNew);
+    if (q) ex = ex.filter(i => [i.headline, i.summary, i.quote, i.speaker, i.debate, by[i.jur].name].join(' ').toLowerCase().indexOf(q) >= 0);
+    ex.sort((a, b) => b.date - a.date || b.sig - a.sig);
+    const hl = t => { if (!q || !t) return [{ t: t || '', bg: 'transparent' }]; const out = [], low = t.toLowerCase(); let k = 0; for (let g = 0; g < 20; g++) { const f = low.indexOf(q, k); if (f < 0) { out.push({ t: t.slice(k), bg: 'transparent' }); break; } if (f > k) out.push({ t: t.slice(k, f), bg: 'transparent' }); out.push({ t: t.slice(f, f + q.length), bg: '#fff4ce' }); k = f + q.length; } return out; };
+    const expResults = ex.slice(0, 40).map(i => Object.assign(vm(i), { snip: hl(i.quote ? '“' + i.quote + '”' : i.summary), debate: i.debate || 'Office website' }));
+    const expChips = [
+      Object.assign(chip(!isAll && s.expJur), { label: isAll ? 'All jurisdictions' : (s.expJur ? 'Only ' + cur.name : 'All 9 jurisdictions'), pick: () => set({ expJur: !s.expJur }) }),
+      Object.assign(chip(s.newOnly), { label: 'New since your last visit', pick: () => set({ newOnly: !s.newOnly }) })
+    ];
+    const sentChips = ['Any', 'Positive', 'Neutral', 'Negative', 'Mixed'].map(x => Object.assign(chip(s.expSent === x), { label: x === 'Any' ? 'Any sentiment' : x, pick: () => set({ expSent: x }) }));
+
+    let d = {}, g = {}, r = {}, iss = {};
+    let dk = s.drawer ? s.drawer.k : null;
+    if (dk === 'item') { const it = itemsAll.find(i => i.id === s.drawer.id); if (it) { const v = vm(it), j = by[it.jur]; let rel = itemsAll.filter(o => o.jur !== it.jur && o.theme === it.theme && o.sig >= 3 && inP(o)).slice(0, 3); if (!rel.length) rel = itemsAll.filter(o => o.jur !== it.jur && o.feat === it.feat && o.sig >= 3 && inP(o)).slice(0, 3); const inB = s.adds.includes(it.id); const x = it.x ? XALL.find(q2 => q2.id === it.x) : null;
+      d = Object.assign(v, { tags: [v.featLabel, it.theme, 'Significance ' + it.sig + ' of 5'].filter(Boolean), parl: j.parl + (it.source === 'Hansard' ? ' · ' + it.chamber : ''), debate: it.debate ? it.debate + ' · page ' + it.page : 'Office website', verified: it.source === 'Hansard' && it.quote ? '✓ Quote matches Hansard word for word' : '', addLabel: inB ? '✓ In your brief' : 'Add to brief', addBrief: () => { set({ adds: inB ? s.adds.filter(a => a !== it.id) : s.adds.concat([it.id]) }); this.toastMsg(inB ? 'Removed from your brief' : 'Added to your brief'); }, copyCite: () => this.copy((it.speaker || j.office) + ', ' + (it.debate || 'website') + ', ' + j.parl + ', ' + fmt(it.date) + ' 2026, p. ' + it.page + '. ' + it.url, 'Citation copied'), related: rel.map(vm), hasRelated: rel.length > 0, hasIssue: !!x, issueLine: x ? x.label + ' — raised in ' + parlsFor(x).length + ' parliaments this period' : '', openIss: x ? openIssue(x.id) : null }); } }
+    if (dk === 'gap') { const gp = GAPS.find(q2 => q2.id === s.drawer.id); if (gp) { g = Object.assign(gvm(gp, 0), { parts: gp.parts.map(p => ({ n: p.n, lbl: p.v + ' / ' + p.w, w: pct(p.v, p.w) })), ev: gp.ev.map(id => itemsAll.find(i => i.id === id)).filter(Boolean).map(vm), exportOne: () => this.toastMsg('Added to the longlist export') }); } }
+    if (dk === 'rep') { const rg = regs[String(s.drawer.id).split('-r')[0]]; const rr = rg ? rg.find(q2 => q2.id === s.drawer.id) : null; if (rr) { const m = itemsAll.filter(i => i.jur === rr.jur && i.rep === rr.title && i.sent).sort((a, b) => b.date - a.date); const b = bar(m); r = { title: rr.title, meta: by[rr.jur].officeName + ' · ' + rr.no + ' · Tabled ' + rr.tabled, pos: b.pos, neu: b.neu, neg: b.neg, mix: b.mix, sub: b.text, mentions: m.map(vm), has: m.length > 0, notYet: !m.length, url: by[rr.jur].site }; } }
+    if (dk === 'issue' && XALL.find(q2 => q2.id === s.drawer.id)) { const x = XALL.find(q2 => q2.id === s.drawer.id); const e = (() => { const per = codes.map(c => ({ c, n: rN(x, c) })); return { per, total: per.reduce((a, p) => a + p.n, 0) }; })(); const mx = Math.max(1, ...e.per.map(p => p.n)); const linked = itemsAll.filter(i => i.x === x.id && inP(i)).sort((a, b) => b.date - a.date);
+      iss = { label: x.label, theme: x.theme, summary: e.total + ' mentions across ' + e.per.filter(p => p.n).length + ' parliaments · ' + P.range, rows: codes.map(c => { const j = by[c], n = rN(x, c), cv = covOf(x, c), you = c === s.jur; return { name: j.name, short: j.short, n: n ? String(n) : '', hasN: n > 0, w: pct(n, mx), note: n ? '' : j.days[1] < P.st ? 'Not sitting' : j.status === 'blocked' ? 'Not checked' : 'Not raised', cov: COVS[cv], covFg: cv === 'not_covered' ? '#616161' : cv === 'recent_report' ? '#0e700e' : '#0f6cbd', bg: you ? '#f5f9fe' : 'transparent', fw: you ? '700' : '400', you: you ? ' (you)' : '' }; }),
+        quote: '“' + x.quote + '”', quoteBy: x.by + ' · ' + by[x.from].parl, quoteUrl: by[x.from].url, linked: linked.map(vm), hasLinked: linked.length > 0, yourCov: isAll ? '' : COV[covOf(x, s.jur)][0], hasYourCov: !isAll, peers: peerLine(x, isAll ? null : s.jur),
+        search: () => this.tabTo('explore', { q: x.kw, expJur: false }), add: () => this.toastMsg('Added to your brief') }; }
+
+    if ((dk === 'item' && !d.id) || (dk === 'gap' && !g.id) || (dk === 'rep' && !r.title) || (dk === 'issue' && !iss.label)) dk = null;
+    const status = codes.map((c, i) => { const j = by[c]; if (s.scan) { const st = s.scan.step; return { name: j.parl, icon: i < st ? '✓' : i === st ? '◐' : '○', color: i < st ? '#0e700e' : i === st ? '#0f6cbd' : '#9e9e9e', text: i < st ? SCAN[c] : i === st ? 'Checking…' : 'Waiting' }; } return { name: j.parl, icon: j.status === 'ok' ? '✓' : j.status === 'blocked' ? '⚠' : '–', color: j.status === 'ok' ? '#0e700e' : j.status === 'blocked' ? '#bc4b09' : '#616161', text: s.refreshed && SCAN[c].indexOf('new') >= 0 && j.status === 'ok' ? SCAN[c] : j.statusText }; });
+    const regRow = s.scan ? (s.scan.step >= 9 ? (s.scan.step > 9 ? { icon: '✓', color: '#0e700e', text: SCAN.REG } : { icon: '◐', color: '#0f6cbd', text: 'Checking…' }) : { icon: '○', color: '#9e9e9e', text: 'Waiting' }) : { icon: '✓', color: '#0e700e', text: s.refreshed ? SCAN.REG : '9 of 9 checked today' };
+    const mineNew = ALLI.filter(i => i.pending && i.jur === s.jur && i.ofc).length;
+    const doneText = '4 parliaments sat · 4 new sitting days · 5 new items' + (isAll ? '' : ' · ' + mineNew + ' mention your office') + ' · 1 new ACT Audit Office report';
+
+    const dPos = { jur: ['46px', '172px', 'auto', '320px'], period: ['46px', '384px', 'auto', '240px'], sector: ['46px', '546px', 'auto', '340px'], status: ['46px', 'auto', '20px', '420px'], more: ['46px', 'auto', '20px', '280px'] }[s.menu] || ['46px', 'auto', '20px', '280px'];
+    const TABS = [['brief', 'Brief', '⌂'], ['compare', 'Compare', '⇄'], ['mentions', 'Mentions', '❝'], ['dev', 'Developments', '↗'], ['gaps', 'Potential gaps', '◎'], ['explore', mob ? 'Search' : 'Explore', '⌕']];
+    const lastUpd = 'Updated Sat 31 Oct';
+
+    const TABN = { brief: 'Brief', compare: 'Compare', mentions: 'Mentions', dev: 'Developments', gaps: 'Potential gaps', explore: 'Explore' };
+    const hansTo = s.refreshed ? 'Fri 30 Oct' : 'Thu 29 Oct';
+    const scopeTxt = (isAll ? 'ACAG — all offices' : cur.name + ' · ' + cur.office) + ' · ' + P.range + (s.sector ? ' · ' + s.sector : '');
+    const PG = {
+      brief: [scopeTxt, P.title, 'Hansard to ' + hansTo + ' · WA isn’t checked automatically (access blocked)'],
+      compare: [P.range + ' · all 9 parliaments' + (s.sector ? ' · ' + s.sector : ''), isAll ? 'Across Australia' : 'How ' + cur.name + ' compares', isAll ? 'What the 9 parliaments are discussing, side by side.' : 'What other parliaments are discussing, and where ' + cur.office + ' stands.'],
+      mentions: [scopeTxt, 'Mentions', 'What Parliament says about each Auditor-General and their reports. Sentiment is the speaker’s stance toward the office or report.'],
+      dev: [scopeTxt, 'Developments', isAll ? 'Changes affecting all 9 offices, newest first.' : 'Changes affecting ' + cur.officeName + ', newest first.'],
+      gaps: [scopeTxt, 'Potential gaps in the forward program', isAll ? 'Top potential gaps across all 9 offices.' : 'Issues raised in ' + cur.parl + ' that ' + cur.office + '’s program may not cover.'],
+      explore: ['All 9 parliaments · 31 Aug – 31 Oct 2026' + (s.sector ? ' · ' + s.sector : ''), 'Explore', 'Search everything stored, with exact quotes and links you can cite.']
+    }[s.tab] || ['', '', ''];
+    const copyBriefFn = () => this.copy(P.title + ' — ' + (isAll ? 'ACAG' : cur.office) + '\n' + briefLines.join('\n') + '\n' + this.url(false), 'Brief copied — paste into email or Teams');
+    const EXP = { brief: [['Word document (.docx)', () => this.toastMsg('Brief downloaded (Word, 1 page)')], ['PDF', () => this.toastMsg('Brief downloaded (PDF, 1 page)')], ['Copy text for email or Teams', copyBriefFn]], mentions: [['Mentions (CSV)', () => this.toastMsg('Mentions exported (CSV)')]], gaps: [['Longlist (CSV)', () => this.toastMsg('Longlist exported (CSV)')], ['Longlist (Word)', () => this.toastMsg('Longlist exported (Word)')]], explore: [['Results (CSV)', () => this.toastMsg('Results exported (CSV)')]] }[s.tab] || [];
+    const exportOpts = EXP.map(([l, fn]) => ({ label: l, pick: () => { set({ menu: null }); fn(); } }));
+    const shareWith = !!(s.share && s.share.withDrawer && dk);
+    const shareBits = [TABN[s.tab], isAll ? 'All offices' : cur.name, P.label];
+    if (s.sector) shareBits.push('Sector: ' + s.sector);
+    if (s.tab === 'mentions') shareBits.push(s.mTab === 'reports' ? 'Reports · ' + by[repOff].office + (s.notYet ? ' · not yet mentioned' : '') : 'Auditors-General · ' + by[agSel].office + (s.side !== 'All' ? ' · ' + s.side : ''));
+    if (s.tab === 'dev' && s.devType !== 'All') shareBits.push(s.devType);
+    if (s.tab === 'brief' && s.mapMode !== 'mentions') shareBits.push(s.mapMode === 'net' ? 'Map: net sentiment' : 'Map: gaps');
+    if (s.tab === 'explore') { if (s.q) shareBits.push('Search “' + s.q + '”'); shareBits.push(s.expJur && !isAll ? 'Only ' + cur.name : 'All jurisdictions'); if (s.expSent !== 'Any') shareBits.push(s.expSent); if (s.newOnly) shareBits.push('New only'); }
+    if (shareWith) shareBits.push('Open: ' + (d.headline || g.issue || r.title || iss.label || ''));
+    const shareUrl = s.share ? this.url(shareWith) : '';
+    const shareTitle = 'Hansard Watch — ' + shareBits.slice(0, 2).join(' · ');
+    const mobTabs = TABS.filter(t => t[0] !== 'explore').map(([k, l, ic]) => { const on = s.tab === k; return { label: l, icon: ic, line: on ? '#0f6cbd' : 'transparent', color: on ? '#0f6cbd' : '#424242', fw: on ? '600' : '400', go: () => this.tabTo(k) }; });
+    return {
+      pgKicker: PG[0], pgTitle: PG[1], pgSub: PG[2],
+      openSector: () => set({ menu: s.menu === 'sector' ? null : 'sector' }), isSectorMenu: s.menu === 'sector',
+      sectorLabel: s.sector ? secShort : 'All sectors', secBd: s.sector ? '#0f6cbd' : '#d1d1d1', secBg: s.sector ? '#ebf3fc' : '#fff', secFg: s.sector ? '#0f6cbd' : '#242424', secFw: s.sector ? '600' : '400',
+      sectorMenu: [{ label: 'All sectors', sub: '', check: s.sector ? '' : '✓', bg: s.sector ? 'transparent' : '#f0f0f0', pick: () => this.pickSector(null) }].concat(TH.map(([t]) => { const n = itemsAll.filter(i => mine(i) && inP(i) && i.theme === t && i.sig >= 2).length; return { label: t, sub: n ? n + (n === 1 ? ' item' : ' items') : '', check: s.sector === t ? '✓' : '', bg: s.sector === t ? '#f0f0f0' : 'transparent', pick: () => this.pickSector(t) }; })),
+      secRows, secSub: isAll ? 'Mentions across all 9 parliaments' : 'Mentions in ' + cur.parl + ', and in the other 8', heatHiddenTxt: heatHidden ? heatHidden + ' sectors with no mentions this period are hidden.' : '',
+      openShare: () => set({ share: { withDrawer: false }, menu: null }), shareDrawer: () => set({ share: { withDrawer: true } }),
+      shareOpen: !!s.share, shareUrl, shareBits, closeShare: () => set({ share: false }), noop: () => {}, selectAll: e => { try { e.target.select(); } catch (er) {} },
+      copyLink: () => this.copy(shareUrl, 'Link copied — paste it anywhere'),
+      mailHref: 'mailto:?subject=' + encodeURIComponent(shareTitle) + '&body=' + encodeURIComponent(shareUrl),
+      teamsHref: 'https://teams.microsoft.com/share?href=' + encodeURIComponent(shareUrl) + '&msgText=' + encodeURIComponent(shareTitle),
+      openOther: () => { window.dispatchEvent(new CustomEvent('hw-open-link', { detail: { qs: this.toQuery(this.state, shareWith), src: this } })); set({ share: false }); this.toastMsg(mob ? 'Opened on the desktop preview' : 'Opened on the phone preview'); },
+      openOtherLabel: mob ? 'Try it: open this link on the desktop' : 'Try it: open this link on the phone',
+      hasExport: exportOpts.length > 0, exportOpts, openExport: () => set({ menu: s.menu === 'export' ? null : 'export' }), exportInline: !mob && s.menu === 'export', isExportMenu: mob && s.menu === 'export', panelOpen: !!s.menu && (mob || s.menu !== 'export'),
+      mobTabs, goSearch: () => this.tabTo('explore'), searchBg: s.tab === 'explore' ? '#ebf3fc' : 'transparent', searchFg: s.tab === 'explore' ? '#0f6cbd' : '#242424',
+      showShared: s.sharedView && !s.sharedHidden && s.stage === 'app', sharedText: 'Opened from a shared link · ' + TABN[s.tab] + ' · ' + (isAll ? 'All offices' : cur.name) + ' · ' + P.label,
+      hasSharedAction: !s.savedJur || s.savedJur !== s.jur, sharedAction: s.savedJur ? 'Switch to ' + by[s.savedJur].name : 'Set my jurisdiction',
+      sharedDo: () => { if (s.savedJur) this.setJur(s.savedJur); else set({ stage: 'onboard', obJur: s.jur, obStart: s.tab }); }, dismissShared: () => set({ sharedHidden: true }),
+      isOnboard: s.stage === 'onboard', isApp: s.stage === 'app', isDesk: !mob, isMob: mob, mainRef: this.mainRef,
+      pad: mob ? '16px 16px 28px' : '24px 32px 40px', btnH: mob ? '44px' : '32px', segH: mob ? '40px' : '30px', h1Size: mob ? '22px' : '28px',
+      obJurs: codes.concat(['ALL']).map(c => { const j = by[c], on = s.obJur === c; return { short: j.short, name: j.name, officeName: j.officeName, check: on ? '✓' : '', border: on ? '2px solid #0f6cbd' : '1px solid #e0e0e0', bg: on ? '#ebf3fc' : '#fff', pick: () => set({ obJur: c }) }; }),
+      obStarts: TABS.map(([k, l]) => Object.assign(chip(s.obStart === k), { label: k === 'explore' ? 'Explore' : l, pick: () => set({ obStart: k }) })),
+      obHint: s.obJur ? 'Saved on this device · no sign-in needed' : 'Choose your jurisdiction to continue', obDisabled: !s.obJur, obOpacity: s.obJur ? '1' : '.45',
+      finish: () => { if (!s.obJur) return; this.go({ stage: 'app', jur: s.obJur, start: s.obStart, tab: s.obStart, sharedView: false, sharedHidden: false, savedJur: s.obJur }); },
+      jurColor: cur.color, jurLabel: isAll ? 'ACAG — all offices' : cur.name + ' · ' + cur.office, jurShort: cur.short, periodLabel: P.label,
+      statusLabel: 'Updated Sat 31 Oct', statusWarn: '· WA not checked', statusLabelM: 'Updated 31 Oct', statusWarnM: '· 1 not checked',
+      hasNew: newN > 0, newLabel: newN + ' new', newLabelM: newN + ' new',
+      openJur: () => set({ menu: s.menu === 'jur' ? null : 'jur' }), openPeriod: () => set({ menu: s.menu === 'period' ? null : 'period' }), openStatus: () => set({ menu: s.menu === 'status' ? null : 'status' }), openMore: () => set({ menu: s.menu === 'more' ? null : 'more' }),
+      showNew: () => this.tabTo('explore', { newOnly: true, q: '', expJur: true, scanDone: false }),
+      scanning: !!s.scan, scanText: s.scan ? 'Refreshing — checking ' + (s.scan.step < 9 ? by[codes[s.scan.step]].parl : 'office registers') + '…' : '', scanW: s.scan ? (s.scan.step * 10) + '%' : '0%',
+      showDone: s.scanDone && !s.scan, doneText, dismissDone: () => set({ scanDone: false }),
+      tabs: TABS.map(([k, l, ic]) => { const on = s.tab === k; return { label: l, icon: ic, line: on ? '#0f6cbd' : 'transparent', color: on ? '#0f6cbd' : '#424242', fw: on ? '600' : '400', go: () => this.tabTo(k) }; }),
+      isBrief: s.tab === 'brief', isCompare: s.tab === 'compare', isMentions: s.tab === 'mentions', isDev: s.tab === 'dev', isGaps: s.tab === 'gaps', isExplore: s.tab === 'explore',
+      kicker: (isAll ? 'ACAG — all offices' : cur.name + ' · ' + cur.officeName) + ' · ' + P.range, briefTitle: P.title,
+      scopeLine: 'Covers Hansard to ' + (s.refreshed ? 'Fri 30 Oct' : 'Thu 29 Oct') + ' · 8 of 9 parliaments checked automatically · WA access blocked',
+      copyBrief: () => this.copy(P.title + ' — ' + (isAll ? 'ACAG' : cur.office) + '\n' + briefLines.join('\n'), 'Brief copied — paste into email or Teams'),
+      dlWord: () => this.toastMsg('Brief downloaded (Word, 1 page)'), dlPdf: () => this.toastMsg('Brief downloaded (PDF, 1 page)'),
+      hero, hasGapHero: !!ghRaw, gh: ghRaw ? gvm(ghRaw, 0) : {}, briefQuiet: hero.length === 0 && (!isAll || !!s.sector),
+      quietTitle: s.sector ? 'Nothing on ' + lc(secShort) + ' in ' + (isAll ? 'any parliament' : cur.parl) + ' this period.' : (isAll ? '' : cur.parl + ': ' + lc(cur.statusText) + '.'), quietNote: s.sector ? 'Try another sector, or widen the period.' : 'This is expected — the territory parliaments sit less often. Other parliaments’ activity is still below.', widenLabel: s.sector ? 'Show all sectors' : 'Show the last 4 weeks', widen: () => { if (s.sector) this.pickSector(null); else set({ period: '4w' }); },
+      tiles, showMap: !isAll, isAll, mapModes, mapTiles, mapLegend, allRows,
+      elseTitle: isAll ? 'Raised in several parliaments' : 'Raised elsewhere, not yet here', elseSub: isAll ? 'Issues more than one parliament is discussing' : 'Issues other parliaments are discussing that ' + cur.parl + ' hasn’t raised this period',
+      elseTop: (isAll ? shared : quiet).slice(0, 3).map(evm), elseEmpty: (isAll ? shared : quiet).length === 0, goCompare: () => this.tabTo('compare'),
+      nextSit: NEXT, hasAdds: s.adds.length > 0, adds: s.adds.map(id => itemsAll.find(i => i.id === id)).filter(Boolean).map(vm),
+      cmpKicker: P.range + ' · all 9 parliaments', cmpTitle: isAll ? 'Across Australia' : 'How ' + cur.name + ' compares',
+      cmpSub: isAll ? 'What the 9 parliaments are discussing, side by side.' : 'What other parliaments are discussing, and where ' + cur.office + ' stands.',
+      cmpYou: !isAll, cmpMetrics, netLine: netYou ? 'Sentiment toward ' + cur.office + ': ' + netTxt(netYou) + ' · others’ median net ' + signed(med(othersC.map(c => bar(agOf(c)).net))) : '',
+      quietAll: quiet.map(evm), quietEmpty: quiet.length === 0, sharedAll: shared.map(evm), sharedEmpty: shared.length === 0, sharedTitle: isAll ? 'Raised in several parliaments' : 'Shared with other parliaments',
+      sharedSub: isAll ? 'Ranked by total mentions' : 'Issues ' + cur.parl + ' is discussing that others are too',
+      heatHead, heat, heatCols: 'minmax(' + (mob ? '86px' : '170px') + ',1.6fr) repeat(9,minmax(0,1fr))',
+      mTabs, isAgTab: s.mTab === 'ag', isRepTab: s.mTab === 'reports', agRows, agSelName: by[agSel].officeName, agM, agEmpty: agM.length === 0, sideChips,
+      repOffices, repRows, repEmpty: repRows.length === 0, notYetLabel: s.notYet ? '✓ Not yet mentioned only' : 'Not yet mentioned only', notYetBg: s.notYet ? '#ebf3fc' : '#fff', notYetFg: s.notYet ? '#0f6cbd' : '#424242', toggleNotYet: () => set({ notYet: !s.notYet }), repOfficeName: by[repOff].officeName,
+      devSub: isAll ? 'Changes affecting all 9 offices, newest first' : 'Changes affecting ' + cur.officeName + ', newest first', devChips, devList, devEmpty: devList.length === 0, devElse, hasDevElse: devElse.length > 0,
+      gapsSub: isAll ? 'Top potential gaps across all 9 offices' : 'Issues raised in ' + cur.parl + ' that ' + cur.office + '’s program may not cover',
+      hasProgram: !isAll && !!cur.program, progName: !isAll && cur.program ? cur.program : '', progBadge: !isAll && cur.confirmed ? 'Topics confirmed' : 'Draft — program not yet confirmed', progBadgeBg: !isAll && cur.confirmed ? '#f1faf1' : '#fff4ec', progBadgeFg: !isAll && cur.confirmed ? '#0e700e' : '#bc4b09',
+      progCounts: !isAll && cur.counts ? cur.counts[0] + ' planned · ' + cur.counts[1] + ' in progress · ' + cur.counts[2] + ' tabled' : '',
+      noProgram: !isAll && !cur.program, noProgMsg: isAll ? '' : cur.office + ' has no published forward program. Issues are compared with its recent reports only.',
+      gapList: gapsShown.map(gvm), gapHidden: gapsMine.length - gapsShown.length > 0 ? (gapsMine.length - gapsShown.length) + ' issue below the threshold (score 40) not shown' : '',
+      hasSpot: !isAll && !!cur.program, spot: !isAll && cur.program ? [{ t: cur.topicA, n: 'Raised 4 times this period' }, { t: cur.topicB, n: 'Raised twice this period' }] : [],
+      gapCsv: () => this.toastMsg('Longlist exported (CSV)'), gapWord: () => this.toastMsg('Longlist exported (Word)'),
+      q: s.q, onQ: e => set({ q: e.target.value }), hasQ: !!s.q, clearQ: () => set({ q: '' }), expChips, sentChips, expResults, expCount: ex.length + (ex.length === 1 ? ' result' : ' results') + (s.expJur && !isAll ? ' in ' + cur.name : ' across 9 parliaments'), expEmpty: ex.length === 0, expCsv: () => this.toastMsg('Results exported (CSV)'),
+      drawerOpen: !!dk, drawerW: mob ? '100%' : '480px', closeDrawer: () => set({ drawer: null }), dTitle: { item: 'Details', gap: 'Potential gap', rep: 'Report', issue: 'Across parliaments' }[dk] || '',
+      isItemD: dk === 'item', isGapD: dk === 'gap', isRepD: dk === 'rep', isIssueD: dk === 'issue', d, g, r, iss,
+      menuOpen: !!s.menu, closeMenu: () => set({ menu: null }), scrim: mob ? 'rgba(0,0,0,.3)' : 'transparent',
+      mTop: mob ? 'auto' : dPos[0], mLeft: mob ? '0' : dPos[1], mRight: mob ? '0' : dPos[2], mBottom: mob ? '0' : 'auto', mWidth: mob ? 'auto' : dPos[3], mRadius: mob ? '12px 12px 0 0' : '8px', mMaxH: mob ? '82%' : '640px',
+      isJurMenu: s.menu === 'jur', isPeriodMenu: s.menu === 'period', isStatusMenu: s.menu === 'status', isMoreMenu: s.menu === 'more',
+      jurMenu: codes.concat(['ALL']).map(c => { const j = by[c], n = itemsAll.filter(i => (c === 'ALL' || i.jur === c) && isNew(i) && i.sig >= 2).length; return { name: j.name, sub: j.officeName, count: n ? n + ' new' : '', check: c === s.jur ? '✓' : '', bg: c === s.jur ? '#f0f0f0' : 'transparent', pick: () => this.setJur(c) }; }),
+      periodOpts: [['2w', 'Last 2 weeks', '17–31 Oct'], ['4w', 'Last 4 weeks', '3–31 Oct'], ['2m', 'Full stored window', '31 Aug – 31 Oct']].map(([k, l, rg]) => ({ label: l, sub: rg, check: s.period === k ? '✓' : '', bg: s.period === k ? '#f0f0f0' : 'transparent', pick: () => set({ period: k, menu: null }) })),
+      statusTitle: s.scan ? 'Refreshing…' : lastUpd, statusSub: 'Hansard is checked automatically every morning. Stored window: 31 Aug – 31 Oct 2026.', status, regRow,
+      refreshLabel: s.scan ? 'Refreshing…' : s.signedIn ? 'Refresh with the latest Hansard' : 'Sign in to refresh now', refreshDisabled: !!s.scan, refreshOpacity: s.scan ? '.5' : '1',
+      refreshNote: s.signedIn ? 'Signed in as acag. Refreshing runs paid AI analysis on anything new.' : 'Browsing is open to everyone. Refreshing runs paid AI analysis, so it needs the ACAG sign-in.',
+      refresh: () => this.needAuth(() => this.startScan()), showDoneInMenu: s.scanDone && !s.scan, doneTextM: doneText,
+      moreItems: [{ label: 'Coverage and registers', pick: () => set({ menu: 'status' }) }, { label: 'Change jurisdiction or start page', pick: () => set({ stage: 'onboard', obJur: s.jur, obStart: s.start, menu: null }) }].concat(s.signedIn ? [{ label: 'Sign out', pick: () => { set({ signedIn: false, menu: null }); this.toastMsg('Signed out'); } }] : [{ label: 'Sign in (needed to refresh data)', pick: () => this.needAuth(() => {}) }]),
+      authOpen: s.auth, user: s.user, pass: s.pass, onUser: e => set({ user: e.target.value }), onPass: e => set({ pass: e.target.value }), loginErr: s.loginErr, hasLoginErr: !!s.loginErr, signIn: e => this.doSignIn(e), cancelAuth: () => { this.pending = null; set({ auth: false }); },
+      hasToast: !!s.toast, toast: s.toast, toastB: mob ? '76px' : '24px'
+    };
+  }
+}
+</script>
+</body>
+</html>
