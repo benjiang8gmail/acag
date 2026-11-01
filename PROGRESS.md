@@ -193,7 +193,8 @@
 
 ### Next
 
-- Tasmania: re-run `make scan` when the search host serves again — nothing else is needed. If the outage lasts, its daily PDFs can be imported by hand like Victoria's, once a real one exists to write the reader against.
+- Tasmania: re-run `make scan` when the search host serves again — nothing else is needed.
+- (1 Nov, 01:01 UTC) Still down: the search host returns empty pages, the main site challenges this environment, and a Cowork reader was refused on its first request (the sitting calendar). No Tasmanian Hansard could be added to the dashboard. If the outage lasts, its daily PDFs can be imported by hand like Victoria's, once a real one exists to write the reader against.
 
 ---
 
