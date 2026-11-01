@@ -1,5 +1,22 @@
 # Progress
 
+## 1 Nov 2026: Victoria on the dashboard — what is exact without the transcripts
+
+### Done
+
+- **Added a separate Victoria card to the dashboard** with the only Victorian data that is exact without the transcripts:
+  - **Ten confirmed sitting days** (Assembly 8, 9, 10, 23, 24 Sep; Council 9, 10, 22, 23, 24 Sep), each from its daily Hansard's own title in public web search, each linking to the official PDF. The Council on 9 Sep was newly confirmed (`974425065-36927`) and added to `config/vic_hansard.yaml`.
+  - **The one Hansard item whose own title names the Victorian Auditor-General's Office** (Council, 9 Sep 2026, `HANSARD-974425065-36907`).
+  - Both follow the date filter; nothing in the card is counted in the parsed totals, which stay 23,603 speeches across 5 parliaments.
+- **Left out on purpose:** debates on VAGO reports under other titles ("Road maintenance", Council 23 Sep; "Suburban Rail Loop", Council 9 Sep). Only the search tool's model-written summaries connect them to the Auditor-General, and its summaries are not used as data. They appear once the transcripts can be read.
+- **Not done, and why:** Victorian speeches. In this environment the site answers WebFetch with 403, and where WebFetch works it returns a model's reading, not the text (D20).
+
+### Evidence
+
+- The page was run against the real data before publishing: both Victorian tables align headers and cells (10 rows; 1 row), every row links to `www.parliament.vic.gov.au`, choosing October shows the "no Victorian sitting days" note, and the rest of the page is unchanged (72 / 23,603 / 128; 6 of 9 routed).
+
+---
+
 ## 1 Nov 2026: Victoria via the Cowork session's method — search works here, fetch does not
 
 ### Done

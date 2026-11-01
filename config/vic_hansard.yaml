@@ -25,7 +25,7 @@
 #
 # The 60th Parliament's last sitting days were 22–24 September 2026 (valedictory statements; the
 # election is on 28 November), so there are no October sittings. Not yet found by search, though they
-# may exist: Assembly 22 Sep, Council 8 and 9 Sep. August sittings (Assembly 11, 25, 26, 27 Aug) are
+# may exist: Assembly 22 Sep, Council 8 Sep. August sittings (Assembly 11, 25, 26, 27 Aug) are
 # outside the two-month window.
 
 days:
@@ -34,6 +34,7 @@ days:
   - {date: 2026-09-10, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4a85e0/globalassets/hansard-daily-pdfs/hansard-2145855009-37384/hansard-2145855009-37384.pdf"}
   - {date: 2026-09-23, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4aa191/globalassets/hansard-daily-pdfs/hansard-2145855009-37507/hansard-2145855009-37507.pdf"}
   - {date: 2026-09-24, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4aa1a3/globalassets/hansard-daily-pdfs/hansard-2145855009-37599/hansard-2145855009-37599.pdf"}
+  - {date: 2026-09-09, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4a8421/globalassets/hansard-daily-pdfs/hansard-974425065-36927/hansard-974425065-36927.pdf"}
   - {date: 2026-09-10, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4a9ea9/globalassets/hansard-daily-pdfs/hansard-974425065-37008/hansard-974425065-37008.pdf"}
   - {date: 2026-09-22, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4a8e24/globalassets/hansard-daily-pdfs/hansard-974425065-37098/hansard-974425065-37098.pdf"}
   - {date: 2026-09-23, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4a83d8/globalassets/hansard-daily-pdfs/hansard-974425065-37180/hansard-974425065-37180.pdf"}
