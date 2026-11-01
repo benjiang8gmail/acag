@@ -252,6 +252,15 @@ data = {
 blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 page = (HERE / "app.html").read_text().replace("__HW_DATA__", blob)
 (HERE / "hansard-watch.html").write_text(page)
+
+# The claude.ai page: the host supplies the doctype, charset, viewport and the
+# :root safe-area padding, so the page keeps only its title, styles and body.
+art = page.replace("const ARTIFACT = false;", "const ARTIFACT = true;")
+head = art.split("<head>", 1)[1].split("</head>", 1)[0]
+head = "\n".join(l for l in head.splitlines() if not l.startswith(('<meta charset', '<meta name="viewport"', '<meta name="description"')))
+body = art.split("<body>", 1)[1].rsplit("</body>", 1)[0]
+ART_CSS = "<style>.hdr { padding-top: 0; } .bnav { padding-bottom: 0; } .ob-foot { padding-bottom: 12px; }</style>"
+(HERE / "hansard-watch.artifact.html").write_text(head.strip() + "\n" + ART_CSS + "\n" + body.strip() + "\n")
 print(f"hansard-watch.html: {len(page):,} bytes · {len(mentions)} mentions "
       f"({sum(m['src'] == 'scan' for m in mentions)} scan, {sum(m['src'] == 'cowork' for m in mentions)} Victorian) · "
       f"{len(dev)} developments · {sum(1 for m in mentions if m['report'])} report mentions · "

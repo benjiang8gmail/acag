@@ -281,6 +281,8 @@ details[open] > summary { margin-bottom: 8px; }
 <script>
 (() => {
 'use strict';
+// Set to true by build.py for the claude.ai page, whose frame passes only a plain #page-name and blocks downloads.
+const ARTIFACT = false;
 
 // ---------------------------------------------------------------- data
 const D = JSON.parse(document.getElementById('hw-data').textContent);
@@ -403,7 +405,7 @@ function toHash(withDrawer) {
 let lastHash = '';
 function syncHash() {
   if (S.stage !== 'app') return;
-  const h = '#' + toHash(true);
+  const h = '#' + (ARTIFACT ? (S.tab === 'dev' ? 'developments' : S.tab) : toHash(true));
   if (h === lastHash) return;
   lastHash = h;
   try { history.replaceState(null, '', h); } catch (e) { try { location.hash = h; } catch (e2) { /* no address bar here */ } }
@@ -840,7 +842,7 @@ function drawerItem(M, id) {
     ${m.note ? `<div class="aibox"><div class="ai" style="font-size:11px">✦ Note from the VAGO scan (AI-assisted) — check the source</div><div>${esc(m.note)}</div></div>` : ''}
     ${m.report ? `<div class="s13"><b style="font-weight:600">Report:</b> ${m.tabled ? `<button class="linkbtn" style="font-size:13px" data-act="report" data-v="${esc(m.tabled.url)}">${esc(m.report)}</button>` : esc(m.report)}${m.reportHow === 'pattern' ? ' <span class="note">(report number found in the text)</span>' : ''}</div>` : (m.topic ? `<div class="s13"><b style="font-weight:600">About:</b> ${esc(m.topic)}</div>` : '')}
     <div class="s13 fg2" style="border-top:1px solid var(--line);padding-top:10px">${esc(speakerLine(m))}${m.side ? ' · ' + esc(SIDES[m.side][0]) : ''}<br>${esc(m.debate || '')}</div>
-    <div class="row" style="gap:8px">${srcBtn(m)}<button class="btn" data-act="cite" data-v="${esc(m.id)}">Copy citation</button><button class="btn" data-act="add" data-v="${esc(m.id)}">${inBrief ? '✓ In your brief' : 'Add to brief'}</button><button class="btn" data-act="share" data-v="1">${ICON.share} Share</button></div>
+    <div class="row" style="gap:8px">${srcBtn(m)}<button class="btn" data-act="cite" data-v="${esc(m.id)}">Copy citation</button><button class="btn" data-act="add" data-v="${esc(m.id)}">${inBrief ? '✓ In your brief' : 'Add to brief'}</button>${ARTIFACT ? '' : `<button class="btn" data-act="share" data-v="1">${ICON.share} Share</button>`}</div>
     ${related.length ? `<div class="d-sec">${m.report ? 'Other mentions of this report' : 'Also in this debate'}</div>${related.map(o => `<button class="rel" data-act="item" data-v="${esc(o.id)}"><span class="note">${esc(where(o, o.jur !== m.jur))}</span><span>${esc(speakerLine(o))}</span></button>`).join('')}` : ''}` };
 }
 function drawerReport(M, id) {
@@ -1027,7 +1029,7 @@ function viewPageHead(M) {
       <button class="mchip fg2" data-act="menu" data-v="status" aria-haspopup="dialog"><span class="dot" style="background:var(--ok-dot);width:7px;height:7px"></span>Snapshot 1 Nov<span style="color:var(--warn)">· ${CODES.filter(c => !BY[c].read).length} not read</span></button>
       ${(() => { const n = D.mentions.filter(m => M.mine(m) && M.isNew(m)).length; return n ? `<button class="newbtn" data-act="shownew">${n} new</button>` : ''; })()}</div>` : '';
   return `<div class="pghead"><div class="pghead-text"><div class="kicker">${esc(head[0])}</div><h1>${esc(head[1])}</h1><div class="pgsub">${esc(head[2])}</div></div>
-    <div class="actions-top"><button class="btn" data-act="share" data-v="0">${ICON.share} Share</button>${opts.length ? `<div class="pop"><button class="btn" data-act="menu" data-v="export" aria-haspopup="menu" aria-expanded="${S.menu === 'export'}">${ICON.down} Export ▾</button>${expMenu}</div>` : ''}</div></div>${chips}`;
+    <div class="actions-top">${ARTIFACT ? '' : `<button class="btn" data-act="share" data-v="0">${ICON.share} Share</button>`}${opts.length ? `<div class="pop"><button class="btn" data-act="menu" data-v="export" aria-haspopup="menu" aria-expanded="${S.menu === 'export'}">${ICON.down} Export ▾</button>${expMenu}</div>` : ''}</div></div>${chips}`;
 }
 
 function viewOverlays(M) {
@@ -1123,6 +1125,7 @@ function csv(rows, cols) {
   return [cols.map(c => q(c[0])).join(',')].concat(rows.map(r => cols.map(c => q(c[1](r))).join(','))).join('\r\n');
 }
 function download(name, text) {
+  if (ARTIFACT) { copyText(text, `${name} copied as CSV — paste it into a spreadsheet`); return; }
   try {
     const blob = new Blob(['﻿' + text], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
@@ -1135,7 +1138,7 @@ function doExport(kind) {
   const M = window.__M, tag = (M.isAll ? 'all' : S.jur.toLowerCase()) + '-' + S.period;
   if (kind === 'copybrief') {
     const lines = M.pool.filter(M.subst).slice(0, 5).map(m => `• ${headlineFor(m)} — ${m.speaker}${m.party ? ' (' + m.party + ')' : ''}, ${BY[m.jur].short}, ${fmtDay(m.date)}. ${m.url}`);
-    copyText(`${M.per.title} — ${M.isAll ? 'ACAG' : M.cur.office} (${M.range})\n${lines.join('\n') || 'No mentions in this period.'}\n${location.href.split('#')[0]}#${toHash(false)}`, 'Brief copied — paste it into email or Teams');
+    copyText(`${M.per.title} — ${M.isAll ? 'ACAG' : M.cur.office} (${M.range})\n${lines.join('\n') || 'No mentions in this period.'}${ARTIFACT ? '' : '\n' + location.href.split('#')[0] + '#' + toHash(false)}`, 'Brief copied — paste it into email or Teams');
   } else if (kind === 'csv-mentions') {
     const list = S.tab === 'mentions' ? M.ms.filter(m => m.jur === (S.agSel || (M.isAll ? 'VIC' : M.cur.code)) && M.inP(m) && (S.side === 'all' || m.side === S.side)) : M.pool;
     download(`mentions-${tag}.csv`, csv(list, MENTION_COLS));
@@ -1232,14 +1235,16 @@ document.addEventListener('pointerover', e => {
 matchMedia('(max-width: 767px)').addEventListener('change', e => { mob = e.matches; S.menu = null; render(); });
 addEventListener('hashchange', () => {
   if (location.hash === lastHash) return;
+  if (ARTIFACT) { const v = HASH_VIEW[location.hash.slice(1)]; lastHash = location.hash; if (v && S.stage === 'app') setState({ tab: v, drawer: null, menu: null }); return; }
   const h = fromHash(); if (!h) return;
   Object.assign(S, VIEW_DEFAULTS(), h, { stage: 'app', menu: null, share: null, shared: !PR.jur || PR.jur !== h.jur, sharedHidden: false });
   lastHash = location.hash; render();
 });
 
 // ---------------------------------------------------------------- start
-const h = fromHash();
-if (h) { Object.assign(S, h, { stage: 'app', shared: !PR.jur || PR.jur !== h.jur }); lastHash = location.hash; }
+const h = ARTIFACT ? null : fromHash();
+if (ARTIFACT) { const v = HASH_VIEW[location.hash.slice(1)]; lastHash = location.hash; if (PR.jur) Object.assign(S, { stage: 'app', jur: PR.jur, tab: v || PR.start }); else S.ob = { jur: null, start: v || 'brief' }; }
+else if (h) { Object.assign(S, h, { stage: 'app', shared: !PR.jur || PR.jur !== h.jur }); lastHash = location.hash; }
 else if (PR.jur) Object.assign(S, { stage: 'app', jur: PR.jur, tab: PR.start });
 else S.ob = { jur: null, start: 'brief' };
 render();

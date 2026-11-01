@@ -12,10 +12,14 @@
 
 Rules the page applies, all visible on it: side comes from party and the government of the day; sectors are a keyword match on the debate title and text; Queensland report names are found by the report number in the text. Victorian notes and assessments were written with AI assistance and are labelled. Nothing is invented: where data doesn't exist yet (sentiment outside Victoria, gaps for other offices, SA/WA/Tasmania Hansard), the page says so.
 
+## On claude.ai
+
+`hansard-watch.artifact.html` is the same page built for claude.ai, published privately at https://claude.ai/artifact/Vhki6qdtmRCCBT6SdPcMXm. The claude.ai frame passes only a plain `#page-name` (for example `#compare`) and blocks downloads, so that version routes on the page name, copies CSV exports to the clipboard and leaves sharing to the page's own Share menu. Republish it after a rebuild to update the same link.
+
 ## Rebuild
 
 ```sh
-python3 standalone/build.py   # needs PyYAML; writes standalone/hansard-watch.html
+python3 standalone/build.py   # needs PyYAML; writes hansard-watch.html and hansard-watch.artifact.html
 ```
 
 Edit the page in `app.html` (`__HW_DATA__` is where the data goes) and the data merge in `build.py`.
