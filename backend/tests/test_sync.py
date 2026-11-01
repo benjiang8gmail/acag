@@ -80,6 +80,7 @@ class FakeConnector:
 
     def parse(self, raw, ref, fetch_part):
         version, *lines = raw.decode().splitlines()
+        lines = [ln for ln in lines if not ln.startswith("#")]   # "#..." lines are volatile noise (fingerprint test)
         speeches = [ParsedSpeech(seq=i, speaker_name=ln.split("|")[0], text=ln.split("|")[1]) for i, ln in enumerate(lines)]
         return ParsedDocument(speeches=speeches, version=version)
 
@@ -395,3 +396,24 @@ def test_manual_import_folder_takes_the_source_and_date_from_the_layout(env):
         ("FK-LA", "2026-10-20", "new"), ("FK-LA", "2026-10-21", "new"),
         (None, None, "skipped: the name must start with the sitting date")]
     assert count(SittingDay) == 2 and count(Speech) == 2
+
+
+def test_a_fingerprint_keeps_a_response_with_only_volatile_changes_unchanged(env):
+    """A source whose every response varies (Territory Stories' recommendations) must not be
+    re-parsed, or have its parts re-fetched, unless its own content changed."""
+    site, conn, scan, tmp = env
+    conn.fingerprint = lambda raw: b"\n".join(ln for ln in raw.split(b"\n") if not ln.startswith(b"#"))
+    d = date(2026, 10, 20)
+    url = conn.url("FK-LA", d)
+    conn.sit("FK-LA", d, speeches=("#related: a,b,c", "A|Hello"))
+    assert scan().per_source_json["FK-LA"]["new_documents"] == 1
+
+    site.docs[url] = b"proof\n#related: x,y,z\nA|Hello"          # only the noise moved
+    r = scan(today=date(2026, 10, 31)).per_source_json["FK-LA"]
+    assert (r["unchanged_documents"], r["unchanged_downloads"], r["changed_documents"]) == (1, 1, 0)
+    assert count(Document) == 1
+
+    site.docs[url] = b"proof\n#related: q\nA|Hello there"         # the content moved too
+    r = scan(today=date(2026, 10, 31)).per_source_json["FK-LA"]
+    assert (r["changed_documents"], r["speeches_to_analyse"]) == (1, 1)
+    assert count(Document) == 2

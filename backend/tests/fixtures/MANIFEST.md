@@ -30,6 +30,7 @@ Real files saved by `scripts/recon_fetch.py` (robots.txt obeyed, ≥2 s per host
 | `sources/NSW-LC/2026-10-22.pdf` | https://api.parliament.nsw.gov.au/api/hansard/search/daily/pdf/HANSARD-1820781676-106216 | 2026-10-31 | 2,634,708 | `d5ad6a03f655d1b8` |
 | `sources/NSW/year-2026.json` | https://api.parliament.nsw.gov.au/api/hansard/search/year/2026 | 2026-10-31 | 13,092 | `0d87a07ecc4a3f38` |
 | `sources/NT-LA/2026-10-22-pages.json` | https://territorystories.nt.gov.au/api/content?handle=https%3A%2F%2Fhdl.handle.net%2F10070%2F1052298&group=0&page=0..82 | 2026-10-31 | 367,949 | `693dfaa7eb45efb3` |
+| `sources/NT-LA/full_record-10070-1052298-2026-11-01.json` | https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298 | 2026-11-01 | 55,851 | `965c9cad5f2471b3` |
 | `sources/NT-LA/full_record-10070-1052298.json` | https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298 | 2026-10-31 | 55,937 | `5793c1373cf2ef98` |
 | `sources/NT-LA/territorystories-1052298.html` | https://territorystories.nt.gov.au/10070/1052298/0/39 | 2026-10-31 | 43,313 | `bbcb500f8183c8bb` |
 | `sources/QLD-LA/2026-10-13.pdf` | https://documents.parliament.qld.gov.au/events/han/2026/2026_10_13_DAILY.pdf | 2026-10-31 | 1,394,203 | `d343ac450bd7f1d6` |

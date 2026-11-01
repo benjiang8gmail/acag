@@ -187,13 +187,32 @@ def _sync_day(db, connector, fetcher: Fetcher, day: SittingDayRef, c: SourceCoun
     return True
 
 
+def _identity(connector, body: bytes) -> str:
+    """The hash that decides whether a document changed. Normally the raw bytes; a connector whose
+    responses carry volatile fields (Territory Stories embeds reshuffled "related records", relevance
+    scores and the query time in every record) defines `fingerprint(raw) -> bytes` to hash only the
+    document's own content, so an unchanged sitting day is not re-read on every scan."""
+    fingerprint = getattr(connector, "fingerprint", None)
+    return hashlib.sha256(fingerprint(body) if fingerprint else body).hexdigest()
+
+
 def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: DocumentRef,
                    c: SourceCounts, data_dir: Path) -> str:
     key = ref.key or ref.url
     prev = _current_document(db, sd, key)
+    fingerprinted = getattr(connector, "fingerprint", None) is not None
     res = fetcher.fetch(ref.url, etag=prev.etag if prev else None,
                         last_modified=prev.last_modified if prev else None,
-                        previous_sha256=prev.sha256 if prev else None)
+                        # with a fingerprint the raw hash is not the identity, so compare here instead
+                        previous_sha256=None if fingerprinted else (prev.sha256 if prev else None))
+    sha = res.sha256
+    if res.status == "changed" and fingerprinted:
+        sha = _identity(connector, res.body)
+        if prev and sha == prev.sha256:   # only the volatile parts moved: nothing to re-read
+            c.unchanged_documents += 1
+            c.unchanged_downloads += 1
+            prev.etag, prev.last_modified = res.etag or prev.etag, res.last_modified or prev.last_modified
+            return prev.version
     if res.status == "unchanged":
         c.unchanged_documents += 1
         c.not_modified += not res.downloaded
@@ -204,7 +223,7 @@ def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: Documen
 
     day_dir = data_dir / "raw" / ref.source_id / ref.sitting_date.isoformat()
     day_dir.mkdir(parents=True, exist_ok=True)
-    raw = day_dir / f"{res.sha256}.{ref.format}"
+    raw = day_dir / f"{sha}.{ref.format}"
     raw.write_bytes(res.body)
 
     def fetch_part(url: str) -> bytes:
@@ -214,7 +233,7 @@ def _sync_document(db, connector, fetcher: Fetcher, sd: SittingDay, ref: Documen
         return part.body
 
     return _store_document(db, connector, sd, ref, res.body, key, raw, c, prev, fetch_part,
-                           sha256=res.sha256, etag=res.etag, last_modified=res.last_modified)
+                           sha256=sha, etag=res.etag, last_modified=res.last_modified)
 
 
 def _current_document(db, sd: SittingDay, key: str, any_origin: bool = False) -> Document | None:
@@ -281,7 +300,6 @@ def import_document(source_id: str, sitting_date: date, path: Path, url: str | N
     if not fmt:
         raise ValueError(f"{path.name}: expected a .pdf, .xml, .docx, .html, .json or .txt file")
     body = path.read_bytes()
-    sha = hashlib.sha256(body).hexdigest()
     with session() as db:
         seed_sources(db)
         src = db.get(Source, source_id)
@@ -293,6 +311,7 @@ def import_document(source_id: str, sitting_date: date, path: Path, url: str | N
             connector = registry()[src.connector](None)   # parse only: it must not fetch anything
         else:
             raise ValueError(f"{source_id}: no connector yet ({src.connector}); it needs a parser before files can be imported")
+        sha = _identity(connector, body)
         run = ScanRun(trigger="manual")
         db.add(run)
         db.commit()

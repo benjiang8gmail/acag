@@ -15,6 +15,9 @@ HEADER = ("# Fixtures\n\nReal files saved by `scripts/recon_fetch.py` (robots.tx
 RENAMED = {"2026-02-24-official.pdf": "2026-02-24-proof-P.pdf", "territorystories-1052298.pdf": "territorystories-1052298.html"}
 EXTRA = {"sources/NT-LA/full_record-10070-1052298.json":
          ("https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298", "2026-10-31"),
+         # The same record fetched again by the refresh scan: same day, same transcript, reshuffled extras.
+         "sources/NT-LA/full_record-10070-1052298-2026-11-01.json":
+         ("https://territorystories.nt.gov.au/api/full_record?handle=10070/1052298", "2026-11-01"),
          # 83 page texts from /api/content (page=0..82), combined into one file; each request is in the recon log.
          "sources/TAS/sittingdays-2026.html":
          ("https://search.parliament.tas.gov.au/search/quicksearch/2026/sittingdays.html", "2026-10-31"),

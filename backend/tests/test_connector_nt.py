@@ -91,3 +91,32 @@ def test_sides_from_the_member_list_and_offices(day):
     assert by_name["Ms UIBO"] == "opposition"
     turns = [s for s in day if s.speaker_name and kind(s) not in ("presiding",) and s.speaker_name != "Members"]
     assert sum(1 for s in turns if s.speaker_side != "unknown") / len(turns) >= 0.95
+
+
+# ---- whether the day changed ------------------------------------------------
+
+def test_two_real_responses_for_an_unchanged_day_share_one_fingerprint():
+    """Territory Stories answered the same record differently on 31 Oct and 1 Nov: six reshuffled
+    "related" recommendations, new relevance scores and a new query time. The transcript was the
+    same, so the day must not count as changed — before the fingerprint, every scan re-read all
+    83 pages of it."""
+    import hashlib
+    a = (FX / "full_record-10070-1052298.json").read_bytes()
+    b = (FX / "full_record-10070-1052298-2026-11-01.json").read_bytes()
+    assert hashlib.sha256(a).digest() != hashlib.sha256(b).digest()
+    c = NTConnector(None)
+    assert c.fingerprint(a) == c.fingerprint(b)
+
+
+@pytest.mark.parametrize("change", [
+    lambda r: r.update(title="Debates and Questions - Day 6 - 22 October 2026"),   # draft becomes final
+    lambda r: r.update(modified="2026-11-03T09:00:00.000Z"),                       # record re-issued
+    lambda r: r.update(pages=r["pages"][:-1]),                                      # page list differs
+])
+def test_the_fingerprint_moves_when_the_transcript_does(change):
+    import json as _json
+    raw = (FX / "full_record-10070-1052298.json").read_bytes()
+    data = _json.loads(raw)
+    change(data["results"][0])
+    c = NTConnector(None)
+    assert c.fingerprint(_json.dumps(data).encode()) != c.fingerprint(raw)

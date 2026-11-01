@@ -1,5 +1,24 @@
 # Progress
 
+## 1 Nov 2026: refresh scan — nothing new published, and a re-read bug it exposed
+
+### Done
+
+- **Ran a real scan (run 3, 00:05–00:10 UTC) with the current connectors against the live store**, then rebuilt the dashboard from it.
+  - **32 transcripts rechecked** against the parliaments' own sites — every proof within the 28-day recheck window. All unchanged: 10 answered 304 Not Modified (ACT, QLD), 21 were downloaded and hashed the same (CTH, NSW ignore conditional requests).
+  - **0 new or corrected speeches.** The ACT's 28–29 Oct are still unpublished (held pending). Tasmania's site still returns empty pages, so both chambers stay `error` with their watermark held.
+  - **All four dashboard datasets came out byte-identical**, so the dashboard's figures were already current. To make the refresh visible rather than silent, the dashboard now shows a **"last checked" line** from a new `scan` dataset: when, transcripts rechecked, new speeches, days awaiting publication, chambers unreadable.
+- **Fixed: NT re-read all 83 pages on every scan.** The refresh showed NT's day as "changed" with zero new speeches. Territory Stories embeds volatile fields in every record — six reshuffled "related records", relevance scores and the query time — so the raw hash changed on each request. Three real responses for the same unchanged day had three different hashes.
+  - Connectors may now define `fingerprint(raw) -> bytes`; `_identity()` hashes that instead of the raw bytes, for the scanner and manual import alike. NT's fingerprint is the record's own fields (title, `modified`, page list, file) without `related` and `resume`.
+  - All three real responses now share one fingerprint. A day re-checks in **1 request instead of 84**.
+  - The stored NT document still carries its old raw hash, so the next scan re-reads it once under the new rule; after that it is stable.
+
+### Evidence
+
+- `make test`: 162 backend tests pass. New: two **real** Territory Stories responses for the unchanged 22 Oct record (31 Oct and 1 Nov, now both fixtures) share a fingerprint despite different raw hashes; the fingerprint moves when the title (draft → final), `modified` or the page list changes; and in sync, a response whose only change is volatile noise counts as unchanged and is not re-parsed, while a content change still makes a new version.
+
+---
+
 ## 1 Nov 2026: the SA connector (listing complete) — and Tasmania was already built
 
 ### Done

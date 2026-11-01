@@ -11,6 +11,8 @@ robots.txt disallows `*.pdf`, `/search/` and `/api/` except `/api/content` and
   day's handle until the Parliament's own listing is reachable from the pilot network.
 - Document: `/api/full_record?handle=…` (title, date, page count, licence), keyed
   `ts:NT-LA:{date}`. "Draft Daily Hansard" = proof; "Debates and Questions" = final.
+  Whether it changed is decided by `fingerprint`, not the raw bytes: every response embeds
+  recommendations, scores and a query time that differ from one request to the next.
 - Text: `/api/content?handle=…&page=N` for each page (about 80 per day), via fetch_part.
   The text layer drops apostrophes and dashes ("governments commitment"), so quotes
   match this text, not always the PDF to the letter.
@@ -104,6 +106,16 @@ class NTConnector:
         return [DocumentRef(SOURCE, day.sitting_date, url=f"{API}/full_record?handle={handle}", format="json",
                             key=f"ts:{SOURCE}:{day.sitting_date.isoformat()}",
                             citation_url=f"https://hdl.handle.net/{handle}")]
+
+    def fingerprint(self, raw: bytes) -> bytes:
+        """What decides whether the day changed: the record's own fields (title, `modified`,
+        page list, file), without what Territory Stories varies on every request — the six
+        `related` records it recommends, relevance scores (`resume`) and the query `time`.
+        Hashing the whole response made every scan re-read all ~80 pages of an unchanged day."""
+        record = dict(json.loads(raw)["results"][0])
+        for volatile in ("related", "resume"):
+            record.pop(volatile, None)
+        return json.dumps(record, sort_keys=True, ensure_ascii=False).encode()
 
     def parse(self, raw: bytes, ref: DocumentRef, fetch_part: Callable[[str], bytes]) -> ParsedDocument:
         record = json.loads(raw)["results"][0]
