@@ -10,6 +10,8 @@
 - **Ran the search half here.** It confirms, by result title, nine final-version Victorian sitting days in the window — Assembly 8, 9, 10, 23, 24 Sep; Council 10, 22, 23, 24 Sep — now listed in `config/vic_hansard.yaml` (was three). Assembly 22 Sep and Council 8–9 Sep were not surfaced and may still exist.
 - **Found that the 60th Parliament rose on 24 September 2026** (valedictory statements; election 28 Nov). There are no October Victorian sittings to collect.
 
+- **Then tested with the environment's network access set to Full.** This session kept its starting policy (WebFetch still "outside the allowed domains"), so a one-step test session was started: it reached the host, and **the site answered HTTP 403 Forbidden**. Here WebFetch fetches from the session's own cloud network, which the Cloudflare check refuses, exactly as it refuses the scanner. The Cowork session's WebFetch runs on infrastructure the site admits, so its method does not carry over to this environment.
+
 ### Decisions
 
 - **D20. A fetch-and-summarise tool can verify Hansard but not supply it.** WebFetch answers questions about a PDF through a model with short quotes; it never yields the file. Its output can confirm sitting days, status and page ranges, or spot-check a mention, but the text stored behind a verbatim quote comes from the PDF bytes.
