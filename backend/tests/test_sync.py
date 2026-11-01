@@ -5,6 +5,7 @@ The fake parliament is a test double, not a fixture of any real source. Real
 connectors get their own tests against real fixtures (docs/sources.md).
 """
 from datetime import date
+from pathlib import Path
 
 import httpx
 import pytest
@@ -394,7 +395,7 @@ def test_manual_import_folder_takes_the_source_and_date_from_the_layout(env):
     results = import_folder(tmp / "drop", connectors={"fake": conn})
     assert [(r.get("source_id"), r.get("sitting_date"), r["result"]) for r in results] == [
         ("FK-LA", "2026-10-20", "new"), ("FK-LA", "2026-10-21", "new"),
-        (None, None, "skipped: the name must start with the sitting date")]
+        (None, None, "skipped: name it <SOURCE_ID>/<YYYY-MM-DD>.<ext>, or keep a Tasmanian download's own name")]
     assert count(SittingDay) == 2 and count(Speech) == 2
 
 
@@ -417,3 +418,33 @@ def test_a_fingerprint_keeps_a_response_with_only_volatile_changes_unchanged(env
     r = scan(today=date(2026, 10, 31)).per_source_json["FK-LA"]
     assert (r["changed_documents"], r["speeches_to_analyse"]) == (1, 1)
     assert count(Document) == 2
+
+
+def test_tasmanian_downloads_import_under_their_own_names(env):
+    """The real Word transcripts, named as the Parliament of Tasmania's search names its downloads,
+    dropped loose in a folder: no renaming, and the existing Tasmanian reader parses them."""
+    import shutil
+    site, conn, scan, tmp = env
+    fx = Path(__file__).parent / "fixtures" / "sources"
+    drop = tmp / "imports"
+    (drop / "from my browser").mkdir(parents=True)
+    shutil.copy(fx / "TAS-HA" / "2026-09-10.docx", drop / "HA Thursday 10 September 2026.docx")
+    shutil.copy(fx / "TAS-LC" / "2026-09-10.docx", drop / "from my browser" / "LC Thursday 10 September 2026.docx")
+    shutil.copy(fx / "TAS-HA" / "2026-09-10.docx", drop / "HA Friday 10 September 2026.docx")   # wrong weekday
+    (drop / "notes.txt").write_text("not hansard")
+    results = import_folder(drop)                      # the real registry: the Tasmanian connector
+    by_file = {r.get("file"): r for r in results}
+    assert by_file["HA Friday 10 September 2026.docx"]["result"] == \
+        "skipped: 10 September 2026 was a Thursday, not a Friday"
+    imported = [r for r in results if r["result"] == "new"]
+    assert sorted((r["source_id"], r["sitting_date"]) for r in imported) == \
+        [("TAS-HA", "2026-09-10"), ("TAS-LC", "2026-09-10")]
+    assert all(r["speeches"] > 50 and r["version"] == "proof" for r in imported)   # "Preliminary Transcript"
+    with db.session() as s:
+        docs = s.scalars(select(Document).where(Document.origin == "manual")).all()
+        assert len(docs) == 2 and {d.doc_key for d in docs} == {"docx:TAS-HA:2026-09-10", "docx:TAS-LC:2026-09-10"}
+        # party and side were filled from the Tasmanian member list, as for a scanned day
+        sides = {sp.speaker_side for sp in s.scalars(select(Speech)) if sp.speaker_name}
+        assert {"government", "opposition"} <= sides
+    # downloading the same files again changes nothing
+    assert {r["result"] for r in import_folder(drop) if r.get("source_id")} == {"unchanged"}

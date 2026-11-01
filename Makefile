@@ -45,8 +45,9 @@ scan:             ## Update: only new sitting days, changed documents and proofs
 import:           ## Manual import of one Hansard file (blocked sites): make import SRC=VIC-LA DATE=2026-09-24 FILE=/full/path.pdf [URL=https://...]
 	$(UV) python -m app.cli import $(SRC) $(DATE) $(FILE) $(URL)
 
-import-folder:    ## Manual import of a folder laid out as DIR/VIC-LA/2026-09-24.pdf: make import-folder DIR=/full/path
-	$(UV) python -m app.cli import-folder $(DIR)
+IMPORTS ?= $(CURDIR)/imports
+import-folder:    ## Import every Hansard file dropped in imports/ (or DIR=/full/path): VIC-LA/2026-09-24.pdf, or Tasmanian downloads under their own names
+	$(UV) python -m app.cli import-folder $(if $(DIR),$(DIR),$(IMPORTS))
 
 secret:           ## Print a new SESSION_SECRET for .env
 	@$(UV) python -m app.cli secret

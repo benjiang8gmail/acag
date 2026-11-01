@@ -23,7 +23,7 @@ make serve
 
 Browsing is open to everyone. Signing in (username `acag`, plus the password you set) is only needed to **refresh**, because a refresh will run paid AI analysis once the pipeline exists.
 
-**Check for updates** runs the real Hansard sync (`SCAN_MODE=real`, the default) for every parliament with a working connector: the federal Parliament, NSW, Queensland, Tasmania, the ACT and the NT so far. Victoria, South Australia and Western Australia block the scanner from this network and show why they weren't checked; their Hansard can be imported by hand (`make import`), see `docs/sources.md`. Briefs and items are still sample data until AI analysis is built. `SCAN_MODE=sample` replays the prototype's sample scan instead.
+**Check for updates** runs the real Hansard sync (`SCAN_MODE=real`, the default) for every parliament with a working connector: the federal Parliament, NSW, Queensland, Tasmania, the ACT and the NT so far. Victoria, South Australia and Western Australia block the scanner from this network and show why they weren't checked; their Hansard can be imported by hand: drop the files in `imports/` and run `make import-folder` (see `imports/README.md`). Briefs and items are still sample data until AI analysis is built. `SCAN_MODE=sample` replays the prototype's sample scan instead.
 
 ## Test
 

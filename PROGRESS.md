@@ -1,5 +1,26 @@
 # Progress
 
+## 1 Nov 2026: Tasmania — not an outage; downloads import under their own names
+
+### Done
+
+- **Corrected the record on Tasmania.** The product owner can use `search.parliament.tas.gov.au` in a browser right now (choose 2026, open a day, download the Word document), while every search path, including the `/search/search/` entry point, still gives this scanner HTTP 200 with 0 bytes (checked 01:06 UTC). So it is not an outage, as recorded last night; the site gives automated clients from here empty pages. The scanner is not disguised as a browser to get past that.
+- **Made the working route easy: Word files downloaded by hand.** These are exactly what the Tasmanian reader was built and tested on.
+  - `make import-folder` now takes files under the names the Parliament's search gives its downloads ("HA Tuesday 1 September 2026.docx", "LC …"), anywhere under the folder, so nothing needs renaming. The house and date come from the name, and a weekday that does not match its date is rejected.
+  - A tracked drop folder, `imports/`, with a README covering how to add files without git (GitHub → Add file → Upload files).
+  - `make import-folder` reads `imports/` by default (`DIR=` still works).
+- **Dashboard:** Tasmania's status is now "empty pages" ("the site answers the scanner with empty pages although it works in a browser"), its Needs column reads "Word files downloaded by hand", and the "working route" count no longer counts it (6 → 5). Nothing else changed: the data files are byte-identical to what was published.
+
+### Evidence
+
+- `make test`: 163 backend tests pass. New: the **real** Tasmanian Word transcripts (House of Assembly and Council, 10 Sep 2026), saved under the site's own download names, one loose and one in a subfolder, import end to end through the existing reader (over 50 speeches each, draft flag read, party and side filled from the member list); a wrong weekday is rejected; downloading the same files again changes nothing.
+
+### Next
+
+- Tasmania's September sitting days (House of Assembly 1–3, 8–10; Council 1–3, 8–11), downloaded as Word files into `imports/`, then `make import-folder` and a dashboard refresh.
+
+---
+
 ## 1 Nov 2026: Victorian readers via Cowork — stopped after the site cut that route off
 
 ### Done

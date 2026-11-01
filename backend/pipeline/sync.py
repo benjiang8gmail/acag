@@ -358,17 +358,41 @@ def import_document(source_id: str, sitting_date: date, path: Path, url: str | N
                 "result": result, "version": version, "speeches": c.speeches_to_analyse, "run_id": run.id}
 
 
+# What the Parliament of Tasmania's document search names its downloads: "HA Tuesday 1 September 2026.docx".
+RE_TAS_DOWNLOAD = re.compile(r"^(?P<house>HA|LC)\s+(?P<weekday>[A-Za-z]+day)\s+(?P<day>\d{1,2})\s+(?P<month>[A-Za-z]+)\s+(?P<year>\d{4})\b")
+
+
+def _source_and_date(f: Path) -> tuple[str, date] | str:
+    """Where a dropped file belongs: `<SOURCE_ID>/<YYYY-MM-DD>...` (any parliament), or a Tasmanian
+    download kept under the name the Parliament gave it, anywhere in the folder. Otherwise, why not."""
+    m = re.match(r"(\d{4}-\d{2}-\d{2})", f.name)
+    if m:
+        return f.parent.name, date.fromisoformat(m.group(1))
+    m = RE_TAS_DOWNLOAD.match(f.name)
+    if m:
+        try:
+            when = datetime.strptime(f"{m['day']} {m['month']} {m['year']}", "%d %B %Y").date()
+        except ValueError:
+            return f"skipped: {m['day']} {m['month']} {m['year']} is not a date"
+        if when.strftime("%A").lower() != m["weekday"].lower():
+            return f"skipped: {when:%-d %B %Y} was a {when:%A}, not a {m['weekday']}"
+        return ("TAS-HA" if m["house"] == "HA" else "TAS-LC"), when
+    return "skipped: name it <SOURCE_ID>/<YYYY-MM-DD>.<ext>, or keep a Tasmanian download's own name"
+
+
 def import_folder(folder: Path, connectors: dict[str, HansardConnector] | None = None) -> list[dict]:
-    """Import every `<folder>/<SOURCE_ID>/<YYYY-MM-DD>[ anything].<ext>` (e.g. VIC-LA/2026-09-24.pdf)."""
+    """Import every Hansard file under `folder`: `<SOURCE_ID>/<YYYY-MM-DD>[ anything].<ext>`
+    (e.g. VIC-LA/2026-09-24.pdf), or a Tasmanian download under its own name anywhere in the
+    folder (e.g. "HA Tuesday 1 September 2026.docx"), so files need no renaming."""
     out = []
-    for f in sorted(Path(folder).glob("*/*")):
-        if f.suffix.lower() not in IMPORT_FORMATS or not f.is_file():
+    for f in sorted(p for p in Path(folder).rglob("*") if p.is_file()):
+        if f.suffix.lower() not in IMPORT_FORMATS or f.name.startswith("."):
             continue
-        m = re.match(r"(\d{4}-\d{2}-\d{2})", f.name)
-        if not m:
-            out.append({"file": f"{f.parent.name}/{f.name}", "result": "skipped: the name must start with the sitting date"})
+        where = _source_and_date(f)
+        if isinstance(where, str):
+            out.append({"file": str(f.relative_to(folder)), "result": where})
             continue
-        out.append(import_document(f.parent.name, date.fromisoformat(m.group(1)), f, connectors=connectors))
+        out.append(import_document(where[0], where[1], f, connectors=connectors))
     return out
 
 
