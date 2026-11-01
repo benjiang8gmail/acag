@@ -1,5 +1,21 @@
 # Progress
 
+## 1 Nov 2026: Victorian readers via Cowork — stopped after the site cut that route off
+
+### Done
+
+- **Tried to read the ten Victorian sitting days with Cowork sessions**, the environment where WebFetch had been admitted, with a pilot first. Each reader was to read the whole day in parts, list every Auditor-General mention, then re-read to confirm each quote, keeping only confirmed ones.
+- **Both pilots failed with `client_error`, nothing retrieved** — first with an older link, then with the link web search shows as current, so it is not a stale-link problem. The readers reported this plainly instead of inventing output.
+- **The user's own Cowork audit session was refused at the same moment:** 13 consecutive failures from 00:50 to 00:53 UTC across nine documents, after reading the same PDFs successfully until 00:29. The Parliament's site stopped serving that route at about 00:50 UTC, most likely a rate limit after many large PDFs were paged through in parallel.
+- **Stopped there:** the other nine readers were not started, and nothing was retried in a loop. The dashboard is unchanged.
+- `tools/merge_vic.py` (scratchpad) is ready to turn readers' results into the dashboard's Victorian data — party and side from `config/members/VIC.yaml`, only re-checked quotes kept — if the route comes back.
+
+### Next
+
+- Victoria still needs its PDFs in hand: downloaded in a browser and imported, or read later at a gentle pace (one reader, one day at a time) if the Cowork route recovers.
+
+---
+
 ## 1 Nov 2026: Victoria on the dashboard — what is exact without the transcripts
 
 ### Done
