@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hansard Watch</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="What Australia's parliaments are saying about their Auditors-General: a snapshot of real Hansard data, 1 Nov 2026.">
+<style>
+/* Layout: the prototype's app shell. Fixed header, one scrolling page column (max 1200px), bottom tab bar under 768px. Fluent 2 tokens, light and dark. */
+:root {
+  --bg: #f5f5f5; --card: #ffffff; --fg: #242424; --fg2: #424242; --fg3: #616161;
+  --line: #e0e0e0; --line2: #f0f0f0; --stroke: #d1d1d1; --hover: #f5f5f5; --soft: #fafafa;
+  --brand: #0f6cbd; --brand-bg: #0f6cbd; --brand-bg-hover: #115ea3; --on-brand: #ffffff;
+  --brand-tint: #ebf3fc; --brand-tint2: #f5f9fe; --brand-line: #b4d6fa;
+  --ok: #0e700e; --ok-bg: #f1faf1; --ok-dot: #107c10; --warn: #bc4b09; --warn-bg: #fff4ec; --warn-line: #fdcfb4;
+  --bad: #b10e1c; --bad-bg: #fdf3f4; --gap: #ca5010; --hl: #fff4ce; --hl-fg: #242424;
+  --gov: #0f6cbd; --opp: #8764b8; --cross: #ca5010; --wit: #498205; --unk: #a3a3a3;
+  --heat0: #fafafa; --heat1: #ebf3fc; --heat2: #cfe4fa; --heat3: #96c6fa; --heat4: #62abf5;
+  --scrim: rgba(0,0,0,.32); --toast-bg: #242424; --toast-fg: #ffffff;
+  --shadow2: 0 1px 2px rgba(0,0,0,.14), 0 0 2px rgba(0,0,0,.12);
+  --shadow4: 0 2px 4px rgba(0,0,0,.14), 0 0 2px rgba(0,0,0,.12);
+  --shadow8: 0 4px 8px rgba(0,0,0,.14), 0 0 2px rgba(0,0,0,.12);
+  --shadow16: 0 8px 16px rgba(0,0,0,.14), 0 0 2px rgba(0,0,0,.12);
+  --font: 'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --btn-h: 32px; --seg-h: 30px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #141414; --card: #242424; --fg: #f2f2f2; --fg2: #d6d6d6; --fg3: #adadad;
+  --line: #3d3d3d; --line2: #2e2e2e; --stroke: #575757; --hover: #2e2e2e; --soft: #1f1f1f;
+  --brand: #62abf5; --brand-bg: #115ea3; --brand-bg-hover: #0f6cbd; --on-brand: #ffffff;
+  --brand-tint: #0f2a45; --brand-tint2: #102236; --brand-line: #2b5f99;
+  --ok: #6ccb5f; --ok-bg: #0f2d0f; --ok-dot: #54b054; --warn: #faa06b; --warn-bg: #3a1d0a; --warn-line: #7a3a12;
+  --bad: #ee8f98; --bad-bg: #3d1216; --gap: #e97548; --hl: #6b5500; --hl-fg: #ffffff;
+  --gov: #62abf5; --opp: #b9a1e6; --cross: #f1915d; --wit: #8fce4a; --unk: #8a8a8a;
+  --heat0: #1f1f1f; --heat1: #12304d; --heat2: #1b4a78; --heat3: #2a6cad; --heat4: #3f8fe0;
+  --scrim: rgba(0,0,0,.6); --toast-bg: #f2f2f2; --toast-fg: #141414;
+  --shadow2: 0 1px 2px rgba(0,0,0,.5), 0 0 2px rgba(0,0,0,.4);
+  --shadow4: 0 2px 4px rgba(0,0,0,.5), 0 0 2px rgba(0,0,0,.4);
+  --shadow8: 0 4px 8px rgba(0,0,0,.5), 0 0 2px rgba(0,0,0,.4);
+  --shadow16: 0 8px 16px rgba(0,0,0,.55), 0 0 2px rgba(0,0,0,.4);
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #141414; --card: #242424; --fg: #f2f2f2; --fg2: #d6d6d6; --fg3: #adadad;
+  --line: #3d3d3d; --line2: #2e2e2e; --stroke: #575757; --hover: #2e2e2e; --soft: #1f1f1f;
+  --brand: #62abf5; --brand-bg: #115ea3; --brand-bg-hover: #0f6cbd; --on-brand: #ffffff;
+  --brand-tint: #0f2a45; --brand-tint2: #102236; --brand-line: #2b5f99;
+  --ok: #6ccb5f; --ok-bg: #0f2d0f; --ok-dot: #54b054; --warn: #faa06b; --warn-bg: #3a1d0a; --warn-line: #7a3a12;
+  --bad: #ee8f98; --bad-bg: #3d1216; --gap: #e97548; --hl: #6b5500; --hl-fg: #ffffff;
+  --gov: #62abf5; --opp: #b9a1e6; --cross: #f1915d; --wit: #8fce4a; --unk: #8a8a8a;
+  --heat0: #1f1f1f; --heat1: #12304d; --heat2: #1b4a78; --heat3: #2a6cad; --heat4: #3f8fe0;
+  --scrim: rgba(0,0,0,.6); --toast-bg: #f2f2f2; --toast-fg: #141414;
+  --shadow2: 0 1px 2px rgba(0,0,0,.5), 0 0 2px rgba(0,0,0,.4);
+  --shadow4: 0 2px 4px rgba(0,0,0,.5), 0 0 2px rgba(0,0,0,.4);
+  --shadow8: 0 4px 8px rgba(0,0,0,.5), 0 0 2px rgba(0,0,0,.4);
+  --shadow16: 0 8px 16px rgba(0,0,0,.55), 0 0 2px rgba(0,0,0,.4);
+  color-scheme: dark }
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--fg); font: 14px/1.45 var(--font); -webkit-text-size-adjust: 100%; }
+a { color: var(--brand); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+button { font: inherit; color: inherit; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+.mob { --btn-h: 44px; --seg-h: 40px; }
+
+.shell { height: 100%; display: flex; flex-direction: column; overflow: hidden; }
+#main { flex: 1; overflow: auto; position: relative; }
+.page { max-width: 1200px; margin: 0 auto; padding-block: 24px 40px; padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 24px; }
+.mob .page { padding-block: 16px 28px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Header */
+.hdr { position: relative; z-index: 30; flex: none; background: var(--card); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
+.hdr-row { height: 48px; display: flex; align-items: center; gap: 12px; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.hdr-brand { flex: none; width: 140px; font-size: 16px; font-weight: 600; }
+.hdr-mrow { display: flex; align-items: center; gap: 4px; padding: 6px max(4px, env(safe-area-inset-right, 0px)) 6px max(16px, env(safe-area-inset-left, 0px)); }
+.grow { flex: 1; min-width: 0; }
+.pop { position: relative; flex: none; }
+.picker { height: 32px; display: flex; align-items: center; gap: 8px; padding: 0 10px; border: 1px solid var(--stroke); border-radius: 4px; background: var(--card); cursor: pointer; }
+.picker:hover { background: var(--hover); }
+.picker.on { border-color: var(--brand); background: var(--brand-tint); color: var(--brand); font-weight: 600; }
+.picker .lbl { flex: 1; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dot { flex: none; display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
+.statusbtn { height: 32px; display: flex; align-items: center; gap: 8px; padding: 0 10px; border: none; border-radius: 4px; background: transparent; font-size: 13px; color: var(--fg2); cursor: pointer; white-space: nowrap; }
+.statusbtn:hover { background: var(--hover); }
+.newbtn { height: 28px; padding: 0 12px; border: none; border-radius: 999px; background: var(--brand-tint); color: var(--brand); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.mob .newbtn { min-height: 36px; }
+.iconbtn { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border: none; border-radius: 4px; background: transparent; cursor: pointer; font-size: 18px; line-height: 1; }
+.iconbtn:hover { background: var(--hover); }
+.iconbtn.on { background: var(--brand-tint); color: var(--brand); }
+.mob .iconbtn { width: 44px; height: 44px; font-size: 20px; }
+.jurpill { min-height: 40px; display: flex; align-items: center; gap: 6px; padding: 0 12px; border: 1px solid var(--stroke); border-radius: 999px; background: var(--card); font-weight: 600; cursor: pointer; }
+.tabs { display: flex; gap: 4px; height: 44px; padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); overflow-x: auto; scrollbar-width: none; }
+.tabs button { flex: none; background: none; border: none; border-bottom: 2px solid transparent; color: var(--fg2); padding: 0 12px; cursor: pointer; }
+.tabs button:hover { color: var(--brand); }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--brand); color: var(--brand); font-weight: 600; }
+.strip { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px)); border-top: 1px solid var(--line); background: var(--soft); font-size: 13px; }
+.strip .grow { flex: 1 1 240px; }
+
+/* Bottom tab bar */
+.bnav { flex: none; display: grid; grid-template-columns: repeat(5, 1fr); background: var(--card); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+.bnav button { height: 62px; border: none; border-top: 2px solid transparent; background: none; font-size: 11px; color: var(--fg2); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; padding: 0; }
+.bnav button[aria-current="page"] { border-top-color: var(--brand); color: var(--brand); font-weight: 600; }
+.bnav svg { width: 22px; height: 22px; }
+
+/* Page heading */
+.pghead { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.pghead-text { flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.kicker { font-size: 13px; font-weight: 600; color: var(--fg3); }
+h1 { margin: 0; font-size: 28px; font-weight: 600; line-height: 1.2; text-wrap: balance; }
+.mob h1 { font-size: 22px; }
+.pgsub { font-size: 13px; color: var(--fg3); max-width: 760px; }
+.actions-top { position: relative; display: flex; gap: 8px; }
+.mchips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: -12px; }
+.mchip { min-height: 36px; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: 13px; cursor: pointer; }
+.mchip.on { border-color: var(--brand); background: var(--brand-tint); color: var(--brand); font-weight: 600; }
+
+/* Buttons */
+.btn { min-height: var(--btn-h); display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; border-radius: 4px; border: 1px solid var(--stroke); background: var(--card); color: var(--fg); font-weight: 600; cursor: pointer; text-decoration: none; white-space: nowrap; }
+.btn:hover { background: var(--hover); color: var(--fg); }
+.btn.primary { background: var(--brand-bg); border-color: transparent; color: var(--on-brand); }
+.btn.primary:hover { background: var(--brand-bg-hover); color: var(--on-brand); }
+.btn.subtle { border-color: transparent; background: transparent; color: var(--brand); padding: 0 8px; }
+.btn.subtle:hover { background: var(--brand-tint); }
+.btn[disabled] { opacity: .45; cursor: default; }
+.linkbtn { border: none; background: none; padding: 0; color: var(--brand); cursor: pointer; text-align: left; font-size: 12px; }
+.linkbtn:hover { text-decoration: underline; }
+
+/* Cards, grids */
+.card { background: var(--card); border-radius: 8px; box-shadow: var(--shadow2); padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.card.raised { box-shadow: var(--shadow4); gap: 10px; }
+.card.dashed { background: transparent; box-shadow: none; border: 1px dashed var(--stroke); gap: 10px; justify-content: center; }
+.card.dashed .btn { white-space: normal; text-align: left; padding-block: 6px; }
+.grid { display: grid; gap: 12px; }
+.g-hero { grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); }
+.g-tiles { grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); }
+.g-2 { grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); }
+.card-head { display: flex; align-items: center; gap: 8px; }
+.card-title { margin: 0; font-size: 16px; font-weight: 600; }
+.card-head .card-title { flex: 1; }
+.note { font-size: 12px; color: var(--fg3); }
+.s13 { font-size: 13px; }
+.muted { color: var(--fg3); }
+.fg2 { color: var(--fg2); }
+.nowrap { white-space: nowrap; }
+.row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.stack { display: flex; flex-direction: column; gap: 10px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
+.headline { all: unset; cursor: pointer; font-size: 16px; font-weight: 600; line-height: 1.3; }
+.headline:hover { text-decoration: underline; }
+.headline:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.quote { font-style: italic; color: var(--fg); }
+.clamp3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.clamp4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.list-btn { display: flex; flex-direction: column; gap: 4px; width: 100%; padding: 10px 0; border: none; border-top: 1px solid var(--line2); background: none; text-align: left; cursor: pointer; }
+.list-btn:hover { background: var(--soft); }
+.list-btn .top { display: flex; gap: 8px; align-items: baseline; width: 100%; }
+.list-btn .top > :first-child { flex: 1; font-weight: 600; min-width: 0; }
+.ai { font-size: 12px; color: var(--fg3); }
+.info { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 4px; font-size: 13px; background: var(--brand-tint); border: 1px solid var(--brand-line); }
+.info.warn { background: var(--warn-bg); border-color: var(--warn-line); }
+
+/* Pills, chips, bars */
+.pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; background: var(--line2); color: var(--fg2); }
+.pill.thin { padding: 1px 8px; }
+.pill.plain { font-weight: 400; }
+.pill.brand { background: var(--brand-tint); color: var(--brand); }
+.pill.new { background: var(--brand-bg); color: var(--on-brand); }
+.pill.ok { background: var(--ok-bg); color: var(--ok); }
+.pill.warn { background: var(--warn-bg); color: var(--warn); }
+.pill.bad { background: var(--bad-bg); color: var(--bad); }
+.chip { min-height: var(--seg-h); padding: 0 10px; border-radius: 999px; border: 1px solid var(--stroke); background: var(--card); color: var(--fg2); font-size: 13px; cursor: pointer; white-space: nowrap; }
+.chip.on { background: var(--brand-tint); color: var(--brand); border-color: var(--brand); font-weight: 600; }
+.chip.sq { border-radius: 4px; }
+.sbar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: var(--line2); }
+.sbar.thin { height: 6px; border-radius: 3px; }
+.sbar > span { display: block; height: 100%; }
+.meter { flex: 1; display: block; height: 6px; border-radius: 3px; background: var(--line2); overflow: hidden; min-width: 24px; }
+.meter > span { display: block; height: 100%; background: var(--brand); }
+.seg { display: flex; border: 1px solid var(--stroke); border-radius: 4px; overflow: hidden; }
+.seg button { min-height: var(--seg-h); padding: 0 10px; border: none; background: var(--card); color: var(--fg2); font-size: 13px; cursor: pointer; white-space: nowrap; }
+.seg button[aria-checked="true"] { background: var(--brand-bg); color: var(--on-brand); font-weight: 600; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--fg3); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+
+/* Tiles */
+.tile { text-align: left; cursor: pointer; background: var(--card); border: none; border-radius: 8px; box-shadow: var(--shadow2); padding: 12px 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.tile:hover { box-shadow: var(--shadow8); }
+.tile-n { font-size: 28px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.cmp { font-size: 12px; color: var(--brand); font-weight: 600; }
+
+/* Tile map */
+.ausmap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(4, 58px); gap: 6px; max-width: 380px; }
+.ausmap button { border: none; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; color: var(--fg); padding: 0; outline: 1px solid var(--line); outline-offset: -1px; font-variant-numeric: tabular-nums; }
+.ausmap button.you { outline: 2px solid var(--brand); outline-offset: 2px; }
+.ausmap .t1 { font-size: 13px; font-weight: 600; } .ausmap .t2 { font-size: 13px; } .ausmap .t3 { font-size: 10px; color: var(--fg3); }
+
+/* Tables */
+.tablewrap { overflow-x: auto; }
+table.data { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+table.data th { text-align: left; font-size: 12px; font-weight: 400; color: var(--fg3); padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.data td { padding: 8px; border-bottom: 1px solid var(--line2); vertical-align: middle; }
+table.data tr.you td { background: var(--brand-tint2); }
+table.data td.num, table.data th.num { text-align: right; }
+.trow { display: grid; gap: 8px; align-items: center; width: 100%; padding: 8px; border: none; border-top: 1px solid var(--line2); background: transparent; text-align: left; cursor: pointer; min-height: 40px; }
+.trow:hover { background: var(--hover); }
+.agrow { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; width: 100%; padding: 10px; border: none; border-radius: 4px; background: transparent; text-align: left; cursor: pointer; font-size: 13px; }
+.agrow:hover { background: var(--hover); }
+.agrow.sel { background: var(--brand-tint2); box-shadow: inset 0 0 0 1px var(--brand); }
+.heat { display: grid; gap: 3px; font-size: 12px; }
+.heat .lbl { display: flex; align-items: center; border: none; background: transparent; padding: 0 4px; border-radius: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; text-align: left; font-size: 12px; min-width: 0; }
+.heat .lbl:hover { background: var(--line2); }
+.heat .lbl.on { background: var(--brand-tint); font-weight: 700; }
+.heat .cell { height: 30px; border: none; border-radius: 3px; font-size: 12px; cursor: pointer; padding: 0; font-variant-numeric: tabular-nums; }
+.heat .cell.you { box-shadow: inset 0 0 0 2px var(--brand); }
+.heat .cell[disabled] { cursor: default; }
+
+/* Menus and sheets */
+.popmenu { position: absolute; top: calc(100% + 4px); left: 0; z-index: 50; background: var(--card); border-radius: 8px; box-shadow: var(--shadow16); padding: 4px; max-height: min(640px, 75vh); overflow: auto; }
+.popmenu.right { left: auto; right: 0; }
+.menu-head { padding: 10px 12px 6px; font-size: 12px; color: var(--fg3); }
+.menu-item { display: flex; width: 100%; align-items: center; gap: 10px; min-height: 44px; padding: 4px 12px; border: none; border-radius: 4px; background: transparent; text-align: left; cursor: pointer; }
+.menu-item:hover { background: var(--hover); }
+.menu-item[aria-checked="true"] { background: var(--line2); }
+.menu-item .check { width: 16px; flex: none; color: var(--brand); font-weight: 700; }
+.menu-foot { border-top: 1px solid var(--line); margin-top: 4px; padding: 8px 12px; font-size: 12px; color: var(--fg3); }
+.status-row { display: flex; gap: 10px; padding: 8px 12px; border-top: 1px solid var(--line2); font-size: 13px; align-items: baseline; }
+.status-row .ic { width: 14px; flex: none; font-weight: 700; }
+.status-row .nm { flex: 0 0 38%; font-weight: 600; }
+.status-row .tx { flex: 1; min-width: 0; color: var(--fg2); font-size: 12px; }
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 45; }
+.sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 46; background: var(--card); border-radius: 12px 12px 0 0; box-shadow: var(--shadow16); padding: 4px 4px calc(8px + env(safe-area-inset-bottom, 0px)); max-height: 82%; overflow: auto; }
+.sheet::before { content: ""; display: block; width: 36px; height: 4px; border-radius: 2px; background: var(--stroke); margin: 6px auto 4px; }
+
+/* Drawer and dialogs */
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(480px, 100%); z-index: 60; background: var(--card); box-shadow: -8px 0 16px rgba(0,0,0,.18); display: flex; flex-direction: column; padding-top: env(safe-area-inset-top, 0px); }
+.drawer-head { flex: none; display: flex; align-items: center; gap: 8px; padding: 12px 12px 12px 20px; border-bottom: 1px solid var(--line); }
+.drawer-head h2 { flex: 1; margin: 0; font-size: 16px; font-weight: 600; }
+.drawer-body { flex: 1; overflow: auto; padding: 20px 20px calc(24px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 14px; }
+.d-title { font-size: 20px; font-weight: 600; line-height: 1.25; margin: 0; }
+.d-sec { font-size: 14px; font-weight: 600; margin: 4px 0 0; }
+.aibox { background: var(--soft); border: 1px solid var(--line2); border-radius: 4px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.bq { border-left: 3px solid var(--brand); padding: 2px 0 2px 12px; font-size: 15px; font-style: italic; margin: 0; }
+.bq.grey { border-left-color: var(--unk); font-size: 14px; }
+.rel { display: flex; flex-direction: column; gap: 2px; width: 100%; padding: 8px 0; border: none; border-top: 1px solid var(--line2); background: none; text-align: left; cursor: pointer; }
+.rel > :last-child { font-size: 13px; font-weight: 600; color: var(--brand); }
+dl.kv { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 12px; font-size: 13px; }
+dl.kv dt { color: var(--fg3); } dl.kv dd { margin: 0; }
+.dialog { position: fixed; z-index: 70; left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(100% - 32px); max-width: 460px; max-height: calc(100% - 32px); overflow: auto; background: var(--card); border-radius: 8px; box-shadow: 0 16px 32px rgba(0,0,0,.24); padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.dialog h2 { flex: 1; margin: 0; font-size: 20px; font-weight: 600; }
+.field { flex: 1; min-width: 0; height: 40px; border: 1px solid var(--stroke); border-bottom-color: var(--fg3); border-radius: 4px; padding: 0 10px; font: inherit; color: var(--fg); background: var(--card); }
+.search { position: relative; flex: 1; min-width: 0; }
+.search input { width: 100%; padding-left: 34px; }
+.search svg { position: absolute; left: 11px; top: 11px; width: 18px; height: 18px; color: var(--fg3); }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(24px + env(safe-area-inset-bottom, 0px)); z-index: 80; background: var(--toast-bg); color: var(--toast-fg); padding: 10px 16px; border-radius: 4px; font-size: 13px; box-shadow: var(--shadow16); max-width: calc(100% - 32px); }
+.mob .toast { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+.tip { position: fixed; z-index: 90; pointer-events: none; background: var(--toast-bg); color: var(--toast-fg); font-size: 12px; padding: 6px 8px; border-radius: 4px; box-shadow: var(--shadow8); max-width: 240px; }
+mark { background: var(--hl); color: var(--hl-fg); border-radius: 2px; }
+details > summary { cursor: pointer; font-weight: 600; }
+details[open] > summary { margin-bottom: 8px; }
+
+/* First run */
+.ob { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.ob-scroll { flex: 1; min-height: 0; overflow: auto; padding-block: 24px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.ob-card { max-width: 760px; margin: 0 auto; background: var(--card); border-radius: 8px; box-shadow: var(--shadow16); padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+.ob-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr)); gap: 8px; }
+.ob-jur { display: flex; align-items: center; gap: 10px; padding: 10px 12px; min-height: 56px; border-radius: 4px; border: 1px solid var(--line); background: var(--card); text-align: left; cursor: pointer; }
+.ob-jur:hover { background: var(--brand-tint2); }
+.ob-jur[aria-checked="true"] { border: 2px solid var(--brand); background: var(--brand-tint); }
+.ob-badge { flex: none; width: 36px; height: 36px; border-radius: 4px; background: var(--line2); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; }
+.ob-foot { flex: none; background: var(--card); border-top: 1px solid var(--line); box-shadow: 0 -2px 8px rgba(0,0,0,.06); padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.ob-foot > div { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="app" class="shell"><div style="margin:auto;color:var(--fg3)">Loading Hansard Watch…</div></div>
+<noscript><p style="padding:24px">Hansard Watch needs JavaScript to show its data.</p></noscript>
+<script type="application/json" id="hw-data">__HW_DATA__</script>
+<script>
+(() => {
+'use strict';
+
+// ---------------------------------------------------------------- data
+const D = JSON.parse(document.getElementById('hw-data').textContent);
+const J = D.jurisdictions, CODES = J.map(j => j.code), BY = Object.fromEntries(J.map(j => [j.code, j]));
+const SECT = Object.fromEntries(D.sectors.map(s => [s.id, s]));
+const AS_OF = D.asOf, NEW_FROM = addDays(AS_OF, -7);
+const VIC_FROM = '2026-02-03', VIC_LAST = '2026-09-24';
+const PERIODS = {
+  '2w': { days: 14, label: 'Last 2 weeks', menu: 'Last 2 weeks', title: 'This fortnight in 30 seconds' },
+  '4w': { days: 28, label: 'Last 4 weeks', menu: 'Last 4 weeks', title: 'The last 4 weeks in 30 seconds' },
+  '2m': { days: 61, label: 'Last 2 months', menu: 'Last 2 months', title: 'The last 2 months in 30 seconds' },
+  'all': { from: VIC_FROM, label: 'Since February', menu: 'Everything stored', title: 'Since February in 30 seconds' },
+};
+const SIDES = {
+  government: ['Government', 'var(--gov)'], opposition: ['Opposition', 'var(--opp)'], crossbench: ['Crossbench', 'var(--cross)'],
+  witness: ['Witness', 'var(--wit)'], chair: ['Chair or procedural', 'var(--unk)'], unknown: ['Side unknown', 'var(--unk)'],
+};
+const KIND = { speech: 'Speech', answer: 'Answer', question: 'Question', statement: 'Statement', procedural: 'Procedural', presiding: 'Presiding officer', committee: 'Committee hearing' };
+const STANCE = {
+  'attack': ['Cites VAGO against the government', 'warn', 'Uses VAGO’s findings to criticise the government.'],
+  'defend': ['Defends against VAGO findings', 'bad', 'Defends the government against VAGO’s findings or commentary.'],
+  'institutional': ['About VAGO itself', 'brand', 'About VAGO as an institution: its independence, funding or conduct.'],
+  'neutral': ['Neutral reference', '', 'A factual reference with no stance on the office.'],
+  'attack on VAGO': ['Criticises VAGO', 'bad', 'Criticises VAGO or its work directly.'],
+  'call for audit': ['Asks for an audit', 'ok', 'Asks the Auditor-General to examine something.'],
+};
+// VAGO's own sectors, mapped to the nearest ACAG sectors so the sector filter reaches Victorian topics and themes.
+const VSEC = {
+  'Transport & infrastructure': ['transport'], 'Environment & planning': ['environment', 'emergency', 'local-government'],
+  'Justice & regulation': ['justice'], 'Communities & families': ['health', 'education', 'housing', 'child-protection', 'disability'],
+  'Public administration': ['finance', 'integrity', 'workforce', 'digital', 'procurement'],
+};
+const TABS = [['brief', 'Brief'], ['compare', 'Compare'], ['mentions', 'Mentions'], ['dev', 'Developments'], ['gaps', 'Potential gaps'], ['explore', 'Explore']];
+const TAB_NAME = Object.fromEntries(TABS);
+const DEV_TYPES = ['Mandate', 'Resourcing', 'Governance', 'Audit requests', 'Program', 'Responses', 'New reports'];
+const VIC = D.vic;
+const tabledByTitle = new Map(VIC.tabled.map(t => [norm(t.title), t]));
+for (const m of D.mentions) {
+  m.side = m.side || ((m.kind === 'procedural' || m.kind === 'presiding') ? 'chair' : 'unknown');
+  m.tabled = m.report ? findTabled(m.report) : null;
+}
+
+// ---------------------------------------------------------------- helpers
+function norm(s) { return String(s || '').toLowerCase().replace(/\(.*?\)/g, '').replace(/[^a-z0-9]+/g, ' ').trim(); }
+function findTabled(rep) { const n = norm(rep); for (const [k, t] of tabledByTitle) if (k && (n === k || n.startsWith(k) || k.startsWith(n))) return t; return null; }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : null; }
+function parse(iso) { return new Date(iso + 'T00:00:00Z'); }
+function addDays(iso, n) { const d = parse(iso); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+const WD = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MO = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function fmtDay(iso) { if (!iso) return ''; const d = parse(iso); const y = d.getUTCFullYear() !== 2026 ? ' ' + d.getUTCFullYear() : ''; return `${WD[d.getUTCDay()]} ${d.getUTCDate()} ${MO[d.getUTCMonth()]}${y}`; }
+function fmtShort(iso) { const d = parse(iso); return `${d.getUTCDate()} ${MO[d.getUTCMonth()]}`; }
+function fmtLong(iso) { const d = parse(iso); return `${d.getUTCDate()} ${['January','February','March','April','May','June','July','August','September','October','November','December'][d.getUTCMonth()]} ${d.getUTCFullYear()}`; }
+function fmtRange(a, b) { const x = parse(a), y = parse(b); return x.getUTCMonth() === y.getUTCMonth() ? `${x.getUTCDate()}–${fmtShort(b)}` : `${fmtShort(a)} – ${fmtShort(b)}`; }
+function plural(n, one, many) { return `${n.toLocaleString('en-AU')} ${n === 1 ? one : (many || one + 's')}`; }
+function pct(a, t) { return (t ? Math.round(a / t * 100) : 0) + '%'; }
+function ord(n) { const s = n % 100 >= 11 && n % 100 <= 13 ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th'); return n + s; }
+function median(a) { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor((s.length - 1) / 2)] : 0; }
+function lc(s) { return s ? s.charAt(0).toLowerCase() + s.slice(1) : s; }
+function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+const ICON = {
+  search: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4.5 4.5" stroke-linecap="round"/></svg>',
+  share: '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3H3.5A1.5 1.5 0 0 0 2 4.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V10M9 2h5v5M14 2 7 9" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  down: '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  close: '<svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke-linecap="round"/></svg>',
+  more: '<svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor" aria-hidden="true"><circle cx="4.5" cy="10" r="1.6"/><circle cx="10" cy="10" r="1.6"/><circle cx="15.5" cy="10" r="1.6"/></svg>',
+  brief: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z" stroke-linejoin="round"/></svg>',
+  compare: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h13m0 0-3.5-3.5M17 8l-3.5 3.5M20 16H7m0 0 3.5-3.5M7 16l3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  mentions: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4 3.5V16H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" stroke-linejoin="round"/></svg>',
+  dev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19h16M7 16V9m5 7V5m5 11v-4" stroke-linecap="round"/></svg>',
+  gaps: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>',
+};
+
+// ---------------------------------------------------------------- prefs and state
+const PREF_KEY = 'hansard-watch-standalone-v1';
+function loadPrefs() { try { const p = JSON.parse(localStorage.getItem(PREF_KEY) || '{}'); return { jur: p.jur || null, start: p.start || 'brief', seen: Array.isArray(p.seen) ? p.seen : [], adds: Array.isArray(p.adds) ? p.adds : [] }; } catch (e) { return { jur: null, start: 'brief', seen: [], adds: [] }; } }
+function savePrefs() { try { localStorage.setItem(PREF_KEY, JSON.stringify(PR)); } catch (e) { /* settings last for this visit only */ } }
+const PR = loadPrefs();
+const VIEW_DEFAULTS = () => ({ limit: 20, tab: 'brief', period: '2w', sector: null, mapMode: 'mentions', mTab: 'ag', agSel: null, side: 'all', repOff: null, notYet: false, devType: 'All', q: '', expJur: null, expSide: 'all', newOnly: false, drawer: null });
+let S = Object.assign({ stage: 'onboard', jur: null, menu: null, share: null, toast: '', shared: false, sharedHidden: false, ob: { jur: null, start: 'brief' } }, VIEW_DEFAULTS());
+let mob = matchMedia('(max-width: 767px)').matches;
+
+const HASH_VIEW = { brief: 'brief', compare: 'compare', mentions: 'mentions', developments: 'dev', gaps: 'gaps', explore: 'explore' };
+function fromHash() {
+  const p = new URLSearchParams(location.hash.replace(/^#/, '')), o = {};
+  const jur = (p.get('jur') || '').toUpperCase();
+  if (!CODES.includes(jur) && jur !== 'ALL') return null;
+  o.jur = jur;
+  if (HASH_VIEW[p.get('view')]) o.tab = HASH_VIEW[p.get('view')];
+  if (PERIODS[p.get('period')]) o.period = p.get('period');
+  if (SECT[p.get('sector')]) o.sector = p.get('sector');
+  if (['mentions', 'rate', 'status'].includes(p.get('map'))) o.mapMode = p.get('map');
+  if (p.get('tab') === 'reports') o.mTab = 'reports';
+  const off = (p.get('office') || '').toUpperCase(); if (CODES.includes(off)) { if (o.mTab === 'reports') o.repOff = off; else o.agSel = off; }
+  if (['government', 'opposition', 'crossbench', 'witness'].includes(p.get('side'))) o.side = p.get('side');
+  if (p.get('unmentioned') === '1') o.notYet = true;
+  const t = DEV_TYPES.find(x => x.toLowerCase() === (p.get('type') || '').toLowerCase()); if (t) o.devType = t;
+  if (p.get('q')) o.q = p.get('q').slice(0, 200);
+  const ej = (p.get('in') || '').toUpperCase(); if (CODES.includes(ej) || ej === 'ALL') o.expJur = ej;
+  if (['government', 'opposition', 'crossbench'].includes(p.get('speaker'))) o.expSide = p.get('speaker');
+  if (p.get('new') === '1') o.newOnly = true;
+  for (const k of ['item', 'report', 'topic', 'theme']) if (p.get(k)) o.drawer = { k, id: p.get(k) };
+  return o;
+}
+function toHash(withDrawer) {
+  const p = new URLSearchParams();
+  p.set('view', S.tab === 'dev' ? 'developments' : S.tab); p.set('jur', S.jur);
+  if (S.period !== '2w') p.set('period', S.period);
+  if (S.sector) p.set('sector', S.sector);
+  if (S.tab === 'brief' && S.mapMode !== 'mentions') p.set('map', S.mapMode);
+  if (S.tab === 'mentions') {
+    if (S.mTab === 'reports') { p.set('tab', 'reports'); if (S.repOff) p.set('office', S.repOff); if (S.notYet) p.set('unmentioned', '1'); }
+    else { if (S.agSel) p.set('office', S.agSel); if (S.side !== 'all') p.set('side', S.side); }
+  }
+  if (S.tab === 'dev' && S.devType !== 'All') p.set('type', S.devType.toLowerCase());
+  if (S.tab === 'explore') { if (S.q) p.set('q', S.q); if (S.expJur && S.expJur !== S.jur) p.set('in', S.expJur); if (S.expSide !== 'all') p.set('speaker', S.expSide); if (S.newOnly) p.set('new', '1'); }
+  if (withDrawer && S.drawer) p.set(S.drawer.k, S.drawer.id);
+  return p.toString();
+}
+let lastHash = '';
+function syncHash() {
+  if (S.stage !== 'app') return;
+  const h = '#' + toHash(true);
+  if (h === lastHash) return;
+  lastHash = h;
+  try { history.replaceState(null, '', h); } catch (e) { try { location.hash = h; } catch (e2) { /* no address bar here */ } }
+}
+
+function setState(p) { Object.assign(S, p); render(); }
+function toast(msg) { S.toast = msg; renderToast(); clearTimeout(toast.t); toast.t = setTimeout(() => { S.toast = ''; renderToast(); }, 2800); }
+
+// ---------------------------------------------------------------- model
+function model() {
+  const isAll = S.jur === 'ALL', cur = isAll ? null : BY[S.jur];
+  const per = PERIODS[S.period];
+  const to = AS_OF, from = per.days ? addDays(AS_OF, -per.days) : per.from;
+  const prevFrom = per.days ? addDays(from, -per.days) : null;
+  const range = fmtRange(from, to);
+  const secOk = m => !S.sector || m.sectors.includes(S.sector);
+  const inP = m => m.date >= from && m.date <= to;
+  const inPrev = m => !!prevFrom && m.date >= prevFrom && m.date < from;
+  const mine = m => isAll || m.jur === S.jur;
+  const subst = m => m.kind !== 'procedural' && m.kind !== 'presiding';
+  const isNew = m => m.date >= NEW_FROM && !PR.seen.includes(m.id);
+  const ms = D.mentions.filter(secOk);
+  const pool = ms.filter(m => mine(m) && inP(m));
+  const lastSat = c => c === 'VIC' ? VIC_LAST : (BY[c].read ? BY[c].read.to : null);
+  const readInPeriod = c => { const r = BY[c].read; return !!r && r.to >= from && r.from <= to; };
+  const isRead = c => !!BY[c].read;
+  const countFor = c => ms.filter(m => m.jur === c && inP(m)).length;
+  const speechesFor = c => D.days.filter(d => d.code === c && d.date >= from && d.date <= to).reduce((a, d) => a + d.speeches, 0);
+  const daysFor = c => c === 'VIC' ? null : new Set(D.days.filter(d => d.code === c && d.date >= from && d.date <= to).map(d => d.date)).size;
+  const sideCounts = list => { const c = {}; for (const m of list) c[m.side] = (c[m.side] || 0) + 1; return c; };
+  const sectorMatch = vs => !S.sector || (VSEC[vs] || []).includes(S.sector);
+  const devs = D.developments.filter(d => d.date >= from && d.date <= to);
+  return { isAll, cur, per, from, to, prevFrom, range, secOk, inP, inPrev, mine, subst, isNew, ms, pool, lastSat, readInPeriod, isRead, countFor, speechesFor, daysFor, sideCounts, sectorMatch, devs };
+}
+
+// ---------------------------------------------------------------- small views
+const pill = (t, cls = '') => `<span class="pill ${cls}">${esc(t)}</span>`;
+const sidePill = m => { const s = SIDES[m.side] || SIDES.unknown; return `<span class="pill thin plain"><span class="dot" style="background:${s[1]};width:6px;height:6px;margin-right:4px;vertical-align:1px"></span>${esc(s[0])}</span>`; };
+const stancePill = m => { const s = STANCE[m.stance]; return s ? pill(s[0], s[1] + ' thin') : ''; };
+function sideBar(c, thin) {
+  const keys = ['government', 'opposition', 'crossbench', 'witness', 'chair', 'unknown'], t = keys.reduce((a, k) => a + (c[k] || 0), 0);
+  if (!t) return `<div class="sbar${thin ? ' thin' : ''}" aria-hidden="true"></div>`;
+  return `<div class="sbar${thin ? ' thin' : ''}" aria-hidden="true">${keys.map(k => c[k] ? `<span style="width:${c[k] / t * 100}%;background:${SIDES[k][1]}"></span>` : '').join('')}</div>`;
+}
+function sideText(c) { const parts = [['government', 'government'], ['opposition', 'opposition'], ['crossbench', 'crossbench'], ['witness', 'witness'], ['chair', 'chair or procedural'], ['unknown', 'side unknown']].filter(([k]) => c[k]).map(([k, l]) => `${c[k]} ${l}`); return parts.length ? parts.join(' · ') : 'No mentions'; }
+const where = (m, showJur) => `${showJur ? BY[m.jur].short + ' · ' : ''}${m.house} · ${fmtDay(m.date)}`;
+function headlineFor(m) { return m.report ? m.report : m.debate || KIND[m.kind] || 'Mention'; }
+function speakerLine(m) { const bits = [m.speaker]; if (m.party) bits.push(m.party); if (m.seat) bits.push(m.seat); return bits.filter(Boolean).join(' · '); }
+function srcBtn(m) { const u = safeUrl(m.url); return u ? `<a class="btn primary" href="${esc(u)}" target="_blank" rel="noopener" data-act="seen" data-v="${esc(m.id)}">Open in Hansard ↗</a>` : ''; }
+function verifiedLine(m) {
+  if (m.src === 'scan') return `<div class="note">Excerpt from the official transcript, found by text search${m.page ? ` · page ${esc(m.page)}` : ''}</div>`;
+  const ok = /^(Verified|Quote verified)/.test(m.verified || '');
+  return `<div class="note" style="color:${ok ? 'var(--ok)' : 'var(--warn)'}">${ok ? '✓' : '!'} ${esc(m.verified)}</div>`;
+}
+function mentionEntry(m, M, showJur) {
+  return `<div class="stack" style="gap:6px;padding:12px 0;border-top:1px solid var(--line2)">
+    <div class="row">${sidePill(m)}${m.stance ? stancePill(m) : pill(KIND[m.kind] || m.kind, 'thin plain')}${m.report ? pill('Report mention', 'brand thin') : ''}${M.isNew(m) ? pill('New', 'new thin') : ''}</div>
+    <div class="quote clamp4">“${esc(m.text)}”</div>
+    <div class="note">${esc(speakerLine(m))} · ${esc(where(m, showJur))}${m.debate ? ' · ' + esc(m.debate) : ''}</div>
+    <div class="row" style="gap:8px">${srcBtn(m)}<button class="btn" data-act="item" data-v="${esc(m.id)}">Details</button></div>
+  </div>`;
+}
+function quietCard(title, note, btnLabel, act, v) {
+  return `<div class="card dashed"><div style="font-size:15px;font-weight:600">${esc(title)}</div><div class="s13 muted">${esc(note)}</div>${btnLabel ? `<div><button class="btn" data-act="${act}" data-v="${esc(v || '')}">${esc(btnLabel)}</button></div>` : ''}</div>`;
+}
+function coverageLine(M) {
+  if (M.isAll) return 'Hansard read for 5 parliaments to Thu 29 Oct · Victoria by a separate scan to Thu 24 Sep · SA, WA and Tasmania not read';
+  const c = M.cur;
+  if (c.code === 'VIC') return 'Read by the VAGO Hansard scan to Thu 24 Sep, the final sitting day · the scanner itself is blocked here';
+  if (!c.read) return `${c.parl} isn’t read yet: ${lc(c.route)}`;
+  return `Hansard read to ${fmtDay(c.read.to)} · ${plural(c.read.days, 'sitting day')} in store · ${c.read.speeches.toLocaleString('en-AU')} speeches`;
+}
+
+// ---------------------------------------------------------------- pages
+function pageBrief(M) {
+  const { isAll, cur, pool } = M;
+  const hero = pool.filter(M.subst).slice(0, 3);
+  const topic = (isAll || cur.code === 'VIC') ? VIC.topics.filter(t => M.sectorMatch(t.sector)).sort((a, b) => a.rank - b.rank)[0] : null;
+  let quiet = '';
+  if (!hero.length) {
+    if (S.sector) quiet = quietCard(`Nothing on ${lc(SECT[S.sector].label)} in ${isAll ? 'any parliament read' : cur.parl} this period.`, 'Try another sector, or widen the period.', 'Show all sectors', 'sector', '');
+    else if (!isAll && !cur.read) quiet = quietCard(`${cur.parl} isn’t read yet`, `${cur.route}.${cur.needs ? ' Needs: ' + lc(cur.needs) + '.' : ''} The other parliaments are below.`, 'See coverage', 'menu', 'status');
+    else if (!isAll && M.lastSat(cur.code) < M.from) quiet = quietCard(`${cur.parl} hasn’t sat since ${fmtDay(M.lastSat(cur.code))}.`,
+      cur.code === 'VIC' ? 'The 60th Parliament has risen. Caretaker starts at 6 pm on Tue 3 Nov and the election is on Sat 28 Nov.' : 'This is expected between sitting weeks.',
+      S.period === 'all' ? '' : (cur.code === 'VIC' ? `Show since February (${M.ms.filter(m => m.jur === 'VIC').length} mentions)` : 'Show the last 2 months'), 'period', cur.code === 'VIC' ? 'all' : '2m');
+    else quiet = quietCard('No mentions of the Auditor-General in this period.', 'Widen the period to see earlier mentions.', S.period === 'all' ? '' : 'Show since February', 'period', 'all');
+  }
+  const heroHtml = hero.map(m => `<div class="card raised">
+      <div class="row" style="font-size:12px">${pill(m.report ? 'Report mention' : 'Auditor-General mention', 'brand')}${M.isNew(m) ? pill('New', 'new') : ''}<span class="muted nowrap">${esc(where(m, isAll))}</span></div>
+      <button class="headline" data-act="item" data-v="${esc(m.id)}">${esc(headlineFor(m))}</button>
+      <div class="s13 fg2">${esc(speakerLine(m))}</div>
+      <div class="s13 quote clamp4">“${esc(m.text)}”</div>
+      <div class="row">${sidePill(m)}${stancePill(m)}</div>
+      <div class="actions">${srcBtn(m)}<button class="btn" data-act="item" data-v="${esc(m.id)}">Details</button></div>
+    </div>`).join('');
+  const gapHtml = topic ? `<div class="card raised">
+      <div class="row" style="font-size:12px">${pill('Potential program gap', 'warn')}<span class="muted">${isAll ? 'VAGO · ' : ''}${esc(topic.sector)}</span></div>
+      <button class="headline" data-act="topic" data-v="${topic.rank}">${esc(topic.topic)}</button>
+      <div class="s13 fg2 clamp4">${esc(topic.vago)}</div>
+      <div class="row">${pill(topic.gap, topic.gap === 'Not covered' ? 'bad thin' : 'warn thin')}<span class="note">Rank ${topic.rank} of ${VIC.topics.length} on the VAGO longlist</span></div>
+      <div class="actions"><button class="btn primary" data-act="topic" data-v="${topic.rank}">See the evidence</button></div>
+    </div>` : '';
+
+  // Tiles
+  const prev = M.prevFrom ? M.ms.filter(m => M.mine(m) && M.inPrev(m)) : null;
+  const delta = (a, b) => b == null ? '' : a === b ? 'No change' : a > b ? `▲ ${a - b}` : `▼ ${b - a}`;
+  const readCodes = CODES.filter(c => M.readInPeriod(c));
+  const rank = fn => { if (isAll || !readCodes.includes(cur.code)) return ''; const v = fn(cur.code), all = readCodes.map(fn); return `${ord(1 + all.filter(x => x > v).length)} of ${readCodes.length} read · others’ median ${median(readCodes.filter(c => c !== cur.code).map(fn))}`; };
+  const sc = M.sideCounts(pool);
+  const reps = pool.filter(m => m.report);
+  const devMine = M.devs.filter(d => isAll || d.jur === cur.code);
+  const vicTopics = VIC.topics;
+  const tiles = [
+    { act: 'tab', v: 'mentions', label: 'Auditor-General mentions', n: pool.length, d: delta(pool.length, prev && prev.length), bar: sideBar(sc, true), sub: sideText(sc), cmp: rank(M.countFor) },
+    { act: 'reports', v: '', label: 'Report mentions', n: reps.length, d: delta(reps.length, prev && prev.filter(m => m.report).length), sub: reps.length ? plural(new Set(reps.map(m => m.report)).size, 'report') + ' named' : 'No report named in the text', cmp: '' },
+    { act: 'tab', v: 'dev', label: 'Developments', n: devMine.length, d: '', sub: plural(devMine.filter(d => d.source === 'Office website').length, 'item') + ' from office websites', cmp: '' },
+    (isAll || cur.code === 'VIC')
+      ? { act: 'tab', v: 'gaps', label: 'Potential program gaps', n: vicTopics.length, d: '', sub: `${vicTopics.filter(t => t.gap === 'Not covered').length} not covered · ${vicTopics.filter(t => t.gap !== 'Not covered').length} partly`, cmp: isAll ? 'VAGO only so far' : 'From the VAGO scan, 1 Nov' }
+      : { act: 'tab', v: 'gaps', label: 'Potential program gaps', n: '—', d: '', sub: cur.program.name ? 'Not compared yet' : 'No published program', cmp: '' },
+  ];
+  const tilesHtml = tiles.map(t => `<button class="tile" data-act="${t.act}" data-v="${esc(t.v)}">
+      <span class="s13 muted">${esc(t.label)}</span>
+      <span style="display:flex;align-items:baseline;gap:8px"><span class="tile-n">${esc(t.n)}</span><span class="note nowrap fg2">${esc(t.d)}</span></span>
+      ${t.bar || ''}<span class="note">${esc(t.sub)}</span>${t.cmp ? `<span class="cmp">${esc(t.cmp)}</span>` : ''}
+    </button>`).join('');
+
+  // Map or 9-office table
+  let mapHtml;
+  if (!isAll) {
+    const maxM = Math.max(1, ...CODES.map(M.countFor));
+    const HEAT = ['var(--heat0)', 'var(--heat1)', 'var(--heat2)', 'var(--heat3)', 'var(--heat4)'];
+    const cells = CODES.map(c => {
+      const j = BY[c], read = M.readInPeriod(c), n = M.countFor(c), sp = M.speechesFor(c);
+      let val, bg = 'var(--heat0)';
+      if (S.mapMode === 'mentions') { val = read ? String(n) : '—'; if (read) bg = HEAT[Math.ceil(n / maxM * 4)]; }
+      else if (S.mapMode === 'rate') { val = read && sp ? (n / sp * 1000).toFixed(1) : (c === 'VIC' && read ? 'n/a' : '—'); if (read && sp) bg = HEAT[Math.min(4, Math.ceil(n / sp * 1000 / 2))]; }
+      else { val = { live: 'Read', blocked: 'Blocked', empty: 'Empty' }[j.status] || j.status; if (c === 'VIC') val = 'Own scan'; bg = j.status === 'live' ? 'var(--ok-bg)' : c === 'VIC' ? 'var(--brand-tint)' : j.status === 'blocked' ? 'var(--bad-bg)' : 'var(--warn-bg)'; }
+      const note = !j.read ? (j.status === 'empty' ? 'Empty pages' : 'Not read') : (M.lastSat(c) < M.from ? 'Not sitting' : (c === 'VIC' ? 'Separate scan' : ''));
+      return `<button class="${c === S.jur ? 'you' : ''}" style="grid-row:${j.tilePos[0]};grid-column:${j.tilePos[1]};background:${bg}" data-act="jur" data-v="${c}" aria-label="${esc(j.name)}: ${esc(val)}${note ? ', ' + esc(note) : ''}"><span class="t1">${esc(j.short)}</span><span class="t2">${esc(val)}</span><span class="t3">${esc(note)}</span></button>`;
+    }).join('');
+    const legend = { mentions: 'Darker = more mentions of that Auditor-General in the period. — = not read.', rate: 'Mentions per 1,000 speeches read. Victoria’s scan didn’t count speeches.', status: 'Whether Hansard Watch can read each parliament today.' }[S.mapMode];
+    mapHtml = `<div class="row" style="gap:8px"><h2 class="card-title nowrap">Across Australia</h2>
+        <div class="seg" role="radiogroup" aria-label="Map shows">${[['mentions', 'Mentions'], ['rate', 'Per 1,000 speeches'], ['status', 'Coverage']].map(([k, l]) => `<button role="radio" aria-checked="${S.mapMode === k}" data-act="map" data-v="${k}">${l}</button>`).join('')}</div></div>
+      <div class="ausmap">${cells}</div>
+      <div class="note">${legend} Your jurisdiction is outlined. Tap another to switch.</div>`;
+  } else {
+    mapHtml = `<h2 class="card-title">All 9 offices</h2>
+      <div class="tablewrap"><table class="data"><thead><tr><th>Office</th><th class="num">Mentions</th><th class="num">Speeches read</th><th>Coverage</th></tr></thead><tbody>
+      ${CODES.map(c => { const j = BY[c], read = M.readInPeriod(c); return `<tr><td><button class="linkbtn" style="font-size:13px;font-weight:600;color:var(--fg)" data-act="jur" data-v="${c}">${esc(j.office)}</button></td><td class="num">${read ? M.countFor(c) : '—'}</td><td class="num">${c === 'VIC' ? 'n/a' : read ? M.speechesFor(c).toLocaleString('en-AU') : '—'}</td><td class="note">${esc(c === 'VIC' ? 'Separate scan' : j.read ? (M.lastSat(c) < M.from ? 'Not sitting' : 'Read') : j.status === 'empty' ? 'Empty pages' : 'Blocked')}</td></tr>`; }).join('')}
+      </tbody></table></div>`;
+  }
+  const else3 = isAll ? null : M.ms.filter(m => m.jur !== cur.code && M.inP(m) && M.subst(m)).slice(0, 3);
+  const elseHtml = isAll ? (() => {
+    const counts = CODES.map(c => [c, M.countFor(c)]).filter(([c]) => M.readInPeriod(c)).sort((a, b) => b[1] - a[1]), mx = Math.max(1, ...counts.map(x => x[1]));
+    return `<div class="card-head"><h2 class="card-title">By parliament</h2><button class="btn subtle" data-act="tab" data-v="compare">Compare ›</button></div><div class="note" style="margin-bottom:4px">Auditor-General mentions in the period, parliaments read</div>
+      ${counts.map(([c, n]) => `<button class="trow s13" style="grid-template-columns:minmax(0,1.4fr) minmax(0,2fr) 32px" data-act="jur" data-v="${c}"><span style="font-weight:600">${esc(BY[c].name)}</span><span class="meter"><span style="width:${n / mx * 100}%;background:${BY[c].color}"></span></span><span style="text-align:right;font-weight:600">${n}</span></button>`).join('')}`;
+  })() : `<div class="card-head"><h2 class="card-title">Meanwhile in other parliaments</h2><button class="btn subtle" data-act="tab" data-v="compare">Compare ›</button></div>
+      <div class="note" style="margin-bottom:4px">The latest Auditor-General mentions elsewhere in the period</div>
+      ${else3.map(m => `<button class="list-btn" data-act="item" data-v="${esc(m.id)}"><span class="top"><span>${esc(headlineFor(m))}</span><span class="note nowrap">${esc(BY[m.jur].short)} · ${esc(fmtDay(m.date))}</span></span><span class="note">${esc(speakerLine(m))}</span></button>`).join('') || '<div class="s13 muted">No mentions elsewhere in this period.</div>'}`;
+
+  // Sectors
+  const secRows = D.sectors.map(s => {
+    const here = D.mentions.filter(m => M.mine(m) && M.inP(m) && m.sectors.includes(s.id)).length;
+    const all = D.mentions.filter(m => M.inP(m) && m.sectors.includes(s.id)).length;
+    return { s, here, oth: all - here, all };
+  }).filter(o => o.all > 0).sort((a, b) => isAll ? b.all - a.all : (b.here - a.here) || (b.oth - a.oth)).slice(0, 6);
+  const secMax = Math.max(1, ...secRows.map(o => isAll ? o.all : o.here));
+  const secHtml = `<div class="card-head"><h2 class="card-title">By sector</h2><button class="btn subtle" data-act="tab" data-v="compare">All sectors ›</button></div>
+    <div class="note" style="margin-bottom:6px">${isAll ? 'Mentions across the parliaments read' : `Mentions in ${esc(cur.parl)}, and elsewhere`}</div>
+    ${secRows.map(o => `<button class="trow s13" style="grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) 92px;${S.sector === o.s.id ? 'background:var(--brand-tint2)' : ''}" aria-pressed="${S.sector === o.s.id}" data-act="sector" data-v="${S.sector === o.s.id ? '' : o.s.id}">
+      <span style="font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(o.s.label)}</span>
+      <span style="display:flex;align-items:center;gap:6px"><span class="meter"><span style="width:${(isAll ? o.all : o.here) / secMax * 100}%"></span></span><span style="font-weight:600;min-width:18px;text-align:right">${isAll ? o.all : o.here}</span></span>
+      <span class="note nowrap">${isAll ? '' : '+' + o.oth + ' elsewhere'}</span></button>`).join('') || '<div class="s13 muted">No sector terms matched in this period.</div>'}
+    <div class="note" style="margin-top:6px">Sectors come from a keyword match on the debate title and text. Select one to filter every page; select it again to clear.</div>`;
+  const evHtml = `<h2 class="card-title">Coming up</h2>${D.events.filter(e => e.date >= AS_OF).map(e => `<div class="s13" style="display:flex;gap:12px;padding:6px 0;border-bottom:1px solid var(--line2)"><div style="width:96px;flex:none;font-weight:600">${esc(fmtDay(e.date))}</div><div class="fg2" style="flex:1">${esc(BY[e.jur].short)} · ${esc(e.text)}</div></div>`).join('')}<div class="note">Dates from the government records and the VAGO scan, 1 Nov 2026.</div>`;
+  const adds = PR.adds.map(id => D.mentions.find(m => m.id === id)).filter(Boolean);
+  const addsHtml = adds.length ? `<div class="card"><h2 class="card-title">Added to your brief</h2>${adds.map(m => `<button class="list-btn" data-act="item" data-v="${esc(m.id)}"><span class="top"><span>${esc(headlineFor(m))}</span><span class="note nowrap">${esc(BY[m.jur].short)} · ${esc(fmtDay(m.date))}</span></span></button>`).join('')}</div>` : '';
+
+  return `<div class="grid g-hero">${heroHtml}${quiet}${gapHtml}</div>
+    <div class="ai" style="margin-top:-8px">✦ Notes on Victorian mentions were written by an AI-assisted scan — check the source. Other parliaments show the Hansard text as stored; AI summaries and sentiment come later.</div>
+    <div class="grid g-tiles">${tilesHtml}</div>
+    <div class="grid g-2"><div class="card" style="gap:12px">${mapHtml}</div><div class="card">${elseHtml}</div></div>
+    <div class="grid g-2"><div class="card" style="gap:2px">${secHtml}</div><div class="card">${evHtml}</div>${addsHtml}</div>`;
+}
+
+function pageCompare(M) {
+  const { isAll, cur } = M;
+  const rows = CODES.map(c => {
+    const j = BY[c], read = M.readInPeriod(c), list = M.ms.filter(m => m.jur === c && M.inP(m)), sp = M.speechesFor(c);
+    return { c, j, read, n: list.length, sp, days: M.daysFor(c), rate: read && sp ? list.length / sp * 1000 : null, sc: M.sideCounts(list) };
+  });
+  const tableHtml = `<div class="tablewrap"><table class="data"><caption class="sr">Auditor-General mentions by parliament, ${esc(M.range)}</caption>
+    <thead><tr><th>Parliament</th><th>What was read</th><th class="num">Sitting days</th><th class="num">Speeches</th><th class="num">Mentions</th><th class="num">Per 1,000</th><th style="min-width:140px">Who mentions</th></tr></thead><tbody>
+    ${rows.map(r => `<tr class="${r.c === S.jur ? 'you' : ''}">
+      <td><button class="linkbtn" style="font-size:13px;font-weight:600;color:var(--fg)" data-act="jur" data-v="${r.c}"><span class="dot" style="background:${r.j.color};margin-right:6px"></span>${esc(r.j.name)}</button>${r.c === S.jur ? ' <span class="cmp">You</span>' : ''}</td>
+      <td class="note">${esc(r.c === 'VIC' ? 'VAGO scan, 3 Feb – 24 Sep' : r.j.read ? 'Scanner, ' + fmtShort(r.j.read.from) + ' – ' + fmtShort(r.j.read.to) : (r.j.status === 'empty' ? 'Not read: empty pages' : 'Not read: blocked'))}</td>
+      <td class="num">${r.c === 'VIC' ? '—' : r.read ? r.days : '—'}</td><td class="num">${r.read && r.sp ? r.sp.toLocaleString('en-AU') : '—'}</td>
+      <td class="num" style="font-weight:600">${r.read ? r.n : '—'}</td><td class="num">${r.rate != null ? r.rate.toFixed(1) : '—'}</td>
+      <td>${r.read && r.n ? sideBar(r.sc, true) : '<span class="note">—</span>'}</td></tr>`).join('')}
+    </tbody></table></div>
+    <div class="legend">${['government', 'opposition', 'crossbench', 'witness', 'chair'].map(k => `<span><i style="background:${SIDES[k][1]}"></i>${SIDES[k][0]}</span>`).join('')}</div>
+    <div class="note">Victoria’s figures come from a separate reading scan of the transcripts, so they aren’t directly comparable with the text-search counts for other parliaments.</div>`;
+
+  // Who mentions vs who speaks
+  const scanCodes = CODES.filter(c => BY[c].read && BY[c].read.by === 'scan' && M.readInPeriod(c));
+  const focus = !isAll && scanCodes.includes(cur.code) ? [cur.code] : scanCodes;
+  const turns = { government: 0, opposition: 0, crossbench: 0 }, ment = { government: 0, opposition: 0, crossbench: 0 };
+  for (const s of D.sides) if (focus.includes(s.code) && s.date >= M.from && s.date <= M.to && turns[s.side] != null) turns[s.side] += s.turns;
+  for (const m of M.ms) if (focus.includes(m.jur) && M.inP(m) && ment[m.side] != null) ment[m.side]++;
+  const tT = turns.government + turns.opposition + turns.crossbench, tM = ment.government + ment.opposition + ment.crossbench;
+  const share = (o, t) => ['government', 'opposition', 'crossbench'].map(k => `<span style="width:${t ? o[k] / t * 100 : 0}%;background:${SIDES[k][1]}"></span>`).join('');
+  const insight = tT && tM ? (() => { const k = ['opposition', 'crossbench', 'government'].sort((a, b) => (ment[b] / tM - turns[b] / tT) - (ment[a] / tM - turns[a] / tT))[0]; return `${cap(SIDES[k][0])} members give ${pct(turns[k], tT)} of speaking turns but ${pct(ment[k], tM)} of Auditor-General mentions.`; })() : 'Not enough data in this period.';
+  const whoHtml = `<h2 class="card-title">Who mentions the Auditor-General</h2>
+    <div class="note">${esc(focus.length === 1 ? BY[focus[0]].parl : 'The ' + focus.length + ' parliaments the scanner reads')} · ${esc(M.range)} · members with a known side</div>
+    <div class="stack" style="gap:8px;margin-top:6px">
+      <div class="s13" style="display:grid;grid-template-columns:120px 1fr 64px;gap:8px;align-items:center"><span class="muted">Speaking turns</span><div class="sbar">${share(turns, tT)}</div><span class="note" style="text-align:right">${tT.toLocaleString('en-AU')}</span></div>
+      <div class="s13" style="display:grid;grid-template-columns:120px 1fr 64px;gap:8px;align-items:center"><span class="muted">AG mentions</span><div class="sbar">${share(ment, tM)}</div><span class="note" style="text-align:right">${tM}</span></div>
+    </div>
+    <div class="legend">${['government', 'opposition', 'crossbench'].map(k => `<span><i style="background:${SIDES[k][1]}"></i>${SIDES[k][0]}</span>`).join('')}</div>
+    <div class="s13 fg2">${esc(insight)}</div>`;
+
+  // Weekly chart
+  const weekStart = iso => { const d = parse(iso); const wd = (d.getUTCDay() + 6) % 7; d.setUTCDate(d.getUTCDate() - wd); return d.toISOString().slice(0, 10); };
+  const weeks = []; for (let w = weekStart(M.from); w <= M.to; w = addDays(w, 7)) weeks.push(w);
+  const series = CODES.filter(c => M.readInPeriod(c));
+  const cnt = {}; for (const m of M.ms) if (M.inP(m)) { const k = weekStart(m.date) + '|' + m.jur; cnt[k] = (cnt[k] || 0) + 1; }
+  const tot = weeks.map(w => series.reduce((a, c) => a + (cnt[w + '|' + c] || 0), 0)), yMax = Math.max(4, ...tot);
+  const W = 640, H = 200, padL = 28, padB = 22, padT = 8, bw = (W - padL - 8) / weeks.length;
+  const y = v => H - padB - (v / yMax) * (H - padB - padT);
+  const ticks = [0, Math.round(yMax / 2), yMax];
+  let bars = '';
+  weeks.forEach((w, i) => {
+    let acc = 0; const x = padL + i * bw + bw * 0.15, wd = Math.max(2, bw * 0.7);
+    for (const c of series) { const v = cnt[w + '|' + c] || 0; if (!v) continue; const y0 = y(acc), y1 = y(acc + v); acc += v; bars += `<rect x="${x.toFixed(1)}" y="${y1.toFixed(1)}" width="${wd.toFixed(1)}" height="${(y0 - y1).toFixed(1)}" fill="${BY[c].color}" data-tip="${esc(BY[c].short)} · week of ${esc(fmtShort(w))}: ${v} ${v === 1 ? 'mention' : 'mentions'}" tabindex="-1"></rect>`; }
+  });
+  const every = Math.ceil(weeks.length / 8);
+  const xl = weeks.map((w, i) => i % every === 0 ? `<text x="${(padL + i * bw + bw / 2).toFixed(1)}" y="${H - 6}" text-anchor="middle" font-size="11" fill="var(--fg3)">${esc(fmtShort(w))}</text>` : '').join('');
+  const chartHtml = `<h2 class="card-title">Mentions by week</h2><div class="note">Auditor-General mentions per week, by parliament read</div>
+    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Mentions by week, ${esc(M.range)}" style="max-height:240px">
+      ${ticks.map(t => `<line x1="${padL}" x2="${W - 4}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" stroke="var(--line)" stroke-width="1"></line><text x="${padL - 6}" y="${(y(t) + 4).toFixed(1)}" text-anchor="end" font-size="11" fill="var(--fg3)">${t}</text>`).join('')}
+      ${bars}${xl}</svg>
+    <div class="legend">${series.map(c => `<span><i style="background:${BY[c].color}"></i>${esc(BY[c].short)}</span>`).join('')}</div>`;
+
+  // Sector heatmap
+  const heatCols = `minmax(${mob ? '96px' : '190px'},1.6fr) repeat(9,minmax(0,1fr))`;
+  const HB = ['var(--heat0)', 'var(--heat1)', 'var(--heat2)', 'var(--heat3)', 'var(--heat4)'];
+  const heatRows = D.sectors.map(s => ({ s, cells: CODES.map(c => ({ c, n: D.mentions.filter(m => m.jur === c && M.inP(m) && m.sectors.includes(s.id)).length, read: M.readInPeriod(c) })) })).filter(r => r.cells.some(x => x.n));
+  const heatHtml = `<h2 class="card-title">Sectors across parliaments</h2>
+    <div class="note">Your column is outlined. Select a sector to filter every page, or a cell to see those mentions in Explore. Sectors are a keyword match.</div>
+    <div class="tablewrap"><div style="display:flex;flex-direction:column;gap:3px;margin-top:4px;min-width:${mob ? 340 : 0}px">
+      <div class="heat" style="grid-template-columns:${heatCols};font-size:11px"><span></span>${CODES.map(c => `<span style="text-align:center;font-weight:${c === S.jur ? 700 : 600};color:${c === S.jur ? 'var(--brand)' : 'var(--fg2)'}">${esc(BY[c].short)}</span>`).join('')}</div>
+      ${heatRows.map(r => `<div class="heat" style="grid-template-columns:${heatCols}"><button class="lbl${S.sector === r.s.id ? ' on' : ''}" title="${esc(r.s.label)}" aria-pressed="${S.sector === r.s.id}" data-act="sector" data-v="${S.sector === r.s.id ? '' : r.s.id}">${esc(r.s.label)}</button>
+        ${r.cells.map(x => `<button class="cell${x.c === S.jur ? ' you' : ''}" style="background:${x.read ? HB[Math.min(4, Math.ceil(x.n / 2))] : 'var(--soft)'};color:var(--fg)" ${x.n ? `data-act="heat" data-v="${x.c}|${r.s.id}"` : 'disabled'} aria-label="${esc(r.s.label)} in ${esc(BY[x.c].name)}: ${x.read ? x.n : 'not read'}">${x.read ? (x.n || '') : '·'}</button>`).join('')}</div>`).join('') || '<div class="s13 muted">No sector terms matched in this period.</div>'}
+    </div></div>
+    <div class="note">Blank = not mentioned. · = not read. Victoria uses the VAGO scan’s quotes only.</div>`;
+
+  return `<div class="card">${tableHtml}</div>
+    <div class="grid g-2"><div class="card">${whoHtml}</div><div class="card">${chartHtml}</div></div>
+    <div class="card" style="gap:8px">${heatHtml}</div>`;
+}
+
+function pageMentions(M) {
+  const { isAll, cur } = M;
+  const tabsHtml = `<div role="tablist" aria-label="Mentions" class="tabs" style="padding:0;border-bottom:1px solid var(--line);height:auto">
+    ${[['ag', 'Auditors-General'], ['reports', 'Reports']].map(([k, l]) => `<button role="tab" aria-selected="${S.mTab === k}" style="min-height:var(--btn-h)" data-act="mtab" data-v="${k}">${l}</button>`).join('')}</div>`;
+  if (S.mTab === 'reports') return tabsHtml + reportsTab(M);
+  const sel = S.agSel || (isAll ? 'VIC' : cur.code);
+  const rowsHtml = CODES.map(c => {
+    const j = BY[c], list = M.ms.filter(m => m.jur === c && M.inP(m)), sc = M.sideCounts(list), read = M.readInPeriod(c);
+    const note = !j.read ? (j.status === 'empty' ? 'Not read: empty pages' : 'Not read: blocked') : (M.lastSat(c) < M.from ? 'Not sitting' : c === 'VIC' ? 'VAGO scan' : '');
+    return `<button class="agrow${c === sel ? ' sel' : ''}" aria-pressed="${c === sel}" data-act="agsel" data-v="${c}">
+      <span style="flex:1 1 230px;display:flex;gap:6px;align-items:baseline;min-width:0"><b style="font-weight:600">${esc(j.officeName)}</b>${c === S.jur ? '<span class="cmp" style="font-size:11px">You</span>' : ''}<span class="note" style="font-size:11px">${esc(note)}</span></span>
+      <span style="flex:0 0 64px;font-weight:600">${read ? list.length : '—'}</span>
+      <span style="flex:1 1 150px">${read && list.length ? sideBar(sc) : ''}</span>
+      <span class="note" style="flex:0 0 280px">${read ? esc(sideText(sc)) : esc(j.route)}</span></button>`;
+  }).join('');
+  const j = BY[sel], read = M.readInPeriod(sel);
+  const sideOpts = ['all', 'government', 'opposition', 'crossbench'].concat(sel === 'VIC' ? ['witness'] : []);
+  const list = M.ms.filter(m => m.jur === sel && M.inP(m) && (S.side === 'all' || m.side === S.side));
+  let body;
+  if (!j.read) body = quietCard(`${j.parl} isn’t read yet`, `${j.route}.${j.needs ? ' Needs: ' + lc(j.needs) + '.' : ''}`, 'See coverage', 'menu', 'status');
+  else if (!read) body = quietCard(`Nothing read for ${j.parl} in this period.`, `Hansard Watch holds ${j.parl} from ${fmtDay(j.read.from)} to ${fmtDay(j.read.to)}.`, S.period === 'all' ? '' : 'Show everything stored', 'period', 'all');
+  else body = list.slice(0, S.limit).map(m => mentionEntry(m, M, false)).join('') + (list.length > S.limit ? `<div><button class="btn" data-act="more">Show ${Math.min(20, list.length - S.limit)} more of ${list.length - S.limit}</button></div>` : '') || `<div class="s13 muted" style="padding:8px 0">No mentions${S.side !== 'all' ? ' from ' + SIDES[S.side][0].toLowerCase() + ' members' : ''} in this period.</div>`;
+  return `${tabsHtml}
+    <div class="card" style="padding:8px;gap:0">
+      ${!mob ? `<div class="note" style="display:flex;gap:12px;padding:6px 10px"><span style="flex:1 1 230px">Office</span><span style="flex:0 0 64px">Mentions</span><span style="flex:1 1 150px">By side</span><span style="flex:0 0 280px"></span></div>` : ''}
+      ${rowsHtml}
+    </div>
+    <div class="card" style="gap:10px">
+      <div class="row" style="gap:8px"><h2 class="card-title" style="flex:1 1 220px">Mentions of the ${esc(j.officeName)}</h2>
+        <div class="row">${sideOpts.map(k => `<button class="chip${S.side === k ? ' on' : ''}" aria-pressed="${S.side === k}" data-act="side" data-v="${k}">${k === 'all' ? 'All' : esc(SIDES[k][0])}</button>`).join('')}</div></div>
+      <div class="note">${sel === 'VIC' ? 'Each quote was checked against the transcript by the VAGO scan. Stance is the scan’s reading of how the member used VAGO’s work.' : 'Every speech in the store whose text names an Auditor-General or audit office. Side comes from the speaker’s party and the government of the day.'}</div>
+      ${body}
+    </div>`;
+}
+
+function reportsTab(M) {
+  const off = S.repOff || (M.isAll ? 'VIC' : M.cur.code);
+  const chips = `<div class="row">${CODES.map(c => `<button class="chip${c === off ? ' on' : ''}" aria-pressed="${c === off}" data-act="repoff" data-v="${c}">${esc(BY[c].short)}</button>`).join('')}<span class="grow"></span>
+    ${off === 'VIC' ? `<button class="chip sq${S.notYet ? ' on' : ''}" aria-pressed="${S.notYet}" data-act="notyet">${S.notYet ? '✓ ' : ''}Not yet mentioned only</button>` : ''}</div>`;
+  if (off !== 'VIC') {
+    const j = BY[off], named = M.ms.filter(m => m.jur === off && m.report);
+    const groups = {}; for (const m of named) (groups[m.report] = groups[m.report] || []).push(m);
+    return chips + `<div class="card"><div style="font-weight:600">${esc(j.officeName)} · report register</div>
+      <div class="s13 muted">The register isn’t loaded yet (spec Phase 3).${safeUrl(j.reportsUrl) ? ` The office lists its reports at <a href="${esc(j.reportsUrl)}" target="_blank" rel="noopener">${esc(j.reportsUrl.replace(/^https?:\/\//, ''))}</a>.` : ''}</div>
+      ${Object.keys(groups).length ? `<div class="d-sec">Reports named in Hansard, stored window</div>${Object.entries(groups).map(([t, ms]) => `<button class="list-btn" data-act="item" data-v="${esc(ms[0].id)}"><span class="top"><span>${esc(t)}</span><span class="note nowrap">${plural(ms.length, 'mention')}</span></span><span class="note">Last ${esc(fmtDay(ms[0].date))} · matched by the report number in the text</span></button>`).join('')}` : ''}</div>`;
+  }
+  const rows = VIC.tabled.filter(t => M.sectorMatch(t.sector)).map(t => {
+    const ms = D.mentions.filter(m => m.tabled === t);
+    return { t, ms };
+  }).filter(r => !S.notYet || r.t.raised !== 'Yes').sort((a, b) => b.t.date.localeCompare(a.t.date));
+  const RAISED = { Yes: ['Raised in Parliament', 'ok'], No: ['Not yet mentioned in Parliament', ''], 'Post-rising': ['Tabled after Parliament rose', 'warn'] };
+  return chips + `<div class="card" style="padding:8px 16px;gap:0">
+    <div class="s13 muted" style="padding:8px 0">Victorian Auditor-General’s Office · reports tabled 3 Feb – 30 Oct 2026 · ${VIC.tabled.filter(t => t.raised === 'Yes').length} of ${VIC.tabled.length} raised in Parliament</div>
+    ${rows.map(r => `<button class="list-btn" style="flex-direction:row;flex-wrap:wrap;gap:6px 16px;align-items:center;padding:12px 0" data-act="report" data-v="${esc(r.t.url)}">
+      <span style="flex:1 1 280px;display:flex;flex-direction:column;gap:2px;min-width:0"><b style="font-weight:600">${esc(r.t.title)}</b><span class="note">Tabled ${esc(fmtDay(r.t.date))} · ${esc(r.t.sector)}</span></span>
+      <span class="s13" style="flex:0 0 96px">${plural(r.ms.length, 'mention')}</span>
+      <span style="flex:1 1 200px">${pill(RAISED[r.t.raised][0], RAISED[r.t.raised][1])}</span></button>`).join('') || '<div class="s13 muted" style="padding:12px 0">No reports match.</div>'}
+  </div>`;
+}
+
+function pageDev(M) {
+  const { isAll, cur } = M;
+  const mine = M.devs.filter(d => isAll || d.jur === cur.code);
+  const types = ['All'].concat(DEV_TYPES).map(t => ({ t, n: t === 'All' ? mine.length : mine.filter(d => d.type === t).length })).filter(o => o.t === 'All' || o.n > 0);
+  const list = mine.filter(d => S.devType === 'All' || d.type === S.devType);
+  const card = d => `<div class="card" style="padding:14px 16px">
+      <div class="row" style="font-size:12px">${pill(d.type, 'brand')}${pill(d.source, d.source === 'Office website' ? 'warn' : '')}<span class="muted nowrap">${esc(BY[d.jur].short)} · ${esc(fmtDay(d.date))}</span></div>
+      <h3 style="margin:0;font-size:16px;font-weight:600;line-height:1.3">${esc(d.headline)}</h3>
+      <div class="s13 fg2">${esc(d.body)}</div>
+      ${d.why ? `<div class="s13 fg2"><b style="font-weight:600">Why it matters:</b> ${esc(d.why)}</div>` : ''}
+      <div class="row" style="gap:8px;padding-top:2px">${safeUrl(d.url) ? `<a class="btn primary" href="${esc(d.url)}" target="_blank" rel="noopener">${d.source === 'Hansard' ? 'Open in Hansard ↗' : 'Open source ↗'}</a>` : '<span class="note">Source: the VAGO scan’s notes on the public record</span>'}</div>
+    </div>`;
+  const elsewhere = isAll ? [] : M.devs.filter(d => d.jur !== cur.code).slice(0, 4);
+  const quiet = !list.length ? quietCard('No developments in this period.', D.developments.some(d => (isAll || d.jur === cur.code)) ? 'Earlier developments are stored. Widen the period to see them.' : 'Nothing recorded for this office yet.', S.period === 'all' ? '' : 'Show since February', 'period', 'all') : '';
+  return `<div class="row">${types.map(o => `<button class="chip${S.devType === o.t ? ' on' : ''}" aria-pressed="${S.devType === o.t}" data-act="devtype" data-v="${esc(o.t)}">${esc(o.t)} ${o.n}</button>`).join('')}</div>
+    <div class="stack">${list.map(card).join('')}${quiet}</div>
+    ${elsewhere.length ? `<div class="card" style="gap:4px"><h2 class="card-title">Meanwhile, at other audit offices</h2><div class="note" style="margin-bottom:6px">Changes elsewhere in the period</div>
+      ${elsewhere.map(d => `<div class="list-btn" style="cursor:default;flex-direction:row;flex-wrap:wrap;gap:4px 10px;align-items:baseline">${pill(d.type, 'brand thin')}<span style="flex:1 1 240px;font-weight:600">${esc(d.headline)}</span><span class="note nowrap">${esc(BY[d.jur].short)} · ${esc(fmtDay(d.date))}</span></div>`).join('')}</div>` : ''}
+    <div class="note">Developments come from the VAGO scan (Victoria) and the Phase 0 source check (other offices). Hansard-based developments for other parliaments arrive with AI analysis.</div>`;
+}
+
+function pageGaps(M) {
+  const { isAll, cur } = M;
+  const indep = `<div class="info"><span style="color:var(--brand)" aria-hidden="true">ⓘ</span><span>Prepared from public sources. Each Auditor-General sets their own program; parliamentary attention is one input among many.</span></div>`;
+  if (!isAll && cur.code !== 'VIC') {
+    const p = cur.program;
+    return indep + `<div class="card"><h2 class="card-title">Not compared yet</h2>
+      <div class="s13 fg2">${p.name ? `${esc(cur.officeName)}’s program is <b style="font-weight:600">${esc(p.name)}</b>${safeUrl(p.url) ? ` (<a href="${esc(p.url)}" target="_blank" rel="noopener">open ↗</a>)` : ''}. Comparing it with what ${esc(cur.parl)} raises is spec Phase 5.` : `${esc(cur.officeName)} has no published forward program. When gap analysis runs, issues will be compared with its recent reports only.`}</div>
+      <div class="s13 muted">Victoria has a full comparison from the VAGO scan. <button class="linkbtn" style="font-size:13px" data-act="jur" data-v="VIC">See Victoria’s potential gaps</button></div></div>`;
+  }
+  const tabledN = VIC.plan.filter(p => p.status !== 'Outstanding').length;
+  const progHtml = `<div class="card" style="padding:14px 16px;flex-direction:row;flex-wrap:wrap;gap:8px 16px;align-items:center">
+    <div style="flex:1 1 240px;display:flex;flex-direction:column;gap:2px"><div style="font-weight:600">${isAll ? 'VAGO · ' : ''}Annual Plan 2026–27</div><div class="note">${VIC.plan.length} audits: ${VIC.plan.length - tabledN} outstanding · ${tabledN} tabled by 30 Oct 2026 · compared with Victorian Hansard 3 Feb – 24 Sep 2026</div></div>
+    ${pill('From the VAGO scan', 'brand')}</div>`;
+  const topics = VIC.topics.filter(t => M.sectorMatch(t.sector)).sort((a, b) => a.rank - b.rank);
+  const topicsHtml = topics.map(t => `<div class="card" style="flex-direction:row;gap:12px;align-items:flex-start">
+      <div style="flex:none;width:28px;height:28px;border-radius:50%;background:var(--line2);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px">${t.rank}</div>
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+        <button class="headline" data-act="topic" data-v="${t.rank}">${esc(t.topic)}</button>
+        <div class="row" style="font-size:12px">${pill(t.gap, t.gap === 'Not covered' ? 'bad' : 'warn')}<span class="muted">${esc(t.sector)} · ${esc(t.agencies)}</span></div>
+        <div class="row">${t.lanes.map(l => pill(l, 'thin plain')).join('')}<span class="note">signal lanes</span></div>
+        <div class="s13 clamp3"><b style="font-weight:600">VAGO coverage.</b> ${esc(t.vago)}</div>
+        ${t.changed ? `<div class="note clamp3"><b style="font-weight:600;color:var(--fg2)">Changed since August:</b> ${esc(t.changed)}</div>` : ''}
+        <div><button class="btn" data-act="topic" data-v="${t.rank}">Evidence and detail</button></div>
+      </div></div>`).join('') || quietCard('No ranked topics in this sector.', 'Try another sector.', 'Show all sectors', 'sector', '');
+  const COVER = ['Not covered', 'Partially covered', 'Recently reported', 'Fully covered', 'Not applicable'];
+  const COVER_CLS = { 'Not covered': 'bad', 'Partially covered': 'warn', 'Recently reported': 'ok', 'Fully covered': 'ok', 'Not applicable': '' };
+  const themes = VIC.themes.filter(t => M.sectorMatch(t.sector));
+  const sigN = name => VIC.signals.filter(s => s.theme === name).length;
+  const MONTHS = ['2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09'];
+  const spark = name => { const c = MONTHS.map(mo => VIC.signals.filter(s => s.theme === name && s.date.startsWith(mo)).length), mx = Math.max(1, ...c); return `<svg viewBox="0 0 80 18" width="80" height="18" aria-hidden="true">${c.map((v, i) => `<rect x="${i * 10 + 1}" y="${18 - Math.max(v ? 3 : 1, v / mx * 18)}" width="8" height="${Math.max(v ? 3 : 1, v / mx * 18)}" fill="${v ? 'var(--gap)' : 'var(--line)'}"></rect>`).join('')}</svg>`; };
+  const themeHtml = COVER.map(cv => { const ts = themes.filter(t => t.cover === cv); if (!ts.length) return ''; return `<div class="d-sec" style="margin-top:8px">${pill(cv, COVER_CLS[cv])} <span class="note">${ts.length}</span></div>
+      ${ts.map(t => `<button class="trow s13" style="grid-template-columns:minmax(0,1fr) 84px 72px" data-act="theme" data-v="${esc(t.name)}"><span style="font-weight:600;min-width:0">${esc(t.name)}</span>${spark(t.name)}<span class="note" style="text-align:right">${plural(sigN(t.name), 'signal')}</span></button>`).join('')}`; }).join('');
+  const blind = VIC.blindSpots.filter(b => M.sectorMatch(b.sector));
+  return indep + progHtml + `<div class="stack">${topicsHtml}</div>
+    <div class="grid g-2">
+      <div class="card" style="gap:2px"><h2 class="card-title">Coverage by theme</h2><div class="note">28 themes from Victorian Hansard against VAGO’s plan and recent reports. Bars show signals by month, Feb – Sep.</div>${themeHtml}</div>
+      <div class="stack">
+        <div class="card"><h2 class="card-title">Blind spots</h2><div class="note">Issues with clear audit risk that Parliament didn’t raise</div>
+          ${blind.map(b => `<div style="padding:10px 0;border-top:1px solid var(--line2)"><div style="font-weight:600">${esc(b.theme)}</div><div class="s13 fg2">${esc(b.why)}</div><div class="note" style="margin-top:4px">${esc(b.vago)}</div></div>`).join('') || '<div class="s13 muted">None in this sector.</div>'}</div>
+        <div class="card"><details><summary>What the Victorian scan couldn’t see (${VIC.limitations.length})</summary>
+          ${VIC.limitations.map(l => `<div style="padding:8px 0;border-top:1px solid var(--line2)"><div class="s13" style="font-weight:600">${esc(l.title)}</div><div class="note">${esc(l.text)}</div></div>`).join('')}</details></div>
+        <div class="card"><details><summary>Corrections made during the scan (${VIC.corrections.length})</summary>
+          ${VIC.corrections.map(c => `<div style="padding:8px 0;border-top:1px solid var(--line2)"><div class="s13" style="font-weight:600">${esc(c.what)}</div><div class="note">${esc(c.found)}</div><div class="note"><b>Action:</b> ${esc(c.action)}${safeUrl(c.src) ? ` · <a href="${esc(c.src)}" target="_blank" rel="noopener">Source ↗</a>` : ''}</div></div>`).join('')}</details></div>
+      </div>
+    </div>`;
+}
+
+function pageExplore(M) {
+  const scope = S.expJur || S.jur;
+  const q = S.q.trim().toLowerCase();
+  let list = M.ms.filter(m => M.inP(m));
+  if (scope !== 'ALL') list = list.filter(m => m.jur === scope);
+  if (S.expSide !== 'all') list = list.filter(m => m.side === S.expSide);
+  if (S.newOnly) list = list.filter(M.isNew);
+  if (q) list = list.filter(m => [m.text, m.debate, m.speaker, m.party, m.report, m.note, m.house, BY[m.jur].name, m.topic].join(' ').toLowerCase().includes(q));
+  const hl = t => { const s = String(t || ''); if (!q) return esc(s); let out = '', k = 0, low = s.toLowerCase(); for (let i = 0; i < 30; i++) { const f = low.indexOf(q, k); if (f < 0) break; out += esc(s.slice(k, f)) + '<mark>' + esc(s.slice(f, f + q.length)) + '</mark>'; k = f + q.length; } return out + esc(s.slice(k)); };
+  const scopeLabel = scope === 'ALL' ? 'All parliaments' : 'Only ' + BY[scope].name;
+  M.exploreList = list;
+  return `<div style="display:flex;gap:8px"><div class="search">${ICON.search}<label class="sr" for="q">Search Hansard</label><input id="q" class="field" type="search" value="${esc(S.q)}" placeholder="Search Hansard — try “waitlist”, “procurement” or a member’s name" data-input="q" autocomplete="off"></div>${S.q ? '<button class="btn" data-act="clearq">Clear</button>' : ''}</div>
+    <div class="row">
+      <button class="chip${scope !== 'ALL' ? ' on' : ''}" aria-pressed="${scope !== 'ALL'}" data-act="expscope">${esc(scopeLabel)}</button>
+      <button class="chip${S.newOnly ? ' on' : ''}" aria-pressed="${S.newOnly}" data-act="newonly">New this week</button>
+      ${['all', 'government', 'opposition', 'crossbench'].map(k => `<button class="chip${S.expSide === k ? ' on' : ''}" aria-pressed="${S.expSide === k}" data-act="expside" data-v="${k}">${k === 'all' ? 'Any side' : esc(SIDES[k][0])}</button>`).join('')}
+    </div>
+    <div class="s13" style="font-weight:600" role="status">${plural(list.length, 'result')}${scope === 'ALL' ? ' across the parliaments read' : ' in ' + esc(BY[scope].name)}</div>
+    <div class="stack" style="gap:8px">
+      ${list.slice(0, 60).map(m => `<button class="tile" style="gap:5px" data-act="item" data-v="${esc(m.id)}">
+        <span class="row" style="font-size:12px"><span class="dot" style="background:${BY[m.jur].color}"></span><span class="muted nowrap">${esc(where(m, true))}</span><span class="muted">· ${hl(m.debate || '')}</span>${sidePill(m)}${M.isNew(m) ? pill('New', 'new thin') : ''}</span>
+        <span style="font-size:15px;font-weight:600">${esc(m.speaker || 'Unnamed')}${m.party ? ' · ' + esc(m.party) : ''}</span>
+        <span class="s13 fg2 clamp4">${hl(m.text)}</span>
+        ${m.report ? `<span class="note">Report: ${hl(m.report)}</span>` : ''}
+      </button>`).join('')}
+      ${list.length > 60 ? `<div class="note">Showing the newest 60. Export the results for all ${list.length}.</div>` : ''}
+      ${list.length ? '' : '<div class="card dashed s13 muted">No matches. Try fewer words, widen the period, or include all parliaments.</div>'}
+    </div>`;
+}
+
+// ---------------------------------------------------------------- drawers
+function drawerItem(M, id) {
+  const m = D.mentions.find(x => x.id === id);
+  if (!m) return { title: 'Details', body: '<div class="s13 muted">This mention isn’t in the snapshot.</div>' };
+  const j = BY[m.jur], inBrief = PR.adds.includes(m.id);
+  const related = D.mentions.filter(o => o.id !== m.id && ((m.src === 'scan' && o.jur === m.jur && o.date === m.date && o.debate === m.debate) || (m.report && o.report && norm(o.report) === norm(m.report)))).slice(0, 5);
+  const st = STANCE[m.stance];
+  return { title: 'Details', body: `
+    <div class="row">${[m.report ? 'Report mention' : 'Auditor-General mention', KIND[m.kind]].concat(m.sectors.map(s => SECT[s].label)).filter(Boolean).map(t => pill(t, 'plain')).join('')}</div>
+    <h3 class="d-title">${esc(headlineFor(m))}</h3>
+    <div class="s13 muted">${esc(j.parl)} · ${esc(m.house)} · ${esc(fmtDay(m.date))}${m.page ? ' · page ' + esc(m.page) : ''}</div>
+    ${st ? `<div class="row s13">${stancePill(m)}<span class="fg2">${esc(st[2])}</span></div>` : ''}
+    <blockquote class="bq">“${esc(m.text)}”</blockquote>
+    ${verifiedLine(m)}
+    ${m.note ? `<div class="aibox"><div class="ai" style="font-size:11px">✦ Note from the VAGO scan (AI-assisted) — check the source</div><div>${esc(m.note)}</div></div>` : ''}
+    ${m.report ? `<div class="s13"><b style="font-weight:600">Report:</b> ${m.tabled ? `<button class="linkbtn" style="font-size:13px" data-act="report" data-v="${esc(m.tabled.url)}">${esc(m.report)}</button>` : esc(m.report)}${m.reportHow === 'pattern' ? ' <span class="note">(report number found in the text)</span>' : ''}</div>` : (m.topic ? `<div class="s13"><b style="font-weight:600">About:</b> ${esc(m.topic)}</div>` : '')}
+    <div class="s13 fg2" style="border-top:1px solid var(--line);padding-top:10px">${esc(speakerLine(m))}${m.side ? ' · ' + esc(SIDES[m.side][0]) : ''}<br>${esc(m.debate || '')}</div>
+    <div class="row" style="gap:8px">${srcBtn(m)}<button class="btn" data-act="cite" data-v="${esc(m.id)}">Copy citation</button><button class="btn" data-act="add" data-v="${esc(m.id)}">${inBrief ? '✓ In your brief' : 'Add to brief'}</button><button class="btn" data-act="share" data-v="1">${ICON.share} Share</button></div>
+    ${related.length ? `<div class="d-sec">${m.report ? 'Other mentions of this report' : 'Also in this debate'}</div>${related.map(o => `<button class="rel" data-act="item" data-v="${esc(o.id)}"><span class="note">${esc(where(o, o.jur !== m.jur))}</span><span>${esc(speakerLine(o))}</span></button>`).join('')}` : ''}` };
+}
+function drawerReport(M, id) {
+  const t = VIC.tabled.find(x => x.url === id);
+  if (!t) return { title: 'Report', body: '<div class="s13 muted">This report isn’t in the snapshot.</div>' };
+  const ms = D.mentions.filter(m => m.tabled === t);
+  const RAISED = { Yes: ['Raised in Parliament', 'ok'], No: ['Not yet mentioned in Parliament', ''], 'Post-rising': ['Tabled after Parliament rose', 'warn'] };
+  return { title: 'Report', body: `
+    <h3 class="d-title">${esc(t.title)}</h3>
+    <div class="s13 muted">Victorian Auditor-General’s Office · tabled ${esc(fmtDay(t.date))} · ${esc(t.sector)}</div>
+    <div class="row">${pill(RAISED[t.raised][0], RAISED[t.raised][1])}</div>
+    <div class="aibox"><div class="ai" style="font-size:11px">✦ Finding as summarised by the VAGO scan — check the report</div><div>${esc(t.finding)}</div></div>
+    <div class="s13"><b style="font-weight:600">Debated:</b> ${esc(t.debated)}</div>
+    ${ms.length ? `<div class="d-sec">Mentions in Parliament</div>${ms.map(m => mentionEntry(m, M, false)).join('')}` : `<div class="s13" style="padding:12px;border:1px dashed var(--stroke);border-radius:4px">${t.raised === 'Post-rising' ? 'Tabled after Parliament rose, so this Parliament can’t debate it.' : 'No member spoke to this report in the transcripts the scan read.'}</div>`}
+    ${safeUrl(t.url) ? `<div><a class="btn" href="${esc(t.url)}" target="_blank" rel="noopener">Open on the VAGO website ↗</a></div>` : ''}` };
+}
+function drawerTopic(M, id) {
+  const t = VIC.topics.find(x => String(x.rank) === String(id));
+  if (!t) return { title: 'Potential gap', body: '<div class="s13 muted">This topic isn’t in the snapshot.</div>' };
+  return { title: 'Potential gap', body: `
+    <div class="row">${pill(t.gap, t.gap === 'Not covered' ? 'bad' : 'warn')}${pill(t.sector, 'plain')}${pill('Rank ' + t.rank + ' of ' + VIC.topics.length, 'plain')}</div>
+    <h3 class="d-title">${esc(t.topic)}</h3>
+    <div class="s13 fg2">${esc(t.agencies)}</div>
+    <div class="aibox"><div class="ai" style="font-size:11px">✦ Assessment by the VAGO scan (AI-assisted) — check the evidence</div><div><b style="font-weight:600">Why it’s on the list:</b> ${esc(t.why)}</div></div>
+    <div class="s13"><b style="font-weight:600">Audit question:</b> ${esc(t.question)}</div>
+    <dl class="kv"><dt>Severity</dt><dd>${esc(t.severity)}</dd><dt>Scale</dt><dd>${esc(t.scale)}</dd><dt>Breadth</dt><dd>${esc(t.breadth)}</dd><dt>Urgency</dt><dd>${esc(t.urgency)}</dd><dt>Signals</dt><dd>${esc(t.lanes.join(' · '))}</dd></dl>
+    <div class="s13"><b style="font-weight:600">VAGO coverage:</b> ${esc(t.vago)}</div>
+    ${t.changed ? `<div class="s13 fg2" style="padding:10px 12px;background:var(--brand-tint2);border-radius:4px"><b style="font-weight:600">Changed since August:</b> ${esc(t.changed)}</div>` : ''}
+    ${t.caution ? `<div class="info warn"><span aria-hidden="true">⚠</span><span>${esc(t.caution)}</span></div>` : ''}
+    <div class="note">Prepared from public sources. Each Auditor-General sets their own program; parliamentary attention is one input among many.</div>` };
+}
+function drawerTheme(M, id) {
+  const t = VIC.themes.find(x => x.name === id), cv = VIC.coverage[id];
+  if (!t) return { title: 'Theme', body: '<div class="s13 muted">This theme isn’t in the snapshot.</div>' };
+  const sig = VIC.signals.filter(s => s.theme === id).sort((a, b) => b.date.localeCompare(a.date));
+  return { title: 'Theme', body: `
+    <div class="row">${pill(t.cover, { 'Not covered': 'bad', 'Partially covered': 'warn', 'Recently reported': 'ok', 'Fully covered': 'ok' }[t.cover] || '')}${pill(t.sector, 'plain')}</div>
+    <h3 class="d-title">${esc(t.name)}</h3>
+    <div class="s13"><b style="font-weight:600">VAGO:</b> ${esc(t.vago)}</div>
+    <div class="s13 fg2">${esc(t.note)}</div>
+    ${cv ? `${cv.did && cv.did.length ? `<div class="d-sec">VAGO reports on this</div>${cv.did.map(d => `<div class="s13">${safeUrl(d[2]) ? `<a href="${esc(d[2])}" target="_blank" rel="noopener">${esc(d[0])}</a>` : esc(d[0])} <span class="note">· ${esc(d[1])}</span></div>`).join('')}` : ''}
+      <dl class="kv" style="margin-top:6px">${cv.covers ? `<dt>Covers</dt><dd>${esc(cv.covers)}</dd>` : ''}${cv.open ? `<dt>Still open</dt><dd>${esc(cv.open)}</dd>` : ''}${cv.add ? `<dt>Could add</dt><dd>${esc(cv.add)}</dd>` : ''}${cv.plan && cv.plan.length ? `<dt>In the plan</dt><dd>${cv.plan.map(esc).join('<br>')}</dd>` : ''}${cv.stale ? `<dt>Last look</dt><dd>${esc(cv.stale)}</dd>` : ''}</dl>` : ''}
+    <div class="d-sec">Signals in Parliament (${sig.length})</div>
+    ${sig.map(s => `<div style="padding:10px 0;border-top:1px solid var(--line2);display:flex;flex-direction:column;gap:4px">
+      <div class="row" style="font-size:12px">${pill(s.relevance + ' relevance', s.relevance === 'High' ? 'warn thin' : 'thin plain')}<span class="muted">${esc(s.forum)} · ${esc(fmtDay(s.date))}</span></div>
+      <div class="quote s13">“${esc(s.quote)}”</div><div class="note">${esc(s.speaker)} · ${esc(s.party)}</div><div class="s13 fg2">${esc(s.gloss)}</div>
+      ${safeUrl(s.url) ? `<div><a class="s13" style="font-weight:600" href="${esc(s.url)}" target="_blank" rel="noopener">Open in Hansard ↗</a></div>` : ''}</div>`).join('')}` };
+}
+function drawerAbout() {
+  const sc = D.scan;
+  return { title: 'About this snapshot', body: `
+    <h3 class="d-title">Real data, 1 Nov 2026</h3>
+    <div class="s13 fg2">This page is a self-contained snapshot of Hansard Watch. Nothing on it is invented. It joins three sources.</div>
+    <dl class="kv">
+      <dt>Hansard store</dt><dd>${esc(D.provenance.scan)} Last check: run ${sc.run}, ${sc.rechecked} transcripts rechecked, ${sc.new_speeches} new speeches, ${sc.awaiting} days not yet published, ${sc.failed} chambers that couldn’t be read.</dd>
+      <dt>Victoria</dt><dd>${esc(D.provenance.cowork)}. Quotes were checked against the transcripts; notes and assessments were written with AI assistance.</dd>
+      <dt>Offices and governments</dt><dd>${esc(D.provenance.config)}</dd>
+    </dl>
+    <div class="d-sec">How to read it</div>
+    <ul class="s13 fg2" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px">
+      <li>A mention is a speech whose text names an Auditor-General or audit office. It isn’t yet linked to a report or given a sentiment; that is the AI analysis to come.</li>
+      <li>Victoria is different: a reading scan of the transcripts found each mention, checked the quote and recorded how the member used VAGO’s work.</li>
+      <li>Side (government, opposition, crossbench) comes from the speaker’s party and the government of the day.</li>
+      <li>Sectors are a keyword match against the project’s theme terms. AI theming replaces them later.</li>
+      <li>South Australia, Western Australia and Tasmania aren’t read yet: their sites refuse automated readers. Victoria’s site does too, which is why its data comes from the separate scan.</li>
+    </ul>
+    <div class="note">“New this week” means mentions from the last 7 days of the snapshot that you haven’t opened.</div>` };
+}
+
+// ---------------------------------------------------------------- menus
+function jurMenu(M) {
+  return `<div role="menu" aria-label="Jurisdiction"><div class="menu-head">Viewing as</div>
+    ${CODES.concat(['ALL']).map(c => { const n = D.mentions.filter(m => (c === 'ALL' || m.jur === c) && m.date >= NEW_FROM && !PR.seen.includes(m.id)).length, name = c === 'ALL' ? 'All jurisdictions' : BY[c].name, sub = c === 'ALL' ? 'ACAG — all offices' : BY[c].officeName;
+      return `<button class="menu-item" role="menuitemradio" aria-checked="${S.jur === c}" data-act="jur" data-v="${c}"><span class="check">${S.jur === c ? '✓' : ''}</span><span style="flex:1;display:flex;flex-direction:column"><span>${esc(name)}</span><span class="note">${esc(sub)}</span></span><span class="note" style="color:var(--brand);font-weight:600">${n ? n + ' new' : ''}</span></button>`; }).join('')}
+    <div class="menu-foot">Saved on this device</div></div>`;
+}
+function periodMenu(M) {
+  return `<div role="menu" aria-label="Period">${Object.entries(PERIODS).map(([k, p]) => { const f = p.days ? addDays(AS_OF, -p.days) : p.from; return `<button class="menu-item" role="menuitemradio" aria-checked="${S.period === k}" data-act="period" data-v="${k}"><span class="check">${S.period === k ? '✓' : ''}</span><span style="flex:1">${esc(p.menu)}</span><span class="note">${esc(fmtRange(f, AS_OF))}</span></button>`; }).join('')}
+    <div class="menu-foot">Victoria is stored from 3 Feb; other parliaments from early September.</div></div>`;
+}
+function sectorMenu(M) {
+  return `<div role="menu" aria-label="Sector"><div class="menu-head">Filter every page by sector</div>
+    <button class="menu-item" role="menuitemradio" aria-checked="${!S.sector}" data-act="sector" data-v=""><span class="check">${!S.sector ? '✓' : ''}</span><span style="flex:1">All sectors</span></button>
+    ${D.sectors.map(s => { const n = D.mentions.filter(m => M.mine(m) && M.inP(m) && m.sectors.includes(s.id)).length; return `<button class="menu-item" role="menuitemradio" aria-checked="${S.sector === s.id}" data-act="sector" data-v="${s.id}"><span class="check">${S.sector === s.id ? '✓' : ''}</span><span style="flex:1">${esc(s.label)}</span><span class="note nowrap">${n ? plural(n, 'mention') : ''}</span></button>`; }).join('')}
+    <div class="menu-foot">Keyword match on the debate title and text.</div></div>`;
+}
+function statusPanel(M) {
+  const sc = D.scan;
+  return `<div role="dialog" aria-label="Coverage and sources" style="padding-bottom:4px">
+    <div style="padding:12px 12px 8px;display:flex;flex-direction:column;gap:2px"><div style="font-size:15px;font-weight:600">Snapshot of Sun 1 Nov 2026</div>
+    <div class="note">Last check of the sources: run ${sc.run} at 11:09 am AEDT. ${sc.rechecked} transcripts rechecked, ${sc.new_speeches} new speeches, ${sc.awaiting} sitting days not yet published.</div></div>
+    ${CODES.map(c => { const j = BY[c];
+      const [ic, col] = c === 'VIC' ? ['◐', 'var(--brand)'] : j.status === 'live' ? ['✓', 'var(--ok)'] : j.status === 'blocked' ? ['⚠', 'var(--warn)'] : ['○', 'var(--fg3)'];
+      const tx = c === 'VIC' ? `Scanner blocked (${lc(j.route)}). Read by the VAGO scan instead: ${j.read.days} of ${j.read.daysTotal} sitting days and ${j.read.paec} of ${j.read.paecTotal} PAEC hearings, 3 Feb – 24 Sep.`
+        : j.read ? `Read ${fmtShort(j.read.from)} – ${fmtShort(j.read.to)} · ${plural(j.read.days, 'sitting day')} · ${j.read.speeches.toLocaleString('en-AU')} speeches. ${j.route}.`
+        : `${j.route}.${j.needs ? ' Needs: ' + lc(j.needs) + '.' : ''}`;
+      return `<div class="status-row"><span class="ic" style="color:${col}" aria-hidden="true">${ic}</span><span class="nm">${esc(j.parl)}</span><span class="tx">${esc(tx)}</span></div>`; }).join('')}
+    <div style="padding:12px;border-top:1px solid var(--line);margin-top:4px;display:flex;flex-direction:column;gap:8px">
+      <div class="note">This page is a snapshot, so there’s nothing to refresh here. The Hansard Watch server checks the sources each morning.</div>
+      <button class="btn" data-act="about">About this snapshot</button></div></div>`;
+}
+function moreMenu() {
+  return `<div role="menu" aria-label="More options">
+    <button class="menu-item" role="menuitem" data-act="menu" data-v="status">Coverage and sources</button>
+    <button class="menu-item" role="menuitem" data-act="about">About this snapshot</button>
+    <button class="menu-item" role="menuitem" data-act="restart">Change jurisdiction or start page</button></div>`;
+}
+function exportOptions(M) {
+  const o = [];
+  if (S.tab === 'brief') o.push(['Copy text for email or Teams', 'copybrief'], ['Mentions in this brief (CSV)', 'csv-mentions']);
+  if (S.tab === 'compare') o.push(['Comparison table (CSV)', 'csv-compare']);
+  if (S.tab === 'mentions') o.push(S.mTab === 'reports' ? ['VAGO report register (CSV)', 'csv-reports'] : ['Mentions (CSV)', 'csv-mentions']);
+  if (S.tab === 'dev') o.push(['Developments (CSV)', 'csv-dev']);
+  if (S.tab === 'gaps' && (M.isAll || M.cur.code === 'VIC')) o.push(['Longlist (CSV)', 'csv-gaps']);
+  if (S.tab === 'explore') o.push(['Results (CSV)', 'csv-explore']);
+  return o;
+}
+
+// ---------------------------------------------------------------- shell
+function viewOnboard() {
+  const ob = S.ob;
+  const opts = CODES.map(c => [c, BY[c].short, BY[c].name, BY[c].officeName]).concat([['ALL', 'All', 'All jurisdictions', 'ACAG — all offices']]);
+  return `<div class="ob"><div class="ob-scroll"><div class="ob-card">
+      <div style="display:flex;flex-direction:column;gap:4px"><div class="s13" style="font-weight:600;color:var(--brand)">Hansard Watch</div><h1 style="font-size:22px;line-height:1.25">Which jurisdiction are you from?</h1>
+      <div class="muted">We’ll start with your Parliament and audit office, then show how the other 8 compare. You can switch at any time from the top bar.</div></div>
+      <div class="ob-grid" role="radiogroup" aria-label="Your jurisdiction">${opts.map(([c, sh, n, o]) => `<button class="ob-jur" role="radio" aria-checked="${ob.jur === c}" data-act="objur" data-v="${c}"><span class="ob-badge">${esc(sh)}</span><span style="flex:1;min-width:0;display:flex;flex-direction:column"><span style="font-weight:600">${esc(n)}</span><span class="note">${esc(o)}</span></span><span style="color:var(--brand);font-weight:700">${ob.jur === c ? '✓' : ''}</span></button>`).join('')}</div>
+      <div style="display:flex;flex-direction:column;gap:8px"><div style="font-weight:600">What do you want to see first?</div>
+      <div class="row">${TABS.map(([k, l]) => `<button class="chip sq${ob.start === k ? ' on' : ''}" aria-pressed="${ob.start === k}" data-act="obstart" data-v="${k}">${esc(l)}</button>`).join('')}</div></div>
+      <div class="note">Real data: a snapshot of Hansard Watch on 1 Nov 2026.</div>
+    </div></div>
+    <div class="ob-foot"><div><div class="note" style="flex:1">${ob.jur ? 'Saved on this device · no sign-in needed' : 'Choose your jurisdiction to continue'}</div><button class="btn primary" style="min-height:44px;padding:0 24px" data-act="obgo" ${ob.jur ? '' : 'disabled'}>Continue</button></div></div></div>`;
+}
+
+function viewHeader(M) {
+  const { isAll, cur } = M;
+  const jurLabel = isAll ? 'ACAG — all offices' : `${cur.name} · ${cur.office}`;
+  const secLabel = S.sector ? SECT[S.sector].label : 'All sectors';
+  const notRead = CODES.filter(c => !BY[c].read).map(c => BY[c].short);
+  const newN = D.mentions.filter(m => M.mine(m) && M.isNew(m)).length;
+  const exp = id => `aria-haspopup="menu" aria-expanded="${S.menu === id}"`;
+  const popm = (id, cls, w, html) => S.menu === id && !mob ? `<div class="popmenu ${cls}" style="width:${w}px">${html}</div>` : '';
+  let top;
+  if (!mob) {
+    top = `<div class="hdr-row">
+      <div class="hdr-brand">Hansard Watch</div>
+      <div class="pop"><button class="picker" style="width:210px" data-act="menu" data-v="jur" ${exp('jur')} aria-label="Jurisdiction: ${esc(jurLabel)}"><span class="dot" style="background:${isAll ? 'var(--fg3)' : cur.color}"></span><span class="lbl" style="font-weight:600">${esc(jurLabel)}</span><span aria-hidden="true">▾</span></button>${popm('jur', '', 320, jurMenu(M))}</div>
+      <div class="pop"><button class="picker" style="width:150px" data-act="menu" data-v="period" ${exp('period')} aria-label="Period: ${esc(M.per.label)}"><span class="lbl">${esc(M.per.label)}</span><span aria-hidden="true">▾</span></button>${popm('period', '', 280, periodMenu(M))}</div>
+      <div class="pop"><button class="picker${S.sector ? ' on' : ''}" style="width:180px" data-act="menu" data-v="sector" ${exp('sector')} aria-label="Sector: ${esc(secLabel)}"><span class="lbl">${esc(secLabel)}</span><span aria-hidden="true">▾</span></button>${popm('sector', '', 340, sectorMenu(M))}</div>
+      <div class="grow"></div>
+      <div class="pop"><button class="statusbtn" data-act="menu" data-v="status" aria-haspopup="dialog" aria-expanded="${S.menu === 'status'}"><span class="dot" style="background:var(--ok-dot)"></span><span>Snapshot Sun 1 Nov</span>${notRead.length ? `<span style="color:var(--warn)">· ${esc(notRead.join(', '))} not read</span>` : ''}</button>${popm('status', 'right', 440, statusPanel(M))}</div>
+      ${newN ? `<button class="newbtn" data-act="shownew">${newN} new this week</button>` : ''}
+      <div class="pop"><button class="iconbtn" data-act="menu" data-v="more" ${exp('more')} aria-label="More options">${ICON.more}</button>${popm('more', 'right', 280, moreMenu())}</div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Pages">${TABS.map(([k, l]) => `<button role="tab" aria-selected="${S.tab === k}" data-act="tab" data-v="${k}">${esc(l)}</button>`).join('')}</nav>`;
+  } else {
+    top = `<div class="hdr-mrow">
+      <div class="grow" style="font-size:17px;font-weight:600">Hansard Watch</div>
+      <button class="iconbtn${S.tab === 'explore' ? ' on' : ''}" aria-label="Search Hansard" data-act="tab" data-v="explore">${ICON.search.replace('<svg', '<svg width="22" height="22"')}</button>
+      <button class="jurpill" data-act="menu" data-v="jur" ${exp('jur')} aria-label="Jurisdiction: ${esc(jurLabel)}"><span class="dot" style="background:${isAll ? 'var(--fg3)' : cur.color}"></span>${esc(isAll ? 'All' : cur.short)} ▾</button>
+      <button class="iconbtn" data-act="menu" data-v="more" ${exp('more')} aria-label="More options">${ICON.more}</button></div>`;
+  }
+  const shared = S.shared && !S.sharedHidden ? `<div class="strip"><span class="grow">↪ Opened from a shared link · ${esc(TAB_NAME[S.tab])} · ${esc(isAll ? 'All offices' : cur.name)} · ${esc(M.per.label)}</span>
+      ${(!PR.jur || PR.jur !== S.jur) ? `<button class="btn" data-act="${PR.jur ? 'jur' : 'restart'}" data-v="${esc(PR.jur || '')}">${PR.jur ? 'Switch to ' + esc(PR.jur === 'ALL' ? 'all jurisdictions' : BY[PR.jur].name) : 'Set my jurisdiction'}</button>` : ''}
+      <button class="iconbtn" data-act="unshare" aria-label="Dismiss">${ICON.close}</button></div>` : '';
+  return top + shared;
+}
+
+function viewPageHead(M) {
+  const { isAll, cur } = M;
+  const scope = `${isAll ? 'ACAG — all offices' : cur.name + ' · ' + cur.office} · ${M.range}${S.sector ? ' · ' + SECT[S.sector].label : ''}`;
+  const head = {
+    brief: [scope, M.per.title, coverageLine(M)],
+    compare: [`${M.range} · all 9 parliaments${S.sector ? ' · ' + SECT[S.sector].label : ''}`, isAll ? 'Across Australia' : `How ${cur.name} compares`, 'How often each Parliament mentions its Auditor-General, and who does the mentioning.'],
+    mentions: [scope, 'Mentions', 'What Parliament says about each Auditor-General and their reports, with the speaker, their side and a link to the transcript.'],
+    dev: [scope, 'Developments', isAll ? 'Changes affecting the 9 offices, newest first.' : `Changes affecting the ${cur.officeName}, newest first.`],
+    gaps: [scope, 'Potential gaps in the forward program', (isAll || cur.code === 'VIC') ? 'Issues raised in the Parliament of Victoria that VAGO’s program may not cover, from the VAGO scan.' : `Issues raised in ${cur.parl} that ${cur.office}’s program may not cover.`],
+    explore: [`${M.range}${S.sector ? ' · ' + SECT[S.sector].label : ''}`, 'Explore', 'Search every stored mention, with the exact words and a link you can cite.'],
+  }[S.tab];
+  const opts = exportOptions(M);
+  const expMenu = S.menu === 'export' && !mob ? `<div class="popmenu right" style="width:280px" role="menu" aria-label="Export">${opts.map(([l, a]) => `<button class="menu-item" role="menuitem" data-act="${a}">${esc(l)}</button>`).join('')}</div>` : '';
+  const chips = mob ? `<div class="mchips">
+      <button class="mchip" data-act="menu" data-v="period" aria-haspopup="menu">${esc(M.per.label)} ▾</button>
+      <button class="mchip${S.sector ? ' on' : ''}" data-act="menu" data-v="sector" aria-haspopup="menu">${esc(S.sector ? SECT[S.sector].label : 'All sectors')} ▾</button>
+      <button class="mchip fg2" data-act="menu" data-v="status" aria-haspopup="dialog"><span class="dot" style="background:var(--ok-dot);width:7px;height:7px"></span>Snapshot 1 Nov<span style="color:var(--warn)">· ${CODES.filter(c => !BY[c].read).length} not read</span></button>
+      ${(() => { const n = D.mentions.filter(m => M.mine(m) && M.isNew(m)).length; return n ? `<button class="newbtn" data-act="shownew">${n} new</button>` : ''; })()}</div>` : '';
+  return `<div class="pghead"><div class="pghead-text"><div class="kicker">${esc(head[0])}</div><h1>${esc(head[1])}</h1><div class="pgsub">${esc(head[2])}</div></div>
+    <div class="actions-top"><button class="btn" data-act="share" data-v="0">${ICON.share} Share</button>${opts.length ? `<div class="pop"><button class="btn" data-act="menu" data-v="export" aria-haspopup="menu" aria-expanded="${S.menu === 'export'}">${ICON.down} Export ▾</button>${expMenu}</div>` : ''}</div></div>${chips}`;
+}
+
+function viewOverlays(M) {
+  let html = '';
+  if (S.menu && mob) {
+    const content = { jur: jurMenu(M), period: periodMenu(M), sector: sectorMenu(M), status: statusPanel(M), more: moreMenu(), export: `<div role="menu" aria-label="Export"><div style="padding:12px 12px 6px;font-size:15px;font-weight:600">Export</div>${exportOptions(M).map(([l, a]) => `<button class="menu-item" role="menuitem" style="min-height:48px" data-act="${a}">${esc(l)}</button>`).join('')}</div>` }[S.menu] || '';
+    html += `<div class="scrim" data-act="closemenu"></div><div class="sheet">${content}</div>`;
+  }
+  if (S.drawer) {
+    const d = { item: drawerItem, report: drawerReport, topic: drawerTopic, theme: drawerTheme, about: () => drawerAbout() }[S.drawer.k];
+    const v = d ? d(M, S.drawer.id) : { title: '', body: '' };
+    html += `<div class="scrim" style="z-index:59" data-act="closedrawer"></div><aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle"><div class="drawer-head"><h2 id="dtitle">${esc(v.title)}</h2><button class="iconbtn" data-act="closedrawer" aria-label="Close" id="dclose">${ICON.close}</button></div><div class="drawer-body">${v.body}</div></aside>`;
+  }
+  if (S.share) {
+    const withD = S.share.withDrawer && S.drawer && S.drawer.k !== 'about';
+    const link = location.href.split('#')[0] + '#' + toHash(withD);
+    const bits = [TAB_NAME[S.tab], M.isAll ? 'All offices' : M.cur.name, M.per.label];
+    if (S.sector) bits.push('Sector: ' + SECT[S.sector].label);
+    if (S.tab === 'explore' && S.q) bits.push(`Search “${S.q}”`);
+    if (withD) bits.push('With the open panel');
+    const title = 'Hansard Watch — ' + bits.slice(0, 2).join(' · ');
+    html += `<div class="scrim" style="z-index:69" data-act="closeshare"></div><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="stitle">
+      <div style="display:flex;align-items:center;gap:8px"><h2 id="stitle">Share this view</h2><button class="iconbtn" data-act="closeshare" aria-label="Close" id="sclose">${ICON.close}</button></div>
+      <div class="s13 muted">The link opens this exact view — same jurisdiction, period and filters — wherever this page is hosted.</div>
+      <div class="row">${bits.map(b => `<span class="pill plain" style="padding:2px 10px;color:var(--fg)">${esc(b)}</span>`).join('')}</div>
+      <div style="display:flex;gap:8px"><label class="sr" for="sharelink">Link to this view</label><input id="sharelink" class="field" readonly value="${esc(link)}"><button class="btn primary" style="min-height:40px" data-act="copylink">Copy link</button></div>
+      <div class="row" style="gap:8px"><a class="btn" href="mailto:?subject=${encodeURIComponent(title)}&amp;body=${encodeURIComponent(link)}">✉ Email</a><a class="btn" href="https://teams.microsoft.com/share?href=${encodeURIComponent(link)}&amp;msgText=${encodeURIComponent(title)}" target="_blank" rel="noopener">Teams ↗</a></div></div>`;
+  }
+  return html;
+}
+
+function viewBottomNav() {
+  return TABS.filter(([k]) => k !== 'explore').map(([k, l]) => `<button aria-current="${S.tab === k ? 'page' : 'false'}" data-act="tab" data-v="${k}">${ICON[k]}<span>${esc(l)}</span></button>`).join('');
+}
+
+// ---------------------------------------------------------------- render
+let lastMob = null, lastTab = null, opener = null, lastOverlay = '';
+function render() {
+  const app = document.getElementById('app');
+  const ae = document.activeElement, fsig = ae && ae !== document.body ? { id: ae.id, act: ae.dataset && ae.dataset.act, v: ae.dataset && ae.dataset.v, ss: ae.selectionStart, se: ae.selectionEnd } : null;
+  if (S.stage === 'onboard') {
+    app.className = 'shell' + (mob ? ' mob' : '');
+    app.innerHTML = viewOnboard();
+    lastMob = null;
+  } else {
+    if (lastMob !== mob || !document.getElementById('main')) {
+      app.className = 'shell' + (mob ? ' mob' : '');
+      app.innerHTML = `<header class="hdr" id="hdr"></header><main id="main"><div class="page" id="page"></div></main>${mob ? '<nav class="bnav" id="bnav" aria-label="Pages"></nav>' : ''}<div id="ovl"></div><div id="toastbox"></div>`;
+      lastMob = mob;
+    }
+    const M = model();
+    document.getElementById('hdr').innerHTML = viewHeader(M);
+    const pg = { brief: pageBrief, compare: pageCompare, mentions: pageMentions, dev: pageDev, gaps: pageGaps, explore: pageExplore }[S.tab](M);
+    document.getElementById('page').innerHTML = viewPageHead(M) + pg;
+    if (mob) document.getElementById('bnav').innerHTML = viewBottomNav();
+    const ovl = viewOverlays(M);
+    document.getElementById('ovl').innerHTML = ovl;
+    if (lastTab !== S.tab) { document.getElementById('main').scrollTop = 0; lastTab = S.tab; }
+    window.__M = M;
+    // Move focus into a newly opened drawer or dialog; give it back when it closes.
+    const kind = S.share ? 'share' : S.drawer ? 'drawer:' + S.drawer.k + S.drawer.id : '';
+    if (kind !== lastOverlay) {
+      if (kind) { const el = document.getElementById(S.share ? 'sclose' : 'dclose'); if (el) { el.focus(); renderToast(); syncHash(); lastOverlay = kind; return; } }
+      else if (opener) { const el = findSig(opener); opener = null; if (el) { el.focus(); renderToast(); syncHash(); lastOverlay = kind; return; } }
+      lastOverlay = kind;
+    }
+  }
+  if (fsig) { const el = findSig(fsig); if (el && el !== document.activeElement) { el.focus(); if (fsig.ss != null && el.setSelectionRange) try { el.setSelectionRange(fsig.ss, fsig.se); } catch (e) { /* not a text field */ } } }
+  renderToast();
+  syncHash();
+}
+function findSig(f) {
+  if (f.id) return document.getElementById(f.id);
+  if (!f.act) return null;
+  const all = document.querySelectorAll(`[data-act="${CSS.escape(f.act)}"]`);
+  for (const el of all) if ((el.dataset.v || '') === (f.v || '')) return el;
+  return null;
+}
+function renderToast() {
+  const box = document.getElementById('toastbox');
+  if (box) box.innerHTML = S.toast ? `<div class="toast" role="status">${esc(S.toast)}</div>` : '';
+}
+
+// ---------------------------------------------------------------- actions
+function markSeen(id) { if (!PR.seen.includes(id)) { PR.seen.push(id); savePrefs(); } }
+function copyText(text, msg) {
+  const done = () => toast(msg);
+  const fallback = () => { const ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; } ta.remove(); toast(ok ? msg : 'Couldn’t copy here. Select the text and copy it yourself.'); };
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+}
+function csv(rows, cols) {
+  const q = v => { v = v == null ? '' : String(v); return /[",\n\r]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+  return [cols.map(c => q(c[0])).join(',')].concat(rows.map(r => cols.map(c => q(c[1](r))).join(','))).join('\r\n');
+}
+function download(name, text) {
+  try {
+    const blob = new Blob(['﻿' + text], { type: 'text/csv;charset=utf-8' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    toast('Downloaded ' + name);
+  } catch (e) { copyText(text, 'Downloads are blocked here, so the CSV was copied instead'); }
+}
+const MENTION_COLS = [['date', m => m.date], ['parliament', m => m.jur], ['chamber', m => m.house], ['speaker', m => m.speaker], ['party', m => m.party], ['side', m => m.side], ['debate', m => m.debate], ['kind', m => KIND[m.kind] || m.kind], ['report', m => m.report], ['stance', m => m.stance], ['verified', m => m.verified], ['text', m => m.text], ['page', m => m.page], ['source', m => m.url]];
+function doExport(kind) {
+  const M = window.__M, tag = (M.isAll ? 'all' : S.jur.toLowerCase()) + '-' + S.period;
+  if (kind === 'copybrief') {
+    const lines = M.pool.filter(M.subst).slice(0, 5).map(m => `• ${headlineFor(m)} — ${m.speaker}${m.party ? ' (' + m.party + ')' : ''}, ${BY[m.jur].short}, ${fmtDay(m.date)}. ${m.url}`);
+    copyText(`${M.per.title} — ${M.isAll ? 'ACAG' : M.cur.office} (${M.range})\n${lines.join('\n') || 'No mentions in this period.'}\n${location.href.split('#')[0]}#${toHash(false)}`, 'Brief copied — paste it into email or Teams');
+  } else if (kind === 'csv-mentions') {
+    const list = S.tab === 'mentions' ? M.ms.filter(m => m.jur === (S.agSel || (M.isAll ? 'VIC' : M.cur.code)) && M.inP(m) && (S.side === 'all' || m.side === S.side)) : M.pool;
+    download(`mentions-${tag}.csv`, csv(list, MENTION_COLS));
+  } else if (kind === 'csv-explore') download(`explore-${tag}.csv`, csv(M.exploreList || [], MENTION_COLS));
+  else if (kind === 'csv-compare') download(`compare-${S.period}.csv`, csv(CODES.map(c => ({ c, read: M.readInPeriod(c), n: M.countFor(c), sp: M.speechesFor(c) })), [['parliament', r => BY[r.c].name], ['read', r => r.read ? 'yes' : 'no'], ['mentions', r => r.read ? r.n : ''], ['speeches', r => r.read && r.sp ? r.sp : ''], ['per_1000', r => r.read && r.sp ? (r.n / r.sp * 1000).toFixed(2) : '']]));
+  else if (kind === 'csv-reports') download('vago-report-register.csv', csv(VIC.tabled, [['tabled', t => t.date], ['title', t => t.title], ['sector', t => t.sector], ['raised_in_parliament', t => t.raised], ['debated', t => t.debated], ['finding', t => t.finding], ['url', t => t.url]]));
+  else if (kind === 'csv-dev') download(`developments-${tag}.csv`, csv(M.devs.filter(d => M.isAll || d.jur === M.cur.code), [['date', d => d.date], ['office', d => BY[d.jur].office], ['type', d => d.type], ['source', d => d.source], ['headline', d => d.headline], ['detail', d => d.body], ['why_it_matters', d => d.why], ['url', d => d.url]]));
+  else if (kind === 'csv-gaps') download('vago-gap-longlist.csv', csv(VIC.topics, [['rank', t => t.rank], ['topic', t => t.topic], ['coverage', t => t.gap], ['sector', t => t.sector], ['agencies', t => t.agencies], ['signal_lanes', t => t.lanes.join('; ')], ['why', t => t.why], ['audit_question', t => t.question], ['vago_coverage', t => t.vago], ['changed_since_august', t => t.changed], ['caution', t => t.caution]]));
+}
+const ACT = {
+  tab: v => { opener = null; setState({ tab: v, drawer: null, menu: null, limit: 20 }); },
+  menu: (v, el) => setState({ menu: S.menu === v ? null : v }),
+  closemenu: () => setState({ menu: null }),
+  jur: v => { PR.jur = v; savePrefs(); setState({ jur: v, agSel: null, repOff: null, expJur: null, menu: null, shared: false, drawer: S.drawer && S.drawer.k === 'about' ? S.drawer : null }); toast('Now viewing ' + (v === 'ALL' ? 'all jurisdictions' : BY[v].name)); },
+  period: v => setState({ period: v, menu: null }),
+  sector: v => { setState({ sector: v || null, menu: null, devType: 'All' }); toast(v ? 'Showing ' + SECT[v].label : 'Showing all sectors'); },
+  map: v => setState({ mapMode: v }),
+  mtab: v => setState({ mTab: v }),
+  reports: () => setState({ tab: 'mentions', mTab: 'reports', drawer: null, menu: null }),
+  agsel: v => setState({ agSel: v, side: 'all', limit: 20 }),
+  side: v => setState({ side: v, limit: 20 }),
+  more: () => setState({ limit: S.limit + 20 }),
+  repoff: v => setState({ repOff: v }),
+  notyet: () => setState({ notYet: !S.notYet }),
+  devtype: v => setState({ devType: v }),
+  expscope: () => { const cur = S.expJur || S.jur; setState({ expJur: cur === 'ALL' ? (S.jur === 'ALL' ? 'VIC' : S.jur) : 'ALL' }); },
+  expside: v => setState({ expSide: v }),
+  newonly: () => setState({ newOnly: !S.newOnly }),
+  clearq: () => { setState({ q: '' }); const el = document.getElementById('q'); if (el) el.focus(); },
+  heat: v => { const [c, s] = v.split('|'); setState({ tab: 'explore', expJur: c, sector: s, q: '', drawer: null, menu: null }); },
+  shownew: () => setState({ tab: 'explore', newOnly: true, q: '', expJur: S.jur, expSide: 'all', drawer: null, menu: null }),
+  item: (v, el) => { if (!S.drawer) opener = sigOf(el); markSeen(v); setState({ drawer: { k: 'item', id: v }, menu: null }); },
+  report: (v, el) => { if (!S.drawer) opener = sigOf(el); setState({ drawer: { k: 'report', id: v }, menu: null }); },
+  topic: (v, el) => { if (!S.drawer) opener = sigOf(el); setState({ drawer: { k: 'topic', id: v }, menu: null }); },
+  theme: (v, el) => { if (!S.drawer) opener = sigOf(el); setState({ drawer: { k: 'theme', id: v }, menu: null }); },
+  about: (v, el) => { if (!S.drawer) opener = sigOf(el); setState({ drawer: { k: 'about', id: '1' }, menu: null }); },
+  closedrawer: () => setState({ drawer: null }),
+  seen: v => { markSeen(v); setTimeout(render, 0); },
+  cite: v => { const m = D.mentions.find(x => x.id === v); if (m) copyText(`${m.speaker}${m.party ? ' (' + m.party + ')' : ''}, ${m.debate || KIND[m.kind]}, ${m.house}, ${BY[m.jur].parl}, ${fmtLong(m.date)}${m.page ? ', p. ' + m.page : ''}. ${m.url}`, 'Citation copied'); },
+  add: v => { const i = PR.adds.indexOf(v); if (i >= 0) PR.adds.splice(i, 1); else PR.adds.push(v); savePrefs(); render(); toast(i >= 0 ? 'Removed from your brief' : 'Added to your brief'); },
+  share: v => setState({ share: { withDrawer: v === '1' }, menu: null }),
+  closeshare: () => setState({ share: null }),
+  copylink: () => { const el = document.getElementById('sharelink'); copyText(el ? el.value : location.href, 'Link copied — paste it anywhere'); },
+  unshare: () => setState({ sharedHidden: true }),
+  restart: () => setState({ stage: 'onboard', menu: null, drawer: null, share: null, ob: { jur: PR.jur || (S.shared ? S.jur : null), start: PR.start || 'brief' } }),
+  objur: v => { S.ob.jur = v; render(); },
+  obstart: v => { S.ob.start = v; render(); },
+  obgo: () => { if (!S.ob.jur) return; PR.jur = S.ob.jur; PR.start = S.ob.start; savePrefs(); Object.assign(S, VIEW_DEFAULTS(), { stage: 'app', jur: S.ob.jur, tab: S.ob.start, shared: false }); lastHash = ''; render(); },
+};
+for (const k of ['copybrief', 'csv-mentions', 'csv-explore', 'csv-compare', 'csv-reports', 'csv-dev', 'csv-gaps']) ACT[k] = () => { setState({ menu: null }); doExport(k); };
+function sigOf(el) { return el ? { id: el.id, act: el.dataset.act, v: el.dataset.v } : null; }
+
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]');
+  if (S.menu && !e.target.closest('.popmenu, .sheet') && !(el && el.dataset.act === 'menu')) { S.menu = null; if (!el) { render(); return; } }
+  if (!el || el.hasAttribute('disabled')) return;
+  const fn = ACT[el.dataset.act];
+  if (!fn) return;
+  if (el.tagName !== 'A') e.preventDefault();
+  fn(el.dataset.v || '', el);
+});
+document.addEventListener('input', e => {
+  const el = e.target.closest('[data-input]');
+  if (el && el.dataset.input === 'q') { S.q = el.value; render(); }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (S.menu) { const m = S.menu; setState({ menu: null }); const t = document.querySelector(`[data-act="menu"][data-v="${m}"]`); if (t) t.focus(); }
+    else if (S.share) setState({ share: null });
+    else if (S.drawer) setState({ drawer: null });
+    return;
+  }
+  if (e.key === 'Tab' && (S.share || S.drawer)) {
+    const box = document.querySelector(S.share ? '.dialog' : '.drawer'); if (!box) return;
+    const f = [...box.querySelectorAll('a[href],button:not([disabled]),input,summary,[tabindex="0"]')].filter(x => x.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (!box.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+    else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
+// Chart tooltips
+let tipEl = null;
+document.addEventListener('pointerover', e => {
+  const t = e.target.closest && e.target.closest('[data-tip]');
+  if (!t) { if (tipEl) { tipEl.remove(); tipEl = null; } return; }
+  if (!tipEl) { tipEl = document.createElement('div'); tipEl.className = 'tip'; document.body.appendChild(tipEl); }
+  tipEl.textContent = t.getAttribute('data-tip');
+  const r = t.getBoundingClientRect(), w = tipEl.offsetWidth, h = tipEl.offsetHeight;
+  tipEl.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + 'px';
+  tipEl.style.top = Math.max(8, r.top - h - 6) + 'px';
+});
+matchMedia('(max-width: 767px)').addEventListener('change', e => { mob = e.matches; S.menu = null; render(); });
+addEventListener('hashchange', () => {
+  if (location.hash === lastHash) return;
+  const h = fromHash(); if (!h) return;
+  Object.assign(S, VIEW_DEFAULTS(), h, { stage: 'app', menu: null, share: null, shared: !PR.jur || PR.jur !== h.jur, sharedHidden: false });
+  lastHash = location.hash; render();
+});
+
+// ---------------------------------------------------------------- start
+const h = fromHash();
+if (h) { Object.assign(S, h, { stage: 'app', shared: !PR.jur || PR.jur !== h.jur }); lastHash = location.hash; }
+else if (PR.jur) Object.assign(S, { stage: 'app', jur: PR.jur, tab: PR.start });
+else S.ob = { jur: null, start: 'brief' };
+render();
+})();
+</script>
+</body>
+</html>
