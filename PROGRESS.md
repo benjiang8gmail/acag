@@ -8,6 +8,7 @@
 - **Both pilots failed with `client_error`, nothing retrieved** — first with an older link, then with the link web search shows as current, so it is not a stale-link problem. The readers reported this plainly instead of inventing output.
 - **The user's own Cowork audit session was refused at the same moment:** 13 consecutive failures from 00:50 to 00:53 UTC across nine documents, after reading the same PDFs successfully until 00:29. The Parliament's site stopped serving that route at about 00:50 UTC, most likely a rate limit after many large PDFs were paged through in parallel.
 - **Stopped there:** the other nine readers were not started, and nothing was retried in a loop. The dashboard is unchanged.
+- **Retried once, gently, at 00:56 UTC** (one reader, Council 9 Sep, no parallel calls): its search found the current link and WebFetch was still refused with `client_error`. Seven minutes on, the route was still closed, so readers 2–10 were not started.
 - `tools/merge_vic.py` (scratchpad) is ready to turn readers' results into the dashboard's Victorian data — party and side from `config/members/VIC.yaml`, only re-checked quotes kept — if the route comes back.
 
 ### Next
