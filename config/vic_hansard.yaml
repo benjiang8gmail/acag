@@ -17,21 +17,24 @@
 #     pdf: https://www.parliament.vic.gov.au/4a7744/globalassets/hansard-daily-pdfs/hansard-2145855009-37599/hansard-2145855009-37599.pdf
 #     proof: true
 
-# The entries below were found with a public web search on 31 Oct 2026 (not fetched: this network is
-# challenged by the site, so the links are unverified). The first path segment is a cache-buster that
-# rotates and differs between the proof and the final, so if one 404s, re-copy it from Browse Hansard.
-# Document ids: Assembly 2145855009-37599 = 24 Sep 2026; Council 974425065-37279 = 24 Sep, -37180 = 23 Sep.
+# The entries below were found with public web searches limited to parliament.vic.gov.au on 1 Nov 2026,
+# each confirmed by its result title ("Hansard LEGISLATIVE ASSEMBLY 60th Parliament Tuesday 8 September
+# 2026"; a "PROOF Hansard" title marks the draft, so all of these are finals). They are not fetched — this
+# network is challenged by the site — so a link may still 404: the first path segment is a cache-buster
+# that rotates between crawls, so re-copy it from Browse Hansard if it does.
+#
+# The 60th Parliament's last sitting days were 22–24 September 2026 (valedictory statements; the
+# election is on 28 November), so there are no October sittings. Not yet found by search, though they
+# may exist: Assembly 22 Sep, Council 8 and 9 Sep. August sittings (Assembly 11, 25, 26, 27 Aug) are
+# outside the two-month window.
 
 days:
-  - date: 2026-09-23
-    chamber: VIC-LC
-    pdf: https://www.parliament.vic.gov.au/4aa1ad/globalassets/hansard-daily-pdfs/hansard-974425065-37180/hansard-974425065-37180.pdf
-    proof: false
-  - date: 2026-09-24
-    chamber: VIC-LA
-    pdf: https://www.parliament.vic.gov.au/4aa1a3/globalassets/hansard-daily-pdfs/hansard-2145855009-37599/hansard-2145855009-37599.pdf
-    proof: false
-  - date: 2026-09-24
-    chamber: VIC-LC
-    pdf: https://www.parliament.vic.gov.au/4aa28a/globalassets/hansard-daily-pdfs/hansard-974425065-37279/hansard-974425065-37279.pdf
-    proof: false
+  - {date: 2026-09-08, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4aa182/globalassets/hansard-daily-pdfs/hansard-2145855009-37195/hansard-2145855009-37195.pdf"}
+  - {date: 2026-09-09, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4a7fdd/globalassets/hansard-daily-pdfs/hansard-2145855009-37291/hansard-2145855009-37291.pdf"}
+  - {date: 2026-09-10, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4a85e0/globalassets/hansard-daily-pdfs/hansard-2145855009-37384/hansard-2145855009-37384.pdf"}
+  - {date: 2026-09-23, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4aa191/globalassets/hansard-daily-pdfs/hansard-2145855009-37507/hansard-2145855009-37507.pdf"}
+  - {date: 2026-09-24, chamber: VIC-LA, proof: false, pdf: "https://www.parliament.vic.gov.au/4aa1a3/globalassets/hansard-daily-pdfs/hansard-2145855009-37599/hansard-2145855009-37599.pdf"}
+  - {date: 2026-09-10, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4a9ea9/globalassets/hansard-daily-pdfs/hansard-974425065-37008/hansard-974425065-37008.pdf"}
+  - {date: 2026-09-22, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4a8e24/globalassets/hansard-daily-pdfs/hansard-974425065-37098/hansard-974425065-37098.pdf"}
+  - {date: 2026-09-23, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4a83d8/globalassets/hansard-daily-pdfs/hansard-974425065-37180/hansard-974425065-37180.pdf"}
+  - {date: 2026-09-24, chamber: VIC-LC, proof: false, pdf: "https://www.parliament.vic.gov.au/4aa28a/globalassets/hansard-daily-pdfs/hansard-974425065-37279/hansard-974425065-37279.pdf"}

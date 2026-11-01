@@ -1,5 +1,25 @@
 # Progress
 
+## 1 Nov 2026: Victoria via the Cowork session's method — search works here, fetch does not
+
+### Done
+
+- **Read the Cowork "Victorian Hansard audit scan" session's transcript to see its method exactly** (it is still running). Its subagents find daily-PDF URLs with WebSearch limited to `parliament.vic.gov.au`, then read each PDF with WebFetch, paging long ones with `offset` and asking for speakers, printed pages and short verbatim fragments.
+  - **There, WebFetch reaches the site.** Its answer for the Assembly on 9 Sep 2026 names Katie Hall (Footscray), Tim McCurdy (Ovens Valley), Matt Fregon (Ashwood) and others with printed pages 3777–3783 — with page ranges marked "inferred" and the text "cut off mid-word".
+  - **Here, WebFetch fails:** `www.parliament.vic.gov.au` is outside this environment's allowed network domains. The sessions run in different environments; that is the difference, not the site.
+- **Ran the search half here.** It confirms, by result title, nine final-version Victorian sitting days in the window — Assembly 8, 9, 10, 23, 24 Sep; Council 10, 22, 23, 24 Sep — now listed in `config/vic_hansard.yaml` (was three). Assembly 22 Sep and Council 8–9 Sep were not surfaced and may still exist.
+- **Found that the 60th Parliament rose on 24 September 2026** (valedictory statements; election 28 Nov). There are no October Victorian sittings to collect.
+
+### Decisions
+
+- **D20. A fetch-and-summarise tool can verify Hansard but not supply it.** WebFetch answers questions about a PDF through a model with short quotes; it never yields the file. Its output can confirm sitting days, status and page ranges, or spot-check a mention, but the text stored behind a verbatim quote comes from the PDF bytes.
+
+### Next
+
+- If `www.parliament.vic.gov.au` is added to this environment's allowed domains, WebFetch can verify all nine days and fill the three gaps. Victorian speeches on the dashboard still need the PDFs themselves: downloaded by hand and imported, or fetched from a network the site serves.
+
+---
+
 ## 1 Nov 2026: refresh scan — nothing new published, and a re-read bug it exposed
 
 ### Done
