@@ -1,0 +1,1442 @@
+{
+ "jur": "VIC",
+ "items": {
+  "VIC-0001": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says VAGO youth crime findings show 'a sorry state of affairs' under Labor"
+  },
+  "VIC-0002": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0003": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0004": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Auditor-General's report showed a secret tax on public transport, without openness"
+  },
+  "VIC-0005": {
+   "s": "attack",
+   "who": "government",
+   "what": "Governments have systemically underfunded integrity agencies, including the Auditor-General's Office"
+  },
+  "VIC-0006": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Stripping public service capability means paying private firms; Auditor-General warned of deskilling"
+  },
+  "VIC-0007": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0008": {
+   "s": "attack",
+   "who": "government",
+   "what": "Labor's youth program: over $40 million in a decade, 70 per cent reoffend within six months"
+  },
+  "VIC-0009": {
+   "s": "attack",
+   "who": "government",
+   "what": "Current Premier, as roads minister, cut roads maintenance budget by $200 million, per Auditor-General's report"
+  },
+  "VIC-0010": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0011": {
+   "s": "attack",
+   "who": "government",
+   "what": "Mismanagement: more than $589 million to cancel Commonwealth Games; SRL East unlikely within budget, per Auditor-General"
+  },
+  "VIC-0012": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government already acting on road condition; 'did not need' VAGO report to say so"
+  },
+  "VIC-0013": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General report shows poor regional roads; member rebuts 'tripe' from Labor members"
+  },
+  "VIC-0014": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General findings show government's road maintenance approach not working; 48 per cent poor or very poor"
+  },
+  "VIC-0015": {
+   "s": "praise",
+   "who": "government",
+   "what": "Crews and investment addressing issues rightly identified in Auditor-General's report, a Premier priority"
+  },
+  "VIC-0016": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0017": {
+   "s": "attack",
+   "who": "government",
+   "what": "Motion: Auditor-General found state roads deteriorating, backlog growing, funding insufficient; names Ben Carroll's ministerial term"
+  },
+  "VIC-0018": {
+   "s": "attack",
+   "who": "government",
+   "what": "Casey recorded highest number of potholes in metro Melbourne per VAGO; constituents horrified"
+  },
+  "VIC-0019": {
+   "s": "attack",
+   "who": "government",
+   "what": "More than 10,000 housing properties uninhabitable due to Labor's lack of maintenance investment, per Auditor-General"
+  },
+  "VIC-0020": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO youth crime report confirms what the Labor government is doing is not working"
+  },
+  "VIC-0021": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0022": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0023": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0024": {
+   "s": "attack",
+   "who": "government",
+   "what": "Questions whether Victoria Police is fit for purpose on property management after terrible 2018 audit"
+  },
+  "VIC-0025": {
+   "s": "attack",
+   "who": "government",
+   "what": "47.98 per cent of Hume region's roads in very poor condition, per VAGO; completely unacceptable"
+  },
+  "VIC-0026": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government bumbling, distracting from hidden taxes and VAGO's Suburban Rail Loop report"
+  },
+  "VIC-0027": {
+   "s": "attack",
+   "who": "government",
+   "what": "Taxpayers repeatedly paying for poor road workmanship; one in eight works defective, per Auditor-General"
+  },
+  "VIC-0028": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0029": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says department refused Auditor-General blackout modelling; government has botched energy policy"
+  },
+  "VIC-0030": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government says scrutiny and independent assurance strengthen major projects"
+  },
+  "VIC-0031": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0032": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0033": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0034": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO: 48 per cent of state roads poor or very poor; member calls this shameful"
+  },
+  "VIC-0035": {
+   "s": "attack",
+   "who": "government",
+   "what": "Point of order offers VAGO report to rebut claim south-east roads are 'quite great'"
+  },
+  "VIC-0036": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Premier, as roads minister, promised things simply not true, uncovered by Auditor-General"
+  },
+  "VIC-0037": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General: roads deteriorating, targets give no meaningful insight; member says government completely underperformed"
+  },
+  "VIC-0038": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government evasive on roads, 48 per cent poor or very poor; sought to undermine Auditor-General's findings"
+  },
+  "VIC-0039": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO exposes roads deteriorating faster than government is fixing them; Labor's record-spending spin exposed"
+  },
+  "VIC-0040": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Opposition now happy with Auditor-General, yet a Premier from that side wanted Auditor-General sacked"
+  },
+  "VIC-0041": {
+   "s": "attack",
+   "who": "government",
+   "what": "Newsflash: Auditor-General found 48 per cent of roads poor or very poor; government members see it"
+  },
+  "VIC-0042": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says government hoodwinking Victorians with election road splurge before 73 per cent cut"
+  },
+  "VIC-0043": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Opposition's select committee would duplicate VAGO audit; member alleges political bias and pointscoring in motion"
+  },
+  "VIC-0044": {
+   "s": "attack",
+   "who": "government",
+   "what": "One billion dollars of SRL road shift not funded, per VAGO; secret tax known to cabinet"
+  },
+  "VIC-0045": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0046": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Select committee adds nothing beyond Auditor-General's report; member calls it Mr Davis's political sideshow"
+  },
+  "VIC-0047": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's SRL findings cannot simply be acknowledged and put aside; no hidden taxes or levies"
+  },
+  "VIC-0048": {
+   "s": "attack",
+   "who": "government",
+   "what": "Cites Mr Batchelor: VAGO report candid and clear that the secret tax levied was wrong"
+  },
+  "VIC-0049": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Liberals' committee is a political exercise and sideshow; Auditor-General's 171-page report already thorough"
+  },
+  "VIC-0050": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0051": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member doubts Mrs McArthur has actually read the VAGO report being debated"
+  },
+  "VIC-0052": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General revealed secret 1 per cent rail charge on every fare; $1 billion saving largely fiction"
+  },
+  "VIC-0053": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Calls Auditor-General independent; Suburban Rail Loop report a thorough, substantive work deserving respect"
+  },
+  "VIC-0054": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's damning report: Labor government cooked up a secret tax and kept it hidden"
+  },
+  "VIC-0055": {
+   "s": "attack",
+   "who": "government",
+   "what": "Roads in a shocking state and underfunded, per VAGO report"
+  },
+  "VIC-0056": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0057": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0058": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says VAGO reports show children do far worse when governments remove parents' rights"
+  },
+  "VIC-0059": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0060": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Kennett government's attempts to alter Auditor-General's powers created significant challenges for public administration"
+  },
+  "VIC-0061": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0062": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0063": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0064": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member alleges 'theft' and misleading of public; budget papers do not include the secret tax"
+  },
+  "VIC-0065": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General shows new tax under Minister Carroll; SRL savings never funded, neither on budget nor time"
+  },
+  "VIC-0066": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO bombshell report revealed Labor's secret, mean and deceptive tax on public transport fares"
+  },
+  "VIC-0067": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0068": {
+   "s": "attack",
+   "who": "government",
+   "what": "Trust broken: Auditor-General exposed secret fare tax approved when Ben Carroll was transport minister"
+  },
+  "VIC-0069": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General revealed Labor quietly hiked fares by 1 per cent to fund Suburban Rail Loop"
+  },
+  "VIC-0070": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0071": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Minister thanks the Auditor-General for the important work the office does"
+  },
+  "VIC-0072": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General revealed Labor's undisclosed 1 per cent ticket tax, projected to raise $8 billion by 2062"
+  },
+  "VIC-0073": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General confirmed government taxes in secret; Carroll's scrapping a panicked backflip after getting caught"
+  },
+  "VIC-0074": {
+   "s": "attack",
+   "who": "government",
+   "what": "Shocking discoveries: government plans $8 billion transport tax to cover Suburban Rail Loop cost blowouts"
+  },
+  "VIC-0075": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Premier deceived Victorians over $1 billion saving on interchanges never funded, per Auditor-General"
+  },
+  "VIC-0076": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Premier concealed an $8 billion tax for five years until caught by Auditor-General"
+  },
+  "VIC-0077": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government shrouded with secrecy, shown by Auditor-General's report on the secret tax"
+  },
+  "VIC-0078": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0079": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General shows secret $8 billion levy, contradicting Premier's integrity promises; member questions missing waiting list figures"
+  },
+  "VIC-0080": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government refuses integrity agencies resources; Auditor-General's joint paper says appropriate funding is essential"
+  },
+  "VIC-0081": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member suggests Premier planned Canberra flight knowing the VAGO report was coming out"
+  },
+  "VIC-0082": {
+   "s": "attack",
+   "who": "government",
+   "what": "Administration fees 'pillaging Victorians'; Auditor-General found genuine cost between 28 cents and 93 cents"
+  },
+  "VIC-0083": {
+   "s": "attack",
+   "who": "government",
+   "what": "Flabbergasted by Auditor-General's SRL report; Premier should come clean about the secret tax"
+  },
+  "VIC-0084": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0085": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General found secret tax on Polwarth bus and train users to pay for Melbourne tunnel"
+  },
+  "VIC-0086": {
+   "s": "praise",
+   "who": "government",
+   "what": "Deputy Premier defends fare reporting; DTF accepted Auditor-General's communication recommendation"
+  },
+  "VIC-0087": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government's $1 billion SRL saving challenged: at least $1.6 billion of interchanges never budgeted, per Auditor-General"
+  },
+  "VIC-0088": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO report shows government's disgraceful behaviour on SRL; Ben Carroll's sneaky, mean, deceptive tax"
+  },
+  "VIC-0089": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO Suburban Rail Loop report a series of bombshells; shocking revelations on nearly every page"
+  },
+  "VIC-0090": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0091": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government-opposition unity ticket rejected moratorium pending Auditor-General's waste-to-energy finding"
+  },
+  "VIC-0092": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0093": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0094": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0095": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0096": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0097": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0098": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General: $1.24 billion road impairment, growing backlog; only 31 per cent of claimed allocation for pavement"
+  },
+  "VIC-0099": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Auditor-General reports show budget papers unreliable; cabinet secretly increased Commonwealth Games envelope"
+  },
+  "VIC-0100": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Opposition budget promises do not add up"
+  },
+  "VIC-0101": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0102": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0103": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0104": {
+   "s": "attack",
+   "who": "government",
+   "what": "Labor's inaction and mismanagement: Auditor-General says disorderly energy transition risk now almost certain"
+  },
+  "VIC-0105": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government authorities escalate school project costs; VAGO found 29 per cent of upgrades blew out"
+  },
+  "VIC-0106": {
+   "s": "attack",
+   "who": "government",
+   "what": "Failed energy policy; Auditor-General warned of significant electricity shortfall risk after Yallourn closure"
+  },
+  "VIC-0107": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's bushfire preparedness follow-up a damning report on the government"
+  },
+  "VIC-0108": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0109": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0110": {
+   "s": "praise",
+   "who": "government",
+   "what": "VAGO's six recommendations all accepted; report identified areas where VSBA has been successful"
+  },
+  "VIC-0111": {
+   "s": "attack",
+   "who": "government",
+   "what": "'Not how you run the state': 185 road sections in poor condition, as Auditor-General predicted"
+  },
+  "VIC-0112": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0113": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0114": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO: 11 of 18 Macedon Ranges schools in poor condition; government not investing in maintenance"
+  },
+  "VIC-0115": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's follow-up damning; government completely rudderless on digital service delivery"
+  },
+  "VIC-0116": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General discovered $2 billion Commonwealth Games contingency; member calls it slush fund for CFMEU bosses"
+  },
+  "VIC-0117": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0118": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says report acknowledges strong government work on risk modelling, data and planning"
+  },
+  "VIC-0119": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General found department failed to show fuel management works, overstated progress; key data unreliable"
+  },
+  "VIC-0120": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0121": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0122": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General found serious weaknesses in forestry transition funding, undercutting government's claim of good management"
+  },
+  "VIC-0123": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0124": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0125": {
+   "s": "attack",
+   "who": "government",
+   "what": "9353 children in care not having needs fully met; government failed to fund despite warnings"
+  },
+  "VIC-0126": {
+   "s": "praise",
+   "who": "government",
+   "what": "VAGO's verdict: free TAFE, a proud government achievement, delivering real, tangible benefits"
+  },
+  "VIC-0127": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General found school upgrades not always need-based; member says Labor pork-barrels local schools"
+  },
+  "VIC-0128": {
+   "s": "attack",
+   "who": "government",
+   "what": "Under Labor 29 per cent of school upgrades blew out, 25 per cent delayed, per Auditor-General"
+  },
+  "VIC-0129": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0130": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says information withheld from committee; if not honest, refer to VAGO or Ombudsman"
+  },
+  "VIC-0131": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0132": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0133": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government again refused integrity agencies resources; Auditor-General joined extraordinary joint call for more funding"
+  },
+  "VIC-0134": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General funding little more than indexation; government fails to fund oversight agencies adequately"
+  },
+  "VIC-0135": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0136": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0137": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0138": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Auditor-General found those opposite had residential care 'operating over capacity' when last in government"
+  },
+  "VIC-0139": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0140": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0141": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0142": {
+   "s": "attack",
+   "who": "other",
+   "what": "Member gravely concerned by what is going on with local governments in Laverton electorate"
+  },
+  "VIC-0143": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General says out-of-home care system is failing; government not doing right by foster carers"
+  },
+  "VIC-0144": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0145": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General: 'unforeseen' means left out of budget; two-thirds of advances did not follow process"
+  },
+  "VIC-0146": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0147": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0148": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0149": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government has no plan to realise a cash surplus, as Auditor-General has found"
+  },
+  "VIC-0150": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0151": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0152": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0153": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General identified bureaucracy cost blowouts risking economy; member says frontline services at risk under Labor"
+  },
+  "VIC-0154": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General identified bureaucracy cost blowouts risking economy; member says frontline services at risk under Labor"
+  },
+  "VIC-0155": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0156": {
+   "s": "attack",
+   "who": "other",
+   "what": "Member voices deep dissatisfaction with local government in electorate; both council areas under monitors"
+  },
+  "VIC-0157": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0158": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Premier accuses opposition of attacking the Auditor-General, who signs off budget delivering surplus"
+  },
+  "VIC-0159": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO 2017: 30 cents per square metre avoids $175 rebuilding; member asks if government listened"
+  },
+  "VIC-0160": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General: government cannot show forestry transition delivers secure jobs after more than $1.5 billion committed"
+  },
+  "VIC-0161": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0162": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Bill wrongly forces IBAC and Auditor-General's very different functions together, member says"
+  },
+  "VIC-0163": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0164": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0165": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0166": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO local government audit findings a total indictment of the Allan Labor government"
+  },
+  "VIC-0167": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Those opposite cherrypick Auditor-General's report, a dog whistle to open TAFE to private market"
+  },
+  "VIC-0168": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0169": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0170": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0171": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government fails to deliver at Fishermans Bend; VAGO identified lack of transparency on key projects"
+  },
+  "VIC-0172": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government's building oversight failure: Auditor-General found VBA did not meet all targets, not transparent"
+  },
+  "VIC-0173": {
+   "s": "attack",
+   "who": "government",
+   "what": "Why abolish public sector advisory board, given VAGO comment on politicisation of public service?"
+  },
+  "VIC-0174": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government under pressure from Auditor-General and others, for good reason, to get finances under control"
+  },
+  "VIC-0175": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0176": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0177": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Treasurer says opposition terrifyingly thinks Treasurer controls when Auditor-General tables reports"
+  },
+  "VIC-0178": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General confirmed 259,000 invoices paid late; member asks why government can't pay bills on time"
+  },
+  "VIC-0179": {
+   "s": "attack",
+   "who": "government",
+   "what": "Big Housing Build: Auditor-General reported $2.9 billion spent, yet net decrease of 446 homes"
+  },
+  "VIC-0180": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Follow-the-money bill's rhetoric and reality at odds; Auditor-General's audit powers wrong for IBAC"
+  },
+  "VIC-0181": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Bill fails to consider that Auditor-General's powers are for performance audits, member says"
+  },
+  "VIC-0183": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0184": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0185": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0186": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0187": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General: Myki project did not resolve known issues; value for money uncertain; blowout to 2028"
+  },
+  "VIC-0188": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General: literally no progress on 80 per cent landfill diversion target; government banking recycling funds"
+  },
+  "VIC-0189": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General and others called out Labor's duplicity, incompetence and mismanagement over botched Commonwealth Games"
+  },
+  "VIC-0190": {
+   "s": "attack",
+   "who": "government",
+   "what": "Abolishing Recycling Victoria undermines oversight as VAGO warns 80 per cent waste target off track"
+  },
+  "VIC-0191": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO found public service under-resourced and overworked; member says cuts will only make it worse"
+  },
+  "VIC-0192": {
+   "s": "attack",
+   "who": "government",
+   "what": "Bill's $35 million over four years versus $160 billion debt; December deficit, per VAGO"
+  },
+  "VIC-0193": {
+   "s": "attack",
+   "who": "government",
+   "what": "Labor puts all eggs in one basket; Auditor-General says little consideration given to the risks"
+  },
+  "VIC-0194": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General blew the whistle: offshore wind targets will not be met; government lacks basic competence"
+  },
+  "VIC-0195": {
+   "s": "attack",
+   "who": "government",
+   "what": "Road to financial ruin after 12 years of Labor; Auditor-General warned of debt, deficits, cost blowouts"
+  },
+  "VIC-0196": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0197": {
+   "s": "attack",
+   "who": "government",
+   "what": "TAFE record 'to fix': Auditor-General warns long-term financial stability of institutions at risk"
+  },
+  "VIC-0198": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General says renewables targets harder, shortfalls risked; government has failed to address risks"
+  },
+  "VIC-0199": {
+   "s": "attack",
+   "who": "government",
+   "what": "Even the Auditor-General has said you cannot rely on the budget papers anymore"
+  },
+  "VIC-0200": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0201": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General: only five TAFEs in surplus without capital grants; financial distress under Labor government"
+  },
+  "VIC-0202": {
+   "s": "attack",
+   "who": "government",
+   "what": "State going backwards: Auditor-General says power supply not resilient, energy future very grim"
+  },
+  "VIC-0203": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0204": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0205": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Praises great work by VAGO; says Auditor-General has done some fantastic work"
+  },
+  "VIC-0206": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0207": {
+   "s": "attack",
+   "who": "government",
+   "what": "Not a culture where corruption struggles to thrive; VAGO examined Eloque joint venture, $20 million lost"
+  },
+  "VIC-0208": {
+   "s": "attack",
+   "who": "government",
+   "what": "Integrity agencies including VAGO starved of funds, risking cabinet razor gang cuts in retaliation"
+  },
+  "VIC-0209": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0210": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asks Treasurer why integrity agencies' budget bids and funding are not public"
+  },
+  "VIC-0211": {
+   "s": "attack",
+   "who": "government",
+   "what": "Integrity agencies lack money and powers; joint paper says appropriate funding essential for public confidence"
+  },
+  "VIC-0212": {
+   "s": "attack",
+   "who": "government",
+   "what": "Despite Auditor-General's report on wooden power poles, government still not getting it right"
+  },
+  "VIC-0213": {
+   "s": "attack",
+   "who": "government",
+   "what": "Follow-through inadequate; Auditor-General warned whether government has information to identify risk and ensure accountability"
+  },
+  "VIC-0214": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Premier gaslit VAGO, claiming annual report was late because of delays at VAGO"
+  },
+  "VIC-0215": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0216": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0217": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0218": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General points out government nowhere near achieving savings; parlous finances under this government"
+  },
+  "VIC-0219": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0220": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Premier says member for Brighton wrong about Premier's remarks on Auditor-General"
+  },
+  "VIC-0221": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier claimed Auditor-General's statements misinformation; member demands respect and funding for integrity agencies"
+  },
+  "VIC-0222": {
+   "s": "attack",
+   "who": "government",
+   "what": "Damning 2020 audit of department and Earth Resources Regulator; failures exposed state to significant financial risk"
+  },
+  "VIC-0224": {
+   "s": "praise",
+   "who": "government",
+   "what": "Premier says back and forth with Auditor-General's office explains CFA report timing; funding increased"
+  },
+  "VIC-0225": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier misled CFA brigades by blaming independent Auditor-General for annual report delays, member says"
+  },
+  "VIC-0226": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General itemised process to contradict Premier, who threw Auditor-General and volunteers under a bus"
+  },
+  "VIC-0227": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0228": {
+   "s": "attack",
+   "who": "government",
+   "what": "Audit failures at utility and VicTrack; letters and adjustments paper over 'total incompetence'"
+  },
+  "VIC-0229": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0230": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0231": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General warns on unsustainable debt and unreported COVID debt plan; member blames Labor's money management"
+  },
+  "VIC-0232": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government failed to implement Auditor-General's 2008 and 2017 planning recommendations, per select committee"
+  },
+  "VIC-0233": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0234": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0235": {
+   "s": "attack",
+   "who": "government",
+   "what": "Social Housing Growth Fund balance grows faster than need; Auditor-General observed trust funds remain unspent"
+  },
+  "VIC-0236": {
+   "s": "attack",
+   "who": "government",
+   "what": "Sustainability Fund ballooned from $66.8 million to $545.7 million, per Auditor-General, though meant for recycling"
+  },
+  "VIC-0237": {
+   "s": "attack",
+   "who": "government",
+   "what": "VAGO confirmed emergency departments struggling; member asks if government let Western Metro families fall behind"
+  },
+  "VIC-0238": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0239": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government repeatedly ignored Auditor-General's transparency recommendations on debt targets; what does it have to hide?"
+  },
+  "VIC-0240": {
+   "s": "attack",
+   "who": "government",
+   "what": "Financial mismanagement; Auditor-General highlighted neglect of health funding and need for urgent hospital upgrades"
+  },
+  "VIC-0241": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0242": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General revealed true cost of Labor's incompetence: a $50.6 billion hole over six years"
+  },
+  "VIC-0243": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0244": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0245": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0246": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0247": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0248": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General says prolonged fiscal cash deficits jeopardise state's security; member says government shifting debt off books"
+  },
+  "VIC-0249": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0250": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0251": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General examining $875 million forestry transition spend; member says very little went to regeneration"
+  },
+  "VIC-0252": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0253": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0254": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0255": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0256": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "VIC-0257": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Opposition's disinformation about project blowouts is garbage; look at what Auditor-General said"
+  },
+  "VIC-0258": {
+   "s": "attack",
+   "who": "government",
+   "what": "Concerns over response timeline; Auditor-General identified failures to maintain high standards, member asks about readiness"
+  },
+  "VIC-0259": {
+   "s": "attack",
+   "who": "government",
+   "what": "Gellung Warl funding escapes Auditor-General scrutiny; government creating body with no effective democratic oversight"
+  },
+  "VIC-0260": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General 'pinged the lie' that state debt is due to COVID; about 18 per cent"
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "Suburban Rail Loop secret tax and costs",
+    "note": "Members attacked Labor and the Premier over a secret fare tax, unfunded savings and budget and timetable doubts on the Suburban Rail Loop.",
+    "ids": [
+     "VIC-0004",
+     "VIC-0011",
+     "VIC-0026",
+     "VIC-0044",
+     "VIC-0047",
+     "VIC-0048",
+     "VIC-0052",
+     "VIC-0054",
+     "VIC-0064",
+     "VIC-0065",
+     "VIC-0066",
+     "VIC-0068",
+     "VIC-0069",
+     "VIC-0072",
+     "VIC-0073",
+     "VIC-0074",
+     "VIC-0075",
+     "VIC-0076",
+     "VIC-0077",
+     "VIC-0079",
+     "VIC-0083",
+     "VIC-0085",
+     "VIC-0087",
+     "VIC-0088",
+     "VIC-0089"
+    ]
+   },
+   {
+    "label": "Deteriorating state roads and maintenance funding",
+    "note": "Members attacked the government and Premier over deteriorating roads, insufficient maintenance funding and defective repairs, citing Maintaining State Roads.",
+    "ids": [
+     "VIC-0009",
+     "VIC-0013",
+     "VIC-0014",
+     "VIC-0017",
+     "VIC-0018",
+     "VIC-0025",
+     "VIC-0027",
+     "VIC-0034",
+     "VIC-0035",
+     "VIC-0036",
+     "VIC-0037",
+     "VIC-0038",
+     "VIC-0039",
+     "VIC-0041",
+     "VIC-0042",
+     "VIC-0055",
+     "VIC-0098",
+     "VIC-0111",
+     "VIC-0159"
+    ]
+   },
+   {
+    "label": "State debt, deficits and unreliable budget papers",
+    "note": "Members attacked Labor's financial management, citing Auditor-General findings on debt, deficits, unmet savings, budget paper reliability and ignored transparency recommendations.",
+    "ids": [
+     "VIC-0099",
+     "VIC-0145",
+     "VIC-0149",
+     "VIC-0153",
+     "VIC-0154",
+     "VIC-0174",
+     "VIC-0192",
+     "VIC-0195",
+     "VIC-0199",
+     "VIC-0218",
+     "VIC-0228",
+     "VIC-0231",
+     "VIC-0239",
+     "VIC-0240",
+     "VIC-0242",
+     "VIC-0248",
+     "VIC-0260"
+    ]
+   },
+   {
+    "label": "Integrity agency funding and treatment of Auditor-General",
+    "note": "Members attacked the government for underfunding integrity agencies and the Premier for blaming the Auditor-General over the CFA annual report.",
+    "ids": [
+     "VIC-0005",
+     "VIC-0080",
+     "VIC-0133",
+     "VIC-0134",
+     "VIC-0208",
+     "VIC-0210",
+     "VIC-0211",
+     "VIC-0214",
+     "VIC-0221",
+     "VIC-0225",
+     "VIC-0226"
+    ]
+   },
+   {
+    "label": "Opposition's use of Auditor-General reports",
+    "note": "Government members accused the opposition of cherrypicking, misreading or politicising Auditor-General reports, including an SRL select committee called a sideshow.",
+    "ids": [
+     "VIC-0040",
+     "VIC-0043",
+     "VIC-0046",
+     "VIC-0049",
+     "VIC-0051",
+     "VIC-0158",
+     "VIC-0167",
+     "VIC-0177",
+     "VIC-0220",
+     "VIC-0257"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Government's response to critical audit reports",
+    "note": "Ministers and government members defended the government, pointing to road repairs, accepted recommendations, bushfire work and CFA funding.",
+    "ids": [
+     "VIC-0012",
+     "VIC-0015",
+     "VIC-0030",
+     "VIC-0086",
+     "VIC-0110",
+     "VIC-0118",
+     "VIC-0224"
+    ]
+   },
+   {
+    "label": "Auditor-General's independence and quality of work",
+    "note": "Members credited the Auditor-General and office as independent, thorough and doing important, fantastic work.",
+    "ids": [
+     "VIC-0053",
+     "VIC-0071",
+     "VIC-0205"
+    ]
+   },
+   {
+    "label": "Free TAFE results",
+    "note": "Government member credited the government with free TAFE, citing VAGO's verdict of real, tangible benefits.",
+    "ids": [
+     "VIC-0126"
+    ]
+   }
+  ]
+ }
+}

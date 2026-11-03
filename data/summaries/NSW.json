@@ -1,0 +1,762 @@
+{
+ "jur": "NSW",
+ "overview": "Mentions of the Auditor-General in the NSW Parliament between November 2025 and October 2026 mixed members citing audit findings in debate with the Clerk announcing reports received. The main threads were the Regional Roads Fund report, train fleet procurement, the Resilient Homes and Lands Programs and the Fines Legislation Amendment Bill; the Public Accounts Committee also reported on the Audit Office's 2026-27 appropriation. Members also drew on findings about Aboriginal land claims, consultants and grants administration.",
+ "issues": [
+  {
+   "label": "Regional Roads Fund report and call for papers",
+   "note": "Members cited the Auditor-General's May 2026 report on projects moved from the Urban Roads Fund without documented rationale; papers were sought, the Government declined.",
+   "ids": [
+    "NSW-0017",
+    "NSW-0018",
+    "NSW-0044",
+    "NSW-0045",
+    "NSW-0046",
+    "NSW-0047",
+    "NSW-0048",
+    "NSW-0059",
+    "NSW-0060",
+    "NSW-0061",
+    "NSW-0062"
+   ]
+  },
+  {
+   "label": "Rail fleet procurement report used in debate",
+   "note": "Members repeatedly cited Auditor-General findings on regional and intercity train procurement, including a $2.5 billion blowout, in arguments about the former government's record.",
+   "ids": [
+    "NSW-0002",
+    "NSW-0005",
+    "NSW-0009",
+    "NSW-0030",
+    "NSW-0031",
+    "NSW-0058",
+    "NSW-0066",
+    "NSW-0068",
+    "NSW-0079",
+    "NSW-0100",
+    "NSW-0103",
+    "NSW-0104",
+    "NSW-0105",
+    "NSW-0106"
+   ]
+  },
+  {
+   "label": "Resilient Homes and Lands audit questions",
+   "note": "Members cited the May 2026 audit of the $980 million Resilient programs, including claims of no homes delivered and no business case.",
+   "ids": [
+    "NSW-0034",
+    "NSW-0038",
+    "NSW-0039",
+    "NSW-0040",
+    "NSW-0049",
+    "NSW-0050"
+   ]
+  },
+  {
+   "label": "Audit Office funding and Public Accounts Committee",
+   "note": "Public Accounts Committee inquired into and reported on the Auditor-General's 2026-27 appropriation, noting one performance audit funding proposal was approved below the amount sought.",
+   "ids": [
+    "NSW-0003",
+    "NSW-0010",
+    "NSW-0029"
+   ]
+  },
+  {
+   "label": "Fines bill and Revenue NSW hardship review",
+   "note": "Fines Legislation Amendment Bill debate drew on the October 2025 review of Revenue NSW hardship assistance, including the Hardship Review Board's independence.",
+   "ids": [
+    "NSW-0083",
+    "NSW-0084",
+    "NSW-0085",
+    "NSW-0086"
+   ]
+  },
+  {
+   "label": "Auditor-General powers and requests for new audits",
+   "note": "'Follow the dollar' powers were compared with ICAC's jurisdiction, and members sought or welcomed audits of Concord Hospital, ambulance recruitment, grants and firearms administration.",
+   "ids": [
+    "NSW-0007",
+    "NSW-0035",
+    "NSW-0025",
+    "NSW-0024",
+    "NSW-0014",
+    "NSW-0041",
+    "NSW-0042",
+    "NSW-0052",
+    "NSW-0075",
+    "NSW-0089",
+    "NSW-0090"
+   ]
+  }
+ ],
+ "debates": [
+  {
+   "ids": [
+    "NSW-0044",
+    "NSW-0045",
+    "NSW-0046",
+    "NSW-0047",
+    "NSW-0048"
+   ],
+   "gist": "Non-government members cited the Auditor-General's 6 May 2026 Regional Roads Fund report, including undocumented project transfers and incomplete business cases, in support of a call for papers; the Government opposed it, saying the Auditor-General had already examined the matters."
+  },
+  {
+   "ids": [
+    "NSW-0083",
+    "NSW-0084",
+    "NSW-0085",
+    "NSW-0086"
+   ],
+   "gist": "Second reading debate on the Fines Legislation Amendment Bill 2025. Speakers referred to the Auditor-General's review of Revenue NSW hardship assistance, including the Hardship Review Board's independence; the Minister said reforms were under way in parallel."
+  }
+ ],
+ "items": {
+  "NSW-0001": {
+   "summary": "Referred to the Auditor-General's audit opinion in amendment wording stating the section does not hypothecate revenue, appropriate money or direct that opinion.",
+   "kind": "Passing reference",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "NSW-0002": {
+   "summary": "Claimed the Auditor-General did not agree with how those opposite procured the Regional Rail fleet, said none of the trains were delivered in eight years, and said 16 of the 29 are now 'out there'.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0003": {
+   "summary": "Noted the Public Accounts Committee report on the Auditor-General's 2026-27 appropriation, saying one baseline performance audit funding proposal was approved below the amount sought and the committee will keep monitoring the adequacy of that funding.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0004": {
+   "summary": "Cited the Auditor-General's conclusion that the Local Small Commitments Allocation program was effectively administered in compliance with the Grants Administration Guide, in rebutting the committee's classification of some of its grants as rorts.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0005": {
+   "summary": "Claimed the Auditor-General found the former government's procurement of trains was 'a litany of missteps and failures', and said members opposite never want to back the Hunter.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0006": {
+   "summary": "Cited the Auditor-General's coastal management audit finding that only 16 of 55 coastal councils had a certified program, and argued two-to-one grant matching rules leave rate-pegged councils unable to fund sand nourishment.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "NSW-0007": {
+   "summary": "Compared a recommendation to let ICAC work beyond the government sector with the powers the Government has given the Auditor-General, and said the Government will respond to the report but would not flag the response in advance.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0008": {
+   "summary": "Announced receipt of the Audit Office of New South Wales report for the year ended 30 June 2026, received out of session and published on 8 October 2026.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0009": {
+   "summary": "Cited the Auditor-General's report as finding $2.5 billion in cost blowouts on the former government's trains, and argued awarding contracts to the lowest bidder leads to poor quality and paying twice.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "NSW-0010": {
+   "summary": "Announced receipt of Public Accounts Committee report No. 7/58, Appropriation for the services of the Auditor-General for the 2026-2027 financial year, received out of session on 6 October 2026 and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0011": {
+   "summary": "Said the Auditor-General's work uncovered an anomaly that led to the red fleet being identified as part of local government's asset base and to qualified audits for some councils in 2022, which the bill will resolve.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "NSW-0012": {
+   "summary": "Cited the Auditor-General's Local Government 2021 report, released in June 2022, as drawing renewed attention to the accounting treatment of Rural Fire Service assets, which councils carried without controlling.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "NSW-0013": {
+   "summary": "Cited Auditor-General information that universities spent $130 million on consultants in 2025, and claimed the Auditor-General later forced the University of Wollongong to revise its 2020 financial statements to disclose a $169 million expense.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "NSW-0014": {
+   "summary": "Welcomed the Auditor-General's examination of governance at Concord Hospital, said it arose from a threatened no-confidence vote by the medical staff council, and called for it to be thorough, independent and to examine Sydney Local Health District leadership.",
+   "kind": "Seeks audit or referral",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0015": {
+   "summary": "Cited the then Auditor-General's report on government agencies' use of consultants, which found procurement noncompliance and no single accurate data source on consultant spending, and argued this raises transparency and accountability concerns.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "NSW-0016": {
+   "summary": "Cited a 2017 Auditor-General finding that the former government's outsourced State road maintenance contracts had key elements missing and that tracking of expected benefits had stopped.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0017": {
+   "summary": "Argued for a motion noting the Auditor-General's Regional Roads Fund report found four projects shifted from the Urban Roads Fund without documented rationale or evidence of meeting Snowy Hydro Legacy Fund conditions, and said the Government must account for it.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0018": {
+   "summary": "Cited the Auditor-General's findings that the Government gave no evidence moved projects met Snowy Hydro Legacy Fund conditions and no rationale for the transfer from the Urban Roads Fund; said the Greens support the amended motion.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0019": {
+   "summary": "Cited a 2022 Auditor-General finding that over 60 per cent of land claims take more than five years to determine, and said the backlog has grown from 38,200 to 43,500.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "NSW-0020": {
+   "summary": "Cited a 2022 Auditor-General report finding a lack of required resources, governance arrangements, performance measures and a prioritisation framework for Aboriginal land claims, to argue claims should take priority over the Crown land bill.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "NSW-0021": {
+   "summary": "Announced receipt of the Auditor-General's financial audit report Internal Controls and Governance 2026: grants, consultants, purchasing cards and technology, dated 12 August 2026 and received out of session.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0022": {
+   "summary": "Announced receipt of the Financial Audit Report Internal Controls and Governance 2026: grants, consultants, purchasing cards and technology, dated 12 August 2026, received out of session and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0023": {
+   "summary": "Cited the Auditor-General's 2022 finding that the then Department of Planning and Environment was not meeting its statutory duty to determine Aboriginal land claims, with 22 years estimated to clear them, and argued the bill dilutes land rights.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "NSW-0024": {
+   "summary": "Welcomed Audit Office scrutiny of the matter, said the Minister had already brought forward some reforms, and commended the Auditor-General as responsive to the House and its members.",
+   "kind": "Seeks audit or referral",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0025": {
+   "summary": "Cited the Audit Work Plan 2026-2029 on the Auditor-General's 'follow the dollar' powers over grant recipients outside government, and said the Audit Office lacks the resources to audit every dollar of public expenditure.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0026": {
+   "summary": "Announced receipt of two performance audit reports: Security and privacy of student information, dated 29 June 2026, and Regulation of greyhound racing, dated 16 July 2026, both received out of session.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0027": {
+   "summary": "Announced receipt of the Performance Audit Reports Security and privacy of student information and Regulation of greyhound racing, both received out of session and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0028": {
+   "summary": "Mentioned in passing that the Parliamentary Remuneration Tribunal received submissions from the Auditor-General, among others, before making its determination.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0029": {
+   "summary": "Informed the House that the Public Accounts Committee resolved to conduct an inquiry into the appropriation for the services of the Auditor-General for the 2026-2027 financial year.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0030": {
+   "summary": "Cited the Auditor-General's identification of significant procurement shortcomings and substantial cost increases in the regional rail plan, and said 15 trains are now in New South Wales being tested and commissioned.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0031": {
+   "summary": "Said the regional rail fleet program was bungled, prompting what the member called a 'scathing report' from the Auditor-General, in broader criticism of rail and ferry procurement decisions.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0032": {
+   "summary": "Claimed the Auditor-General has reported that 50 per cent of Closing the Gap spending in New South Wales is wasted, in a budget reply about training and Aboriginal program spending.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "NSW-0033": {
+   "summary": "Cited a 2022 Victorian Auditor-General finding that police did not activate body-worn cameras in 16.4 per cent of required interactions, to argue internal policies do not ensure accountability.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Another jurisdiction"
+  },
+  "NSW-0034": {
+   "summary": "Asked the Minister for Recovery what action has been taken to improve the Resilient Homes Program, citing the Auditor-General's report as critical of Northern Rivers delivery and the Reconstruction Authority's commitment to all recommendations.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "NSW-0035": {
+   "summary": "Said after talking with the Auditor-General that 'follow the dollar' powers over public funds applied outside the public sector have been helpful, and compared them with ICAC's request for a similar principle, on which the Government will respond.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0036": {
+   "summary": "Announced receipt of four Auditor-General reports: Universities 2025, Water management and regulation in NSW, Government advertising 2024-25, and Long-term financial planning in local government.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0037": {
+   "summary": "Announced receipt of Auditor-General reports Universities 2025, Water management and regulation in NSW, Government advertising 2024-25 and Long-term financial planning in local government, all received out of session.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0038": {
+   "summary": "Said further progress on the Resilient Homes Program will be announced as it rolls out at pace, which is the expectation set in the Auditor-General's report.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "NSW-0039": {
+   "summary": "Said the Government takes the Auditor-General's work seriously, is looking closely at the recent report on visiting medical officers, and inherited the program from the previous Government.",
+   "kind": "Passing reference",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "NSW-0040": {
+   "summary": "Cited the Auditor-General's report that the $980 million Resilient Homes and Resilient Lands Programs lacked a business case or cost-benefit analysis and delivered none of the 4,382 promised homes, and asked whether the Minister stands by 'bright future'.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "NSW-0041": {
+   "summary": "Said the member was one of several who wrote to the Auditor-General earlier this year requesting a review of NSW Ambulance recruitment, including reliance on long-term acting roles, recruitment transparency and unclear criteria.",
+   "kind": "Seeks audit or referral",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0042": {
+   "summary": "Said the Auditor-General's Office is understood to have the matter under consideration for its audit schedule, and argued the order for documents supports that work rather than cutting across it.",
+   "kind": "Seeks audit or referral",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0043": {
+   "summary": "Cited the Auditor-General's recent report on racing in the regions, claiming it showed Racing NSW was slow to progress country projects and spent heavily on legal fights, while supporting a call for documents.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0044": {
+   "summary": "Cited Auditor-General findings on the Regional Roads Fund, including incomplete business cases, non-compliance with grant guidelines and four projects moved from the Urban Roads Fund without documented rationale, to support a call for papers.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0045": {
+   "summary": "Cited the Auditor-General's report on the $334 million Regional Roads Fund as finding early funding approvals and releases, deficient documentation and grants administration shortfalls, and claimed 23 of the 28 benefiting electorates are held by Labor members.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0046": {
+   "summary": "Cited the Auditor-General's report naming Cuttagee Bridge, a council-led Regional Roads Fund project with $15 million allocated, as at risk of exceeding its funding allocation.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0047": {
+   "summary": "Supported the call for papers, citing Auditor-General findings that Transport for NSW did not comply with some aspects of the Grants Administration Guide, lacked detailed evidence for extra project funding and had not completed business cases or short-form assessments.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0048": {
+   "summary": "Said the Government will not support the call for papers because the Auditor-General has already extensively investigated these matters in the 6 May 2026 report, while commending the Auditor-General's work.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0049": {
+   "summary": "Announced receipt of three performance audit reports: Upgrades to core policing technology, Planned surgery access, and The Resilient Homes and Resilient Lands Programs, all received out of session in May 2026.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0050": {
+   "summary": "Announced receipt of the Performance Audit Report The Resilient Homes and Resilient Lands Programs, dated 20 May 2026, received out of session and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "NSW-0051": {
+   "summary": "Announced receipt of the Auditor-General's Performance Audit Report Planned Surgery Access, dated 14 May 2026 and received that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0052": {
+   "summary": "Said the member referred the matter of a contract to the Auditor-General to consider for auditing, citing unremoved rubbish and NRMA evidence that the problem is statewide.",
+   "kind": "Seeks audit or referral",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0053": {
+   "summary": "Announced receipt of the Performance Audit Report Upgrades to Core Policing Technology, dated 11 May 2026, received that day and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0054": {
+   "summary": "Cited the Auditor-General's report on the privatisation of Northern Beaches Hospital from last April, including two recommendations that the Government examine current arrangements and any future privatisation.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0055": {
+   "summary": "Announced receipt of the Performance Audit Report Oversight of Visiting Medical Officers, dated 7 May 2026, received out of session and published that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0056": {
+   "summary": "Announced receipt of the Performance Audit Report Oversight of Visiting Medical Officers, dated 7 May 2026 and received that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0057": {
+   "summary": "Claimed the Auditor-General had criticised the Government for failing to fund culturally appropriate services for First Nations people released from custody, among several criticisms of Government policy on youth bail and land rights.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0058": {
+   "summary": "Cited the Auditor-General's post-mortem on the Mariyung fleet as detailing a troubled project, promised in 2014 with trains due by 2019, in an answer announcing 15-minute peak express services between Wollongong and Central.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0059": {
+   "summary": "Said business cases were done for the programs, accepted the Auditor-General's view that Transport could improve, and said the member's question reworded the Auditor-General's findings on how roads projects were funded under the former government.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0060": {
+   "summary": "Asked the Minister for Roads whether the $45 million Thornton Road Bridge duplication went through business case and cost assessment before funds were allocated, citing the Auditor-General's finding that the department approved millions without completed business cases or evidence.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0061": {
+   "summary": "Announced receipt of the Performance Audit Report Regional Roads Fund, dated 6 May 2026, received out of session and published that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0062": {
+   "summary": "Announced receipt of the Performance Audit Report Regional Roads Fund, dated 6 May 2026 and received that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0063": {
+   "summary": "Mentioned the Auditor-General in passing, with ICAC and the NSW Police Force, in a hypothetical of silence used to criticise the Electoral Commission for not informing voters.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0064": {
+   "summary": "Announced receipt of three performance audit reports: Emergency Relief Grants - Local Government Recovery Grants program, Administration of grants to non-public sector entities: Racing for the Regions, and Managing unplanned leave and overtime.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0065": {
+   "summary": "Announced receipt of three performance audit reports on the Local Government Recovery Grants program, Racing for the Regions grants administration, and Managing unplanned leave and overtime, all received out of session and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0066": {
+   "summary": "Cited the Auditor-General's description of the regional rail fleet procurement as ineffective, and claimed those opposite offshored the work and set up a complex public-private partnership without heeding the workforce.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0067": {
+   "summary": "Mentioned the Auditor-General, with ICAC and police, as agencies that make public statements consistent with their broad charters without a specific legislative clause, and asked why the Electoral Commission does not do the same.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0068": {
+   "summary": "Cited the Auditor-General's recent report as showing 'massive cost blowouts' and inferior products from poor decision-making, in criticising offshore procurement and defending moving manufacturing operations to the Hunter.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "NSW-0069": {
+   "summary": "Cited the Auditor-General's report from June last year saying the Grants Administration Guide needs upgrading, and claimed the Government has done nothing since, in a debate on political donor information.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0070": {
+   "summary": "Cited a 2019 Auditor-General report as criticising the former government for upgrading stations of lower-ranked need than Macquarie Fields, and claimed upgrades turned on political persuasion rather than priority.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0071": {
+   "summary": "Listed the Auditor-General among independent bodies that have investigated the child protection system, and claimed each review confirmed the Government inherited a broken system from the Coalition.",
+   "kind": "Passing reference",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "NSW-0072": {
+   "summary": "Announced receipt of the Financial Audit Report Capital projects 2025, dated March 2026, received out of session and published on 18 March 2026.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "NSW-0073": {
+   "summary": "Announced receipt of the Financial Audit Report Capital Projects 2025, dated 18 March 2026 and received that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "NSW-0074": {
+   "summary": "Claimed the Auditor-General had reported that day that the Government lost $907 million over three years through mismanaging major projects, and argued spending could be redirected to domestic violence priorities.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "NSW-0075": {
+   "summary": "Noted that Tania Mihailuk has sought an Auditor-General examination of a grants program, said the department commissioned Grant Thornton for independent analysis, and supported declaring donations at the point of seeking grants.",
+   "kind": "Seeks audit or referral",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0076": {
+   "summary": "Noted, in motion wording on government performance, that Northern Beaches Hospital is returning to public hands after the Auditor-General found the former government's privatisation affected services for patients.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0077": {
+   "summary": "Announced receipt of the Performance Audit Report Support for First Nations peoples in custody and post-release to reduce reoffending, dated 12 March 2026, received out of session and published that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0078": {
+   "summary": "Announced receipt of the Performance Audit Report Support for First Nations peoples in custody and post-release to reduce reoffending, dated 12 March 2026, received out of session and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0079": {
+   "summary": "Cited the Auditor-General's declaration of ineffective procurement and cost blowouts on the regional rail fleet, and said the Government has dismantled the public-private partnership and has nine regional trains in New South Wales.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0080": {
+   "summary": "Mentioned that the Public Accounts Committee recently inquired into an Auditor-General report on land claims, while arguing land rights efforts have met bureaucratic hurdles and land has not been returned to First Nations people.",
+   "kind": "Passing reference",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "NSW-0081": {
+   "summary": "Said the previous government engaged consultants 10,006 times between 2017 and 2022 at over $1 billion, and cited the Auditor-General as saying this occurred without proper procurement and management policies.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "NSW-0082": {
+   "summary": "Cited the Auditor-General's Local government 2025 report that councils held $5.4 billion in developer contributions, with Liverpool City Council holding $317 million, while arguing Austral's infrastructure commitments have been missed.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "NSW-0083": {
+   "summary": "Said the Opposition supports amendments Nos 2 to 4 making information, including Hardship Review Board application numbers, accessible to Parliament so it is informed beyond Auditor-General reports.",
+   "kind": "Passing reference",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0084": {
+   "summary": "Cited the Auditor-General's October 2025 review that the Hardship Review Board is not required by law to be independent of Revenue NSW, and urged the Government to make it independent or stop calling it independent.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0085": {
+   "summary": "Said the reform program in the bill was under way in parallel with the Audit Office process, said the Government felt it would address some concerns the Auditor-General raised, and expressed respect for the Auditor-General's work.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0086": {
+   "summary": "Said the bill seeks to address issues raised in the Auditor-General's report, from which it appears to emanate, and argued fines must be enforced fairly, particularly for those least able to absorb the State's coercive power.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0087": {
+   "summary": "Announced receipt of the Auditor-General's Financial Audit Report Local government 2025, dated 28 January 2026, received out of session and published that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "NSW-0088": {
+   "summary": "Announced receipt of the Financial Audit Report Local Government 2025, dated 30 January 2026, received out of session and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "NSW-0089": {
+   "summary": "Said The Nationals support the amendment and consider it good practice to have the Auditor-General conduct a performance audit.",
+   "kind": "Seeks audit or referral",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0090": {
+   "summary": "Moved an amendment requiring the Auditor-General to conduct a performance audit of the Commissioner's administration of the Act, focusing on firearms registration, communication with other law enforcement bodies and timeliness of licensing, suspension and cancellation.",
+   "kind": "Seeks audit or referral",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0091": {
+   "summary": "Announced receipt of the Financial Audit Report State finances 2025 and the Performance Audit Report Cyber security in Local Health Districts, the latter dated 9 July 2025 with an addendum and published on 19 December 2025.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0092": {
+   "summary": "Announced receipt of the Performance Audit Report Cyber security in Local Health Districts and its addendum, both dated 19 December 2025, and the Financial Audit Report State finances 2025, dated 1 December 2025.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0093": {
+   "summary": "Cited the Auditor-General's 2019 firearms regulation audit finding that the Firearms Registry did not adequately assess reasons for acquiring additional firearms and lacked clear guidance, arguing this is an administrative failure, not a legislative one.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0094": {
+   "summary": "Said the legislation reflects recommendations of a coronial inquest and the Auditor-General's 2022 performance audit on police responses to domestic violence, and is informed by work in other jurisdictions, notably Western Australia.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "NSW-0095": {
+   "summary": "Announced receipt of the Financial Audit Report State agencies 2025, dated 26 November 2025, received out of session and published that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "NSW-0096": {
+   "summary": "Cited 52 Auditor-General reports since 2018 on cybersecurity and the Cyber security insights 2025 finding that aggregated reporting reduces transparency, to support an order for papers and oppose amendments limiting its scope.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0097": {
+   "summary": "Mentioned in passing that HSU members met directly with the Auditor-General, among other steps on safe staffing, in an adjournment speech about a public-private partnership transition.",
+   "kind": "Passing reference",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "NSW-0098": {
+   "summary": "Announced receipt of the Financial Audit Report State agencies 2025 (dated 26 November 2025) and the special report Members' additional entitlements 2025 (dated 20 November 2025).",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "NSW-0099": {
+   "summary": "Announced receipt of the Auditor-General's special report Members' additional entitlements 2025, dated 20 November 2025, received out of session and published that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0100": {
+   "summary": "Mentioned the Auditor-General's report Rail rolling stock procurement, saying it is raised whenever the Opposition questions transport procurement, but did not discuss it further in a take-note debate on the music industry.",
+   "kind": "Passing reference",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0101": {
+   "summary": "Cited Auditor-General reports, including the State agencies 2024 financial audit finding of $1.4 billion in adjustments from asset and valuation errors and low risk management maturity across most agencies.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0102": {
+   "summary": "Cited the Auditor-General's 24 June 2025 social housing audit, including that just under a third of housing offers came from manually selecting applicants and around 56,000 households were waiting, in debate on a housing office closure.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "NSW-0103": {
+   "summary": "Urged members to read the Auditor-General's report on trains that members opposite had tried to deliver, saying they were over six years late and cost an extra $2.5 billion, and called the report scathing.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0104": {
+   "summary": "Cited the Auditor-General's recent report on procurement of the regional rail and Mariyung fleets, and claimed those opposite did not plan to replace the Tangara trains, which make up 20 per cent of the fleet.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0105": {
+   "summary": "Cited the Auditor-General's finding that the previous government did not effectively procure the intercity and Regional Rail fleets or estimate their full costs, and said it laid bare a $2.5 billion blowout on overseas-built trains.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0106": {
+   "summary": "Urged members to read the Auditor-General's report on trains the member said were up to six years late, cost an extra $2.5 billion and did not fit the tunnels, tracks or platforms.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "NSW-0107": {
+   "summary": "Announced receipt of the Financial Audit Report Internal controls and governance 2025: Procurement and technology, dated 29 October 2025, received out of session and published that day.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NSW-0108": {
+   "summary": "Announced receipt of the Auditor-General's report Internal controls and governance 2025: Procurement and technology, received out of session on 29 October 2025 and authorised to be printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  }
+ }
+}

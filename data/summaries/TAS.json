@@ -1,0 +1,1177 @@
+{
+ "jur": "TAS",
+ "overview": "Mentions centred on the Auditor-General's findings on government businesses: the TT-Line insolvency opinion and ASIC referral debated from November 2025, and the October 2026 reports on Treasury oversight and state entity financial statements, which members said raised going-concern doubts about Homes Tasmania and Metro. Other main threads were Report No. 3 of 2025-26 on Wilkinsons Point, Report No. 10 of 2025-26 on the Human Resource Information System, Audit Tasmania's funding for performance audits, and the Tasmanian Community Fund Amendment Bill.",
+ "issues": [
+  {
+   "label": "TT-Line insolvency finding and ASIC referral",
+   "note": "Members cited the Auditor-General's insolvency finding and ASIC referral; the Premier and Treasurer said directors judge solvency and TT-Line had contrary advice.",
+   "ids": [
+    "TAS-0008",
+    "TAS-0019",
+    "TAS-0022",
+    "TAS-0027",
+    "TAS-0066",
+    "TAS-0067",
+    "TAS-0068",
+    "TAS-0069",
+    "TAS-0070",
+    "TAS-0071",
+    "TAS-0072",
+    "TAS-0073",
+    "TAS-0078",
+    "TAS-0079",
+    "TAS-0082",
+    "TAS-0084",
+    "TAS-0087",
+    "TAS-0088",
+    "TAS-0090",
+    "TAS-0091",
+    "TAS-0094",
+    "TAS-0095",
+    "TAS-0096",
+    "TAS-0097",
+    "TAS-0101",
+    "TAS-0102",
+    "TAS-0108",
+    "TAS-0109",
+    "TAS-0110",
+    "TAS-0111",
+    "TAS-0112",
+    "TAS-0113",
+    "TAS-0118",
+    "TAS-0119",
+    "TAS-0120",
+    "TAS-0121",
+    "TAS-0123",
+    "TAS-0124",
+    "TAS-0125",
+    "TAS-0126",
+    "TAS-0122",
+    "TAS-0128",
+    "TAS-0129",
+    "TAS-0130",
+    "TAS-0131",
+    "TAS-0132",
+    "TAS-0133",
+    "TAS-0134",
+    "TAS-0135",
+    "TAS-0136",
+    "TAS-0137",
+    "TAS-0138",
+    "TAS-0140",
+    "TAS-0141",
+    "TAS-0142",
+    "TAS-0143"
+   ]
+  },
+  {
+   "label": "October 2026 reports on government businesses",
+   "note": "Reports on Treasury oversight and state entity accounts prompted claims Homes Tasmania, Metro and TT-Line may not be going concerns and that governance is weak.",
+   "ids": [
+    "TAS-0001",
+    "TAS-0002",
+    "TAS-0003",
+    "TAS-0004",
+    "TAS-0005",
+    "TAS-0006",
+    "TAS-0007",
+    "TAS-0008",
+    "TAS-0009",
+    "TAS-0010",
+    "TAS-0011",
+    "TAS-0012",
+    "TAS-0013",
+    "TAS-0014",
+    "TAS-0015",
+    "TAS-0016",
+    "TAS-0017",
+    "TAS-0018"
+   ]
+  },
+  {
+   "label": "Audit Tasmania funding for performance audits",
+   "note": "Members claimed funding promised for six performance audits a year covered only three; the Treasurer said the office cannot set its own budget.",
+   "ids": [
+    "TAS-0054",
+    "TAS-0056",
+    "TAS-0057",
+    "TAS-0060",
+    "TAS-0062",
+    "TAS-0063",
+    "TAS-0065",
+    "TAS-0086",
+    "TAS-0090",
+    "TAS-0092",
+    "TAS-0099",
+    "TAS-0100",
+    "TAS-0149"
+   ]
+  },
+  {
+   "label": "Wilkinsons Point land sale report",
+   "note": "Report No. 3 of 2025-26 was noted; members cited process failings, and the government accepted four recommendations and said no sale has occurred.",
+   "ids": [
+    "TAS-0034",
+    "TAS-0059",
+    "TAS-0085",
+    "TAS-0095",
+    "TAS-0098",
+    "TAS-0103",
+    "TAS-0104",
+    "TAS-0105"
+   ]
+  },
+  {
+   "label": "Human Resource Information System audit",
+   "note": "Report No. 10 of 2025-26 was noted; members cited $47 million spent with no modules delivered, and the government said recommendations were accepted.",
+   "ids": [
+    "TAS-0029",
+    "TAS-0041",
+    "TAS-0042",
+    "TAS-0038",
+    "TAS-0043",
+    "TAS-0039",
+    "TAS-0040",
+    "TAS-0061"
+   ]
+  },
+  {
+   "label": "Tasmanian Community Fund Amendment Bill",
+   "note": "Bill responding to the Auditor-General's August 2024 report on the fund's referendum grant; Labor supported it while questioning motives.",
+   "ids": [
+    "TAS-0044",
+    "TAS-0045",
+    "TAS-0046",
+    "TAS-0047",
+    "TAS-0048"
+   ]
+  }
+ ],
+ "debates": [
+  {
+   "ids": [
+    "TAS-0007",
+    "TAS-0008",
+    "TAS-0009",
+    "TAS-0010",
+    "TAS-0011",
+    "TAS-0012",
+    "TAS-0013",
+    "TAS-0014"
+   ],
+   "gist": "Second reading of the bill on government business governance, held the day the Auditor-General tabled reports on Treasury oversight and state entity financial statements. Members cited the reports' findings on missed targets, costs and going-concern risks at TT-Line, Metro and Homes Tasmania."
+  },
+  {
+   "ids": [
+    "TAS-0035",
+    "TAS-0036",
+    "TAS-0037"
+   ],
+   "gist": "Motion to strengthen grants integrity, citing the Auditor-General's 2011 report on the Premier's Sundry Grants Program and the Integrity Commission's 2022 paper; the Treasurer said the report concerned another government and defended the Premier's Discretionary Fund."
+  },
+  {
+   "ids": [
+    "TAS-0041",
+    "TAS-0042",
+    "TAS-0038",
+    "TAS-0043",
+    "TAS-0039",
+    "TAS-0040"
+   ],
+   "gist": "Legislative Council motion to note Auditor-General Report No. 10 of 2025-26 on the Human Resource Information System. Members cited $47 million spent with no modules delivered, forecast cost near $120 million and governance failures; the government said recommendations were accepted and some issues resolved."
+  },
+  {
+   "ids": [
+    "TAS-0044",
+    "TAS-0045",
+    "TAS-0046",
+    "TAS-0047",
+    "TAS-0048"
+   ],
+   "gist": "Debate on a bill changing governance of the Tasmanian Community Fund in response to the Auditor-General's August 2024 report on its referendum grant. Members cited the report's recommendations; Labor supported the bill while questioning the government's motives."
+  },
+  {
+   "ids": [
+    "TAS-0060",
+    "TAS-0061",
+    "TAS-0062"
+   ],
+   "gist": "Estimates consideration debate in which members claimed the government promised funding for six Auditor-General performance audits a year but the Auditor-General said funding covered only three; one member also cited the Auditor-General's report on the human resources information system."
+  },
+  {
+   "ids": [
+    "TAS-0067",
+    "TAS-0068",
+    "TAS-0069",
+    "TAS-0070",
+    "TAS-0071"
+   ],
+   "gist": "Motion on the TT-Line equity injection. Members argued the bailout vindicates the Auditor-General's 2025 insolvency opinion; the Treasurer said directors, not an Auditor-General, judge solvency under corporations law; another member noted the board chair's contrary response."
+  },
+  {
+   "ids": [
+    "TAS-0090",
+    "TAS-0091",
+    "TAS-0092",
+    "TAS-0093",
+    "TAS-0094"
+   ],
+   "gist": "Estimates consideration debate where members cited the Auditor-General's TT-Line insolvency finding and ASIC referral, and the office's reported low performance audit funding; one member cited a finding that election commitments are ad hoc."
+  },
+  {
+   "ids": [
+    "TAS-0099",
+    "TAS-0100",
+    "TAS-0101"
+   ],
+   "gist": "Estimates consideration speeches arguing the Auditor-General needs more funding, citing statements that performance audit funding is the lowest in Australia, and relaying the Auditor-General's unchanged view that TT-Line is insolvent."
+  },
+  {
+   "ids": [
+    "TAS-0103",
+    "TAS-0104",
+    "TAS-0105"
+   ],
+   "gist": "Motion in the Legislative Council to note Auditor-General Report No. 3 of 2025-26 on the proposed Wilkinsons Point land sale. The mover called it a serious public concern; the government said no sale occurred and the report found no evidence of improper purpose."
+  },
+  {
+   "ids": [
+    "TAS-0107",
+    "TAS-0108",
+    "TAS-0109",
+    "TAS-0110",
+    "TAS-0111"
+   ],
+   "gist": "Legislative Council Estimates hearing with the Treasurer, where members raised an Auditor-General report on office accommodation, the Auditor-General's reported concerns about government businesses, and TT-Line's solvency, with the Treasurer saying TT-Line can pay its debts as they fall due."
+  },
+  {
+   "ids": [
+    "TAS-0123",
+    "TAS-0124",
+    "TAS-0125",
+    "TAS-0126"
+   ],
+   "gist": "Second reading debate on the budget in which members criticised the Premier for dismissing the Auditor-General's finding that TT-Line may have been insolvent in August 2025 and argued the government should produce evidence if it believes the finding is wrong."
+  },
+  {
+   "ids": [
+    "TAS-0128",
+    "TAS-0129",
+    "TAS-0130"
+   ],
+   "gist": "Question Time exchanges on whether the Auditor-General is wrong that TT-Line is insolvent. The Premier said the Auditor-General is entitled to an opinion but TT-Line has separate advice; questioners asked if the Premier would take responsibility if TT-Line broke the law."
+  },
+  {
+   "ids": [
+    "TAS-0133",
+    "TAS-0134",
+    "TAS-0135",
+    "TAS-0136",
+    "TAS-0137"
+   ],
+   "gist": "Matter of public importance on financial management, prompted by the Auditor-General's report tabled that day. Members cited the finding that TT-Line was insolvent on 19 August 2025 and a 209 per cent debt-to-equity ratio; the Treasurer said directors would not trade while insolvent."
+  },
+  {
+   "ids": [
+    "TAS-0140",
+    "TAS-0141",
+    "TAS-0142",
+    "TAS-0143"
+   ],
+   "gist": "Question Time on TT-Line's insolvency, with questions on when the Premier learned of the Auditor-General's August determination and why TT-Line is solvent now. The Premier said shareholders were told on 21 July and TT-Line has advice contrary to the Auditor-General."
+  },
+  {
+   "ids": [
+    "TAS-0147",
+    "TAS-0148",
+    "TAS-0149",
+    "TAS-0150"
+   ],
+   "gist": "Second reading debate on a bill creating a Budget Accountability and Oversight Committee, with the Auditor-General able to report on target outcomes. The government said it duplicates existing scrutiny; another member questioned the Auditor-General's added role and proposed a broader inquiry."
+  }
+ ],
+ "items": {
+  "TAS-0001": {
+   "summary": "Pressed the minister on whether the Homes Tasmania board raised financial concerns before the Auditor-General's draft report arrived; the answer called the report a snapshot of a period and said the board is trading within its annual budget.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "TAS-0002": {
+   "summary": "Claimed the Auditor-General revealed Homes Tasmania and Metro were almost sent broke, and asked the Premier how it got so bad and whether other businesses need bailouts; the Premier thanked the Auditor-General and said the report would be worked through.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0003": {
+   "summary": "Cited the Auditor-General's finding that no Homes Tasmania corporate plan has been approved since 2023, and asked whether the board has submitted draft plans since then and why none were approved.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "TAS-0004": {
+   "summary": "Replied that the minister was informed of the Auditor-General's report when sent a draft, still being worked through, and that the board is always aware of its financial situation.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "TAS-0005": {
+   "summary": "Said there had been no formal briefings from the Auditor-General or anyone else about the situation, other than the call to build more homes, in answer to questions about Homes Tasmania.",
+   "kind": "Passing reference",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "TAS-0006": {
+   "summary": "Cited the Auditor-General's going concern warning for Homes Tasmania, claimed $142 million in losses, and asked when the minister was first told; the answer said a draft report arrived about a week earlier.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "TAS-0008": {
+   "summary": "Argued the TT-Line board would not keep the company trading if it believed it insolvent, noting the Auditor-General wrote to ASIC yet the company still trades, and called the Auditor-General's TT-Line observations unhelpful despite a good professional relationship.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0009": {
+   "summary": "Called the Auditor-General's report seismic, arguing the government is shrugging off news that three government organisations are under a cloud about continuing, and urged the media to read it.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0010": {
+   "summary": "Cited the Auditor-General's two reports and briefings that day as warning that compliance and transparency concerns will erode public trust, said the Treasurer called the bill not enough, and said the answer to the member for Franklin's question on an inquiry was awaited.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0011": {
+   "summary": "Cited Auditor-General Report No. 3 of 2026-27 on state entity financial statements, saying only half of government business performance targets were achieved and that businesses are not meeting their own expectations or reporting transparently.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0012": {
+   "summary": "Cited the Auditor-General's report that 64 of 128 financial performance targets were not met and the net cost of supporting government businesses was $584 million, up $351 million, arguing the governance bill is timely.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0013": {
+   "summary": "Said the Auditor-General's report shows the position Homes Tasmania is in, but called the 'trading insolvent' language inflammatory because government business enterprises have letters of comfort, and backed the bill's accountability measures.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0015": {
+   "summary": "Referred to that day's Auditor-General report as outlining failures in financial management and governance oversight, as one example in a speech arguing the government lacks integrity.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0016": {
+   "summary": "Cited Auditor-General Report No. 3 on state entity financial statements, saying it shows Homes Tasmania and Metro may not be going concerns, Metro lacks agreements to run buses past 30 June, and Homes Tasmania sought almost $200 million from TASCORP.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0017": {
+   "summary": "Cited the Auditor-General's report that day, including Hydro Tasmania's results, to argue government businesses are not performing or delivering, during a debate on the state's contribution to the Macquarie Point stadium.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0018": {
+   "summary": "Said the Auditor-General's words painted a far worse picture for the state than any single infrastructure project and were more concerning than anything else, without naming the findings in this excerpt.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0019": {
+   "summary": "Cited the Auditor-General's view that TT-Line was likely insolvent as of August 2025 and ASIC's letter to the Public Accounts Committee seeking more from the Auditor-General, arguing the solvency question is serious given bailouts above $580 million.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0020": {
+   "summary": "Reported on the 18th ACPAC conference, noting 71 delegates, auditors-general from around the nation attending the first day and joining the dinner for the first time, and thanking the staff involved.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Unclear"
+  },
+  "TAS-0021": {
+   "summary": "Welcomed the committee's report on the ACPAC conference, noting it brought together public accounts committees, auditors-general and Pacific audit institutions at one function for the first time, with 71 delegates including nine auditors-general.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Unclear"
+  },
+  "TAS-0022": {
+   "summary": "Said ASIC is seeking an update on TT-Line's finances from the Auditor-General and asked for a guarantee that passenger, vehicle and freight charges will not rise to service TT-Line's debt.",
+   "kind": "Passing reference",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "TAS-0023": {
+   "summary": "Cited a 2013 lecture by a former Western Australian chief justice raising concern that integrity bodies, including auditors-general, ombudsmen and integrity commissions, are coming to be seen collectively as a fourth arm of government.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Unclear"
+  },
+  "TAS-0024": {
+   "summary": "Presented the Public Accounts Committee's follow-up of the Auditor-General's report Improving Outcomes for Tasmanian Senior Secondary Students (report No. 54 of 2026) and moved that it be received.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "TAS-0025": {
+   "summary": "Presented Public Accounts Committee Report No. 54 of 2026, the follow-up of the Auditor-General's report on Improving Outcomes for Tasmanian Senior Secondary Students (No. 1 of 2022-23).",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "TAS-0026": {
+   "summary": "Brought up the Public Accounts Committee's follow-up of the Auditor-General's report Expressions of Interest for Tourism Investment Opportunities (No. 3 of 2020-21) and moved that it be received and printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0027": {
+   "summary": "Cited the Auditor-General's referral of TT-Line to ASIC over likely insolvency, said the member had no evidence the company is solvent, and argued the situation is waste.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0028": {
+   "summary": "Presented Public Accounts Committee Report No. 53 of 2026, the follow-up of the Auditor-General's report Expressions of Interest for Tourism Investment Opportunities (No. 3 of 2020-21).",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0029": {
+   "summary": "Cited the Auditor-General's confirmation that the human resource information system, now the Human Resource Transformation Program, will not be completed this year and is funded only to 2026-27, leaving a gap of about $40 to $50 million.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0030": {
+   "summary": "Compared an independent, fixed-term parliamentary budget officer with the Auditor-General, recalled a Victorian opposition question about an Auditor-General's report, and said Tasmania respects its Auditor-General and the office.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0031": {
+   "summary": "Noted the committee's recommendation 8 that a Parliamentary Budget Officer have information access consistent with best practice and commensurate with the Auditor-General's access under the Audit Act 2008, with agreed response timeframes.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0032": {
+   "summary": "Responded for the government to the Public Accounts Committee's follow-up of the Auditor-General's ICT report, supporting all four recommendations and citing progress such as agency ICT asset registers, a data and digital subcommittee and increased ICT investment.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0034": {
+   "summary": "Asked, given the Auditor-General's findings on the proposed Wilkinsons Point land sale, what assurance the government can give that any future LK Group arrangement will have more transparency and market testing than the MyState Bank Arena lease had.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0035": {
+   "summary": "Mentioned the Auditor-General, alongside the Integrity Commission and Public Accounts Committee, as having investigated concerns about grants transparency, accountability and pork-barrelling, while describing the motion's proposal to adopt Commonwealth grants rules in Tasmanian law.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0036": {
+   "summary": "Responded to reliance on the Auditor-General's 2011 report, saying it concerned another government's grants overspending and a fund open to one party, and defended the Premier's Discretionary Fund as tightly administered and publicly displayed.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0037": {
+   "summary": "Argued for grants integrity reform by citing the Auditor-General's 2011 report on the Premier's Sundry Grants Program, which found guidelines inadequate and poorly promulgated, and its recommendations for eligibility criteria and DPAC advice before any grant is approved.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0039": {
+   "summary": "Supported the motion, citing the Auditor-General's findings that about $47 million over four years delivered no intended systems, costs may approach $120 million, risks were left unresolved, business cases were not updated, and ministers and parliament were not adequately informed.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0040": {
+   "summary": "Cited the Auditor-General's conclusion that the Department of Health phase of the Human Resource Information System program was not effective or economical, describing a series of governance failures and asking what lessons the government has learned.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0045": {
+   "summary": "Said the bill responds to matters the Auditor-General identified in the August 2024 report on the Tasmanian Community Fund's referendum grant, strengthening governance and transparency, and described the amendments as neither radical nor punitive.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0046": {
+   "summary": "Supported the bill as informed by the Auditor-General's 2024 review of the Tasmanian Community Fund's processes and decision-making, and thanked the board for committing to implement the report's recommendations.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0047": {
+   "summary": "Claimed a federal Liberal senator referred the fund's referendum grant to the Auditor-General for political reasons, having opposed the Voice, and that this made the Tasmanian Community Fund a political football.",
+   "kind": "Seeks audit or referral",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0048": {
+   "summary": "Said Labor will support the bill responding to the Auditor-General's 2024 examination of the Tasmanian Community Fund, while claiming the government acted only after a grant it disliked and that findings should be fixed, not used as a political reaction.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0049": {
+   "summary": "Answered a question on notice about the Auditor-General's 2024 report on aligning custodial stays at Ashley Youth Detention Centre with sentencing orders, saying the department supported all five recommendations in full and improvements continue.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "TAS-0051": {
+   "summary": "Cited the Auditor-General's report raising procurement concerns, saying Health awarded 508 contracts worth over $40 million just under the $100,000 threshold, and asked whether that is condoned; the answer acknowledged the report's contract hire issues and Bluegum project.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "TAS-0052": {
+   "summary": "Asked about Auditor-General findings, in the financial statements report volume 1, that two of five recommendations from the 2024 Ashley Youth Detention Centre audit remain outstanding or ongoing, and whether data on stays aligning with sentencing orders will be released.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "TAS-0054": {
+   "summary": "Listed funding for the Auditor-General among the Premier's commitments to the Legislative Council, alongside preventative health and a basketball court, saying they are tabled with the Public Accounts Committee and should be upheld.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0055": {
+   "summary": "Noted in passing that the Auditor-General is currently undertaking work on Tasmania's freshwater management, while arguing statutory catchment management plans and overseeing bodies are needed.",
+   "kind": "Passing reference",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "TAS-0056": {
+   "summary": "Told the House that full-time equivalent jobs in the Auditor-General's office rose 30 per cent over the past year, and urged members to consider the full funding picture before making assertions.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0057": {
+   "summary": "Claimed the Auditor-General wrote that $800,000 more a year was needed to deliver a promise made to secure a stadium vote, yet funding was cut by $300,000; the Treasurer replied independence does not let the office set its budget.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0058": {
+   "summary": "Reported an answer that the Department of Health assesses the Bluegum project through readiness (gateway) assessments, consistent with a recent Auditor-General recommendation, and has revised ICT labour hire procurement arrangements.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "TAS-0059": {
+   "summary": "Asked the Premier why negotiations continue on selling Wilkinsons Point land despite an Auditor-General report finding serious process failures, citing State Growth advice to test the open market and concerns about rezoning.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0060": {
+   "summary": "Argued the government promised funding for six Auditor-General performance audits a year but the Auditor-General said funding covered only three, and said performance audits are the tool to reach for when money is tight.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0061": {
+   "summary": "Cited the Auditor-General's report on the Health human resources information system, saying $47 million was spent without delivering any modules and more than 40 workforce systems remain in use, and argued fixing HR systems is core government work.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0062": {
+   "summary": "Said funding committed to a former member for six significant Auditor-General audits covered only three, claimed the Treasurer's response was that six could be done for the price of three, and argued the office needs better funding.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0063": {
+   "summary": "Referred to commitments made to a former member, including funding the Auditor-General for six audits, and said Estimates heard the Auditor-General lacks enough money for three audits.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0064": {
+   "summary": "Said the Auditor-General has reported regularly on local government matters such as asset management, in arguing elected members need support for their roles and that professional development must be resourced.",
+   "kind": "Passing reference",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "TAS-0065": {
+   "summary": "Described the Auditor-General as direct and clear in assessing governance and use of public funds, with another member interjecting that the Auditor-General has had a budget cut.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0066": {
+   "summary": "Asked whether the half-billion-dollar TT-Line bailout proves the Auditor-General was right about insolvency and whether legal advice will be tabled; the Premier replied the Auditor-General is entitled to an opinion but TT-Line is solvent.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0067": {
+   "summary": "Noted the original motion asked the House to note the Auditor-General's opinion on TT-Line's insolvency, and asked listeners also to note the TT-Line board chair's response and materials tabled through the Public Accounts Committee.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0068": {
+   "summary": "Argued the half-billion-dollar bailout in the coming budget effectively vindicates the Auditor-General's determination that TT-Line is insolvent, saying it could not have kept trading without it and the cost falls on schools, housing and community services.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0069": {
+   "summary": "Said the Premier and Treasurer dismissed the Auditor-General's opinion without satisfactory explanation, which the member said should not pass either; the Treasurer interjected about corporations law.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0070": {
+   "summary": "Said the Auditor-General is entitled to an opinion on TT-Line's solvency, which the member respects but disagrees with, arguing corporations law makes directors responsible for the assessment and the board's commercial experience outweighs the opinion.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0071": {
+   "summary": "Argued the Auditor-General deserves an apology because the bailout shows TT-Line was insolvent, and said the 2025 finding was formed by a team of auditors rather than being a mere opinion.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0072": {
+   "summary": "Said it is for directors, not the Auditor-General, to determine solvency, noted ASIC has not responded since the Auditor-General wrote to it, and said the government will back TT-Line while respecting the Auditor-General's role.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0073": {
+   "summary": "Said the Auditor-General continues to maintain TT-Line is insolvent, and asked whether the company has requested an equity injection or other financial assistance.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0074": {
+   "summary": "Said the Victorian Auditor-General, with the ABS and Tasmanian Treasury, has noted that input-output multipliers tend to overstate economic impact, supporting Mr Eslake's critique of the IER's modelling in the greyhound racing debate.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Another jurisdiction"
+  },
+  "TAS-0075": {
+   "summary": "Sought records showing whether and when stadium cost files were provided to the Commonwealth or the Auditor-General, among documents requested on peer review, validation and cost-estimate inclusions.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Unclear"
+  },
+  "TAS-0076": {
+   "summary": "Presented Public Accounts Committee Report No. 9 of 2026, the follow-up of the Auditor-General's report on ICT Strategy, Critical Systems and Investment (No. 4 of 2020-21).",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0077": {
+   "summary": "Brought up the Joint Standing Committee on Public Accounts follow-up report on the Auditor-General's ICT Strategy, Critical Systems and Investment report (No. 4 of 2020-21); the report was received and printed.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0078": {
+   "summary": "Asked the Minister for Infrastructure and Transport whether TT-Line has modelled the impact of fuel price rises on operations, citing the Auditor-General's view that TT-Line is insolvent and its $75 million fuel spend last year.",
+   "kind": "Passing reference",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "TAS-0079": {
+   "summary": "Cited the Auditor-General's findings that TT-Line was insolvent and on executive termination payments, board disclosures, asset revaluations and borrowed dividends, arguing the government business sector needs root-and-branch reform.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0080": {
+   "summary": "Cited the Auditor-General's observation that scrutiny was sometimes limited by Cabinet documents withheld under public interest immunity, in support of earlier access to Cabinet submissions.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0081": {
+   "summary": "Listed the Auditor-General among the 18 heads of agency under the State Service Act 2000, noting remuneration packages are reported publicly in each agency's annual report.",
+   "kind": "Passing reference",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "TAS-0082": {
+   "summary": "Cited the Auditor-General's finding that TT-Line was insolvent, calling it a shameful outcome for a state-owned company, and argued the government is driving the state into more debt and risking its financial viability.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0083": {
+   "summary": "Opposed the motion for a select committee on caretaker conventions, saying the last matter raised has already gone to the Auditor-General and that independent bodies such as the Integrity Commission and the Auditor-General, not parliament, should examine such matters.",
+   "kind": "Seeks audit or referral",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0084": {
+   "summary": "Said the Auditor-General called TT-Line insolvent last year, and that a colleague wrote to the Auditor-General about taxpayer-funded advertising of an unpassed budget in the caretaker period, noting section 23 investigation powers under the Audit Act 2008.",
+   "kind": "Seeks audit or referral",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0085": {
+   "summary": "Recalled media comments on an Auditor-General's report about Wilkinsons Point and the difficulty getting answers at Estimates about who was responsible, saying matters were covered in secrecy, in a debate on the right to information review.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0086": {
+   "summary": "Called on the government to adequately fund the independent integrity bodies, including the Ombudsman, Integrity Commission and Auditor-General, so they can do their work effectively.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0087": {
+   "summary": "Argued independent scrutiny must be respected, claiming the Auditor-General did not receive the forecast, evidence or supporting material on TT-Line's financial position and that the Premier dismissed the concerns as just another man's opinion.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0088": {
+   "summary": "Cited the Auditor-General's view that TT-Line is probably insolvent, said a bailout of hundreds of millions is likely in the next budget, and raised concerns about TasPorts and Hydro Tasmania dividends.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0089": {
+   "summary": "Referred to updates on the Auditor-General's report on the expressions of interest process and a lease and licence portal, saying the 2022 deed with its renewals is still not publicly available, which the member called a lack of transparency.",
+   "kind": "Passing reference",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "TAS-0092": {
+   "summary": "Cited the Auditor-General's statement at Estimates that resourcing for performance audits is the lowest in Australasia and that more funding would likely find more savings, and asked why the Treasurer does not simply ask the Auditor-General to evaluate whole programs.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0093": {
+   "summary": "Cited the Auditor-General's finding earlier that year that election commitments are ad hoc and not aligned with government goals, using the JCP Youth commitment as an example.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0094": {
+   "summary": "Criticised the Premier for calling the Auditor-General's view just an opinion, and claimed the government's failure to build a berth made TT-Line insolvent, which is why the Auditor-General gave the information to ASIC.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0095": {
+   "summary": "Cited the Auditor-General's insolvency call on TT-Line and the Auditor-General's report showing the Premier's office provided the Wilkinsons Point valuation to the proponent, LK Group, arguing for honesty and proper process.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0096": {
+   "summary": "Criticised the Premier for dismissing the Auditor-General, who reported TT-Line to ASIC, as giving just one man's opinion, calling that an insulting response to a statutory regulator and asking what hope there is for transparency on stadium finances.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0097": {
+   "summary": "Criticised the Premier for describing the Auditor-General's opinion as one man's opinion and the Treasurer for downplaying a credit rating downgrade, saying the downgrade raises borrowing costs and reduces funds for essential services.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0098": {
+   "summary": "Cited the Auditor-General's finding that the Premier's office directed the Wilkinsons Point valuation be shared with the proponent, asking whether the instruction came from the Premier personally; the answer cited the report's four accepted recommendations.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0099": {
+   "summary": "Said the Auditor-General made clear it lacked resources for needed performance audits and that limited Cabinet document access hampers its work, and said the Auditor-General and Integrity Commission recommended legislating an end to pork-barrelling.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0101": {
+   "summary": "Cited the Auditor-General's statement at Estimates that nothing presented had changed the opinion that TT-Line is insolvent, and welcomed the Treasurer stepping back so the audit office could answer directly.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0102": {
+   "summary": "Noted the Auditor-General's more recent report on TT-Line's solvency will be recorded in due course, and did not address it because that evidence emerged after December 2024, in speaking on the committee's vessel replacement interim report.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0103": {
+   "summary": "Cited the Auditor-General's Wilkinsons Point report as showing the Coordinator-General knew nothing of the sale proposal despite assurances the proper process was followed, and said the Premier has assured the member the land will go through proper disposal.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0104": {
+   "summary": "Welcomed the Auditor-General's Wilkinsons Point report for the government, saying no sale or binding agreement exists and the report found areas to improve on valuation, timing and documentation but no evidence of improper purpose, misconduct or personal benefit.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0105": {
+   "summary": "Moved to note Auditor-General Report No. 3 of 2025-26 on the proposed Wilkinsons Point land sale, calling it a matter of serious public concern and an additional performance audit prompted by more than one referral, and thanked the Auditor-General.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0106": {
+   "summary": "Recorded a question asking whether the government will request the Tasmanian Auditor-General to independently review compliance with the Macquarie Point Federation Funding Agreement and report on milestone delivery and Commonwealth funds; the answer is not in the excerpt.",
+   "kind": "Seeks audit or referral",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0107": {
+   "summary": "Noted an Auditor-General report made recommendations to Treasury on managing major office accommodation, and that Treasury's response agreed all recommendations would be implemented.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0108": {
+   "summary": "Asked the Treasurer whether the Auditor-General sounding the alarm on several government businesses, including TT-Line, Hydro and TasNetworks, could lead observers to conclude they were mismanaged over 11 years.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0109": {
+   "summary": "Explained that when the Auditor-General formed a view on the matter the Budget had not been brought down, so there was no visibility of any funding in it, and that Treasury's equity advice rested on imperfect information.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0110": {
+   "summary": "Expressed full faith and confidence in the Auditor-General but maintained TT-Line is solvent because it can pay debts as they fall due, and declined to speculate on further equity injections when pressed.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0111": {
+   "summary": "Put to the Treasurer that the Auditor-General says TT-Line is insolvent while the government says it is solvent, asking how solvency will be maintained without further funding, and noted the Auditor-General was due to appear later.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0113": {
+   "summary": "Questioned the Premier on the date the Auditor-General referred TT-Line to ASIC, putting that the referral was required under the Corporations Act; the Premier tabled letters and said it is a matter for TT-Line.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0114": {
+   "summary": "Confirmed, in answer to the member for Murchison, that the new commission would be a state entity subject to the Auditor-General's scrutiny, in debate on the Commission for Children and Young People Bill.",
+   "kind": "Office, powers or funding",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "TAS-0115": {
+   "summary": "Said the new commission will be subject to normal State Service agency accountability requirements and audited by the Auditor-General, calling it another check and balance, while supporting the bill.",
+   "kind": "Office, powers or funding",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "TAS-0116": {
+   "summary": "Raised a point of order that the question concerned the Auditor-General's recent report, not past election commitments, and the Speaker noted MAIB was in the original question but drew the Premier back to relevance.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0117": {
+   "summary": "Cited the Auditor-General's warning that the Motor Accidents Insurance Board's balance sheet has weakened over five years, asking whether establishing TasInsure ignores that advice; later raised a relevance point of order on the Premier's answer.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0118": {
+   "summary": "Noted the Premier appeared to say the Auditor-General had reported the matter to ASIC, and asked how TT-Line's $400 million of additional borrowings can be temporary given the Auditor-General's determination that it could not meet debts falling after August 2026.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0119": {
+   "summary": "Answered 'Emphatically: no' to a question not shown, saying that at that time the Auditor-General had not reported TT-Line to ASIC, which drew an interjection from Ms Finlay remarking that it has been reported.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0120": {
+   "summary": "Asked whether the government covered up TT-Line's financial troubles to protect a deal to secure government, noting the Auditor-General's determination was known on 21 July and a borrowing increase was approved on 26 July without the findings being disclosed.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0121": {
+   "summary": "Claimed a slip by the Premier revealed that the Auditor-General referred TT-Line to ASIC, arguing the government lacks transparency and is not honest, and said the matter would be pursued.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0122": {
+   "summary": "Cited the Auditor-General's report on likely TT-Line insolvency and Tasmania's unfunded superannuation liability, and said it points to smaller returns to government from government business profits than earlier budgets foreshadowed.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0123": {
+   "summary": "Criticised the Premier's dismissal of the Auditor-General's finding on TT-Line's insolvency, described the Auditor-General's role of independent assurance, annual and performance audits and special investigations, and said the Premier should table any contrary advice.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0124": {
+   "summary": "Cited the Auditor-General's view that TT-Line has solvency issues and criticised the government for dismissing it, comparing it with not questioning the Solicitor-General, and stressing the island state's reliance on TT-Line for freight, tourism and transport.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0125": {
+   "summary": "Criticised the Premier's dismissal of the Auditor-General's finding that there is a case TT-Line was insolvent on 19 August 2025, arguing that if the government believes the Auditor-General is wrong it must show the evidence, since assessing solvency is the Auditor-General's job.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0126": {
+   "summary": "Mentioned the Opposition Leader's repeated questions about whether to believe the TT-Line chairman or the Auditor-General, and turned to the Tasmanian Planning Commission's advice on the stadium as expert advice to heed.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0127": {
+   "summary": "Cited the Auditor-General's report on Health's funding of community service organisations, which the Auditor-General called ineffective and fundamentally flawed, and challenged the budget's treatment of its recommendations as new savings measures.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "TAS-0128": {
+   "summary": "Said the Auditor-General is entitled to an opinion on TT-Line, that TT-Line obtained separate advice disagreeing with it, and that the government may also disagree; expressed confidence in TT-Line's leadership.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0129": {
+   "summary": "Asked whether the Premier will take personal responsibility if TT-Line has broken the law, noting the Auditor-General determined TT-Line was insolvent yet it continues to trade and the government chose to trust TT-Line over the Auditor-General.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0130": {
+   "summary": "Asked whether the Premier is saying the Auditor-General is wrong that TT-Line is insolvent; the Premier said the Auditor-General may express an opinion but separate advice to the board disagrees, and a follow-up asked what Treasury advised after meeting the Auditor-General.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0131": {
+   "summary": "Said it was absurd for the Premier to challenge the Auditor-General's integrity after the Auditor-General put in writing concern about TT-Line's solvency, and said the Premier answered 'I don't know' when asked for any alternative advice.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0132": {
+   "summary": "Cited the Auditor-General's report tabled the previous day as showing TT-Line insolvent on the August audit date, with a further $400 million loan expansion since, and argued the budget's extra $75 million equity injection will not be enough.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0133": {
+   "summary": "Argued the Auditor-General's opinion on TT-Line is required by law and informed by decades of experience, not something to brush aside as personal opinion, citing the government's own announcement of the Auditor-General's appointment and experience.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0134": {
+   "summary": "Cited the Auditor-General's report tabled that day on TT-Line's likely long-term insolvency, including a 209 per cent debt-to-equity ratio and $894 million of borrowings, and criticised the Premier's denial.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0135": {
+   "summary": "Cited the Auditor-General's report that TT-Line was insolvent on 19 August 2025, argued the $75 million bailout only keeps it afloat and bigger bailouts are coming, and asked the government for a full and frank update.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0136": {
+   "summary": "Argued TT-Line directors would not risk their reputations trading while insolvent, citing independent legal advice they obtained, said the Auditor-General's determination is for the Auditor-General to explain, and asked whether anyone believes the company would be allowed to fail.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0137": {
+   "summary": "Said the Auditor-General's determination that TT-Line is insolvent is serious and the government gets no benefit of the doubt, and said the member trusts the independent oversight of the auditor over the company's word.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0138": {
+   "summary": "Listed the Auditor-General's insolvency comments among TT-Line's problems, with a terminal cost blowout from $90 million to $493 million and fender faults needing hull strengthening, in a passage quoting a published piece.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0139": {
+   "summary": "Cited the Auditor-General's report and media release on volume 2 of the state entities audit, saying government business dividends are trending down so will not supply Tasmania's needed revenue boost, and that 2024-25 was a challenging year for business finances.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0140": {
+   "summary": "Asked when the Premier first learned the Auditor-General had determined TT-Line insolvent in August; the Premier said shareholders were told on 21 July, the Auditor-General is entitled to an opinion, and directors confirmed solvency on independent advice.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0141": {
+   "summary": "Asked how TT-Line can trade solvently when it received only a loan facility increase before the Auditor-General's determination, and whether the Auditor-General is wrong; the answer said TT-Line has advice contrary to the Auditor-General.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0142": {
+   "summary": "Put a question asking why TT-Line is considered solvent now when the Auditor-General determined it insolvent in August; the answer is not in the excerpt.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0143": {
+   "summary": "Said Treasury has met with the Auditor-General and that the government will not let a government business fall into trading while insolvent, which is why it supports TT-Line and its board.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0147": {
+   "summary": "Listed the Auditor-General among existing parliamentary scrutiny mechanisms, with the Public Accounts Committee, Estimates and GBE scrutiny, as a standing framework, in a speech on the Budget Accountability and Oversight Committee Bill.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0148": {
+   "summary": "Opposed the bill, arguing a new committee would duplicate the work of Treasury, the Auditor-General and the Public Accounts Committee, and listing existing mechanisms including the Auditor-General's independent assurance to parliament.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0149": {
+   "summary": "Questioned whether the bill should let the Auditor-General comment on whether government met committee targets, noting the office's significant work plan, and proposed a broader inquiry into budget scrutiny including the Auditor-General's role and resourcing.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0150": {
+   "summary": "Explained the bill would let the Auditor-General state whether committee-recommended targets were met, without any power to direct the Auditor-General, so the Audit Act 2008 is not offended; reports would be tabled with a three-month government response.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0151": {
+   "summary": "Noted the Auditor-General, like the Ombudsman, can table their own reports, while supporting amendments to let the Custodial Inspector do so and to shorten the tabling period to seven or 14 days instead of 30.",
+   "kind": "Passing reference",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "TAS-0152": {
+   "summary": "Noted the Custodial Inspector Act allows information sharing with the Integrity Commission, Coroner or Auditor-General but not with other commissioners, citing the Inspector's 2022-23 annual report on limited information-sharing powers.",
+   "kind": "Passing reference",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "TAS-0007": {
+   "summary": "Cited Auditor-General Reports No. 2 on Treasury oversight of government businesses and No. 3 on state entity financial statements, arguing TT-Line, Metro and Homes Tasmania may not be going concerns and the bill's timing was extraordinary.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0014": {
+   "summary": "Praised the Auditor-General's work as frank and fearless, said the reports on Treasury oversight and GBE financial statements show falling performance, rising budget cost and missed targets, and claimed the TT-Line insolvency call last year was vindicated.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0033": {
+   "summary": "Moved that the Public Accounts Committee's follow-up of Auditor-General Report No. 4 of 2020-21 on ICT Strategy, Critical Systems and Investment be noted, explaining the committee meets the Auditor-General yearly and follows up three reports a year seeking evidence recommendations were adopted.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0038": {
+   "summary": "Acknowledged the motion to note the Auditor-General's report and said continuing to rely on ageing, disconnected systems creates operational, workforce and compliance risks.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0041": {
+   "summary": "Moved to note Auditor-General Report No. 10 of 2025-26 on the Human Resource Information System, citing $47 million spent over four years with no module delivered, a further $19.7 million spent and $53.1 million more expected.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0042": {
+   "summary": "Questioned whether the multiple assignments matter the Leader said was resolved is the same as concurrent employment, noting 'multiple assignments' is not a term used in the Auditor-General's report, so the issue may not be fixed.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0043": {
+   "summary": "Said the report's recommendations were accepted and actioned, that several critical decisions the Auditor-General noted have since been solved, including multiple assignments, and that the government notes the report.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "TAS-0044": {
+   "summary": "Said the bill's amendments respond to issues in the Auditor-General's August 2024 report on Tasmanian Community Fund referendum support, that the government has acted on its recommendations, and that the fund's board supports the changes.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0090": {
+   "summary": "Cited the Auditor-General's referral of TT-Line to ASIC over potential insolvency, questioned how big-ticket items were weighed in the budget, and listed the Auditor-General among statutory bodies claimed to be underfunded.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0091": {
+   "summary": "Criticised the Premier's dismissal of the Auditor-General's finding that TT-Line is insolvent, said the Auditor-General wrote to committee members about solvency concerns and wants the independent legal advice TT-Line obtained, and asked the government to provide it.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "TAS-0100": {
+   "summary": "Argued more money for the Auditor-General would deliver savings, citing the Auditor-General's statements that funding is the lowest in Australia, performance audit capacity is shrinking, and ministers have little insight into large departments' finances.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "TAS-0112": {
+   "summary": "Said the Auditor-General gave the TT-Line chair and CEO a copy of a section 11 notice sent to ASIC on 31 July, that no ASIC reply is known, and that the Auditor-General is entitled to refer if there is a suspicion.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  }
+ }
+}

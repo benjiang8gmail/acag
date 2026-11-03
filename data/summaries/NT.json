@@ -1,0 +1,211 @@
+{
+ "jur": "NT",
+ "overview": "Mentions centred on the Auditor-General's independence and role. In the Integrity and Ethics Commissioner Bill debate (November 2025), the Auditor-General was described as outside the new commission but within an oversight inspector's remit, and independence concerns were raised. The Member for Johnston cited the Independence of the Australasian Auditors General Report 2025, which the member said ranks the NT last. Auditor-General Reports Nos 4 to 6 and Nos 1 and 2 of 2026–27 were tabled. Other items covered Public Trustee audit timeframes, the Darwin Ship Lift inquiry and Estimates hearings.",
+ "issues": [
+  {
+   "label": "Integrity and Ethics Commissioner Bill and Auditor-General independence",
+   "note": "Debate over merging integrity bodies under one commissioner, with the Auditor-General described as outside it but overseen by a new inspector; independence concerns raised.",
+   "ids": [
+    "NT-0018",
+    "NT-0019",
+    "NT-0020",
+    "NT-0021",
+    "NT-0022",
+    "NT-0008"
+   ]
+  },
+  {
+   "label": "Calls for stronger Auditor-General independence and powers",
+   "note": "The Member for Johnston cited a 2025 report ranking the NT last for Auditor-General independence and argued the office lacks standard performance audit powers.",
+   "ids": [
+    "NT-0013",
+    "NT-0014",
+    "NT-0006",
+    "NT-0011"
+   ]
+  },
+  {
+   "label": "Public Trustee audit timeframes in legislation",
+   "note": "Legislation clarifying the Auditor-General's annual audit of Public Trustee common funds; the scrutiny committee proposed a four-month deadline for statements, which the Attorney-General called unnecessary.",
+   "ids": [
+    "NT-0009",
+    "NT-0003",
+    "NT-0005"
+   ]
+  },
+  {
+   "label": "Auditor-General reports and committee scrutiny",
+   "note": "Five Auditor-General reports were tabled; the Public Accounts Committee reported on Auditor-General briefings and cited the Auditor-General's views on records in its Ship Lift inquiry.",
+   "ids": [
+    "NT-0015",
+    "NT-0016",
+    "NT-0017",
+    "NT-0004",
+    "NT-0002",
+    "NT-0001",
+    "NT-0023"
+   ]
+  },
+  {
+   "label": "Auditor-General's role in Estimates hearings",
+   "note": "Proposed Estimates Committee terms capped the Auditor-General's appearance at 30 minutes and had the office examined separately; a committee member later thanked the Auditor-General.",
+   "ids": [
+    "NT-0012",
+    "NT-0010",
+    "NT-0007"
+   ]
+  }
+ ],
+ "debates": [
+  {
+   "ids": [
+    "NT-0018",
+    "NT-0019",
+    "NT-0020",
+    "NT-0021",
+    "NT-0022"
+   ],
+   "gist": "Debate on the Integrity and Ethics Commissioner Bill, which brings integrity bodies under one commissioner. The Auditor-General was described as remaining outside the commission but subject to a new oversight inspector; members asked about inspection powers and raised independence concerns."
+  }
+ ],
+ "items": {
+  "NT-0001": {
+   "summary": "Said the committee received four Auditor-General briefings, including on proposed changes to statutory integrity officers, the audit of the Treasurer's annual financial report, the police information system replacement project and Australasian auditors-general independence, and thanked the Auditor-General for assistance.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0002": {
+   "summary": "Tabled the Auditor-General's Report No 2 of 2026–27, Follow-up of Effectiveness of Internal Audit and Audit Committees Review; the passage records the tabling only.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0003": {
+   "summary": "Said the committee's proposed four-month deadline for the Public Trustee to give the Auditor-General financial statements was unnecessary given the existing six-month audit requirement, and noted the Auditor-General supported clearer reporting timeframes and auditing requirements.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0004": {
+   "summary": "Tabled the Auditor-General's Report to the Legislative Assembly No 1: 2026–27; the passage records the tabling only, with no subject given.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0005": {
+   "summary": "Reported that the Auditor-General's Office raised concerns about Public Trustee audit requirements, and that the committee recommended the Public Trustee give the Auditor-General common funds statements within four months to help meet the Bill's six-month audit deadline.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0006": {
+   "summary": "Argued the Auditor-General cannot fully examine whether public money achieves its purpose, citing the NT ranking last of 12 jurisdictions in a 2025 independence report, alongside complaints that information was not available.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0007": {
+   "summary": "Mentioned the Auditor-General in passing, among ministers, board chairs and the Speaker thanked for assisting the committee with answers; also thanked agency staff for preparing hearing information.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "NT-0008": {
+   "summary": "Said it is important the Auditor-General role remains independent and described the work as important for accountability for taxpayers' dollars, indicating support for the motion if the structure matches the model expected to be gazetted in early June.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0009": {
+   "summary": "Explained that amendments to the Public Trustee Act 1979 would set out the process for the Auditor-General's annual audit of the common funds, saying the current four-month reference in section 24C is unclear and unrealistic.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0010": {
+   "summary": "Set out Estimates Committee 2026 terms that cap the Auditor-General's appearance at 30 minutes, require a hearing schedule by 15 May 2026 and have the Auditor-General's Office examined separately from the Chief Minister's outputs.",
+   "kind": "Office, powers or funding",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "NT-0011": {
+   "summary": "Argued the Territory could have an Auditor-General with standard performance review powers, as in other jurisdictions, so Territorians could see where the money goes; claimed the ship lift commits hundreds of millions of dollars with no meaningful return.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0012": {
+   "summary": "Set out Estimates Committee terms in a notice, including a 30-minute cap on the Auditor-General's appearance, a hearing schedule due by 15 May 2026 and separate examination of the Auditor-General's Office from the Chief Minister's outputs.",
+   "kind": "Office, powers or funding",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "NT-0013": {
+   "summary": "Gave notice, as the Member for Johnston, of a motion noting the Auditor-General is ranked last in Australia for independence and lacks performance audit powers, and noting urgent calls, including the Auditor-General's, for an Audit Act 1995 rewrite.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0014": {
+   "summary": "Cited, as the Member for Johnston, the Independence of the Australasian Auditors General Report 2025 as ranking the NT last in Australasia for Auditor-General independence, and as finding the office lacks adequate protection from executive influence and full performance audit access.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0015": {
+   "summary": "Tabled the Auditor-General's Report Number 6 to the Legislative Assembly; the passage records the tabling only, with no subject given.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0016": {
+   "summary": "Tabled the Auditor-General's Report Number 4 to the Legislative Assembly; the passage records the tabling only, with no subject given.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0017": {
+   "summary": "Tabled the Auditor-General's Report Number 5 to the Legislative Assembly; the passage records the tabling only, with no subject given.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0018": {
+   "summary": "Asked in committee how complaints involving the Auditor-General's Office would be handled, and what powers, notice and premises (including staff homes) the inspector's oversight covers; was told powers follow the ICAC Act and home work is included.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0019": {
+   "summary": "Said the new body will combine the ICAC, Ombudsman, Information Commissioner and health complaints functions under one commissioner, with the Auditor-General, who receives shared services, explicitly outside and independent; dismissed contrary allegations, saying the legislation spells it out.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0020": {
+   "summary": "Mentioned the Australasian Council of Auditors General in passing, among national organisations that sent submissions to the Member for Johnston's forum.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Unclear"
+  },
+  "NT-0021": {
+   "summary": "Said every submission opposed the bill or raised serious concerns, including threats to the Auditor-General's independence, excessive concentration of power and weak oversight, and argued passing it would ignore expert advice.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0022": {
+   "summary": "Said the new Integrity and Ethics Oversight Inspector, responsible for the commissioner, the Auditor-General and their offices, adds a layer of oversight that previously did not exist.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "NT-0023": {
+   "summary": "Reported that the Darwin Ship Lift inquiry found Cabinet-in-confidence protections limited document review; cited the Auditor-General's similar note on clear, accessible records for oversight of major capital investments, and thanked the Auditor-General for assistance.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  }
+ }
+}

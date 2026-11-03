@@ -1,0 +1,982 @@
+{
+ "jur": "SA",
+ "overview": "Mentions were mostly members citing Auditor-General reports in debate. Report 9 of 2025 supplied state debt figures in November 2025. Report 7 of 2026 prompted questions on North Adelaide Golf Course consultancies, T2D and hydrogen turbines, mainly in question time and the Auditor-General's Report examinations of 27 to 29 October 2026. The Government Advertising Bill proposed an Auditor-General approval role. Road maintenance, a rural industry fund and Coober Pedy council also drew on audit findings, and several reports were tabled.",
+ "issues": [
+  {
+   "label": "North Adelaide Golf Course consultancy procurement",
+   "note": "Members cited findings on 14 consultancy contracts under $55,000 and later extensions; the Premier said stage 1 spending was within its $45 million budget.",
+   "ids": [
+    "SA-0020",
+    "SA-0021",
+    "SA-0030",
+    "SA-0031",
+    "SA-0045",
+    "SA-0046",
+    "SA-0050",
+    "SA-0051"
+   ]
+  },
+  {
+   "label": "Major project costs: T2D, hydrogen turbines, hospital",
+   "note": "Questions on T2D overspend and contract management, unsold hydrogen turbines and hospital start delays; ministers pointed to positive findings and cash flow explanations.",
+   "ids": [
+    "SA-0007",
+    "SA-0008",
+    "SA-0044",
+    "SA-0048",
+    "SA-0054",
+    "SA-0055",
+    "SA-0060",
+    "SA-0061",
+    "SA-0072",
+    "SA-0074",
+    "SA-0075",
+    "SA-0078",
+    "SA-0102",
+    "SA-0104",
+    "SA-0105",
+    "SA-0106",
+    "SA-0112",
+    "SA-0113"
+   ]
+  },
+  {
+   "label": "State debt and budget overspends",
+   "note": "Members cited Auditor-General warnings that net debt will near $50 billion, and said the Audit Office was the only agency within budget.",
+   "ids": [
+    "SA-0041",
+    "SA-0042",
+    "SA-0068",
+    "SA-0080",
+    "SA-0081",
+    "SA-0084",
+    "SA-0086",
+    "SA-0092",
+    "SA-0103",
+    "SA-0108",
+    "SA-0109",
+    "SA-0110",
+    "SA-0111",
+    "SA-0113",
+    "SA-0130",
+    "SA-0131"
+   ]
+  },
+  {
+   "label": "Government Advertising Bill and Auditor-General's powers",
+   "note": "Debate on a bill giving the Auditor-General breach investigation and pre-election approval powers, which the government opposed; also special investigations and Joint Parliamentary Service access.",
+   "ids": [
+    "SA-0009",
+    "SA-0010",
+    "SA-0011",
+    "SA-0012",
+    "SA-0013",
+    "SA-0047",
+    "SA-0028",
+    "SA-0029",
+    "SA-0073",
+    "SA-0089",
+    "SA-0107"
+   ]
+  },
+  {
+   "label": "Road maintenance backlog and spending",
+   "note": "Members cited the Auditor-General's reporting of a $2.1 billion road repair estimate and backlog growth, and disputed which government is responsible.",
+   "ids": [
+    "SA-0023",
+    "SA-0024",
+    "SA-0025",
+    "SA-0026",
+    "SA-0114"
+   ]
+  },
+  {
+   "label": "Idle Rural Industry Adjustment and Development Fund",
+   "note": "Members cited the Auditor-General's figure of $28.4 million in the fund, said to be idle for a decade, during debate on the loan interest bill.",
+   "ids": [
+    "SA-0027",
+    "SA-0052",
+    "SA-0053",
+    "SA-0066",
+    "SA-0067",
+    "SA-0087",
+    "SA-0120"
+   ]
+  }
+ ],
+ "debates": [
+  {
+   "ids": [
+    "SA-0001",
+    "SA-0002",
+    "SA-0003",
+    "SA-0004",
+    "SA-0005",
+    "SA-0006",
+    "SA-0007",
+    "SA-0008"
+   ],
+   "gist": "Committee examination of the Auditor-General's 2025-26 Report, with members citing report pages to question ministers on the Concordia infrastructure scheme, SA Water contract management, the Eyre Peninsula desalination budget, CFS records and Women's and Children's Hospital timing."
+  },
+  {
+   "ids": [
+    "SA-0009",
+    "SA-0010",
+    "SA-0011",
+    "SA-0012",
+    "SA-0013"
+   ],
+   "gist": "Second reading debate on the Government Advertising Bill 2026. The government opposed it as duplicating existing safeguards, including the Auditor-General's audit power; supporters backed the Auditor-General approving election-period advertising above $10,000 as an independent safeguard."
+  },
+  {
+   "ids": [
+    "SA-0014",
+    "SA-0015",
+    "SA-0016",
+    "SA-0017",
+    "SA-0018",
+    "SA-0019"
+   ],
+   "gist": "Committee examination of the Auditor-General's 2025-26 Report, covering DHS agreements and NDIS billing, surplus cash returned to Treasury, removal of audit of procurement disclosures, and the Auditor-General's procurement-risk concerns about alliance subcontractors."
+  },
+  {
+   "ids": [
+    "SA-0023",
+    "SA-0024",
+    "SA-0025"
+   ],
+   "gist": "House motion on road maintenance. Members cited the Auditor-General's note of a $2.1 billion repair estimate, depreciation exceeding maintenance spending and backlog figures since 2018, while disputing which government is responsible."
+  },
+  {
+   "ids": [
+    "SA-0030",
+    "SA-0031",
+    "SA-0032",
+    "SA-0033",
+    "SA-0034",
+    "SA-0035",
+    "SA-0036",
+    "SA-0037"
+   ],
+   "gist": "Committee examination of the Auditor-General's 2025-26 Report, with the Premier asked about North Adelaide Golf Course consultancy contracts and Treasurer's Instruction 17, the Treasurer on concurrent employment across agencies, and ministers on bank guarantees, SmartyGrants security controls and Veterans SA expenses."
+  },
+  {
+   "ids": [
+    "SA-0038",
+    "SA-0039",
+    "SA-0040"
+   ],
+   "gist": "Second reading debate on a bill on Coober Pedy council. Members recounted that the former Ombudsman's report and a later Auditor-General's examination, finalised in late 2018, identified maladministration and financial governance failings that led to the council's administration."
+  },
+  {
+   "ids": [
+    "SA-0118",
+    "SA-0119",
+    "SA-0120",
+    "SA-0121",
+    "SA-0122",
+    "SA-0123"
+   ],
+   "gist": "Legislative Council committee examination of the 2024-25 Auditor-General's Report, after a motion to refer it. Questions covered the Victims of Crime Fund balance, the AGFMA contract with Ventia, a CAA payroll database issue, and PIRSA drought funding and expenditure."
+  },
+  {
+   "ids": [
+    "SA-0124",
+    "SA-0125",
+    "SA-0126",
+    "SA-0127",
+    "SA-0128",
+    "SA-0129"
+   ],
+   "gist": "House of Assembly committee examination of the 2024-25 Auditor-General's Report: SA Housing Trust maintenance backlog and IT controls, child protection expenses and payments, and CFS PPC cleaning compliance, with some findings said to be repeated from earlier years."
+  }
+ ],
+ "items": {
+  "SA-0001": {
+   "summary": "Opened the committee examination of the Auditor-General's 2025-26 Report, requiring questions to reference the report and agency statements, and called Mr Teague, who began with Part C on the Concordia Basic Infrastructure Scheme (page 235).",
+   "kind": "Report tabled or noted",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "SA-0002": {
+   "summary": "Began a question citing Auditor-General's Report 7 of 2026, following an answer about code amendments, infrastructure overlays and infrastructure schemes; the excerpt ends before the question itself.",
+   "kind": "Report tabled or noted",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "SA-0003": {
+   "summary": "Cited the Auditor-General's note of higher 2025-26 transaction volumes, asking whether transfer fees will fall; then cited concerns about SA Water contract and risk management for strategic contracts, asking what is done to ensure contractor and subcontractor probity.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0004": {
+   "summary": "Said the Auditor-General's engagement with SA Water concerned documentation and procedural issues that SA Water has taken on board and is implementing; Mr Telfer then asked whether the Eyre Peninsula desalination plant remains within its $470 million budget.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0005": {
+   "summary": "Cited the Auditor-General's commentary at page 355 on the Eyre Peninsula desalination plant and its $470 million budget, asking whether the project is on track or will incur additional costs, and how much.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0006": {
+   "summary": "Cited the Auditor-General's finding that most CFS PPC improvement initiatives were not fully implemented and records incomplete, questioning another external audit after four years of shortcomings; separately cited 44 SES fleet assets with no service record, asking how the minister reconciles that with everything being operational.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0007": {
+   "summary": "Said the delay noted at page 99 of the Auditor-General's Report reflects a change in spending phasing after project realignment, not a late construction start, and cited Part A's list of 2025-26 milestones on the new Women's and Children's Hospital.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0008": {
+   "summary": "Asked whether the minister disagrees with the Auditor-General's assessment of delays in starting construction on the hospital project; the minister replied that the underspend is a cash flow issue, not a project delay.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0009": {
+   "summary": "Said the government will oppose the Government Advertising Bill 2026, arguing it duplicates existing safeguards, including the Auditor-General's power under the Public Finance and Audit Act 1987 to audit government advertising and report to parliament.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0010": {
+   "summary": "Argued that the bill's role for the Auditor-General in assessing breaches and approving pre-election advertising above $10,000 is an important feature, giving an independent mechanism to enforce the rules and report to parliament.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0011": {
+   "summary": "Supported the bill's restrictions on government advertising, describing the Auditor-General's oversight of spending above $10,000 in the pre-election period as an important safeguard against misuse of public funds for political advantage.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0012": {
+   "summary": "Claimed Labor introduced a near-identical bill in 2021 while in opposition, requiring Auditor-General or parliamentary approval of election-period advertising above $10,000, and argued this shows inconsistency on accountability now it is in government.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0013": {
+   "summary": "Argued the bill makes the Auditor-General, an independent statutory officer appointed by parliament, the arbiter of whether taxpayer-funded advertising is necessary for the functions of government, and called that wholly appropriate.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0014": {
+   "summary": "Opened the committee examination of the Auditor-General's 2025-26 Report; Mr Batty began with page 238 of Part C, citing 68 agreements that had expired in DHS's system in June 2026.",
+   "kind": "Report tabled or noted",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "SA-0015": {
+   "summary": "Cited Auditor-General's Report 7 of 2026 on $58 million in surplus cash returned to Treasury, asking whether any related to seniors and ageing well funding and why it was unspent, then asked about the algal bloom event support package.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "SA-0016": {
+   "summary": "Cited the Auditor-General's calls for improved NDIS billing policies and procedures in 2023-24 and 2024-25, and asked why DHS was still considering an overarching NDIS billing policy in 2025-26 and what progress has been made.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "SA-0017": {
+   "summary": "Cited Part A, page 37, noting the Auditor-General modified several agencies' audit opinions in 2023-24 and 2024-25 over incomplete procurement disclosures, and asked whether the minister agreed to remove audit of that information.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0018": {
+   "summary": "Said the department will keep building on the Auditor-General's recommendations, noted a further audit this year and thanked the Auditor-General for diligent work, and said the alliance is a separate legal entity from DIT.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0019": {
+   "summary": "Cited the Auditor-General's procurement-risk concern about subcontracts at page 28, after the Chair asked for closer reference to the report, and asked what power the government exercises if it is not party to them.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0020": {
+   "summary": "Moved a motion for documents on North Adelaide Golf Course contracts, citing the Auditor-General's findings that 14 consultants were engaged at under $55,000 without competitive procurement, then 11 extended above that, and arguing the government lacks transparency.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0021": {
+   "summary": "Supported the golf course motion for the Greens, citing the Auditor-General's report as showing the government avoided scrutiny of Parklands plans and funded the project without a clear business case; claimed the same happened with the university merger.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0022": {
+   "summary": "Cited the Auditor-General's June 2025 report on proton therapy project funding ($115.4 million committed, about $98.5 million spent) and its finding that the government could not show PwC's concerns about the operating model were adequately assessed.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0023": {
+   "summary": "Cited the Auditor-General's note of a 2023 departmental estimate that $2.1 billion was needed to repair roads in very poor condition, and argued five-year road depreciation of $1.8 billion exceeded the $884 million spent on maintenance.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "SA-0024": {
+   "summary": "Cited the Auditor-General's documentation that the maintenance backlog was $750 million when the Liberals took government in 2018 and almost $2 billion when they left, and challenged the opposition's account.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "SA-0025": {
+   "summary": "Cited the RAA's November 2025 assessment of the Auditor-General's Report that five-year road depreciation of $1.6 billion exceeded maintenance spending of $892 million, a 45 per cent shortfall, and called for a funded recovery plan.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "SA-0026": {
+   "summary": "Cited the Auditor-General's report of a $2.1 billion 2023 departmental estimate to repair roads in very poor condition, and claimed the Auditor-General has said for 4½ years that the department has not managed the road maintenance contract correctly.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "SA-0027": {
+   "summary": "Cited the Auditor-General for the figure of about $28.4 million remaining in the Rural Industry Adjustment and Development Fund, while arguing primary industries, especially wine, face significant structural pressures.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0028": {
+   "summary": "Asked, in a question put on 3 September 2026, whether the Auditor-General undertook a special investigation in 2025-26, whether none is expected in 2026-27, and when the Auditor-General last did not undertake one.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0029": {
+   "summary": "Answered for the Premier that the Auditor-General undertook no special investigation in 2025-26, saying such investigations are uncommon, arise only on a formal request or requirement under the Public Finance and Audit Act 1987, and cannot be predicted.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0030": {
+   "summary": "Opened the committee examination of the Auditor-General's 2025-26 Report with the Premier, where Mrs Hurn asked why 14 North Adelaide Golf Course consultancy contracts were each under $55,000; later, asked how much contractors had been paid, the Premier cited $15.6 million against $45 million approved for stage 1.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0031": {
+   "summary": "Opened questioning of the Premier on the Auditor-General's 2025-26 Report by citing the Executive Summary's identification of the North Adelaide Golf Course redevelopment as a key matter, asking why 14 consultancy contracts were all valued under $55,000.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0032": {
+   "summary": "Said compliance with Treasurer's Instruction 17 was achieved through approvals in a cabinet submission the Auditor-General may not have seen, and that cabinet's practice is to consider and, where it can, comply with the Auditor-General's requests for such information.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0033": {
+   "summary": "Opened questioning of the Treasurer on Part A of Report 7 of 2026, then quoted the Auditor-General on workers employed by multiple agencies: '...did not assess whether the concurrent employment arrangements were justified, appropriately approved, complied with relevant policies or suitable' given workload and wellbeing.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0034": {
+   "summary": "Said agencies must manage fatigue for staff working across agencies and that the Auditor-General's report helps identify the issue, adding that the extra hours reflect people taking weekend work during a cost-of-living crisis.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0035": {
+   "summary": "Cited Report 7 of 2026, page 81, on $418 million in bank guarantees held as security, and asked what rehabilitation security was held for projects in Narungga at 30 June 2026.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "SA-0036": {
+   "summary": "Responded to the Auditor-General's finding that the Department of State Development had not defined how often to monitor SmartyGrants vendor security controls, describing the cloud-based grants system as used since 2022 and holding sensitive applicant information.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0037": {
+   "summary": "Cited the Auditor-General's Report as showing Veterans SA employee expenses rose by about 11.7 per cent and asked what additional services or measurable improvements for veterans resulted; the Chair asked which part of the report was cited.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "SA-0038": {
+   "summary": "Recounted that Coober Pedy council was placed into administration in January 2019 on the basis of reports by the former Ombudsman and later the Auditor-General, citing findings of maladministration over a power purchasing agreement and significant financial governance failings.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0039": {
+   "summary": "Said the Ombudsman's findings on Coober Pedy council were supported by a lengthy Auditor-General examination, finalised in late 2018, that identified significant financial governance failings, and noted the council is uniquely responsible for essential services in the town.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0040": {
+   "summary": "Said a pattern of serious mismanagement at Coober Pedy council was shown by the former Ombudsman's report and a later Auditor-General's report, including maladministration of a power purchasing agreement, and called the decision to place it into administration necessary.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0041": {
+   "summary": "Auditor-General's Report 8 of 2026, State finances: insights on the 2026-27 Budget, tabled in the House of Assembly and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0042": {
+   "summary": "Auditor-General's Report 8 of 2026, State finances: Insights on the 2026-27 Budget, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0043": {
+   "summary": "Moved that the Auditor-General's report for the year ended 30 June 2026, tabled on 13 October 2026, and the agency statements be referred to a Committee of the Whole House for ministers to be examined; motion carried.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0044": {
+   "summary": "Cited the Auditor-General's 2025-26 annual report as showing $1.8 million spent storing and maintaining four gas turbines the government is trying to sell, and $180 million in capital works on them to 30 June 2026, before questioning the Deputy Premier.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "SA-0045": {
+   "summary": "Described the Auditor-General's role as scrutinising how government money is spent, and cited the Auditor-General's questions over whether proper processes were followed in awarding about 14 consultancy contracts of $55,000 for stage 1 of the North Adelaide Golf Course redevelopment.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0046": {
+   "summary": "Mentioned the Auditor-General only briefly, saying the golf course work is on its $45 million budget and that driving range and clubhouse work is still to be done.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0047": {
+   "summary": "Described the Government Advertising Bill, which would give the Auditor-General powers to investigate breaches and report to parliament and to approve pre-election advertising above $10,000 on specified grounds, and argued such review is appropriate.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0048": {
+   "summary": "Cited page 34 of the Auditor-General's Report that more than $180 million remains tied up in turbines bought for the Hydrogen Jobs Plan, with sales efforts since August 2025 still active and $1.8 million spent on storage and maintenance in 2025-26.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "SA-0049": {
+   "summary": "Said a history of serious mismanagement at Coober Pedy council, shown by a former Ombudsman's report and a later Auditor-General's report, was the basis for placing it into administration, and that the government is committed to a long-term solution.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0050": {
+   "summary": "Cited the Auditor-General's findings that DPC engaged 14 golf course consultants at $55,000 each then entered 11 contracts above that threshold, did not prepare required acquisition plans or retain sufficient value-for-money evidence, and that investment decisions risked lacking required analysis.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0051": {
+   "summary": "Cited the Auditor-General's report that 14 consultants were engaged on North Adelaide Golf Course work, each under $55,000 so needing no multiple quotes, and its finding of a risk that investment decisions lacked required cost, benefit and value-for-money analysis.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0052": {
+   "summary": "Supported the bill while citing the Auditor-General's figure of about $28.4 million remaining in the Rural Industry Adjustment and Development Fund, and asked the government why money meant for farmers has sat largely unused for a decade.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0053": {
+   "summary": "Said the Rural Industry Adjustment and Development Fund held $29.4 million at 30 June per the latest Auditor-General's report, up from $28.4 million with interest, and argued the amendment gives governments flexibility to respond to structural challenges.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0054": {
+   "summary": "Cited Auditor-General's Report 7 of 2026 as showing the contract management plan for the $15.4 billion T2D project does not fully document the alliance's obligations, 2025-26 spending exceeded budget by $110 million, and two matters may need contingency funding.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0055": {
+   "summary": "Answered by citing positive findings in the Auditor-General's annual report and a standalone T2D review, said the project was paused and fixed, and claimed two separate audits show it is being delivered well.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0056": {
+   "summary": "Cited the Auditor-General's Report as showing the Whyalla Steelworks administration funding limit rose from $400 million to $1 billion, with $665 million paid to administrators by 30 June 2026, including $329 million from the state government.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0057": {
+   "summary": "Said the Auditor-General basically confirms the administration costs already outlined in the house, and argued the key consideration in the spending is the long-term viability of a major regional city.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0058": {
+   "summary": "Recounted that the Ombudsman and Auditor-General flagged serious maladministration at Coober Pedy council, said the member had earlier expressed the view it should be sacked, and described revolving-door finance officers and mayors before administration.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0059": {
+   "summary": "Said the Auditor-General and Ombudsman became involved in an earlier council decision about a program, and agreed the community's frustration is understandable because administration has lasted across two governments.",
+   "kind": "Passing reference",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0060": {
+   "summary": "Asked whether the minister agrees with the Auditor-General that there were delays in starting construction of the new Women's and Children's Hospital, citing page 99 of Part C, which attributes them to program realignment and scope review.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0061": {
+   "summary": "Said, without the page to hand, that the Auditor-General's Report still states completion in 2031, which would mean the project is on track, and undertook to get advice on whether construction started late.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0062": {
+   "summary": "Auditor-General's Report 7 of 2026, Annual Report 2025-26, Part A: Executive Summary, tabled in the House of Assembly.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0063": {
+   "summary": "Auditor-General's Report 7 of 2026, Annual Report for the year ended 30 June 2026, Part A: Executive Summary, tabled in the Legislative Council, listed with the Ombudsman SA annual report.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0064": {
+   "summary": "Said serious mismanagement at Coober Pedy council, as shown by the former Ombudsman's report and a later Auditor-General's report, was the basis for placing it into administration, and that the government is committed to a long-term solution.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0065": {
+   "summary": "Cited a June independent review of the homelessness system, released following issues raised by the Auditor-General, which found the current model not well positioned and recommended discontinuing the five-Alliance structure.",
+   "kind": "Passing reference",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "SA-0066": {
+   "summary": "Cited the Auditor-General as the source for a $28.4 million Rural Industry Adjustment and Development Fund, which the member said has sat idle for about a decade while grapegrowers weigh diversifying.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0067": {
+   "summary": "Cited the Auditor-General for the figure of about $28.4 million remaining in the Rural Industry Adjustment and Development Fund, while arguing primary industries, particularly wine, face significant structural pressures.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0068": {
+   "summary": "Noted the Auditor-General's office as the only agency that kept to its operating budget, while arguing other departments overspent, including education by $61 million last year and the Premier's department by $135 million.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0069": {
+   "summary": "Said money spent annually on each grant program by each entity is reported in annual statutory financial statements audited by the Auditor-General.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0070": {
+   "summary": "Auditor-General's Report 6 of 2026, Status of performance audit recommendations, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0071": {
+   "summary": "Auditor-General's Report 6 of 2026, Status of Performance Audit Recommendations, tabled in the House of Assembly and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0072": {
+   "summary": "Claimed the Auditor-General concluded that the $9.9 billion allocated by the former government could not have delivered the T2D project, nor could $10 to $13 billion, only about $14 billion.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0073": {
+   "summary": "Argued major projects are not escaping scrutiny, listing the Auditor-General's substantial powers to examine expenditure, governance and project delivery alongside estimates hearings and Infrastructure SA gate reviews.",
+   "kind": "Office, powers or funding",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0074": {
+   "summary": "Auditor-General's Report 5 of 2026, T2D project risk and issue management, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0075": {
+   "summary": "Auditor-General's Report 5 of 2026, T2D project risk and issue management, tabled in the House of Assembly and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0076": {
+   "summary": "Auditor-General's Report 4 of 2026, Agency Audit Outcomes, tabled and ordered to be published, in a list that also included the Independent Commission Against Corruption's June 2026 whistleblower protection review.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0077": {
+   "summary": "Auditor-General's Report 4 of 2026, Agency audit outcomes, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0078": {
+   "summary": "Answered a 'trust us' challenge by saying the assurance rests on the Auditor-General, ISA, Infrastructure Australia and the Australian government, all of which required extensive due diligence on the project.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0079": {
+   "summary": "Said the government took a position of 90 per cent South Australian labour hours and minimum local procurement, reports on it agency by agency, and noted the Auditor-General has also reported on it through metrics.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0080": {
+   "summary": "Argued that the Audit Office of South Australia was the only agency to meet its 2025-26 budget, so the Auditor-General can continue important work with clean hands, while all others exceeded budgets by more than $1.2 billion combined.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0081": {
+   "summary": "Noted the Auditor-General's office as the only one of 28 listed government departments that did not overspend its budget, while arguing overspends have cost South Australians more than $6 billion in the last term.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0082": {
+   "summary": "Auditor-General's Report 3 of 2026, Review of Legacy ICT Systems, tabled in the House of Assembly.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0083": {
+   "summary": "Auditor-General's Report 3 of 2026, Review of legacy ICT systems, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0084": {
+   "summary": "Noted the Auditor-General's agency was the only one of 28 within budget in 2025-26, while arguing the government overspent by $1.2 billion with 27 agencies over budget.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0085": {
+   "summary": "Cited the Auditor-General's finding of low compliance on protective equipment for cleaning personnel, potentially increasing staff and volunteer exposure to carcinogens, while saying more must be done to protect first responders.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0086": {
+   "summary": "Cited the 2025 Auditor-General's Report as stating that rising debt and interest costs may limit the state's fiscal capacity to respond to economic challenges and to deliver the same level of services in future.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0087": {
+   "summary": "Cited the Auditor-General's 2024-25 Report stating that the Rural Industry Adjustment and Development Fund, established under the 1985 Act, holds net assets of about $28.4 million.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0088": {
+   "summary": "Mentioned in passing, in a condolence speech, that the late Dr Eastick had questioned the accuracy of Auditor-General reporting on public sector finances, alongside other positions on petrol tax and unionism.",
+   "kind": "Passing reference",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0089": {
+   "summary": "Cited a newspaper report of the Auditor-General's complaint that the Joint Parliamentary Service refused access to its catering accounts, noting earlier auditors-general criticised the same issue, and asked the Deputy Premier whether the refusal is supported and costs will be released.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0090": {
+   "summary": "Auditor-General's Report 2 of 2026, Managing food safety in council areas, tabled in the House of Assembly.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0091": {
+   "summary": "Auditor-General's Report 2 of 2026, Managing food safety in council areas, with Part A on the Department of Health and Wellbeing and Part B on local government, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "SA-0092": {
+   "summary": "Cited the Auditor-General's warning in the annual review last November that state debt could reach $50 billion, which could force cuts to government spending and services, while noting forecast interest of almost $6.7 million a day by mid-2029.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0093": {
+   "summary": "Auditor-General's Report 1 of 2026, Update to the Annual Report for the year ended 30 June 2025, tabled in the House of Assembly and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0094": {
+   "summary": "Auditor-General's Report 1 of 2026, Update to the annual report for the year ended 30 June 2025, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0095": {
+   "summary": "Determination No. 2 of 2026 and Report No. 2 of 2026, on the 2025 review of remuneration of the Auditor-General, Electoral Commissioner, Deputy Electoral Commissioner and Health and Community Services Complaints Commissioner, tabled in the Legislative Council.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0096": {
+   "summary": "Determination No. 2 of 2026, on the remuneration of the Auditor-General, Electoral Commissioner, Deputy Electoral Commissioner and Health and Community Services Complaints Commissioner, tabled in the House of Assembly.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0097": {
+   "summary": "Auditor-General's Department Annual Report 2024-25 tabled by the Premier in the House of Assembly, alongside the Cross Border Commissioner's annual report.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "SA-0098": {
+   "summary": "Said the Victims of Crime Fund issue was raised during the Auditor-General's Report questioning and, while sympathetic to the motion, said the government wants to ensure the fund has sufficient money when the National Redress Scheme closes in mid-2027.",
+   "kind": "Passing reference",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "SA-0099": {
+   "summary": "Auditor-General's Report 10 of 2025, Update to the annual report for the year ended 30 June 2025, on the Department for Environment and Water, tabled in the Legislative Council.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "SA-0100": {
+   "summary": "Auditor-General's Report 10 of 2025, Update to the Annual Report for the year ended 30 June 2025, tabled in the House of Assembly and listed with the House of Assembly annual report 2023-24.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0101": {
+   "summary": "Noted that the Victims of Crime Fund balance was raised in the recent Auditor-General's Report questioning, and said the fund is not intended as a compensation mechanism of first resort but as a fund of last resort.",
+   "kind": "Passing reference",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "SA-0102": {
+   "summary": "Said the opposition criticises impairments raised by the Auditor-General without accounting for the sale of the turbines, confirmed they were purchased, and said the project's money was redirected to Whyalla to save jobs.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "SA-0103": {
+   "summary": "Cited the Auditor-General's report that state debt will reach nearly $50 billion over four years, risking service cuts, and that South Australia's interest expenses as a share of gross state product will be higher than almost all other states.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0104": {
+   "summary": "Cited the Auditor-General as showing the Hydrogen Jobs Plan spent $285 million, wrote off $85 million, spent $60 million on wages and administration and left $87 million of idle infrastructure, while claiming Labor broke its promise to cut electricity prices.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "SA-0105": {
+   "summary": "Cited the Auditor-General's Report as revealing that $85.7 million was written off and more than $60 million was spent on wages and general expenses for the hydrogen project, which the member said never delivered power.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "SA-0106": {
+   "summary": "Asked whether the minister has sought an update on the new Women's and Children's Hospital's cost and completion date following Auditor-General's Report No. 9, quoting its note that construction labour shortages are lengthening project timeframes and raising some costs.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0107": {
+   "summary": "Explained that the bill requires incorporated health services to keep proper accounts and financial statements, and provides that the Auditor-General may at any time, and must each financial year, audit those accounts and statements.",
+   "kind": "Office, powers or funding",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "SA-0108": {
+   "summary": "Said Auditor-General's Report No. 9 of 2025, State Finances: Insights on the 2025-26 Budget, tabled the day before, is full of content South Australians would rightly be concerned about.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0109": {
+   "summary": "Cited Auditor-General's Report No. 9 of 2025 that net debt is forecast to reach $48.5 billion, or 26 per cent of gross state product, by 2029, and argued South Australia's debt trajectory is higher than the stable or falling ratio considered sustainable.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0110": {
+   "summary": "Said the $1.6 billion overexpenditure the Auditor-General mentions reflects activity above budget as people seek treatment, and challenged the opposition on whether it would turn patients away or cut services.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0111": {
+   "summary": "Quoted Auditor-General's Report 9 of 2025 that rising debt and interest costs from the capital program may limit fiscal capacity and services, and asked the minister whether concerned, what measures manage debt, and whether the Auditor-General's concerns are being dismissed.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0112": {
+   "summary": "Said the Auditor-General's Report highlights issues with contracts inherited from the previous government, and that it offers very little criticism of the T2D project, which was seen as very well managed given its size.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0113": {
+   "summary": "Cited page 4 of Auditor-General's Report 9 of 2025: even small overruns on the large capital program could significantly affect state finances, with high risk of cost overruns and delays given T2D tunnelling, labour shortages and budget allowances that may not cover costs.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0114": {
+   "summary": "Claimed the Auditor-General's Report's concerns stem from projects and contracts the previous government put in place, citing the sealed road maintenance backlog growing from $723 million to $1.9 billion between 2017 and 2022.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "SA-0115": {
+   "summary": "Argued, using Auditor-General figures, that adding 25 per cent to every Victims of Crime Fund claim would cost no more than about $12 million to $13 million a year, a cost the member said is not significant.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "SA-0116": {
+   "summary": "Argued, based on Auditor-General reports, that adding 25 per cent to every Victims of Crime Fund claim would cost at most about $12 million a year, while acknowledging concern about redress payments drawing on the fund.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "SA-0117": {
+   "summary": "Mentioned in passing, while outlining the sitting schedule for retiring members' valedictory speeches, that Auditor-General's Report questioning would run until 5.30pm.",
+   "kind": "Passing reference",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0118": {
+   "summary": "Questioned ministers on the Auditor-General's Report, citing a CAA access and payroll database issue, the AGFMA not operating as intended four years into a $2.4 billion contract, and the Victims of Crime Fund's value and holding location.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0119": {
+   "summary": "Said the AGFMA contract with Ventia was inherited and is not fit for purpose, pointing to the Auditor-General's page 234 account of what the contractor has not achieved and DIT's efforts, and said breach notices are now being issued.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "SA-0120": {
+   "summary": "Cited the Auditor-General's note at page 273 that PIRSA manages loan schemes under the Rural Industry Adjustment and Development Act 1985 yet no new concessional loan products have been activated, in a question on drought funding.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0121": {
+   "summary": "Offered to take on notice matters within the scope of the Auditor-General's Report, said the report identified no concerns about temporary staff or contractors, and limited answers on standpipe funding to the 2024-25 year it covers.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0122": {
+   "summary": "Concluded the Legislative Council committee examination of the Auditor-General's Report, after a minister said an insurance payment for the Struan Research Centre has been received but not fully paid out.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0123": {
+   "summary": "Moved to refer the Auditor-General's 2024-25 report to a Committee of the Whole for one hour of questions, then said the Victims of Crime Fund held $195 million at 31 October 2025, with significant National Redress Scheme calls on it.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "SA-0124": {
+   "summary": "Opened the committee examination of the 2024-25 Auditor-General's Report with housing and urban development, where Mr Telfer cited pages 328-329 on the SA Housing Trust maintenance backlog; the Chair later declared the examination of ministers complete.",
+   "kind": "Report tabled or noted",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "SA-0125": {
+   "summary": "Cited pages 328-329 of the Auditor-General's Report on the SA Housing Trust maintenance backlog, asking for its quantified value and how many tenants await priority repairs; the minister said there is no dollar figure, only a count of maintenance orders.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "SA-0126": {
+   "summary": "Responded to the Auditor-General's page 320 findings on IT control weaknesses affecting the Connect system by saying such findings are not unusual and the Trust constantly reviews access; Mr Telfer then asked how value for money is measured in community housing redevelopments.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "SA-0127": {
+   "summary": "Said, citing the Auditor-General's report, that child protection reforms including Finding Families, the Additionally Approved Carer Program and family group conferencing are slowing growth in children entering care, and that a deed with incorrect payments has been corrected.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "SA-0128": {
+   "summary": "Pressed for a line-by-line breakdown of the $175 million expense variance to budget, citing the Auditor-General's statement that most of it is $163.9 million of extra child protection spending funded by additional appropriation.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "SA-0129": {
+   "summary": "Cited the Auditor-General's findings that CFS PPC cleaning rates were low in 2023 and 2024, potentially exposing staff and volunteers to carcinogens, and that key contract clauses could not be evidenced, asking what has been done and whether contract requirements are met.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "SA-0130": {
+   "summary": "Auditor-General's Report 9 of 2025, State finances: Insights on the 2025-26 Budget, tabled in the House of Assembly, listed with the Guardian for Children and Young People's Adelaide Youth Training Centre inspection report.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "SA-0131": {
+   "summary": "Auditor-General's Report 9 of 2025, State finances: insights on the 2025-26 Budget, tabled in the Legislative Council, listed with a joint inspection report on the Adelaide Youth Training Centre.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  }
+ }
+}

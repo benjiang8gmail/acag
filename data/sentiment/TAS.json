@@ -1,0 +1,880 @@
+{
+ "jur": "TAS",
+ "items": {
+  "TAS-0001": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on whether board raised Homes Tasmania financial concerns before Auditor-General's report"
+  },
+  "TAS-0002": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Premier almost sent Homes Tasmania and Metro broke, per Auditor-General"
+  },
+  "TAS-0003": {
+   "s": "attack",
+   "who": "government",
+   "what": "No Homes Tasmania corporate plan approved since 2023 despite legal requirement, per Auditor-General"
+  },
+  "TAS-0004": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0005": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0006": {
+   "s": "attack",
+   "who": "government",
+   "what": "Homes Tasmania going concern warning, $142 million in losses; minister pressed on when told"
+  },
+  "TAS-0007": {
+   "s": "attack",
+   "who": "government",
+   "what": "Report scathing on government's operation of government businesses; three entities may not be going concerns"
+  },
+  "TAS-0008": {
+   "s": "attack",
+   "who": "auditor-general",
+   "what": "Treasurer disputes Auditor-General's TT-Line insolvency claim; calls the observations on TT-Line unhelpful"
+  },
+  "TAS-0009": {
+   "s": "attack",
+   "who": "government",
+   "what": "Seismic Auditor-General report on three organisations under a cloud being shrugged off by government"
+  },
+  "TAS-0010": {
+   "s": "attack",
+   "who": "government",
+   "what": "Governance failure; Auditor-General warns compliance and transparency concerns erode trust in government"
+  },
+  "TAS-0011": {
+   "s": "attack",
+   "who": "government",
+   "what": "Only half of business performance targets achieved and not reported transparently, per Auditor-General"
+  },
+  "TAS-0012": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0013": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member calls Homes Tasmania a folly now being wound up, citing Auditor-General's report"
+  },
+  "TAS-0014": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Acknowledges Auditor-General's work as impeccable, frank and fearless, not pulling its punches"
+  },
+  "TAS-0015": {
+   "s": "attack",
+   "who": "government",
+   "what": "No integrity in government's governance oversight, with Auditor-General's report outlining the specifics"
+  },
+  "TAS-0016": {
+   "s": "attack",
+   "who": "government",
+   "what": "Metro and Homes Tasmania may not be going concerns; ministers cannot do the very basics"
+  },
+  "TAS-0017": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government businesses 'on track' claim a stretch, per Auditor-General; member lacks trust in Premier's word"
+  },
+  "TAS-0018": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0019": {
+   "s": "attack",
+   "who": "government",
+   "what": "Gaping question mark on TT-Line solvency, per Auditor-General; more than $580 million bailed out or committed"
+  },
+  "TAS-0020": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0021": {
+   "s": "praise",
+   "who": "other",
+   "what": "Chair credited as instrumental in bringing ACAG and PASAI together, more than an administrative achievement"
+  },
+  "TAS-0022": {
+   "s": "attack",
+   "who": "government",
+   "what": "Botched ferry project leaves TT-Line with debt; ASIC seeking Auditor-General update; fare guarantee demanded"
+  },
+  "TAS-0023": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0024": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0025": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0026": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0027": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General referred TT-Line to ASIC as likely insolvent; member calls it waste"
+  },
+  "TAS-0028": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0029": {
+   "s": "attack",
+   "who": "government",
+   "what": "HRIS project underfunded, a $40 to $50 million gap; renaming doesn't make it go away"
+  },
+  "TAS-0030": {
+   "s": "attack",
+   "who": "other",
+   "what": "Member says Victorian opposition going at the Auditor-General is not how to behave"
+  },
+  "TAS-0031": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0032": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government says substantial ICT progress since Auditor-General's report, supports all four recommendations"
+  },
+  "TAS-0033": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks Auditor-General and office; says performance auditing is critically important work"
+  },
+  "TAS-0034": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses government for assurance of greater transparency and market testing, given Auditor-General's Wilkinsons Point findings"
+  },
+  "TAS-0035": {
+   "s": "attack",
+   "who": "government",
+   "what": "Ministerial departures from merit lead to corruption; Auditor-General among bodies investigating pork-barrelling concerns"
+  },
+  "TAS-0036": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member says 2011 report concerned another government's overspent grants, accessible to only one party"
+  },
+  "TAS-0037": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier's fund guidelines 'inadequate and poorly promulgated'; modest 2011 recommendations a call for basic administrative discipline"
+  },
+  "TAS-0038": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0039": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0040": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General identifies series of governance failures; member asks what government has learned from HRIS"
+  },
+  "TAS-0041": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks Audit Tasmania team and Auditor-General, who reports the evidence without fear or favour"
+  },
+  "TAS-0042": {
+   "s": "attack",
+   "who": "government",
+   "what": "Challenges Leader's claim that multiple assignments resolved; using Auditor-General's term, maybe not resolved at all"
+  },
+  "TAS-0043": {
+   "s": "praise",
+   "who": "government",
+   "what": "Recommendations accepted and actioned; several critical decisions solved since audit report was tabled"
+  },
+  "TAS-0044": {
+   "s": "praise",
+   "who": "government",
+   "what": "Commends board for actioning recommendations; bill shows government acted on Auditor-General's recommendations"
+  },
+  "TAS-0045": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government committed to reform; bill delivers governance reforms sought after Auditor-General's findings"
+  },
+  "TAS-0046": {
+   "s": "praise",
+   "who": "government",
+   "what": "Thanks board's commitment to implementing Auditor-General's recommendations; strong commitment to responding constructively to findings"
+  },
+  "TAS-0047": {
+   "s": "attack",
+   "who": "other",
+   "what": "Member says Senator Duniam's referral to Auditor-General a highly political move to exact revenge"
+  },
+  "TAS-0048": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government only interested in fund's governance once it did something government disliked, member says"
+  },
+  "TAS-0049": {
+   "s": "praise",
+   "who": "government",
+   "what": "Department supported all five recommendations in full; government continues improvements at Ashley Youth Detention Centre"
+  },
+  "TAS-0051": {
+   "s": "attack",
+   "who": "government",
+   "what": "Health awarded 508 contracts worth over $40 million just under threshold; member alleges dodging requirements"
+  },
+  "TAS-0052": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on two of five Ashley recommendations outstanding or ongoing, almost two years on"
+  },
+  "TAS-0054": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0055": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0056": {
+   "s": "praise",
+   "who": "government",
+   "what": "Defends funding: full-time equivalent jobs in Auditor-General's office up 30 per cent over past year"
+  },
+  "TAS-0057": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer cut Auditor-General's funding by $300,000 despite promise; office must cut back its work"
+  },
+  "TAS-0058": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0059": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government still negotiating land sale to billionaire despite Auditor-General finding serious failures with process"
+  },
+  "TAS-0060": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government promised funding for six performance audits a year; Auditor-General says funding only enough for three"
+  },
+  "TAS-0061": {
+   "s": "attack",
+   "who": "government",
+   "what": "HRIS a failure, $47 million without delivering any modules; boring stuff government has to get right"
+  },
+  "TAS-0062": {
+   "s": "attack",
+   "who": "government",
+   "what": "Six audits committed but Auditor-General funded for three, alarming given such good work"
+  },
+  "TAS-0063": {
+   "s": "attack",
+   "who": "government",
+   "what": "Commitments to Mr Harriss included six audits; Auditor-General lacks money even for three"
+  },
+  "TAS-0064": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0065": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Auditor-General very direct and clear on governance and public funds; very precise, lays out facts"
+  },
+  "TAS-0066": {
+   "s": "attack",
+   "who": "government",
+   "what": "Half a billion-dollar bailout proof Auditor-General was right on TT-Line, member says"
+  },
+  "TAS-0067": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0068": {
+   "s": "attack",
+   "who": "government",
+   "what": "Half-a-billion-dollar bailout effectively vindicates Auditor-General; TT-Line could not have continued trading without it"
+  },
+  "TAS-0069": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier and Treasurer dismissed Auditor-General's opinion without giving satisfactory explanations"
+  },
+  "TAS-0070": {
+   "s": "attack",
+   "who": "auditor-general",
+   "what": "Disagrees with Auditor-General's TT-Line solvency pronouncement; says directors, not Auditor-General, make those assessments"
+  },
+  "TAS-0071": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General deserves apology from government; bailout proves TT-Line insolvent, member says"
+  },
+  "TAS-0072": {
+   "s": "attack",
+   "who": "auditor-general",
+   "what": "Treasurer says not for Auditor-General to determine solvency; ASIC not taking the commentary too seriously"
+  },
+  "TAS-0073": {
+   "s": "attack",
+   "who": "government",
+   "what": "Spirits waste sent company broke; government disagrees with Auditor-General's expert opinion on insolvency"
+  },
+  "TAS-0074": {
+   "s": "attack",
+   "who": "other",
+   "what": "Critique of IER methodology well founded; Victorian Auditor-General among sources on overstated multipliers"
+  },
+  "TAS-0075": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0076": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0077": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0078": {
+   "s": "attack",
+   "who": "government",
+   "what": "TT-Line finances perilous after ferry fiasco, Auditor-General says insolvent; minister pressed on fuel modelling"
+  },
+  "TAS-0079": {
+   "s": "attack",
+   "who": "government",
+   "what": "GBE sector needs root-and-branch reform; Auditor-General's findings show problems are systemic, not isolated"
+  },
+  "TAS-0080": {
+   "s": "attack",
+   "who": "government",
+   "what": "Even Auditor-General's scrutiny limited because Cabinet documents withheld under public interest immunity claims"
+  },
+  "TAS-0081": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0082": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's insolvency finding a shameful outcome for state-owned TT-Line; government risking financial viability"
+  },
+  "TAS-0083": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Leader of the Opposition's stacked committee a kangaroo court; matter already referred to Auditor-General"
+  },
+  "TAS-0084": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General called out government on TT-Line insolvency; government does not want scrutiny, member says"
+  },
+  "TAS-0085": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Wilkinsons Point matters clearly covered in secrecy, reflecting on Auditor-General's report"
+  },
+  "TAS-0086": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0087": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier dismissed Auditor-General's TT-Line concerns as another man's opinion; documents not provided"
+  },
+  "TAS-0088": {
+   "s": "attack",
+   "who": "government",
+   "what": "Budget driven by absolute waste; TT-Line probably insolvent per Auditor-General, bailout in hundreds of millions"
+  },
+  "TAS-0089": {
+   "s": "attack",
+   "who": "government",
+   "what": "Lease deed not up to date despite updates on Auditor-General's EOI report; lack of transparency"
+  },
+  "TAS-0090": {
+   "s": "attack",
+   "who": "government",
+   "what": "TT-Line referred to ASIC over potential insolvency; Auditor-General among statutory bodies underfunded, member says"
+  },
+  "TAS-0091": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government, in particular the Premier, dismissed Auditor-General's TT-Line findings; minister unprepared, transparency concern"
+  },
+  "TAS-0092": {
+   "s": "attack",
+   "who": "government",
+   "what": "Performance audit resourcing lowest in Australasia; member asks if Treasurer avoids independent Auditor-General's inconvenient truth"
+  },
+  "TAS-0093": {
+   "s": "attack",
+   "who": "government",
+   "what": "Election commitments ad hoc, per Auditor-General; JCP Youth shows inability to manage limited financial resources"
+  },
+  "TAS-0094": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier disrespectful to Auditor-General; government's inability to build a berth made TT-Line insolvent"
+  },
+  "TAS-0095": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's report shows Premier's office gave valuation to proponent; member alleges lack of honesty"
+  },
+  "TAS-0096": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier dismissed Auditor-General's finding as one man's opinion, an insulting and Trumpian response"
+  },
+  "TAS-0097": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier calling Auditor-General's opinion just one man's opinion fundamentally disrespectful and absolutely wrong"
+  },
+  "TAS-0098": {
+   "s": "attack",
+   "who": "government",
+   "what": "Wilkinsons Point valuation shared at direction of minister's office, per Auditor-General; personal instruction questioned"
+  },
+  "TAS-0099": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General lacks resources for needed audits; cabinet access barriers; investing protects against government failures"
+  },
+  "TAS-0100": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's funding lowest in Australia limits savings; ministers' lack of insight called unbelievable"
+  },
+  "TAS-0101": {
+   "s": "praise",
+   "who": "government",
+   "what": "Credits Treasurer for stepping back and letting Audit Office answer questions directly"
+  },
+  "TAS-0102": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0103": {
+   "s": "attack",
+   "who": "government",
+   "what": "Secretary told member process followed; Auditor-General's report showed that totally, completely untrue"
+  },
+  "TAS-0104": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government welcomes scrutiny; report finds no evidence of improper purpose, misconduct or personal benefit"
+  },
+  "TAS-0105": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks Auditor-General for a power of work shining a light on failures of governance"
+  },
+  "TAS-0106": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0107": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0108": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General sounding alarm on GBEs; member suggests mismanagement and 11 years of running them down"
+  },
+  "TAS-0109": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0110": {
+   "s": "attack",
+   "who": "auditor-general",
+   "what": "Treasurer says TT-Line able to pay debts as due; likens Auditor-General to overturnable Chief Justice"
+  },
+  "TAS-0111": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Treasurer on what basis TT-Line solvent when Auditor-General says otherwise"
+  },
+  "TAS-0112": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0113": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Premier on when Auditor-General referred TT-Line to ASIC over insolvency"
+  },
+  "TAS-0114": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0115": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0116": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0117": {
+   "s": "attack",
+   "who": "government",
+   "what": "Ignoring Auditor-General's MAIB warning and establishing TasInsure reckless and completely irresponsible, member says"
+  },
+  "TAS-0118": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier's 'temporary extension' of $400 million borrowings challenged; Auditor-General determined TT-Line insolvent"
+  },
+  "TAS-0119": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0120": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member asks if government covered up Auditor-General's TT-Line determination to secure a deal"
+  },
+  "TAS-0121": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government covering up TT-Line; Premier's slip-up revealed Auditor-General referral to ASIC, member says"
+  },
+  "TAS-0122": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0123": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier's dismissal of Auditor-General's TT-Line insolvency finding alarming; should table any contrary advice"
+  },
+  "TAS-0124": {
+   "s": "attack",
+   "who": "government",
+   "what": "TT-Line broke per Auditor-General; member mocks dismissal of that opinion as bizarre"
+  },
+  "TAS-0125": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier's cavalier dismissal of Auditor-General's TT-Line finding; if Auditor-General is wrong, prove it"
+  },
+  "TAS-0126": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Leader of the Opposition asks about Auditor-General's advice; member says listen to Planning Commission too"
+  },
+  "TAS-0127": {
+   "s": "attack",
+   "who": "government",
+   "what": "Health's funding management fundamentally flawed per Auditor-General; issues not fixed; member challenges claimed savings measures"
+  },
+  "TAS-0128": {
+   "s": "attack",
+   "who": "auditor-general",
+   "what": "Says Auditor-General entitled to that opinion, but TT-Line's own advice disagreed; confident in leadership"
+  },
+  "TAS-0129": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government trusting TT-Line over Auditor-General's expert opinion; pressed on personal responsibility if law broken"
+  },
+  "TAS-0130": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Premier on dismissing Auditor-General's determination and accepting advice of company that caused the mess"
+  },
+  "TAS-0131": {
+   "s": "attack",
+   "who": "government",
+   "what": "Absurd that Premier challenges integrity of credible and professional Auditor-General over TT-Line solvency"
+  },
+  "TAS-0132": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government overseeing costly businesses; TT-Line insolvent per Auditor-General, debt-to-equity not sustainable"
+  },
+  "TAS-0133": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier's 'entitled to opinion' dismissal wrong; Auditor-General's opinion legally required and informed by decades' experience"
+  },
+  "TAS-0134": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier in denial over Auditor-General's report on TT-Line's likely insolvency; 209 per cent debt-to-equity"
+  },
+  "TAS-0135": {
+   "s": "attack",
+   "who": "government",
+   "what": "Premier just accepts TT-Line's advice despite Auditor-General saying insolvent on 19 August; member demands honesty"
+  },
+  "TAS-0136": {
+   "s": "attack",
+   "who": "auditor-general",
+   "what": "Disputes Auditor-General's insolvency determination; independent advice says not insolvent, company would not be allowed to fail"
+  },
+  "TAS-0137": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government gets no benefit of doubt questioning Auditor-General's TT-Line determination; member trusts independent oversight"
+  },
+  "TAS-0138": {
+   "s": "attack",
+   "who": "government",
+   "what": "Terminal blown out to a staggering $493 million, fender misstep, and Auditor-General's comments on insolvency"
+  },
+  "TAS-0139": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says government must commit to budget reform; dividends from government businesses on a downward trend"
+  },
+  "TAS-0140": {
+   "s": "attack",
+   "who": "government",
+   "what": "Disaster to catastrophe on Premier's watch; pressed on when first aware of Auditor-General's insolvency determination"
+  },
+  "TAS-0141": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses on how TT-Line can trade solvently and whether Auditor-General is wrong"
+  },
+  "TAS-0142": {
+   "s": "attack",
+   "who": "government",
+   "what": "Forgot to build a wharf, built ships wrong, sent company broke; asked why solvent now"
+  },
+  "TAS-0143": {
+   "s": "praise",
+   "who": "government",
+   "what": "Treasury has met Auditor-General; government will not let TT-Line fall, supports TT-Line and board"
+  },
+  "TAS-0147": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0148": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member for Murchison's committee would duplicate Auditor-General's work; bill adds complexity, not accountability"
+  },
+  "TAS-0149": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0150": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0151": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "TAS-0152": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "Failing government businesses: TT-Line, Homes Tasmania, Metro",
+    "note": "Government attacked over insolvency and going concern findings, bailouts, missed targets and weak oversight of its businesses.",
+    "ids": [
+     "TAS-0001",
+     "TAS-0002",
+     "TAS-0003",
+     "TAS-0006",
+     "TAS-0007",
+     "TAS-0009",
+     "TAS-0010",
+     "TAS-0011",
+     "TAS-0013",
+     "TAS-0015",
+     "TAS-0016",
+     "TAS-0017",
+     "TAS-0019",
+     "TAS-0022",
+     "TAS-0027",
+     "TAS-0078",
+     "TAS-0079",
+     "TAS-0082",
+     "TAS-0084",
+     "TAS-0088",
+     "TAS-0108",
+     "TAS-0113",
+     "TAS-0117",
+     "TAS-0118",
+     "TAS-0120",
+     "TAS-0121",
+     "TAS-0132",
+     "TAS-0138",
+     "TAS-0140",
+     "TAS-0142"
+    ]
+   },
+   {
+    "label": "Dismissing the Auditor-General's TT-Line insolvency finding",
+    "note": "Premier and Treasurer attacked for waving away the finding as mere opinion and accepting TT-Line's own advice.",
+    "ids": [
+     "TAS-0066",
+     "TAS-0068",
+     "TAS-0069",
+     "TAS-0071",
+     "TAS-0073",
+     "TAS-0087",
+     "TAS-0091",
+     "TAS-0094",
+     "TAS-0096",
+     "TAS-0097",
+     "TAS-0111",
+     "TAS-0123",
+     "TAS-0124",
+     "TAS-0125",
+     "TAS-0129",
+     "TAS-0130",
+     "TAS-0131",
+     "TAS-0133",
+     "TAS-0134",
+     "TAS-0135",
+     "TAS-0137",
+     "TAS-0141"
+    ]
+   },
+   {
+    "label": "Underfunding the Auditor-General and the six-audit promise",
+    "note": "Government and Treasurer attacked for funding three performance audits after promising six, leaving the office under-resourced.",
+    "ids": [
+     "TAS-0057",
+     "TAS-0060",
+     "TAS-0062",
+     "TAS-0063",
+     "TAS-0090",
+     "TAS-0092",
+     "TAS-0099",
+     "TAS-0100"
+    ]
+   },
+   {
+    "label": "Wilkinsons Point land sale process and secrecy",
+    "note": "Government attacked over the proposed sale to a billionaire, the shared valuation, and assurances one member says proved untrue.",
+    "ids": [
+     "TAS-0034",
+     "TAS-0059",
+     "TAS-0085",
+     "TAS-0095",
+     "TAS-0098",
+     "TAS-0103"
+    ]
+   },
+   {
+    "label": "Ministers disputing the Auditor-General on TT-Line solvency",
+    "note": "Premier and Treasurer attack the Auditor-General's insolvency finding, saying solvency is for directors and TT-Line's advice disagrees.",
+    "ids": [
+     "TAS-0008",
+     "TAS-0070",
+     "TAS-0072",
+     "TAS-0110",
+     "TAS-0128",
+     "TAS-0136"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Acting on Auditor-General recommendations",
+    "note": "Government members credit government, departments and the Tasmanian Community Fund board for actioning recommendations on ICT, HRIS and Ashley.",
+    "ids": [
+     "TAS-0032",
+     "TAS-0043",
+     "TAS-0044",
+     "TAS-0045",
+     "TAS-0046",
+     "TAS-0049"
+    ]
+   },
+   {
+    "label": "The Auditor-General's frank, independent work",
+    "note": "Members thank the Auditor-General and office for impeccable, fearless, precise reporting and critically important performance audits.",
+    "ids": [
+     "TAS-0014",
+     "TAS-0033",
+     "TAS-0041",
+     "TAS-0065",
+     "TAS-0105"
+    ]
+   },
+   {
+    "label": "Government defending its record against criticism",
+    "note": "Government speakers defend it: no misconduct finding at Wilkinsons Point, more staff for the audit office, and backing for TT-Line.",
+    "ids": [
+     "TAS-0056",
+     "TAS-0104",
+     "TAS-0143"
+    ]
+   }
+  ]
+ }
+}

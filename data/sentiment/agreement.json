@@ -1,0 +1,24 @@
+{
+ "n": 155,
+ "agree": 91.6,
+ "kappa": 0.86,
+ "first": {
+  "attack": 71,
+  "neutral": 68,
+  "praise": 16
+ },
+ "second": {
+  "attack": 67,
+  "neutral": 73,
+  "praise": 15
+ },
+ "confusion": {
+  "attack > neutral": 7,
+  "praise > neutral": 2,
+  "neutral > attack": 3,
+  "neutral > praise": 1
+ },
+ "opposite": [],
+ "whoAgree": 100,
+ "note": "A second, independent AI read of 155 randomly chosen contributions, without seeing the first labels, gave the same colour 92% of the time. It called none of them the opposite way (red against blue), and where both gave the same colour it named the same target 100% of the time. All the differences were red or blue against grey."
+}

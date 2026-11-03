@@ -1,0 +1,559 @@
+{
+ "jur": "ACT",
+ "overview": "Mentions centred on public housing, referrals to the Auditor-General, procurement conduct and the Auditor-General's own office. Members cited the Growing and Renewing Public Housing Program audits in the June censure debate, and discussed the specialist disability accommodation referral, which the Auditor-General declined for now. Procurement answers referred to Operation Kingfisher and earlier audit work. Other mentions covered the 2024-25 financial audit, tributes to Michael Harris and welcome for Ajay Sharma, and reports on Corrective Services rostering, Road Maintenance and community facilities.",
+ "issues": [
+  {
+   "label": "Public housing audit findings and the censure motion",
+   "note": "Members cited the Auditor-General's 2024 and 2025 Growing and Renewing audits, plus school concerns, in the June censure debate; government said findings were accepted.",
+   "ids": [
+    "ACT-0021",
+    "ACT-0022",
+    "ACT-0023",
+    "ACT-0024",
+    "ACT-0025",
+    "ACT-0026",
+    "ACT-0027",
+    "ACT-0028",
+    "ACT-0029",
+    "ACT-0030",
+    "ACT-0040",
+    "ACT-0041",
+    "ACT-0042",
+    "ACT-0043",
+    "ACT-0044"
+   ]
+  },
+  {
+   "label": "Referrals and requests for Auditor-General audits",
+   "note": "Covered the specialist disability accommodation referral (audit declined for now), light rail and walk-in centre audit proposals, and a member's letter suggesting a topic.",
+   "ids": [
+    "ACT-0004",
+    "ACT-0015",
+    "ACT-0018",
+    "ACT-0027",
+    "ACT-0028",
+    "ACT-0047",
+    "ACT-0050",
+    "ACT-0064",
+    "ACT-0065",
+    "ACT-0066",
+    "ACT-0067"
+   ]
+  },
+  {
+   "label": "Auditor-General's office: transition, independence and funding",
+   "note": "Members paid tribute to outgoing Auditor-General Michael Harris and welcomed Ajay Sharma in February; the 2026-27 bill provides $4.627 million for the office.",
+   "ids": [
+    "ACT-0006",
+    "ACT-0009",
+    "ACT-0010",
+    "ACT-0031",
+    "ACT-0032",
+    "ACT-0034",
+    "ACT-0037",
+    "ACT-0052",
+    "ACT-0053",
+    "ACT-0054",
+    "ACT-0055",
+    "ACT-0056",
+    "ACT-0062"
+   ]
+  },
+  {
+   "label": "Procurement conduct and oversight",
+   "note": "Government said issues the Auditor-General identified were addressed and past concerns can be referred to integrity bodies; Mr Cocks argued a procurement bill reduces oversight.",
+   "ids": [
+    "ACT-0002",
+    "ACT-0003",
+    "ACT-0004",
+    "ACT-0016",
+    "ACT-0017",
+    "ACT-0033",
+    "ACT-0061"
+   ]
+  },
+  {
+   "label": "Territory finances, debt and budget oversight",
+   "note": "Members cited the Auditor-General on liabilities, debt, forward estimates and workforce growth, and raised rollover concerns with the office; financial audit papers were tabled.",
+   "ids": [
+    "ACT-0020",
+    "ACT-0035",
+    "ACT-0039",
+    "ACT-0047",
+    "ACT-0048",
+    "ACT-0062",
+    "ACT-0063"
+   ]
+  },
+  {
+   "label": "Auditor-General reports tabled and government responses",
+   "note": "Tabled reports included Nos 1, 2, 3, 6, 9 and 10 of 2026 and the 2024-25 financial audit results, plus several government responses.",
+   "ids": [
+    "ACT-0005",
+    "ACT-0007",
+    "ACT-0008",
+    "ACT-0011",
+    "ACT-0019",
+    "ACT-0037",
+    "ACT-0038",
+    "ACT-0039",
+    "ACT-0046",
+    "ACT-0062"
+   ]
+  }
+ ],
+ "debates": [
+  {
+   "ids": [
+    "ACT-0021",
+    "ACT-0022",
+    "ACT-0023",
+    "ACT-0024",
+    "ACT-0025",
+    "ACT-0026",
+    "ACT-0027",
+    "ACT-0028",
+    "ACT-0029",
+    "ACT-0030"
+   ],
+   "gist": "Censure motion against the Deputy Chief Minister over public housing and school resourcing. Members cited Auditor-General audits of the Growing and Renewing Public Housing Program and school infrastructure concerns; the Chief Minister said the minister had accepted the findings, and the minister said recommendations were accepted and disability accommodation was referred to the Auditor-General."
+  },
+  {
+   "ids": [
+    "ACT-0042",
+    "ACT-0043",
+    "ACT-0044"
+   ],
+   "gist": "Public housing maintenance exchange. Mr Rattenbury cited two Auditor-General reports on Housing ACT operations since 2023; Mr Emerson cited the Auditor-General's finding that no tenant representatives sat on the Growing and Renewing decision panel; Ms Berry said independent Auditor-General reviews are welcome."
+  },
+  {
+   "ids": [
+    "ACT-0054",
+    "ACT-0055",
+    "ACT-0056"
+   ],
+   "gist": "Tributes on the resignation of Auditor-General Michael Harris, in the role since 2019. Mr Braddock, Ms Cheyne for the government and the Speaker thanked Mr Harris and welcomed incoming Auditor-General Ajay Sharma; the Speaker also thanked Audit Office staff."
+  },
+  {
+   "ids": [
+    "ACT-0058",
+    "ACT-0059",
+    "ACT-0060"
+   ],
+   "gist": "Sports facilities audit motion. Mr Cocks argued Auditor-General audits do not overlap with it; Ms Tough noted duplication risks with a committee and the Auditor-General; Mr Milligan cited the Auditor-General's description of the digital health record system as potentially the most significant government failure."
+  },
+  {
+   "ids": [
+    "ACT-0064",
+    "ACT-0065",
+    "ACT-0066",
+    "ACT-0067"
+   ],
+   "gist": "Ms Barry's motion for a committee inquiry into specialist disability accommodation service delivery through Housing ACT. Ms Berry tabled the Auditor-General's letter declining an audit for now; members discussed whether the Auditor-General or a committee should examine the matter."
+  }
+ ],
+ "items": {
+  "ACT-0001": {
+   "summary": "Referred to government progress made following an Auditor-General recommendation, then said the domestic and family violence information-sharing scheme is close to being finalised but delayed, the first legislation having passed in April 2024.",
+   "kind": "Passing reference",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "ACT-0002": {
+   "summary": "Said there was no evidence the Strathnairn School procurement was affected by issues that came to light through Operation Kingfisher and the earlier Auditor-General's report, and that the member knew of no report to an integrity official about other procurements.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "ACT-0003": {
+   "summary": "Said a substantial body of work has updated procurement legislation and addressed the specific issues the Auditor-General identified through internal investigations, and that further work covered guidelines for ministerial staff and public servants on ministers' and officers' roles in procurement.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "ACT-0004": {
+   "summary": "Rejected the opposition leader's premise, saying processes are underway and anyone unsatisfied can refer any procurement issue in the history of self-government to independent agencies, including the Auditor-General and the Integrity Commission.",
+   "kind": "Seeks audit or referral",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "ACT-0005": {
+   "summary": "Auditor-General's Report No 10/2026, Management of community facilities (dated 21 October 2026), tabled alongside the Commissioner for Standards annual report and the Ethics and Integrity Adviser report.",
+   "kind": "Report tabled or noted",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "ACT-0006": {
+   "summary": "Corrected the committee's earlier return to say it considered one statutory appointment between 1 July and 31 December 2025, that of the Auditor-General, and tabled the revised schedule of statutory appointments.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0007": {
+   "summary": "Auditor-General's Report No 9/2026, Road Maintenance, and the government response to Report No 6/2026 on ACT Corrective Services rostering tabled, along with the ACT Auditor-General's 2025-2026 annual report (Report No 8/2026) and other papers.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0008": {
+   "summary": "Presented the Public Accounts and Administration Committee's Report 8, an inquiry into Auditor-General Reports 10/2024 Safer Families Levy and 13/2024 Invoicing and Payments for Digital Health Record Hosting Services, dated 28 September 2026.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0009": {
+   "summary": "Praised the Office of the Auditor-General and cited the Australasian Council of Auditors General's independence scores, in which the ACT ranked equal first with Queensland on 343 points, or 90 per cent of the maximum, across 60 legislative factors.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0010": {
+   "summary": "Mentioned the Auditor-General in passing, with the Electoral Commissioner and Integrity Commissioner, as independent officers supported by the appropriation, and said strong independent institutions are an essential part of good government and public confidence.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0011": {
+   "summary": "Government response to Auditor-General's Report No 5/2026, Concession, rebate and social support scheme (September 2026), tabled with other papers including the ACT Disability Strategy annual report.",
+   "kind": "Report tabled or noted",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "ACT-0012": {
+   "summary": "Cited the Auditor-General's report on gaming machine licence regulations as finding the GRC failing to assess noncompliance and enforce licensee obligations, and said the Auditor-General had also described the community contribution scheme as having weak oversight.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "ACT-0013": {
+   "summary": "Cited the Auditor-General's June finding that ineffective rostering and staff shortages left education programs and activities posts unstaffed at the Alexander Maconochie Centre while officers worked longer overtime shifts, and asked how the government will deliver effective rehabilitation.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "ACT-0014": {
+   "summary": "Cited the Auditor-General's report that requiring a new indoor pool and ice rink was worth at least $45 million, argued the Phillip pool rezoning exemplifies decisions benefiting developers, and said the Auditor-General and Integrity Commission are looking closely at the project.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0015": {
+   "summary": "Said the member wrote to the Auditor-General and the ombudsman this week suggesting they examine gaps in the system's performance, preferring an expert review to sweeping statements, and described this as separate from the bill being debated.",
+   "kind": "Seeks audit or referral",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "ACT-0016": {
+   "summary": "Said the public record is clear about when information was available and what responses followed, going back to the Auditor-General's report on the matter, in answer to a question on Campbell Primary School procurement.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "ACT-0017": {
+   "summary": "Described an assessment focusing first on Education Directorate procurements from that period, noted the Auditor-General's various pieces of work over time and no other known referrals, and said integrity agencies and a new capital framework have changed procurement.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "ACT-0018": {
+   "summary": "Petition sought to halt or pause Light Rail Stage 2B contractual commitments and to refer Stages 2A and 2B to the ACT Auditor-General for examination of financial viability, long-term affordability and cost-benefit compared with other transport.",
+   "kind": "Seeks audit or referral",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "ACT-0019": {
+   "summary": "Auditor-General's Report No 6/2026, ACT Corrective Services rostering (dated 18 June 2026), tabled, along with the government response to Report No 2/2026, Management of the Home Buyer Concession Scheme (dated July 2026).",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "ACT-0020": {
+   "summary": "Supported the motion, said the Auditor-General has pointed out public sector workforce growth a few times, and said ACT government employment rose 14 per cent between June 2022 and June 2025, a larger rise than in any other state or territory.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0021": {
+   "summary": "Argued the minister responsible for education and housing has taken some action but that effective action is what counts, pointing to two Ombudsman reports, two Auditor-General reports, a Supreme Court human rights breach and another inquiry.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0022": {
+   "summary": "Cited a 1998 departmental analysis finding 16 per cent 'savings' in the two years after introduction, 62 per cent of which came from the administrative allowance, and the Auditor-General's finding that by 1998 some schools may not have capacity to manage even mandatory maintenance.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "ACT-0023": {
+   "summary": "Cited Auditor-General, ombudsman, committee and court findings the member said show the minister failing in the duty to maintain public housing, calling maintenance out of control and saying vulnerable tenants wait for repairs.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0024": {
+   "summary": "Said over 3,500 Canberrans who need a home face waits of more than four years in most cases, and cited reports from the Auditor-General and others as showing the current approach does not meet human rights or provide adequate care.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0025": {
+   "summary": "Argued the minister oversaw years of underinvestment and poor planning of school infrastructure, and said the ACT Auditor-General reinforced concerns from inquiries about overcrowded classrooms, ageing buildings and maintenance backlogs.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "ACT-0026": {
+   "summary": "Said the report referred to in the motion raised serious housing issues, that Minister Berry has accepted the findings of the Ombudsman, Auditor-General and courts, and that work is under way on maintenance, tenant support and risk and safety.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0027": {
+   "summary": "Said Minister Berry referred one of the minister's own agencies to the Auditor-General for investigation, and claimed Housing ACT still does not know how much funding for public housing tenants with disabilities it has missed in eight years.",
+   "kind": "Seeks audit or referral",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0028": {
+   "summary": "Said the government accepted the ombudsman's and Auditor-General's housing recommendations, that tenant relocations were stopped after an apology, and that the member personally referred the specialist disability accommodation matter to the Auditor-General out of concern.",
+   "kind": "Seeks audit or referral",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0029": {
+   "summary": "Cited the Auditor-General's 2024 and 2025 audits of the Growing and Renewing Public Housing Program, which the member said found tenant wellbeing risks poorly managed, ineffective home sales and purchases and serious probity risks, as evidence the program is failing.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0030": {
+   "summary": "Moved a censure motion citing the May 2024 and April 2025 Auditor-General reports on the Growing and Renewing Public Housing Program as finding Housing ACT failed to manage tenant wellbeing and probity risks, and called the housing record damning, alongside Ombudsman reports and a Supreme Court finding.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0031": {
+   "summary": "Presented the Office of the Legislative Assembly Appropriation Bill, which provides total appropriations of $4.627 million for the Auditor-General, alongside funding for the Electoral Commissioner ($5.445 million), Integrity Commissioner ($8.911 million) and the Office of the Legislative Assembly ($29.412 million).",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0032": {
+   "summary": "Listing placed the Auditor-General in group A, with the ACT Executive, Integrity Commission, Electoral Commission and Office of the Legislative Assembly, in a list of agency groups under the Appropriation Bill 2026-2027.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0033": {
+   "summary": "Named the ACT Auditor-General, with the Treasurer, Minister for Finance, officials and other witnesses, among those involved in the committee's inquiry, thanked the members who took part and commended the report to the Assembly.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0034": {
+   "summary": "Tabled the Speaker's 3 June 2026 letter to the Treasurer on recommended 2026-27 appropriation for Officers of the Assembly, with attachments including the ACT Auditor-General's 28 May letter to the Speaker about the ACT Audit Office draft 2026-27.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0035": {
+   "summary": "Asked the Treasurer whether this year's budget will include the full cost of all election commitments, citing Saul Eslake's fiscal sustainability review, which the member said echoed the former Auditor-General and others in criticising the unreliability of forward estimates.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0036": {
+   "summary": "Said the Auditor-General is looking into road maintenance and the member looks forward to the report, arguing that at least half a billion dollars spent on roads each year has room for improvement and cannot continue as a budget drain.",
+   "kind": "Passing reference",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "ACT-0037": {
+   "summary": "Government response to Auditor-General's Report No 1/2026, Diversity, equity and inclusion in the ACT Public Service, tabled in May 2026, along with a determination for full-time statutory office holders including the Auditor-General (Determination 3 of 2026).",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0038": {
+   "summary": "Auditor-General's Report No 3/2026, University of Canberra financial governance arrangements, dated 27 March 2026, tabled under section 17 of the Auditor-General Act.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "ACT-0039": {
+   "summary": "Government response to Auditor-General's Report No 7/2025, 2024-25 Financial Audit Program Overall Results (March 2026), presented by Ms Cheyne under standing order 211 with other papers.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0040": {
+   "summary": "Asked whether the money requested was in response to the Auditor-General's report, in a question on public housing debt to the Commonwealth.",
+   "kind": "Passing reference",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0041": {
+   "summary": "Asked the Chief Minister whether the Commonwealth's refusal to waive the territory's public housing debt, reported a week after the Auditor-General's report on ACT public housing, shows a poor relationship with the federal Labor Party.",
+   "kind": "Passing reference",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0042": {
+   "summary": "Cited the Auditor-General's finding on the Growing and Renewing program that none of the panel members deciding which homes would be grown, renewed, sold or redeveloped represented tenants, and argued tenants' voices need to be included.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0043": {
+   "summary": "Welcomed independent reviews and reports from the Auditor-General and others on Housing ACT and public housing, saying the goals are continuous improvement and a positive experience for every tenant, and praised Housing ACT staff.",
+   "kind": "Passing reference",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0044": {
+   "summary": "Claimed the government is not resourcing or delivering public housing to an adequate standard, citing two Auditor-General reports, two Ombudsman reports and a Supreme Court case finding a program in breach of human rights since 2023.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0045": {
+   "summary": "Said a review's findings on road safety for vulnerable road users, including motorcyclists, are integrated into the framework, and noted the motion raised other reviews, including a 2006 Auditor-General's report and a 2008 report on reducing road trauma to motorcyclists.",
+   "kind": "Passing reference",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "ACT-0046": {
+   "summary": "Auditor-General's Report No 2/2026, Management of the Home Buyer Concession Scheme (dated 4 March 2026), presented by the Speaker under section 17 of the Auditor-General Act.",
+   "kind": "Report tabled or noted",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0047": {
+   "summary": "Said concerns about the 16B rollovers have been raised with the Auditor-General and go deeper once the instruments are examined, and that these rollovers include $100 million worth of projects.",
+   "kind": "Seeks audit or referral",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0048": {
+   "summary": "Cited the Auditor-General's 2024-25 financial audit report on the territory's financial position, using total territory figures as the Auditor-General and S&P do, and said tax-supported debt will exceed 200 per cent of revenue by 2026-27 under current settings.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0049": {
+   "summary": "Asked the Chief Minister to categorically deny that anyone in the government, including the Chief Minister, has engaged in conduct that may lead to an adverse finding by the ACT Integrity Commissioner or the ACT Auditor-General.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0050": {
+   "summary": "Said the Auditor-General has proposed walk-in centres for the 2026-27 audit list, so a conversation is needed about who does what, to avoid duplicating work already paid for through the Audit Office or done by the Commonwealth.",
+   "kind": "Seeks audit or referral",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "ACT-0051": {
+   "summary": "Claimed the government imposed a safer families levy without investing the revenue in initiatives to keep families safe, and said it took an Auditor-General report and opposition pressure before the money was used as promised.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "ACT-0052": {
+   "summary": "Thanked outgoing Auditor-General Michael Harris, echoing the Speaker and others, and said that as a member of the Public Accounts and Administration Committee they valued Mr Harris's insights, time and frankness.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0053": {
+   "summary": "Referred to a continuing working relationship with the Auditor-General, in the tail end of remarks that run into the headings for the Auditor-General's and Geoff Buchanan's resignations.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0054": {
+   "summary": "Thanked outgoing Auditor-General Michael Harris for advice and counsel found wise and thought through, welcomed incoming Auditor-General Ajay Sharma, and said the member could not attend the next day's farewell and welcome event.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0055": {
+   "summary": "Paid tribute to outgoing Auditor-General Michael Harris on behalf of the government, saying Mr Harris served with distinction over six years and the government has always welcomed the office's scrutiny, and welcomed Ajay Sharma's appointment.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0056": {
+   "summary": "Noted the farewell next day of Auditor-General Michael Harris, in the role since 2019, said Mr Harris's leadership strengthened accountability across government, announced the swearing-in of Ajay Sharma, and thanked ACT Audit Office staff.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0057": {
+   "summary": "Said the motion was drafted to complement a standing committee inquiry and an Auditor-General inquiry mentioned by Ms Berry, and invited the minister to work with the member's office on the audit.",
+   "kind": "Passing reference",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "ACT-0058": {
+   "summary": "Argued the Auditor-General's work, which the minister had pointed to, examines government processes and approaches rather than where specific infrastructure is, so it does not overlap with the audit under debate.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "ACT-0059": {
+   "summary": "Echoed Minister Berry that an Assembly committee, the Auditor-General and other processes already cover this area and risk duplicated work, said the timeframe needs looking at, and supported seeing what sports facilities exist and where to improve.",
+   "kind": "Passing reference",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "ACT-0060": {
+   "summary": "Cited the Auditor-General's description of the digital health record system as potentially the most significant failure of government seen, alongside MyWay+ and an abandoned HR project, and argued the government announces big projects that are then delayed.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "ACT-0061": {
+   "summary": "Argued the Government Procurement Amendment Bill cuts reporting and oversight when, given the Auditor-General's comments on procurement and the ACT tax burden, disclosure and oversight should be stronger, and sought assurance that fewer independent reviews will not reduce scrutiny.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "ACT-0062": {
+   "summary": "Auditor-General's Reports No 7/2025 (2024-25 Financial Audit Program Overall Results) and No 1/2026 (Diversity, equity and inclusion in the ACT Public Service) tabled, with the government response to Report No 5/2025 on dementia assessment services and the Auditor-General Appointment 2025 instrument.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0063": {
+   "summary": "Opened a question to the Treasurer by citing the Auditor-General's financial audit report, which the member said highlights liabilities four times available financial assets, pressure on debt servicing and the need for stronger fiscal management.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "ACT-0064": {
+   "summary": "Welcomed Ms Barry's motion for a committee inquiry into specialist disability accommodation, noting the minister's referral to the Auditor-General, whose capacity the member does not doubt, though an audit may not proceed, and arguing affected community members should give public evidence.",
+   "kind": "Seeks audit or referral",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0065": {
+   "summary": "Noted the inquiry request will go to the PAC, which may find it a challenge to navigate a live inquiry while the Auditor-General is still making determinations on the minister's referral, but said disability accommodation funding warrants public discussion in committee.",
+   "kind": "Seeks audit or referral",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0066": {
+   "summary": "Tabled the Auditor-General's 17 November 2025 letter advising that no audit will be conducted at this time into the matter the minister had referred (specialist disability accommodation in Housing ACT properties), and welcomed a committee inquiry.",
+   "kind": "Seeks audit or referral",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "ACT-0067": {
+   "summary": "Put a motion noting the minister's referral to the Auditor-General, saying an Auditor-General inquiry may be limited in scope and not generally let affected community members share experiences, and calling for a committee inquiry into disability accommodation service delivery through Housing ACT.",
+   "kind": "Seeks audit or referral",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  }
+ }
+}

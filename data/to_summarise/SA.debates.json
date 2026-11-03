@@ -1,0 +1,103 @@
+[
+ {
+  "date": "2026-10-29",
+  "chamber": "House of Assembly",
+  "debate": "Auditor-General's Report",
+  "ids": [
+   "SA-0001",
+   "SA-0002",
+   "SA-0003",
+   "SA-0004",
+   "SA-0005",
+   "SA-0006",
+   "SA-0007",
+   "SA-0008"
+  ]
+ },
+ {
+  "date": "2026-10-29",
+  "chamber": "Legislative Council",
+  "debate": "Government Advertising Bill",
+  "ids": [
+   "SA-0009",
+   "SA-0010",
+   "SA-0011",
+   "SA-0012",
+   "SA-0013"
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "chamber": "House of Assembly",
+  "debate": "Auditor-General's Report",
+  "ids": [
+   "SA-0014",
+   "SA-0015",
+   "SA-0016",
+   "SA-0017",
+   "SA-0018",
+   "SA-0019"
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "chamber": "House of Assembly",
+  "debate": "Road Maintenance",
+  "ids": [
+   "SA-0023",
+   "SA-0024",
+   "SA-0025"
+  ]
+ },
+ {
+  "date": "2026-10-27",
+  "chamber": "House of Assembly",
+  "debate": "Auditor-General's Report",
+  "ids": [
+   "SA-0030",
+   "SA-0031",
+   "SA-0032",
+   "SA-0033",
+   "SA-0034",
+   "SA-0035",
+   "SA-0036",
+   "SA-0037"
+  ]
+ },
+ {
+  "date": "2026-10-27",
+  "chamber": "Legislative Council",
+  "debate": "Local Government (Transition Out of Administration) Amendment Bill",
+  "ids": [
+   "SA-0038",
+   "SA-0039",
+   "SA-0040"
+  ]
+ },
+ {
+  "date": "2025-11-11",
+  "chamber": "Legislative Council",
+  "debate": "Auditor-General's Report",
+  "ids": [
+   "SA-0118",
+   "SA-0119",
+   "SA-0120",
+   "SA-0121",
+   "SA-0122",
+   "SA-0123"
+  ]
+ },
+ {
+  "date": "2025-11-11",
+  "chamber": "House of Assembly",
+  "debate": "Auditor-General's Report",
+  "ids": [
+   "SA-0124",
+   "SA-0125",
+   "SA-0126",
+   "SA-0127",
+   "SA-0128",
+   "SA-0129"
+  ]
+ }
+]

@@ -1,0 +1,960 @@
+{
+ "jur": "WA",
+ "items": {
+  "WA-0001": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0002": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0003": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says draconian bill watering down Office of the Auditor General transparency must not be proclaimed"
+  },
+  "WA-0004": {
+   "s": "attack",
+   "who": "government",
+   "what": "Minister should have implemented Perth parking levy recommendations; no progress over three years later"
+  },
+  "WA-0005": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses government with Auditor General finding that only 51% of vacant property work orders met target"
+  },
+  "WA-0006": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0007": {
+   "s": "attack",
+   "who": "government",
+   "what": "Maintenance contract fix now two years further away; same contractors, system checks one bill in 17"
+  },
+  "WA-0008": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0009": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says housing vacancy findings date from August last year and asks: has anything changed?"
+  },
+  "WA-0010": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on Mental Health Commission's failure to complete required baseline assessment, per Auditor General"
+  },
+  "WA-0011": {
+   "s": "praise",
+   "who": "government",
+   "what": "Parliamentary secretary says Mental Health Commission accepted recommendations and remains on track to complete them"
+  },
+  "WA-0012": {
+   "s": "attack",
+   "who": "government",
+   "what": "Road Trauma Trust Account shortcomings not minor; cannot measure whether money is saving lives"
+  },
+  "WA-0013": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0014": {
+   "s": "attack",
+   "who": "auditor-general",
+   "what": "Member cynical that Auditor General audits bring better governance, citing Paul Whyte saga at audited department"
+  },
+  "WA-0015": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0016": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0017": {
+   "s": "attack",
+   "who": "government",
+   "what": "Condemns Cook Labor government for legislation undermining the Auditor General's independence"
+  },
+  "WA-0018": {
+   "s": "attack",
+   "who": "government",
+   "what": "Hopes government will not proclaim Auditor General bill that tears away transparency and accountable government"
+  },
+  "WA-0019": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says unproclaimed bill gave Auditor General first-ever rights in relation to cabinet documents"
+  },
+  "WA-0020": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister to immediately comply with section 82 so Auditor General can report on decision"
+  },
+  "WA-0021": {
+   "s": "attack",
+   "who": "government",
+   "what": "Accuses Treasurer of disrespect; presses immediate compliance with section 82 so Auditor General can report"
+  },
+  "WA-0022": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0023": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0024": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0025": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0026": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0027": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Treasurer says former government's $400 million upgrade claim lacked evidence; lease variations never tabled"
+  },
+  "WA-0028": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0029": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0030": {
+   "s": "attack",
+   "who": "government",
+   "what": "Audited entities administered PBAs without due scepticism, with little or no checking of head contractors"
+  },
+  "WA-0031": {
+   "s": "attack",
+   "who": "government",
+   "what": "Given time elapsed, presses minister to comply with section 82; notes Council's power to compel"
+  },
+  "WA-0032": {
+   "s": "attack",
+   "who": "government",
+   "what": "Reluctant to give government a free pass; lease's poor transparency should inform how powers are exercised"
+  },
+  "WA-0033": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member says replacement cost surpassed $5 billion, yet the opposition leased the network for $292 million"
+  },
+  "WA-0034": {
+   "s": "attack",
+   "who": "government",
+   "what": "Doubts whether proper process was followed on the rail freight deal"
+  },
+  "WA-0035": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Deputy Premier hates transparency; government shaved off Auditor General's accountability and transparency"
+  },
+  "WA-0036": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0037": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Attorney General to comply with section 82 over decision to withhold MOU information"
+  },
+  "WA-0038": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0039": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0040": {
+   "s": "attack",
+   "who": "government",
+   "what": "Review nearly six months overdue; presses Attorney General to table report or comply with section 82"
+  },
+  "WA-0041": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0042": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0043": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asks why minister has not complied with section 82 notice requirement within 14 days"
+  },
+  "WA-0044": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Committee observes Auditor General making concerted effort to consult local governments and inform Parliament"
+  },
+  "WA-0045": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0046": {
+   "s": "attack",
+   "who": "government",
+   "what": "Minister had not tabled required section 82 notice; asks whether minister will now comply"
+  },
+  "WA-0047": {
+   "s": "attack",
+   "who": "government",
+   "what": "Serious failures in over $1 billion in health payments under this government's watch, per Auditor General"
+  },
+  "WA-0048": {
+   "s": "attack",
+   "who": "government",
+   "what": "DWER not doing enough to protect water, per Auditor General; government has not increased budget"
+  },
+  "WA-0049": {
+   "s": "attack",
+   "who": "government",
+   "what": "Geraldton health precinct most overdue and over-budget project on government books, per Auditor General"
+  },
+  "WA-0050": {
+   "s": "attack",
+   "who": "government",
+   "what": "Providing land valuations to Auditor General fits integrity and probity; member challenges what government does"
+  },
+  "WA-0051": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0052": {
+   "s": "attack",
+   "who": "government",
+   "what": "Concerns identified in 2014 and 2019; member says hardly short on warnings about children's safety"
+  },
+  "WA-0053": {
+   "s": "attack",
+   "who": "government",
+   "what": "No public progress reports from government since 2022; Auditor General report paints pretty grim picture"
+  },
+  "WA-0054": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0055": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0056": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0057": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government says it accepted all recommendations and is putting in place strengthened governance arrangements"
+  },
+  "WA-0058": {
+   "s": "attack",
+   "who": "government",
+   "what": "Minister hiding behind timeframe; agencies did not use implementation plan, only one recommendation implemented"
+  },
+  "WA-0059": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says recommendations accepted and new and expanded services delivering positive outcomes for children and families"
+  },
+  "WA-0060": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0061": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks Auditor General Caroline Spencer for amazing job ensuring transparency for taxpayers"
+  },
+  "WA-0062": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0063": {
+   "s": "attack",
+   "who": "government",
+   "what": "Performance audit revealed government's lack of progress; WA lagging on National Principles for Child Safe Organisations"
+  },
+  "WA-0064": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says not disclosing major event funding has been supported by the independent Auditor General"
+  },
+  "WA-0065": {
+   "s": "attack",
+   "who": "government",
+   "what": "Report says police could estimate David Pye bail costs; asks when minister first became aware"
+  },
+  "WA-0066": {
+   "s": "attack",
+   "who": "government",
+   "what": "Damning report: asks if minister accepts responsibility for persistent leadership and accountability gaps in mental health"
+  },
+  "WA-0067": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says recommendations accepted in full; $235 million invested and new services already being delivered"
+  },
+  "WA-0068": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor General's indictment on Cook government's implementation of mental health reforms; presses on status report"
+  },
+  "WA-0069": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0070": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0071": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says trustees accepted advice; no findings of impropriety, technical correction now resolved"
+  },
+  "WA-0072": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0073": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government refused Auditor General data on Griffin Coal; commercial-in-confidence called a nice smokescreen"
+  },
+  "WA-0074": {
+   "s": "attack",
+   "who": "government",
+   "what": "Minister's response on Main Roads maintenance backlog not sufficient; another waste of precious question time"
+  },
+  "WA-0075": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says government more than doubled Auditor General budget, from $24.1 million to $53 million"
+  },
+  "WA-0076": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0077": {
+   "s": "attack",
+   "who": "government",
+   "what": "Mr Whitby refused to tell Parliament the cost and is being investigated over section 82 notice"
+  },
+  "WA-0078": {
+   "s": "attack",
+   "who": "government",
+   "what": "Two years on from critical report, asks what department has done to publish state agreements"
+  },
+  "WA-0079": {
+   "s": "praise",
+   "who": "government",
+   "what": "Department says it did an enormous amount of work on foundations to administer state agreements"
+  },
+  "WA-0080": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0081": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0082": {
+   "s": "praise",
+   "who": "government",
+   "what": "Treasurer points to improved Auditor General access to cabinet documents and increased office funding"
+  },
+  "WA-0083": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0084": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0085": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0086": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asks why, if recommendations outstanding, it has taken time for government to act on Greenough report"
+  },
+  "WA-0087": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0088": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0089": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0090": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says Auditor General lifted qualification following extensive department work; there have been changes"
+  },
+  "WA-0091": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government tried to pilfer fund, insisting little money; member cites nearly $40 million Auditor General valuation"
+  },
+  "WA-0092": {
+   "s": "attack",
+   "who": "government",
+   "what": "Land transferred between agencies without being properly accounted for; member questions value of DevelopmentWA"
+  },
+  "WA-0093": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Treasurer to comply with section 82 so Auditor General can publish opinion on decision"
+  },
+  "WA-0094": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer's spokesman cherrypicking forecasts on debt is misleading; audited reports carry Auditor General's stamp of approval"
+  },
+  "WA-0095": {
+   "s": "attack",
+   "who": "government",
+   "what": "Local government sustainability under severe pressure, per Auditor General; member blames state government cost shifting"
+  },
+  "WA-0096": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister to comply with section 82 so Auditor General can publish opinion on decision"
+  },
+  "WA-0097": {
+   "s": "attack",
+   "who": "government",
+   "what": "Geraldton Health Campus most delayed and over budget project of this government; over $190 million"
+  },
+  "WA-0098": {
+   "s": "attack",
+   "who": "government",
+   "what": "Funds improperly used on projects not properly evaluated; member has not seen full governance improvements"
+  },
+  "WA-0099": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says audited agencies made improvements, committed to and implemented Auditor General's recommended tightening"
+  },
+  "WA-0100": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer's failure to progress Auditor General's Perth parking levy recommendations, with ongoing transparency and reporting deficiencies"
+  },
+  "WA-0101": {
+   "s": "attack",
+   "who": "government",
+   "what": "28 days insufficient for local governments; member challenges minister on why that is acceptable"
+  },
+  "WA-0102": {
+   "s": "attack",
+   "who": "government",
+   "what": "Damning finding: state government entities completely failed to implement controls protecting subcontractor payments"
+  },
+  "WA-0103": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government has a problem accepting need to fix maintenance; 85% of 240,000 jobs reactive"
+  },
+  "WA-0104": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0105": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer's failure to progress report 14 recommendations on Perth parking levy special purpose account"
+  },
+  "WA-0106": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer's failure to progress report 14 recommendations on Perth parking levy special purpose account"
+  },
+  "WA-0107": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says government legislated in 2023 to improve levy administration and responded to Auditor General's findings"
+  },
+  "WA-0108": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer's failure to progress report 14 recommendations on Perth parking levy special purpose account"
+  },
+  "WA-0109": {
+   "s": "attack",
+   "who": "government",
+   "what": "Principal scrutiny officer left in legislative ambiguity; unassented bill part of a markedly weaker scrutiny environment"
+  },
+  "WA-0110": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government continually used discredited net debt numbers despite audited accounts endorsed by Auditor General's opinion"
+  },
+  "WA-0111": {
+   "s": "attack",
+   "who": "government",
+   "what": "IT projects roughly $1 billion over cost; departments promised measures, member says nothing put in place"
+  },
+  "WA-0112": {
+   "s": "attack",
+   "who": "government",
+   "what": "Labor's Geraldton Health Campus upgrade most delayed major project in WA, almost five years late"
+  },
+  "WA-0113": {
+   "s": "attack",
+   "who": "government",
+   "what": "None of the section 82 notices for 15 refusals to answer questions was appropriately tabled"
+  },
+  "WA-0114": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government tried to duct tape the mouth of the Auditor General; shrouded in secrecy"
+  },
+  "WA-0115": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0116": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0117": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0118": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0119": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says plenty of scrutiny, accountability and transparency in procurement, including Office of the Auditor General"
+  },
+  "WA-0120": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister to comply with section 82 and give notice of decision to Auditor General"
+  },
+  "WA-0121": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0122": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0123": {
+   "s": "attack",
+   "who": "government",
+   "what": "WA lagging on child safe principles; Ombudsman limited in fulfilling the role government announced"
+  },
+  "WA-0124": {
+   "s": "attack",
+   "who": "government",
+   "what": "Report scathing of lack of delivery from the government and Department of Communities"
+  },
+  "WA-0125": {
+   "s": "attack",
+   "who": "government",
+   "what": "Demands basic response; does not want to write to Auditor General over section 82 matter"
+  },
+  "WA-0126": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor General described WA government's slow progress on royal commission recommendations as disappointing"
+  },
+  "WA-0127": {
+   "s": "attack",
+   "who": "government",
+   "what": "Damning public housing maintenance findings; threatened ecological communities ineffectively monitored, and government refuses to update report"
+  },
+  "WA-0128": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0129": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0130": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0131": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says water Act fails spectacularly, OAG agrees; cannot understand how it gets in anyone's way"
+  },
+  "WA-0132": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on undertaking to write to Auditor General under section 82 within 14 days"
+  },
+  "WA-0133": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government speeding approvals in glaring absence of compliance framework; DWER does not effectively enforce water licences"
+  },
+  "WA-0134": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0135": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0136": {
+   "s": "attack",
+   "who": "government",
+   "what": "Letter says bill does not incorporate 2024 Auditor General recommendations; special laws lack transparency"
+  },
+  "WA-0137": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer's failure to progress report 14 recommendations on Perth parking levy special purpose account"
+  },
+  "WA-0138": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asks if withholding information is reasonable; presses minister on section 82 obligations"
+  },
+  "WA-0139": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government's unacceptable performance on sexual abuse matters, citing Auditor General's damning performance audit report"
+  },
+  "WA-0140": {
+   "s": "attack",
+   "who": "government",
+   "what": "Very damning report; almost nine years on, government should have done better"
+  },
+  "WA-0141": {
+   "s": "attack",
+   "who": "government",
+   "what": "Wants to know whether 2024 Auditor General recommendations on special laws were taken on board"
+  },
+  "WA-0142": {
+   "s": "attack",
+   "who": "government",
+   "what": "Any fair reading shows serious concerns about WA's progress, in particular the Department of Communities"
+  },
+  "WA-0143": {
+   "s": "attack",
+   "who": "government",
+   "what": "Geraldton waiting eight years and counting for most delayed major project, per Auditor General"
+  },
+  "WA-0144": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0145": {
+   "s": "attack",
+   "who": "government",
+   "what": "Public housing system failing; damning report: maintenance costs up 44%, activity up only 7%"
+  },
+  "WA-0146": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0147": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says transparency and accountability deeply embedded in bill, including full Auditor General Act compliance"
+  },
+  "WA-0148": {
+   "s": "attack",
+   "who": "government",
+   "what": "Slow progress described as disappointing; asks if minister is holding someone accountable for this failure"
+  },
+  "WA-0149": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0150": {
+   "s": "attack",
+   "who": "government",
+   "what": "Bill lacks mandatory Auditor General engagement on modification orders; member says it hides information, rushes decisions"
+  },
+  "WA-0151": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on contractor overcharging; only 5.7% of work orders audited, $1 million recouped"
+  },
+  "WA-0152": {
+   "s": "attack",
+   "who": "government",
+   "what": "State government has a part to play; report showed delays in simple maintenance of vacant properties"
+  },
+  "WA-0153": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government does not even know condition of most regional housing; only 19% assessed, maintenance in disarray"
+  },
+  "WA-0154": {
+   "s": "attack",
+   "who": "government",
+   "what": "Refers minister to report discovering major weaknesses in PathWest's management of confidentiality and information integrity"
+  },
+  "WA-0155": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0156": {
+   "s": "attack",
+   "who": "other",
+   "what": "Shire cited for shocking mismanagement and poor governance; asks member for Geraldton if report read"
+  },
+  "WA-0157": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government overregulating councils; 8% of Shire of Beverley's budget on audit fees a ridiculous amount"
+  },
+  "WA-0158": {
+   "s": "attack",
+   "who": "government",
+   "what": "Notes no data provided on Main Roads backlog; asks whether the dollar figure exists"
+  },
+  "WA-0159": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "WA-0160": {
+   "s": "attack",
+   "who": "government",
+   "what": "Unprecedented that Auditor General must keep raising the lack of transparency of this government"
+  },
+  "WA-0161": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "More than 40% of ministerial refusals ruled unjustified until 2016–17; shame on the Liberal Party"
+  },
+  "WA-0162": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member cites about half of section 82 decisions not reasonable; refused Perth Bears modelling, broken promise"
+  },
+  "WA-0163": {
+   "s": "attack",
+   "who": "government",
+   "what": "This government's lack of transparency is common knowledge, and even the Auditor General says so"
+  },
+  "WA-0164": {
+   "s": "attack",
+   "who": "government",
+   "what": "Contrasts Auditor General's approximately $800 million backlog with minister's $22 million; presses for current figure"
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "Ministers withholding information and section 82 notices",
+    "note": "Government ministers pressed, mostly through questions, to comply with section 82 so the Auditor General can report on refusals to give Parliament information.",
+    "ids": [
+     "WA-0020",
+     "WA-0021",
+     "WA-0031",
+     "WA-0037",
+     "WA-0040",
+     "WA-0043",
+     "WA-0046",
+     "WA-0077",
+     "WA-0093",
+     "WA-0096",
+     "WA-0113",
+     "WA-0120",
+     "WA-0125",
+     "WA-0132",
+     "WA-0138",
+     "WA-0162"
+    ]
+   },
+   {
+    "label": "Slow progress on child safety reforms",
+    "note": "Government and Department of Communities attacked over slow progress on royal commission recommendations and National Principles for Child Safe Organisations.",
+    "ids": [
+     "WA-0052",
+     "WA-0053",
+     "WA-0063",
+     "WA-0123",
+     "WA-0124",
+     "WA-0126",
+     "WA-0139",
+     "WA-0140",
+     "WA-0142",
+     "WA-0148"
+    ]
+   },
+   {
+    "label": "Auditor General's independence and government transparency",
+    "note": "Government attacked over stalled Auditor General legislation said to undermine independence, refusing the Auditor General data, and lack of transparency.",
+    "ids": [
+     "WA-0003",
+     "WA-0017",
+     "WA-0018",
+     "WA-0035",
+     "WA-0073",
+     "WA-0109",
+     "WA-0114",
+     "WA-0160",
+     "WA-0163"
+    ]
+   },
+   {
+    "label": "Health delivery: mental health reforms, payments, Geraldton delays",
+    "note": "Government and minister attacked over stalled mental health reforms, weak health payment controls and the delayed Geraldton Health Campus.",
+    "ids": [
+     "WA-0010",
+     "WA-0047",
+     "WA-0049",
+     "WA-0058",
+     "WA-0066",
+     "WA-0068",
+     "WA-0097",
+     "WA-0112",
+     "WA-0143"
+    ]
+   },
+   {
+    "label": "Public housing maintenance and vacant properties",
+    "note": "Government and department attacked over reactive maintenance, contract oversight, vacant homes and unknown housing condition.",
+    "ids": [
+     "WA-0007",
+     "WA-0009",
+     "WA-0103",
+     "WA-0127",
+     "WA-0145",
+     "WA-0151",
+     "WA-0152",
+     "WA-0153"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Agencies responding to audit findings with improvements",
+    "note": "Government and agencies credited with work and fixes on levy, valuation, state agreements, subcontractor payments and child protection systems.",
+    "ids": [
+     "WA-0071",
+     "WA-0079",
+     "WA-0090",
+     "WA-0099",
+     "WA-0107"
+    ]
+   },
+   {
+    "label": "Mental health recommendations accepted and being delivered",
+    "note": "Government credits itself with accepting all Auditor General recommendations on infant, child and adolescent mental health and delivering new services.",
+    "ids": [
+     "WA-0011",
+     "WA-0057",
+     "WA-0059",
+     "WA-0067"
+    ]
+   },
+   {
+    "label": "Funding and access given to the Auditor General",
+    "note": "Government credits itself with more than doubling the office's budget and giving the Auditor General access to cabinet documents.",
+    "ids": [
+     "WA-0019",
+     "WA-0075",
+     "WA-0082"
+    ]
+   },
+   {
+    "label": "Government arrangements defended by citing Auditor General oversight",
+    "note": "Ministers and members defend procurement, bill accountability and major event funding non-disclosure by pointing to Auditor General oversight or support.",
+    "ids": [
+     "WA-0064",
+     "WA-0119",
+     "WA-0147"
+    ]
+   },
+   {
+    "label": "Credit to the Auditor General's own work",
+    "note": "Members thank Auditor General Caroline Spencer for transparency and note a concerted effort to consult local governments.",
+    "ids": [
+     "WA-0044",
+     "WA-0061"
+    ]
+   }
+  ]
+ }
+}

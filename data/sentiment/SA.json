@@ -1,0 +1,759 @@
+{
+ "jur": "SA",
+ "items": {
+  "SA-0001": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0002": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0003": {
+   "s": "attack",
+   "who": "government",
+   "what": "Minister pressed on contractor probity after Auditor-General's concerns about SA Water contract management"
+  },
+  "SA-0004": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says SA Water issues are procedural, taken on board and being implemented"
+  },
+  "SA-0005": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0006": {
+   "s": "attack",
+   "who": "government",
+   "what": "CFS PPC shortcomings recognised by Auditor-General for four years; minister's answer is another external audit"
+  },
+  "SA-0007": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says hospital issue is spending phasing, not construction delay; Auditor-General notes significant events undertaken"
+  },
+  "SA-0008": {
+   "s": "attack",
+   "who": "government",
+   "what": "Challenges minister over disagreeing with Auditor-General's assessment of delays in starting construction"
+  },
+  "SA-0009": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0010": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0011": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0012": {
+   "s": "attack",
+   "who": "government",
+   "what": "Labor proposed near-identical Auditor-General approval in opposition; 'do as I say, but not as I do'"
+  },
+  "SA-0013": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0014": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0015": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0016": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on why DHS still considering NDIS billing policy after Auditor-General raised it twice"
+  },
+  "SA-0017": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on removing audit requirement after Auditor-General modified opinions on procurement disclosures"
+  },
+  "SA-0018": {
+   "s": "praise",
+   "who": "government",
+   "what": "Department building on Auditor-General recommendations, implementing body of work; minister thanks Auditor-General's diligent work"
+  },
+  "SA-0019": {
+   "s": "attack",
+   "who": "government",
+   "what": "Challenges what power government exercises over subcontracts, given Auditor-General's concern about procurement risk"
+  },
+  "SA-0020": {
+   "s": "attack",
+   "who": "government",
+   "what": "Golf course consultants engaged without competitive procurement; Auditor-General findings raise serious questions about government"
+  },
+  "SA-0021": {
+   "s": "attack",
+   "who": "government",
+   "what": "Report 'laid bare' lengths Labor goes to avoid Parklands scrutiny; golf money without business case"
+  },
+  "SA-0022": {
+   "s": "attack",
+   "who": "government",
+   "what": "Proton therapy bunker empty; Auditor-General found government could not demonstrate PwC concerns adequately assessed"
+  },
+  "SA-0023": {
+   "s": "attack",
+   "who": "government",
+   "what": "Road network deteriorating; Auditor-General noted $2.1 billion needed to repair roads in very poor condition"
+  },
+  "SA-0024": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Liberals left road maintenance backlog at almost $2 billion, up from $750 million, per Auditor-General"
+  },
+  "SA-0025": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government must explain backlog; RAA assessment of Auditor-General's Report shows 45 per cent maintenance shortfall"
+  },
+  "SA-0026": {
+   "s": "attack",
+   "who": "government",
+   "what": "Road contract not managed correctly, per Auditor-General; government had 4½ years to sort it out"
+  },
+  "SA-0027": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0028": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0029": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0030": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0031": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Premier on why 14 golf course consultancy contracts were all valued under $55,000"
+  },
+  "SA-0032": {
+   "s": "praise",
+   "who": "government",
+   "what": "Premier says Treasurer's Instruction 17 compliance achieved; government positively disposed to giving Auditor-General information"
+  },
+  "SA-0033": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Treasurer with finding that concurrent employment arrangements were not assessed for justification or workload"
+  },
+  "SA-0034": {
+   "s": "praise",
+   "who": "government",
+   "what": "Treasurer says fatigue principles in place and agencies will look at issue Auditor-General raised"
+  },
+  "SA-0035": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0036": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says SmartyGrants risk identified by Auditor-General addressed, with annual assessments following its advice"
+  },
+  "SA-0037": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0038": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0039": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0040": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0041": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0042": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0043": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0044": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government spent $1.8 million storing and maintaining turbines from failed Hydrogen Jobs Plan, per report"
+  },
+  "SA-0045": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's 'Please explain' on whether government followed proper processes on 14 golf contracts"
+  },
+  "SA-0046": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government says golf course work is on its $45 million budget"
+  },
+  "SA-0047": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0048": {
+   "s": "attack",
+   "who": "government",
+   "what": "More than $180 million tied up in turbines for failed Hydrogen Jobs Plan, per Auditor-General"
+  },
+  "SA-0049": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0050": {
+   "s": "attack",
+   "who": "government",
+   "what": "DPC did not prepare acquisition plans or retain sufficient value-for-money evidence, per Auditor-General's Report"
+  },
+  "SA-0051": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government engaged 14 golf course consultants under $55,000; risk of decisions without required value-for-money analysis"
+  },
+  "SA-0052": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member asks why $28.4 million rural fund has not been put to work for farmers"
+  },
+  "SA-0053": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0054": {
+   "s": "attack",
+   "who": "government",
+   "what": "T2D contract management plan does not fully document alliance's obligations; expenditure $110 million over budget"
+  },
+  "SA-0055": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister cites positive Auditor-General findings; T2D paused and fixed, delivering good local jobs"
+  },
+  "SA-0056": {
+   "s": "attack",
+   "who": "government",
+   "what": "Whyalla administration limit rose from $400 million to $1 billion; blast furnace closed, sale incomplete"
+  },
+  "SA-0057": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister defends administration costs, confirmed by Auditor-General, as backing a major regional city's long-term viability"
+  },
+  "SA-0058": {
+   "s": "attack",
+   "who": "other",
+   "what": "Some Coober Pedy CEOs, finance officers left a lot to be desired; Auditor-General flagged serious maladministration"
+  },
+  "SA-0059": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0060": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on Auditor-General's reported delays starting new Women's and Children's Hospital construction"
+  },
+  "SA-0061": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says Auditor-General's Report still states 2031 completion, meaning hospital project is on track"
+  },
+  "SA-0062": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0063": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0064": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0065": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0066": {
+   "s": "attack",
+   "who": "government",
+   "what": "$28.4 million rural fund found sitting idle around a decade while grapegrowers assess options"
+  },
+  "SA-0067": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0068": {
+   "s": "attack",
+   "who": "government",
+   "what": "Departments blowing operating budgets; only the Auditor-General's office stuck to its budget"
+  },
+  "SA-0069": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0070": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0071": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0072": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Auditor-General concluded former Liberal government's $9.9 billion allocation could not have delivered the project"
+  },
+  "SA-0073": {
+   "s": "praise",
+   "who": "government",
+   "what": "Rejects claim major projects escape scrutiny; oversight includes Auditor-General's substantial powers"
+  },
+  "SA-0074": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0075": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0076": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0077": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0078": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister: not 'trust us' but trust Auditor-General and others who required extraordinary due diligence"
+  },
+  "SA-0079": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says procurement managed, reported agency by agency; even Auditor-General reports on it"
+  },
+  "SA-0080": {
+   "s": "attack",
+   "who": "government",
+   "what": "Only Audit Office met budget; all others exceeded, combined excess north of $1.2 billion"
+  },
+  "SA-0081": {
+   "s": "attack",
+   "who": "government",
+   "what": "27 of 28 departments overspent, only Auditor-General's office did not; blowouts cost more than $6 billion"
+  },
+  "SA-0082": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0083": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0084": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government overspent by $1.2 billion; 27 of 28 agencies over budget, all but Auditor-General"
+  },
+  "SA-0085": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0086": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Premier: Auditor-General's Report says rising debt and interest may limit fiscal capacity, services"
+  },
+  "SA-0087": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0088": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0089": {
+   "s": "attack",
+   "who": "other",
+   "what": "Joint Parliamentary Service refused Auditor-General access to catering accounts; accountability falls short of standards"
+  },
+  "SA-0090": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0091": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0092": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General warned soaring debt could reach $50 billion and could force cuts to spending, services"
+  },
+  "SA-0093": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0094": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0095": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0096": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0097": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0098": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0099": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0100": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0101": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0102": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Minister accuses opposition of contradictions, criticising turbine impairments raised by Auditor-General while ignoring sale"
+  },
+  "SA-0103": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General's Report laid bare Labor debt bomb; state debt to soar to nearly $50 billion"
+  },
+  "SA-0104": {
+   "s": "attack",
+   "who": "government",
+   "what": "Hydrogen Jobs Plan a disaster: $285 million spent, $85 million written off, per Auditor-General"
+  },
+  "SA-0105": {
+   "s": "attack",
+   "who": "government",
+   "what": "Hydrogen project: $85.7 million written off, more than $60 million on wages; never delivered a watt"
+  },
+  "SA-0106": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0107": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0108": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0109": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General laid bare concerns Labor blindly taking state into; net debt forecast to reach $48.5 billion"
+  },
+  "SA-0110": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Minister says $1.6 billion overexpenditure is patient activity; accuses opposition of proposing cuts"
+  },
+  "SA-0111": {
+   "s": "attack",
+   "who": "government",
+   "what": "Challenges minister: dismissing Auditor-General's concerns that rising debt, interest may limit fiscal capacity?"
+  },
+  "SA-0112": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0113": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister: Auditor-General says risk of significant cost overruns and delays on capital program high"
+  },
+  "SA-0114": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Minister blames opposition's projects for scathing recommendations; sealed road backlog grew $723 million to $1.9 billion"
+  },
+  "SA-0115": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0116": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0117": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0118": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister: four years into $2.4 billion contract, why AGFMA 'not operating as intended'"
+  },
+  "SA-0119": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says report acknowledges DIT working continuously to improve Ventia's service delivery on inherited contract"
+  },
+  "SA-0120": {
+   "s": "attack",
+   "who": "government",
+   "what": "PIRSA manages loan schemes, yet no new concessional loan products activated, per Auditor-General's Report"
+  },
+  "SA-0121": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says Auditor-General identified no concerns on temporary staff or contractors; expenditure formally monitored"
+  },
+  "SA-0122": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0123": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0124": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0125": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0126": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says IT control issue not unknown; trust constantly reviewing access to data"
+  },
+  "SA-0127": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says child protection reform delivering results; Auditor-General points to reduced growth in children in care"
+  },
+  "SA-0128": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses minister on $175 million variance: excess to budget, funded by additional appropriation, per Auditor-General"
+  },
+  "SA-0129": {
+   "s": "attack",
+   "who": "government",
+   "what": "CFS PPC cleaning compliance remains low despite planned measures; contract evidence still not provided, per Auditor-General"
+  },
+  "SA-0130": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "SA-0131": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "North Adelaide Golf Course procurement and transparency",
+    "note": "Government attacked over consultants on $55,000 contracts without competitive procurement, value-for-money evidence or a business case.",
+    "ids": [
+     "SA-0020",
+     "SA-0021",
+     "SA-0031",
+     "SA-0045",
+     "SA-0050",
+     "SA-0051"
+    ]
+   },
+   {
+    "label": "Rising state debt and capital program risk",
+    "note": "Government attacked with Auditor-General warnings that debt nearing $50 billion and project overruns could limit fiscal capacity and services.",
+    "ids": [
+     "SA-0086",
+     "SA-0092",
+     "SA-0103",
+     "SA-0109",
+     "SA-0111",
+     "SA-0113"
+    ]
+   },
+   {
+    "label": "Agency budget overspending",
+    "note": "Government attacked because 27 of 28 agencies overspent, only the Auditor-General's office meeting budget, plus a $175 million child protection variance.",
+    "ids": [
+     "SA-0068",
+     "SA-0080",
+     "SA-0081",
+     "SA-0084",
+     "SA-0128"
+    ]
+   },
+   {
+    "label": "Road maintenance backlog and contract",
+    "note": "Government attacked over a growing backlog and poorly managed contract; Labor members blame the former Liberal government's contracts and backlog growth.",
+    "ids": [
+     "SA-0023",
+     "SA-0024",
+     "SA-0025",
+     "SA-0026",
+     "SA-0114"
+    ]
+   },
+   {
+    "label": "Hydrogen Jobs Plan and unsold turbines",
+    "note": "Government attacked over money spent, written off and tied up in turbines; minister accuses the opposition of contradictory criticism.",
+    "ids": [
+     "SA-0044",
+     "SA-0048",
+     "SA-0102",
+     "SA-0104",
+     "SA-0105"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Major infrastructure project assurance and delivery",
+    "note": "Government members credit government and department, citing Auditor-General's positive findings and independent oversight of T2D and major projects.",
+    "ids": [
+     "SA-0018",
+     "SA-0055",
+     "SA-0073",
+     "SA-0078"
+    ]
+   },
+   {
+    "label": "Agencies acting on Auditor-General findings",
+    "note": "Ministers defend SA Water, DIT, the housing trust and public sector, saying findings are taken on board and work is underway.",
+    "ids": [
+     "SA-0004",
+     "SA-0034",
+     "SA-0119",
+     "SA-0126"
+    ]
+   },
+   {
+    "label": "New Women's and Children's Hospital on track",
+    "note": "Minister defends government, saying issue is spending phasing not delay and Auditor-General's Report still states 2031 completion.",
+    "ids": [
+     "SA-0007",
+     "SA-0061"
+    ]
+   },
+   {
+    "label": "North Adelaide Golf Course compliance and budget",
+    "note": "Premier defends government, saying Treasurer's Instruction 17 compliance was achieved and golf course work is on its $45 million budget.",
+    "ids": [
+     "SA-0032",
+     "SA-0046"
+    ]
+   }
+  ]
+ }
+}

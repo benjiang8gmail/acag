@@ -1,0 +1,418 @@
+{
+ "jur": "ACT",
+ "items": {
+  "ACT-0001": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0002": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says no evidence Strathnairn School procurement affected by issues in Auditor-General's report"
+  },
+  "ACT-0003": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says procurement issues identified by Auditor-General already addressed quite substantively"
+  },
+  "ACT-0004": {
+   "s": "praise",
+   "who": "government",
+   "what": "Rejects premise of opposition leader's question; procurement processes underway, with independent agencies available"
+  },
+  "ACT-0005": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0006": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0007": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0008": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0009": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Shout-out to Office of the Auditor-General; ACT ranks equal first on independence, score of 343"
+  },
+  "ACT-0010": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0011": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0012": {
+   "s": "attack",
+   "who": "government",
+   "what": "Very damning Auditor-General report found GRC failing on noncompliance and enforcing licensees' obligations"
+  },
+  "ACT-0013": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asks how government delivers rehabilitation given Auditor-General's findings of ineffective rostering, staff shortages"
+  },
+  "ACT-0014": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says government rezoned out pool requirement worth at least $45 million, per Auditor-General's report"
+  },
+  "ACT-0015": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0016": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0017": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says procurement fundamentally changed, with oversight agencies and a new capital framework in place"
+  },
+  "ACT-0018": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0019": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0020": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0021": {
+   "s": "attack",
+   "who": "government",
+   "what": "Minister's action not effective, member says, citing two Auditor-General and two Ombudsman reports"
+  },
+  "ACT-0022": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0023": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Auditor-General and others found minister failing Canberrans on public housing maintenance"
+  },
+  "ACT-0024": {
+   "s": "attack",
+   "who": "government",
+   "what": "Current approach to public homes not meeting human rights or adequate care, per Auditor-General reports"
+  },
+  "ACT-0025": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says minister oversaw school underinvestment; Auditor-General reinforced concerns on maintenance backlogs"
+  },
+  "ACT-0026": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says Minister Berry accepted Auditor-General's findings and oversaw work improving maintenance and tenant support"
+  },
+  "ACT-0027": {
+   "s": "attack",
+   "who": "government",
+   "what": "Minister Berry, in a remarkable move, referred agency under ministerial responsibility to Auditor-General"
+  },
+  "ACT-0028": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says government accepted Auditor-General's housing recommendations and responded to external feedback"
+  },
+  "ACT-0029": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says regulators including Auditor-General repeatedly told minister public housing program is failing"
+  },
+  "ACT-0030": {
+   "s": "attack",
+   "who": "government",
+   "what": "Damning housing record; minister not delivering, citing Auditor-General reports on tenant wellbeing and probity risks"
+  },
+  "ACT-0031": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0032": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0033": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0034": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0035": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government's forward estimates unreliable, echoing former Auditor-General; asks if budget will finally include election commitments"
+  },
+  "ACT-0036": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0037": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0038": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0039": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0040": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0041": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asks if Commonwealth debt refusal, after Auditor-General's report, shows poor relationship with federal Labor"
+  },
+  "ACT-0042": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0043": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member welcomes Auditor-General reviews of Housing ACT; goals are continuous improvement and positive tenant experience"
+  },
+  "ACT-0044": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government not delivering public housing adequately; Housing ACT subject of two damning Auditor-General reports"
+  },
+  "ACT-0045": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0046": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0047": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says concerns raised with Auditor-General over $100 million of projects in 16B rollovers"
+  },
+  "ACT-0048": {
+   "s": "attack",
+   "who": "government",
+   "what": "Truthful conversation needs total territory figures, as Auditor-General uses; government's settings a structural warning sign"
+  },
+  "ACT-0049": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asks Chief Minister to deny conduct that may bring adverse Auditor-General or Integrity Commissioner finding"
+  },
+  "ACT-0050": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0051": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government slapped ratepayers with safer families levy; relented only after damning Auditor-General report"
+  },
+  "ACT-0052": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks outgoing Auditor-General for insights, frankness and hard work"
+  },
+  "ACT-0053": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0054": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks outgoing Auditor-General; advice and counsel very wise, thought through and appreciated"
+  },
+  "ACT-0055": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Government says Mr Harris served as Auditor-General with distinction; scrutiny always welcomed"
+  },
+  "ACT-0056": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Speaker says outgoing Auditor-General's leadership strengthened accountability across government; thanks Audit Office staff"
+  },
+  "ACT-0057": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0058": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says minister getting things wrong; Auditor-General's work does not overlap with this audit"
+  },
+  "ACT-0059": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0060": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General described digital health record system as potentially most significant failure of government, member says"
+  },
+  "ACT-0061": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government bill moves wrong way on transparency despite Auditor-General's procurement comments; oversight should be stronger"
+  },
+  "ACT-0062": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0063": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Treasurer: report shows liabilities four times greater than available financial assets, stronger fiscal management needed"
+  },
+  "ACT-0064": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister given credit for referring the matter to Auditor-General and making statement at committee hearing"
+  },
+  "ACT-0065": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0066": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "ACT-0067": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "Minister's record on public housing and school infrastructure",
+    "note": "Minister and Housing ACT attacked over maintenance, tenant wellbeing, probity risks and school backlogs, citing repeated Auditor-General reports.",
+    "ids": [
+     "ACT-0021",
+     "ACT-0023",
+     "ACT-0024",
+     "ACT-0025",
+     "ACT-0027",
+     "ACT-0029",
+     "ACT-0030",
+     "ACT-0044"
+    ]
+   },
+   {
+    "label": "Budget reliability and the territory's finances",
+    "note": "Government attacked over unreliable forward estimates, rollovers, rising debt and liabilities, using Auditor-General reports and concerns raised with the office.",
+    "ids": [
+     "ACT-0035",
+     "ACT-0047",
+     "ACT-0048",
+     "ACT-0063"
+    ]
+   },
+   {
+    "label": "Major project decisions and weaker procurement oversight",
+    "note": "Government attacked over the Phillip pool rezoning, the digital health record failure and a bill reducing procurement transparency.",
+    "ids": [
+     "ACT-0014",
+     "ACT-0060",
+     "ACT-0061"
+    ]
+   },
+   {
+    "label": "Safer families levy and corrections rostering",
+    "note": "Government attacked over levy revenue not invested in family safety, and ineffective rostering and staff shortages at the Alexander Maconochie Centre.",
+    "ids": [
+     "ACT-0013",
+     "ACT-0051"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Outgoing Auditor-General Michael Harris and the Audit Office",
+    "note": "Members thanked Mr Harris for frankness, wise counsel and strengthened accountability, and gave the Office a shout-out for the ACT's equal-first independence score.",
+    "ids": [
+     "ACT-0009",
+     "ACT-0052",
+     "ACT-0054",
+     "ACT-0055",
+     "ACT-0056"
+    ]
+   },
+   {
+    "label": "Government's response on public housing",
+    "note": "Minister Berry credited for accepting Auditor-General findings, overseeing improvements, welcoming reviews and referring the disability accommodation matter to the office.",
+    "ids": [
+     "ACT-0026",
+     "ACT-0028",
+     "ACT-0043",
+     "ACT-0064"
+    ]
+   },
+   {
+    "label": "Government's response to procurement concerns",
+    "note": "Ministers defended the government, saying issues identified by the Auditor-General were addressed and procurement has fundamentally changed.",
+    "ids": [
+     "ACT-0002",
+     "ACT-0003",
+     "ACT-0004",
+     "ACT-0017"
+    ]
+   }
+  ]
+ }
+}

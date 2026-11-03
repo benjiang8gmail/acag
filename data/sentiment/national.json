@@ -1,0 +1,113 @@
+{
+ "attack": [
+  {
+   "label": "Major projects, government businesses and cost blowouts",
+   "note": "Governments attacked over costs and secrecy, from Victoria's Suburban Rail Loop and Tasmania's TT-Line to Brisbane 2032 and South Australia's turbines.",
+   "from": {
+    "TAS": ["Failing government businesses: TT-Line, Homes Tasmania, Metro"],
+    "VIC": ["Suburban Rail Loop secret tax and costs"],
+    "QLD": ["Missing consolidated Brisbane 2032 games budget"],
+    "SA": ["North Adelaide Golf Course procurement and transparency", "Hydrogen Jobs Plan and unsold turbines"],
+    "ACT": ["Major project decisions and weaker procurement oversight"]
+   }
+  },
+  {
+   "label": "Governments resisting or underfunding the Auditor-General",
+   "note": "Members attacked governments for underfunding the office, withholding information, weakening its independence or waving away its findings.",
+   "from": {
+    "TAS": ["Dismissing the Auditor-General's TT-Line insolvency finding", "Underfunding the Auditor-General and the six-audit promise"],
+    "WA": ["Ministers withholding information and section 82 notices", "Auditor General's independence and government transparency"],
+    "VIC": ["Integrity agency funding and treatment of Auditor-General"],
+    "NT": ["Auditor-General independence ranking and performance audit powers", "Integrity and Ethics Commissioner Bill and Auditor-General independence"]
+   }
+  },
+  {
+   "label": "Roads, housing, health and child safety",
+   "note": "Governments attacked over deteriorating roads, housing maintenance, health delivery and slow child safety reforms, with audit findings as evidence.",
+   "from": {
+    "VIC": ["Deteriorating state roads and maintenance funding"],
+    "WA": ["Slow progress on child safety reforms", "Health delivery: mental health reforms, payments, Geraldton delays", "Public housing maintenance and vacant properties"],
+    "ACT": ["Minister's record on public housing and school infrastructure", "Safer families levy and corrections rostering"],
+    "NSW": ["Regional Roads Fund administration", "Aboriginal land claims and First Nations services"],
+    "SA": ["Road maintenance backlog and contract"]
+   }
+  },
+  {
+   "label": "Former governments and oppositions",
+   "note": "Government members blamed former governments for procurement, privatisation and policy failures, and accused Victoria's opposition of misusing audit reports.",
+   "from": {
+    "NSW": ["Former government's train procurement", "Former government's privatisation, contracting and pork-barrelling legacy"],
+    "VIC": ["Opposition's use of Auditor-General reports"],
+    "QLD": ["Labor's record on ecotourism policy and approvals", "Labor's games planning and Gabba cost figures", "Labor's youth crime and detention record", "Labor's mental health levy and health infrastructure"]
+   }
+  },
+  {
+   "label": "State finances, debt and budget reliability",
+   "note": "Members used audit findings on debt, deficits, overspending and budget papers to attack governments' financial management.",
+   "from": {
+    "VIC": ["State debt, deficits and unreliable budget papers"],
+    "SA": ["Rising state debt and capital program risk", "Agency budget overspending"],
+    "NSW": ["Government administration, spending controls and transparency"],
+    "ACT": ["Budget reliability and the territory's finances"]
+   }
+  },
+  {
+   "label": "Direct attacks on the Auditor-General",
+   "note": "Tasmania's Premier and Treasurer disputed the TT-Line insolvency finding, saying solvency is for directors. Nearly every direct attack on an Auditor-General is this dispute.",
+   "from": {
+    "TAS": ["Ministers disputing the Auditor-General on TT-Line solvency"]
+   }
+  }
+ ],
+ "praise": [
+  {
+   "label": "Governments acting on audit findings",
+   "note": "Ministers and government members credited their own side with accepting recommendations, making fixes and delivering services after audits.",
+   "from": {
+    "VIC": ["Government's response to critical audit reports"],
+    "WA": ["Agencies responding to audit findings with improvements", "Mental health recommendations accepted and being delivered"],
+    "SA": ["Agencies acting on Auditor-General findings"],
+    "TAS": ["Acting on Auditor-General recommendations"],
+    "ACT": ["Government's response on public housing", "Government's response to procurement concerns"],
+    "QLD": ["Government action on ecotourism recommendations"],
+    "NSW": ["Government defends programs and reforms against audit concerns"]
+   }
+  },
+  {
+   "label": "The Auditor-General's own work",
+   "note": "Members thanked Auditors-General and their offices for frank, independent work, including farewells to the ACT's outgoing Auditor-General.",
+   "from": {
+    "TAS": ["The Auditor-General's frank, independent work"],
+    "ACT": ["Outgoing Auditor-General Michael Harris and the Audit Office"],
+    "VIC": ["Auditor-General's independence and quality of work"],
+    "NSW": ["Respect for the Auditor-General's work"],
+    "WA": ["Credit to the Auditor General's own work"],
+    "NT": ["Auditor-General's assistance to the Public Accounts Committee"]
+   }
+  },
+  {
+   "label": "Programs and projects said to be on track",
+   "note": "Ministers cited audit findings or oversight to say programs, hospitals and projects are delivering or on budget.",
+   "from": {
+    "SA": ["Major infrastructure project assurance and delivery", "New Women's and Children's Hospital on track", "North Adelaide Golf Course compliance and budget"],
+    "TAS": ["Government defending its record against criticism"],
+    "VIC": ["Free TAFE results"]
+   }
+  },
+  {
+   "label": "Support for the office, and oversight as a defence",
+   "note": "Governments credited themselves with more funding and access for the office, and pointed to its oversight to defend bills and procurement.",
+   "from": {
+    "WA": ["Funding and access given to the Auditor General", "Government arrangements defended by citing Auditor General oversight"],
+    "NT": ["Government's integrity and audit legislation"]
+   }
+  },
+  {
+   "label": "Credit claimed for a former government's work",
+   "note": "Queensland Labor members said work on audit recommendations was largely done before the 2024 election.",
+   "from": {
+    "QLD": ["Labor's earlier work on ecotourism recommendations"]
+   }
+  }
+ ]
+}

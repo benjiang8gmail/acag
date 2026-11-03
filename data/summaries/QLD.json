@@ -1,0 +1,660 @@
+{
+ "jur": "QLD",
+ "overview": "Across 1 November 2025 to 31 October 2026, the largest share of mentions came in take-note debates on committee reports about two audits: Preparing for the Brisbane games (Report 5: 2024-25) and Growing ecotourism in Queensland (Report 12: 2022-23). Members also cited audit findings on the mental health levy, serious youth crime and cybersecurity, and 2025-26 reports were tabled and referred to committees. The Queensland Protection Commission Bill debate used the Auditor-General's independence as a comparison.",
+ "issues": [
+  {
+   "label": "Brisbane 2032 games budget and governance",
+   "note": "Speakers cited Report 5's finding that no budget captured all games costs; government members stressed accepted recommendations, opposition members asked where the consolidated budget is.",
+   "ids": [
+    "QLD-0001",
+    "QLD-0003",
+    "QLD-0004",
+    "QLD-0005",
+    "QLD-0006",
+    "QLD-0007",
+    "QLD-0008",
+    "QLD-0009",
+    "QLD-0010",
+    "QLD-0011",
+    "QLD-0018",
+    "QLD-0019",
+    "QLD-0020",
+    "QLD-0021",
+    "QLD-0023",
+    "QLD-0080",
+    "QLD-0002",
+    "QLD-0024"
+   ]
+  },
+  {
+   "label": "Ecotourism report and follow-up of recommendations",
+   "note": "Members cited Report 12's finding of no statewide policy and debated whether new strategies or earlier work, per a QAO status report, met the recommendations.",
+   "ids": [
+    "QLD-0014",
+    "QLD-0015",
+    "QLD-0016",
+    "QLD-0027",
+    "QLD-0028",
+    "QLD-0029",
+    "QLD-0030",
+    "QLD-0031",
+    "QLD-0032",
+    "QLD-0033",
+    "QLD-0034",
+    "QLD-0036",
+    "QLD-0037",
+    "QLD-0038",
+    "QLD-0039",
+    "QLD-0040",
+    "QLD-0041",
+    "QLD-0042",
+    "QLD-0043",
+    "QLD-0044",
+    "QLD-0045",
+    "QLD-0080"
+   ]
+  },
+  {
+   "label": "Mental health levy governance (Report 14: 2025-26)",
+   "note": "Members cited it as finding a lack of governance, no coordinated planning and no evaluation of levy spending; it was tabled and referred to committee.",
+   "ids": [
+    "QLD-0049",
+    "QLD-0054",
+    "QLD-0055",
+    "QLD-0056"
+   ]
+  },
+  {
+   "label": "Youth justice findings cited in debate",
+   "note": "Members cited audit findings on serious repeat offenders, rehabilitation records, boot camps, the 72-hour plan and staff shortages in detention.",
+   "ids": [
+    "QLD-0012",
+    "QLD-0013",
+    "QLD-0035",
+    "QLD-0075",
+    "QLD-0078"
+   ]
+  },
+  {
+   "label": "Cybersecurity and IT systems risk",
+   "note": "Members cited the Auditor-General on third-party cybersecurity risks and at-risk IT systems; Reports 13 and 6 of 2025-26 were tabled and referred to committees.",
+   "ids": [
+    "QLD-0050",
+    "QLD-0051",
+    "QLD-0052",
+    "QLD-0062",
+    "QLD-0060",
+    "QLD-0071",
+    "QLD-0072",
+    "QLD-0076"
+   ]
+  },
+  {
+   "label": "Auditor-General's independence, powers and role",
+   "note": "Protection Commission Bill speakers used removal protections and budget independence as comparisons; a new waterways authority falls under the Auditor-General Act; QAO annual report tabled.",
+   "ids": [
+    "QLD-0025",
+    "QLD-0026",
+    "QLD-0047",
+    "QLD-0064",
+    "QLD-0067"
+   ]
+  }
+ ],
+ "debates": [
+  {
+   "ids": [
+    "QLD-0001",
+    "QLD-0003",
+    "QLD-0004",
+    "QLD-0005",
+    "QLD-0006",
+    "QLD-0007",
+    "QLD-0008",
+    "QLD-0009",
+    "QLD-0010",
+    "QLD-0011"
+   ],
+   "gist": "Take-note debate on the committee's report on Auditor-General Report 5: 2024-25, Preparing for the Brisbane games. Government members stressed accepted recommendations and delivery progress; opposition members cited the finding that no budget captured all games costs and asked where the consolidated budget is."
+  },
+  {
+   "ids": [
+    "QLD-0028",
+    "QLD-0029",
+    "QLD-0030",
+    "QLD-0031",
+    "QLD-0032",
+    "QLD-0033",
+    "QLD-0034"
+   ],
+   "gist": "Continued take-note debate on the committee's report on Auditor-General Report 12: 2022-23, Growing ecotourism in Queensland. Members cited the finding of no statewide ecotourism policy and the committee's note that three of four recommendations were implemented; one stressed traditional owner consultation."
+  },
+  {
+   "ids": [
+    "QLD-0036",
+    "QLD-0037",
+    "QLD-0038",
+    "QLD-0039",
+    "QLD-0040",
+    "QLD-0041",
+    "QLD-0042",
+    "QLD-0043",
+    "QLD-0044",
+    "QLD-0045"
+   ],
+   "gist": "Opening take-note debate on the committee's report on Auditor-General Report 12 (ecotourism). Government members said Destination 2045 addresses the recommendations; Labor members cited a 2024 Queensland Audit Office status report finding them fully or partially implemented before the change of government."
+  },
+  {
+   "ids": [
+    "QLD-0050",
+    "QLD-0051",
+    "QLD-0052"
+   ],
+   "gist": "Appropriation Bill speeches on the committee's estimates hearings. Two members cited the Auditor-General's cybersecurity findings and said estimates gave little detail on managing the risks; a third said the Auditor-General had complained for a decade and the new whole-of-government strategy answers that."
+  },
+  {
+   "ids": [
+    "QLD-0014",
+    "QLD-0015",
+    "QLD-0016"
+   ],
+   "gist": "Resumed take-note debate on the committee's report on Auditor-General Report 12, Growing ecotourism in Queensland. Government members said Destination 2045 and 45 by 45 address the recommendations; a Labor member cited a Queensland Audit Office status report on earlier implementation."
+  },
+  {
+   "ids": [
+    "QLD-0018",
+    "QLD-0019",
+    "QLD-0020",
+    "QLD-0021",
+    "QLD-0022",
+    "QLD-0023",
+    "QLD-0024"
+   ],
+   "gist": "Take-note debate on the committee's report on Auditor-General Report 5, Preparing for the Brisbane Games. Opposition members asked where the recommended consolidated games budget is; government members cited findings on earlier governance changes and defended the current delivery plan."
+  },
+  {
+   "ids": [
+    "QLD-0059",
+    "QLD-0060",
+    "QLD-0061"
+   ],
+   "gist": "Speeches filed under the supplementary appropriation bills. Members questioned spending claims by reference to the Auditor-General, and a committee member advised that Auditor-General Reports 11, 12 and 13 were referred to portfolio committees."
+  }
+ ],
+ "items": {
+  "QLD-0001": {
+   "summary": "Noted the committee's recommendation, in its report on Auditor-General Report 5, that the Auditor-General continue to monitor governance structures over the games delivery life cycle, and claimed the previous government had no credible delivery plan after more than 1,000 days.",
+   "kind": "Seeks audit or referral",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0002": {
+   "summary": "Asked where the consolidated games budget is after the department agreed to the recommendation, citing the Auditor-General's statement at the public hearing that appropriate, accurate budgets are vital to keeping costs down.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0003": {
+   "summary": "Supported the motion on the committee's report on the Auditor-General's Brisbane 2032 audit, saying all games entities accepted its four recommendations and work is underway, and pointing to the 2032 Delivery Plan and stronger governance since the audit.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0004": {
+   "summary": "Cited Auditor-General Report 5's finding that no budget captured all estimated games costs, and Recommendation 2 for a consolidated whole-of-games budget, and asked where the budget and audited financial report promised by 2025-26 are.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0005": {
+   "summary": "Opened a speech on the committee's report on Auditor-General Report 5 by claiming the government has the 2032 games back on track, with one plan, one venue budget and clear accountability, after 1,200 days of chaos under the previous government.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0006": {
+   "summary": "Cited the audit's recommendation for a consolidated whole-of-games budget, accepted by the department, and the Auditor-General's emphasis on accurate budgeting, including lessons from the Athens Olympics overruns, and asked why the government is reluctant to provide cost details.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0007": {
+   "summary": "Opened a speech on Auditor-General Report 5 by describing Townsville's preparation to host sailing and football in 2032; the excerpt does not discuss the report's findings.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0008": {
+   "summary": "Cited Recommendation 2 of the Auditor-General's report on the importance of a consolidated games budget and its scope, noting a risk of cost overruns, and questioned how 63,000 people would be moved to Victoria Park in 2032.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0009": {
+   "summary": "Cited the Auditor-General's finding that repeated governance changes resulted in pauses and changes in planning and that Queensland did not fully use the extra time to prepare for 2032, and said Queensland inherited uncertainty after 1,200 days of games planning.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0010": {
+   "summary": "Welcomed the Auditor-General's recommendation that the government be up-front about what is in the games budget scope, and claimed the government is 'all about spin, secrecy and self-promotion' and inflates the costs of Labor-delivered infrastructure.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0011": {
+   "summary": "Resumed from 15 October the debate on Mr McDonald's motion that the House take note of State Development, Infrastructure and Works Committee Report No. 15 on Auditor-General Report 5: 2024-25, Preparing for the Brisbane Games, tabled 6 November 2025.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0012": {
+   "summary": "Cited the Auditor-General's findings on serious repeat offenders (55 per cent of proven youth crimes in 2022-23, up 65 per cent in number since 2018-19, nine of 50 sampled with no record of rehabilitation support) to argue Labor's approach did not work.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "QLD-0013": {
+   "summary": "Cited the Auditor-General's Report 15: 2023-24, Reducing serious youth crime, and a 2014 committee inquiry as showing that reducing crime means addressing contributors, and argued the bill is a bandaid and urged prioritising funding for the contributing factors.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "QLD-0014": {
+   "summary": "Said Destination 2045 and 45 by 45 directly address the Auditor-General's recommendations, giving a clear statewide policy, agency coordination, investment priorities and measurable goals, and fixing the system that held projects back.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0015": {
+   "summary": "Cited the Auditor-General's finding that Queensland lacked an overarching ecotourism policy, leaving fragmented planning, and said Destination 2045 and 45 by 45 directly address the recommendations; noted only three national park ecotourism facilities were approved since 2013.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0016": {
+   "summary": "Cited the Queensland Audit Office status report, tabled before the 2024 election, finding the former environment department and Tourism and Events Queensland had fully or partially implemented the recommendations, and said much of the response predated the change of government.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0018": {
+   "summary": "Cited the Auditor-General's recommendation for a consolidated budget with guidelines defining which costs are in or out of the games budget, said the department agreed, and asked where the consolidated budget is since works have begun.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0019": {
+   "summary": "Cited the Auditor-General's finding that Labor's governance changes led to pauses and changes in planning, so entities could not fully use Queensland's extra four years, and said the current government's plan leaves a proper legacy.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0020": {
+   "summary": "Cited the Auditor-General's public hearing evidence on accurate budgeting, including 2004 Athens games overruns of around 50 per cent, and that direct-cost transactions should be in the budget, and argued Queenslanders need to know what is counted.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0021": {
+   "summary": "Cited the Auditor-General's finding that the games governance framework provides a positive foundation, but needs continued attention on risk management, budgeting, accountability and monitoring of delivery outcomes, and said regional Queenslanders expect responsible, transparent delivery.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0022": {
+   "summary": "Quoted the then Auditor-General as saying 'I think it was the media statement' when asked how the $1 billion Gabba upgrade figure was reached, and claimed that was the financial analysis behind a figure that rose to $2.4 billion.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0023": {
+   "summary": "Quoted the audit report's line that 'Greater clarity is needed on what is included in the games budget', claimed the Auditor-General called out uncertainty over the government's 2032 budget, and said Queenslanders deserve to know the cost.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0024": {
+   "summary": "Moved that the House take note of the committee's report on Auditor-General Report 5: 2024-25, Preparing for the Brisbane Games, and thanked the Premier for the appointment as committee chair.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0025": {
+   "summary": "Mentioned the Auditor-General in passing, among office-holders (CCC chair, Public Guardian, Ombudsman and others) whose legislation sets removal grounds or parliamentary safeguards, to argue the government must justify a ministerial power to recommend removal for any reason.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0026": {
+   "summary": "Used the Auditor-General as an analogy, saying nobody would accept the Auditor-General's budget being set by the agencies audited, to argue the new commissioner needs budget independence; said Labor will move to make the commission a statutory body.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0027": {
+   "summary": "Praised the Auditor-General's ecotourism report and congratulated the Auditor-General for highlighting the past 10 years' mistakes, claiming only three ecotourism projects went ahead under the previous government and attributing this to Labor's need for Green preferences.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0028": {
+   "summary": "Opened a speech in the debate on the committee's consideration of Auditor-General Report 12, Growing ecotourism in Queensland, by describing an opportunity to grow tourism, jobs and local businesses in Mackay; the excerpt does not discuss findings.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0029": {
+   "summary": "Said Auditor-General Report 12 was delivered some time ago and machinery-of-government changes and the change of parliament gave time to consider it, and claimed it identified clear systemic failings of the previous government in ecotourism.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0030": {
+   "summary": "Cited the Auditor-General's finding that there was no overarching statewide ecotourism policy, resulting in fragmented planning, inconsistent approaches and unclear future direction, and described this as a shortcoming of the former government's approach.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0031": {
+   "summary": "Said ecotourism is critically important on the Gold Coast, and commended the minister for ensuring the Auditor-General's Report 12 recommendations have been looked into and properly dealt with.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0032": {
+   "summary": "Reported the committee's note that three of the four Auditor-General recommendations have been fully implemented, with work continuing to streamline regulatory processes, and called this encouraging progress and a commitment to addressing the audit's issues.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0033": {
+   "summary": "Cited the Auditor-General's definition of ecotourism and its recognition that traditional owner consultation is integral in protected areas, including a first recommendation to respect First Nations cultural and traditional ownership, to argue for a nature-first approach.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0034": {
+   "summary": "Resumed from 27 August the debate on Mr Molhoek's motion that the House take note of Health, Environment and Innovation Committee Report No. 15 on Auditor-General Report 12: 2022-23, Growing ecotourism in Queensland, tabled 31 October 2025.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0035": {
+   "summary": "Cited KPMG and Auditor-General evaluations of the youth boot camps, claiming both were scathing and criticised political interference in procurement, and said the Voice for Victims Foundation made 12 recommendations to apply the Auditor-General's findings to the bill.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "QLD-0036": {
+   "summary": "Spoke on the committee's report on Auditor-General Report 12, Growing ecotourism in Queensland, saying Labor will back sustainable and viable ecotourism projects that benefit regional economies and the environment; the excerpt does not discuss findings.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0037": {
+   "summary": "Cited the Auditor-General's finding that Queensland lacked a clear statewide ecotourism policy, with fragmented planning, no road map for prioritising opportunities and complex approval processes for proponents, and said that is now changing.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0038": {
+   "summary": "Said the work on the Auditor-General's ecotourism recommendations (statewide policy, road map, aligned agency plans, simpler regulation) was already done, citing the director-general's confirmation at committee hearings.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0039": {
+   "summary": "Spoke on the committee's report on Auditor-General Report 12, Growing ecotourism in Queensland, saying done properly ecotourism creates jobs, supports small businesses and regional economies and encourages people to value the environment; the excerpt does not discuss findings.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0040": {
+   "summary": "Cited the four recommendations of Auditor-General Report 12 and the Queensland Audit Office's 2024-25 status report finding the former environment department and TEQ had fully or partially implemented them, and said the work was largely done before the 2024 election.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0041": {
+   "summary": "Opened a speech on the committee's report on Auditor-General Report 12, Growing ecotourism in Queensland, saying ecotourism sustains the Hervey Bay and Fraser Coast visitor economy and underpins small businesses and local jobs; the excerpt does not discuss findings.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0042": {
+   "summary": "Thanked the Auditor-General and Queensland Audit Office for independent information on public sector performance, cited the report's findings on the need for a statewide ecotourism policy, fragmented responsibilities and complex approvals, and said the committee found its recommendations still relevant.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0043": {
+   "summary": "Cited the Auditor-General's findings that there was no statewide ecotourism policy and that approval and delivery processes were lengthy, complex and costly, and argued the previous Labor government was what held back ecotourism.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0044": {
+   "summary": "Questioned the committee's conclusion that Destination 2045 and 45 by 45 address the ecotourism recommendations, citing the Queensland Audit Office's September 2024 status report that the former department and Tourism and Events Queensland had fully or partially implemented them.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0045": {
+   "summary": "Moved that the House take note of the committee's report on Auditor-General Report 12, saying Destination 2045 and related June 2025 policies address the audit's recommendations and remedy the previous government's failure to deliver a clear ecotourism strategy.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0046": {
+   "summary": "Advised that the Committee of the Legislative Assembly referred Auditor-General Reports 17: 2025-26, Accessing Legal Aid Queensland's representation services, and 1: 2026-27, Rehabilitating and reintegrating prisoners, to the Justice, Integrity and Community Safety Committee.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "QLD-0047": {
+   "summary": "Tabled the Queensland Audit Office's Annual Report 2025-26 under section 72AA of the Auditor-General Act 2009 and commended it to the House.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0048": {
+   "summary": "Reported the Leader of the Opposition's submission, on an alleged deliberate misleading of the House, that definitions in Auditor-General reports show a reduction in WAUs means fewer and less complex services for patients.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "QLD-0049": {
+   "summary": "Cited Auditor-General Report 14: 2025-26, Managing funding from the mental health levy, as identifying the former government's failure to establish governance and accountability oversight, linking it to a $93.1 million commitment for ED mental health nurses, and tabled the report.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "QLD-0050": {
+   "summary": "Cited the Auditor-General's highlighting of significant cybersecurity risks, said the committee received little detail on how they are managed, and claimed the 'first ever' whole-of-government strategy formalised programs already put in place by Labor.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "QLD-0051": {
+   "summary": "Cited the Auditor-General's identification of serious shortcomings in managing third-party cybersecurity risks, and said estimates gave limited detail on the department's progress responding, despite its whole-of-government oversight role.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "QLD-0052": {
+   "summary": "Claimed the Auditor-General had complained for at least a decade that government was not ready on cybersecurity, and said this is the first government to get a whole-of-government cybersecurity strategy under way.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "QLD-0053": {
+   "summary": "Tabled papers included Auditor-General Report 17: 2025-26, Accessing Legal Aid Queensland's representation services, and Report 1: 2026-27, Rehabilitating and reintegrating prisoners.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "QLD-0054": {
+   "summary": "Advised that the Committee of the Legislative Assembly referred Auditor-General Report 14: 2025-26, Managing funding from the mental health levy, to the Governance, Energy and Finance Committee under standing order 194B.",
+   "kind": "Report tabled or noted",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "QLD-0055": {
+   "summary": "Cited the Auditor-General's mental health levy report as finding a lack of governance, no coordinated planning and no evaluation of levy spending, and claimed the former government did not know where the money was going.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "QLD-0056": {
+   "summary": "Tabled papers included Auditor-General Report 14: 2025-26, Managing funding from the mental health levy, and a committee's Report No. 27 on Auditor-General Report 14: 2024-25, Managing Minjerribah futures funding.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0057": {
+   "summary": "Tabled papers included Education, Arts and Communities Committee Report No. 16 of the 58th Parliament, Consideration of Auditor-General Report 15: 2024-25, Education 2024.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "QLD-0058": {
+   "summary": "Tabled papers included an erratum to Auditor-General Report 11: 2025-26, State entities 2025, and State Development, Infrastructure and Works Committee Report No. 23, Consideration of Auditor-General Report 9: 2024-25, Major projects 2024.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0059": {
+   "summary": "Argued the Treasurer's claim of a $461 million black hole in child safety in 2024-25 has not been verified by an independent authority such as the Auditor-General or Treasury, calling it standard budget profiling.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "QLD-0060": {
+   "summary": "Advised that Auditor-General Report 11: 2025-26, State entities 2025, was referred to the Governance, Energy and Finance Committee, and Reports 12, Local government 2025, and 13, Managing third-party cyber security risks, to the Local Government, Small Business and Customer Service Committee.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0061": {
+   "summary": "Cited the Auditor-General's disclosure last financial year that contractor and consultant spending rose $474 million, alongside media reports of $4 billion consultancy spend, and argued this pressures the Treasurer and sets the scene for cuts.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "QLD-0062": {
+   "summary": "Reported receipt from the Auditor-General of Report 13: 2025-26, Managing third-party cybersecurity risks, and tabled the report for the information of members.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "QLD-0063": {
+   "summary": "Heading for an item setting portfolio committee reporting dates and referring Auditor-General's reports to committees.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0064": {
+   "summary": "Tabled papers included Auditor-General Report 11: 2025-26, State entities 2025, and a committee's Report No. 22, 58th Parliament, titled Oversight of the Auditor-General.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0065": {
+   "summary": "Reported receipt from the Auditor-General of Report 10: 2025-26, Managing Queensland's finances 2025, and tabled the report for the information of members.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "QLD-0066": {
+   "summary": "Advised that the Committee of the Legislative Assembly referred Auditor-General Report 10: 2025-26, Managing Queensland's finances 2025, to the Governance, Energy and Finance Committee under standing order 194B.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "QLD-0067": {
+   "summary": "Said the Sunshine Coast Waterways Authority, as a public sector entity, will be subject to the Auditor-General Act 2009, with annual financial statement audits and performance audits at the Auditor-General's discretion, and will report quarterly to the minister.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0068": {
+   "summary": "Tabled papers included Governance, Energy and Finance Committee Report No. 21, Consideration of Auditor-General Report 3: 2025-26, 2025 status of Auditor-General's recommendations.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0069": {
+   "summary": "Advised that the Committee of the Legislative Assembly referred Auditor-General Report 8: 2025-26, Major projects 2025, to the State Development, Infrastructure and Works Committee and Report 9: 2025-26, Health 2025, to the Health, Environment and Innovation Committee.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0070": {
+   "summary": "Tabled papers included Auditor-General Report 8: 2025-26, Major projects 2025, Report 9: 2025-26, Health 2025, and Primary Industries and Resources Committee Report No. 14, Examination of Auditor-General Report 14: 2023-24, Queensland's regions 2023.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0071": {
+   "summary": "Quoted an Auditor-General report that IT systems are a vital state asset needing active management and security, and claimed almost 200 systems are now at risk after 10 years of Labor.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "QLD-0072": {
+   "summary": "Advised that Auditor-General Report 6: 2025-26, Information systems 2025, was referred to the Local Government, Small Business and Customer Service Committee and Report 7: 2025-26, Energy 2025, to the Governance, Energy and Finance Committee.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "QLD-0073": {
+   "summary": "Reported receipt from the Auditor-General of Report 7: 2025-26, Energy 2025, and tabled the report for the information of members.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "QLD-0074": {
+   "summary": "Quoted the then Auditor-General telling an estimates hearing 'All I could find was a media release' when asked about a $1 billion upgrade figure and its business case, which the member said later rose to $2.7 billion.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "QLD-0075": {
+   "summary": "Cited the Auditor-General's finding that not every serious repeat offender received the 72-hour plan, said the plan was found not to be based on evidence, and described the current government's 12 months of support after detention.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "QLD-0076": {
+   "summary": "Tabled papers included Auditor-General Report 6: 2025-26, Information systems 2025, alongside the Queensland Racing Appeals Panel's annual performance report 2024-25.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "QLD-0077": {
+   "summary": "Advised that the Committee of the Legislative Assembly referred Auditor-General Report 5: 2025-26, Attracting and retaining teachers in regional and remote Queensland, to the Education, Arts and Communities Committee.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "QLD-0078": {
+   "summary": "Cited the Auditor-General's finding that critical staff shortages left youth in separation rooms in detention centres, and attributed the shortages to the previous government in reply to a question.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "QLD-0079": {
+   "summary": "Said the Auditor-General had called the sustaining capital program a total failure and a total lack of infrastructure investment, while listing $18.5 billion for 2,600 new beds and $3 billion to revive infrastructure maintenance.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "QLD-0080": {
+   "summary": "Tabled papers included Auditor-General Report 5: 2025-26, Attracting and retaining teachers in regional and remote Queensland, and committee reports on Auditor-General reports on ecotourism, the Brisbane Games and reducing serious youth crime.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  }
+ }
+}

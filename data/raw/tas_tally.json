@@ -1,0 +1,711 @@
+{
+ "failed": [
+  "HA Wednesday 5 November 2025.docx: title page says 2025-12-02, so it was skipped"
+ ],
+ "tally": [
+  {
+   "date": "2025-11-04",
+   "name": "HA Tuesday 4 November 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1788
+  },
+  {
+   "date": "2025-11-04",
+   "name": "LC Tuesday 4 November 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 36,
+   "records": 36,
+   "paragraphs": 1379
+  },
+  {
+   "date": "2025-11-05",
+   "name": "LC Wednesday 5 November 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 855
+  },
+  {
+   "date": "2025-11-06",
+   "name": "HA Thursday 6 November 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 731
+  },
+  {
+   "date": "2025-11-06",
+   "name": "LC Thursday 6 November 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 307
+  },
+  {
+   "date": "2025-11-11",
+   "name": "HA Tuesday 11 November 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 56,
+   "records": 56,
+   "paragraphs": 1113
+  },
+  {
+   "date": "2025-11-11",
+   "name": "LC Tuesday 11 November 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 7,
+   "records": 7,
+   "paragraphs": 761
+  },
+  {
+   "date": "2025-11-12",
+   "name": "HA Wednesday 12 November 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 28,
+   "records": 28,
+   "paragraphs": 1328
+  },
+  {
+   "date": "2025-11-12",
+   "name": "LC Wednesday 12 November 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 4,
+   "records": 4,
+   "paragraphs": 801
+  },
+  {
+   "date": "2025-11-13",
+   "name": "HA Thursday 13 November 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 10,
+   "records": 10,
+   "paragraphs": 1615
+  },
+  {
+   "date": "2025-11-13",
+   "name": "LC Thursday 13 November 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 708
+  },
+  {
+   "date": "2025-11-17",
+   "name": "HA Estimates Committee A Monday 17 November 2025.docx",
+   "chamber": "House of Assembly Estimates Committee A",
+   "total": 20,
+   "records": 20,
+   "paragraphs": 860
+  },
+  {
+   "date": "2025-11-17",
+   "name": "LC Estimates Committee A - Monday 17 November 2025.docx",
+   "chamber": "Legislative Council Estimates Committee A",
+   "total": 10,
+   "records": 10,
+   "paragraphs": 1220
+  },
+  {
+   "date": "2025-11-17",
+   "name": "LC Estimates Committee B - Monday 17 November 2025.docx",
+   "chamber": "Legislative Council Estimates Committee B",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1083
+  },
+  {
+   "date": "2025-12-02",
+   "name": "HA Tuesday 2 December 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 23,
+   "records": 23,
+   "paragraphs": 1514
+  },
+  {
+   "date": "2025-12-02",
+   "name": "LC Tuesday 2 December 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 37,
+   "records": 37,
+   "paragraphs": 1683
+  },
+  {
+   "date": "2025-12-03",
+   "name": "HA Wednesday 3 December 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 24,
+   "records": 24,
+   "paragraphs": 1812
+  },
+  {
+   "date": "2025-12-03",
+   "name": "LC Wednesday 3 December 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 3,
+   "records": 3,
+   "paragraphs": 2114
+  },
+  {
+   "date": "2025-12-04",
+   "name": "HA Thursday 4 December 2025.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1549
+  },
+  {
+   "date": "2025-12-04",
+   "name": "LC Thursday 4 December 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1558
+  },
+  {
+   "date": "2025-12-09",
+   "name": "LC Tuesday 9 December 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1083
+  },
+  {
+   "date": "2025-12-10",
+   "name": "LC Wednesday 10 December 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 485
+  },
+  {
+   "date": "2025-12-11",
+   "name": "LC Thursday 11 December 2025.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 878
+  },
+  {
+   "date": "2026-03-03",
+   "name": "HA Tuesday 3 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 760
+  },
+  {
+   "date": "2026-03-04",
+   "name": "HA Wednesday 4 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 993
+  },
+  {
+   "date": "2026-03-05",
+   "name": "HA Thursday 5 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 1233
+  },
+  {
+   "date": "2026-03-06",
+   "name": "LC Friday 6 March 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 63
+  },
+  {
+   "date": "2026-03-17",
+   "name": "HA Tuesday 17 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 5,
+   "records": 5,
+   "paragraphs": 1096
+  },
+  {
+   "date": "2026-03-17",
+   "name": "LC Tuesday 17 March 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 1282
+  },
+  {
+   "date": "2026-03-18",
+   "name": "HA Wednesday 18 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 12,
+   "records": 12,
+   "paragraphs": 1405
+  },
+  {
+   "date": "2026-03-18",
+   "name": "LC Wednesday 18 March 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 611
+  },
+  {
+   "date": "2026-03-19",
+   "name": "HA Thursday 19 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 883
+  },
+  {
+   "date": "2026-03-19",
+   "name": "LC Thursday 19 March 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 610
+  },
+  {
+   "date": "2026-03-24",
+   "name": "HA Tuesday 24 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1507
+  },
+  {
+   "date": "2026-03-24",
+   "name": "LC Tuesday 24 March 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1201
+  },
+  {
+   "date": "2026-03-25",
+   "name": "HA Wednesday 25 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 1606
+  },
+  {
+   "date": "2026-03-25",
+   "name": "LC Wednesday 25 March 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 392
+  },
+  {
+   "date": "2026-03-26",
+   "name": "HA Thursday 26 March 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 1143
+  },
+  {
+   "date": "2026-03-26",
+   "name": "LC Thursday 26 March 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 1332
+  },
+  {
+   "date": "2026-04-14",
+   "name": "HA Tuesday 14 April 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1243
+  },
+  {
+   "date": "2026-04-14",
+   "name": "LC Tuesday 14 April 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 1026
+  },
+  {
+   "date": "2026-04-15",
+   "name": "HA Wednesday 15 April 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1991
+  },
+  {
+   "date": "2026-04-15",
+   "name": "LC Wednesday 15 April 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 1179
+  },
+  {
+   "date": "2026-04-16",
+   "name": "HA Thursday 16 April 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1576
+  },
+  {
+   "date": "2026-04-16",
+   "name": "LC Thursday 16 April 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 577
+  },
+  {
+   "date": "2026-05-05",
+   "name": "HA Tuesday 5 May 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1229
+  },
+  {
+   "date": "2026-05-07",
+   "name": "HA Thursday 7 May 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 6,
+   "records": 6,
+   "paragraphs": 1349
+  },
+  {
+   "date": "2026-05-15",
+   "name": "LC Friday 15 May 2026 - Quorum Call.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 73
+  },
+  {
+   "date": "2026-05-19",
+   "name": "HA Tuesday 19 May 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1265
+  },
+  {
+   "date": "2026-05-19",
+   "name": "LC Tuesday 19 May 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1164
+  },
+  {
+   "date": "2026-05-20",
+   "name": "HA Wednesday 20 May 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 15,
+   "records": 15,
+   "paragraphs": 1357
+  },
+  {
+   "date": "2026-05-21",
+   "name": "HA Thursday 21 May 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 616
+  },
+  {
+   "date": "2026-05-21",
+   "name": "LC Thursday 21 May 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 174
+  },
+  {
+   "date": "2026-05-27",
+   "name": "LC Wednesday 27 May 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 777
+  },
+  {
+   "date": "2026-05-28",
+   "name": "LC Thursday 28 May 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 697
+  },
+  {
+   "date": "2026-06-16",
+   "name": "HA Tuesday 16 June 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 12,
+   "records": 12,
+   "paragraphs": 959
+  },
+  {
+   "date": "2026-06-18",
+   "name": "HA Thursday 18 June 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 1057
+  },
+  {
+   "date": "2026-06-19",
+   "name": "LC Friday 19 June 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 59
+  },
+  {
+   "date": "2026-06-25",
+   "name": "LC Thursday 25 June 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 846
+  },
+  {
+   "date": "2026-08-11",
+   "name": "HA Tuesday 11 August 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 13,
+   "records": 13,
+   "paragraphs": 1283
+  },
+  {
+   "date": "2026-08-11",
+   "name": "LC Tuesday 11 August 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 1457
+  },
+  {
+   "date": "2026-08-12",
+   "name": "HA Wednesday 12 August 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 1453
+  },
+  {
+   "date": "2026-08-12",
+   "name": "LC Wednesday 12 August 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 4,
+   "records": 4,
+   "paragraphs": 1066
+  },
+  {
+   "date": "2026-08-13",
+   "name": "HA Thursday 13 August 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 2,
+   "records": 2,
+   "paragraphs": 1168
+  },
+  {
+   "date": "2026-08-13",
+   "name": "LC Thursday 13 August 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 3,
+   "records": 3,
+   "paragraphs": 756
+  },
+  {
+   "date": "2026-08-18",
+   "name": "HA Tuesday 18 August 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 29,
+   "records": 29,
+   "paragraphs": 1053
+  },
+  {
+   "date": "2026-08-18",
+   "name": "LC Tuesday 18 August 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 73,
+   "records": 73,
+   "paragraphs": 1234
+  },
+  {
+   "date": "2026-08-19",
+   "name": "HA Wednesday 19 August 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 10,
+   "records": 10,
+   "paragraphs": 1145
+  },
+  {
+   "date": "2026-08-20",
+   "name": "HA Thursday 20 August 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 863
+  },
+  {
+   "date": "2026-08-20",
+   "name": "LC Thursday 20 August 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 831
+  },
+  {
+   "date": "2026-09-01",
+   "name": "HA Tuesday 1 September 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1066
+  },
+  {
+   "date": "2026-09-01",
+   "name": "LC Tuesday 1 September 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 40,
+   "records": 40,
+   "paragraphs": 822
+  },
+  {
+   "date": "2026-09-02",
+   "name": "HA  Wednesday 2 September 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 4,
+   "records": 4,
+   "paragraphs": 1380
+  },
+  {
+   "date": "2026-09-02",
+   "name": "LC Wednesday 2 September 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 915
+  },
+  {
+   "date": "2026-09-03",
+   "name": "HA Thursday 3 September 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 1,
+   "records": 1,
+   "paragraphs": 946
+  },
+  {
+   "date": "2026-09-03",
+   "name": "LC Thursday 3 September 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 3,
+   "records": 3,
+   "paragraphs": 806
+  },
+  {
+   "date": "2026-09-08",
+   "name": "HA Tuesday 8 September 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 3,
+   "records": 3,
+   "paragraphs": 1018
+  },
+  {
+   "date": "2026-09-08",
+   "name": "LC Tuesday 8 September 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 22,
+   "records": 22,
+   "paragraphs": 658
+  },
+  {
+   "date": "2026-09-09",
+   "name": "LC Wednesday 9 September 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 757
+  },
+  {
+   "date": "2026-09-10",
+   "name": "HA Thursday 10 September 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 1696
+  },
+  {
+   "date": "2026-09-10",
+   "name": "LC Thursday 10 September 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 772
+  },
+  {
+   "date": "2026-09-11",
+   "name": "LC Friday 11 September 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 26
+  },
+  {
+   "date": "2026-10-27",
+   "name": "HA Tuesday 27 October 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 84,
+   "records": 84,
+   "paragraphs": 1202
+  },
+  {
+   "date": "2026-10-27",
+   "name": "LC Tuesday 27 October 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 4,
+   "records": 4,
+   "paragraphs": 1070
+  },
+  {
+   "date": "2026-10-28",
+   "name": "HA Wednesday 28 October 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 8,
+   "records": 8,
+   "paragraphs": 1336
+  },
+  {
+   "date": "2026-10-28",
+   "name": "LC Wednesday 28 October 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 5,
+   "records": 5,
+   "paragraphs": 945
+  },
+  {
+   "date": "2026-10-29",
+   "name": "HA Thursday 29 October 2026.docx",
+   "chamber": "House of Assembly",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 343
+  },
+  {
+   "date": "2026-10-29",
+   "name": "LC Thursday 29 October 2026.docx",
+   "chamber": "Legislative Council",
+   "total": 0,
+   "records": 0,
+   "paragraphs": 329
+  }
+ ]
+}

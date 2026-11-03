@@ -1,0 +1,232 @@
+{
+ "chamberDays": 68,
+ "pdfTotal": 481,
+ "pageTotal": 398,
+ "gaps": [
+  {
+   "k": "2026-09-24|Legislative Council",
+   "pdfMentions": 5,
+   "pageMentions": 4
+  },
+  {
+   "k": "2026-09-23|Legislative Assembly",
+   "pdfMentions": 8,
+   "pageMentions": 6
+  },
+  {
+   "k": "2026-09-23|Legislative Council",
+   "pdfMentions": 22,
+   "pageMentions": 20
+  },
+  {
+   "k": "2026-09-22|Legislative Council",
+   "pdfMentions": 6,
+   "pageMentions": 4
+  },
+  {
+   "k": "2026-09-10|Legislative Council",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-09-09|Legislative Assembly",
+   "pdfMentions": 56,
+   "pageMentions": 55
+  },
+  {
+   "k": "2026-09-09|Legislative Council",
+   "pdfMentions": 48,
+   "pageMentions": 47
+  },
+  {
+   "k": "2026-09-08|Legislative Assembly",
+   "pdfMentions": 8,
+   "pageMentions": 5
+  },
+  {
+   "k": "2026-09-08|Legislative Council",
+   "pdfMentions": 3,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-08-27|Legislative Council",
+   "pdfMentions": 11,
+   "pageMentions": 10
+  },
+  {
+   "k": "2026-08-26|Legislative Council",
+   "pdfMentions": 13,
+   "pageMentions": 12
+  },
+  {
+   "k": "2026-08-26|Legislative Assembly",
+   "pdfMentions": 9,
+   "pageMentions": 8
+  },
+  {
+   "k": "2026-08-12|Legislative Assembly",
+   "pdfMentions": 10,
+   "pageMentions": 4
+  },
+  {
+   "k": "2026-07-30|Legislative Council",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-07-28|Legislative Council",
+   "pdfMentions": 4,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-06-17|Legislative Council",
+   "pdfMentions": 10,
+   "pageMentions": 9
+  },
+  {
+   "k": "2026-06-17|Legislative Assembly",
+   "pdfMentions": 12,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-06-16|Legislative Council",
+   "pdfMentions": 7,
+   "pageMentions": 6
+  },
+  {
+   "k": "2026-06-04|Legislative Council",
+   "pdfMentions": 4,
+   "pageMentions": 3
+  },
+  {
+   "k": "2026-06-03|Legislative Council",
+   "pdfMentions": 7,
+   "pageMentions": 6
+  },
+  {
+   "k": "2026-06-03|Legislative Assembly",
+   "pdfMentions": 3,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-06-02|Legislative Council",
+   "pdfMentions": 6,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-05-13|Legislative Council",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-05-13|Legislative Assembly",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-05-12|Legislative Assembly",
+   "pdfMentions": 6,
+   "pageMentions": 2
+  },
+  {
+   "k": "2026-05-05|Legislative Assembly",
+   "pdfMentions": 5,
+   "pageMentions": 3
+  },
+  {
+   "k": "2026-04-01|Legislative Council",
+   "pdfMentions": 7,
+   "pageMentions": 6
+  },
+  {
+   "k": "2026-04-01|Legislative Assembly",
+   "pdfMentions": 5,
+   "pageMentions": 3
+  },
+  {
+   "k": "2026-03-31|Legislative Council",
+   "pdfMentions": 6,
+   "pageMentions": 5
+  },
+  {
+   "k": "2026-03-18|Legislative Assembly",
+   "pdfMentions": 7,
+   "pageMentions": 5
+  },
+  {
+   "k": "2026-03-18|Legislative Council",
+   "pdfMentions": 24,
+   "pageMentions": 23
+  },
+  {
+   "k": "2026-03-17|Legislative Assembly",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-03-04|Legislative Council",
+   "pdfMentions": 16,
+   "pageMentions": 15
+  },
+  {
+   "k": "2026-03-04|Legislative Assembly",
+   "pdfMentions": 4,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-02-18|Legislative Assembly",
+   "pdfMentions": 5,
+   "pageMentions": 1
+  },
+  {
+   "k": "2026-02-18|Legislative Council",
+   "pdfMentions": 3,
+   "pageMentions": 2
+  },
+  {
+   "k": "2026-02-04|Legislative Assembly",
+   "pdfMentions": 8,
+   "pageMentions": 7
+  },
+  {
+   "k": "2025-12-04|Legislative Council",
+   "pdfMentions": 5,
+   "pageMentions": 4
+  },
+  {
+   "k": "2025-12-03|Legislative Council",
+   "pdfMentions": 5,
+   "pageMentions": 4
+  },
+  {
+   "k": "2025-12-03|Legislative Assembly",
+   "pdfMentions": 3,
+   "pageMentions": 1
+  },
+  {
+   "k": "2025-11-19|Legislative Council",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2025-11-18|Legislative Council",
+   "pdfMentions": 6,
+   "pageMentions": 5
+  },
+  {
+   "k": "2025-11-18|Legislative Assembly",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2025-11-14|Legislative Council",
+   "pdfMentions": 2,
+   "pageMentions": 1
+  },
+  {
+   "k": "2025-11-13|Legislative Council",
+   "pdfMentions": 6,
+   "pageMentions": 7
+  }
+ ]
+}

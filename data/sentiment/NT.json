@@ -1,0 +1,159 @@
+{
+ "jur": "NT",
+ "items": {
+  "NT-0001": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks the Auditor-General for professional assistance and valuable contribution to the committee's work"
+  },
+  "NT-0002": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0003": {
+   "s": "praise",
+   "who": "government",
+   "what": "Attorney-General says Public Trustee amendments give clearer process; Auditor-General supported greater clarity on timeframes"
+  },
+  "NT-0004": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0005": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0006": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says NT ranked last of 12 jurisdictions; Auditor-General cannot fully examine whether public money delivers"
+  },
+  "NT-0007": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0008": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Says Auditor-General role must stay independent; its work extremely important for accountability for taxpayers' dollars"
+  },
+  "NT-0009": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0010": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0011": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Auditor-General could have standard performance review powers; government's cannot-afford claim not true"
+  },
+  "NT-0012": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0013": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member's motion notes with concern NT Auditor-General ranked last for independence, lacking performance audit power"
+  },
+  "NT-0014": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member cites report: NT worst in Australasia for Auditor-General independence, lacking adequate protection from executive influence"
+  },
+  "NT-0015": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0016": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0017": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0018": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0019": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says Bill keeps Auditor-General outside and independent of new commission; contrary allegations ridiculous"
+  },
+  "NT-0020": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NT-0021": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says submissions raised threats to Auditor-General's independence; passing the Bill will be a disservice"
+  },
+  "NT-0022": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member says new Inspector, overseeing commissioner and Auditor-General, adds oversight that previously did not exist"
+  },
+  "NT-0023": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "Auditor-General independence ranking and performance audit powers",
+    "note": "Member for Johnston attacks the government over NT ranking last for Auditor-General independence and the office lacking performance audit powers.",
+    "ids": [
+     "NT-0014",
+     "NT-0013",
+     "NT-0006",
+     "NT-0011"
+    ]
+   },
+   {
+    "label": "Integrity and Ethics Commissioner Bill and Auditor-General independence",
+    "note": "Member for Johnston attacks the government's Bill, saying submissions raised threats to Auditor-General independence and passing it will be a disservice.",
+    "ids": [
+     "NT-0021"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Government's integrity and audit legislation",
+    "note": "Government members credit their own Bills: Auditor-General stays independent, a new inspector adds oversight, Public Trustee audit process becomes clearer.",
+    "ids": [
+     "NT-0019",
+     "NT-0022",
+     "NT-0003"
+    ]
+   },
+   {
+    "label": "Auditor-General's assistance to the Public Accounts Committee",
+    "note": "Auditor-General thanked for professional assistance and valuable contribution to the Public Accounts Committee's work.",
+    "ids": [
+     "NT-0001"
+    ]
+   }
+  ]
+ }
+}

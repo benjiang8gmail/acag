@@ -1,0 +1,639 @@
+{
+ "jur": "NSW",
+ "items": {
+  "NSW-0001": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0002": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Auditor-General disagreed with opposition's Regional Rail procurement; no train delivered after eight years, member says"
+  },
+  "NSW-0003": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0004": {
+   "s": "praise",
+   "who": "government",
+   "what": "Defends small commitments grants program as effectively administered, per Auditor-General, against committee's rorts claim"
+  },
+  "NSW-0005": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Former Government's train procurement a litany of missteps and failures, per Auditor-General"
+  },
+  "NSW-0006": {
+   "s": "attack",
+   "who": "government",
+   "what": "Devastating verdict on coastal framework; grant matching rules leave councils unable to fund sand nourishment"
+  },
+  "NSW-0007": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0008": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0009": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Former Government's trains did not fit tracks; $2.5 billion cost blowouts, per Auditor-General"
+  },
+  "NSW-0010": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0011": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0012": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0013": {
+   "s": "attack",
+   "who": "other",
+   "what": "Member says University of Wollongong hid $169 million expense until Auditor-General forced revision"
+  },
+  "NSW-0014": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government on notice over Concord Hospital; Auditor-General must shine torch on Sydney Local Health District leadership"
+  },
+  "NSW-0015": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government agencies do not procure or manage consultants effectively; scathing Auditor-General report, member says"
+  },
+  "NSW-0016": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Former Liberal Government stopped tracking outsourced road contract benefits, per Auditor-General; a shameful legacy"
+  },
+  "NSW-0017": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Labor took $30 million from Regional Roads Fund to prop up the city"
+  },
+  "NSW-0018": {
+   "s": "attack",
+   "who": "government",
+   "what": "Scathing Auditor-General report: Government gave no evidence projects met Snowy Hydro Legacy Fund conditions"
+  },
+  "NSW-0019": {
+   "s": "attack",
+   "who": "government",
+   "what": "Successive governments have not resourced the land claims process; backlog growing, citing Auditor-General finding"
+  },
+  "NSW-0020": {
+   "s": "attack",
+   "who": "government",
+   "what": "Labor prioritises Crown land bill over 44,000 Aboriginal land claims; Auditor-General found departments lacked required resources"
+  },
+  "NSW-0021": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0022": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0023": {
+   "s": "attack",
+   "who": "government",
+   "what": "Department failing statutory land claims duty, per Auditor-General, yet bill gives government more power"
+  },
+  "NSW-0024": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Commends the Auditor-General as responsive to the House"
+  },
+  "NSW-0025": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0026": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0027": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0028": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0029": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0030": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Regional rail plan pulled out of the fire; Auditor-General identified significant procurement shortcomings, cost increases"
+  },
+  "NSW-0031": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Former government bungled regional rail fleet program, prompting scathing Auditor-General report"
+  },
+  "NSW-0032": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says 50 per cent of Closing the Gap spending is wasted, citing Auditor-General"
+  },
+  "NSW-0033": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0034": {
+   "s": "attack",
+   "who": "government",
+   "what": "Presses Minister on action after critical Auditor-General report on Resilient Homes Program delivery"
+  },
+  "NSW-0035": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0036": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0037": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0038": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government says Resilient Homes Program rolling out at pace, as Auditor General's report expected"
+  },
+  "NSW-0039": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Minister says the Auditor-General does important work, taken incredibly seriously"
+  },
+  "NSW-0040": {
+   "s": "attack",
+   "who": "government",
+   "what": "$980 million programs have no business case, delivered zero of 4,382 promised homes, per Auditor-General"
+  },
+  "NSW-0041": {
+   "s": "attack",
+   "who": "government",
+   "what": "Asked Auditor-General to review NSW Ambulance over-reliance on acting roles and recruitment transparency"
+  },
+  "NSW-0042": {
+   "s": "attack",
+   "who": "government",
+   "what": "Audit consideration 'not an accident'; ambulance recruitment records must be tested in daylight, member says"
+  },
+  "NSW-0043": {
+   "s": "attack",
+   "who": "other",
+   "what": "Racing NSW disgracefully slow getting projects moving in country New South Wales, per Auditor-General report"
+  },
+  "NSW-0044": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General report shows Regional Roads Fund a mess; Government pilfered money for city commitments"
+  },
+  "NSW-0045": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General report shows deficiencies in Regional Roads Fund; buck stops with Minister, member says"
+  },
+  "NSW-0046": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government backflipped on Cuttagee Bridge; Auditor-General classed bridge at risk of exceeding its funding allocation"
+  },
+  "NSW-0047": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General findings on Regional Roads Fund a big, flashing red light for accountability, member says"
+  },
+  "NSW-0048": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government opposes papers: Auditor-General already investigated; says transparent roads funding decisions will prove a big change"
+  },
+  "NSW-0049": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0050": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0051": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0052": {
+   "s": "attack",
+   "who": "government",
+   "what": "Outraged member refers contract to Auditor-General over rubbish left uncleared month after month"
+  },
+  "NSW-0053": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0054": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Auditor-General handed down damning report into privatisation of Northern Beaches Hospital"
+  },
+  "NSW-0055": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0056": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0057": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General slammed Government for failing to fund culturally appropriate services for First Nations people after custody"
+  },
+  "NSW-0058": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0059": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Minister accuses member of rewording Auditor-General's findings; contrasts with pork-barrelling under former Government"
+  },
+  "NSW-0060": {
+   "s": "attack",
+   "who": "government",
+   "what": "Damning Auditor-General report: department approved millions without business cases; presses Minister on Thornton Road Bridge"
+  },
+  "NSW-0061": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0062": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0063": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Electoral Commission's silence would be unimaginable from the Auditor-General"
+  },
+  "NSW-0064": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0065": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0066": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Auditor-General slammed opposition's regional rail fleet procurement as ineffective"
+  },
+  "NSW-0067": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member asks why Electoral Commission does not make public statements as ICAC and Auditor-General do"
+  },
+  "NSW-0068": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Opposition sent billions offshore; Auditor-General report showed massive cost blowouts and inferior products from poor decision-making"
+  },
+  "NSW-0069": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government has done nothing since Auditor-General asked it to update Grants Administration Guide"
+  },
+  "NSW-0070": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "2019 Auditor-General report slammed former Government's politicisation of station upgrades"
+  },
+  "NSW-0071": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Independent reviews including Auditor-General scathing of child protection system the Coalition left; a mess"
+  },
+  "NSW-0072": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0073": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0074": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government lost $907 million in three years mismanaging major projects, per Auditor-General"
+  },
+  "NSW-0075": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General asked to run ruler over grants program; a strange thing for Government, member says"
+  },
+  "NSW-0076": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Former government's privatisation impacted patient services"
+  },
+  "NSW-0077": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0078": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0079": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Inherited project plagued by ineffective procurement and cost blowouts, per Auditor-General"
+  },
+  "NSW-0080": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0081": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Previous Government engaged consultants 10,006 times without proper procurement policies, per Auditor-General"
+  },
+  "NSW-0082": {
+   "s": "attack",
+   "who": "other",
+   "what": "Liverpool City Council one of worst offenders, holding $317 million in developer contributions, citing Auditor-General"
+  },
+  "NSW-0083": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0084": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government's description of Hardship Review Board as independent misleading and inaccurate, citing Auditor-General"
+  },
+  "NSW-0085": {
+   "s": "praise",
+   "who": "government",
+   "what": "Minister says reform program underway would address some concerns raised by the Auditor-General"
+  },
+  "NSW-0086": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0087": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0088": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0089": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0090": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0091": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0092": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0093": {
+   "s": "attack",
+   "who": "government",
+   "what": "Firearms Registry not adequately assessing reasons, per Auditor-General; an administrative and governance failure, member says"
+  },
+  "NSW-0094": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government bill reflects Auditor-General's 2022 audit; did not just pop into Minister's mind, member says"
+  },
+  "NSW-0095": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0096": {
+   "s": "attack",
+   "who": "government",
+   "what": "Agencies relied on anonymity to avoid cyber upgrades; Auditor-General says aggregated reporting reduces transparency"
+  },
+  "NSW-0097": {
+   "s": "praise",
+   "who": "other",
+   "what": "HSU members' persistence, including meeting the Auditor-General, is why a transition team is underway"
+  },
+  "NSW-0098": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0099": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0100": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member pointedly invokes Auditor-General's rail rolling stock procurement report against Opposition criticism on transport procurement"
+  },
+  "NSW-0101": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General reports troubling, system falling short; $1.4 billion in adjustments, low risk management maturity"
+  },
+  "NSW-0102": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government's housing office closure disgraceful; Auditor-General's social housing audit findings quite sobering, member says"
+  },
+  "NSW-0103": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Opposition's trains more than six years late, extra $2.5 billion; Auditor-General's report scathing"
+  },
+  "NSW-0104": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Auditor-General's report shows opposition's failures in regional rail and Mariyung fleet procurement"
+  },
+  "NSW-0105": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Previous Government's fleets not effectively procured; $2.5 billion blowout on overseas-built trains, per Auditor-General"
+  },
+  "NSW-0106": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Scathing Auditor-General review of trains up to six years late, costing extra $2½ billion"
+  },
+  "NSW-0107": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "NSW-0108": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "Former government's train procurement",
+    "note": "Government members blame the former government for offshored fleets, ineffective procurement, cost blowouts and years-late trains, citing Auditor-General reports.",
+    "ids": [
+     "NSW-0002",
+     "NSW-0005",
+     "NSW-0009",
+     "NSW-0030",
+     "NSW-0031",
+     "NSW-0066",
+     "NSW-0068",
+     "NSW-0079",
+     "NSW-0100",
+     "NSW-0103",
+     "NSW-0104",
+     "NSW-0105",
+     "NSW-0106"
+    ]
+   },
+   {
+    "label": "Regional Roads Fund administration",
+    "note": "Opposition and Greens attack the government over missing business cases, unexplained project transfers and regional money spent in Wollongong.",
+    "ids": [
+     "NSW-0017",
+     "NSW-0018",
+     "NSW-0044",
+     "NSW-0045",
+     "NSW-0046",
+     "NSW-0047",
+     "NSW-0060"
+    ]
+   },
+   {
+    "label": "Former government's privatisation, contracting and pork-barrelling legacy",
+    "note": "Government members blame the former government for hospital privatisation, road contracts, consultants, politicised station upgrades, pork-barrelling and child protection.",
+    "ids": [
+     "NSW-0016",
+     "NSW-0054",
+     "NSW-0059",
+     "NSW-0070",
+     "NSW-0071",
+     "NSW-0076",
+     "NSW-0081"
+    ]
+   },
+   {
+    "label": "Government administration, spending controls and transparency",
+    "note": "Government attacked over consultant procurement, grants guidance, major project losses, misleading hardship board claims, cyber reporting and agency systems.",
+    "ids": [
+     "NSW-0015",
+     "NSW-0069",
+     "NSW-0074",
+     "NSW-0075",
+     "NSW-0084",
+     "NSW-0096",
+     "NSW-0101"
+    ]
+   },
+   {
+    "label": "Aboriginal land claims and First Nations services",
+    "note": "Government attacked over land claim backlogs, unfunded post-custody services and wasted Closing the Gap spending.",
+    "ids": [
+     "NSW-0019",
+     "NSW-0020",
+     "NSW-0023",
+     "NSW-0032",
+     "NSW-0057"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Government defends programs and reforms against audit concerns",
+    "note": "Government members credit the government with reforms, delivery progress and well-administered grants, citing or answering the Auditor-General.",
+    "ids": [
+     "NSW-0004",
+     "NSW-0038",
+     "NSW-0048",
+     "NSW-0085",
+     "NSW-0094"
+    ]
+   },
+   {
+    "label": "Respect for the Auditor-General's work",
+    "note": "Members commend the Auditor-General as responsive to the House and doing important work.",
+    "ids": [
+     "NSW-0024",
+     "NSW-0039"
+    ]
+   }
+  ]
+ }
+}

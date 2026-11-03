@@ -1,0 +1,896 @@
+{
+ "missing": [],
+ "tally": [
+  {
+   "date": "2025-11-12",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa09b/globalassets/hansard-daily-pdfs/hansard-2145855009-33155/hansard-2145855009-33155.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 103,
+   "entries": 103
+  },
+  {
+   "date": "2025-11-12",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa2c3/globalassets/hansard-daily-pdfs/hansard-974425065-33103/hansard-974425065-33103.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 80,
+   "entries": 80
+  },
+  {
+   "date": "2025-11-13",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa2c9/globalassets/hansard-daily-pdfs/hansard-974425065-33190/hansard-974425065-33190.pdf",
+   "total": 7,
+   "records": 6,
+   "marks": 87,
+   "entries": 87
+  },
+  {
+   "date": "2025-11-13",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa087/globalassets/hansard-daily-pdfs/hansard-2145855009-33254/hansard-2145855009-33254.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 106,
+   "entries": 106
+  },
+  {
+   "date": "2025-11-14",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa2d7/globalassets/hansard-daily-pdfs/hansard-974425065-33268/hansard-974425065-33268.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2025-11-14",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa099/globalassets/hansard-daily-pdfs/hansard-2145855009-33335/hansard-2145855009-33335.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 88,
+   "entries": 88
+  },
+  {
+   "date": "2025-11-18",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0a7/globalassets/hansard-daily-pdfs/hansard-2145855009-33417/hansard-2145855009-33417.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 84,
+   "entries": 84
+  },
+  {
+   "date": "2025-11-18",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa2ac/globalassets/hansard-daily-pdfs/hansard-974425065-33345/hansard-974425065-33345.pdf",
+   "total": 6,
+   "records": 6,
+   "marks": 82,
+   "entries": 82
+  },
+  {
+   "date": "2025-11-19",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0ab/globalassets/hansard-daily-pdfs/hansard-2145855009-33523/hansard-2145855009-33523.pdf",
+   "total": 4,
+   "records": 4,
+   "marks": 115,
+   "entries": 115
+  },
+  {
+   "date": "2025-11-19",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa2bc/globalassets/hansard-daily-pdfs/hansard-974425065-33423/hansard-974425065-33423.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 75,
+   "entries": 75
+  },
+  {
+   "date": "2025-11-20",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa08e/globalassets/hansard-daily-pdfs/hansard-2145855009-33606/hansard-2145855009-33606.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 89,
+   "entries": 89
+  },
+  {
+   "date": "2025-11-20",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa299/globalassets/hansard-daily-pdfs/hansard-974425065-33508/hansard-974425065-33508.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 105,
+   "entries": 105
+  },
+  {
+   "date": "2025-12-02",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa2aa/globalassets/hansard-daily-pdfs/hansard-974425065-33639/hansard-974425065-33639.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 116,
+   "entries": 116
+  },
+  {
+   "date": "2025-12-02",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa09c/globalassets/hansard-daily-pdfs/hansard-2145855009-33704/hansard-2145855009-33704.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 110,
+   "entries": 110
+  },
+  {
+   "date": "2025-12-03",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0bf/globalassets/hansard-daily-pdfs/hansard-2145855009-33802/hansard-2145855009-33802.pdf",
+   "total": 3,
+   "records": 3,
+   "marks": 110,
+   "entries": 110
+  },
+  {
+   "date": "2025-12-03",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa2c1/globalassets/hansard-daily-pdfs/hansard-974425065-33704/hansard-974425065-33704.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 104,
+   "entries": 104
+  },
+  {
+   "date": "2025-12-04",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0af/globalassets/hansard-daily-pdfs/hansard-2145855009-33891/hansard-2145855009-33891.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 87,
+   "entries": 87
+  },
+  {
+   "date": "2025-12-04",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa288/globalassets/hansard-daily-pdfs/hansard-974425065-33790/hansard-974425065-33790.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 98,
+   "entries": 98
+  },
+  {
+   "date": "2025-12-09",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0bc/globalassets/hansard-daily-pdfs/hansard-2145855009-33988/hansard-2145855009-33988.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 102,
+   "entries": 102
+  },
+  {
+   "date": "2025-12-09",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa29f/globalassets/hansard-daily-pdfs/hansard-974425065-33874/hansard-974425065-33874.pdf",
+   "total": 7,
+   "records": 7,
+   "marks": 87,
+   "entries": 87
+  },
+  {
+   "date": "2026-02-03",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0cb/globalassets/hansard-daily-pdfs/hansard-2145855009-34081/hansard-2145855009-34081.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 95,
+   "entries": 95
+  },
+  {
+   "date": "2026-02-03",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa290/globalassets/hansard-daily-pdfs/hansard-974425065-33976/hansard-974425065-33976.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 99,
+   "entries": 99
+  },
+  {
+   "date": "2026-02-04",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa283/globalassets/hansard-daily-pdfs/hansard-974425065-34052/hansard-974425065-34052.pdf",
+   "total": 10,
+   "records": 10,
+   "marks": 74,
+   "entries": 74
+  },
+  {
+   "date": "2026-02-04",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0da/globalassets/hansard-daily-pdfs/hansard-2145855009-34178/hansard-2145855009-34178.pdf",
+   "total": 8,
+   "records": 8,
+   "marks": 98,
+   "entries": 98
+  },
+  {
+   "date": "2026-02-05",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0c5/globalassets/hansard-daily-pdfs/hansard-2145855009-34265/hansard-2145855009-34265.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 89,
+   "entries": 89
+  },
+  {
+   "date": "2026-02-05",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa274/globalassets/hansard-daily-pdfs/hansard-974425065-34141/hansard-974425065-34141.pdf",
+   "total": 3,
+   "records": 3,
+   "marks": 94,
+   "entries": 94
+  },
+  {
+   "date": "2026-02-17",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa27f/globalassets/hansard-daily-pdfs/hansard-974425065-34220/hansard-974425065-34220.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 79,
+   "entries": 79
+  },
+  {
+   "date": "2026-02-17",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0d4/globalassets/hansard-daily-pdfs/hansard-2145855009-34343/hansard-2145855009-34343.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 79,
+   "entries": 79
+  },
+  {
+   "date": "2026-02-18",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa28b/globalassets/hansard-daily-pdfs/hansard-974425065-34303/hansard-974425065-34303.pdf",
+   "total": 3,
+   "records": 3,
+   "marks": 82,
+   "entries": 82
+  },
+  {
+   "date": "2026-02-18",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0e1/globalassets/hansard-daily-pdfs/hansard-2145855009-34426/hansard-2145855009-34426.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 86,
+   "entries": 86
+  },
+  {
+   "date": "2026-02-19",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0ef/globalassets/hansard-daily-pdfs/hansard-2145855009-34509/hansard-2145855009-34509.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 82,
+   "entries": 82
+  },
+  {
+   "date": "2026-02-19",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa271/globalassets/hansard-daily-pdfs/hansard-974425065-34383/hansard-974425065-34383.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 85,
+   "entries": 85
+  },
+  {
+   "date": "2026-03-03",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0d8/globalassets/hansard-daily-pdfs/hansard-2145855009-34602/hansard-2145855009-34602.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 97,
+   "entries": 97
+  },
+  {
+   "date": "2026-03-03",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa262/globalassets/hansard-daily-pdfs/hansard-974425065-34474/hansard-974425065-34474.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 99,
+   "entries": 99
+  },
+  {
+   "date": "2026-03-04",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0e6/globalassets/hansard-daily-pdfs/hansard-2145855009-34690/hansard-2145855009-34690.pdf",
+   "total": 4,
+   "records": 4,
+   "marks": 94,
+   "entries": 94
+  },
+  {
+   "date": "2026-03-04",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa278/globalassets/hansard-daily-pdfs/hansard-974425065-34564/hansard-974425065-34564.pdf",
+   "total": 16,
+   "records": 16,
+   "marks": 90,
+   "entries": 90
+  },
+  {
+   "date": "2026-03-05",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa26b/globalassets/hansard-daily-pdfs/hansard-974425065-34645/hansard-974425065-34645.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 92,
+   "entries": 92
+  },
+  {
+   "date": "2026-03-05",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0f5/globalassets/hansard-daily-pdfs/hansard-2145855009-34782/hansard-2145855009-34782.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 97,
+   "entries": 97
+  },
+  {
+   "date": "2026-03-17",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa25f/globalassets/hansard-daily-pdfs/hansard-974425065-34719/hansard-974425065-34719.pdf",
+   "total": 8,
+   "records": 8,
+   "marks": 74,
+   "entries": 74
+  },
+  {
+   "date": "2026-03-17",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa104/globalassets/hansard-daily-pdfs/hansard-2145855009-34874/hansard-2145855009-34874.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 92,
+   "entries": 92
+  },
+  {
+   "date": "2026-03-18",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa252/globalassets/hansard-daily-pdfs/hansard-974425065-34800/hansard-974425065-34800.pdf",
+   "total": 24,
+   "records": 24,
+   "marks": 84,
+   "entries": 84
+  },
+  {
+   "date": "2026-03-18",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa0ec/globalassets/hansard-daily-pdfs/hansard-2145855009-34980/hansard-2145855009-34980.pdf",
+   "total": 7,
+   "records": 7,
+   "marks": 108,
+   "entries": 108
+  },
+  {
+   "date": "2026-03-19",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa267/globalassets/hansard-daily-pdfs/hansard-974425065-34884/hansard-974425065-34884.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2026-03-19",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa101/globalassets/hansard-daily-pdfs/hansard-2145855009-35063/hansard-2145855009-35063.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 83,
+   "entries": 83
+  },
+  {
+   "date": "2026-03-31",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa25a/globalassets/hansard-daily-pdfs/hansard-974425065-34968/hansard-974425065-34968.pdf",
+   "total": 6,
+   "records": 6,
+   "marks": 86,
+   "entries": 86
+  },
+  {
+   "date": "2026-03-31",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa10e/globalassets/hansard-daily-pdfs/hansard-2145855009-35154/hansard-2145855009-35154.pdf",
+   "total": 3,
+   "records": 3,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2026-04-01",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa11d/globalassets/hansard-daily-pdfs/hansard-2145855009-35252/hansard-2145855009-35252.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 107,
+   "entries": 107
+  },
+  {
+   "date": "2026-04-01",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa23b/globalassets/hansard-daily-pdfs/hansard-974425065-35051/hansard-974425065-35051.pdf",
+   "total": 7,
+   "records": 7,
+   "marks": 80,
+   "entries": 80
+  },
+  {
+   "date": "2026-04-02",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa248/globalassets/hansard-daily-pdfs/hansard-974425065-35137/hansard-974425065-35137.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 93,
+   "entries": 93
+  },
+  {
+   "date": "2026-04-02",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa109/globalassets/hansard-daily-pdfs/hansard-2145855009-35341/hansard-2145855009-35341.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 92,
+   "entries": 92
+  },
+  {
+   "date": "2026-05-05",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa118/globalassets/hansard-daily-pdfs/hansard-2145855009-35436/hansard-2145855009-35436.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 110,
+   "entries": 110
+  },
+  {
+   "date": "2026-05-12",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa127/globalassets/hansard-daily-pdfs/hansard-2145855009-35539/hansard-2145855009-35539.pdf",
+   "total": 6,
+   "records": 6,
+   "marks": 110,
+   "entries": 110
+  },
+  {
+   "date": "2026-05-12",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa241/globalassets/hansard-daily-pdfs/hansard-974425065-35235/hansard-974425065-35235.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 114,
+   "entries": 114
+  },
+  {
+   "date": "2026-05-13",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa250/globalassets/hansard-daily-pdfs/hansard-974425065-35329/hansard-974425065-35329.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 103,
+   "entries": 103
+  },
+  {
+   "date": "2026-05-13",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa138/globalassets/hansard-daily-pdfs/hansard-2145855009-35618/hansard-2145855009-35618.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 89,
+   "entries": 89
+  },
+  {
+   "date": "2026-06-02",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa232/globalassets/hansard-daily-pdfs/hansard-974425065-35427/hansard-974425065-35427.pdf",
+   "total": 6,
+   "records": 6,
+   "marks": 97,
+   "entries": 97
+  },
+  {
+   "date": "2026-06-02",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa121/globalassets/hansard-daily-pdfs/hansard-2145855009-35713/hansard-2145855009-35713.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2026-06-03",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa12f/globalassets/hansard-daily-pdfs/hansard-2145855009-35815/hansard-2145855009-35815.pdf",
+   "total": 3,
+   "records": 3,
+   "marks": 117,
+   "entries": 117
+  },
+  {
+   "date": "2026-06-03",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa225/globalassets/hansard-daily-pdfs/hansard-974425065-35509/hansard-974425065-35509.pdf",
+   "total": 7,
+   "records": 7,
+   "marks": 81,
+   "entries": 81
+  },
+  {
+   "date": "2026-06-04",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa142/globalassets/hansard-daily-pdfs/hansard-2145855009-35913/hansard-2145855009-35913.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 104,
+   "entries": 104
+  },
+  {
+   "date": "2026-06-04",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa235/globalassets/hansard-daily-pdfs/hansard-974425065-35593/hansard-974425065-35593.pdf",
+   "total": 4,
+   "records": 4,
+   "marks": 93,
+   "entries": 93
+  },
+  {
+   "date": "2026-06-16",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa224/globalassets/hansard-daily-pdfs/hansard-974425065-35683/hansard-974425065-35683.pdf",
+   "total": 7,
+   "records": 7,
+   "marks": 94,
+   "entries": 94
+  },
+  {
+   "date": "2026-06-16",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa133/globalassets/hansard-daily-pdfs/hansard-2145855009-36002/hansard-2145855009-36002.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 92,
+   "entries": 92
+  },
+  {
+   "date": "2026-06-17",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa141/globalassets/hansard-daily-pdfs/hansard-2145855009-36107/hansard-2145855009-36107.pdf",
+   "total": 12,
+   "records": 12,
+   "marks": 124,
+   "entries": 124
+  },
+  {
+   "date": "2026-06-17",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa200/globalassets/hansard-daily-pdfs/hansard-974425065-35771/hansard-974425065-35771.pdf",
+   "total": 10,
+   "records": 10,
+   "marks": 90,
+   "entries": 90
+  },
+  {
+   "date": "2026-06-18",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa152/globalassets/hansard-daily-pdfs/hansard-2145855009-36201/hansard-2145855009-36201.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 114,
+   "entries": 114
+  },
+  {
+   "date": "2026-06-18",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa20e/globalassets/hansard-daily-pdfs/hansard-974425065-35858/hansard-974425065-35858.pdf",
+   "total": 12,
+   "records": 12,
+   "marks": 109,
+   "entries": 109
+  },
+  {
+   "date": "2026-07-28",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa215/globalassets/hansard-daily-pdfs/hansard-974425065-35949/hansard-974425065-35949.pdf",
+   "total": 4,
+   "records": 4,
+   "marks": 103,
+   "entries": 103
+  },
+  {
+   "date": "2026-07-28",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa160/globalassets/hansard-daily-pdfs/hansard-2145855009-36296/hansard-2145855009-36296.pdf",
+   "total": 3,
+   "records": 3,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2026-07-29",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa149/globalassets/hansard-daily-pdfs/hansard-2145855009-36406/hansard-2145855009-36406.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 136,
+   "entries": 136
+  },
+  {
+   "date": "2026-07-29",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa207/globalassets/hansard-daily-pdfs/hansard-974425065-36036/hansard-974425065-36036.pdf",
+   "total": 8,
+   "records": 8,
+   "marks": 91,
+   "entries": 91
+  },
+  {
+   "date": "2026-07-30",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1f8/globalassets/hansard-daily-pdfs/hansard-974425065-36116/hansard-974425065-36116.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2026-07-30",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa15a/globalassets/hansard-daily-pdfs/hansard-2145855009-36495/hansard-2145855009-36495.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 95,
+   "entries": 95
+  },
+  {
+   "date": "2026-08-11",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1e2/globalassets/hansard-daily-pdfs/hansard-974425065-36194/hansard-974425065-36194.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 82,
+   "entries": 82
+  },
+  {
+   "date": "2026-08-11",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa167/globalassets/hansard-daily-pdfs/hansard-2145855009-36586/hansard-2145855009-36586.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 94,
+   "entries": 94
+  },
+  {
+   "date": "2026-08-12",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa168/globalassets/hansard-daily-pdfs/hansard-2145855009-36692/hansard-2145855009-36692.pdf",
+   "total": 10,
+   "records": 10,
+   "marks": 124,
+   "entries": 124
+  },
+  {
+   "date": "2026-08-12",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1f2/globalassets/hansard-daily-pdfs/hansard-974425065-36278/hansard-974425065-36278.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 88,
+   "entries": 88
+  },
+  {
+   "date": "2026-08-13",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa202/globalassets/hansard-daily-pdfs/hansard-974425065-36355/hansard-974425065-36355.pdf",
+   "total": 1,
+   "records": 1,
+   "marks": 103,
+   "entries": 103
+  },
+  {
+   "date": "2026-08-13",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa17c/globalassets/hansard-daily-pdfs/hansard-2145855009-36780/hansard-2145855009-36780.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2026-08-14",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1ed/globalassets/hansard-daily-pdfs/hansard-974425065-36410/hansard-974425065-36410.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 54,
+   "entries": 54
+  },
+  {
+   "date": "2026-08-25",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1e5/globalassets/hansard-daily-pdfs/hansard-974425065-36500/hansard-974425065-36500.pdf",
+   "total": 9,
+   "records": 9,
+   "marks": 99,
+   "entries": 99
+  },
+  {
+   "date": "2026-08-25",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa176/globalassets/hansard-daily-pdfs/hansard-2145855009-36881/hansard-2145855009-36881.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 109,
+   "entries": 109
+  },
+  {
+   "date": "2026-08-26",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa186/globalassets/hansard-daily-pdfs/hansard-2145855009-36989/hansard-2145855009-36989.pdf",
+   "total": 9,
+   "records": 9,
+   "marks": 117,
+   "entries": 117
+  },
+  {
+   "date": "2026-08-26",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1d0/globalassets/hansard-daily-pdfs/hansard-974425065-36590/hansard-974425065-36590.pdf",
+   "total": 13,
+   "records": 13,
+   "marks": 100,
+   "entries": 100
+  },
+  {
+   "date": "2026-08-27",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa174/globalassets/hansard-daily-pdfs/hansard-2145855009-37081/hansard-2145855009-37081.pdf",
+   "total": 6,
+   "records": 6,
+   "marks": 100,
+   "entries": 100
+  },
+  {
+   "date": "2026-08-27",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1c8/globalassets/hansard-daily-pdfs/hansard-974425065-36663/hansard-974425065-36663.pdf",
+   "total": 11,
+   "records": 11,
+   "marks": 95,
+   "entries": 95
+  },
+  {
+   "date": "2026-08-28",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1d8/globalassets/hansard-daily-pdfs/hansard-974425065-36740/hansard-974425065-36740.pdf",
+   "total": 6,
+   "records": 6,
+   "marks": 74,
+   "entries": 74
+  },
+  {
+   "date": "2026-09-08",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa182/globalassets/hansard-daily-pdfs/hansard-2145855009-37195/hansard-2145855009-37195.pdf",
+   "total": 8,
+   "records": 8,
+   "marks": 131,
+   "entries": 131
+  },
+  {
+   "date": "2026-09-08",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1db/globalassets/hansard-daily-pdfs/hansard-974425065-36842/hansard-974425065-36842.pdf",
+   "total": 3,
+   "records": 3,
+   "marks": 110,
+   "entries": 110
+  },
+  {
+   "date": "2026-09-09",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1cc/globalassets/hansard-daily-pdfs/hansard-974425065-36927/hansard-974425065-36927.pdf",
+   "total": 48,
+   "records": 48,
+   "marks": 92,
+   "entries": 92
+  },
+  {
+   "date": "2026-09-09",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa195/globalassets/hansard-daily-pdfs/hansard-2145855009-37291/hansard-2145855009-37291.pdf",
+   "total": 56,
+   "records": 56,
+   "marks": 103,
+   "entries": 103
+  },
+  {
+   "date": "2026-09-10",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1bc/globalassets/hansard-daily-pdfs/hansard-974425065-37008/hansard-974425065-37008.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 92,
+   "entries": 92
+  },
+  {
+   "date": "2026-09-10",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1a5/globalassets/hansard-daily-pdfs/hansard-2145855009-37384/hansard-2145855009-37384.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 96,
+   "entries": 96
+  },
+  {
+   "date": "2026-09-22",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa18f/globalassets/hansard-daily-pdfs/hansard-2145855009-37397/hansard-2145855009-37397.pdf",
+   "total": 0,
+   "records": 0,
+   "marks": 1,
+   "entries": 1
+  },
+  {
+   "date": "2026-09-22",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1c3/globalassets/hansard-daily-pdfs/hansard-974425065-37098/hansard-974425065-37098.pdf",
+   "total": 6,
+   "records": 6,
+   "marks": 98,
+   "entries": 98
+  },
+  {
+   "date": "2026-09-23",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1ad/globalassets/hansard-daily-pdfs/hansard-974425065-37180/hansard-974425065-37180.pdf",
+   "total": 22,
+   "records": 22,
+   "marks": 87,
+   "entries": 88
+  },
+  {
+   "date": "2026-09-23",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa191/globalassets/hansard-daily-pdfs/hansard-2145855009-37507/hansard-2145855009-37507.pdf",
+   "total": 8,
+   "records": 8,
+   "marks": 116,
+   "entries": 116
+  },
+  {
+   "date": "2026-09-24",
+   "chamber": "Legislative Assembly",
+   "pdf": "https://www.parliament.vic.gov.au/4aa1a3/globalassets/hansard-daily-pdfs/hansard-2145855009-37599/hansard-2145855009-37599.pdf",
+   "total": 2,
+   "records": 2,
+   "marks": 92,
+   "entries": 92
+  },
+  {
+   "date": "2026-09-24",
+   "chamber": "Legislative Council",
+   "pdf": "https://www.parliament.vic.gov.au/4aa28a/globalassets/hansard-daily-pdfs/hansard-974425065-37279/hansard-974425065-37279.pdf",
+   "total": 5,
+   "records": 5,
+   "marks": 101,
+   "entries": 101
+  }
+ ]
+}

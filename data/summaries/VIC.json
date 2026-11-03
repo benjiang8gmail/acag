@@ -1,0 +1,1883 @@
+{
+ "jur": "VIC",
+ "overview": "Across the year, two reports drew the most mentions: Delivering the Suburban Rail Loop (August 2026), which prompted documents and select committee motions over the rail improvement charge on fares, and Maintaining State Roads (September), debated in both chambers. Other recurring threads were the IBAC Amendment Bills borrowing Auditor-General powers, integrity agency funding, school upgrades, out-of-home care, Preventing Youth Crime, the energy transition and state finances.",
+ "issues": [
+  {
+   "label": "Suburban Rail Loop report and rail improvement charge",
+   "note": "Delivering the Suburban Rail Loop prompted documents and select committee motions over a 1 per cent fare charge and a claimed $1 billion saving.",
+   "ids": [
+    "VIC-0004",
+    "VIC-0011",
+    "VIC-0026",
+    "VIC-0030",
+    "VIC-0037",
+    "VIC-0043",
+    "VIC-0044",
+    "VIC-0045",
+    "VIC-0046",
+    "VIC-0047",
+    "VIC-0048",
+    "VIC-0049",
+    "VIC-0050",
+    "VIC-0051",
+    "VIC-0052",
+    "VIC-0053",
+    "VIC-0054",
+    "VIC-0059",
+    "VIC-0064",
+    "VIC-0065",
+    "VIC-0066",
+    "VIC-0068",
+    "VIC-0069",
+    "VIC-0071",
+    "VIC-0072",
+    "VIC-0073",
+    "VIC-0074",
+    "VIC-0075",
+    "VIC-0076",
+    "VIC-0077",
+    "VIC-0078",
+    "VIC-0079",
+    "VIC-0081",
+    "VIC-0083",
+    "VIC-0084",
+    "VIC-0085",
+    "VIC-0086",
+    "VIC-0087",
+    "VIC-0088",
+    "VIC-0089",
+    "VIC-0090"
+   ]
+  },
+  {
+   "label": "Integrity agencies: funding, independence and IBAC powers",
+   "note": "A joint IBAC, Ombudsman and Auditor-General funding paper, IBAC bills borrowing Auditor-General powers, disputes over the office's independence and audit coverage of new bodies.",
+   "ids": [
+    "VIC-0002",
+    "VIC-0003",
+    "VIC-0005",
+    "VIC-0021",
+    "VIC-0030",
+    "VIC-0031",
+    "VIC-0032",
+    "VIC-0040",
+    "VIC-0053",
+    "VIC-0060",
+    "VIC-0061",
+    "VIC-0062",
+    "VIC-0080",
+    "VIC-0092",
+    "VIC-0096",
+    "VIC-0129",
+    "VIC-0133",
+    "VIC-0134",
+    "VIC-0158",
+    "VIC-0162",
+    "VIC-0177",
+    "VIC-0180",
+    "VIC-0181",
+    "VIC-0203",
+    "VIC-0204",
+    "VIC-0205",
+    "VIC-0206",
+    "VIC-0208",
+    "VIC-0210",
+    "VIC-0211",
+    "VIC-0214",
+    "VIC-0220",
+    "VIC-0221",
+    "VIC-0224",
+    "VIC-0225",
+    "VIC-0226",
+    "VIC-0259"
+   ]
+  },
+  {
+   "label": "Maintaining State Roads and road debates",
+   "note": "Tabled 9 September; both chambers heard that 48 per cent of state roads were poor or very poor, with funding and quality assurance concerns.",
+   "ids": [
+    "VIC-0009",
+    "VIC-0012",
+    "VIC-0013",
+    "VIC-0014",
+    "VIC-0015",
+    "VIC-0016",
+    "VIC-0017",
+    "VIC-0018",
+    "VIC-0025",
+    "VIC-0027",
+    "VIC-0028",
+    "VIC-0033",
+    "VIC-0034",
+    "VIC-0035",
+    "VIC-0036",
+    "VIC-0037",
+    "VIC-0038",
+    "VIC-0039",
+    "VIC-0040",
+    "VIC-0041",
+    "VIC-0042",
+    "VIC-0055",
+    "VIC-0056",
+    "VIC-0098",
+    "VIC-0111",
+    "VIC-0159"
+   ]
+  },
+  {
+   "label": "State finances, debt and major projects findings",
+   "note": "Members cited findings on the State's annual financial report, debt and deficits, major projects cost increases and the Commonwealth Games budget.",
+   "ids": [
+    "VIC-0011",
+    "VIC-0099",
+    "VIC-0116",
+    "VIC-0145",
+    "VIC-0149",
+    "VIC-0153",
+    "VIC-0154",
+    "VIC-0178",
+    "VIC-0189",
+    "VIC-0192",
+    "VIC-0195",
+    "VIC-0196",
+    "VIC-0199",
+    "VIC-0200",
+    "VIC-0209",
+    "VIC-0218",
+    "VIC-0228",
+    "VIC-0230",
+    "VIC-0231",
+    "VIC-0235",
+    "VIC-0236",
+    "VIC-0239",
+    "VIC-0242",
+    "VIC-0243",
+    "VIC-0244",
+    "VIC-0245",
+    "VIC-0248",
+    "VIC-0260"
+   ]
+  },
+  {
+   "label": "Reports on schools, TAFE, care and youth crime",
+   "note": "Delivering School Upgrade Projects, Free TAFE, Out-of-Home Care Services and Preventing Youth Crime were cited to criticise or defend service delivery.",
+   "ids": [
+    "VIC-0001",
+    "VIC-0007",
+    "VIC-0008",
+    "VIC-0010",
+    "VIC-0020",
+    "VIC-0023",
+    "VIC-0105",
+    "VIC-0110",
+    "VIC-0112",
+    "VIC-0113",
+    "VIC-0114",
+    "VIC-0120",
+    "VIC-0124",
+    "VIC-0125",
+    "VIC-0126",
+    "VIC-0127",
+    "VIC-0128",
+    "VIC-0131",
+    "VIC-0132",
+    "VIC-0137",
+    "VIC-0138",
+    "VIC-0139",
+    "VIC-0140",
+    "VIC-0141",
+    "VIC-0143",
+    "VIC-0144",
+    "VIC-0150",
+    "VIC-0152",
+    "VIC-0167",
+    "VIC-0168",
+    "VIC-0197",
+    "VIC-0201",
+    "VIC-0213"
+   ]
+  },
+  {
+   "label": "Renewable energy transition risk findings",
+   "note": "Members cited the December 2025 Managing the Transition to Renewable Energy report on Yallourn's 2028 closure, supply risks and delayed projects.",
+   "ids": [
+    "VIC-0029",
+    "VIC-0104",
+    "VIC-0106",
+    "VIC-0147",
+    "VIC-0151",
+    "VIC-0193",
+    "VIC-0194",
+    "VIC-0198",
+    "VIC-0202",
+    "VIC-0238",
+    "VIC-0241"
+   ]
+  }
+ ],
+ "debates": [
+  {
+   "ids": [
+    "VIC-0002",
+    "VIC-0003",
+    "VIC-0004"
+   ],
+   "gist": "Council bill debate: a Greens amendment on independent IBAC funding cited the joint paper by IBAC, the Auditor-General's Office and the Ombudsman; the government described IBAC powers comparable to the Auditor-General's; another member cited the Auditor-General's fare charge report."
+  },
+  {
+   "ids": [
+    "VIC-0012",
+    "VIC-0013",
+    "VIC-0014",
+    "VIC-0015",
+    "VIC-0016",
+    "VIC-0017"
+   ],
+   "gist": "Council debate on Bev McArthur's motion noting the Auditor-General's Maintaining State Roads findings, including 48 per cent of state roads in poor or very poor condition; supporters cited the report, while government members pointed to repair crews and extra investment."
+  },
+  {
+   "ids": [
+    "VIC-0035",
+    "VIC-0036",
+    "VIC-0037",
+    "VIC-0038",
+    "VIC-0039",
+    "VIC-0040",
+    "VIC-0041",
+    "VIC-0042"
+   ],
+   "gist": "Assembly matter of public importance and question time on road maintenance after the Maintaining State Roads report was tabled: opposition members cited findings on condition, defects and funding, and a government member raised an earlier Premier's attempt to sack the Auditor-General."
+  },
+  {
+   "ids": [
+    "VIC-0043",
+    "VIC-0044",
+    "VIC-0045",
+    "VIC-0046",
+    "VIC-0047",
+    "VIC-0048",
+    "VIC-0049",
+    "VIC-0050"
+   ],
+   "gist": "Council debate on David Davis's motion for a select committee on the Auditor-General's Suburban Rail Loop report: supporters said Victorians deserve answers on the fare charge, while government members said it would duplicate the independent 171-page audit."
+  },
+  {
+   "ids": [
+    "VIC-0051",
+    "VIC-0052",
+    "VIC-0053",
+    "VIC-0054"
+   ],
+   "gist": "Council debate on Evan Mulholland's documents motion arising from the Auditor-General's Suburban Rail Loop report: opposition members cited the rail improvement charge and unfunded savings, while a government member stressed the Auditor-General's independence and said the government would not oppose the motion."
+  },
+  {
+   "ids": [
+    "VIC-0060",
+    "VIC-0061",
+    "VIC-0062"
+   ],
+   "gist": "Assembly second reading speeches on the IBAC Amendment Bill: members described follow-the-money powers giving IBAC powers comparable to the Auditor-General's, and one recalled the Kennett government's attempts to alter the Auditor-General's powers."
+  },
+  {
+   "ids": [
+    "VIC-0071",
+    "VIC-0072",
+    "VIC-0073",
+    "VIC-0074"
+   ],
+   "gist": "Council question time and members statements the day after the Auditor-General's Suburban Rail Loop report: opposition members cited a 1 per cent fare levy expected to raise about $8 billion by 2062, while a government member thanked the Auditor-General."
+  },
+  {
+   "ids": [
+    "VIC-0088",
+    "VIC-0089",
+    "VIC-0090"
+   ],
+   "gist": "Council statements on the day the Suburban Rail Loop report was tabled: members called its revelations bombshells and extraordinary, and one cited a fare tax expected to raise about $8 billion by 2062 and government knowledge of overruns."
+  },
+  {
+   "ids": [
+    "VIC-0107",
+    "VIC-0108",
+    "VIC-0109"
+   ],
+   "gist": "Council debate on a documents motion seeking departmental advice on recommendations 8 and 9 of the Auditor-General's Protecting Victoria's Biodiversity report; the government did not oppose it, and one member cited the finding that the department could not show it was halting species decline."
+  },
+  {
+   "ids": [
+    "VIC-0127",
+    "VIC-0128",
+    "VIC-0129"
+   ],
+   "gist": "Assembly second reading speeches on the dangerous goods bill in which members cited the Auditor-General's Delivering School Upgrade Projects findings on cost blowouts and school condition, and one called for an account of Auditor-General oversight of successor companies."
+  },
+  {
+   "ids": [
+    "VIC-0190",
+    "VIC-0191",
+    "VIC-0192"
+   ],
+   "gist": "Council second reading debate on the Entities Legislation Amendment Bill: members cited Auditor-General findings that waste diversion targets are off track, the public service is under-resourced and the operating budget was in deficit in December, in arguing against cuts and for amendments."
+  },
+  {
+   "ids": [
+    "VIC-0204",
+    "VIC-0205",
+    "VIC-0206",
+    "VIC-0207",
+    "VIC-0208"
+   ],
+   "gist": "Council debate on a reference to the Integrity and Oversight Committee on integrity agency funding: members cited the February joint paper by the Ombudsman, IBAC and the Auditor-General's Office, praised the Auditor-General's work, and discussed why the Auditor-General answers to a different committee."
+  }
+ ],
+ "items": {
+  "VIC-0001": {
+   "summary": "Cited the Auditor-General's Preventing Youth Crime report, handed down the previous day, saying 236,727 Victorians (3.3 per cent of the population) were victims of crime between June 2024 and June 2025.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0002": {
+   "summary": "Argued integrity agencies need funding set independently of government, and cited the joint IBAC, Auditor-General's Office and Ombudsman paper Advancing Budget Transparency for Victoria's Core Integrity Agencies, one recommendation of which an amendment would implement for IBAC.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0003": {
+   "summary": "Described the bill as giving IBAC powers comparable to the Victorian Auditor-General's, including follow-the-money powers over third-party and private subcontractors, with definitions drawing on the Audit Act 1994.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0004": {
+   "summary": "Cited last month's Auditor-General report as showing a secret tax on public transport, offering it as an example of the behaviour the IBAC bill is meant to expose.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0005": {
+   "summary": "Claimed governments have systemically underfunded integrity agencies, including IBAC, the Ombudsman and the Auditor-General's Office, and said the amendments would let the public see when that happens.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0006": {
+   "summary": "Cited the Auditor-General's warning about the risks of consistently outsourcing work traditionally done by public servants, including deskilling the public service, in arguing that stripping out government capability leads to paying private firms for it.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0007": {
+   "summary": "Auditor-General's reports Preventing Youth Crime (ordered to be published) and Public Lottery Licence Extension (released 16 September 2026) tabled by the Clerk among documents under Acts of Parliament.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0008": {
+   "summary": "Cited the Auditor-General's report released that day as saying the government spent over $40 million in a decade while 70 per cent of youth participants reoffend within six months, and said Latrobe Valley youth crime keeps rising.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0009": {
+   "summary": "Cited the Auditor-General's report from two weeks earlier for the claim that the current Premier, as roads minister, cut the road maintenance budget by $200 million in 2021–22, which the member said began the roads' decline.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0010": {
+   "summary": "Auditor-General's report Preventing Youth Crime, September 2026, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0011": {
+   "summary": "Cited Auditor-General findings that the Commonwealth Games budget was unrealistically low and the business case inadequate, and that SRL East was unlikely to meet the announced budget and timetable, with the $34.5 billion estimate possibly over a billion short.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0012": {
+   "summary": "Said the government did not need a Victorian Auditor-General's Office report to know road conditions must improve, and pointed to announced measures such as supervised offenders supplementing crews to fix more potholes.",
+   "kind": "Passing reference",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0013": {
+   "summary": "Supported the road maintenance motion, saying the Auditor-General's report shows poor road conditions in regional Victoria with more than half very poor, before turning to rebut earlier remarks by Labor members.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0014": {
+   "summary": "Cited the Auditor-General's findings that state roads rated poor or very poor rose from 39 per cent in 2021 to 48 per cent in 2024, with a growing backlog, insufficient funding and one in eight inspected works defective.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0015": {
+   "summary": "Said extra investment and crews now fixing roads respond to issues rightly identified in the Auditor-General's Maintaining State Roads report, and that Labor, if re-elected, would change the way roads are fixed.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0016": {
+   "summary": "Cited the Auditor-General's Office report showing almost half of Victoria's roads in poor or very poor condition, alongside RACV's My Country Road 2026 survey placing four of the state's five worst roads in Western Victoria Region.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0017": {
+   "summary": "Moved a motion noting the Auditor-General's Maintaining State Roads findings: 48 per cent of state roads poor or very poor in 2024, up from 39 per cent in 2021, a growing backlog, insufficient funding and one in eight inspected works defective.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0018": {
+   "summary": "Raised, in a question to the roads minister, constituents' concern over the Auditor-General's Office finding that the City of Casey recorded the highest number of potholes in metropolitan Melbourne.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0019": {
+   "summary": "Recalled inheriting a housing portfolio in crisis as minister, citing an Auditor-General report that more than 10,000 department properties were uninhabitable, which the member attributed to Labor's lack of maintenance investment.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0020": {
+   "summary": "Spoke on the Auditor-General's Preventing Youth Crime report handed down that morning, calling it an independent assurance report to Parliament that the member said confirms the government's approach to youth crime is not working.",
+   "kind": "Cites audit findings",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0021": {
+   "summary": "Described IBAC bill changes to the 'public body' and 'public officer' definitions, drawing on the Audit Act 1994, giving IBAC powers comparable to the Auditor-General's, in line with the Integrity and Oversight Committee's recommendation.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0022": {
+   "summary": "Auditor-General's report Public Lottery Licence Extension, September 2026, released on 16 September during a non-sitting period, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0023": {
+   "summary": "Cited the Auditor-General's Delivering School Upgrade Projects report, released in June, including its finding that VSBA does not always recommend upgrade projects in line with its strategies for improving school conditions.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0024": {
+   "summary": "Cited the Auditor-General's 2018 report on Victoria Police property and exhibits, which found none of 15 audit reports from eight stations compliant, and asked the Premier to request a fresh audit.",
+   "kind": "Seeks audit or referral",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0025": {
+   "summary": "Cited the Auditor-General's Office report released that week as showing 47.98 per cent of the Hume region's roads in very poor condition, and argued the causes of road failure need thorough investigation.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0026": {
+   "summary": "Mentioned the Auditor-General's Office Suburban Rail Loop report in passing, in a list of matters the member said the government was distracting from.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0027": {
+   "summary": "Asked the roads minister about Auditor-General findings that the government cannot verify how defective road repairs are fixed, a quarter of routine maintenance works were non-compliant and one in eight were defective.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0028": {
+   "summary": "Auditor-General's report Maintaining State Roads (Volumes 1 and 2) tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0029": {
+   "summary": "Asked the energy minister why the department did not give the Auditor-General requested analysis of winter supply risks in the December 2025 report Managing the Transition to Renewable Energy, and whether the modelling will be released; also said wind projects were years behind.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0030": {
+   "summary": "Argued respecting the Auditor-General means engaging with reports and implementing recommendations to improve the Suburban Rail Loop, not using them to justify abandoning it, and acknowledged the Auditor-General found the original business case needed refinement.",
+   "kind": "Office, powers or funding",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0031": {
+   "summary": "Pointed to the Auditor-General's power to follow public money through complex delivery arrangements as the precedent for giving IBAC follow-the-money powers over private entities performing public functions.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0032": {
+   "summary": "Said follow-the-money powers would give IBAC powers comparable to the Auditor-General's to investigate corrupt conduct by third-party and private subcontractors linked to public functions.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0033": {
+   "summary": "Auditor-General's report Maintaining State Roads, September 2026 (Volumes 1 and 2), tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0034": {
+   "summary": "Cited the Auditor-General's Office report Maintaining State Roads, tabled that day, saying 48 per cent of state roads are in poor or very poor condition, in a statement on the Budget Estimates report.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0035": {
+   "summary": "On a point of order in the road maintenance debate, sought to table the Auditor-General's Maintaining State Roads report, after another member said south-east roads were 'coming along quite great'.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0036": {
+   "summary": "Claimed the Auditor-General's report tabled that day uncovered that the Premier, as roads minister, promised things that were not true, and cited mounting reports from authorities such as the Auditor-General's Office.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0037": {
+   "summary": "Said the Auditor-General plays an important role, citing the report on a 'secret tax' on public transport, and quoted Maintaining State Roads: road condition is deteriorating and performance targets give no meaningful insight into it.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0038": {
+   "summary": "Cited Auditor-General figures that state roads rated poor or very poor rose from 39 per cent in 2021 to 48 per cent in 2024 and that the gap between defects identified and fixed more than doubled, and claimed the government sought to undermine the findings.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0039": {
+   "summary": "Said the Auditor-General's report tabled that day shows roads deteriorating faster than the government is fixing them, and that the department warned the government funding was insufficient to maintain or improve road condition.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0040": {
+   "summary": "Welcomed the opposition's appreciation of the Auditor-General's work, repeatedly asserted that no Premier from the government's side had sought to sack the Auditor-General, and cited an Australia Institute report on proposed cuts.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0041": {
+   "summary": "Cited the Auditor-General's report finding 48 per cent of roads poor or very poor, noting its references to travel times, vehicle operating costs and accident risk, and said such road audits occur about every eight years.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0042": {
+   "summary": "Asked the roads minister about Auditor-General figures showing $487 million in extra maintenance funding this year falling to $225 million next year, and said the report shows 48 per cent of the road network in poor or very poor condition.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0043": {
+   "summary": "Opposed the proposed select committee on the Suburban Rail Loop report, arguing it would duplicate the Auditor-General's independent 171-page audit, identifies no gap in its work and shows political bias, and noting the Premier acknowledged insufficient transparency around the charge.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0044": {
+   "summary": "Cited the Auditor-General's Office as acknowledging $1 billion of a claimed $2 billion Suburban Rail Loop saving was never funded, and said the whole cabinet knew of the 'secret tax', mocking Minister Dimopoulos's claim to have first heard of it in the Auditor-General's report.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0045": {
+   "summary": "Supported a select committee on the Auditor-General's Delivering the Suburban Rail Loop report, saying a project of this size needs serious consideration, with SRL East expected to cost up to $34.5 billion.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0046": {
+   "summary": "Opposed the Suburban Rail Loop select committee, saying the Premier axed the charge after the Auditor-General's report, praising the office's checks-and-balances role, and arguing the committee could show nothing not already in the report.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0047": {
+   "summary": "Supported a select committee on the Auditor-General's Suburban Rail Loop report, arguing the findings cannot be put aside, there should be no hidden taxes, and former ministers, the Premier and Deputy Premier should explain decisions.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0048": {
+   "summary": "Noted that Mr Batchelor had described the Auditor-General's Office report as detailed and candid and as making clear the secret tax levied was wrong, in speaking to the select committee motion.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0049": {
+   "summary": "Opposed the select committee as a political exercise, saying the Auditor-General's 171-page report by an independent officer was detailed and candid and showed a lack of transparency about the rail improvement charge, which is gone.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0050": {
+   "summary": "Moved a motion for a six-member select committee to report within 30 days on the Auditor-General's report Delivering the Suburban Rail Loop, tabled 26 August 2026, and to examine related matters arising from it.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0051": {
+   "summary": "Questioned whether Mrs McArthur had read the Auditor-General's Office report, saying it explains the term under debate and that Mr Mulholland had read it, and encouraged members to read it.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0052": {
+   "summary": "Cited the Auditor-General's 26 August report on a secret 1 per cent rail improvement charge added to public transport fares from 1 January 2025, and claimed it found the Premier's $1 billion Suburban Rail Loop saving largely fiction.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0053": {
+   "summary": "Said the government would not oppose the documents motion, and described the Auditor-General as an independent officer of Parliament who does not write reports to suit government or opposition, noting the 171-page report examined four public entities.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0054": {
+   "summary": "Moved a documents motion on the Auditor-General's Delivering the Suburban Rail Loop report, citing its finding of an unannounced 1 per cent 'rail improvement charge' on fares from 1 January 2025, modelled to raise about $8 billion, with $4.8 billion for SRL East.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0055": {
+   "summary": "Spoke on the Auditor-General's Maintaining State Roads report, tabled that day, calling it and the earlier Suburban Rail Loop report damning, and said Labor is not spending enough on roads and cannot properly manage what it does spend.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0056": {
+   "summary": "Opened a statement on the Auditor-General's Maintaining State Roads report, tabled that day, saying maintaining and building roads is one of the basic services government provides.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0057": {
+   "summary": "Financial Audit of the Auditor-General and the Victorian Auditor-General's Office 2026 (three documents) and the Auditor-General's Report 2025–26 tabled by the Clerk, alongside an IBAC report to the Attorney-General.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0058": {
+   "summary": "Claimed that Victorian Auditor-General's Office reports from the last 20 years show children do far worse when removed from families, while accepting that removing parental authority should be done extraordinarily carefully.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0059": {
+   "summary": "Business program listing an amended notice of motion in David Davis's name to establish a select committee to inquire into the Auditor-General's report Delivering the Suburban Rail Loop.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0060": {
+   "summary": "Recounted that the Auditor-General raised concerns about corruption in ambulance services in 1997, and that the Kennett government's later attempts to alter the Auditor-General's powers created significant challenges, as an example of what happens when independent bodies are marginalised.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0061": {
+   "summary": "Said the bill brings private contractors and subcontractors ('associated entities') within IBAC's reach using the same kind of definition the Auditor-General already works with, so IBAC can follow the money.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0062": {
+   "summary": "Said the bill's follow-the-money changes give IBAC powers comparable to the Victorian Auditor-General's over third-party and private subcontractors, amending 'public body' and 'public officer' definitions to include associated entities, drawing on the Audit Act 1994.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0063": {
+   "summary": "Auditor-General's Office Report 2025–26 tabled by the Clerk, together with an IBAC report to the Attorney-General for 2024.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0064": {
+   "summary": "Referred to the Auditor-General's report of the previous week when previewing the week's debate, claiming the budget papers do not contain the 'secret tax'.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0065": {
+   "summary": "Cited the Auditor-General's Delivering the Suburban Rail Loop report on a tax put on in 2021 and expected to raise about $8 billion, and on announced savings not funded in the business case, while criticising state debt.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0066": {
+   "summary": "Cited the Auditor-General's Office report revealing a secret tax on public transport fares to 2062 as the elephant in the room for the budget, and said the Auditor-General and Stephen Conroy had exposed the Suburban Rail Loop.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0067": {
+   "summary": "Financial Audit of the Victorian Auditor-General's Office for the year ended 30 June 2026 tabled by the Clerk under section 81(4) of the Audit Act 1994.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0068": {
+   "summary": "Cited the Auditor-General's findings that a secret tax on public transport fares, approved in 2021 and expected to raise $8 billion, was not disclosed in public documents, in arguing Victorians have reason to doubt government assurances.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0069": {
+   "summary": "Raised, in a question to the Premier, the Auditor-General's revelation that public transport fares rose an extra 1 per cent from January 2025 to help fund the Suburban Rail Loop, claiming frequent commuters pay over $3000 more a year.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0070": {
+   "summary": "Mentioned the Auditor-General in passing in a list of bodies, including IBAC and the Ombudsman, excluded from the mandate under the bill.",
+   "kind": "Passing reference",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0071": {
+   "summary": "Thanked the Auditor-General for important work, after saying the Premier had outlined the government's position on the Suburban Rail Loop.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0072": {
+   "summary": "Raised, in a question to the Minister for Finance, the Auditor-General's revelation of an undisclosed 1 per cent tax on every public transport ticket since January 2025, projected to raise $8 billion by 2062 for SRL East.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0073": {
+   "summary": "Said the Auditor-General confirmed an undisclosed 1 per cent levy on public transport fares since January 2025, expected to raise about $8 billion by 2062 with $4.8 billion for SRL East, and that the Premier announced its scrapping only after exposure.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0074": {
+   "summary": "Drew the house's attention to the Auditor-General's report of the previous day, saying the government plans to take $8 billion from Victorians in a transport tax to backfill Suburban Rail Loop cost blowouts and underfunding.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0075": {
+   "summary": "Asked the Premier why a $1 billion Suburban Rail Loop saving was claimed from scrapping underground interchanges at Box Hill and Glen Waverley that the Auditor-General says were never funded.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0076": {
+   "summary": "Asked the Premier why an $8 billion tax was concealed for five years until the Auditor-General exposed it.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0077": {
+   "summary": "Referred in passing to the previous day's Auditor-General report on the 'secret tax' as an example of a government shrouded in secrecy, while complaining about being blocked from visiting Triple Zero as shadow minister.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0078": {
+   "summary": "Auditor-General's report Delivering the Suburban Rail Loop tabled by the Clerk and ordered to be published, among documents under Acts of Parliament.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0079": {
+   "summary": "Cited the Auditor-General's report that day on a secret 1 per cent levy in public transport fares as a contrast with the Premier's integrity pledges, then asked where the June quarter waiting list figures are and what the government does not want seen.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0080": {
+   "summary": "Quoted a February joint paper by the Ombudsman, IBAC Commissioner and Auditor-General saying integrity agencies must be transparently and appropriately funded, while arguing the government refuses to give them the resources they need.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0081": {
+   "summary": "Mentioned in passing that the Premier planned a flight to Canberra knowing the Victorian Auditor-General's Office report was due out that day, during a debate on Liberal Party policy.",
+   "kind": "Passing reference",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0082": {
+   "summary": "Cited a Senate inquiry's record that a Victorian Auditor-General examination put the genuine cost of administration at between 28 cents and 93 cents, in criticising administration fees under the Melbourne City Link Act 1995.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0083": {
+   "summary": "Said the Auditor-General's Delivering the Suburban Rail Loop report, tabled that day, left the member flabbergasted, and argued the Premier should come clean about what was known of the 'secret tax' on fares if integrity is not optional.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0084": {
+   "summary": "Auditor-General's report Delivering the Suburban Rail Loop, August 2026, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0085": {
+   "summary": "Cited the Auditor-General's finding of a secret tax levied since January 2025 on every bus and train user to help pay for the Suburban Rail Loop, rising 1 per cent a year, and asked how long Polwarth residents will pay it.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0086": {
+   "summary": "Said fare adjustments are reported every year before 1 January, and, out of respect for the Auditor-General's work, acknowledged DTF has accepted the Auditor-General's recommendation on improving communication to the community.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0087": {
+   "summary": "Raised, in a question to the Minister for Public Transport, the Auditor-General's finding that at least $1.6 billion of the Box Hill and Glen Waverley underground interchanges was never in the Suburban Rail Loop budget, after the government claimed a $1 billion saving.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0088": {
+   "summary": "Cited the Auditor-General's Delivering the Suburban Rail Loop report as exposing a fare tax expected to cost about $8 billion by 2062, and said the Auditor-General confirmed in a briefing that the government knew in January the project was over budget.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0089": {
+   "summary": "Opened a statement on the Auditor-General's Office Suburban Rail Loop report, calling it a series of bombshells, pointing to pages 8 to 23, and saying it would be raised in the house again.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0090": {
+   "summary": "Opened a statement on the Auditor-General's Delivering the Suburban Rail Loop report, tabled that day, calling some of its revelations extraordinary while saying some may not surprise.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0091": {
+   "summary": "Welcomed the committee's recommendation for an Auditor-General review of the waste-to-energy regulatory framework, but criticised the rejection of other proposals, including a moratorium until the Auditor-General makes a finding.",
+   "kind": "Seeks audit or referral",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0092": {
+   "summary": "Described the committee's term, including follow-up inquiries into Auditor-General's Office reports on gambling and liquor regulation and on local government financial and fraud controls, audits of the Auditor-General's office and the recommendation to reappoint the Auditor-General.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0093": {
+   "summary": "Cited a Victorian Auditor-General's Office report of a few years ago saying up to 40 per cent of public health respondents experienced burnout, alongside the 2024 People Matter survey, in a debate on nurse and midwife ratios.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "VIC-0094": {
+   "summary": "Cited the Auditor-General's 2024 report as showing a significant increase over the last decade in patients having to stay 24 hours or more, describing the pressure on staff and poor patient outcomes.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "VIC-0095": {
+   "summary": "Mentioned the Victorian Auditor-General's Office in passing, in a list of integrity bodies whose oversight arrangements the proposed Racing Integrity Commissioner arrangements are said to mirror.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0096": {
+   "summary": "Called on the government to explain what the bill's changes mean for freedom of information, Victorian Auditor-General's Office oversight, the Ombudsman and IBAC, procurement, borrowing, executive remuneration and public records.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0097": {
+   "summary": "Listed the Victorian Auditor-General's Office, with WorkSafe, the Ombudsman and IBAC, among bodies that periodically look at the corrections system and report on it.",
+   "kind": "Passing reference",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0098": {
+   "summary": "Cited the Auditor-General's record of $1.24 billion accumulated impairment for roads and bridges at 30 June 2024, and an earlier audit identifying a growing maintenance backlog and declining service levels.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0099": {
+   "summary": "Cited the Auditor-General's Commonwealth Games and major projects performance reports, claiming a secret rise in the Games budget from $2.6 to $3.6 billion and that budget paper 4 is no longer a reliable guide to major project costs.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0100": {
+   "summary": "Answered the member for Hawthorn's reference to the Auditor-General by saying the budget is there every year, and asked whether the opposition would rewrite budget paper 4 and what it promises instead.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0101": {
+   "summary": "Recalled the November 2023 report Gambling and Liquor Regulation in Victoria: A Follow up of Three Auditor-General Reports, and said the member remains passionate about the issue and has spoken on it before.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0102": {
+   "summary": "Spoke on the Auditor-General's report Reducing the Harm Caused by Distracted Drivers, submitted in June, which examined the distracted driver and seatbelt detection camera program, noting the Auditor-General acknowledges mobile phone use raises crash risk.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0103": {
+   "summary": "Opened a statement on the Auditor-General's audit Improving Bus Services by describing Victoria's bus plan as ambitious but light on detail, with a vision of Melbourne's buses becoming mass transit by 2031.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0104": {
+   "summary": "Cited the Auditor-General as stating the risk of a disorderly energy transition is almost certain with Yallourn closing in 2028, and that current generation and battery projects will not offset the closure from mid-2028.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0105": {
+   "summary": "Cited the recent Auditor-General report on school upgrades as finding that 29 per cent of upgrades had cost blowouts and 25 per cent were delayed, after saying schools that did the work themselves saved money.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0106": {
+   "summary": "Said the Auditor-General has warned that Victoria faces a significant risk of electricity shortfall after the expected closure of the Yallourn power station in 2028, with risks of blackouts and higher bills.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0107": {
+   "summary": "Supported the documents motion and, among examples of reviews, pointed to the Auditor-General's recent follow-up on bushfire preparedness, which the member called damning of the government.",
+   "kind": "Passing reference",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0108": {
+   "summary": "Said the government does not oppose documents motions, describing the motion seeking departmental advice on recommendations 8 and 9 of the Auditor-General's Office report Protecting Victoria's Biodiversity.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0109": {
+   "summary": "Moved a documents motion citing the Auditor-General's Protecting Victoria's Biodiversity finding that the department could not demonstrate whether it was halting threatened species decline, and said the latest state of the environment report rated 26 of 42 biodiversity indicators poor.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0110": {
+   "summary": "Spoke on the Auditor-General's report Delivering School Upgrade Projects, saying the Victorian School Building Authority accepted all six recommendations and that the report identified its understanding of school conditions as a strength.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0111": {
+   "summary": "Cited a 2017 Victorian Auditor-General prediction that continuing trends would put over 91 per cent of roads in poor or very poor condition, saying that is where the state now is.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0112": {
+   "summary": "Heading for statements on the tabled Auditor-General's report Delivering School Upgrade Projects; no speech text recorded.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0113": {
+   "summary": "Auditor-General's reports tabled by the Clerk, including the Annual Plan 2026–27, Delivering School Upgrade Projects, a Service Victoria follow-up, Investing in Early Intervention Initiatives and Planning and Managing Drainage Schemes in Melbourne's Growth Areas.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0114": {
+   "summary": "Cited Delivering School Upgrade Projects, saying 11 of 18 Macedon Ranges government schools were in poor condition and upgrade decisions did not always follow prioritisation guidelines, and recalled an Auditor-General report that 10,000 public housing properties were nearing the end of usable life.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0115": {
+   "summary": "Described the Auditor-General's newly tabled report on progress implementing recommendations from a 2021 report as damning, saying it outlines a government rudderless on digital service delivery.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0116": {
+   "summary": "Claimed the Auditor-General found one Commonwealth Games cost blowout was a $2 billion contingency for industrial relations risks and cost escalations, approved in cabinet by the former and current Premiers, in support of the no-confidence motion.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0117": {
+   "summary": "Auditor-General's Annual Plan 2026–27, released on 24 June 2026 during a non-sitting period, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0118": {
+   "summary": "Said, as minister, that the Auditor-General's bushfire report acknowledges strong government work on risk modelling, data capability and planning and calls for continual improvement and investment; a point of order from Melina Bath said the report found the data unreliable.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0119": {
+   "summary": "Put to the Minister for Environment the Auditor-General's June 2026 findings that fuel management is not shown to work, key data is unreliable and recommendations remain unimplemented, and asked for independently verified bushfire risk data before the next fire season.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0120": {
+   "summary": "Said Tinternvale Primary School was ranked top for poor condition in the previous day's Auditor-General's Office report Delivering School Upgrade Projects, in a constituency question on the school's needs.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0121": {
+   "summary": "Compared non-binding Land Access Panel advice to the Auditor-General's recommendations, saying agencies or government decide whether to adopt them.",
+   "kind": "Passing reference",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0122": {
+   "summary": "Cited the Auditor-General's finding of serious weaknesses in administering forestry transition funding, including gaps in departmental records, problems showing how some eligibility decisions were verified and inadequate monitoring of long-term employment outcomes.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0123": {
+   "summary": "Said the Auditor-General's recent report on reducing bushfire risks acknowledges improvements since 2020 but finds key recommendations unresolved six years later, with concerns about risk modelling, fuel reduction, private land management and strategic fuel breaks.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0124": {
+   "summary": "Auditor-General's reports Delivering School Upgrade Projects and Improving Bus Services tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0125": {
+   "summary": "Cited the Auditor-General's Out-of-Home Care Services report finding that the 9353 children in care are not having needs fully met, sibling requirements are not met, and the department repeatedly advised government of constraints and sought funding.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0126": {
+   "summary": "Said the Auditor-General's Office report on free TAFE, tabled seven years after its introduction, delivered the verdict that it provides training for priority skills and delivers real benefits.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0127": {
+   "summary": "Cited the Auditor-General's school upgrades report as finding VSBA recommendations not in line with its strategies, not always transparent and based on informal processes including community pressure and political considerations, and pointed to the office's dashboard on school condition.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0128": {
+   "summary": "Thanked the Auditor-General and staff for their work, and cited Delivering School Upgrade Projects: 29 per cent of upgrades had cost blowouts, 25 per cent were delayed, poor-condition schools rose from 182 to 221, and three of 10 priority schools were not rated poor.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0129": {
+   "summary": "Called for a statute-by-statute account, before any transfer to new corporate structures, of successor companies' coverage under freedom of information, Victorian Auditor-General's Office oversight, the Ombudsman, IBAC and other laws, plus continued tabling of annual reports and audited financial statements.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0130": {
+   "summary": "Supported the motion referring a matter to the Ombudsman, saying information had not been released to the committee, so the matter needs to go elsewhere, whether to the Auditor-General's Office or the Ombudsman.",
+   "kind": "Seeks audit or referral",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0131": {
+   "summary": "Auditor-General's reports Delivering School Upgrade Projects and Improving Bus Services, June 2026, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0132": {
+   "summary": "Spoke on the Auditor-General's Office out-of-home care report, saying it found the department cannot demonstrate consistently safe, stable and positive outcomes for children in care, and supported following its recommendations to strengthen foster care capacity.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0133": {
+   "summary": "Said the government again refused integrity agencies the resources they need, citing the February joint paper from the Ombudsman, IBAC Commissioner and Auditor-General calling for more funding to maintain confidence in the integrity system.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0134": {
+   "summary": "Argued integrity bodies fared poorly in the budget, noting the Auditor-General's appropriation rising from $20.419 million to $21.046 million, little more than indexation, for an office already missing its own reporting timeline targets, and citing the joint call for independent funding.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0135": {
+   "summary": "Auditor-General's reports Follow-up: Reducing Bushfire Risks and Reducing the Harm Caused by Distracted Drivers, both released on 10 June 2026, tabled by the Clerk.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0136": {
+   "summary": "Auditor-General's reports Follow-up: Reducing Bushfire Risks and Reducing the Harm Caused by Distracted Drivers, June 2026, released on 10 June during a non-sitting period, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0137": {
+   "summary": "Auditor-General's report Results of 2025 Audits: TAFEs and Universities tabled by the Clerk and ordered to be published, alongside a Commission for Children and Young People report.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0138": {
+   "summary": "As minister, said the government will consider the Auditor-General's report, noted its findings that the rate of children in care fell slightly and kinship growth fits placement principles, and cited an earlier report on residential care over capacity under the opposition.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0139": {
+   "summary": "Auditor-General's report Results of 2025 Audits: TAFEs and Universities, June 2026, tabled by the Clerk and ordered to be published, alongside the Commission for Children and Young People's report Left behind.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0140": {
+   "summary": "Auditor-General's report Out-of-Home Care Services tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0141": {
+   "summary": "Auditor-General's report Out-of-Home Care Services, June 2026, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0142": {
+   "summary": "Spoke on the Public Accounts and Estimates Committee's report on fraud and corruption control in local government, a follow-up of two Auditor-General reports, which the member chaired, to raise concerns about councils in Laverton.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0143": {
+   "summary": "Cited the Auditor-General's Out-of-Home Care Services report, tabled that day, as saying the system is failing to keep up with demand and to retain foster carers, which have declined almost 20 per cent in five years.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0144": {
+   "summary": "Opened a statement on the Auditor-General's Out-of-Home Care Services report, tabled that day, after attending a briefing, highlighting that 9353 children were in out-of-home care at 30 June last year.",
+   "kind": "Report tabled or noted",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0145": {
+   "summary": "Cited Auditor-General figures putting the annual interest bill on course for $10.6 billion, and the finding that two-thirds of Treasurer's advances had not followed proper process, with 'unforeseen' meaning items left out of the budget.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0146": {
+   "summary": "Auditor-General's report Sustainability Reporting by Water Corporations, released on 20 May 2026, tabled by the Clerk, alongside government responses to committee reports including the follow-up on two Auditor-General reports on local government fraud and corruption control.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0147": {
+   "summary": "Cited the Auditor-General's end-of-2025 report on managing the transition to renewable energy as evidence of energy reliability concerns, while speaking on the committee's inquiry into electricity supply for electric vehicles.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0148": {
+   "summary": "Auditor-General's report Sustainability Reporting by Water Corporations, May 2026, tabled by the Clerk and ordered to be published, among papers also including the committee's follow-up report on two Auditor-General reports.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0149": {
+   "summary": "Claimed the Auditor-General has found that the government has no plan to achieve a cash surplus, in a list of criticisms of the budget.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0150": {
+   "summary": "Auditor-General's reports Free TAFE and Responses to Performance Engagement Recommendations: Annual Status Update 2026 tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0151": {
+   "summary": "Said AEMO, the Auditor-General and energy experts have warned of certain power shortages when Yallourn closes in 2028, because renewables will not generate enough base load power to make up the shortfall.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0152": {
+   "summary": "Auditor-General's reports Free TAFE, May 2026, and Responses to Performance Engagement Recommendations: Annual Status Update 2026 tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0153": {
+   "summary": "Said the Auditor-General and the Silver review both identified significant concerns about public sector bureaucracy cost blowouts risking the economy's sustainability, to support a plan to cut back-office costs and recruit more police.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0154": {
+   "summary": "Said the Auditor-General and the Silver review both identified significant concerns about public sector bureaucracy cost blowouts risking the economy's sustainability, in explaining a plan to reduce back-office costs and reopen police stations.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0155": {
+   "summary": "Auditor-General's report Enhanced Maternal and Child Health Program Performance, April 2026, released on 30 April during a non-sitting period, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "VIC-0156": {
+   "summary": "Spoke on the committee's inquiry into fraud and corruption control in local government, a follow-up of two Auditor-General reports, with a focus on Wyndham council and monitors being appointed there.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0157": {
+   "summary": "Auditor-General's report Enhanced Maternal and Child Health Program Performance, released on 30 April 2026, tabled by the Clerk among documents under Acts of Parliament.",
+   "kind": "Report tabled or noted",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "VIC-0158": {
+   "summary": "Said, as Premier, that the Auditor-General signs off on the budget, and is signing off one delivering a surplus, and questioned why opposition members were attacking the Auditor-General in the debate on the public lottery licence.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0159": {
+   "summary": "Recalled the Auditor-General's 2017 report as showing that spending 30 cents per square metre fixing roads proactively would avoid spending $175 per square metre on rebuilding them, and asked whether the government had listened.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0160": {
+   "summary": "Cited the Auditor-General's report that week finding the government cannot show its $1.5 billion forestry transition delivers secure jobs, that job quality has declined, and that governance, internal controls and verification of ForestWorks' delivery were weak.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0161": {
+   "summary": "Auditor-General's report Supporting the Transition from Native Timber Harvesting tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0162": {
+   "summary": "Argued that giving IBAC powers identical to the Auditor-General's over contracts and subcontracts mixes two different functions, described the Auditor-General's role as performance audits, and thanked the Auditor-General for diligent work this term.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0163": {
+   "summary": "Heading naming the Auditor-General's Office report Results of 2024–25 Audits: Local Government, following unrelated text on health; no speech text on the report recorded.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0164": {
+   "summary": "Auditor-General's report Supporting the Transition from Native Timber Harvesting, April 2026, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0165": {
+   "summary": "Spoke on the committee's follow-up report on two Auditor-General reports, report 40 Fraud and Corruption Control: Local Government (2019) and report 316 Fraud Control over Local Government Grants (2022), thanking the secretariat and committee members.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0166": {
+   "summary": "Said the Auditor-General's Office report on local government financial audits issued 179 clear opinions but its detailed findings are deeply concerning and an indictment of the government.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0167": {
+   "summary": "Said opposition members cherrypick the Auditor-General's report on TAFE, claiming it actually spoke of the sector's financial stability, while defending the Free TAFE Guarantee Bill against criticism on completion rates.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0168": {
+   "summary": "Cited the Auditor-General's finding that only five of 12 TAFEs would have recorded a net surplus without a one-off capital grant, and said the Auditor-General has long flagged the sector's financial problems.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0169": {
+   "summary": "Auditor-General's report Results of 2024–25 Audits: Local Government, released on 30 March 2026, tabled among documents under Acts of Parliament.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0170": {
+   "summary": "Auditor-General's report Results of 2024–25 Audits: Local Government, March 2026, released on 30 March during a non-sitting period, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0171": {
+   "summary": "Cited the Auditor-General's Office report last year into Fishermans Bend as identifying a lack of transparency on the status of key projects, while raising Port Phillip council's wait for the Montague precinct plan.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0172": {
+   "summary": "Cited the Auditor-General's findings that the Victorian Building Authority did not meet all performance targets, did not consistently monitor and report progress, and was not transparent as the Planning Minister required, as a sign of failure in building oversight.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0173": {
+   "summary": "Mentioned the Auditor-General's Office, with the Ombudsman and others, as having commented on politicisation of the public service, while questioning why the public sector advisory board should be abolished.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0174": {
+   "summary": "Listed the Auditor-General, the Ombudsman and the Parliamentary Budget Office among oversight bodies, alongside credit rating agencies, putting pressure on the government to control its finances.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Unclear"
+  },
+  "VIC-0175": {
+   "summary": "Auditor-General's reports Modernising myki and Timely Payments Performance tabled by the Clerk and ordered to be published, alongside an Integrity Oversight Victoria report and an Ombudsman report.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0176": {
+   "summary": "Cited a 2020 Auditor-General's Office report finding the tram stop accessibility target could not be met, with 28 per cent of stops accessible in 2023 and full accessibility not until 2066 at the pre-2020 rate, in speaking on a road safety inquiry report.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0177": {
+   "summary": "Said, as Treasurer, that the Auditor-General is an independent officer who tables reports when they see fit, that DTF was not examined in the report so the Treasurer was not briefed before tabling, and that the Treasurer does not direct when reports are tabled.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0178": {
+   "summary": "Cited the Auditor-General's Timely Payments Performance report finding 259,000 invoices were paid late in 2024–25, and that the publicly reported data behind the claimed 81.5 per cent on-time compliance is neither complete nor accurate.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0179": {
+   "summary": "Cited the Auditor-General's finding that by March 2024 the government had spent $2.9 billion of a planned $5.6 billion on the Big Housing Build while public and community housing fell by 446 homes.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0180": {
+   "summary": "Argued giving IBAC powers equivalent to the Auditor-General's to examine contracts and subcontracts extends audit-style powers to a different body, saying the Auditor-General's powers are designed for performance audits and that Victoria Police and the Labour Hire Authority are better placed to investigate criminality.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0181": {
+   "summary": "Argued the bill's proposal to give IBAC powers equivalent to the Auditor-General's to investigate contracts and subcontracts risks legal uncertainty, saying the Auditor-General's powers are focused on performance audits and entities such as Victoria Police are better placed to investigate criminality.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0183": {
+   "summary": "Auditor-General's reports Modernising myki and Timely Payments Performance, March 2026, tabled by the Clerk and ordered to be published, with an Integrity Oversight Victoria report.",
+   "kind": "Report tabled or noted",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0184": {
+   "summary": "Spoke on the committee's report on fraud and corruption control in local government, a follow-up of Victorian Auditor-General's Office report 40 (2019) and report 316 Fraud Control Over Local Government Grants (2022), calling local government accountability important.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0185": {
+   "summary": "Cited the Auditor-General's Office report Modernising Myki as finding the project's value for money uncertain and parts of regional Victoria, including Swan Hill, Echuca, Shepparton and Wodonga, without myki service, in a question to the transport minister.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0186": {
+   "summary": "Spoke on the Auditor-General's Office Modernising Myki report, tabled that day, citing its finding that projected value for money is uncertain and noting regional areas still lacking myki ahead of the 2027 expansion target.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0187": {
+   "summary": "Quoted the Auditor-General's Modernising Myki findings that the project is on track to meet its reset timeline but did not resolve known issues before awarding the contract, with an 18-month extension and added cost, and that overall value for money is uncertain.",
+   "kind": "Cites audit findings",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0188": {
+   "summary": "Said, according to the Auditor-General, no progress has been made in six years on the 2020 target to divert 80 per cent of waste from landfill by 2030, and criticised the government for banking recycling funds.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0189": {
+   "summary": "Claimed a parliamentary inquiry, the Auditor-General and other agencies have called out mismanagement of the Commonwealth Games process, which the member said cost taxpayers $600 million with no-one taking responsibility.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0190": {
+   "summary": "Said the Auditor-General's Office has warned Victoria is not on track to meet its target of diverting 80 per cent of waste from landfill by 2030, as a reason for concern about abolishing Recycling Victoria.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0191": {
+   "summary": "Cited the Auditor-General's Office finding that the public service was struggling with chronic under-resourcing and overwork and cannot deliver one-third of its targets, arguing the bill's cuts will make that worse.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0192": {
+   "summary": "Cited the Auditor-General's Office for the claim that the operating budget was back in deficit in December, though it may be in surplus by year end, while setting out proposed amendments to the bill.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0193": {
+   "summary": "Quoted the Auditor-General's December report that Victoria is on track to meet its 2025 renewable energy target but future targets will be harder, depend on key projects finishing on time and many projects face delays, and said little consideration was given to risks.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0194": {
+   "summary": "Said the Auditor-General warned in December that offshore wind targets will not be met, and argued the government is proceeding without the necessary supporting work.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0195": {
+   "summary": "Cited the Auditor-General's November warning that debt, deficits and Big Build cost blowouts pose long-term dangers to the state's financial viability, alongside net debt of $160.9 billion from the mid-year report.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0196": {
+   "summary": "Cited the Auditor-General's recent report on major infrastructure projects, which identified a total net cost increase of $11.3 billion across 89 projects and combined delays equivalent to more than 92 years.",
+   "kind": "Cites audit findings",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0197": {
+   "summary": "Said only five of 12 TAFEs achieved a net surplus without one-off government capital grants and that the Auditor-General has warned the long-term financial stability of these institutions is at risk.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0198": {
+   "summary": "Cited the Auditor-General's December report that reaching renewable targets will be harder and risks electricity shortfalls at peak demand and load shedding, saying the government has failed to address the risks, in a question to the minister.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0199": {
+   "summary": "Said even the Auditor-General has said the budget papers, particularly budget paper 4 on capital projects, can no longer be relied on, in arguing for integrity, oversight and scrutiny.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0200": {
+   "summary": "Auditor-General's report Major Projects Performance Reporting 2025 tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0201": {
+   "summary": "Cited the Auditor-General's July audit finding that only eight of 12 TAFEs reported a net surplus in 2024, and only five would have without one-off capital grants, adding to the Silver review's concerns about financial viability.",
+   "kind": "Cites audit findings",
+   "sector": "Education and training",
+   "ag": "Home"
+  },
+  "VIC-0202": {
+   "summary": "Quoted the Auditor-General's December 2025 finding that future renewable targets will be harder to meet, and said the Auditor-General pointed out power supply is not resilient, among services the member said were going backwards.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0203": {
+   "summary": "Read out a recommendation that the government amend the IBAC Act 2011 to give the IBAC Commissioner powers comparable to the Victorian Auditor-General's, including follow-the-dollar investigatory powers, before explaining why it was made.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0204": {
+   "summary": "Cited the February 2026 paper by the Ombudsman, IBAC and Auditor-General's Office on integrity funding, and explained the referral covers only agencies the Integrity and Oversight Committee oversees, since the Auditor-General answers to the Public Accounts and Estimates Committee.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0205": {
+   "summary": "Praised the Auditor-General's work and supported more funding for integrity agencies; the passage also includes a claim that the Kennett government sacked the Auditor-General by legislating to abolish the office, set against Labor's support for independence.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0206": {
+   "summary": "Said the Public Accounts and Estimates Committee oversees and meets regularly with the Auditor-General, though not in a public forum, and asked why the Auditor-General was included in and then removed from the proposed reference.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0207": {
+   "summary": "Cited the Auditor-General's Office examination of the Eloque joint venture, where the member said $20 million was lost, as an example of scandals short of criminal corruption.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0208": {
+   "summary": "Argued integrity agencies, including the Auditor-General's Office, are increasingly starved of funds and need financial independence, and pointed to New South Wales's 2024 law enshrining transparent funding for five integrity agencies, following a 2020 NSW Auditor-General special report.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0209": {
+   "summary": "Auditor-General's report Major Projects Performance Reporting 2025, March 2026, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0210": {
+   "summary": "Asked the Treasurer why the funding model proposed by the Ombudsman, IBAC and the Auditor-General's Office, which would make agencies' budget bids, funding received and any differences publicly explained, is not currently in place.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0211": {
+   "summary": "Quoted the February joint paper by the Ombudsman, Auditor-General and IBAC that transparent and appropriate funding of integrity agencies is essential to public confidence, in a question to the Treasurer claiming agencies lack money and powers.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0212": {
+   "summary": "Cited the Auditor-General's long-term report on the resilience, strength and age of the wooden power pole system among 'report after report' on which the member said the government had not acted.",
+   "kind": "Passing reference",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0213": {
+   "summary": "Cited Auditor-General warnings on whether government has the information quality to identify risk and track children, and findings that over 3100 children awaited a practitioner in May 2022 and vacancies rose to 13.9 per cent.",
+   "kind": "Cites audit findings",
+   "sector": "Community and social services",
+   "ag": "Home"
+  },
+  "VIC-0214": {
+   "summary": "Claimed the Premier blamed the Auditor-General's Office for the latest annual report being late, which the member said forced the Office to issue a media release correcting the record, in an adjournment matter on CFA funding.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0215": {
+   "summary": "Auditor-General's report Ravenhall Correctional Centre: Rehabilitating and Reintegrating Prisoners – Part 2 tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0216": {
+   "summary": "Auditor-General's report Ravenhall Correctional Centre: Rehabilitating and Reintegrating Prisoners – Part 2, February 2026, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0217": {
+   "summary": "Spoke on the Public Accounts and Estimates Committee's report on fraud and corruption control in local government, a follow-up of two Auditor-General reports, saying it contains 31 recommendations and 58 findings.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0218": {
+   "summary": "Said the Auditor-General has pointed out the government is nowhere near achieving even the savings announced in the last two budgets, and pointed to the Auditor-General's financial report, arguing the bill's savings are similarly doubtful.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0219": {
+   "summary": "Mentioned the Auditor-General's work, alongside Public Accounts and Estimates Committee hearings, while opening a speech on the 2025–26 budget 260 days after its delivery; the passage cuts off.",
+   "kind": "Passing reference",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0220": {
+   "summary": "Rejected the opposition's characterisation of the Premier's remarks that week about the Auditor-General, the Parliamentary Budget Office and the Productivity Commission, saying it was wrong, before turning to emergency services funding.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0221": {
+   "summary": "Claimed the Premier called statements by the Auditor-General misinformation, dismissed the Parliamentary Budget Office's confirmation of CFA cuts and disputed Productivity Commission data, and asked when the Premier will treat integrity agencies with respect and fund them.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0222": {
+   "summary": "Cited the Auditor-General's 2020 audit of the former Department of Jobs, Precincts and Regions and the Earth Resources Regulator, finding failures exposed the state to significant financial risk because some sites were poorly rehabilitated or untreated.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0224": {
+   "summary": "Said, as Premier, that the CFA annual report's tabling followed repeated back and forth between agencies and the Auditor-General's office on the audit process, and that the report shows CFA funding has increased whatever the tabling date.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0225": {
+   "summary": "Asked the Premier why delay in tabling the CFA annual report was blamed on the Auditor-General's process when, the member said, the Auditor-General issued a statement categorically disproving that claim.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0226": {
+   "summary": "Said the Auditor-General had to set out the audit process step by step last month to contradict the Premier's account of the CFA annual report delay, in a debate on CFA funding and volunteer dissatisfaction.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0227": {
+   "summary": "Sought, in a documents motion, all draft versions of the report, including the final printer's proof the Victorian Auditor-General's Office identified on 14 January 2026 as containing 'material inconsistencies', and all correspondence to or from the Office.",
+   "kind": "Cites audit findings",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0228": {
+   "summary": "Cited audit outcomes as examples of financial mismanagement: a utility whose audit the Auditor-General could not complete on time because of 'contentious issues', and a modified audit opinion on VicTrack forcing central Treasury adjustments.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0229": {
+   "summary": "Spoke on the committee's inquiry into fraud and corruption control in local government, a follow-up of two Auditor-General reports from 2019 and 2022, saying councils examined had mainly completed recommendations while the inquiry focused on the wider sector.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0230": {
+   "summary": "On a point of order, pressed the Treasurer to answer Mrs Broad's question on whether the Treasurer will commit to implementing the Auditor-General's recommendation to publish regular updates.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0231": {
+   "summary": "Quoted the Auditor-General's 2024–25 State financial report on a $4.0 billion interest bill rise over four years and on unsustainable debt risk, said the government failed to report on its COVID debt repayment plan, and asked the Treasurer to implement the recommendation to publish updates.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0232": {
+   "summary": "Said the Auditor-General recommended a performance and continuous improvement mechanism for the Victoria Planning Provisions in 2008 and 2017, and that a select committee the member chaired found the government failed to implement them, contributing to problems the amendments try to solve.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0233": {
+   "summary": "Sought immediate action from the Minister for Local Government on concerning trends in the Auditor-General's report on council financial management, noting the Office found audited councils generally committed to conservative financial settings and responsible budgeting.",
+   "kind": "Cites audit findings",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0234": {
+   "summary": "Said input and oversight in the planning system has long been called for by local government, was twice recommended by the Auditor-General's Office and was a key recommendation of the planning select committee inquiry.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0235": {
+   "summary": "Cited the Auditor-General's observation that government trust funds have grown because money has stayed unspent for years, with the Social Housing Growth Fund, now $2.9 billion, one of the most significant examples.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0236": {
+   "summary": "Cited the Auditor-General's report on the State's 2024–25 annual financial report showing the Sustainability Fund balance rose from $66.8 million at 30 June 2022 to $545.7 million at 30 June 2025, though it is meant to fund recycling and climate programs.",
+   "kind": "Cites audit findings",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0237": {
+   "summary": "Said the Auditor-General's Office has confirmed emergency departments are struggling and routinely missing basic timeliness targets, as population growth outpaces health service capacity in the Western Metropolitan Region.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "VIC-0238": {
+   "summary": "Auditor-General's reports Managing the Transition to Renewable Energy and Service Delivery Performance 2025 tabled by the Clerk and ordered to be published, among other documents.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0239": {
+   "summary": "Asked the Treasurer why the government has repeatedly ignored the Auditor-General's transparency recommendations, citing a 2022–23 recommendation to set specific targets and timing for net debt to gross state product and interest expense to revenue.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0240": {
+   "summary": "Said the Victorian Auditor-General and Infrastructure Victoria have highlighted neglect in health funding and the need for urgent upgrades at the Alfred, the Austin and the Royal Melbourne hospitals.",
+   "kind": "Cites audit findings",
+   "sector": "Health",
+   "ag": "Home"
+  },
+  "VIC-0241": {
+   "summary": "Auditor-General's reports Managing the Transition to Renewable Energy and Service Delivery Performance 2025 tabled by the Clerk; David Davis raised a point of order asking that each Auditor-General report be read in formally, given the Auditor-General's importance.",
+   "kind": "Report tabled or noted",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0242": {
+   "summary": "Said the Auditor-General has revealed a $50.6 billion hole in the state's finances over six years, in a statement on the committee's 2021–22 and 2022–23 outcomes report, and claimed Labor introduced or increased more than 63 taxes.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0243": {
+   "summary": "Auditor-General's Report on the Annual Financial Report of the State of Victoria: 2024–25, released on 24 November 2025, tabled by the Clerk among documents under Acts of Parliament.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0244": {
+   "summary": "Auditor-General's Report on the Annual Financial Report of the State of Victoria: 2024–25, November 2025, released on 24 November during a non-sitting period, tabled by the Clerk and ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0245": {
+   "summary": "Quoted the Auditor-General that prolonged operating losses and ongoing fiscal cash deficits are not financially sustainable because they lead to higher debt and indicate structural risks, alongside the statement that the state tends to spend unexpected revenue gains.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0246": {
+   "summary": "Noted that the Auditor-General held inquiries into the Freedom of Information Act in 2012 and 2015, among half a dozen inquiries this century, and asked whether the government agrees reform is needed.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0247": {
+   "summary": "Auditor-General's report Accessibility of Tram Services: Follow-up tabled by the Clerk and ordered to be published, alongside an Ombudsman investigation report.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0248": {
+   "summary": "Said, citing the Auditor-General, that prolonged fiscal cash deficits jeopardise the state's economic security, and that the Auditor-General's reporting shows debt being shifted off the general government sector's books into the non-financial public sector.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  },
+  "VIC-0249": {
+   "summary": "Noted in passing that the Public Accounts and Estimates Committee focuses on public finances and on oversight of two institutions of Parliament, the Victorian Auditor-General's Office and the Parliamentary Budget Officer.",
+   "kind": "Passing reference",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0250": {
+   "summary": "Auditor-General's report Accessibility of Tram Services: Follow-up, November 2025, tabled by the Clerk and ordered to be published, with an Ombudsman report.",
+   "kind": "Report tabled or noted",
+   "sector": "Transport and roads",
+   "ag": "Home"
+  },
+  "VIC-0251": {
+   "summary": "Said the Auditor-General is currently examining the $875 million spent on the forestry transition program, while arguing that funding for Parks Victoria has been cut and that very little of the transition money went to ecological regeneration.",
+   "kind": "Passing reference",
+   "sector": "Energy and environment",
+   "ag": "Home"
+  },
+  "VIC-0252": {
+   "summary": "Spoke on the Public Accounts and Estimates Committee's report, thanking the secretariat and staff and saying it is an important function of the committee to follow up Auditor-General reports, here two on local government fraud and corruption controls.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0253": {
+   "summary": "Tabled the committee's report on fraud and corruption control in local government, a follow-up of Auditor-General reports 40 (2019) and 316 (2022), and said the committee's role includes oversight of the Auditor-General's Office and follow-up inquiries into its earlier reports.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0254": {
+   "summary": "Presented the Public Accounts and Estimates Committee's report Inquiry into Fraud and Corruption Control in Local Government: A Follow up of Two Auditor-General Reports, with appendices and transcripts, ordered to be published.",
+   "kind": "Report tabled or noted",
+   "sector": "Local government",
+   "ag": "Home"
+  },
+  "VIC-0255": {
+   "summary": "Said the Auditor-General's 2017 report Managing Victoria's Planning System for Land Use and Development further supported developing planning permit application streams, as past inquiries have noted.",
+   "kind": "Cites audit findings",
+   "sector": "Housing and planning",
+   "ag": "Home"
+  },
+  "VIC-0256": {
+   "summary": "Listed the Auditor-General among oversight bodies, with IBAC, WorkSafe and the independent prison visitor scheme, covering corrections and youth justice, in thanking the Ombudsman and saying their coverage is only part of the picture.",
+   "kind": "Passing reference",
+   "sector": "Justice and police",
+   "ag": "Home"
+  },
+  "VIC-0257": {
+   "summary": "Disputed opposition claims about project blowouts, telling members to look at what the Auditor-General has said about the government's projects, in opposing the CFMEU motion.",
+   "kind": "Passing reference",
+   "sector": "Major projects and procurement",
+   "ag": "Home"
+  },
+  "VIC-0258": {
+   "summary": "Raised concerns about the timeline for responses to the Auditor-General's report and asked what is being done to prepare the VEC and other critical digital infrastructure for cyber threats before next year's election, given failures identified in the report.",
+   "kind": "Cites audit findings",
+   "sector": "Other",
+   "ag": "Home"
+  },
+  "VIC-0259": {
+   "summary": "Argued Gellung Warl's guaranteed funding would operate without normal checks such as Auditor-General scrutiny, contrasting the Auditor-General, IBAC and the Ombudsman, which remain subject to statutory oversight and review by Parliament.",
+   "kind": "Office, powers or funding",
+   "sector": "Integrity and governance",
+   "ag": "Home"
+  },
+  "VIC-0260": {
+   "summary": "Claimed the Auditor-General has shown only about 18 per cent of the state's debt is due to COVID, disputing the government's explanation of debt, and said the budget was in deficit before COVID.",
+   "kind": "Cites audit findings",
+   "sector": "Finance and budget",
+   "ag": "Home"
+  }
+ }
+}

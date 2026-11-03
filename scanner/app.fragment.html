@@ -1,0 +1,779 @@
+<title>Auditor-General in Hansard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Every mention of an Auditor-General in the Hansard of Australia's six states and two territories, summarised and linked to the original record.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: a parliamentary reading room. Masthead, one sticky filter row, the figures and heat table,
+   a sheet per jurisdiction, then the debate record. Sans is ours (summaries, data); serif is always
+   Hansard's own words. Assembly green and Council red are the chambers' traditional colours. */
+:root {
+  --bg: #f1f4f2; --surface: #ffffff; --surface-2: #e7ece9; --ink: #13201a; --ink-2: #3d4c45; --ink-3: #5d6c65; --rule: #d3dcd7;
+  --accent: #0b6b4c; --accent-soft: #d9ebe3; --accent-ink: #ffffff;
+  --lower: #0a4f38; --upper: #e8737d; --proof: #7a5300; --proof-bg: #fbf0d5;
+  --mark-bg: #fbe7a3; --mark-ink: #13201a;
+  --heat-0: #eaefec; --heat-1: #cde5d9; --heat-2: #9ad0b7; --heat-3: #5fb092; --heat-4: #24805f; --heat-5: #0a5139;
+  --heat-ink-0: #5d6c65; --heat-ink-1: #13201a; --heat-ink-2: #13201a; --heat-ink-3: #0b1712; --heat-ink-4: #ffffff; --heat-ink-5: #ffffff;
+  --font-ui: "Libre Franklin", "Franklin Gothic Book", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-hansard: "Source Serif 4", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --shadow: 0 1px 2px rgb(19 32 26 / 6%);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1512; --surface: #141f1a; --surface-2: #1b2923; --ink: #e6efea; --ink-2: #b8c6be; --ink-3: #93a49b; --rule: #2a3932;
+  --accent: #5ac9a2; --accent-soft: #1c3a2e; --accent-ink: #06130e;
+  --lower: #7fdcb9; --upper: #d8434f; --proof: #f1cd7b; --proof-bg: #3a2e10;
+  --mark-bg: #5e4c10; --mark-ink: #fff5cf;
+  --heat-0: #17231e; --heat-1: #1c3a2e; --heat-2: #1e5a45; --heat-3: #25795c; --heat-4: #41a581; --heat-5: #86d8b9;
+  --heat-ink-0: #93a49b; --heat-ink-1: #e6efea; --heat-ink-2: #e6efea; --heat-ink-3: #ffffff; --heat-ink-4: #06130e; --heat-ink-5: #06130e;
+  --shadow: none; color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --bg: #0d1512; --surface: #141f1a; --surface-2: #1b2923; --ink: #e6efea; --ink-2: #b8c6be; --ink-3: #93a49b; --rule: #2a3932;
+  --accent: #5ac9a2; --accent-soft: #1c3a2e; --accent-ink: #06130e;
+  --lower: #7fdcb9; --upper: #d8434f; --proof: #f1cd7b; --proof-bg: #3a2e10;
+  --mark-bg: #5e4c10; --mark-ink: #fff5cf;
+  --heat-0: #17231e; --heat-1: #1c3a2e; --heat-2: #1e5a45; --heat-3: #25795c; --heat-4: #41a581; --heat-5: #86d8b9;
+  --heat-ink-0: #93a49b; --heat-ink-1: #e6efea; --heat-ink-2: #e6efea; --heat-ink-3: #ffffff; --heat-ink-4: #06130e; --heat-ink-5: #06130e;
+  --shadow: none; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 104px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 15px/1.5 var(--font-ui); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+a { color: var(--accent); text-underline-offset: 2px; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Masthead */
+.mast { background: var(--surface); border-bottom: 1px solid var(--rule); }
+.mast .wrap { display: grid; gap: 6px; padding-block: 22px 16px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.mast h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 700; letter-spacing: -.015em; line-height: 1.15; }
+.mast p { color: var(--ink-2); max-width: 74ch; }
+.jump { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; padding-top: 4px; }
+
+/* Filter row */
+.filters { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--rule); }
+.filters .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding-block: 10px; }
+@media (max-width: 860px) { .filters { position: static; } }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { border: 1px solid var(--rule); background: var(--surface); border-radius: 6px; padding: 5px 9px; font-size: 13px; font-weight: 600; cursor: pointer; font-variant-numeric: tabular-nums; }
+.chip:hover { background: var(--surface-2); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.field { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.field label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.filters select, .filters input { border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); padding: 5px 8px; font-size: 13px; max-width: 100%; height: 32px; }
+.filters input[type="search"] { width: 230px; }
+.filters input[type="date"] { width: 136px; }
+.field.inline { flex-direction: row; align-items: center; gap: 5px; }
+.field.inline label { position: static; width: auto; height: auto; overflow: visible; clip-path: none; font-size: 12px; color: var(--ink-3); }
+.more-filters { display: contents; }
+.more-toggle { display: none; }
+@media (max-width: 860px) {
+  .more-toggle { display: block; font-weight: 500; height: 32px; }
+  .more-filters { display: none; width: 100%; flex-wrap: wrap; gap: 8px; }
+  .more-filters.open { display: flex; }
+  .filters input[type="search"] { width: 100%; min-width: 0; }
+  .filters .field:has(> input[type="search"]) { flex: 1 1 170px; }
+}
+.status { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding-block: 12px 0; font-size: 13px; color: var(--ink-2); }
+.status strong { color: var(--ink); }
+.link-btn { background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; font-size: 13px; }
+
+/* Figures */
+section { padding-block: 22px 0; }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; margin-bottom: 10px; }
+.section-head h2 { font-size: 19px; font-weight: 700; letter-spacing: -.005em; }
+.section-head p { font-size: 13px; color: var(--ink-3); max-width: 70ch; }
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; box-shadow: var(--shadow); }
+.figures { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 2fr); gap: 14px; }
+@media (max-width: 860px) { .figures { grid-template-columns: minmax(0, 1fr); } }
+.hero { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+.hero-num { font-size: clamp(48px, 7vw, 64px); font-weight: 700; line-height: 1; letter-spacing: -.02em; }
+.hero-label { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.tile-v { font-size: 22px; font-weight: 700; line-height: 1.1; }
+.tile-l { font-size: 12px; color: var(--ink-3); }
+.national { padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+.national h3 { font-size: 15px; font-weight: 700; }
+.national p { max-width: 80ch; }
+.ai-tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .03em; color: var(--ink-3); border: 1px solid var(--rule); border-radius: 4px; padding: 0 5px; vertical-align: 1px; white-space: nowrap; }
+
+/* Heat table */
+.heat-scroll { overflow-x: auto; }
+table.heat { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 660px; font-size: 13px; font-variant-numeric: tabular-nums; }
+table.heat th { font-weight: 500; color: var(--ink-3); font-size: 12px; padding: 3px 4px; text-align: center; white-space: nowrap; }
+table.heat th.row-h { text-align: left; color: var(--ink); font-weight: 600; font-size: 13px; padding-right: 10px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+table.heat td { padding: 0; }
+.cell { display: block; width: 100%; min-height: 30px; border: 0; border-radius: 3px; background: var(--heat-0); color: var(--heat-ink-0); cursor: pointer; font-size: 13px; font-weight: 500; }
+.cell:hover { outline: 2px solid var(--ink-2); outline-offset: -1px; }
+.cell[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: 1px; }
+.cell[disabled] { cursor: default; }
+.cell[disabled]:hover { outline: 0; }
+.h1 { background: var(--heat-1); color: var(--heat-ink-1); } .h2 { background: var(--heat-2); color: var(--heat-ink-2); }
+.h3 { background: var(--heat-3); color: var(--heat-ink-3); } .h4 { background: var(--heat-4); color: var(--heat-ink-4); }
+.h5 { background: var(--heat-5); color: var(--heat-ink-5); }
+td.total, th.total { font-weight: 600; color: var(--ink); text-align: right; padding-left: 8px; }
+tfoot th { color: var(--ink); }
+.heat-wrap { padding: 12px 14px; }
+.scale { display: flex; flex-wrap: wrap; align-items: center; gap: 3px; font-size: 12px; color: var(--ink-3); padding-top: 8px; }
+.scale i { display: inline-block; width: 26px; height: 12px; border-radius: 2px; }
+.scale span { margin: 0 8px 0 3px; }
+
+/* Bars */
+.bars-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+@media (max-width: 760px) { .bars-grid { grid-template-columns: minmax(0, 1fr); } }
+.bars { padding: 12px 14px; }
+.bars h3 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.bar-row { display: grid; grid-template-columns: minmax(120px, 42%) minmax(0, 1fr); align-items: center; gap: 8px; width: 100%; background: none; border: 0; padding: 3px 4px; border-radius: 4px; cursor: pointer; text-align: left; font-size: 13px; }
+.bar-row:hover { background: var(--surface-2); }
+.bar-row[aria-pressed="true"] { background: var(--accent-soft); font-weight: 600; }
+.bar-track { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.bar-fill { height: 12px; min-width: 2px; background: var(--accent); border-radius: 0 4px 4px 0; }
+.bar-val { font-size: 12px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+/* Jurisdiction sheets */
+.sheets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .sheets { grid-template-columns: minmax(0, 1fr); } }
+.sheet { padding: 14px 16px; display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+.sheet.dim { opacity: .55; }
+.sheet-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.sheet h3 { font-size: 16px; font-weight: 700; line-height: 1.25; }
+.sheet .sub { font-size: 12.5px; color: var(--ink-3); }
+.sheet-num { text-align: right; flex: none; }
+.sheet-num b { display: block; font-size: 24px; line-height: 1.05; font-weight: 700; }
+.sheet-num span { font-size: 12px; color: var(--ink-3); }
+.spark { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 2px; align-items: end; height: 26px; }
+.spark i { display: block; background: var(--accent); border-radius: 2px 2px 0 0; min-height: 1px; opacity: .85; }
+.spark-axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-3); margin-top: 1px; }
+.issues { display: grid; gap: 4px; padding: 0; margin: 0; list-style: none; }
+.issue { display: block; width: 100%; text-align: left; background: var(--surface-2); border: 1px solid transparent; border-radius: 5px; padding: 5px 8px; cursor: pointer; font-size: 13px; line-height: 1.35; }
+.issue:hover { border-color: var(--accent); }
+.issue[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+.issue b { font-weight: 600; }
+.issue span { color: var(--ink-2); }
+.sheet-foot { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; margin-top: auto; padding-top: 2px; }
+
+/* Debate record */
+.feed-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: 13px; }
+.feed-tools select { border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); padding: 4px 8px; font-size: 13px; }
+.feed { display: grid; gap: 10px; }
+.feed-note { font-size: 13px; color: var(--ink-2); margin-bottom: 10px; max-width: 86ch; }
+.feed-note { font-family: var(--font-ui); }
+.debate { padding: 12px 16px; min-width: 0; }
+.debate-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 12.5px; color: var(--ink-3); }
+.jur { font-weight: 700; font-size: 12px; color: var(--ink); background: var(--surface-2); border-radius: 4px; padding: 0 6px; letter-spacing: .02em; }
+.date { color: var(--ink-2); font-weight: 500; font-variant-numeric: tabular-nums; }
+.chamber::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; background: var(--lower); }
+.chamber.upper::before { background: var(--upper); border-radius: 50%; }
+.debate h3 { font-size: 16px; font-weight: 600; line-height: 1.3; margin-top: 3px; overflow-wrap: anywhere; }
+.proc { font-size: 13px; color: var(--ink-3); }
+.gist { margin-top: 6px; padding: 7px 10px; background: var(--surface-2); border-radius: 5px; font-size: 14px; }
+.turns { display: grid; gap: 0; margin-top: 6px; }
+.turn { padding: 9px 0; border-top: 1px solid var(--rule); display: grid; gap: 4px; min-width: 0; }
+.turn-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 13.5px; }
+.turn-head strong { font-weight: 600; }
+.turn-head .seat { color: var(--ink-3); font-size: 12.5px; }
+.pills { display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto; }
+.pill { font-size: 11.5px; border-radius: 4px; padding: 0 6px; background: var(--surface-2); color: var(--ink-2); white-space: nowrap; }
+.pill.proof { background: var(--proof-bg); color: var(--proof); font-weight: 600; }
+.pill.count { background: none; border: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
+.sum { max-width: 86ch; }
+.turn-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 14px; font-size: 13px; }
+.turn-foot a { font-weight: 600; }
+.cite { color: var(--ink-3); font-size: 12px; }
+.extract-btn { background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink-2); font-size: 13px; text-decoration: underline; text-underline-offset: 2px; }
+blockquote.verbatim { margin: 4px 0 2px; padding: 8px 12px; border-left: 3px solid var(--rule); font: 400 15.5px/1.55 var(--font-hansard); color: var(--ink); max-width: 84ch; overflow-wrap: anywhere; }
+mark { background: var(--mark-bg); color: var(--mark-ink); padding: 0 1px; border-radius: 2px; }
+.more-turns, .more { display: block; width: 100%; border: 1px solid var(--rule); background: var(--surface); border-radius: 6px; padding: 7px 10px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.more-turns { margin-top: 6px; background: var(--surface-2); border-color: transparent; }
+.more-turns:hover, .more:hover { background: var(--surface-2); }
+.empty { padding: 24px 16px; text-align: center; color: var(--ink-2); }
+
+/* Method */
+.table-scroll { overflow-x: auto; }
+table.method { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 13px; }
+table.method th { text-align: left; font-size: 12px; color: var(--ink-3); font-weight: 600; border-bottom: 1px solid var(--rule); padding: 8px 10px; }
+table.method td { border-bottom: 1px solid var(--rule); padding: 8px 10px; vertical-align: top; }
+table.method tr:last-child td { border-bottom: 0; }
+table.method td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+@media (max-width: 760px) { .notes { grid-template-columns: minmax(0, 1fr); } }
+.note { padding: 12px 16px; font-size: 14px; }
+.note h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.note ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+footer { padding-block: 22px 32px; font-size: 12.5px; color: var(--ink-3); }
+
+#tip { position: fixed; z-index: 20; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12.5px; line-height: 1.35; border-radius: 5px; padding: 5px 8px; max-width: 240px; }
+#tip b { font-size: 14px; }
+#copybox { width: 100%; height: 120px; margin-top: 8px; font: 12px/1.4 ui-monospace, Consolas, monospace; }
+
+/* Date range: the first filter. Everything below the Overview follows it. */
+.date-row { flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.date-label { font-size: 13px; font-weight: 600; }
+.custom-dates { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.date-range { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.narrow-only { display: none; }
+@media (min-width: 861px) { .more-filters select { max-width: 165px; } }
+@media (max-width: 860px) {
+  .wide-only, .date-label { display: none; }
+  .narrow-only { display: inline; }
+  .date-row .chips { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); width: 100%; }
+  .date-row .chip { min-height: 40px; padding-inline: 2px; }
+  .custom-dates { width: 100%; }
+  .custom-dates .field { flex: 1 1 140px; }
+  .filters .custom-dates input[type="date"] { flex: 1 1 auto; width: auto; min-width: 0; height: 40px; }
+}
+</style>
+<!--BODY-->
+<header class="mast">
+  <div class="wrap">
+    <div class="eyebrow">Australian state and territory parliaments</div>
+    <h1>Auditor-General in Hansard</h1>
+    <p id="lede"></p>
+    <nav class="jump" aria-label="Sections">
+      <a href="#figures">Overview</a><a href="#states">By jurisdiction</a><a href="#record">Debate record</a><a href="#method">Coverage and method</a>
+    </nav>
+  </div>
+</header>
+
+<div class="filters" role="search" aria-label="Filter mentions">
+  <div class="wrap">
+    <div class="date-row">
+      <span class="date-label">Show</span>
+      <div class="chips" id="date-chips" role="group" aria-label="Date range"></div>
+      <div class="custom-dates" id="custom-dates" hidden>
+        <div class="field inline"><label for="f-from">From</label><input id="f-from" type="date"></div>
+        <div class="field inline"><label for="f-to">To</label><input id="f-to" type="date"></div>
+      </div>
+      <span class="date-range" id="date-range"></span>
+    </div>
+    <div class="chips" id="jur-chips" role="group" aria-label="Jurisdiction"></div>
+    <div class="field"><label for="q">Search summaries and Hansard text</label><input id="q" type="search" autocomplete="off" placeholder="Search names, topics, words"></div>
+    <button class="chip more-toggle" id="more-filters-btn" type="button" aria-expanded="false" aria-controls="more-filters">More filters</button>
+    <div class="more-filters" id="more-filters">
+      <div class="field"><label for="f-kind">Type of mention</label><select id="f-kind" autocomplete="off"></select></div>
+      <div class="field"><label for="f-sector">Policy area</label><select id="f-sector" autocomplete="off"></select></div>
+      <div class="field"><label for="f-house">House</label><select id="f-house" autocomplete="off"></select></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="status" id="status" aria-live="polite"></div>
+
+  <section id="figures" aria-labelledby="h-fig">
+    <div class="section-head"><h2 id="h-fig">Overview</h2><p id="fig-note" hidden>This section always shows the full 12 months. Your dates apply to everything below it.</p></div>
+    <div class="figures">
+      <div class="panel hero">
+        <div><div class="hero-num" id="k-mentions"></div><div class="hero-label" id="k-mentions-l"></div></div>
+        <div class="tiles">
+          <div><div class="tile-v" id="k-turns"></div><div class="tile-l">Member contributions</div></div>
+          <div><div class="tile-v" id="k-debates"></div><div class="tile-l">Debates</div></div>
+          <div><div class="tile-v" id="k-days"></div><div class="tile-l">Sitting days with a mention</div></div>
+        </div>
+      </div>
+      <div class="panel national">
+        <h3>The year in brief <span class="ai-tag">AI summary</span></h3>
+        <div id="national"></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-heat">
+    <div class="section-head"><h2 id="h-heat">Mentions by jurisdiction and month</h2><p>Select a cell to see those debates. Blank cells have no mentions, which can simply mean the parliament didn't sit.</p></div>
+    <div class="panel heat-wrap">
+      <div class="heat-scroll"><table class="heat" id="heat"></table></div>
+      <div class="scale" id="scale" aria-hidden="true"></div>
+    </div>
+    <div class="bars-grid">
+      <div class="panel bars"><h3>How the Auditor-General came up <span class="ai-tag">AI classified</span></h3><div id="bars-kind"></div></div>
+      <div class="panel bars"><h3>Policy area <span class="ai-tag">AI classified</span></h3><div id="bars-sector"></div></div>
+    </div>
+  </section>
+
+  <section id="states" aria-labelledby="h-states">
+    <div class="section-head"><h2 id="h-states">By jurisdiction</h2><p>Select an issue to filter the record to the contributions behind it. Numbers follow your filters; the written summaries cover the full 12 months.</p></div>
+    <div class="sheets" id="sheets"></div>
+  </section>
+
+  <section id="record" aria-labelledby="h-record">
+    <div class="section-head">
+      <h2 id="h-record">Debate record</h2>
+      <div class="feed-tools">
+        <span id="feed-count"></span>
+        <label for="f-sort">Sort</label>
+        <select id="f-sort" autocomplete="off"><option value="date">Newest first</option><option value="old">Oldest first</option><option value="mentions">Most mentions</option></select>
+        <button class="link-btn" id="copy-csv" type="button">Copy as CSV</button>
+      </div>
+    </div>
+    <p class="feed-note">Each summary, and the type and policy-area labels, were written by AI from the Hansard extract beneath it. Extracts appear in a serif typeface and are Hansard's own wording. Open the original before quoting anything.</p>
+    <div id="copy-area" hidden><p id="copy-msg" style="font-size:13px"></p><textarea id="copybox" readonly aria-label="CSV text"></textarea></div>
+    <div class="feed" id="feed"></div>
+    <button class="more" id="more" type="button" hidden style="margin-top:10px"></button>
+  </section>
+
+  <section id="method" aria-labelledby="h-method">
+    <div class="section-head"><h2 id="h-method">Coverage and method</h2><p id="method-sub"></p></div>
+    <div class="panel table-scroll"><table class="method" id="method-table"></table></div>
+    <div class="notes" id="notes"></div>
+  </section>
+</main>
+<footer class="wrap" id="foot"></footer>
+<div id="tip" hidden role="status"></div>
+
+<script id="hansard-data" type="application/json">/*__DATA__*/</script>
+<script>
+(() => {
+  'use strict';
+  const DATA = JSON.parse(document.getElementById('hansard-data').textContent);
+  const R = DATA.records;
+  const JUR = DATA.jurisdictions;
+  const JMAP = Object.fromEntries(JUR.map((j) => [j.code, j]));
+  const MONTHS = DATA.months;
+  const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const MENTION = /\bauditors?[\s ]*[-‐‑‒–—]?[\s ]*generals?\b/gi;
+  // "Office, powers or funding" is hidden for now. Set this to true to bring back its label, chart row and filter.
+  const SHOW_OFFICE = false;
+  const OFFICE_KIND = 'Office, powers or funding';
+  const KINDS = DATA.kinds.filter((k) => SHOW_OFFICE || k !== OFFICE_KIND);
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => n.toLocaleString('en-AU');
+  const plural = (n, s, p) => `${fmt(n)} ${n === 1 ? s : p || s + 's'}`;
+  const nice = (d) => { const [y, m, day] = d.split('-'); return `${Number(day)} ${MON[Number(m) - 1]} ${y}`; };
+  const monthLabel = (m) => { const [y, mo] = m.split('-'); return `${MON[Number(mo) - 1]} ${y}`; };
+  const debateKey = (r) => `${r.j}|${r.d}|${r.c}|${r.t}`;
+  const isUpper = (c) => /council/i.test(c || '');
+
+  function h(tag, props, ...kids) {
+    const e = document.createElement(tag);
+    for (const [k, v] of Object.entries(props || {})) {
+      if (v == null || v === false) continue;
+      if (k === 'class') e.className = v;
+      else if (k === 'text') e.textContent = v;
+      else if (k.startsWith('on')) e.addEventListener(k.slice(2), v);
+      else if (k === 'style') e.setAttribute('style', v);
+      else e.setAttribute(k, v === true ? '' : v);
+    }
+    for (const c of kids.flat()) if (c != null && c !== false) e.append(c);
+    return e;
+  }
+  const safeUrl = (u) => (/^https:\/\//.test(u || '') ? u : null);
+  const ext = (href, text, cls) => h('a', { href: safeUrl(href), target: '_blank', rel: 'noopener', class: cls, text });
+
+  // Precompute a lowercase search blob once.
+  for (const r of R) r._s = [r.t, r.p, r.s, r.e, r.sum, r.x, r.c, r.j, r.l].filter(Boolean).join(' ').toLowerCase();
+  if (!SHOW_OFFICE) for (const r of R) if (r.k === OFFICE_KIND) r.k = '';
+
+  const state = { jur: null, month: null, kind: '', sector: '', ag: '', house: '', q: '', from: '', to: '', custom: false, issue: null, sort: 'date', limit: 30, open: new Set() };
+
+  function filtered(skip = {}) {
+    const words = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    return R.filter((r) => {
+      if (state.jur && !skip.jur && r.j !== state.jur) return false;
+      if (state.month && !skip.month && !r.d.startsWith(state.month)) return false;
+      if (state.kind && !skip.kind && r.k !== state.kind) return false;
+      if (state.sector && !skip.sector && r.sec !== state.sector) return false;
+      if (state.ag && r.ag !== state.ag) return false;
+      if (state.house && (state.house === 'upper') !== isUpper(r.c)) return false;
+      if (!skip.dates && state.from && r.d < state.from) return false;
+      if (!skip.dates && state.to && r.d > state.to) return false;
+      if (state.issue && !state.issue.ids.has(r.id)) return false;
+      for (const w of words) if (!r._s.includes(w)) return false;
+      return true;
+    });
+  }
+
+  const hasFilters = () => state.jur || state.month || state.kind || state.sector || state.ag || state.house || state.q || state.from || state.to || state.issue;
+  function clearAll() {
+    Object.assign(state, { jur: null, month: null, kind: '', sector: '', ag: '', house: '', q: '', from: '', to: '', custom: false, issue: null, limit: 30 });
+    $('q').value = ''; $('f-kind').value = ''; $('f-sector').value = ''; $('f-house').value = ''; $('f-from').value = ''; $('f-to').value = '';
+    render();
+  }
+
+  /* Dates: "Last 30 days" counts back from the end of the data, because the page is a snapshot. The Overview keeps the full 12 months. */
+  const PERIODS = [
+    { label: 'Last 30 days', short: '30 days', days: 30 },
+    { label: 'Last 90 days', short: '90 days', days: 90 },
+    { label: 'Last 12 months', short: '12 months', days: 0 },
+  ];
+  const addDays = (iso, n) => { const [y, m, d] = iso.split('-').map(Number); return new Date(Date.UTC(y, m - 1, d + n)).toISOString().slice(0, 10); };
+  const periodFrom = (days) => (days ? addDays(DATA.window.to, 1 - days) : '');
+  const rangeFrom = () => state.from || DATA.window.from;
+  const rangeTo = () => state.to || DATA.window.to;
+  const fullRange = () => rangeFrom() <= DATA.window.from && rangeTo() >= DATA.window.to;
+  const activePeriod = () => (state.custom || state.to ? null : PERIODS.find((p) => state.from === periodFrom(p.days)) || null);
+  const rangeText = () => {
+    const a = rangeFrom();
+    const b = rangeTo();
+    if (a === b) return nice(a);
+    return a.slice(0, 4) === b.slice(0, 4) ? `${nice(a).replace(/ \d{4}$/, '')} to ${nice(b)}` : `${nice(a)} to ${nice(b)}`;
+  };
+  function setPeriod(p) {
+    Object.assign(state, { from: periodFrom(p.days), to: '', custom: false, month: null, limit: 30 });
+    render();
+  }
+  const periodChips = PERIODS.map((p) => h('button', { class: 'chip', type: 'button', onclick: () => setPeriod(p) }, h('span', { class: 'wide-only', text: p.label }), h('span', { class: 'narrow-only', text: p.short })));
+  const customChip = h('button', { class: 'chip', type: 'button', text: 'Custom', onclick: () => {
+    Object.assign(state, { from: rangeFrom(), to: rangeTo(), custom: true, limit: 30 });
+    render();
+  } });
+  $('date-chips').replaceChildren(...periodChips, customChip);
+  function renderDates() {
+    const active = activePeriod();
+    PERIODS.forEach((p, i) => periodChips[i].setAttribute('aria-pressed', String(p === active)));
+    customChip.setAttribute('aria-pressed', String(!active));
+    $('custom-dates').hidden = !!active;
+    $('f-from').value = rangeFrom();
+    $('f-to').value = rangeTo();
+    $('date-range').textContent = rangeText();
+    $('fig-note').hidden = fullRange();
+  }
+
+  /* Tooltip */
+  const tip = $('tip');
+  function showTip(e, nodes) {
+    tip.replaceChildren(...nodes);
+    tip.hidden = false;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = Math.min(window.innerWidth - tip.offsetWidth - 8, Math.max(8, rect.left + rect.width / 2 - tip.offsetWidth / 2));
+    const y = rect.top - tip.offsetHeight - 6;
+    tip.style.left = `${x}px`;
+    tip.style.top = `${y < 4 ? rect.bottom + 6 : y}px`;
+  }
+  const hideTip = () => { tip.hidden = true; };
+
+  /* Figures */
+  function renderFigures(rows) {
+    const mentions = rows.reduce((n, r) => n + r.m, 0);
+    $('k-mentions').textContent = fmt(mentions);
+    const narrowed = state.jur || state.month || state.kind || state.sector || state.ag || state.house || state.q || state.issue;
+    $('k-mentions-l').textContent = `${mentions === 1 ? 'mention' : 'mentions'} of an Auditor-General${narrowed ? ' in this selection' : ''}${state.month ? '' : `, ${nice(DATA.window.from)} to ${nice(DATA.window.to)}`}`;
+    $('k-turns').textContent = fmt(rows.length);
+    $('k-debates').textContent = fmt(new Set(rows.map(debateKey)).size);
+    $('k-days').textContent = fmt(new Set(rows.map((r) => `${r.j}|${r.d}`)).size);
+  }
+
+  /* Heat table: one hue, darker is more; bins are fixed so filtering never repaints the scale. */
+  const BINS = DATA.heatBins;
+  const binOf = (v) => { for (let i = 0; i < BINS.length; i++) if (v <= BINS[i]) return i + 1; return BINS.length + 1; };
+  function renderHeat(rows) {
+    const t = $('heat');
+    // Only the months inside the date range get a column, so a blank cell still means no mentions.
+    const months = MONTHS.filter((m) => `${m}-31` >= rangeFrom() && `${m}-01` <= rangeTo());
+    t.style.minWidth = months.length > 6 ? '' : '0';
+    const counts = {};
+    const turns = {};
+    for (const r of rows) {
+      const m = r.d.slice(0, 7);
+      counts[`${r.j}|${m}`] = (counts[`${r.j}|${m}`] || 0) + r.m;
+      turns[`${r.j}|${m}`] = (turns[`${r.j}|${m}`] || 0) + 1;
+    }
+    const head = h('thead', null, h('tr', null, h('td'), months.map((m) => {
+      const [y, mo] = m.split('-');
+      return h('th', { scope: 'col', title: monthLabel(m) }, MON[Number(mo) - 1], mo === '01' || m === months[0] ? h('div', { style: 'font-weight:400;font-size:11px', text: y }) : h('div', { style: 'font-size:11px', text: ' ' }));
+    }), h('th', { scope: 'col', class: 'total', text: 'Total' })));
+    const body = h('tbody', null, JUR.map((j) => {
+      let tot = 0;
+      const cells = months.map((m) => {
+        const v = counts[`${j.code}|${m}`] || 0;
+        tot += v;
+        const pressed = state.jur === j.code && state.month === m;
+        const label = `${j.name}, ${monthLabel(m)}: ${plural(v, 'mention')}, ${plural(turns[`${j.code}|${m}`] || 0, 'contribution')}`;
+        return h('td', null, h('button', {
+          class: `cell ${v ? 'h' + binOf(v) : ''}`, type: 'button', 'aria-pressed': pressed ? 'true' : 'false', 'aria-label': label, disabled: !v && !pressed,
+          onclick: () => {
+            if (pressed) { state.jur = null; state.month = null; } else { state.jur = j.code; state.month = m; }
+            state.limit = 30; render();
+          },
+          onpointerenter: (e) => showTip(e, [h('b', { text: plural(v, 'mention') }), h('br'), `${j.code}, ${monthLabel(m)}`]),
+          onpointerleave: hideTip,
+          onfocus: (e) => showTip(e, [h('b', { text: plural(v, 'mention') }), h('br'), `${j.code}, ${monthLabel(m)}`]),
+          onblur: hideTip,
+          text: v ? String(v) : '',
+        }));
+      });
+      return h('tr', null, h('th', { scope: 'row', class: 'row-h', title: j.name, text: j.code }), cells, h('td', { class: 'total', text: fmt(tot) }));
+    }));
+    const foot = h('tfoot', null, h('tr', null, h('th', { scope: 'row', class: 'row-h', text: 'All' }), months.map((m) => {
+      const v = JUR.reduce((n, j) => n + (counts[`${j.code}|${m}`] || 0), 0);
+      return h('td', { style: 'text-align:center;font-weight:600;font-size:12.5px', text: v ? fmt(v) : '' });
+    }), h('td', { class: 'total', text: fmt(rows.reduce((n, r) => n + r.m, 0)) })));
+    t.replaceChildren(h('caption', { style: 'position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)', text: 'Mentions of the Auditor-General by jurisdiction and month' }), head, body, foot);
+  }
+  function renderScale() {
+    const lo = [1, ...BINS.map((b) => b + 1)];
+    const parts = ['Mentions in the month'];
+    const s = $('scale');
+    s.replaceChildren(h('span', { text: parts[0] }));
+    lo.forEach((v, i) => {
+      const hi = BINS[i];
+      s.append(h('i', { class: `h${i + 1}` }), h('span', { text: hi == null ? `${v}+` : v === hi ? String(v) : `${v}–${hi}` }));
+    });
+  }
+
+  /* Bars */
+  function renderBars(id, field, order, rows) {
+    const box = $(id);
+    const counts = {};
+    for (const r of rows) counts[r[field]] = (counts[r[field]] || 0) + 1;
+    const items = order.map((name) => [name, counts[name] || 0]);
+    if (field === 'sec') items.sort((a, b) => b[1] - a[1]);
+    const max = Math.max(1, ...items.map((x) => x[1]));
+    const key = field === 'k' ? 'kind' : 'sector';
+    box.replaceChildren(...items.map(([name, v]) => {
+      const pressed = state[key] === name;
+      return h('button', {
+        class: 'bar-row', type: 'button', 'aria-pressed': pressed ? 'true' : 'false', title: `Filter to: ${name}`,
+        onclick: () => { state[key] = pressed ? '' : name; $(key === 'kind' ? 'f-kind' : 'f-sector').value = state[key]; state.limit = 30; render(); },
+      }, h('span', { text: name }), h('span', { class: 'bar-track' }, h('span', { class: 'bar-fill', style: `width:${(v / max) * 82}%` }), h('span', { class: 'bar-val', text: fmt(v) })));
+    }));
+  }
+
+  /* Jurisdiction sheets */
+  function renderSheets(rows) {
+    const counts = {};
+    for (const r of rows) {
+      const c = (counts[r.j] = counts[r.j] || { m: 0, t: 0, d: new Set(), byMonth: {} });
+      c.m += r.m; c.t += 1; c.d.add(debateKey(r));
+      const mo = r.d.slice(0, 7);
+      c.byMonth[mo] = (c.byMonth[mo] || 0) + r.m;
+    }
+    // Threads with nothing inside the date range are left out, so every one shown leads to something.
+    const inDates = new Set(R.filter((r) => r.d >= rangeFrom() && r.d <= rangeTo()).map((r) => r.id));
+    $('sheets').replaceChildren(...JUR.map((j) => {
+      const c = counts[j.code] || { m: 0, t: 0, d: new Set(), byMonth: {} };
+      const max = Math.max(1, ...MONTHS.map((m) => c.byMonth[m] || 0));
+      return h('article', { class: `panel sheet ${state.jur && state.jur !== j.code ? 'dim' : ''}`, id: `sheet-${j.code}` },
+        h('div', { class: 'sheet-top' },
+          h('div', null, h('h3', { text: j.name }), h('div', { class: 'sub', text: j.parliament })),
+          h('div', { class: 'sheet-num' }, h('b', { text: fmt(c.m) }), h('span', { text: `mentions in ${plural(c.d.size, 'debate')}` }))),
+        h('div', { role: 'img', 'aria-label': `Mentions by month in ${j.name}: ${MONTHS.map((m) => `${monthLabel(m)} ${c.byMonth[m] || 0}`).join(', ')}` },
+          h('div', { class: 'spark' }, MONTHS.map((m) => h('i', { title: `${monthLabel(m)}: ${c.byMonth[m] || 0}`, style: `height:${((c.byMonth[m] || 0) / max) * 100}%` }))),
+          h('div', { class: 'spark-axis' }, h('span', { text: monthLabel(MONTHS[0]) }), h('span', { text: monthLabel(MONTHS[MONTHS.length - 1]) }))),
+        h('p', null, j.overview, ' ', h('span', { class: 'ai-tag', text: 'AI summary' })),
+        h('ul', { class: 'issues' }, (j.issues || []).filter((iss) => iss.ids.some((id) => inDates.has(id))).map((iss) => {
+          const pressed = state.issue && state.issue.label === iss.label && state.issue.jur === j.code;
+          return h('li', null, h('button', {
+            class: 'issue', type: 'button', 'aria-pressed': pressed ? 'true' : 'false',
+            onclick: () => {
+              if (pressed) state.issue = null;
+              else { state.issue = { label: iss.label, jur: j.code, ids: new Set(iss.ids) }; state.jur = j.code; state.month = null; }
+              state.limit = 30; render();
+              if (!pressed) $('record').scrollIntoView();
+            },
+          }, h('b', { text: iss.label }), iss.note ? h('span', { text: ` – ${iss.note}` }) : null));
+        })),
+        h('div', { class: 'sheet-foot' },
+          h('button', { class: 'link-btn', type: 'button', text: state.jur === j.code ? 'Show all jurisdictions' : `Filter to ${j.code}`, onclick: () => { if (state.jur === j.code) { state.jur = null; state.month = null; } else { state.jur = j.code; } state.issue = null; state.limit = 30; render(); } }),
+          ext(j.searchUrl, `${j.searchLabel} ↗`)));
+    }));
+  }
+
+  /* Debate record */
+  function highlight(text) {
+    const frag = document.createDocumentFragment();
+    let at = 0;
+    for (const m of text.matchAll(MENTION)) {
+      if (m.index > at) frag.append(text.slice(at, m.index));
+      frag.append(h('mark', { text: m[0] }));
+      at = m.index + m[0].length;
+    }
+    if (at < text.length) frag.append(text.slice(at));
+    return frag;
+  }
+  function turnView(r) {
+    const seat = [r.e, r.pa].filter(Boolean).join(', ');
+    const extract = h('blockquote', { class: 'verbatim', hidden: true, lang: 'en-AU' }, highlight(r.x));
+    const toggle = h('button', { class: 'extract-btn', type: 'button', 'aria-expanded': 'false', text: 'Read the Hansard extract', onclick: () => {
+      extract.hidden = !extract.hidden;
+      toggle.setAttribute('aria-expanded', String(!extract.hidden));
+      toggle.textContent = extract.hidden ? 'Read the Hansard extract' : 'Hide the extract';
+    } });
+    return h('div', { class: 'turn' },
+      h('div', { class: 'turn-head' },
+        h('strong', { text: r.s || 'Tabled paper or procedural record' }), seat ? h('span', { class: 'seat', text: seat }) : null,
+        h('div', { class: 'pills' },
+          r.st === 'proof' ? h('span', { class: 'pill proof', title: 'Uncorrected proof transcript; wording can change', text: 'Proof' }) : null,
+          r.k ? h('span', { class: 'pill', text: r.k }) : null,
+          r.sec && r.sec !== 'Other' ? h('span', { class: 'pill', text: r.sec }) : null,
+          r.ag && r.ag !== 'Home' && r.ag !== 'Unclear' ? h('span', { class: 'pill', text: `${r.ag} A-G` }) : null,
+          h('span', { class: 'pill count', text: plural(r.m, 'mention') }))),
+      h('p', { class: 'sum', text: r.sum || 'Summary not available; see the extract.' }),
+      h('div', { class: 'turn-foot' }, ext(r.u, 'Open original Hansard ↗'), r.l ? h('span', { class: 'cite', text: r.l }) : null, toggle),
+      extract);
+  }
+  function renderFeed(rows) {
+    const groups = new Map();
+    for (const r of rows) {
+      const k = debateKey(r);
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(r);
+    }
+    const debates = [...groups.entries()].map(([k, turns]) => ({ k, turns, first: turns[0], mentions: turns.reduce((n, r) => n + r.m, 0) }));
+    debates.sort((a, b) => {
+      if (state.sort === 'mentions') return b.mentions - a.mentions || (a.first.d < b.first.d ? 1 : -1);
+      const c = a.first.d < b.first.d ? 1 : a.first.d > b.first.d ? -1 : a.k.localeCompare(b.k);
+      return state.sort === 'old' ? -c : c;
+    });
+    $('feed-count').textContent = `${plural(debates.length, 'debate')}, ${plural(rows.length, 'contribution')}`;
+    const show = debates.slice(0, state.limit);
+    const feed = $('feed');
+    if (!debates.length) {
+      feed.replaceChildren(h('div', { class: 'panel empty' }, 'No mentions match these filters. ', h('button', { class: 'link-btn', type: 'button', text: 'Clear all filters', onclick: clearAll })));
+    } else {
+      feed.replaceChildren(...show.map((d) => {
+        const r = d.first;
+        const gist = DATA.gists[d.k];
+        const open = state.open.has(d.k);
+        const limit = 4;
+        const turns = open ? d.turns : d.turns.slice(0, limit);
+        return h('article', { class: 'panel debate' },
+          h('div', { class: 'debate-meta' },
+            h('span', { class: 'jur', title: JMAP[r.j].name, text: r.j }),
+            h('span', { class: 'date', text: nice(r.d) }),
+            h('span', { class: `chamber ${isUpper(r.c) ? 'upper' : ''}`, text: r.c }),
+            d.turns.length > 1 ? h('span', { text: `${plural(d.mentions, 'mention')} by ${d.turns.length} speakers` }) : null),
+          h('h3', { text: r.t }),
+          r.p ? h('div', { class: 'proc', text: r.p }) : null,
+          gist ? h('p', { class: 'gist' }, gist, ' ', h('span', { class: 'ai-tag', text: 'AI summary' })) : null,
+          h('div', { class: 'turns' }, turns.map(turnView)),
+          d.turns.length > limit ? h('button', { class: 'more-turns', type: 'button', text: open ? 'Show fewer speakers' : `Show all ${d.turns.length} speakers`, onclick: () => { if (open) state.open.delete(d.k); else state.open.add(d.k); renderFeed(filtered()); } }) : null);
+      }));
+    }
+    const more = $('more');
+    const left = debates.length - show.length;
+    more.hidden = left <= 0;
+    more.textContent = `Show ${Math.min(30, left)} more of ${fmt(left)} remaining debates`;
+  }
+
+  /* Status line */
+  function renderStatus(rows) {
+    const bits = [];
+    if (state.jur) bits.push(JMAP[state.jur].name);
+    if (state.month) bits.push(monthLabel(state.month));
+    if (state.issue) bits.push(`Issue: ${state.issue.label}`);
+    if (state.kind) bits.push(state.kind);
+    if (state.sector) bits.push(state.sector);
+    if (state.ag) bits.push(`${state.ag} Auditor-General`);
+    if (state.house) bits.push(state.house === 'upper' ? 'Upper houses' : 'Lower or single houses');
+    if (state.from || state.to) bits.push(activePeriod() ? activePeriod().label : rangeText());
+    if (state.q) bits.push(`“${state.q}”`);
+    const s = $('status');
+    if (!bits.length) { s.replaceChildren(); s.hidden = true; return; }
+    s.hidden = false;
+    s.replaceChildren(
+      h('span', null, 'Showing ', h('strong', { text: plural(rows.reduce((n, r) => n + r.m, 0), 'mention') }), ` in ${plural(new Set(rows.map(debateKey)).size, 'debate')}: ${bits.join(' · ')}`),
+      h('a', { href: '#record', text: 'Go to debates' }),
+      h('button', { class: 'link-btn', type: 'button', text: 'Clear all filters', onclick: clearAll }));
+  }
+
+  function renderChips() {
+    const box = $('jur-chips');
+    box.replaceChildren(
+      h('button', { class: 'chip', type: 'button', 'aria-pressed': state.jur ? 'false' : 'true', text: 'All', onclick: () => { state.jur = null; state.month = null; state.issue = null; state.limit = 30; render(); } }),
+      ...JUR.map((j) => h('button', { class: 'chip', type: 'button', title: j.name, 'aria-pressed': state.jur === j.code ? 'true' : 'false', text: j.code, onclick: () => {
+        const off = state.jur === j.code;
+        state.jur = off ? null : j.code;
+        state.month = off ? null : state.month;
+        if (state.issue && state.issue.jur !== state.jur) state.issue = null;
+        state.limit = 30;
+        render();
+      } })));
+  }
+
+  function render() {
+    const rows = filtered();
+    renderChips();
+    renderStatus(rows);
+    renderDates();
+    renderFigures(filtered({ dates: true }));
+    renderHeat(rows);
+    renderBars('bars-kind', 'k', KINDS, rows);
+    renderBars('bars-sector', 'sec', DATA.sectors, rows);
+    renderSheets(rows);
+    renderFeed(rows);
+  }
+
+  /* Static parts */
+  function fillSelect(id, first, values) {
+    $(id).replaceChildren(h('option', { value: '', text: first }), ...values.map((v) => h('option', { value: Array.isArray(v) ? v[0] : v, text: Array.isArray(v) ? v[1] : v })));
+  }
+  fillSelect('f-kind', 'All mention types', KINDS);
+  fillSelect('f-sector', 'All policy areas', DATA.sectors);
+  fillSelect('f-house', 'All houses', [['lower', 'Lower or single houses'], ['upper', 'Upper houses']]);
+  $('f-from').min = $('f-to').min = DATA.window.from;
+  $('f-from').max = $('f-to').max = DATA.window.to;
+
+  let qTimer;
+  $('q').addEventListener('input', (e) => { clearTimeout(qTimer); qTimer = setTimeout(() => { state.q = e.target.value.trim(); state.limit = 30; render(); }, 180); });
+  const bind = (id, key) => $(id).addEventListener('change', (e) => { state[key] = e.target.value; state.limit = 30; render(); });
+  bind('f-kind', 'kind'); bind('f-sector', 'sector'); bind('f-house', 'house');
+  for (const [id, key] of [['f-from', 'from'], ['f-to', 'to']]) {
+    $(id).addEventListener('change', (e) => {
+      state[key] = e.target.value;
+      if (state.from && state.to && state.from > state.to) [state.from, state.to] = [state.to, state.from];
+      state.limit = 30;
+      render();
+    });
+  }
+  $('f-sort').addEventListener('change', (e) => { state.sort = e.target.value; state.limit = 30; renderFeed(filtered()); });
+  $('more').addEventListener('click', () => { state.limit += 30; renderFeed(filtered()); });
+  $('more-filters-btn').addEventListener('click', (e) => {
+    const open = $('more-filters').classList.toggle('open');
+    e.currentTarget.setAttribute('aria-expanded', String(open));
+    e.currentTarget.textContent = open ? 'Fewer filters' : 'More filters';
+  });
+
+  function csv() {
+    const cols = ['Jurisdiction', 'Date', 'House', 'Debate', 'Proceeding', 'Speaker', 'Electorate', 'Mentions', 'Type of mention', 'Policy area', 'Which Auditor-General', 'Status', 'Summary', 'Hansard link'];
+    const esc = (v) => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`;
+    const rows = filtered().map((r) => [r.j, r.d, r.c, r.t, r.p, r.s, r.e, r.m, r.k, r.sec, r.ag, r.st, r.sum, r.u].map(esc).join(','));
+    return [cols.map(esc).join(','), ...rows].join('\r\n');
+  }
+  $('copy-csv').addEventListener('click', async () => {
+    const text = csv();
+    const n = text.split('\r\n').length - 1;
+    const area = $('copy-area');
+    try {
+      await navigator.clipboard.writeText(text);
+      area.hidden = false;
+      $('copy-msg').textContent = `Copied ${plural(n, 'row')}. Paste into a spreadsheet.`;
+      $('copybox').hidden = true;
+    } catch (e) {
+      area.hidden = false;
+      $('copy-msg').textContent = `Your browser blocked the clipboard. Select the text below and copy it (${plural(n, 'row')}).`;
+      $('copybox').hidden = false;
+      $('copybox').value = text;
+      $('copybox').select();
+    }
+  });
+
+  $('lede').textContent = DATA.lede;
+  const OFFICE_SENTENCE = /About one in eight concerned the office itself:[^.]*\.\s*/;
+  $('national').replaceChildren(...DATA.national.map((p) => h('p', { text: SHOW_OFFICE ? p : p.replace(OFFICE_SENTENCE, '') })));
+  $('method-sub').textContent = DATA.methodSub;
+  $('method-table').replaceChildren(
+    h('thead', null, h('tr', null, ['Jurisdiction', 'What was read', 'How it was read', 'Where links land', 'Mentions'].map((c, i) => h('th', { scope: 'col', style: i === 4 ? 'text-align:right' : null, text: c })))),
+    h('tbody', null, JUR.map((j) => h('tr', null,
+      h('td', null, h('strong', { text: j.code }), h('br'), ext(j.homeUrl, 'Hansard home ↗')),
+      h('td', { text: j.scope }),
+      h('td', { text: j.method }),
+      h('td', { text: j.linkNote }),
+      h('td', { class: 'n', text: fmt(R.filter((r) => r.j === j.code).reduce((n, r) => n + r.m, 0)) })))));
+  $('notes').replaceChildren(...DATA.notes.map((n) => h('div', { class: 'panel note' }, h('h3', { text: n.title }), h('ul', null, n.items.map((x) => h('li', { text: x }))))));
+  $('foot').textContent = DATA.footer;
+  renderScale();
+
+  // Every load starts on All jurisdictions and the last 12 months. Filters aren't kept in the address, and an old "#NSW" is cleared.
+  if (JMAP[(location.hash || '').slice(1).toUpperCase()]) { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* Some viewers block URL changes; the filters are unaffected. */ } }
+  render();
+  $('status').hidden = !hasFilters();
+})();
+</script>

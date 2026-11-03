@@ -1,0 +1,139 @@
+[
+ {
+  "date": "2026-10-22",
+  "chamber": "Legislative Assembly",
+  "debate": "Public Accounts Committee",
+  "ids": [
+   "WA-0002",
+   "WA-0003",
+   "WA-0004"
+  ]
+ },
+ {
+  "date": "2026-10-22",
+  "chamber": "Legislative Council",
+  "debate": "Public housing",
+  "ids": [
+   "WA-0005",
+   "WA-0006",
+   "WA-0007",
+   "WA-0008",
+   "WA-0009"
+  ]
+ },
+ {
+  "date": "2026-10-21",
+  "chamber": "Legislative Council",
+  "debate": "Standing Committee on Estimates and Financial Operations",
+  "ids": [
+   "WA-0013",
+   "WA-0014",
+   "WA-0015",
+   "WA-0016"
+  ]
+ },
+ {
+  "date": "2026-10-13",
+  "chamber": "Legislative Assembly",
+  "debate": "Rail Freight System (Acquisition and Reorganisation) Bill 2026",
+  "ids": [
+   "WA-0032",
+   "WA-0033",
+   "WA-0034",
+   "WA-0035"
+  ]
+ },
+ {
+  "date": "2026-08-19",
+  "chamber": "Legislative Assembly",
+  "debate": "Essential services",
+  "ids": [
+   "WA-0047",
+   "WA-0048",
+   "WA-0049"
+  ]
+ },
+ {
+  "date": "2026-06-17",
+  "chamber": "Legislative Assembly",
+  "debate": "Mental health—Auditor General's report",
+  "ids": [
+   "WA-0066",
+   "WA-0067",
+   "WA-0068"
+  ]
+ },
+ {
+  "date": "2026-05-20",
+  "chamber": "LA Estimates Committee A",
+  "debate": "Division 12: Office of the Auditor General",
+  "ids": [
+   "WA-0080",
+   "WA-0081",
+   "WA-0082",
+   "WA-0083"
+  ]
+ },
+ {
+  "date": "2026-05-05",
+  "chamber": "Legislative Council",
+  "debate": "Treasurer's Advance Authorisation Bill 2026",
+  "ids": [
+   "WA-0109",
+   "WA-0110",
+   "WA-0111"
+  ]
+ },
+ {
+  "date": "2026-03-17",
+  "chamber": "Legislative Assembly",
+  "debate": "Gold Corporation Amendment Bill 2025",
+  "ids": [
+   "WA-0115",
+   "WA-0116",
+   "WA-0117"
+  ]
+ },
+ {
+  "date": "2025-12-10",
+  "chamber": "Legislative Council",
+  "debate": "State Development Bill 2025",
+  "ids": [
+   "WA-0129",
+   "WA-0130",
+   "WA-0131"
+  ]
+ },
+ {
+  "date": "2025-12-09",
+  "chamber": "Legislative Council",
+  "debate": "State Development Bill 2025",
+  "ids": [
+   "WA-0133",
+   "WA-0134",
+   "WA-0135",
+   "WA-0136"
+  ]
+ },
+ {
+  "date": "2025-12-03",
+  "chamber": "Legislative Assembly",
+  "debate": "Infrastructure delivery—Government performance",
+  "ids": [
+   "WA-0143",
+   "WA-0144",
+   "WA-0145"
+  ]
+ },
+ {
+  "date": "2025-11-12",
+  "chamber": "Legislative Council",
+  "debate": "Health—Gender Diversity Service Model of Care—Minors",
+  "ids": [
+   "WA-0160",
+   "WA-0161",
+   "WA-0162",
+   "WA-0163"
+  ]
+ }
+]

@@ -1,0 +1,479 @@
+{
+ "jur": "QLD",
+ "items": {
+  "QLD-0001": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0002": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says no consolidated games budget released despite Auditor-General stressing accurate budgets"
+  },
+  "QLD-0003": {
+   "s": "praise",
+   "who": "government",
+   "what": "Games entities accepted all four recommendations; member credits government's delivery plan and stronger governance since audit"
+  },
+  "QLD-0004": {
+   "s": "attack",
+   "who": "government",
+   "what": "Department's consolidated games budget and audited report, due by 2025-26, not delivered, member says"
+  },
+  "QLD-0005": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0006": {
+   "s": "attack",
+   "who": "government",
+   "what": "Consolidated Olympics budget recommended and accepted, yet Queenslanders still waiting, member says"
+  },
+  "QLD-0007": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0008": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member doubts moving 63,000 people to Victoria Park in 2032; report flags cost overrun risk"
+  },
+  "QLD-0009": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member blames former Labor government's repeated governance changes for planning pauses, citing Auditor-General"
+  },
+  "QLD-0010": {
+   "s": "attack",
+   "who": "government",
+   "what": "Government must be up-front on games budget scope; member alleges spin and secrecy"
+  },
+  "QLD-0011": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0012": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member says Labor's approach failed; serious repeat offenders behind 55 per cent of proven youth crimes"
+  },
+  "QLD-0013": {
+   "s": "attack",
+   "who": "government",
+   "what": "Bandaid will not deliver safer communities, member says; Auditor-General among inquiries pointing to contributing factors"
+  },
+  "QLD-0014": {
+   "s": "praise",
+   "who": "government",
+   "what": "Government's Destination 2045 and 45 by 45 directly address Auditor-General's recommendations, giving clear statewide policy"
+  },
+  "QLD-0015": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Auditor-General found no overarching ecotourism policy under Labor; only three national park facilities approved since 2013"
+  },
+  "QLD-0016": {
+   "s": "praise",
+   "who": "opposition",
+   "what": "Member credits work under former government: recommendation fully or partially implemented, per Audit Office status report"
+  },
+  "QLD-0018": {
+   "s": "attack",
+   "who": "government",
+   "what": "Nothing heard on recommended consolidated budget since department agreed, though works have begun, member says"
+  },
+  "QLD-0019": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Labor's governance changes caused pauses, so entities could not fully use extra four years, per Auditor-General"
+  },
+  "QLD-0020": {
+   "s": "attack",
+   "who": "government",
+   "what": "Queenslanders left trying to piece together real cost; Auditor-General says direct costs belong in budget"
+  },
+  "QLD-0021": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0022": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Previous government's $1 billion Gabba figure came from a media statement, member quotes then auditor-general"
+  },
+  "QLD-0023": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says Auditor-General called out LNP's vague 2032 budget; Queenslanders deserve to know games cost"
+  },
+  "QLD-0024": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0025": {
+   "s": "attack",
+   "who": "government",
+   "what": "Member says government must explain extraordinary dismissal power absent from Auditor-General and other office-holders' legislation"
+  },
+  "QLD-0026": {
+   "s": "attack",
+   "who": "government",
+   "what": "Commissioner will not control own budget; member says nobody would accept that for Auditor-General"
+  },
+  "QLD-0027": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Only three ecotourism projects in 10 years under Labor; report highlights mistakes, member says"
+  },
+  "QLD-0028": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0029": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Report identified clear systemic failings of Labor in ecotourism, member says"
+  },
+  "QLD-0030": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Former Labor government's shortcomings on ecotourism: no overarching statewide policy, fragmented planning, per Auditor-General"
+  },
+  "QLD-0031": {
+   "s": "praise",
+   "who": "government",
+   "what": "Commends minister's proactive approach ensuring Auditor-General's recommendations looked into and properly dealt with"
+  },
+  "QLD-0032": {
+   "s": "praise",
+   "who": "government",
+   "what": "Three of four recommendations fully implemented; encouraging progress showing clear commitment, member says"
+  },
+  "QLD-0033": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0034": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0035": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General scathing on political interference in failed boot camps by now Deputy Premier, member says"
+  },
+  "QLD-0036": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0037": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0038": {
+   "s": "praise",
+   "who": "opposition",
+   "what": "Member says work on Auditor-General's recommendations was all done, as director-general confirmed at hearings"
+  },
+  "QLD-0039": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0040": {
+   "s": "praise",
+   "who": "opposition",
+   "what": "Recommendations fully or partially implemented, so work largely done under Labor before 2024 election, member says"
+  },
+  "QLD-0041": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0042": {
+   "s": "praise",
+   "who": "auditor-general",
+   "what": "Thanks Auditor-General and Audit Office staff for independent information on public sector performance"
+  },
+  "QLD-0043": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Labor government itself held back ecotourism: no statewide policy, approvals too slow, complex and costly"
+  },
+  "QLD-0044": {
+   "s": "praise",
+   "who": "opposition",
+   "what": "Much of hard policy work done by former Labor government before 2024 election, member says"
+  },
+  "QLD-0045": {
+   "s": "praise",
+   "who": "government",
+   "what": "Congratulates new minister's rapid response addressing Auditor-General's concerns, remedying previous government's failure"
+  },
+  "QLD-0046": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0047": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0048": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0049": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Former Labor government failed to establish governance and accountability oversight of mental health levy taxes"
+  },
+  "QLD-0050": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General highlighted cybersecurity risks, yet committee got very little detail on managing them, member says"
+  },
+  "QLD-0051": {
+   "s": "attack",
+   "who": "government",
+   "what": "Auditor-General found serious cybersecurity shortcomings; estimates gave limited details on progress, member says"
+  },
+  "QLD-0052": {
+   "s": "praise",
+   "who": "government",
+   "what": "Member calls LNP first to get whole-of-government cybersecurity strategy underway after decade of Auditor-General complaints"
+  },
+  "QLD-0053": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0054": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0055": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Scathing assessment of Labor's health legacy: no effective governance of multibillion dollar mental health levy"
+  },
+  "QLD-0056": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0057": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0058": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0059": {
+   "s": "attack",
+   "who": "government",
+   "what": "Treasurer's $461 million child safety black hole claim not verified by Auditor-General or Treasury, member says"
+  },
+  "QLD-0060": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0061": {
+   "s": "attack",
+   "who": "government",
+   "what": "Key commitment in tatters under Treasurer; Auditor-General revealed contractor and consultant spending up $474 million"
+  },
+  "QLD-0062": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0063": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0064": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0065": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0066": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0067": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0068": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0069": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0070": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0071": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "After 10 years of Labor, almost 200 at-risk systems; decade of failure to invest, member says"
+  },
+  "QLD-0072": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0073": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0074": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Then auditor-general found only a media release behind Labor's billion dollars, later $2.7 billion"
+  },
+  "QLD-0075": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Labor's measly 72-hour plan not given to every serious repeat offender, per Auditor-General"
+  },
+  "QLD-0076": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0077": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  },
+  "QLD-0078": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Critical staff shortages under previous Labor government left youth in separation rooms, per Auditor-General"
+  },
+  "QLD-0079": {
+   "s": "attack",
+   "who": "opposition",
+   "what": "Member recalls Auditor-General on failed sustaining capital program: total lack of investment in infrastructure"
+  },
+  "QLD-0080": {
+   "s": "neutral",
+   "who": "",
+   "what": ""
+  }
+ },
+ "themes": {
+  "attack": [
+   {
+    "label": "Missing consolidated Brisbane 2032 games budget",
+    "note": "LNP government attacked for unclear games costs and no consolidated budget, as recommended by the Auditor-General and accepted by the department.",
+    "ids": [
+     "QLD-0002",
+     "QLD-0004",
+     "QLD-0006",
+     "QLD-0008",
+     "QLD-0010",
+     "QLD-0018",
+     "QLD-0020",
+     "QLD-0023"
+    ]
+   },
+   {
+    "label": "Labor's record on ecotourism policy and approvals",
+    "note": "Former Labor government attacked over no statewide ecotourism policy, fragmented planning and few projects approved, citing the Auditor-General's report.",
+    "ids": [
+     "QLD-0015",
+     "QLD-0027",
+     "QLD-0029",
+     "QLD-0030",
+     "QLD-0043"
+    ]
+   },
+   {
+    "label": "Labor's games planning and Gabba cost figures",
+    "note": "Former Labor government attacked over governance changes pausing games planning and a billion-dollar Gabba figure resting on a media release.",
+    "ids": [
+     "QLD-0009",
+     "QLD-0019",
+     "QLD-0022",
+     "QLD-0074"
+    ]
+   },
+   {
+    "label": "Labor's youth crime and detention record",
+    "note": "Former Labor government attacked over serious repeat offending, the 72-hour release plan and detention staff shortages, citing Auditor-General findings.",
+    "ids": [
+     "QLD-0012",
+     "QLD-0075",
+     "QLD-0078"
+    ]
+   },
+   {
+    "label": "Labor's mental health levy and health infrastructure",
+    "note": "Former Labor government attacked over ineffective governance of the mental health levy and a total lack of infrastructure investment.",
+    "ids": [
+     "QLD-0049",
+     "QLD-0055",
+     "QLD-0079"
+    ]
+   }
+  ],
+  "praise": [
+   {
+    "label": "Government action on ecotourism recommendations",
+    "note": "LNP government and minister credited for acting on the Auditor-General's ecotourism recommendations through Destination 2045 and related policies.",
+    "ids": [
+     "QLD-0014",
+     "QLD-0031",
+     "QLD-0032",
+     "QLD-0045"
+    ]
+   },
+   {
+    "label": "Labor's earlier work on ecotourism recommendations",
+    "note": "Former Labor government credited by Labor members, who say work on audit recommendations was largely done before the 2024 election.",
+    "ids": [
+     "QLD-0016",
+     "QLD-0038",
+     "QLD-0040",
+     "QLD-0044"
+    ]
+   }
+  ]
+ }
+}
